@@ -1,22 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Note",
-    "section": "",
-    "text": "Tôi không biết tôi đang làm gì nữa, nhưng tôi đang viết Note.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "linear-algebra/vector-spaces.html",
     "href": "linear-algebra/vector-spaces.html",
     "title": "Vector Spaces",
@@ -50,28 +33,6 @@
     ]
   },
   {
-    "objectID": "linear-algebra/basis.html",
-    "href": "linear-algebra/basis.html",
-    "title": "Basis",
-    "section": "",
-    "text": "Một basis là tập vector: sdffgsdfg \n\\{v_1,v_2,\\dots,v_n\\}\n\nthỏa:\n\nlinearly independent\nspan toàn bộ không gian ádfgsdafg\n\n\n\nBasis chuẩn của:\n\n\\mathbb R^3\n\nlà\n\ne_1=\n\\begin{bmatrix}\n1\\\\0\\\\0\n\\end{bmatrix},\n\\quad\ne_2=\n\\begin{bmatrix}\n0\\\\1\\\\0\n\\end{bmatrix},\n\\quad\ne_3=\n\\begin{bmatrix}\n0\\\\0\\\\1\n\\end{bmatrix}",
-    "crumbs": [
-      "Linear Algebra",
-      "Basis"
-    ]
-  },
-  {
-    "objectID": "linear-algebra/basis.html#ví-dụ",
-    "href": "linear-algebra/basis.html#ví-dụ",
-    "title": "Basis",
-    "section": "",
-    "text": "Basis chuẩn của:\n\n\\mathbb R^3\n\nlà\n\ne_1=\n\\begin{bmatrix}\n1\\\\0\\\\0\n\\end{bmatrix},\n\\quad\ne_2=\n\\begin{bmatrix}\n0\\\\1\\\\0\n\\end{bmatrix},\n\\quad\ne_3=\n\\begin{bmatrix}\n0\\\\0\\\\1\n\\end{bmatrix}",
-    "crumbs": [
-      "Linear Algebra",
-      "Basis"
-    ]
-  },
-  {
     "objectID": "linear-algebra/eigenvalues.html",
     "href": "linear-algebra/eigenvalues.html",
     "title": "Eigenvalues and Eigenvectors",
@@ -91,6 +52,45 @@
     "crumbs": [
       "Linear Algebra",
       "Eigenvalues and Eigenvectors"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Note",
+    "section": "",
+    "text": "Tôi không biết tôi đang làm gì nữa, nhưng tôi đang viết Note.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "linear-algebra/basis.html",
+    "href": "linear-algebra/basis.html",
+    "title": "Basis",
+    "section": "",
+    "text": "Một basis là tập vector: sdffgsdfg \n\\{v_1,v_2,\\dots,v_n\\}\n\nthỏa:\n\nlinearly independent\nspan toàn bộ không gian ádfgsdafg\n\n\n\nBasis chuẩn của:\n\n\\mathbb R^3\n\nlà\n\ne_1=\n\\begin{bmatrix}\n1\\\\0\\\\0\n\\end{bmatrix},\n\\quad\ne_2=\n\\begin{bmatrix}\n0\\\\1\\\\0\n\\end{bmatrix},\n\\quad\ne_3=\n\\begin{bmatrix}\n0\\\\0\\\\1\n\\end{bmatrix}",
+    "crumbs": [
+      "Linear Algebra",
+      "Basis"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/basis.html#ví-dụ",
+    "href": "linear-algebra/basis.html#ví-dụ",
+    "title": "Basis",
+    "section": "",
+    "text": "Basis chuẩn của:\n\n\\mathbb R^3\n\nlà\n\ne_1=\n\\begin{bmatrix}\n1\\\\0\\\\0\n\\end{bmatrix},\n\\quad\ne_2=\n\\begin{bmatrix}\n0\\\\1\\\\0\n\\end{bmatrix},\n\\quad\ne_3=\n\\begin{bmatrix}\n0\\\\0\\\\1\n\\end{bmatrix}",
+    "crumbs": [
+      "Linear Algebra",
+      "Basis"
     ]
   },
   {
