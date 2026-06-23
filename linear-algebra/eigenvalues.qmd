@@ -1,0 +1,52 @@
+---
+title: "Eigenvalues and Eigenvectors"
+---
+
+# Eigenvalues
+
+Ta tìm:
+
+$$
+Av = \lambda v
+$$
+
+suy ra
+
+$$
+(A-\lambda I)v=0
+$$
+
+Do đó
+
+$$
+\det(A-\lambda I)=0
+$$
+
+được gọi là characteristic equation.
+
+## Ví dụ
+
+Cho
+
+$$
+A=
+\begin{bmatrix}
+2 & 1\\
+1 & 2
+\end{bmatrix}
+$$
+
+Ta có:
+
+$$
+\det(A-\lambda I)
+=
+(2-\lambda)^2-1
+$$
+
+Nghiệm:
+
+$$
+\lambda_1=3,\qquad
+\lambda_2=1
+$$

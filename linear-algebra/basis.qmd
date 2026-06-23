@@ -1,0 +1,43 @@
+---
+title: "Basis"
+---
+
+# Basis
+
+Một basis là tập vector:
+sdffgsdfg
+$$
+\{v_1,v_2,\dots,v_n\}
+$$
+
+thỏa:
+
+- linearly independent
+- span toàn bộ không gian ádfgsdafg
+
+## Ví dụ
+
+Basis chuẩn của:
+
+$$
+\mathbb R^3
+$$
+
+là
+
+$$
+e_1=
+\begin{bmatrix}
+1\\0\\0
+\end{bmatrix},
+\quad
+e_2=
+\begin{bmatrix}
+0\\1\\0
+\end{bmatrix},
+\quad
+e_3=
+\begin{bmatrix}
+0\\0\\1
+\end{bmatrix}
+$$

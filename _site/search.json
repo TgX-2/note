@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Note",
+    "section": "",
+    "text": "Tôi không biết tôi đang làm gì nữa, nhưng tôi đang viết Note.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "linear-algebra/vector-spaces.html",
+    "href": "linear-algebra/vector-spaces.html",
+    "title": "Vector Spaces",
+    "section": "",
+    "text": "Một vector space là tập hợp các đối tượng có thể:\n\ncộng với nhau\nnhân với scalar\n\nVí dụ:\n\nu+v\n=\n\\begin{bmatrix}\n1\\\\\n2\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n3\\\\\n4\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n4\\\\\n6\n\\end{bmatrix}\n\n\n\nCho trường F.\nMột tập V được gọi là vector space nếu thỏa:\n\nClosure\nAssociativity\nCommutativity\nIdentity\nInverse\nScalar multiplication\n\n\n\n\ngraph TD A[Field F] B[Vector Space V] C[Basis] D[Dimension]\nA –&gt; B B –&gt; C C –&gt; D",
+    "crumbs": [
+      "Linear Algebra",
+      "Vector Spaces"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/vector-spaces.html#định-nghĩa",
+    "href": "linear-algebra/vector-spaces.html#định-nghĩa",
+    "title": "Vector Spaces",
+    "section": "",
+    "text": "Cho trường F.\nMột tập V được gọi là vector space nếu thỏa:\n\nClosure\nAssociativity\nCommutativity\nIdentity\nInverse\nScalar multiplication",
+    "crumbs": [
+      "Linear Algebra",
+      "Vector Spaces"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/vector-spaces.html#ví-dụ-diagram",
+    "href": "linear-algebra/vector-spaces.html#ví-dụ-diagram",
+    "title": "Vector Spaces",
+    "section": "",
+    "text": "graph TD A[Field F] B[Vector Space V] C[Basis] D[Dimension]\nA –&gt; B B –&gt; C C –&gt; D",
+    "crumbs": [
+      "Linear Algebra",
+      "Vector Spaces"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/basis.html",
+    "href": "linear-algebra/basis.html",
+    "title": "Basis",
+    "section": "",
+    "text": "Một basis là tập vector: sdffgsdfg \n\\{v_1,v_2,\\dots,v_n\\}\n\nthỏa:\n\nlinearly independent\nspan toàn bộ không gian ádfgsdafg\n\n\n\nBasis chuẩn của:\n\n\\mathbb R^3\n\nlà\n\ne_1=\n\\begin{bmatrix}\n1\\\\0\\\\0\n\\end{bmatrix},\n\\quad\ne_2=\n\\begin{bmatrix}\n0\\\\1\\\\0\n\\end{bmatrix},\n\\quad\ne_3=\n\\begin{bmatrix}\n0\\\\0\\\\1\n\\end{bmatrix}",
+    "crumbs": [
+      "Linear Algebra",
+      "Basis"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/basis.html#ví-dụ",
+    "href": "linear-algebra/basis.html#ví-dụ",
+    "title": "Basis",
+    "section": "",
+    "text": "Basis chuẩn của:\n\n\\mathbb R^3\n\nlà\n\ne_1=\n\\begin{bmatrix}\n1\\\\0\\\\0\n\\end{bmatrix},\n\\quad\ne_2=\n\\begin{bmatrix}\n0\\\\1\\\\0\n\\end{bmatrix},\n\\quad\ne_3=\n\\begin{bmatrix}\n0\\\\0\\\\1\n\\end{bmatrix}",
+    "crumbs": [
+      "Linear Algebra",
+      "Basis"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/eigenvalues.html",
+    "href": "linear-algebra/eigenvalues.html",
+    "title": "Eigenvalues and Eigenvectors",
+    "section": "",
+    "text": "Ta tìm:\n\nAv = \\lambda v\n\nsuy ra\n\n(A-\\lambda I)v=0\n\nDo đó\n\n\\det(A-\\lambda I)=0\n\nđược gọi là characteristic equation.\n\n\nCho\n\nA=\n\\begin{bmatrix}\n2 & 1\\\\\n1 & 2\n\\end{bmatrix}\n\nTa có:\n\n\\det(A-\\lambda I)\n=\n(2-\\lambda)^2-1\n\nNghiệm:\n\n\\lambda_1=3,\\qquad\n\\lambda_2=1",
+    "crumbs": [
+      "Linear Algebra",
+      "Eigenvalues and Eigenvectors"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/eigenvalues.html#ví-dụ",
+    "href": "linear-algebra/eigenvalues.html#ví-dụ",
+    "title": "Eigenvalues and Eigenvectors",
+    "section": "",
+    "text": "Cho\n\nA=\n\\begin{bmatrix}\n2 & 1\\\\\n1 & 2\n\\end{bmatrix}\n\nTa có:\n\n\\det(A-\\lambda I)\n=\n(2-\\lambda)^2-1\n\nNghiệm:\n\n\\lambda_1=3,\\qquad\n\\lambda_2=1",
+    "crumbs": [
+      "Linear Algebra",
+      "Eigenvalues and Eigenvectors"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/index.html",
+    "href": "linear-algebra/index.html",
+    "title": "Index",
+    "section": "",
+    "text": "hello",
+    "crumbs": [
+      "Linear Algebra",
+      "Index"
+    ]
+  }
+]
