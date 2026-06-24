@@ -14,9 +14,15 @@ website:
       - section: Linear Algebra
         contents:
           - linear-algebra/index.qmd
-          - linear-algebra/vector-spaces.qmd
-          - linear-algebra/basis.qmd
-          - linear-algebra/eigenvalues.qmd
+          - linear-algebra/premise.qmd
+          - linear-algebra/matrix.qmd
+          - linear-algebra/vectorspaces.qmd
+          - linear-algebra/determinants.qmd
+          - linear-algebra/lineartranformation.qmd
+          - linear-algebra/orthogonality.qmd
+          - linear-algebra/eigen.qmd
+          - linear-algebra/diagonalization.qmd
+          - linear-algebra/spectraltheorem.qmd
 
 format:
   html:

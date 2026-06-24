@@ -1,5 +1,5 @@
 ---
-title: "Index"
+title: "Đại số tuyến tính"
 ---
 
 hello

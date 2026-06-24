@@ -57,9 +57,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Note",
+    "title": "Giới thiệu",
     "section": "",
-    "text": "Tôi không biết tôi đang làm gì nữa, nhưng tôi đang viết Note.",
+    "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.",
     "crumbs": [
       "Home"
     ]
@@ -96,12 +96,34 @@
   {
     "objectID": "linear-algebra/index.html",
     "href": "linear-algebra/index.html",
-    "title": "Index",
+    "title": "Đại số tuyến tính",
     "section": "",
     "text": "hello",
     "crumbs": [
       "Linear Algebra",
-      "Index"
+      "Đại số tuyến tính"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/vectorspaces.html",
+    "href": "linear-algebra/vectorspaces.html",
+    "title": "Math Notes",
+    "section": "",
+    "text": "vectorspaces.qmd",
+    "crumbs": [
+      "Linear Algebra",
+      "vectorspaces.html"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/matrix.html",
+    "href": "linear-algebra/matrix.html",
+    "title": "Math Notes",
+    "section": "",
+    "text": "matrix.qmd",
+    "crumbs": [
+      "Linear Algebra",
+      "matrix.html"
     ]
   }
 ]
