@@ -75,6 +75,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -386,7 +429,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>hello</p>
+<p>Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).</p>
+<p>Vector trong Vật lý, Toán học, và Tin học là hoàn toàn khác nhau. Nói một cách dễ hiểu nhưng mà sai thì Vật lý nó phải có độ lớn và hướng, Tin học nó là một mảng động, và Toán học nó là một mũi tên (thường là từ điểm gốc <span class="math inline">(0, 0)</span>) đến một điểm nào đó có hướng từ điểm gốc đến điểm đó.</p>
+$$
+<p>$$</p>
 
 
 

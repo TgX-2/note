@@ -2,4 +2,17 @@
 title: "Đại số tuyến tính"
 ---
 
-hello
+Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).
+
+Vector trong Vật lý, Toán học, và Tin học là hoàn toàn khác nhau. Nói một cách dễ hiểu nhưng mà sai thì Vật lý nó phải có độ lớn và hướng, Tin học nó là một mảng động, và Toán học nó là một mũi tên (thường là từ điểm gốc $(0, 0)$) đến một điểm nào đó có hướng từ điểm gốc đến điểm đó.
+
+$$
+\begin{tikzpicture}
+    \draw[->] (-1,0)--(3,0);
+    \draw[->] (0,-1)--(0,3);
+
+    \draw[->, thick, blue] (0,0)--(2,1);
+
+    \node at (2.2,1.2) {$\vec v$};
+\end{tikzpicture}
+$$
