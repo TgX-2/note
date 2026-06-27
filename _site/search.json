@@ -1,10 +1,43 @@
 [
   {
+    "objectID": "linear-algebra/matrix.html",
+    "href": "linear-algebra/matrix.html",
+    "title": "Ma trận",
+    "section": "",
+    "text": "Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.\nThử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nVí dụ: Vector \\vec v (1, 2).",
+    "crumbs": [
+      "Linear Algebra",
+      "Ma trận"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/matrix.html#ma-trận-cột",
+    "href": "linear-algebra/matrix.html#ma-trận-cột",
+    "title": "Ma trận",
+    "section": "Ma trận cột",
+    "text": "Ma trận cột\nTa có thể biểu diễn Vector \\vec v trên bằng ma trận cột 1 \\times 2, được ký hiệu như sau:\n\n\\begin{bmatrix}\n1 \\\\\n2\n\\end{bmatrix}\n\nHay tổng quát hơn, ta có thể biểu diễn một vector nhiều chiều bằng ma trận cột gồm n giá trị \n\\begin{bmatrix}\na_1 \\\\\na_2 \\\\\na_3 \\\\\n\\vdots \\\\\na_n\n\\end{bmatrix}",
+    "crumbs": [
+      "Linear Algebra",
+      "Ma trận"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/matrix.html#ma-trận-n-times-m",
+    "href": "linear-algebra/matrix.html#ma-trận-n-times-m",
+    "title": "Ma trận",
+    "section": "Ma trận n \\times m",
+    "text": "Ma trận n \\times m\nLà tập hợp của m vector n chiều.\n\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1m} \\\\\na_{21} & a_{22} & \\cdots & a_{2m} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n1} & a_{n2} & \\cdots & a_{nm} \\\\\n\\end{bmatrix}",
+    "crumbs": [
+      "Linear Algebra",
+      "Ma trận"
+    ]
+  },
+  {
     "objectID": "linear-algebra/index.html",
     "href": "linear-algebra/index.html",
     "title": "Đại số tuyến tính",
     "section": "",
-    "text": "Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).\nVector trong Vật lý, Toán học, và Tin học là hoàn toàn khác nhau. Nói một cách dễ hiểu nhưng mà sai thì Vật lý nó phải có độ lớn và hướng, Tin học nó là một mảng động, và Toán học nó là một mũi tên (thường là từ điểm gốc (0, 0)) đến một điểm nào đó có hướng từ điểm gốc đến điểm đó.\n$$\n$$",
+    "text": "Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).\nCác tài liệu mà tôi tham khảo:\n\ndaisotuyentinh\nLinear Algebra - Gilbert Strang\nEssence of linear algebra - 3blue1brown\n\nVề ưu và nhược điểm, có thể nói vui vẻ như sau:\n\nDaisotuyentinh.com: đơn giản, dễ hiểu, viết bằng Tiếng Việt, có các chứng minh, nhưng khó hiểu.\nLinear Gilbert của thầy Gilbert Strang: tài liệu của MIT, viết bằng Tiếng Anh, sẽ rất khó hiểu vì nó sẽ chứng minh một cách từ từ, nhưng nó sẽ kiểu như là gợi ý cách mình suy nghĩ là nhiều hơn, thêm một ưu điểm nữa là nó sẽ phù hợp hơn với những người thích suy nghĩ (còn tôi thì không).\nEssence of Linear Algebra của 3xanhdương1nâu: cực kỳ dị, sẽ không theo bất kỳ roadmap nào thường được thấy trong sách, nó sẽ chứng minh bằng hình học nhiều hơn (thật ra là 100% hình học), cực kỳ trực quan và dễ hiểu.",
     "crumbs": [
       "Linear Algebra",
       "Đại số tuyến tính"

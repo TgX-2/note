@@ -75,6 +75,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -360,8 +403,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ma-trận-cột" id="toc-ma-trận-cột" class="nav-link active" data-scroll-target="#ma-trận-cột">Ma trận cột</a></li>
+  <li><a href="#ma-trận-n-times-m" id="toc-ma-trận-n-times-m" class="nav-link" data-scroll-target="#ma-trận-n-times-m">Ma trận <span class="math inline">n \times m</span></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -386,8 +436,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.</p>
+<p>Thử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ <span class="math inline">O(0, 0, .. 0) \in  \mathbb R ^ n</span>, tới <span class="math inline">A(a_1, a_2, a_3, ... a_n) \in \mathbb R^n</span>.</p>
+<p>Ví dụ: Vector <span class="math inline">\vec v (1, 2)</span>.</p>
+<p><img src="../img/1.png" class="img-fluid"></p>
+<section id="ma-trận-cột" class="level2">
+<h2 class="anchored" data-anchor-id="ma-trận-cột">Ma trận cột</h2>
+<p>Ta có thể biểu diễn Vector <span class="math inline">\vec v</span> trên bằng ma trận cột <span class="math inline">1 \times 2</span>, được ký hiệu như sau:</p>
+<p><span class="math display">
+\begin{bmatrix}
+1 \\
+2
+\end{bmatrix}
+</span></p>
+<p>Hay tổng quát hơn, ta có thể biểu diễn một vector nhiều chiều bằng ma trận cột gồm n giá trị <span class="math display">
+\begin{bmatrix}
+a_1 \\
+a_2 \\
+a_3 \\
+\vdots \\
+a_n
+\end{bmatrix}
+</span></p>
+</section>
+<section id="ma-trận-n-times-m" class="level2">
+<h2 class="anchored" data-anchor-id="ma-trận-n-times-m">Ma trận <span class="math inline">n \times m</span></h2>
+<p>Là tập hợp của m vector n chiều.</p>
+<p><span class="math display">
+\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1m} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nm} \\
+\end{bmatrix}
+</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
