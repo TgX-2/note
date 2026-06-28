@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="TgX.2">
 
-<title>Tính trực giao – Math Notes</title>
+<title>Vector – Math Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,6 +76,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -250,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linear-algebra/index.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../linear-algebra/orthogonality.html">Tính trực giao</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linear-algebra/index.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../linear-algebra/vector.html">Vector</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -301,56 +345,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/premise.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tiền đề</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/matrix.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ma trận</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/vectorspaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Không gian Vector</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/determinants.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Định thức</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/lineartranformation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ánh xạ tuyến tính</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/orthogonality.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tính trực giao</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/eigen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Eigen</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/diagonalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chéo hóa</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/spectraltheorem.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Định lý phổ</span></a>
+  <a href="../linear-algebra/vector.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Vector</span></a>
   </div>
 </li>
       </ul>
@@ -360,22 +356,45 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Mục lục bài viết</h2>
+   
+  <ul>
+  <li><a href="#quan-điểm-về-vector" id="toc-quan-điểm-về-vector" class="nav-link active" data-scroll-target="#quan-điểm-về-vector">3 quan điểm về Vector</a>
+  <ul class="collapse">
+  <li><a href="#quan-điểm-của-vật-lý" id="toc-quan-điểm-của-vật-lý" class="nav-link" data-scroll-target="#quan-điểm-của-vật-lý">Quan điểm của Vật lý</a></li>
+  <li><a href="#quan-điểm-của-tin-học" id="toc-quan-điểm-của-tin-học" class="nav-link" data-scroll-target="#quan-điểm-của-tin-học">Quan điểm của Tin học</a></li>
+  <li><a href="#quan-điểm-của-toán-học" id="toc-quan-điểm-của-toán-học" class="nav-link" data-scroll-target="#quan-điểm-của-toán-học">Quan điểm của Toán học</a></li>
+  </ul></li>
+  <li><a href="#hệ-tọa-độ-đề-các" id="toc-hệ-tọa-độ-đề-các" class="nav-link" data-scroll-target="#hệ-tọa-độ-đề-các">Hệ tọa độ Đề-Các</a></li>
+  <li><a href="#hệ-tọa-độ-3d" id="toc-hệ-tọa-độ-3d" class="nav-link" data-scroll-target="#hệ-tọa-độ-3d">Hệ tọa độ 3D</a>
+  <ul class="collapse">
+  <li><a href="#cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ." id="toc-cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ." class="nav-link" data-scroll-target="#cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ.">Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - <strong>z-axis</strong>. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.</a></li>
+  </ul></li>
+  <li><a href="#cộng-vector" id="toc-cộng-vector" class="nav-link" data-scroll-target="#cộng-vector">Cộng Vector</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linear-algebra/index.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../linear-algebra/orthogonality.html">Tính trực giao</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linear-algebra/index.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../linear-algebra/vector.html">Vector</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Tính trực giao</h1>
+<h1 class="title">Vector</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>TgX.2 </p>
+          </div>
+  </div>
     
   
     
@@ -386,8 +405,64 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="quan-điểm-về-vector" class="level1">
+<h1>3 quan điểm về Vector</h1>
+<p>Vector, khá là quen thuộc với học sinh. Với việc được học trong Tin học chuyên mà tôi được học, cụ thể là một kiểu dữ liệu trong C++, phần Vật lý 10 và sau đó là Toán học lớp 11. Nhưng, chúng có liên quan gì đến nhau không?</p>
+<section id="quan-điểm-của-vật-lý" class="level2">
+<h2 class="anchored" data-anchor-id="quan-điểm-của-vật-lý">Quan điểm của Vật lý</h2>
+<p>Vector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:</p>
+<ol type="1">
+<li><p><strong>Độ dài</strong></p></li>
+<li><p><strong>Hướng</strong></p></li>
+</ol>
+<p>Hai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.</p>
+</section>
+<section id="quan-điểm-của-tin-học" class="level2">
+<h2 class="anchored" data-anchor-id="quan-điểm-của-tin-học">Quan điểm của Tin học</h2>
+<p>Nó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu. Đúng vậy, nó khác là khác với hai môn còn lại</p>
+</section>
+<section id="quan-điểm-của-toán-học" class="level2">
+<h2 class="anchored" data-anchor-id="quan-điểm-của-toán-học">Quan điểm của Toán học</h2>
+<p>Một cách khó hiểu và cực kỳ trừu tượng.</p>
+<p>Một vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:</p>
+<ol type="1">
+<li><strong>Cộng hai vector</strong></li>
+<li><strong>Nhân một vector với một số (<em>scalar</em>)</strong></li>
+</ol>
+<p>Và chúng ra sẽ tìm hiểu nó sâu hơn trong chương <strong>Abstract Vector Spaces</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="hệ-tọa-độ-đề-các" class="level1">
+<h1>Hệ tọa độ Đề-Các</h1>
+<p>Một hệ tọa độ Catesian (Đề-Các) bao gồm:</p>
+<ul>
+<li>Trục tung: <strong>y-axis</strong></li>
+<li>Trục hoành: <strong>x-axis</strong></li>
+<li>Điểm giao nhau giữa hai trục: <strong>Gốc tọa độ</strong></li>
+</ul>
+<p>Tọa độ của vector là một cặp số chỉ cách di chuyển từ gốc tọa độ đến đầu của vector.</p>
+<hr>
+</section>
+<section id="hệ-tọa-độ-3d" class="level1">
+<h1>Hệ tọa độ 3D</h1>
+<section id="cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ." class="level2">
+<h2 class="anchored" data-anchor-id="cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ.">Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - <strong>z-axis</strong>. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.</h2>
+</section>
+</section>
+<section id="cộng-vector" class="level1">
+<h1>Cộng Vector</h1>
+<p>Ví dụ: Cho 2 vector trong không gian 2 chiều, <span class="math inline">a = \begin{bmatrix} a_1 \\ a_2 \end{bmatrix}</span> và <span class="math inline">b = \begin{bmatrix} b_1 \\ b_2 \end{bmatrix}</span>.</p>
+<p>Việc cộng 2 vector có thể đơn giản như sau:</p>
+<p><span class="math display">
+a + b = \begin{bmatrix} a_1 + b_1 \\ a_2 + b_2 \end{bmatrix}
+</span></p>
+<p>Một cách dễ hiểu, tưởng tượng ta cộng hai số a và b trên một trục số nằm ngang, nó sẽ là việc ta tiến lên a bước (hoặc lùi a bước nếu âm), và b cũng tương tự. Thì việc cộng hai vector cũng chỉ là việc đó nhưng diễn ra ở không hai 2 chiều, ta sẽ di chuyển a trước và sau đó di chuyển b.</p>
+<p>Điều đó rút ra được rằng, thứ tự cộng không quan trọng.</p>
+<p><span class="math display">a + b = b + a</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

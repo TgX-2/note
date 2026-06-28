@@ -1,0 +1,72 @@
+---
+title: "Vector"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+---
+
+# 3 quan điểm về Vector
+
+Vector, khá là quen thuộc với học sinh. Với việc được học trong Tin học chuyên mà tôi được học, cụ thể là một kiểu dữ liệu trong C++, phần Vật lý 10 và sau đó là Toán học lớp 11. Nhưng, chúng có liên quan gì đến nhau không? 
+
+
+## Quan điểm của Vật lý
+Vector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:
+
+1. **Độ dài**
+
+2. **Hướng**
+
+Hai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.
+
+## Quan điểm của Tin học
+Nó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu.
+Đúng vậy, nó khác là khác với hai môn còn lại
+
+
+## Quan điểm của Toán học
+Một cách khó hiểu và cực kỳ trừu tượng.
+
+Một vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:
+
+1. **Cộng hai vector**
+2. **Nhân một vector với một số (*scalar*)**
+
+Và chúng ra sẽ tìm hiểu nó sâu hơn trong chương **Abstract Vector Spaces**.
+
+---
+
+# Hệ tọa độ Đề-Các
+Một hệ tọa độ Catesian (Đề-Các) bao gồm:
+
+* Trục tung: **y-axis**
+* Trục hoành: **x-axis**
+* Điểm giao nhau giữa hai trục: **Gốc tọa độ**
+
+Tọa độ của vector là một cặp số chỉ cách di chuyển từ gốc tọa độ đến đầu của vector.
+
+---
+
+
+# Hệ tọa độ 3D
+
+Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - **z-axis**. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.
+---
+# Cộng Vector
+Ví dụ: Cho 2 vector trong không gian 2 chiều, $a = \begin{bmatrix} a_1 \\ a_2 \end{bmatrix}$ và $b = \begin{bmatrix} b_1 \\ b_2 \end{bmatrix}$.
+
+Việc cộng 2 vector có thể đơn giản như sau:
+
+$$
+a + b = \begin{bmatrix} a_1 + b_1 \\ a_2 + b_2 \end{bmatrix}
+$$
+
+Một cách dễ hiểu, tưởng tượng ta cộng hai số a và b trên một trục số nằm ngang, nó sẽ là việc ta tiến lên a bước (hoặc lùi a bước nếu âm), và b cũng tương tự. Thì việc cộng hai vector cũng chỉ là việc đó nhưng diễn ra ở không hai 2 chiều, ta sẽ di chuyển a trước và sau đó di chuyển b.
+
+Điều đó rút ra được rằng, thứ tự cộng không quan trọng.
+
+$$a + b = b + a$$

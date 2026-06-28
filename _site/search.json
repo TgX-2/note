@@ -1,35 +1,57 @@
 [
   {
-    "objectID": "linear-algebra/matrix.html",
-    "href": "linear-algebra/matrix.html",
-    "title": "Ma trận",
+    "objectID": "linear-algebra/vector.html",
+    "href": "linear-algebra/vector.html",
+    "title": "Vector",
     "section": "",
-    "text": "Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.\nThử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nVí dụ: Vector \\vec v (1, 2).",
+    "text": "Vector, khá là quen thuộc với học sinh. Với việc được học trong Tin học chuyên mà tôi được học, cụ thể là một kiểu dữ liệu trong C++, phần Vật lý 10 và sau đó là Toán học lớp 11. Nhưng, chúng có liên quan gì đến nhau không?\n\n\nVector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:\n\nĐộ dài\nHướng\n\nHai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.\n\n\n\nNó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu. Đúng vậy, nó khác là khác với hai môn còn lại\n\n\n\nMột cách khó hiểu và cực kỳ trừu tượng.\nMột vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:\n\nCộng hai vector\nNhân một vector với một số (scalar)\n\nVà chúng ra sẽ tìm hiểu nó sâu hơn trong chương Abstract Vector Spaces.",
     "crumbs": [
       "Linear Algebra",
-      "Ma trận"
+      "Vector"
     ]
   },
   {
-    "objectID": "linear-algebra/matrix.html#ma-trận-cột",
-    "href": "linear-algebra/matrix.html#ma-trận-cột",
-    "title": "Ma trận",
-    "section": "Ma trận cột",
-    "text": "Ma trận cột\nTa có thể biểu diễn Vector \\vec v trên bằng ma trận cột 1 \\times 2, được ký hiệu như sau:\n\n\\begin{bmatrix}\n1 \\\\\n2\n\\end{bmatrix}\n\nHay tổng quát hơn, ta có thể biểu diễn một vector nhiều chiều bằng ma trận cột gồm n giá trị \n\\begin{bmatrix}\na_1 \\\\\na_2 \\\\\na_3 \\\\\n\\vdots \\\\\na_n\n\\end{bmatrix}",
+    "objectID": "linear-algebra/vector.html#quan-điểm-của-vật-lý",
+    "href": "linear-algebra/vector.html#quan-điểm-của-vật-lý",
+    "title": "Vector",
+    "section": "",
+    "text": "Vector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:\n\nĐộ dài\nHướng\n\nHai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.",
     "crumbs": [
       "Linear Algebra",
-      "Ma trận"
+      "Vector"
     ]
   },
   {
-    "objectID": "linear-algebra/matrix.html#ma-trận-n-times-m",
-    "href": "linear-algebra/matrix.html#ma-trận-n-times-m",
-    "title": "Ma trận",
-    "section": "Ma trận n \\times m",
-    "text": "Ma trận n \\times m\nLà tập hợp của m vector n chiều.\n\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1m} \\\\\na_{21} & a_{22} & \\cdots & a_{2m} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n1} & a_{n2} & \\cdots & a_{nm} \\\\\n\\end{bmatrix}",
+    "objectID": "linear-algebra/vector.html#quan-điểm-của-tin-học",
+    "href": "linear-algebra/vector.html#quan-điểm-của-tin-học",
+    "title": "Vector",
+    "section": "",
+    "text": "Nó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu. Đúng vậy, nó khác là khác với hai môn còn lại",
     "crumbs": [
       "Linear Algebra",
-      "Ma trận"
+      "Vector"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/vector.html#quan-điểm-của-toán-học",
+    "href": "linear-algebra/vector.html#quan-điểm-của-toán-học",
+    "title": "Vector",
+    "section": "",
+    "text": "Một cách khó hiểu và cực kỳ trừu tượng.\nMột vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:\n\nCộng hai vector\nNhân một vector với một số (scalar)\n\nVà chúng ra sẽ tìm hiểu nó sâu hơn trong chương Abstract Vector Spaces.",
+    "crumbs": [
+      "Linear Algebra",
+      "Vector"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/vector.html#cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ.",
+    "href": "linear-algebra/vector.html#cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ.",
+    "title": "Vector",
+    "section": "Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - z-axis. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.",
+    "text": "Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - z-axis. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.",
+    "crumbs": [
+      "Linear Algebra",
+      "Vector"
     ]
   },
   {
@@ -44,6 +66,13 @@
     ]
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Giới thiệu",
@@ -54,10 +83,24 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "linear-algebra/matrix.html",
+    "href": "linear-algebra/matrix.html",
+    "title": "Ma trận",
     "section": "",
-    "text": "About this site"
+    "text": "Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.\nThử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nVí dụ: Vector \\vec v (1, 2)."
+  },
+  {
+    "objectID": "linear-algebra/matrix.html#ma-trận-cột",
+    "href": "linear-algebra/matrix.html#ma-trận-cột",
+    "title": "Ma trận",
+    "section": "Ma trận cột",
+    "text": "Ma trận cột\nTa có thể biểu diễn Vector \\vec v trên bằng ma trận cột 1 \\times 2, được ký hiệu như sau:\n\n\\begin{bmatrix}\n1 \\\\\n2\n\\end{bmatrix}\n\nHay tổng quát hơn, ta có thể biểu diễn một vector nhiều chiều bằng ma trận cột gồm n giá trị \n\\begin{bmatrix}\na_1 \\\\\na_2 \\\\\na_3 \\\\\n\\vdots \\\\\na_n\n\\end{bmatrix}"
+  },
+  {
+    "objectID": "linear-algebra/matrix.html#ma-trận-n-times-m",
+    "href": "linear-algebra/matrix.html#ma-trận-n-times-m",
+    "title": "Ma trận",
+    "section": "Ma trận n \\times m",
+    "text": "Ma trận n \\times m\nLà tập hợp của m vector n chiều.\n\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1m} \\\\\na_{21} & a_{22} & \\cdots & a_{2m} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n1} & a_{n2} & \\cdots & a_{nm} \\\\\n\\end{bmatrix}"
   }
 ]
