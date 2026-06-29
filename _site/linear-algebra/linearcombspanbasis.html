@@ -76,6 +76,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -324,7 +367,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Mục lục bài viết</h2>
    
   <ul>
-  <li><a href="#linear-combinations" id="toc-linear-combinations" class="nav-link active" data-scroll-target="#linear-combinations">Linear combinations</a></li>
+  <li><a href="#một-cách-nhìn-khác-về-hệ-tọa-độ" id="toc-một-cách-nhìn-khác-về-hệ-tọa-độ" class="nav-link active" data-scroll-target="#một-cách-nhìn-khác-về-hệ-tọa-độ">Một cách nhìn khác về hệ tọa độ</a></li>
+  <li><a href="#linear-combinations" id="toc-linear-combinations" class="nav-link" data-scroll-target="#linear-combinations">Linear combinations</a></li>
+  <li><a href="#span" id="toc-span" class="nav-link" data-scroll-target="#span">Span</a>
+  <ul class="collapse">
+  <li><a href="#span-in-2d" id="toc-span-in-2d" class="nav-link" data-scroll-target="#span-in-2d">Span in 2D</a></li>
+  <li><a href="#span-in-3d" id="toc-span-in-3d" class="nav-link" data-scroll-target="#span-in-3d">Span in 3D</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -358,11 +407,54 @@ ul.task-list li input[type="checkbox"] {
 
 
 <hr>
+<section id="một-cách-nhìn-khác-về-hệ-tọa-độ" class="level1">
+<h1>Một cách nhìn khác về hệ tọa độ</h1>
+<p>Ở chương trức thì ta đã nói rằng vector là một mũi tên có hướng từ gốc tọa độ <span class="math inline">O(0, 0, .. 0) \in  \mathbb R ^ n</span>, tới <span class="math inline">A(a_1, a_2, a_3, ... a_n) \in \mathbb R^n</span>.</p>
+<p>Nhưng giờ hãy thử nghĩ khác lại, vector <span class="math inline">v = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}</span> chính là:</p>
+<ul>
+<li>Số <span class="math inline">v_1</span> là <strong>scalar</strong> của mà sẽ nhân với vector <span class="math inline">\hat{i}</span></li>
+<li>Số <span class="math inline">v_2</span> là <strong>scalar</strong> của mà sẽ nhân với vector <span class="math inline">\hat{j}</span></li>
+<li>Và vector cuối cùng chính là tổng của hai vector trên</li>
+</ul>
+<hr>
+</section>
 <section id="linear-combinations" class="level1">
 <h1>Linear combinations</h1>
-<p>asdf ádf</p>
+<p>Một linear combinations của hai vector <span class="math inline">v</span> và <span class="math inline">w</span> là:</p>
+<p><span class="math display">
+a \mathbf v + b \mathbf w
+</span></p>
+<p>Trong đó, a và b là hai hệ số <strong>scalar</strong> tùy ý.</p>
+<p>Tổng quát hơn, linear combination của <span class="math inline">n</span> vector <span class="math inline">v_1, v_2, ..., v_n</span> là:</p>
+<p><span class="math display">
+c_1 \mathbf v_1 + c_2 \mathbf v_2 + ... c_n \mathbf v_n = \sum_{i - 1}^{n}{c_i \mathbf {v_i}}
+</span></p>
+<hr>
+</section>
+<section id="span" class="level1">
+<h1>Span</h1>
+<p>Span là tập hợp các vector khả dĩ trong linear combinations của các vector đó.</p>
+<p><span class="math display">
+\text{span} \{ \mathbf v_1, .. \mathbf v_2, ... \mathbf v_n \}
+= \{ {c_1 \mathbf v_1 + c_2 \mathbf v_2 + ... c_n \mathbf v_n | c_i \in \mathbb R} \}
+</span></p>
+<p><strong>Nói cho dễ hiểu:</strong> Nếu chỉ dùng cộng hai vector và nhân vector với một số, ta có thể đạt được những vector nào? <strong>Đáp án:</strong> Đó là <strong>Span</strong> của vector.</p>
+<hr>
+<section id="span-in-2d" class="level2">
+<h2 class="anchored" data-anchor-id="span-in-2d">Span in 2D</h2>
+<p>Với hai vector <span class="math inline">\mathbf v</span> và <span class="math inline">\mathbf w</span> trong không gian hai chiều <span class="math inline">\mathbb R^2</span>, có 3 trường hợp khả dĩ sau đây:</p>
+<ol type="1">
+<li>Nếu hai vector không thẳng hàng với nhau: <span class="math inline">\text{span} \{ \mathbf v , \mathbf w \} = \mathbb R^2</span> - một mặt phẳng.</li>
+<li>Nếu hai vector thẳng hàng với nhau nhưng không bằng không: <span class="math inline">\text{span} \{ \mathbf v , \mathbf w \}</span> - một đưởng thẳng.</li>
+<li>Nếu hai vector đều là vector không: <span class="math inline">\text{span} \{ \mathbf v , \mathbf w \} = \{ 0 \}</span> - một gốc tọa độ.</li>
+</ol>
+<hr>
+</section>
+<section id="span-in-3d" class="level2">
+<h2 class="anchored" data-anchor-id="span-in-3d">Span in 3D</h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

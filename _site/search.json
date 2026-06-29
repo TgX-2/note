@@ -48,7 +48,7 @@
     "href": "linear-algebra/linearcombspanbasis.html",
     "title": "Linear Combinations and more",
     "section": "",
-    "text": "Linear combinations\nasdf ádf",
+    "text": "Một cách nhìn khác về hệ tọa độ\nỞ chương trức thì ta đã nói rằng vector là một mũi tên có hướng từ gốc tọa độ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nNhưng giờ hãy thử nghĩ khác lại, vector v = \\begin{bmatrix} v_1 \\\\ v_2 \\end{bmatrix} chính là:\n\nSố v_1 là scalar của mà sẽ nhân với vector \\hat{i}\nSố v_2 là scalar của mà sẽ nhân với vector \\hat{j}\nVà vector cuối cùng chính là tổng của hai vector trên\n\n\n\n\nLinear combinations\nMột linear combinations của hai vector v và w là:\n\na \\mathbf v + b \\mathbf w\n\ntrong đó, a và b là hai hệ số scalar tùy ý.\nTổng quát hơn, linear combination của n vector v_1, v_2, ..., v_n là:\n\nc_1 \\mathbf v_1 + c_2 \\mathbf v_2 + ... c_n \\mathbf v_n = \\sum_{i - 1}^{n}{c_i \\mathbf {v_i}}\n\n\n\n\nSpan\nSpan là tập hợp các vector khả dĩ trong linear combinations của các vector đó.\n\n\\text{span} \\{ \\mathbf v_1, .. \\mathbf v_2, ... \\mathbf v_n \\}\n= \\{ {c_1 \\mathbf v_1 + c_2 \\mathbf v_2 + ... c_n \\mathbf v_n | c_i \\in \\mathbb R} \\}",
     "crumbs": [
       "Linear Algebra",
       "Linear Combinations and more"
@@ -102,5 +102,27 @@
     "title": "Ma trận",
     "section": "Ma trận n \\times m",
     "text": "Ma trận n \\times m\nLà tập hợp của m vector n chiều.\n\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1m} \\\\\na_{21} & a_{22} & \\cdots & a_{2m} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n1} & a_{n2} & \\cdots & a_{nm} \\\\\n\\end{bmatrix}"
+  },
+  {
+    "objectID": "linear-algebra/linearcombspanbasis.html#span-in-2d",
+    "href": "linear-algebra/linearcombspanbasis.html#span-in-2d",
+    "title": "Linear Combinations and more",
+    "section": "Span in 2D",
+    "text": "Span in 2D\nVới hai vector \\mathbf v và \\mathbf w trong không gian hai chiều \\mathbb R^2, có 3 trường hợp khả dĩ sau đây:\n\nNếu hai vector không thẳng hàng với nhau: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\mathbb R^2 - một mặt phẳng.\nNếu hai vector thẳng hàng với nhau nhưng không bằng không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} - một đưởng thẳng.\nNếu hai vector đều là vector không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\{ 0 \\} - một gốc tọa độ.",
+    "crumbs": [
+      "Linear Algebra",
+      "Linear Combinations and more"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/linearcombspanbasis.html#span-in-3d",
+    "href": "linear-algebra/linearcombspanbasis.html#span-in-3d",
+    "title": "Linear Combinations and more",
+    "section": "Span in 3D",
+    "text": "Span in 3D",
+    "crumbs": [
+      "Linear Algebra",
+      "Linear Combinations and more"
+    ]
   }
 ]

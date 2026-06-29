@@ -10,6 +10,90 @@ format:
 ---
 
 ___
-# Linear combinations
+# Một cách nhìn khác về hệ tọa độ
+Ở chương trức thì ta đã nói rằng vector là một mũi tên có hướng từ gốc tọa độ $O(0, 0, .. 0) \in  \mathbb R ^ n$, tới $A(a_1, a_2, a_3, ... a_n) \in \mathbb R^n$.
 
-asdf ádf
+Nhưng giờ hãy thử nghĩ khác lại, vector $v = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}$ chính là:
+
+* Số $v_1$ là **scalar** của mà sẽ nhân với vector $\hat{i}$
+* Số $v_2$ là **scalar** của mà sẽ nhân với vector $\hat{j}$
+* Và vector cuối cùng chính là tổng của hai vector trên
+
+___
+# Linear combinations
+Một linear combinations của hai vector $v$ và $w$ là:
+
+$$
+a \mathbf v + b \mathbf w
+$$
+
+Trong đó, a và b là hai hệ số **scalar** tùy ý.
+
+Tổng quát hơn, linear combination của $n$ vector $v_1, v_2, ..., v_n$ là:
+
+$$
+c_1 \mathbf v_1 + c_2 \mathbf v_2 + ... c_n \mathbf v_n = \sum_{i - 1}^{n}{c_i \mathbf {v_i}} 
+$$
+
+___
+# Span 
+Span là tập hợp các vector khả dĩ trong linear combinations của các vector đó.
+
+$$
+\text{span} \{ \mathbf v_1, .. \mathbf v_2, ... \mathbf v_n \} 
+= \{ {c_1 \mathbf v_1 + c_2 \mathbf v_2 + ... c_n \mathbf v_n | c_i \in \mathbb R} \}
+$$
+
+**Nói cho dễ hiểu:** Nếu chỉ dùng cộng hai vector và nhân vector với một số, ta có thể đạt được những vector nào?
+**Đáp án:** Đó là **Span** của vector.
+
+___
+## Span in 2D
+
+Với hai vector $\mathbf v$ và $\mathbf w$ trong không gian hai chiều $\mathbb R^2$, có 3 trường hợp khả dĩ sau đây:
+
+1. Nếu hai vector không thẳng hàng với nhau: $\text{span} \{ \mathbf v , \mathbf w \} = \mathbb R^2$ - một mặt phẳng.
+2. Nếu hai vector thẳng hàng với nhau nhưng không bằng không: $\text{span} \{ \mathbf v , \mathbf w \}$ - một đưởng thẳng.
+3. Nếu hai vector đều là vector không: $\text{span} \{ \mathbf v , \mathbf w \} = \{ 0 \}$ - một gốc tọa độ.
+
+
+## Span in 3D
+
+1. Chỉ có một vector khác vector không: **span** là một đường thẳng.
+2. Có 2 vector không thẳng hàng: **span** là mặt phẳng.
+3. Cả 3 vector không thuộc cùng một mặt phẳng: **span** là tất cả không gian $\mathbb R^3$.
+
+
+___
+# Linear dependence and Linear independence
+Có thể nói một cách dễ hiểu rằng:
+
+* **Linear independence** : Không một vector nào là thừa.
+* **Linear dependence** : Ít nhất là một vector có thể xóa.
+
+___
+# Basis vector 
+
+## Basis
+Như đã nói ở chương trước, một vector basis thường là:
+$$
+\hat{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} 
+\space \text{and} \space  
+\hat{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+$$
+
+Với không gian 2 chiều, và không gian 3 chiều là:
+
+$$
+\hat{i} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\space \text{,} \space 
+\hat{j} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
+\space \text{and} \space 
+\hat{k} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+$$
+
+## Non-standard Bases
+Nhưng cũng đôi lúc, chúng không "cơ sở" cho lắm.
+
+
+Tưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.
