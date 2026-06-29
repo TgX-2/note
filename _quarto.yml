@@ -15,6 +15,7 @@ website:
         contents:
           - linear-algebra/index.qmd
           - linear-algebra/vector.qmd
+          - linear-algebra/linearcombspanbasis.qmd
 
 format:
   html:

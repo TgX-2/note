@@ -44,25 +44,24 @@
     ]
   },
   {
-    "objectID": "linear-algebra/vector.html#cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ.",
-    "href": "linear-algebra/vector.html#cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ.",
-    "title": "Vector",
-    "section": "Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - z-axis. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.",
-    "text": "Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - z-axis. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.",
+    "objectID": "linear-algebra/linearcombspanbasis.html",
+    "href": "linear-algebra/linearcombspanbasis.html",
+    "title": "Linear Combinations and more",
+    "section": "",
+    "text": "Linear combinations\nasdf ádf",
     "crumbs": [
       "Linear Algebra",
-      "Vector"
+      "Linear Combinations and more"
     ]
   },
   {
-    "objectID": "linear-algebra/index.html",
-    "href": "linear-algebra/index.html",
-    "title": "Đại số tuyến tính",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Giới thiệu",
     "section": "",
-    "text": "Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).\nCác tài liệu mà tôi tham khảo:\n\ndaisotuyentinh\nLinear Algebra - Gilbert Strang\nEssence of linear algebra - 3blue1brown\n\nVề ưu và nhược điểm, có thể nói vui vẻ như sau:\n\nDaisotuyentinh.com: đơn giản, dễ hiểu, viết bằng Tiếng Việt, có các chứng minh, nhưng khó hiểu.\nLinear Gilbert của thầy Gilbert Strang: tài liệu của MIT, viết bằng Tiếng Anh, sẽ rất khó hiểu vì nó sẽ chứng minh một cách từ từ, nhưng nó sẽ kiểu như là gợi ý cách mình suy nghĩ là nhiều hơn, thêm một ưu điểm nữa là nó sẽ phù hợp hơn với những người thích suy nghĩ (còn tôi thì không).\nEssence of Linear Algebra của 3xanhdương1nâu: cực kỳ dị, sẽ không theo bất kỳ roadmap nào thường được thấy trong sách, nó sẽ chứng minh bằng hình học nhiều hơn (thật ra là 100% hình học), cực kỳ trực quan và dễ hiểu.",
+    "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.",
     "crumbs": [
-      "Linear Algebra",
-      "Đại số tuyến tính"
+      "Home"
     ]
   },
   {
@@ -73,13 +72,14 @@
     "text": "About this site"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Giới thiệu",
+    "objectID": "linear-algebra/index.html",
+    "href": "linear-algebra/index.html",
+    "title": "Đại số tuyến tính",
     "section": "",
-    "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.",
+    "text": "Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).\nCác tài liệu mà tôi tham khảo:\n\ndaisotuyentinh\nLinear Algebra - Gilbert Strang\nEssence of linear algebra - 3blue1brown\n\nVề ưu và nhược điểm, có thể nói vui vẻ như sau:\n\nDaisotuyentinh.com: đơn giản, dễ hiểu, viết bằng Tiếng Việt, có các chứng minh, nhưng khó hiểu.\nLinear Gilbert của thầy Gilbert Strang: tài liệu của MIT, viết bằng Tiếng Anh, sẽ rất khó hiểu vì nó sẽ chứng minh một cách từ từ, nhưng nó sẽ kiểu như là gợi ý cách mình suy nghĩ là nhiều hơn, thêm một ưu điểm nữa là nó sẽ phù hợp hơn với những người thích suy nghĩ (còn tôi thì không).\nEssence of Linear Algebra của 3xanhdương1nâu: cực kỳ dị, sẽ không theo bất kỳ roadmap nào thường được thấy trong sách, nó sẽ chứng minh bằng hình học nhiều hơn (thật ra là 100% hình học), cực kỳ trực quan và dễ hiểu.",
     "crumbs": [
-      "Home"
+      "Linear Algebra",
+      "Đại số tuyến tính"
     ]
   },
   {

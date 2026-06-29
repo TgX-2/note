@@ -1,0 +1,15 @@
+---
+title: "Linear Combinations and more"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+---
+
+___
+# Linear combinations
+
+asdf ádf

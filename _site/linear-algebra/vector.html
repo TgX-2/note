@@ -349,6 +349,12 @@ window.Quarto = {
  <span class="menu-text">Vector</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../linear-algebra/linearcombspanbasis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear Combinations and more</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -368,11 +374,10 @@ window.Quarto = {
   <li><a href="#quan-điểm-của-toán-học" id="toc-quan-điểm-của-toán-học" class="nav-link" data-scroll-target="#quan-điểm-của-toán-học">Quan điểm của Toán học</a></li>
   </ul></li>
   <li><a href="#hệ-tọa-độ-đề-các" id="toc-hệ-tọa-độ-đề-các" class="nav-link" data-scroll-target="#hệ-tọa-độ-đề-các">Hệ tọa độ Đề-Các</a></li>
-  <li><a href="#hệ-tọa-độ-3d" id="toc-hệ-tọa-độ-3d" class="nav-link" data-scroll-target="#hệ-tọa-độ-3d">Hệ tọa độ 3D</a>
-  <ul class="collapse">
-  <li><a href="#cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ." id="toc-cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ." class="nav-link" data-scroll-target="#cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ.">Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - <strong>z-axis</strong>. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.</a></li>
-  </ul></li>
+  <li><a href="#hệ-tọa-độ-3d" id="toc-hệ-tọa-độ-3d" class="nav-link" data-scroll-target="#hệ-tọa-độ-3d">Hệ tọa độ 3D</a></li>
   <li><a href="#cộng-vector" id="toc-cộng-vector" class="nav-link" data-scroll-target="#cộng-vector">Cộng Vector</a></li>
+  <li><a href="#nhân-vector-với-một-số" id="toc-nhân-vector-với-một-số" class="nav-link" data-scroll-target="#nhân-vector-với-một-số">Nhân vector với một số</a></li>
+  <li><a href="#vector-basis" id="toc-vector-basis" class="nav-link" data-scroll-target="#vector-basis">Vector Basis</a></li>
   </ul>
 </nav>
     </div>
@@ -446,9 +451,8 @@ window.Quarto = {
 </section>
 <section id="hệ-tọa-độ-3d" class="level1">
 <h1>Hệ tọa độ 3D</h1>
-<section id="cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ." class="level2">
-<h2 class="anchored" data-anchor-id="cũng-giống-như-hệ-tọa-độ-cartesian-nhưng-nó-sẽ-có-thêm-trục-cao---z-axis.-và-các-trục-phải-sắp-xếp-theo-tam-diện-thuận-tức-là-từ-trục-hoành-tung-cao-là-một-ngược-chiều-kim-đồng-hồ.">Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - <strong>z-axis</strong>. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.</h2>
-</section>
+<p>Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - <strong>z-axis</strong>. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.</p>
+<hr>
 </section>
 <section id="cộng-vector" class="level1">
 <h1>Cộng Vector</h1>
@@ -458,8 +462,50 @@ window.Quarto = {
 a + b = \begin{bmatrix} a_1 + b_1 \\ a_2 + b_2 \end{bmatrix}
 </span></p>
 <p>Một cách dễ hiểu, tưởng tượng ta cộng hai số a và b trên một trục số nằm ngang, nó sẽ là việc ta tiến lên a bước (hoặc lùi a bước nếu âm), và b cũng tương tự. Thì việc cộng hai vector cũng chỉ là việc đó nhưng diễn ra ở không hai 2 chiều, ta sẽ di chuyển a trước và sau đó di chuyển b.</p>
-<p>Điều đó rút ra được rằng, thứ tự cộng không quan trọng.</p>
-<p><span class="math display">a + b = b + a</span></p>
+<p>Điều đó rút ra được rằng, thứ tự cộng không quan trọng. <span class="math display">
+a + b = b + a
+</span></p>
+<hr>
+</section>
+<section id="nhân-vector-với-một-số" class="level1">
+<h1>Nhân vector với một số</h1>
+<p>Sẽ có vài kịch bản xảy ra với vector ban đầu:</p>
+<ol type="1">
+<li>Dãn ra <strong>c &gt; 0</strong></li>
+<li>Giữ nguyên <strong>c = 1</strong></li>
+<li>Co lại <strong>0 &lt; c &lt; 1</strong></li>
+<li>Vector không <strong>c = 0</strong></li>
+<li>Đảo chiều <strong>c &lt; 0</strong></li>
+</ol>
+<p>Việc nhân vector <span class="math inline">v</span> với scalar <span class="math inline">c</span> được tính một cách dễ dàng như sau: <span class="math display">
+c \cdot \vec{v} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}
+= \begin{bmatrix} c \cdot v_1 \\ c \cdot v_2 \end{bmatrix}
+</span></p>
+<hr>
+</section>
+<section id="vector-basis" class="level1">
+<h1>Vector Basis</h1>
+<p>Là vector cơ sở. Trong không gian 2 chiều hai vector cơ sở là:</p>
+<p><span class="math display">
+\hat{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+\space \text{and} \space  
+\hat{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+</span></p>
+<p>Tương tự, ta cũng có vector basis trong không gian 3 chiều:</p>
+<p><span class="math display">
+\hat{i} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\space \text{,} \space
+\hat{j} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
+\space \text{and} \space
+\hat{k} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+</span></p>
+<p>Bất kể vector nào cũng có thể biểu diễn bằng linear combination (tổ hợp tuyến tính?) của vector cơ sở:</p>
+<p><span class="math display">
+\begin{bmatrix} a \\ b \end{bmatrix}
+= a \cdot \hat{i} + b \cdot \hat{j}
+= a \cdot \begin{bmatrix} 1 \\ 0 \end{bmatrix} + b \cdot \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+</span></p>
+<p>Và chúng ta sẽ tìm hiểu kỹ hơn về <strong>Linear Combinations, Basis</strong> và thêm vào đó là <strong>span</strong> ở chương tiếp theo.</p>
 
 
 </section>

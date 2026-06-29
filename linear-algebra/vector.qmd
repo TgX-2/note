@@ -38,9 +38,10 @@ Một vector là bất kể thứ gì có thể thực hiện 2 phép toán này
 
 Và chúng ra sẽ tìm hiểu nó sâu hơn trong chương **Abstract Vector Spaces**.
 
----
+___
 
 # Hệ tọa độ Đề-Các
+
 Một hệ tọa độ Catesian (Đề-Các) bao gồm:
 
 * Trục tung: **y-axis**
@@ -49,13 +50,14 @@ Một hệ tọa độ Catesian (Đề-Các) bao gồm:
 
 Tọa độ của vector là một cặp số chỉ cách di chuyển từ gốc tọa độ đến đầu của vector.
 
----
+___
 
 
 # Hệ tọa độ 3D
 
 Cũng giống như hệ tọa độ Cartesian, nhưng nó sẽ có thêm trục cao - **z-axis**. Và các trục phải sắp xếp theo tam diện thuận, tức là từ trục hoành, tung, cao là một ngược chiều kim đồng hồ.
----
+
+___
 # Cộng Vector
 Ví dụ: Cho 2 vector trong không gian 2 chiều, $a = \begin{bmatrix} a_1 \\ a_2 \end{bmatrix}$ và $b = \begin{bmatrix} b_1 \\ b_2 \end{bmatrix}$.
 
@@ -68,5 +70,54 @@ $$
 Một cách dễ hiểu, tưởng tượng ta cộng hai số a và b trên một trục số nằm ngang, nó sẽ là việc ta tiến lên a bước (hoặc lùi a bước nếu âm), và b cũng tương tự. Thì việc cộng hai vector cũng chỉ là việc đó nhưng diễn ra ở không hai 2 chiều, ta sẽ di chuyển a trước và sau đó di chuyển b.
 
 Điều đó rút ra được rằng, thứ tự cộng không quan trọng.
+$$
+a + b = b + a
+$$
 
-$$a + b = b + a$$
+___
+
+# Nhân vector với một số
+Sẽ có vài kịch bản xảy ra với vector ban đầu:
+
+1. Dãn ra **c > 0**
+2. Giữ nguyên **c = 1**
+3. Co lại **0 < c < 1**
+4. Vector không **c = 0** 
+5. Đảo chiều **c < 0**
+
+Việc nhân vector $v$ với scalar $c$ được tính một cách dễ dàng như sau:
+$$
+c \cdot \vec{v} \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}
+= \begin{bmatrix} c \cdot v_1 \\ c \cdot v_2 \end{bmatrix}
+$$ 
+
+___
+
+# Vector Basis
+Là vector cơ sở. Trong không gian 2 chiều hai vector cơ sở là:
+
+$$
+\hat{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} 
+\space \text{and} \space  
+\hat{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+$$
+
+Tương tự, ta cũng có vector basis trong không gian 3 chiều:
+
+$$
+\hat{i} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\space \text{,} \space 
+\hat{j} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
+\space \text{and} \space 
+\hat{k} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+$$
+
+Bất kể vector nào cũng có thể biểu diễn bằng linear combination (tổ hợp tuyến tính?) của vector cơ sở:
+
+$$
+\begin{bmatrix} a \\ b \end{bmatrix}
+= a \cdot \hat{i} + b \cdot \hat{j} 
+= a \cdot \begin{bmatrix} 1 \\ 0 \end{bmatrix} + b \cdot \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+$$
+
+Và chúng ta sẽ tìm hiểu kỹ hơn về **Linear Combinations, Basis** và thêm vào đó là **span** ở chương tiếp theo.
