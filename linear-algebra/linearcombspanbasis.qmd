@@ -95,5 +95,4 @@ $$
 ## Non-standard Bases
 Nhưng cũng đôi lúc, chúng không "cơ sở" cho lắm.
 
-
 Tưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.
