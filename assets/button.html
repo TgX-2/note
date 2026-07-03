@@ -1,0 +1,41 @@
+<div class="page-buttons">
+  <a href="notes.html">Notes</a>
+  <a href="practice.html">Practice Problems</a>
+  <a href="assignment.html">Assignment Problems</a>
+  <a href="next.html">Next Section</a>
+</div>
+
+<style>
+.page-buttons{
+  display:flex;
+  gap:12px;
+  margin-top:1rem;
+  margin-bottom:1.5rem;
+  flex-wrap:wrap;
+}
+
+.page-buttons a{
+  text-decoration:none;
+  border:2px solid rgb(255, 255, 255);
+  border-radius:999px;
+  padding:6px 14px;
+  font-weight:bold;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const author = document.querySelector(".quarto-title-meta");
+
+  if(author){
+      author.insertAdjacentHTML("afterend", `
+      <div class="page-buttons">
+          <a href="notes.html">Notes</a>
+          <a href="practice.html">Practice Problems</a>
+          <a href="assignment.html">Assignment Problems</a>
+          <a href="next.html">Next Section</a>
+      </div>
+      `);
+  }
+});
+</script>

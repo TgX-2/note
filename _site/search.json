@@ -1,21 +1,10 @@
 [
   {
-    "objectID": "linear-algebra/vector.html",
-    "href": "linear-algebra/vector.html",
-    "title": "Vector",
-    "section": "",
-    "text": "Vector, khá là quen thuộc với học sinh. Với việc được học trong Tin học chuyên mà tôi được học, cụ thể là một kiểu dữ liệu trong C++, phần Vật lý 10 và sau đó là Toán học lớp 11. Nhưng, chúng có liên quan gì đến nhau không?\n\n\nVector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:\n\nĐộ dài\nHướng\n\nHai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.\n\n\n\nNó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu. Đúng vậy, nó khác là khác với hai môn còn lại\n\n\n\nMột cách khó hiểu và cực kỳ trừu tượng.\nMột vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:\n\nCộng hai vector\nNhân một vector với một số (scalar)\n\nVà chúng ra sẽ tìm hiểu nó sâu hơn trong chương Abstract Vector Spaces.",
-    "crumbs": [
-      "Linear Algebra",
-      "Vector"
-    ]
-  },
-  {
     "objectID": "linear-algebra/vector.html#quan-điểm-của-vật-lý",
     "href": "linear-algebra/vector.html#quan-điểm-của-vật-lý",
     "title": "Vector",
-    "section": "",
-    "text": "Vector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:\n\nĐộ dài\nHướng\n\nHai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.",
+    "section": "Quan điểm của Vật lý",
+    "text": "Quan điểm của Vật lý\nVector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:\n\nĐộ dài\nHướng\n\nHai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.",
     "crumbs": [
       "Linear Algebra",
       "Vector"
@@ -25,8 +14,8 @@
     "objectID": "linear-algebra/vector.html#quan-điểm-của-tin-học",
     "href": "linear-algebra/vector.html#quan-điểm-của-tin-học",
     "title": "Vector",
-    "section": "",
-    "text": "Nó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu. Đúng vậy, nó khác là khác với hai môn còn lại",
+    "section": "Quan điểm của Tin học",
+    "text": "Quan điểm của Tin học\nNó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu. Đúng vậy, nó khác là khác với hai môn còn lại",
     "crumbs": [
       "Linear Algebra",
       "Vector"
@@ -36,8 +25,8 @@
     "objectID": "linear-algebra/vector.html#quan-điểm-của-toán-học",
     "href": "linear-algebra/vector.html#quan-điểm-của-toán-học",
     "title": "Vector",
-    "section": "",
-    "text": "Một cách khó hiểu và cực kỳ trừu tượng.\nMột vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:\n\nCộng hai vector\nNhân một vector với một số (scalar)\n\nVà chúng ra sẽ tìm hiểu nó sâu hơn trong chương Abstract Vector Spaces.",
+    "section": "Quan điểm của Toán học",
+    "text": "Quan điểm của Toán học\nMột cách khó hiểu và cực kỳ trừu tượng.\nMột vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:\n\nCộng hai vector\nNhân một vector với một số (scalar)\n\nVà chúng ra sẽ tìm hiểu nó sâu hơn trong chương Abstract Vector Spaces.",
     "crumbs": [
       "Linear Algebra",
       "Vector"

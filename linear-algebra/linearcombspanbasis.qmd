@@ -1,5 +1,6 @@
 ---
 title: "Linear Combinations and more"
+chapter: "Linear Algebra"
 author: "TgX.2"
 format:
   html:
@@ -7,6 +8,11 @@ format:
     toc-depth: 3
     toc-title: "Mục lục bài viết"
     toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+    # include-after-body: ../assets/button.html
 ---
 
 ___

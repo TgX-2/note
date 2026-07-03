@@ -1,5 +1,6 @@
 ---
 title: "Vector"
+chapter: "Linear Algebra"
 author: "TgX.2"
 format:
   html:
@@ -7,8 +8,16 @@ format:
     toc-depth: 3
     toc-title: "Mục lục bài viết"
     toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+    # include-after-body: ../navigation.js
+    # include-after-body: ../assets/button.html
 ---
 
+___
+::: {.notes}
 # 3 quan điểm về Vector
 
 Vector, khá là quen thuộc với học sinh. Với việc được học trong Tin học chuyên mà tôi được học, cụ thể là một kiểu dữ liệu trong C++, phần Vật lý 10 và sau đó là Toán học lớp 11. Nhưng, chúng có liên quan gì đến nhau không? 
@@ -121,3 +130,11 @@ $$
 $$
 
 Và chúng ta sẽ tìm hiểu kỹ hơn về **Linear Combinations, Basis** và thêm vào đó là **span** ở chương tiếp theo.
+
+:::
+
+::: {.problems}
+
+asdfsdaf
+
+:::
