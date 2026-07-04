@@ -18,6 +18,7 @@ website:
           - linear-algebra/index.qmd
           - linear-algebra/vector.qmd
           - linear-algebra/linearcombspanbasis.qmd
+          - linear-algebra/lineartransformation.qmd
 
 format:
   html:

@@ -12,8 +12,6 @@ format:
     include-in-header:
       text: | 
         <script src="../navigation.js" defer></script>
-    # include-after-body: ../navigation.js
-    # include-after-body: ../assets/button.html
 ---
 
 ___

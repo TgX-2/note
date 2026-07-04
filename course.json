@@ -11,6 +11,10 @@
     {
       "title": "linearcombspanbasis",
       "path": "linear-algebra/linearcombspanbasis"
+    },
+    {
+      "title": "lineartransformation",
+      "path": "linear-algebra/lineartransformation"
     }
   ]
 }

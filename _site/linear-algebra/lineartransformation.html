@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="TgX.2">
 
-<title>Giới thiệu – TgX.2</title>
+<title>Linear Tranformation – TgX.2</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,28 +27,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./img/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e8964db687007ca8dd88d9d9ce58e3ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../img/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e8964db687007ca8dd88d9d9ce58e3ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,9 +76,53 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../navigation.js" defer=""></script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -251,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linear-algebra/index.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../linear-algebra/lineartransformation.html">Linear Tranformation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -266,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">TgX.2</a> 
+      <a href="../">TgX.2</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -281,40 +326,40 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Linear Algebra</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linear-algebra/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../linear-algebra/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Đại số tuyến tính</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linear-algebra/vector.html" class="sidebar-item-text sidebar-link">
+  <a href="../linear-algebra/vector.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vector</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linear-algebra/linearcombspanbasis.html" class="sidebar-item-text sidebar-link">
+  <a href="../linear-algebra/linearcombspanbasis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear Combinations and more</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linear-algebra/lineartransformation.html" class="sidebar-item-text sidebar-link">
+  <a href="../linear-algebra/lineartransformation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Linear Tranformation</span></a>
   </div>
 </li>
@@ -327,10 +372,19 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Mục lục bài viết</h2>
    
   <ul>
-  <li><a href="#updatehome-1-ngày-24-tháng-6-năm-2026" id="toc-updatehome-1-ngày-24-tháng-6-năm-2026" class="nav-link active" data-scroll-target="#updatehome-1-ngày-24-tháng-6-năm-2026">UpdateHome #1: Ngày 24 tháng 6 năm 2026</a></li>
+  <li><a href="#ánh-xạ-là-gì" id="toc-ánh-xạ-là-gì" class="nav-link active" data-scroll-target="#ánh-xạ-là-gì">Ánh xạ là gì?</a></li>
+  <li><a href="#ánh-xạ-tuyến-tính" id="toc-ánh-xạ-tuyến-tính" class="nav-link" data-scroll-target="#ánh-xạ-tuyến-tính">Ánh xạ tuyến tính</a></li>
+  <li><a href="#ma-trận-của-linear-transformation" id="toc-ma-trận-của-linear-transformation" class="nav-link" data-scroll-target="#ma-trận-của-linear-transformation">Ma trận của Linear Transformation</a></li>
+  <li><a href="#một-số-ví-dụ-về-những-cái-ánh-xạ-quan-trọng" id="toc-một-số-ví-dụ-về-những-cái-ánh-xạ-quan-trọng" class="nav-link" data-scroll-target="#một-số-ví-dụ-về-những-cái-ánh-xạ-quan-trọng">Một số ví dụ về những cái ánh xạ quan trọng</a>
+  <ul class="collapse">
+  <li><a href="#rotation" id="toc-rotation" class="nav-link" data-scroll-target="#rotation">Rotation</a></li>
+  <li><a href="#scaling" id="toc-scaling" class="nav-link" data-scroll-target="#scaling">Scaling</a></li>
+  <li><a href="#shear" id="toc-shear" class="nav-link" data-scroll-target="#shear">Shear</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -338,15 +392,21 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linear-algebra/index.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../linear-algebra/lineartransformation.html">Linear Tranformation</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Giới thiệu</h1>
+<h1 class="title">Linear Tranformation</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>TgX.2 </p>
+          </div>
+  </div>
     
   
     
@@ -357,19 +417,110 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.</p>
 <hr>
-<section id="updatehome-1-ngày-24-tháng-6-năm-2026" class="level1">
-<h1>UpdateHome #1: Ngày 24 tháng 6 năm 2026</h1>
-<p>Tại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.</p>
-<p>Bây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.</p>
-<p>Nhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?</p>
-<p>Tôi cũng không biết nữa.</p>
-<p>Nhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.</p>
-<p>Tôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).</p>
-<p>Tạm biệt ./.</p>
+<section id="ánh-xạ-là-gì" class="level1">
+<h1>Ánh xạ là gì?</h1>
+<p>Một ánh xạ là một hàm mà nó chuyển vector này sang vector khác.</p>
+<p>Mỗi một input vector sẽ chỉ đến một output vector.</p>
+<p><span class="math display">
+T : \mathbb R ^ 2 \rightarrow \mathbb{R^2}
+</span></p>
+<hr>
+</section>
+<section id="ánh-xạ-tuyến-tính" class="level1">
+<h1>Ánh xạ tuyến tính</h1>
+<p>Một <strong>Linear Transformation</strong> nếu nó thỏa hai điều kiện sau đây:</p>
+<ol type="1">
+<li><strong>Additivity:</strong> <span class="math inline">T(\mathbf v + \mathbf w) = T(\mathbf v) + T(\mathbf w)</span></li>
+<li><strong>Homogeneity:</strong> <span class="math inline">T(c \cdot \mathbf v) = c \cdot T(\mathbf v)</span></li>
+</ol>
+<p>Với các vector <span class="math inline">v, w</span> và <strong>scalar</strong> c bất kỳ.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Geometric Intuition
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Một ánh xạ tuyến tính sẽ bóp méo các vector cơ sở, sao cho thỏa mãn:</p>
+<ol type="1">
+<li><strong>Các đường thẳng vẫn thẳng.</strong> (Không thể nào cong được)</li>
+<li><strong>Gốc tọa độ phải giữ nguyên.</strong></li>
+</ol>
+<p>Nếu các đường lưới vẫn song song và cách đều nhau sau phép biến đổi, thì đó là phép biến đổi tuyến tính.</p>
+<p><img src="../img/2.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="ma-trận-của-linear-transformation" class="level1">
+<h1>Ma trận của Linear Transformation</h1>
+<p>Với mỗi Linear Transformation <span class="math inline">T : \mathbb{R^2} \rightarrow \mathbb{R^2}</span> đều có thể hoàn toàn xác định nơi mà hai vector basis của mình <span class="math inline">\hat{i}</span> và <span class="math inline">\hat{j}</span> ở đâu sau khi ánh xạ.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Proof
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Với bất kỳ vector <span class="math inline">\mathbf{v} = \begin{bmatrix} x \\ y \end{bmatrix}</span> đều có thể viết dưới dạng: <span class="math inline">\mathbf v = x \hat i + y \hat j</span>.</p>
+<p>Sử dụng tính chất tuyến tính:</p>
+<p><span class="math display">
+T(\mathbf v) = T(x \hat i + y \hat j) = x T(\hat i) + y T(\hat j)
+</span></p>
+<p>Vì thế, nếu chúng ta biết được <span class="math inline">T(\hat i)</span> và <span class="math inline">T(\hat j)</span> hay là vị trí của hai vector basis <span class="math inline">\hat{i}</span> và <span class="math inline">\hat{j}</span> ở đâu sau khi áp <span class="math inline">T()</span>.</p>
+</div>
+</div>
+<p>Nếu <span class="math inline">T(\hat i) = \begin{bmatrix} a \\ c \end{bmatrix}</span> và <span class="math inline">T(\hat j) = \begin{bmatrix} b \\ d \end{bmatrix}</span>, <strong>Transformation Matrix</strong> của <span class="math inline">T</span> là:</p>
+<p><span class="math display">
+A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}
+</span></p>
+<hr>
+</section>
+<section id="một-số-ví-dụ-về-những-cái-ánh-xạ-quan-trọng" class="level1">
+<h1>Một số ví dụ về những cái ánh xạ quan trọng</h1>
+<section id="rotation" class="level2">
+<h2 class="anchored" data-anchor-id="rotation">Rotation</h2>
+<p><strong>Phép quay:</strong> một phép quay một góc <span class="math inline">\theta</span> ngược chiều:</p>
+<p><span class="math display">
+\mathbf{A}_{\theta} = \begin{bmatrix}
+\cos\theta &amp; -\sin\theta \\
+\sin\theta &amp; \cos\theta
+\end{bmatrix}
+</span></p>
+</section>
+<section id="scaling" class="level2">
+<h2 class="anchored" data-anchor-id="scaling">Scaling</h2>
+<p><strong>Phép co dãn:</strong> phóng trục hoành một lượng <span class="math inline">x</span> và trục tung một lượng <span class="math inline">y</span></p>
+<p><span class="math display">
+\mathbf A = \begin{bmatrix}
+x &amp; 0 \\
+0 &amp; y
+\end{bmatrix}
+</span></p>
+</section>
+<section id="shear" class="level2">
+<h2 class="anchored" data-anchor-id="shear">Shear</h2>
+<p><strong>Phép cắt:</strong> một trục sẽ giữ nguyên hướng, trong khi đó trục còn lại sẽ bị thay đổi một lượng <span class="math inline">k</span>.</p>
+<p>Ví dụ: <img src="../img/3.png" class="img-fluid"></p>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<div class="problems">
+<p>ádfasdf</p>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

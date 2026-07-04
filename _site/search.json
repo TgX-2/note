@@ -33,48 +33,66 @@
     ]
   },
   {
-    "objectID": "linear-algebra/linearcombspanbasis.html#span-in-2d",
-    "href": "linear-algebra/linearcombspanbasis.html#span-in-2d",
-    "title": "Linear Combinations and more",
-    "section": "Span in 2D",
-    "text": "Span in 2D\nVới hai vector \\mathbf v và \\mathbf w trong không gian hai chiều \\mathbb R^2, có 3 trường hợp khả dĩ sau đây:\n\nNếu hai vector không thẳng hàng với nhau: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\mathbb R^2 - một mặt phẳng.\nNếu hai vector thẳng hàng với nhau nhưng không bằng không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} - một đưởng thẳng.\nNếu hai vector đều là vector không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\{ 0 \\} - một gốc tọa độ.",
+    "objectID": "linear-algebra/lineartransformation.html#rotation",
+    "href": "linear-algebra/lineartransformation.html#rotation",
+    "title": "Linear Tranformation",
+    "section": "Rotation",
+    "text": "Rotation\nPhép quay: một phép quay một góc \\theta ngược chiều:\n\n\\mathbf{A}_{\\theta} = \\begin{bmatrix}\n\\cos\\theta & -\\sin\\theta \\\\\n\\sin\\theta & \\cos\\theta\n\\end{bmatrix}",
     "crumbs": [
       "Linear Algebra",
-      "Linear Combinations and more"
+      "Linear Tranformation"
     ]
   },
   {
-    "objectID": "linear-algebra/linearcombspanbasis.html#span-in-3d",
-    "href": "linear-algebra/linearcombspanbasis.html#span-in-3d",
-    "title": "Linear Combinations and more",
-    "section": "Span in 3D",
-    "text": "Span in 3D\n\nChỉ có một vector khác vector không: span là một đường thẳng.\nCó 2 vector không thẳng hàng: span là mặt phẳng.\nCả 3 vector không thuộc cùng một mặt phẳng: span là tất cả không gian \\mathbb R^3.",
+    "objectID": "linear-algebra/lineartransformation.html#scaling",
+    "href": "linear-algebra/lineartransformation.html#scaling",
+    "title": "Linear Tranformation",
+    "section": "Scaling",
+    "text": "Scaling\nPhép co dãn: phóng trục hoành một lượng x và trục tung một lượng y\n\n\\mathbf A = \\begin{bmatrix}\nx & 0 \\\\\n0 & y\n\\end{bmatrix}",
     "crumbs": [
       "Linear Algebra",
-      "Linear Combinations and more"
+      "Linear Tranformation"
     ]
   },
   {
-    "objectID": "linear-algebra/linearcombspanbasis.html#basis",
-    "href": "linear-algebra/linearcombspanbasis.html#basis",
-    "title": "Linear Combinations and more",
-    "section": "Basis",
-    "text": "Basis\nNhư đã nói ở chương trước, một vector basis thường là: \n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space  \n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}\n\nVới không gian 2 chiều, và không gian 3 chiều là:\n\n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}\n\\space \\text{,} \\space\n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space\n\\hat{k} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}",
+    "objectID": "linear-algebra/lineartransformation.html#shear",
+    "href": "linear-algebra/lineartransformation.html#shear",
+    "title": "Linear Tranformation",
+    "section": "Shear",
+    "text": "Shear\nPhép cắt: một trục sẽ giữ nguyên hướng, trong khi đó trục còn lại sẽ bị thay đổi một lượng k.\nVí dụ:",
     "crumbs": [
       "Linear Algebra",
-      "Linear Combinations and more"
+      "Linear Tranformation"
     ]
   },
   {
-    "objectID": "linear-algebra/linearcombspanbasis.html#non-standard-bases",
-    "href": "linear-algebra/linearcombspanbasis.html#non-standard-bases",
-    "title": "Linear Combinations and more",
-    "section": "Non-standard Bases",
-    "text": "Non-standard Bases\nNhưng cũng đôi lúc, chúng không “cơ sở” cho lắm.\nTưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.",
+    "objectID": "linear-algebra/lineartransformation.html#reflection",
+    "href": "linear-algebra/lineartransformation.html#reflection",
+    "title": "Linear Tranformation",
+    "section": "Reflection",
+    "text": "Reflection\n\nádfasdf",
     "crumbs": [
       "Linear Algebra",
-      "Linear Combinations and more"
+      "Linear Tranformation"
     ]
+  },
+  {
+    "objectID": "linear-algebra/index.html",
+    "href": "linear-algebra/index.html",
+    "title": "Đại số tuyến tính",
+    "section": "",
+    "text": "Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).\nCác tài liệu mà tôi tham khảo:\n\ndaisotuyentinh\nLinear Algebra - Gilbert Strang\nEssence of linear algebra - 3blue1brown\n\nVề ưu và nhược điểm, có thể nói vui vẻ như sau:\n\nDaisotuyentinh.com: đơn giản, dễ hiểu, viết bằng Tiếng Việt, có các chứng minh, nhưng khó hiểu.\nLinear Gilbert của thầy Gilbert Strang: tài liệu của MIT, viết bằng Tiếng Anh, sẽ rất khó hiểu vì nó sẽ chứng minh một cách từ từ, nhưng nó sẽ kiểu như là gợi ý cách mình suy nghĩ là nhiều hơn, thêm một ưu điểm nữa là nó sẽ phù hợp hơn với những người thích suy nghĩ (còn tôi thì không).\nEssence of Linear Algebra của 3xanhdương1nâu: cực kỳ dị, sẽ không theo bất kỳ roadmap nào thường được thấy trong sách, nó sẽ chứng minh bằng hình học nhiều hơn (thật ra là 100% hình học), cực kỳ trực quan và dễ hiểu.",
+    "crumbs": [
+      "Linear Algebra",
+      "Đại số tuyến tính"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   },
   {
     "objectID": "index.html",
@@ -87,21 +105,58 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "linear-algebra/linearcombspanbasis.html",
+    "href": "linear-algebra/linearcombspanbasis.html",
+    "title": "Linear Combinations and more",
     "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "linear-algebra/index.html",
-    "href": "linear-algebra/index.html",
-    "title": "Đại số tuyến tính",
-    "section": "",
-    "text": "Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).\nCác tài liệu mà tôi tham khảo:\n\ndaisotuyentinh\nLinear Algebra - Gilbert Strang\nEssence of linear algebra - 3blue1brown\n\nVề ưu và nhược điểm, có thể nói vui vẻ như sau:\n\nDaisotuyentinh.com: đơn giản, dễ hiểu, viết bằng Tiếng Việt, có các chứng minh, nhưng khó hiểu.\nLinear Gilbert của thầy Gilbert Strang: tài liệu của MIT, viết bằng Tiếng Anh, sẽ rất khó hiểu vì nó sẽ chứng minh một cách từ từ, nhưng nó sẽ kiểu như là gợi ý cách mình suy nghĩ là nhiều hơn, thêm một ưu điểm nữa là nó sẽ phù hợp hơn với những người thích suy nghĩ (còn tôi thì không).\nEssence of Linear Algebra của 3xanhdương1nâu: cực kỳ dị, sẽ không theo bất kỳ roadmap nào thường được thấy trong sách, nó sẽ chứng minh bằng hình học nhiều hơn (thật ra là 100% hình học), cực kỳ trực quan và dễ hiểu.",
+    "text": "Ở chương trức thì ta đã nói rằng vector là một mũi tên có hướng từ gốc tọa độ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nNhưng giờ hãy thử nghĩ khác lại, vector v = \\begin{bmatrix} v_1 \\\\ v_2 \\end{bmatrix} chính là:\n\nSố v_1 là scalar của mà sẽ nhân với vector \\hat{i}\nSố v_2 là scalar của mà sẽ nhân với vector \\hat{j}\nVà vector cuối cùng chính là tổng của hai vector trên\n\n\n\n\n\nMột linear combinations của hai vector v và w là:\n\na \\mathbf v + b \\mathbf w\n\nTrong đó, a và b là hai hệ số scalar tùy ý.\nTổng quát hơn, linear combination của n vector v_1, v_2, ..., v_n là:\n\nc_1 \\mathbf v_1 + c_2 \\mathbf v_2 + ... c_n \\mathbf v_n = \\sum_{i - 1}^{n}{c_i \\mathbf {v_i}}\n\n\n\n\n\nSpan là tập hợp các vector khả dĩ trong linear combinations của các vector đó.\n\n\\text{span} \\{ \\mathbf v_1, .. \\mathbf v_2, ... \\mathbf v_n \\}\n= \\{ {c_1 \\mathbf v_1 + c_2 \\mathbf v_2 + ... c_n \\mathbf v_n | c_i \\in \\mathbb R} \\}\n\nNói cho dễ hiểu: Nếu chỉ dùng cộng hai vector và nhân vector với một số, ta có thể đạt được những vector nào? Đáp án: Đó là Span của vector.\n\n\n\nVới hai vector \\mathbf v và \\mathbf w trong không gian hai chiều \\mathbb R^2, có 3 trường hợp khả dĩ sau đây:\n\nNếu hai vector không thẳng hàng với nhau: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\mathbb R^2 - một mặt phẳng.\nNếu hai vector thẳng hàng với nhau nhưng không bằng không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} - một đưởng thẳng.\nNếu hai vector đều là vector không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\{ 0 \\} - một gốc tọa độ.\n\n\n\n\n\nChỉ có một vector khác vector không: span là một đường thẳng.\nCó 2 vector không thẳng hàng: span là mặt phẳng.\nCả 3 vector không thuộc cùng một mặt phẳng: span là tất cả không gian \\mathbb R^3.\n\n\n\n\n\n\nCó thể nói một cách dễ hiểu rằng:\n\nLinear independence : Không một vector nào là thừa.\nLinear dependence : Ít nhất là một vector có thể xóa.\n\n\n\n\n\n\n\nNhư đã nói ở chương trước, một vector basis thường là: \n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space  \n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}\n\nVới không gian 2 chiều, và không gian 3 chiều là:\n\n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}\n\\space \\text{,} \\space\n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space\n\\hat{k} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}\n\n\n\n\nNhưng cũng đôi lúc, chúng không “cơ sở” cho lắm.\nTưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.",
     "crumbs": [
       "Linear Algebra",
-      "Đại số tuyến tính"
+      "Linear Combinations and more"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/linearcombspanbasis.html#span-in-2d",
+    "href": "linear-algebra/linearcombspanbasis.html#span-in-2d",
+    "title": "Linear Combinations and more",
+    "section": "",
+    "text": "Với hai vector \\mathbf v và \\mathbf w trong không gian hai chiều \\mathbb R^2, có 3 trường hợp khả dĩ sau đây:\n\nNếu hai vector không thẳng hàng với nhau: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\mathbb R^2 - một mặt phẳng.\nNếu hai vector thẳng hàng với nhau nhưng không bằng không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} - một đưởng thẳng.\nNếu hai vector đều là vector không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\{ 0 \\} - một gốc tọa độ.",
+    "crumbs": [
+      "Linear Algebra",
+      "Linear Combinations and more"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/linearcombspanbasis.html#span-in-3d",
+    "href": "linear-algebra/linearcombspanbasis.html#span-in-3d",
+    "title": "Linear Combinations and more",
+    "section": "",
+    "text": "Chỉ có một vector khác vector không: span là một đường thẳng.\nCó 2 vector không thẳng hàng: span là mặt phẳng.\nCả 3 vector không thuộc cùng một mặt phẳng: span là tất cả không gian \\mathbb R^3.",
+    "crumbs": [
+      "Linear Algebra",
+      "Linear Combinations and more"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/linearcombspanbasis.html#basis",
+    "href": "linear-algebra/linearcombspanbasis.html#basis",
+    "title": "Linear Combinations and more",
+    "section": "",
+    "text": "Như đã nói ở chương trước, một vector basis thường là: \n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space  \n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}\n\nVới không gian 2 chiều, và không gian 3 chiều là:\n\n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}\n\\space \\text{,} \\space\n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space\n\\hat{k} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}",
+    "crumbs": [
+      "Linear Algebra",
+      "Linear Combinations and more"
+    ]
+  },
+  {
+    "objectID": "linear-algebra/linearcombspanbasis.html#non-standard-bases",
+    "href": "linear-algebra/linearcombspanbasis.html#non-standard-bases",
+    "title": "Linear Combinations and more",
+    "section": "",
+    "text": "Nhưng cũng đôi lúc, chúng không “cơ sở” cho lắm.\nTưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.",
+    "crumbs": [
+      "Linear Algebra",
+      "Linear Combinations and more"
     ]
   },
   {
