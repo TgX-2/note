@@ -1,74 +1,119 @@
 #lesson-nav{
-
     margin:1.5rem 0;
-
 }
 
 .lesson-info{
-
     display:flex;
     justify-content:space-between;
-
-    color:#666;
-
     font-size:.9rem;
-
     margin-bottom:.5rem;
-
 }
 
 .lesson-navbar{
-
     display:flex;
-
-    justify-content:space-between;
-
+    justify-content:center;
     align-items:center;
 
-    border:2px solid #c62828;
-
+    border:2px solid var(--bs-border-color);
     border-radius:999px;
-
     padding:.5rem 1rem;
 
+    background:var(--bs-body-bg);
 }
 
 .lesson-navbar a{
-
     text-decoration:none;
-
     font-weight:600;
-
+    transition:.2s;
 }
 
 .tabs{
-
     display:flex;
-
+    justify-content:center;
+    align-items:center;
     gap:.5rem;
-
 }
 
 .tab{
-
     border:none;
+    background:transparent;
 
-    background:none;
-
-    padding:.4rem .9rem;
+    padding:.45rem 1.1rem;
 
     border-radius:999px;
 
-    cursor:pointer;
-
     font-weight:600;
 
+    transition:
+        background-color .2s,
+        color .2s;
+
+    color:var(--bs-body-color);
+
+    cursor:pointer;
+}
+
+.tab:hover{
+    background:var(--bs-secondary-bg);
 }
 
 .tab.active{
+    background:var(--bs-primary);
+    color:var(--bs-light);
+}
 
-    background:#c62828;
+/* ---------- Light Theme ---------- */
 
-    color:white;
+html[data-bs-theme="light"] .lesson-info{
+    color:#666;
+}
 
+html[data-bs-theme="light"] .lesson-navbar{
+    border:2px solid #222;
+    background:#fff;
+}
+
+html[data-bs-theme="light"] .lesson-navbar a{
+    color:#222;
+}
+
+html[data-bs-theme="light"] .tab{
+    color:#222;
+}
+
+html[data-bs-theme="light"] .tab:hover{
+    background:#efefef;
+}
+
+html[data-bs-theme="light"] .tab.active{
+    background:#222;
+    color:#fff;
+}
+
+/* ---------- Dark Theme ---------- */
+
+html[data-bs-theme="dark"] .lesson-info{
+    color:#aaa;
+}
+
+html[data-bs-theme="dark"] .lesson-navbar{
+    border:2px solid #666;
+    background:#222;
+}
+
+html[data-bs-theme="dark"] .lesson-navbar a{
+    color:#1D9D77;
+}
+
+html[data-bs-theme="dark"] .tab{
+    color:#1D9D77;
+}
+
+html[data-bs-theme="dark"] .tab:hover{
+    background:#333;
+}
+
+html[data-bs-theme="dark"] .tab.active{
+    background:#1D9D77;
+    color:#111;
 }

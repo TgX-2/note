@@ -590,7 +590,7 @@ c_1 \mathbf v_1 + c_2 \mathbf v_2 + ... c_n \mathbf v_n = \sum_{i - 1}^{n}{c_i \
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/tgx-2\.github\.io\/note");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
