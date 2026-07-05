@@ -35,45 +35,45 @@
   {
     "objectID": "linear-algebra/lineartransformation.html#rotation",
     "href": "linear-algebra/lineartransformation.html#rotation",
-    "title": "Linear Tranformation",
+    "title": "Linear Transformation",
     "section": "Rotation",
     "text": "Rotation\nPhép quay: một phép quay một góc \\theta ngược chiều:\n\n\\mathbf{A}_{\\theta} = \\begin{bmatrix}\n\\cos\\theta & -\\sin\\theta \\\\\n\\sin\\theta & \\cos\\theta\n\\end{bmatrix}",
     "crumbs": [
       "Linear Algebra",
-      "Linear Tranformation"
+      "Linear Transformation"
     ]
   },
   {
     "objectID": "linear-algebra/lineartransformation.html#scaling",
     "href": "linear-algebra/lineartransformation.html#scaling",
-    "title": "Linear Tranformation",
+    "title": "Linear Transformation",
     "section": "Scaling",
     "text": "Scaling\nPhép co dãn: phóng trục hoành một lượng x và trục tung một lượng y\n\n\\mathbf A = \\begin{bmatrix}\nx & 0 \\\\\n0 & y\n\\end{bmatrix}",
     "crumbs": [
       "Linear Algebra",
-      "Linear Tranformation"
+      "Linear Transformation"
     ]
   },
   {
     "objectID": "linear-algebra/lineartransformation.html#shear",
     "href": "linear-algebra/lineartransformation.html#shear",
-    "title": "Linear Tranformation",
+    "title": "Linear Transformation",
     "section": "Shear",
     "text": "Shear\nPhép cắt: một trục sẽ giữ nguyên hướng, trong khi đó trục còn lại sẽ bị thay đổi một lượng k.\nVí dụ:",
     "crumbs": [
       "Linear Algebra",
-      "Linear Tranformation"
+      "Linear Transformation"
     ]
   },
   {
     "objectID": "linear-algebra/lineartransformation.html#reflection",
     "href": "linear-algebra/lineartransformation.html#reflection",
-    "title": "Linear Tranformation",
+    "title": "Linear Transformation",
     "section": "Reflection",
-    "text": "Reflection\n\nádfasdf",
+    "text": "Reflection",
     "crumbs": [
       "Linear Algebra",
-      "Linear Tranformation"
+      "Linear Transformation"
     ]
   },
   {
@@ -88,13 +88,6 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Giới thiệu",
@@ -102,6 +95,24 @@
     "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "linear-algebra/determinant.html",
+    "href": "linear-algebra/determinant.html",
+    "title": "Determinant",
+    "section": "",
+    "text": "Determinant: Ý nghĩa hình học\nMột định thức của ma trận là phương của diện tích sau khi ánh xạ với diện tích trước ánh xạ.\n\ndet(\\mathbf A) = \\frac{\\text{area after T}}{\\text{area before T}}\n\n\n\n\n\nÝ nghĩa Determinant\n\n\\det(\\mathbf A) &gt; 0 : Trục cơ sở vẫn giữ nguyên (tức là \\hat i nằm bên phải \\hat j theo chiều đồng hồ).\n\\det(\\mathbf A) &lt; 0 : Trục cơ sở bị đảo (\\hat i nằm bên trái \\hat j theo chiều đồng hồ).\n\\det(\\mathbf A) = 0 : Chiều không gian bị giảm đi (tức là từ không gian \\mathbb R^n giảm xuống \\mathbb R^{n - 1} ,..., \\mathbb R^0).\n\n\n\n\nCách tính Determinant\n…\n\n\n\nMột số tính chất của Determinant\n\n\\det(\\mathbf I) = 1 (\\mathbf I là ma trận cơ sở, sẽ nói xâu hơn ở chương Matrix).\n\\det(\\mathbf {AB}) = \\det(\\mathbf A) \\cdot \\det(\\mathbf B)\n\\det(\\mathbf A^T) = \\det(\\mathbf A) (\\mathbf A^T là ma trận chuyển vị, sẽ nói xâu hơn ở chương Matrix)\n\\det(c \\mathbf A) = c^n \\det(\\mathbf A) nếu \\mathbf A là ma trận n \\times n\n\n\n\n\nSự sụp đổ của không gian",
+    "crumbs": [
+      "Linear Algebra",
+      "Determinant"
     ]
   },
   {
@@ -162,22 +173,34 @@
   {
     "objectID": "linear-algebra/matrix.html",
     "href": "linear-algebra/matrix.html",
-    "title": "Ma trận",
+    "title": "Matrix",
     "section": "",
-    "text": "Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.\nThử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nVí dụ: Vector \\vec v (1, 2)."
+    "text": "Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.\nThử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nVí dụ: Vector \\vec v (1, 2).",
+    "crumbs": [
+      "Linear Algebra",
+      "Matrix"
+    ]
   },
   {
     "objectID": "linear-algebra/matrix.html#ma-trận-cột",
     "href": "linear-algebra/matrix.html#ma-trận-cột",
-    "title": "Ma trận",
+    "title": "Matrix",
     "section": "Ma trận cột",
-    "text": "Ma trận cột\nTa có thể biểu diễn Vector \\vec v trên bằng ma trận cột 1 \\times 2, được ký hiệu như sau:\n\n\\begin{bmatrix}\n1 \\\\\n2\n\\end{bmatrix}\n\nHay tổng quát hơn, ta có thể biểu diễn một vector nhiều chiều bằng ma trận cột gồm n giá trị \n\\begin{bmatrix}\na_1 \\\\\na_2 \\\\\na_3 \\\\\n\\vdots \\\\\na_n\n\\end{bmatrix}"
+    "text": "Ma trận cột\nTa có thể biểu diễn Vector \\vec v trên bằng ma trận cột 1 \\times 2, được ký hiệu như sau:\n\n\\begin{bmatrix}\n1 \\\\\n2\n\\end{bmatrix}\n\nHay tổng quát hơn, ta có thể biểu diễn một vector nhiều chiều bằng ma trận cột gồm n giá trị \n\\begin{bmatrix}\na_1 \\\\\na_2 \\\\\na_3 \\\\\n\\vdots \\\\\na_n\n\\end{bmatrix}",
+    "crumbs": [
+      "Linear Algebra",
+      "Matrix"
+    ]
   },
   {
     "objectID": "linear-algebra/matrix.html#ma-trận-n-times-m",
     "href": "linear-algebra/matrix.html#ma-trận-n-times-m",
-    "title": "Ma trận",
+    "title": "Matrix",
     "section": "Ma trận n \\times m",
-    "text": "Ma trận n \\times m\nLà tập hợp của m vector n chiều.\n\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1m} \\\\\na_{21} & a_{22} & \\cdots & a_{2m} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n1} & a_{n2} & \\cdots & a_{nm} \\\\\n\\end{bmatrix}"
+    "text": "Ma trận n \\times m\nLà tập hợp của m vector n chiều.\n\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1m} \\\\\na_{21} & a_{22} & \\cdots & a_{2m} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n1} & a_{n2} & \\cdots & a_{nm} \\\\\n\\end{bmatrix}",
+    "crumbs": [
+      "Linear Algebra",
+      "Matrix"
+    ]
   }
 ]

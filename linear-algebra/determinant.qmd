@@ -1,0 +1,54 @@
+---
+title: "Determinant"
+chapter: "Linear Algebra"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+---
+
+___
+# Determinant: Ý nghĩa hình học
+
+Một định thức của ma trận là phương của diện tích sau khi ánh xạ với diện tích trước ánh xạ.
+
+$$
+det(\mathbf A) = \frac{\text{area after T}}{\text{area before T}}
+$$
+
+![](../img/4.png)
+
+___
+# Ý nghĩa Determinant 
+
+* $\det(\mathbf A) > 0$ : Trục cơ sở vẫn giữ nguyên (tức là $\hat i$ nằm bên phải $\hat j$ theo chiều đồng hồ).
+* $\det(\mathbf A) < 0$ : Trục cơ sở bị đảo ($\hat i$ nằm bên trái $\hat j$ theo chiều đồng hồ).
+* $\det(\mathbf A) = 0$ : Chiều không gian bị giảm đi (tức là từ không gian $\mathbb R^n$ giảm xuống $\mathbb R^{n - 1} ,..., \mathbb R^0$).
+
+___
+# Cách tính Determinant 
+
+
+...
+
+
+___
+# Một số tính chất của Determinant
+
+1. $\det(\mathbf I) = 1$ *($\mathbf I$ là ma trận cơ sở, sẽ nói xâu hơn ở chương **Matrix**)*.
+2. $\det(\mathbf {AB}) = \det(\mathbf A) \cdot \det(\mathbf B)$
+3. $\det(\mathbf A^T) = \det(\mathbf A)$ *($\mathbf A^T$ là ma trận chuyển vị, sẽ nói xâu hơn ở chương **Matrix**)*
+4. $\det(c \mathbf A) = c^n \det(\mathbf A)$ nếu $\mathbf A$ là ma trận $n \times n$
+
+___
+# Sự sụp đổ của không gian 
+
+
+

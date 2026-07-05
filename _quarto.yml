@@ -19,6 +19,9 @@ website:
           - linear-algebra/vector.qmd
           - linear-algebra/linearcombspanbasis.qmd
           - linear-algebra/lineartransformation.qmd
+          - linear-algebra/determinant.qmd
+          - linear-algebra/matrix.qmd
+
 
 format:
   html:

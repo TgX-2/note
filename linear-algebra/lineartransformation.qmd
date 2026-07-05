@@ -1,5 +1,5 @@
 ---
-title: "Linear Tranformation"
+title: "Linear Transformation"
 chapter: "Linear Algebra"
 author: "TgX.2"
 format:
@@ -108,9 +108,3 @@ Ví dụ:
 
 ## Reflection
 
-
-
-
-::: {.problems}
-ádfasdf
-:::

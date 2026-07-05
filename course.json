@@ -15,6 +15,14 @@
     {
       "title": "lineartransformation",
       "path": "linear-algebra/lineartransformation"
+    },
+    {
+      "title": "determinant",
+      "path": "linear-algebra/determinant"
+    },
+    {
+      "title": "matrix",
+      "path": "linear-algebra/matrix"
     }
   ]
 }

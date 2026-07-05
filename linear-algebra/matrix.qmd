@@ -1,8 +1,20 @@
 ---
-title: "Ma trận"
+title: "Matrix"
+chapter: "Linear Algebra"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
 ---
 
-
+___
 Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.
 
 Thử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ $O(0, 0, .. 0) \in  \mathbb R ^ n$, tới $A(a_1, a_2, a_3, ... a_n) \in \mathbb R^n$.
