@@ -1,27 +1,29 @@
-# note
+# Note
 
-note
+nơte
 
 - [1 - Toán học](#1---mathematical)
-- [2 - ]()
-- [3 - ]()
-- [4 - ]()
-- [5 - ]()
-- [6 - ]()
-- [7 - ]()
-- [8 - ]()
-- [9 - ]()
-- [10 - ]()
+- [2 - Cơ học cổ điển](#2---classical-mechanics)
+- [3 - Điện và từ](#3---electricity-and-magnetism)
+- [4 - Sóng và dao động](#4---vibrations-and-waves)
+- [5 - Thuyết tương đối hẹp](#5---special-relativity)
+- [6 - Cơ học lượng tử](#6---quantum-mechanics)
+- [7 - Vật lý thống kê](#7---statistical-physics)
+- [8 - Điện động lực học](#8---advanced-electrodynamics)
+- [9 - Thuyết tương đối rộng](#9---general-relativity)
+- [10 - Lý thuyết trường lượng tử](#10---quantum-field-theory)
 - [11 - Vật lý hạt](#11---particle-physics)
+- [12 - Vũ trụ học](#12---cosmology)
+- [End](#end)
   
-
+---
 
 # 1 - Mathematical 
 
-* 18.01 Single Variable Calculus
-* 18.02 Multivariable Calculus
-* 18.03 Differential Equations
-* 18.06 Linear Algebra
+* 18.01 
+* 18.02
+* 18.03 
+* 18.06 
 
 ## Topic
 
@@ -61,10 +63,10 @@ note
 * Laplace Transform
 ---
 
-# 2 — Classical Mechanics
+# 2 - Classical Mechanics
 
-* 8.01SC Classical Mechanics
-* 8.012 Physics I (Advanced)
+* 8.01SC
+* 8.012
 
 ## Topics
 
@@ -84,9 +86,9 @@ note
 
 ---
 
-# 3 — Electricity and Magnetism
+# 3 - Electricity and Magnetism
 
-* 8.02 Physics II: Electricity and Magnetism
+* 8.02
 
 ## Topics
 
@@ -99,9 +101,9 @@ note
 
 ---
 
-# 4 — Vibrations and Waves
+# 4 - Vibrations and Waves
 
-* 8.03SC Vibrations and Waves
+* 8.03SC
 
 ## Topics
 
@@ -114,9 +116,9 @@ note
 
 ---
 
-# 5 — Relativity
+# 5 - Special Relativity
 
-* 8.033 Relativity
+* 8.033
 
 ## Topics
 
@@ -128,11 +130,11 @@ note
 
 ---
 
-# 6 — Quantum Mechanics
+# 6 - Quantum Mechanics
 
-* 8.04 Quantum Physics I
-* 8.05 Quantum Physics II
-* 8.06 Quantum Physics III
+* 8.04
+* 8.05 
+* 8.06
 
 ## Topics
 
@@ -148,9 +150,9 @@ note
 
 ---
 
-# 7 — Statistical Physics
+# 7 - Statistical Physics
 
-* 8.044 Statistical Physics
+* 8.044
 
 ## Topics
 
@@ -162,7 +164,11 @@ note
 
 ---
 
-# 8 — Advanced Electrodynamics
+# 8 - Advanced Electrodynamics
+
+* 6.635
+
+## Topics
 
 * Green's Functions
 * Multipole Expansion
@@ -171,7 +177,7 @@ note
 
 ---
 
-# 9 — General Relativity
+# 9 - General Relativity
 
 * 8.962
 
@@ -187,7 +193,7 @@ note
 
 ---
 
-# Stage 10 — Quantum Field Theory
+# 10 - Quantum Field Theory
 
 * 8.323
 
@@ -218,7 +224,7 @@ note
 
 ---
 
-# 12 — Cosmology
+# 12 - Cosmology
 
 * 8.942
 
@@ -231,14 +237,9 @@ note
 * Dark Energy
 * Structure Formation
 
-## Learning Outcomes
-
-* Understand the ΛCDM cosmological model.
-* Read introductory cosmology research papers.
-
 ---
 
-# End — Research Specialization
+# End
 
 Choose one or more research directions:
 
