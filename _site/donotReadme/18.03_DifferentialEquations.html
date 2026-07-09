@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="TgX.2">
 
-<title>Linear Combinations and more – TgX.2</title>
+<title>differentialequations – TgX.2</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -76,51 +75,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../navigation.js" defer=""></script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -296,7 +251,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linear-algebra/index.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../linear-algebra/linearcombspanbasis.html">Linear Combinations and more</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      TgX.2
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -332,46 +289,80 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Linear Algebra</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">18.02</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../note/multivariable-calculus/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Đạo hàm đa biến</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">18.03</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../note/differential-equations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Phương trình vi phân</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">18.06</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../note/linear-algebra/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Đại số tuyến tính</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/vector.html" class="sidebar-item-text sidebar-link">
+  <a href="../note/linear-algebra/vector.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vector</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/linearcombspanbasis.html" class="sidebar-item-text sidebar-link active">
+  <a href="../note/linear-algebra/linearcombspanbasis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear Combinations and more</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/lineartransformation.html" class="sidebar-item-text sidebar-link">
+  <a href="../note/linear-algebra/lineartransformation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear Transformation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/determinant.html" class="sidebar-item-text sidebar-link">
+  <a href="../note/linear-algebra/determinant.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Determinant</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../linear-algebra/matrix.html" class="sidebar-item-text sidebar-link">
+  <a href="../note/linear-algebra/matrix.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Matrix</span></a>
   </div>
 </li>
@@ -382,128 +373,215 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#phương-trình-vi-phân" id="toc-phương-trình-vi-phân" class="nav-link active" data-scroll-target="#phương-trình-vi-phân">Phương trình vi phân</a>
+  <ul class="collapse">
+  <li><a href="#time" id="toc-time" class="nav-link" data-scroll-target="#time">Time</a></li>
+  <li><a href="#prerequiste-corequisite" id="toc-prerequiste-corequisite" class="nav-link" data-scroll-target="#prerequiste-corequisite">Prerequiste / Corequisite</a></li>
+  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text">Text</a></li>
+  </ul></li>
+  <li><a href="#brief" id="toc-brief" class="nav-link" data-scroll-target="#brief">Brief</a></li>
+  <li><a href="#giới-thiệu-introduction" id="toc-giới-thiệu-introduction" class="nav-link" data-scroll-target="#giới-thiệu-introduction">1. Giới thiệu (Introduction)</a></li>
+  <li><a href="#phương-trình-vi-phân-cấp-một-first-order-differential-equations" id="toc-phương-trình-vi-phân-cấp-một-first-order-differential-equations" class="nav-link" data-scroll-target="#phương-trình-vi-phân-cấp-một-first-order-differential-equations">2. Phương trình vi phân cấp một (First-Order Differential Equations)</a></li>
+  <li><a href="#phương-trình-vi-phân-tuyến-tính-cấp-hai" id="toc-phương-trình-vi-phân-tuyến-tính-cấp-hai" class="nav-link" data-scroll-target="#phương-trình-vi-phân-tuyến-tính-cấp-hai">3. Phương trình vi phân tuyến tính cấp hai</a></li>
+  <li><a href="#phương-trình-vi-phân-tuyến-tính-cấp-cao" id="toc-phương-trình-vi-phân-tuyến-tính-cấp-cao" class="nav-link" data-scroll-target="#phương-trình-vi-phân-tuyến-tính-cấp-cao">4. Phương trình vi phân tuyến tính cấp cao</a></li>
+  <li><a href="#nghiệm-chuỗi-của-phương-trình-cấp-hai" id="toc-nghiệm-chuỗi-của-phương-trình-cấp-hai" class="nav-link" data-scroll-target="#nghiệm-chuỗi-của-phương-trình-cấp-hai">5. Nghiệm chuỗi của phương trình cấp hai</a></li>
+  <li><a href="#phép-biến-đổi-laplace" id="toc-phép-biến-đổi-laplace" class="nav-link" data-scroll-target="#phép-biến-đổi-laplace">6. Phép biến đổi Laplace</a></li>
+  <li><a href="#hệ-phương-trình-vi-phân-tuyến-tính-cấp-một" id="toc-hệ-phương-trình-vi-phân-tuyến-tính-cấp-một" class="nav-link" data-scroll-target="#hệ-phương-trình-vi-phân-tuyến-tính-cấp-một">7. Hệ phương trình vi phân tuyến tính cấp một</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../linear-algebra/index.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../linear-algebra/linearcombspanbasis.html">Linear Combinations and more</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Linear Combinations and more</h1>
+
+
+
+<section id="phương-trình-vi-phân" class="level1">
+<h1>Phương trình vi phân</h1>
+<section id="time" class="level2">
+<h2 class="anchored" data-anchor-id="time">Time</h2>
+<p>Lectures: 3 sessions / week, 1 hour / session</p>
+<p>Recitations : 2 sessions / week, 1 hour / seesion</p>
+</section>
+<section id="prerequiste-corequisite" class="level2">
+<h2 class="anchored" data-anchor-id="prerequiste-corequisite">Prerequiste / Corequisite</h2>
+<p>Prerequiste : 18.01</p>
+<p>Corequisite : 18.02</p>
+</section>
+<section id="text" class="level2">
+<h2 class="anchored" data-anchor-id="text">Text</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="https://scienceclopedia.wordpress.com/wp-content/uploads/2019/09/william-e.-boyceelementary-differential-equations-and-boundary-value-problems-wiley-2017.pdf" class="img-fluid"></p>
+<figcaption>Edwards, C., and D. Penney. Elementary Differential Equations with Boundary Value Problems. 6th ed.&nbsp;Upper Saddle River, NJ: Prentice Hall, 2003. ISBN: 9780136006138.</figcaption>
+</figure>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>TgX.2 </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<div class="notes">
 <hr>
-<section id="một-cách-nhìn-khác-về-hệ-tọa-độ" class="level1">
-<h1>Một cách nhìn khác về hệ tọa độ</h1>
-<p>Ở chương trức thì ta đã nói rằng vector là một mũi tên có hướng từ gốc tọa độ <span class="math inline">O(0, 0, .. 0) \in  \mathbb R ^ n</span>, tới <span class="math inline">A(a_1, a_2, a_3, ... a_n) \in \mathbb R^n</span>.</p>
-<p>Nhưng giờ hãy thử nghĩ khác lại, vector <span class="math inline">v = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}</span> chính là:</p>
+</section>
+</section>
+<section id="brief" class="level1">
+<h1>Brief</h1>
+<ol type="1">
+<li><p>Giới thiệu</p></li>
+<li><p>Phương trình vi phân bậc nhất</p></li>
+<li><p>Phương trình vi phân tuyến tính bậc hai</p></li>
+<li><p>Phương trình vi phân tuyến tính bậc cao</p></li>
+<li><p>Giải pháp chuỗi cho phương trình tuyến tính bậc hai</p></li>
+<li><p>Biến đổi Laplace</p></li>
+<li><p>Hệ phương trình tuyến tính bậc nhất</p></li>
+</ol>
+<!-- 8. Phương pháp số
+
+9. Phương trình vi phân phi tuyến tính và tính ổn định
+
+10. Phương trình đạo hàm riêng và chuỗi Fourier 
+
+11. Lý thuyết Sturm-Liouville -->
+<hr>
+</section>
+<section id="giới-thiệu-introduction" class="level1">
+<h1>1. Giới thiệu (Introduction)</h1>
 <ul>
-<li>Số <span class="math inline">v_1</span> là <strong>scalar</strong> của mà sẽ nhân với vector <span class="math inline">\hat{i}</span></li>
-<li>Số <span class="math inline">v_2</span> là <strong>scalar</strong> của mà sẽ nhân với vector <span class="math inline">\hat{j}</span></li>
-<li>Và vector cuối cùng chính là tổng của hai vector trên</li>
+<li><strong>1.1</strong> Một số mô hình toán học cơ bản; Trường phương hướng</li>
+<li><strong>1.2</strong> Nghiệm của một số phương trình vi phân</li>
+<li><strong>1.3</strong> Phân loại phương trình vi phân</li>
 </ul>
 <hr>
 </section>
-<section id="linear-combinations" class="level1">
-<h1>Linear combinations</h1>
-<p>Một linear combinations của hai vector <span class="math inline">v</span> và <span class="math inline">w</span> là:</p>
-<p><span class="math display">
-a \mathbf v + b \mathbf w
-</span></p>
-<p>Trong đó, a và b là hai hệ số <strong>scalar</strong> tùy ý.</p>
-<p>Tổng quát hơn, linear combination của <span class="math inline">n</span> vector <span class="math inline">v_1, v_2, ..., v_n</span> là:</p>
-<p><span class="math display">
-c_1 \mathbf v_1 + c_2 \mathbf v_2 + ... c_n \mathbf v_n = \sum_{i - 1}^{n}{c_i \mathbf {v_i}}
-</span></p>
-<hr>
-</section>
-<section id="span" class="level1">
-<h1>Span</h1>
-<p>Span là tập hợp các vector khả dĩ trong linear combinations của các vector đó.</p>
-<p><span class="math display">
-\text{span} \{ \mathbf v_1, .. \mathbf v_2, ... \mathbf v_n \}
-= \{ {c_1 \mathbf v_1 + c_2 \mathbf v_2 + ... c_n \mathbf v_n | c_i \in \mathbb R} \}
-</span></p>
-<p><strong>Nói cho dễ hiểu:</strong> Nếu chỉ dùng cộng hai vector và nhân vector với một số, ta có thể đạt được những vector nào? <strong>Đáp án:</strong> Đó là <strong>Span</strong> của vector.</p>
-<hr>
-<section id="span-in-2d" class="level2">
-<h2 class="anchored" data-anchor-id="span-in-2d">Span in 2D</h2>
-<p>Với hai vector <span class="math inline">\mathbf v</span> và <span class="math inline">\mathbf w</span> trong không gian hai chiều <span class="math inline">\mathbb R^2</span>, có 3 trường hợp khả dĩ sau đây:</p>
-<ol type="1">
-<li>Nếu hai vector không thẳng hàng với nhau: <span class="math inline">\text{span} \{ \mathbf v , \mathbf w \} = \mathbb R^2</span> - một mặt phẳng.</li>
-<li>Nếu hai vector thẳng hàng với nhau nhưng không bằng không: <span class="math inline">\text{span} \{ \mathbf v , \mathbf w \}</span> - một đưởng thẳng.</li>
-<li>Nếu hai vector đều là vector không: <span class="math inline">\text{span} \{ \mathbf v , \mathbf w \} = \{ 0 \}</span> - một gốc tọa độ.</li>
-</ol>
-</section>
-<section id="span-in-3d" class="level2">
-<h2 class="anchored" data-anchor-id="span-in-3d">Span in 3D</h2>
-<ol type="1">
-<li>Chỉ có một vector khác vector không: <strong>span</strong> là một đường thẳng.</li>
-<li>Có 2 vector không thẳng hàng: <strong>span</strong> là mặt phẳng.</li>
-<li>Cả 3 vector không thuộc cùng một mặt phẳng: <strong>span</strong> là tất cả không gian <span class="math inline">\mathbb R^3</span>.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="linear-dependence-and-linear-independence" class="level1">
-<h1>Linear dependence and Linear independence</h1>
-<p>Có thể nói một cách dễ hiểu rằng:</p>
+<section id="phương-trình-vi-phân-cấp-một-first-order-differential-equations" class="level1">
+<h1>2. Phương trình vi phân cấp một (First-Order Differential Equations)</h1>
 <ul>
-<li><strong>Linear independence</strong> : Không một vector nào là thừa.</li>
-<li><strong>Linear dependence</strong> : Ít nhất là một vector có thể xóa.</li>
+<li><strong>2.1</strong> Phương trình tuyến tính; phương pháp nhân tử tích phân</li>
+<li><strong>2.2</strong> Phương trình tách biến</li>
+<li><strong>2.3</strong> Phương trình thuần nhất</li>
+<li><strong>2.4</strong> Phương trình Bernoulli và phi tuyến</li>
+<li><strong>2.5</strong> Phương trình tự trị và động lực học quần thể</li>
+<li><strong>2.6</strong> Phương trình chính xác và nhân tử tích phân</li>
+<li><strong>2.7</strong> Phương pháp Euler</li>
+<li><strong>2.8</strong> Định lý tồn tại và duy nhất nghiệm</li>
+<li><strong>2.9</strong> Phương trình sai phân cấp một</li>
 </ul>
 <hr>
 </section>
-<section id="basis-vector" class="level1">
-<h1>Basis vector</h1>
-<section id="basis" class="level2">
-<h2 class="anchored" data-anchor-id="basis">Basis</h2>
-<p>Như đã nói ở chương trước, một vector basis thường là: <span class="math display">
-\hat{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-\space \text{and} \space  
-\hat{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-</span></p>
-<p>Với không gian 2 chiều, và không gian 3 chiều là:</p>
-<p><span class="math display">
-\hat{i} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
-\space \text{,} \space
-\hat{j} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
-\space \text{and} \space
-\hat{k} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
-</span></p>
+<section id="phương-trình-vi-phân-tuyến-tính-cấp-hai" class="level1">
+<h1>3. Phương trình vi phân tuyến tính cấp hai</h1>
+<ul>
+<li><strong>3.1</strong> Phương trình thuần nhất hệ số hằng</li>
+<li><strong>3.2</strong> Nghiệm Wronskian</li>
+<li><strong>3.3</strong> Nghiệm phức của phương trình đặc trưng</li>
+<li><strong>3.4</strong> Nghiệm bội</li>
+<li><strong>3.5</strong> Phương pháp hệ số bất định</li>
+<li><strong>3.6</strong> Phương pháp biến thiên tham số</li>
+<li><strong>3.7</strong> Dao động cơ học và điện</li>
+<li><strong>3.8</strong> Dao động cưỡng bức tuần hoàn</li>
+</ul>
+<hr>
 </section>
-<section id="non-standard-bases" class="level2">
-<h2 class="anchored" data-anchor-id="non-standard-bases">Non-standard Bases</h2>
-<p>Nhưng cũng đôi lúc, chúng không “cơ sở” cho lắm.</p>
-<p>Tưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.</p>
+<section id="phương-trình-vi-phân-tuyến-tính-cấp-cao" class="level1">
+<h1>4. Phương trình vi phân tuyến tính cấp cao</h1>
+<ul>
+<li><strong>4.1</strong> Lý thuyết tổng quát</li>
+<li><strong>4.2</strong> Thuần nhất hệ số hằng</li>
+<li><strong>4.3</strong> Phương pháp hệ số bất định</li>
+<li><strong>4.4</strong> Biến thiên tham số</li>
+</ul>
+<hr>
 </section>
+<section id="nghiệm-chuỗi-của-phương-trình-cấp-hai" class="level1">
+<h1>5. Nghiệm chuỗi của phương trình cấp hai</h1>
+<ul>
+<li><strong>5.1</strong> Ôn tập chuỗi lũy thừa</li>
+<li><strong>5.2</strong> Chuỗi quanh điểm chính quy (phần I)</li>
+<li><strong>5.3</strong> Chuỗi quanh điểm chính quy (phần II)</li>
+<li><strong>5.4</strong> Phương trình Euler</li>
+<li><strong>5.5</strong> Điểm kỳ dị chính quy (phần I)</li>
+<li><strong>5.6</strong> Điểm kỳ dị chính quy (phần II)</li>
+<li><strong>5.7</strong> Phương trình Bessel</li>
+</ul>
+<hr>
 </section>
-</div>
+<section id="phép-biến-đổi-laplace" class="level1">
+<h1>6. Phép biến đổi Laplace</h1>
+<ul>
+<li><strong>6.1</strong> Định nghĩa</li>
+<li><strong>6.2</strong> Giải bài toán giá trị ban đầu</li>
+<li><strong>6.3</strong> Hàm bước</li>
+<li><strong>6.4</strong> Ngoại lực gián đoạn</li>
+<li><strong>6.5</strong> Hàm xung</li>
+<li><strong>6.6</strong> Tích chập</li>
+</ul>
+<hr>
+</section>
+<section id="hệ-phương-trình-vi-phân-tuyến-tính-cấp-một" class="level1">
+<h1>7. Hệ phương trình vi phân tuyến tính cấp một</h1>
+<ul>
+<li><strong>7.1</strong> Giới thiệu</li>
+<li><strong>7.2</strong> Ma trận</li>
+<li><strong>7.3</strong> Hệ tuyến tính; trị riêng, vectơ riêng</li>
+<li><strong>7.4</strong> Lý thuyết cơ bản</li>
+<li><strong>7.5</strong> Thuần nhất hệ số hằng</li>
+<li><strong>7.6</strong> Trị riêng phức</li>
+<li><strong>7.7</strong> Trị riêng hàm cơ bản</li>
+<li><strong>7.8</strong> Trị riêng lặp</li>
+<li><strong>7.9</strong> Hệ không thuần nhất</li>
+</ul>
+<hr>
+<!-- # 8. Phương pháp số
+
+* **8.1** Euler
+* **8.2** Euler cải tiến
+* **8.3** Runge–Kutta
+* **8.4** Phương pháp nhiều bước
+* **8.5** Hệ phương trình vi phân
+* **8.6** Ổn định
+
+---
+
+# 9. Phương trình vi phân phi tuyến và ổn định
+
+* **9.1** Mặt phẳng pha
+* **9.2** Hệ tự trị và ổn định
+* **9.3** Hệ cục bộ tuyến tính
+* **9.4** Phương pháp Lyapunov trực tiếp
+* **9.5** Tiêu chuẩn Bendixson
+* **9.6** Phương pháp thứ hai của Lyapunov
+* **9.7** Chu trình giới hạn và attractor
+* **9.8** Hỗn loạn và hệ Lorenz
+
+---
+
+# 10. Phương trình đạo hàm riêng và chuỗi Fourier
+
+* **10.1** Bài toán giá trị biên
+* **10.2** Chuỗi Fourier
+* **10.3** Định lý hội tụ Fourier
+* **10.4** Hàm chẵn và hàm lẻ
+* **10.5** Tách biến; phương trình truyền nhiệt
+* **10.6** Các bài toán truyền nhiệt khác
+* **10.7** Phương trình sóng
+* **10.8** Phương trình Laplace
+
+---
+
+# 11. Bài toán giá trị biên và lý thuyết Sturm–Liouville
+
+* **11.1** Bài toán giá trị biên hai điểm
+* **11.2** Bài toán Sturm–Liouville
+* **11.3** Không thuần nhất
+* **11.4** Kỳ dị
+* **11.5** Khai triển theo hàm riêng
+* **11.6** Chuỗi hàm trực giao
+
+--- -->
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

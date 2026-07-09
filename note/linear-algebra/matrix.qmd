@@ -21,7 +21,7 @@ Thử tưởng tượng rằng bạn có một vector trong không gian n chiề
 
 Ví dụ: Vector $\vec v (1, 2)$.
 
-![](../img/1.png)
+![](../../img/1.png)
 
 ## Ma trận cột
 

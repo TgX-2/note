@@ -45,7 +45,7 @@ Một ánh xạ tuyến tính sẽ bóp méo các vector cơ sở, sao cho thỏ
 Nếu các đường lưới vẫn song song và cách đều nhau sau phép biến đổi, thì đó là phép biến đổi tuyến tính.
 
 
-![](../img/2.png)
+![](../../img/2.png)
 :::
 
 ___
@@ -104,7 +104,7 @@ $$
 **Phép cắt:** một trục sẽ giữ nguyên hướng, trong khi đó trục còn lại sẽ bị thay đổi một lượng $k$.
 
 Ví dụ:
-![](../img/3.png)
+![](../../img/3.png)
 
 ## Reflection
 

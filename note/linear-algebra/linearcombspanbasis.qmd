@@ -15,7 +15,6 @@ format:
     # include-after-body: ../assets/button.html
 ---
 
-:::{.notes}
 ___
 # Một cách nhìn khác về hệ tọa độ
 Ở chương trức thì ta đã nói rằng vector là một mũi tên có hướng từ gốc tọa độ $O(0, 0, .. 0) \in  \mathbb R ^ n$, tới $A(a_1, a_2, a_3, ... a_n) \in \mathbb R^n$.
@@ -103,6 +102,3 @@ $$
 Nhưng cũng đôi lúc, chúng không "cơ sở" cho lắm.
 
 Tưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.
-
-
-:::

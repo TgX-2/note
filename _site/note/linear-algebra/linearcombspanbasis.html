@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="TgX.2">
 
-<title>About – TgX.2</title>
+<title>Linear Combinations and more – TgX.2</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,28 +27,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./img/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e8964db687007ca8dd88d9d9ce58e3ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../img/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-e8964db687007ca8dd88d9d9ce58e3ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,9 +76,54 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../navigation.js" defer=""></script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -251,9 +297,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      TgX.2
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/linear-algebra/index.html">18.06</a></li><li class="breadcrumb-item"><a href="../../note/linear-algebra/linearcombspanbasis.html">Linear Combinations and more</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -268,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">TgX.2</a> 
+      <a href="../../">TgX.2</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -283,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -298,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./note/multivariable-calculus/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/multivariable-calculus/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Đạo hàm đa biến</span></a>
   </div>
 </li>
@@ -315,7 +359,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./note/differential-equations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/differential-equations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Phương trình vi phân</span></a>
   </div>
 </li>
@@ -323,46 +367,46 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">18.06</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./note/linear-algebra/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/linear-algebra/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Đại số tuyến tính</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./note/linear-algebra/vector.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/linear-algebra/vector.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Vector</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./note/linear-algebra/linearcombspanbasis.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/linear-algebra/linearcombspanbasis.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Linear Combinations and more</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./note/linear-algebra/lineartransformation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/linear-algebra/lineartransformation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear Transformation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./note/linear-algebra/determinant.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/linear-algebra/determinant.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Determinant</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./note/linear-algebra/matrix.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/linear-algebra/matrix.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Matrix</span></a>
   </div>
 </li>
@@ -373,22 +417,46 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Mục lục bài viết</h2>
+   
+  <ul>
+  <li><a href="#một-cách-nhìn-khác-về-hệ-tọa-độ" id="toc-một-cách-nhìn-khác-về-hệ-tọa-độ" class="nav-link active" data-scroll-target="#một-cách-nhìn-khác-về-hệ-tọa-độ">Một cách nhìn khác về hệ tọa độ</a></li>
+  <li><a href="#linear-combinations" id="toc-linear-combinations" class="nav-link" data-scroll-target="#linear-combinations">Linear combinations</a></li>
+  <li><a href="#span" id="toc-span" class="nav-link" data-scroll-target="#span">Span</a>
+  <ul class="collapse">
+  <li><a href="#span-in-2d" id="toc-span-in-2d" class="nav-link" data-scroll-target="#span-in-2d">Span in 2D</a></li>
+  <li><a href="#span-in-3d" id="toc-span-in-3d" class="nav-link" data-scroll-target="#span-in-3d">Span in 3D</a></li>
+  </ul></li>
+  <li><a href="#linear-dependence-and-linear-independence" id="toc-linear-dependence-and-linear-independence" class="nav-link" data-scroll-target="#linear-dependence-and-linear-independence">Linear dependence and Linear independence</a></li>
+  <li><a href="#basis-vector" id="toc-basis-vector" class="nav-link" data-scroll-target="#basis-vector">Basis vector</a>
+  <ul class="collapse">
+  <li><a href="#basis" id="toc-basis" class="nav-link" data-scroll-target="#basis">Basis</a></li>
+  <li><a href="#non-standard-bases" id="toc-non-standard-bases" class="nav-link" data-scroll-target="#non-standard-bases">Non-standard Bases</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/linear-algebra/index.html">18.06</a></li><li class="breadcrumb-item"><a href="../../note/linear-algebra/linearcombspanbasis.html">Linear Combinations and more</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Linear Combinations and more</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>TgX.2 </p>
+          </div>
+  </div>
     
   
     
@@ -399,9 +467,94 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>About this site</p>
+<hr>
+<section id="một-cách-nhìn-khác-về-hệ-tọa-độ" class="level1">
+<h1>Một cách nhìn khác về hệ tọa độ</h1>
+<p>Ở chương trức thì ta đã nói rằng vector là một mũi tên có hướng từ gốc tọa độ <span class="math inline">O(0, 0, .. 0) \in  \mathbb R ^ n</span>, tới <span class="math inline">A(a_1, a_2, a_3, ... a_n) \in \mathbb R^n</span>.</p>
+<p>Nhưng giờ hãy thử nghĩ khác lại, vector <span class="math inline">v = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}</span> chính là:</p>
+<ul>
+<li>Số <span class="math inline">v_1</span> là <strong>scalar</strong> của mà sẽ nhân với vector <span class="math inline">\hat{i}</span></li>
+<li>Số <span class="math inline">v_2</span> là <strong>scalar</strong> của mà sẽ nhân với vector <span class="math inline">\hat{j}</span></li>
+<li>Và vector cuối cùng chính là tổng của hai vector trên</li>
+</ul>
+<hr>
+</section>
+<section id="linear-combinations" class="level1">
+<h1>Linear combinations</h1>
+<p>Một linear combinations của hai vector <span class="math inline">v</span> và <span class="math inline">w</span> là:</p>
+<p><span class="math display">
+a \mathbf v + b \mathbf w
+</span></p>
+<p>Trong đó, a và b là hai hệ số <strong>scalar</strong> tùy ý.</p>
+<p>Tổng quát hơn, linear combination của <span class="math inline">n</span> vector <span class="math inline">v_1, v_2, ..., v_n</span> là:</p>
+<p><span class="math display">
+c_1 \mathbf v_1 + c_2 \mathbf v_2 + ... c_n \mathbf v_n = \sum_{i - 1}^{n}{c_i \mathbf {v_i}}
+</span></p>
+<hr>
+</section>
+<section id="span" class="level1">
+<h1>Span</h1>
+<p>Span là tập hợp các vector khả dĩ trong linear combinations của các vector đó.</p>
+<p><span class="math display">
+\text{span} \{ \mathbf v_1, .. \mathbf v_2, ... \mathbf v_n \}
+= \{ {c_1 \mathbf v_1 + c_2 \mathbf v_2 + ... c_n \mathbf v_n | c_i \in \mathbb R} \}
+</span></p>
+<p><strong>Nói cho dễ hiểu:</strong> Nếu chỉ dùng cộng hai vector và nhân vector với một số, ta có thể đạt được những vector nào? <strong>Đáp án:</strong> Đó là <strong>Span</strong> của vector.</p>
+<hr>
+<section id="span-in-2d" class="level2">
+<h2 class="anchored" data-anchor-id="span-in-2d">Span in 2D</h2>
+<p>Với hai vector <span class="math inline">\mathbf v</span> và <span class="math inline">\mathbf w</span> trong không gian hai chiều <span class="math inline">\mathbb R^2</span>, có 3 trường hợp khả dĩ sau đây:</p>
+<ol type="1">
+<li>Nếu hai vector không thẳng hàng với nhau: <span class="math inline">\text{span} \{ \mathbf v , \mathbf w \} = \mathbb R^2</span> - một mặt phẳng.</li>
+<li>Nếu hai vector thẳng hàng với nhau nhưng không bằng không: <span class="math inline">\text{span} \{ \mathbf v , \mathbf w \}</span> - một đưởng thẳng.</li>
+<li>Nếu hai vector đều là vector không: <span class="math inline">\text{span} \{ \mathbf v , \mathbf w \} = \{ 0 \}</span> - một gốc tọa độ.</li>
+</ol>
+</section>
+<section id="span-in-3d" class="level2">
+<h2 class="anchored" data-anchor-id="span-in-3d">Span in 3D</h2>
+<ol type="1">
+<li>Chỉ có một vector khác vector không: <strong>span</strong> là một đường thẳng.</li>
+<li>Có 2 vector không thẳng hàng: <strong>span</strong> là mặt phẳng.</li>
+<li>Cả 3 vector không thuộc cùng một mặt phẳng: <strong>span</strong> là tất cả không gian <span class="math inline">\mathbb R^3</span>.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="linear-dependence-and-linear-independence" class="level1">
+<h1>Linear dependence and Linear independence</h1>
+<p>Có thể nói một cách dễ hiểu rằng:</p>
+<ul>
+<li><strong>Linear independence</strong> : Không một vector nào là thừa.</li>
+<li><strong>Linear dependence</strong> : Ít nhất là một vector có thể xóa.</li>
+</ul>
+<hr>
+</section>
+<section id="basis-vector" class="level1">
+<h1>Basis vector</h1>
+<section id="basis" class="level2">
+<h2 class="anchored" data-anchor-id="basis">Basis</h2>
+<p>Như đã nói ở chương trước, một vector basis thường là: <span class="math display">
+\hat{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+\space \text{and} \space  
+\hat{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+</span></p>
+<p>Với không gian 2 chiều, và không gian 3 chiều là:</p>
+<p><span class="math display">
+\hat{i} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\space \text{,} \space
+\hat{j} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
+\space \text{and} \space
+\hat{k} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+</span></p>
+</section>
+<section id="non-standard-bases" class="level2">
+<h2 class="anchored" data-anchor-id="non-standard-bases">Non-standard Bases</h2>
+<p>Nhưng cũng đôi lúc, chúng không “cơ sở” cho lắm.</p>
+<p>Tưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -13,14 +13,22 @@ website:
       - href: index.qmd
         text: Home
 
-      - section: Linear Algebra
+      - section : "18.02"
+        contents: 
+          - note/multivariable-calculus/index.qmd
+
+      - section : "18.03"
+        contents: 
+          - note/differential-equations/index.qmd
+
+      - section: "18.06"
         contents:
-          - linear-algebra/index.qmd
-          - linear-algebra/vector.qmd
-          - linear-algebra/linearcombspanbasis.qmd
-          - linear-algebra/lineartransformation.qmd
-          - linear-algebra/determinant.qmd
-          - linear-algebra/matrix.qmd
+          - note/linear-algebra/index.qmd
+          - note/linear-algebra/vector.qmd
+          - note/linear-algebra/linearcombspanbasis.qmd
+          - note/linear-algebra/lineartransformation.qmd
+          - note/linear-algebra/determinant.qmd
+          - note/linear-algebra/matrix.qmd
 
 
 format:
