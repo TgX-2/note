@@ -1,0 +1,153 @@
+---
+title: "Vector and Matrices"
+chapter: "18.02 - Multivariable calculus"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+---
+
+
+
+___
+# Lời bạt 
+Thật ra lời bạt là lời nói ở cuối sách cơ, nhưng mà thôi, chấp nhận đi.
+
+Vector trong những lời tôi nói, ví dụ, và viết, suy nghĩ trong đầu bạn, ở chương **18.02** nên là vector trong mặt phẳng (2D), hoặc trong không gian 3 chiều (3D).
+
+Các tính chất hầu như (tất cả) đều giống nhau ở đa chiều khác nhau, nhưng sẽ dễ dàng và để chương **18.06** không bị mất đi tinh thần của nó. Các ví dụ trong chương này nên là 2d và 3d cho dễ hiểu.
+
+
+___
+# Vectors
+Vector thì không có gì đáng để chú tâm cả, bởi vì nó được giảng dạy khá nhiều trong môn hình học ở cấp 3, và có thể coi là cốt lõi của hình học cấp 3.
+
+Về vector thì có hai thứ để cấu tạo nên nó:
+
+* $dir(\vec A)$ : direction 
+* $|\vec A|$ : magnitude / length
+
+Một vector cơ bản giới thiệu trong không gian ba chiều sau:
+
+$$
+\vec A = a_1 \hat i + a_2 \hat j + a_3 \hat k = <a_1, a_2, a_3>
+$$
+
+Một vector cũng có thể biểu diễn bằng hai điểm, ví dụ như là hai điểm P và Q thì vector $\vec{PQ}$ sẽ có đầu là điểm P và kết thúc ở điểm Q.
+
+## Độ dài của vector
+
+Ở cấp 3 chúng ta đã được học, nó chính là 
+
+$$
+\vec A <a_1, a_2, a_3> = \sqrt{\left(a_1^2 + a_2^2 + a_3^2 \right)}
+$$
+
+## Cộng vector và nhân vector với scalar
+
+Quá dễ, không bàn tới
+
+##
+
+:::{.callout-warning}
+## Lưu ý 
+Lưu ý rằng, các vector có cùng hướng và cùng độ dài là giống nhau, không quan trọng điểm đặt của nó.
+Điều này tớ cho rằng nó sẽ dễ dàng hơn trong việc truyền đạt phép cộng và nhân vector với một số sau này.
+:::
+___
+# Dot product
+
+Như ở cấp 3 ta đã học. Tổng quát hóa nó lên, tích vô hướng hai vector là:
+
+$$
+\vec A \cdot \vec B = \sum{a_i b_i}
+$$
+
+Và một cách khác theo hình học là:
+
+$$
+\vec A \cdot \vec B = |\vec A| \cdot |\vec B| \cdot \cos(\theta)
+$$
+
+:::{.callout-tip}
+## Chứng minh
+
+
+:::
+
+## Applications
+
+Ứng dụng của dot product: 
+
+* 1. Tính độ dài và góc (đặc biệt là góc)
+* 2. Xác định tính trực giao
+
+___
+# Determinants
+
+Định thức, như ở cấp 3 chúng ta đã được học định thức bậc nhất:
+
+$$
+\begin{vmatrix}
+a_1 & a_2 \\ 
+b_1 & b_2
+\end{vmatrix} = a_1b_2 - a_2b_1
+$$
+
+Và bây giờ tớ sẽ giới thiệu tới định thức $3 \times 3$
+
+$$
+\begin{vmatrix}
+a_1 & a_2 & a_3 \\ 
+b_1 & b_2 & b_3 \\ 
+c_1 & c_2 & c_3
+\end{vmatrix} 
+= a_1 \begin{vmatrix}
+b_2 & b_3 \\ 
+c_2 & c_3 
+\end{vmatrix}
+- a_2 \begin{vmatrix}
+b_1 & b_3 \\ 
+c_1 & c_3 
+\end{vmatrix}
++ a_3 \begin{vmatrix}
+b_1 & b_2 \\ 
+c_1 & c_2 s
+\end{vmatrix}
+$$
+
+Còn $\det(A_{n \times n})$ thì sẽ được giới thiệu ở **18.06**
+
+Một ứng dụng của định thức là diện tích tam giác tạo bởi hai vector $\vec A$ và $\vec B$.
+
+
+
+___
+# Cross product
+
+
+___
+# Matrices; Inverse Matrices
+
+
+___
+# Square systems; Equation of planes
+
+
+___
+# Parametric equations for lines and curves 
+
+
+___
+# Velocity, Acceleration
+
+
+___
+# Kepler's second law

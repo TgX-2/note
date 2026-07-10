@@ -1,157 +1,46 @@
 [
   {
-    "objectID": "note/linear-algebra/matrix.html",
-    "href": "note/linear-algebra/matrix.html",
-    "title": "Matrix",
+    "objectID": "note/multivariable-calculus/index.html",
+    "href": "note/multivariable-calculus/index.html",
+    "title": "Đạo hàm đa biến",
     "section": "",
-    "text": "Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.\nThử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nVí dụ: Vector \\vec v (1, 2).",
+    "text": "1. Vector và ma trận - Vectors and Matrices\n\n1.0 Vectors\n1.1 Dot product\n1.2 Determinants; Cross product\n1.3 Matrices; Inverse Matrices\n1.4 Square systems; Equation of planes\n1.5 Parametric equations for lines and curves\n1.6 Velocity, Acceleration; Kepler’s second law\n\n\n\n\n2. Đạo hàm riêng - Partial derivatives\n\n2.1 Level curves; Partial derivatives; Tangent plane approximation\n2.2 Max-Min problmes; Least squares\n2.3 Differentials; Chain rule\n2.4 Gradient ; Directional derivative; Tangent plane\n2.5 Lagrange multipliers\n2.6 Non-independent variables\n\n\n\n\n3. Tích phân kép và tích phân đường trong mặt phẳng - Doule integrals and Line integrals in the plane\n\n3.1 Double integrals\n3.2 Double integrals in polar coordinates; Applications\n3.3 Change of variables\n3.4 Vector fields and Line integrals in the plane\n3.5 Path independence and conservative fields\n3.6 Gradient fields and potential functions\n3.7 Green’s theorem\n3.8 Flux; Normal form of Green’s theorem\n3.9 Simply connected regions\n\n\n\n\n4. Tích phân bội ba và tích phân mặt trong không gian ba chiều - Triple integrals and Surface integrals in the 3-space\n\n4.1 Triple integrals in rectangular and cylindrical coordinates\n4.2 Spherical coordinates; Surface area\n4.3 Vector fields in 3D; Surface integrals and flux\n4.4 Divergence theorem\n4.5 Divergence theorem and its Applications and Proof\n4.6 Line integrals in space, Curl, Exactness and potentials\n4.7 Stokes’s theorem\n4.8 Topological considerations\n4.9 Maxwell’s equations",
+    "crumbs": [
+      "18.02",
+      "Đạo hàm đa biến"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/vector.html#quan-điểm-của-vật-lý",
+    "href": "note/linear-algebra/vector.html#quan-điểm-của-vật-lý",
+    "title": "Vector",
+    "section": "Quan điểm của Vật lý",
+    "text": "Quan điểm của Vật lý\nVector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:\n\nĐộ dài\nHướng\n\nHai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.",
     "crumbs": [
       "18.06",
-      "Matrix"
+      "Vector"
     ]
   },
   {
-    "objectID": "note/linear-algebra/matrix.html#ma-trận-cột",
-    "href": "note/linear-algebra/matrix.html#ma-trận-cột",
-    "title": "Matrix",
-    "section": "Ma trận cột",
-    "text": "Ma trận cột\nTa có thể biểu diễn Vector \\vec v trên bằng ma trận cột 1 \\times 2, được ký hiệu như sau:\n\n\\begin{bmatrix}\n1 \\\\\n2\n\\end{bmatrix}\n\nHay tổng quát hơn, ta có thể biểu diễn một vector nhiều chiều bằng ma trận cột gồm n giá trị \n\\begin{bmatrix}\na_1 \\\\\na_2 \\\\\na_3 \\\\\n\\vdots \\\\\na_n\n\\end{bmatrix}",
+    "objectID": "note/linear-algebra/vector.html#quan-điểm-của-tin-học",
+    "href": "note/linear-algebra/vector.html#quan-điểm-của-tin-học",
+    "title": "Vector",
+    "section": "Quan điểm của Tin học",
+    "text": "Quan điểm của Tin học\nNó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu. Đúng vậy, nó khác là khác với hai môn còn lại",
     "crumbs": [
       "18.06",
-      "Matrix"
+      "Vector"
     ]
   },
   {
-    "objectID": "note/linear-algebra/matrix.html#ma-trận-n-times-m",
-    "href": "note/linear-algebra/matrix.html#ma-trận-n-times-m",
-    "title": "Matrix",
-    "section": "Ma trận n \\times m",
-    "text": "Ma trận n \\times m\nLà tập hợp của m vector n chiều.\n\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1m} \\\\\na_{21} & a_{22} & \\cdots & a_{2m} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n1} & a_{n2} & \\cdots & a_{nm} \\\\\n\\end{bmatrix}",
+    "objectID": "note/linear-algebra/vector.html#quan-điểm-của-toán-học",
+    "href": "note/linear-algebra/vector.html#quan-điểm-của-toán-học",
+    "title": "Vector",
+    "section": "Quan điểm của Toán học",
+    "text": "Quan điểm của Toán học\nMột cách khó hiểu và cực kỳ trừu tượng.\nMột vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:\n\nCộng hai vector\nNhân một vector với một số (scalar)\n\nVà chúng ra sẽ tìm hiểu nó sâu hơn trong chương Abstract Vector Spaces.",
     "crumbs": [
       "18.06",
-      "Matrix"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/linearcombspanbasis.html#span-in-2d",
-    "href": "note/linear-algebra/linearcombspanbasis.html#span-in-2d",
-    "title": "Linear Combinations and more",
-    "section": "Span in 2D",
-    "text": "Span in 2D\nVới hai vector \\mathbf v và \\mathbf w trong không gian hai chiều \\mathbb R^2, có 3 trường hợp khả dĩ sau đây:\n\nNếu hai vector không thẳng hàng với nhau: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\mathbb R^2 - một mặt phẳng.\nNếu hai vector thẳng hàng với nhau nhưng không bằng không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} - một đưởng thẳng.\nNếu hai vector đều là vector không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\{ 0 \\} - một gốc tọa độ.",
-    "crumbs": [
-      "18.06",
-      "Linear Combinations and more"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/linearcombspanbasis.html#span-in-3d",
-    "href": "note/linear-algebra/linearcombspanbasis.html#span-in-3d",
-    "title": "Linear Combinations and more",
-    "section": "Span in 3D",
-    "text": "Span in 3D\n\nChỉ có một vector khác vector không: span là một đường thẳng.\nCó 2 vector không thẳng hàng: span là mặt phẳng.\nCả 3 vector không thuộc cùng một mặt phẳng: span là tất cả không gian \\mathbb R^3.",
-    "crumbs": [
-      "18.06",
-      "Linear Combinations and more"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/linearcombspanbasis.html#basis",
-    "href": "note/linear-algebra/linearcombspanbasis.html#basis",
-    "title": "Linear Combinations and more",
-    "section": "Basis",
-    "text": "Basis\nNhư đã nói ở chương trước, một vector basis thường là: \n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space  \n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}\n\nVới không gian 2 chiều, và không gian 3 chiều là:\n\n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}\n\\space \\text{,} \\space\n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space\n\\hat{k} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}",
-    "crumbs": [
-      "18.06",
-      "Linear Combinations and more"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/linearcombspanbasis.html#non-standard-bases",
-    "href": "note/linear-algebra/linearcombspanbasis.html#non-standard-bases",
-    "title": "Linear Combinations and more",
-    "section": "Non-standard Bases",
-    "text": "Non-standard Bases\nNhưng cũng đôi lúc, chúng không “cơ sở” cho lắm.\nTưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.",
-    "crumbs": [
-      "18.06",
-      "Linear Combinations and more"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/determinant.html",
-    "href": "note/linear-algebra/determinant.html",
-    "title": "Determinant",
-    "section": "",
-    "text": "Determinant: Ý nghĩa hình học\nMột định thức của ma trận là phương của diện tích sau khi ánh xạ với diện tích trước ánh xạ.\n\ndet(\\mathbf A) = \\frac{\\text{area after T}}{\\text{area before T}}\n\n\n\n\n\nÝ nghĩa Determinant\n\n\\det(\\mathbf A) &gt; 0 : Trục cơ sở vẫn giữ nguyên (tức là \\hat i nằm bên phải \\hat j theo chiều đồng hồ).\n\\det(\\mathbf A) &lt; 0 : Trục cơ sở bị đảo (\\hat i nằm bên trái \\hat j theo chiều đồng hồ).\n\\det(\\mathbf A) = 0 : Chiều không gian bị giảm đi (tức là từ không gian \\mathbb R^n giảm xuống \\mathbb R^{n - 1} ,..., \\mathbb R^0).\n\n\n\n\nCách tính Determinant\n…\n\n\n\nMột số tính chất của Determinant\n\n\\det(\\mathbf I) = 1 (\\mathbf I là ma trận cơ sở, sẽ nói xâu hơn ở chương Matrix).\n\\det(\\mathbf {AB}) = \\det(\\mathbf A) \\cdot \\det(\\mathbf B)\n\\det(\\mathbf A^T) = \\det(\\mathbf A) (\\mathbf A^T là ma trận chuyển vị, sẽ nói xâu hơn ở chương Matrix)\n\\det(c \\mathbf A) = c^n \\det(\\mathbf A) nếu \\mathbf A là ma trận n \\times n\n\n\n\n\nSự sụp đổ của không gian",
-    "crumbs": [
-      "18.06",
-      "Determinant"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Giới thiệu",
-    "section": "",
-    "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "donotReadme/18.03_DifferentialEquations.html",
-    "href": "donotReadme/18.03_DifferentialEquations.html",
-    "title": "Phương trình vi phân",
-    "section": "",
-    "text": "Lectures: 3 sessions / week, 1 hour / session\nRecitations : 2 sessions / week, 1 hour / seesion\n\n\n\nPrerequiste : 18.01\nCorequisite : 18.02\n\n\n\n\n\n\nEdwards, C., and D. Penney. Elementary Differential Equations with Boundary Value Problems. 6th ed. Upper Saddle River, NJ: Prentice Hall, 2003. ISBN: 9780136006138."
-  },
-  {
-    "objectID": "donotReadme/18.03_DifferentialEquations.html#time",
-    "href": "donotReadme/18.03_DifferentialEquations.html#time",
-    "title": "Phương trình vi phân",
-    "section": "",
-    "text": "Lectures: 3 sessions / week, 1 hour / session\nRecitations : 2 sessions / week, 1 hour / seesion"
-  },
-  {
-    "objectID": "donotReadme/18.03_DifferentialEquations.html#prerequiste-corequisite",
-    "href": "donotReadme/18.03_DifferentialEquations.html#prerequiste-corequisite",
-    "title": "Phương trình vi phân",
-    "section": "",
-    "text": "Prerequiste : 18.01\nCorequisite : 18.02"
-  },
-  {
-    "objectID": "donotReadme/18.03_DifferentialEquations.html#text",
-    "href": "donotReadme/18.03_DifferentialEquations.html#text",
-    "title": "Phương trình vi phân",
-    "section": "",
-    "text": "Edwards, C., and D. Penney. Elementary Differential Equations with Boundary Value Problems. 6th ed. Upper Saddle River, NJ: Prentice Hall, 2003. ISBN: 9780136006138."
-  },
-  {
-    "objectID": "note/differential-equations/index.html",
-    "href": "note/differential-equations/index.html",
-    "title": "Phương trình vi phân",
-    "section": "",
-    "text": "1. Giới thiệu (Introduction)\n\n1.1 Một số mô hình toán học cơ bản; Trường phương hướng\n1.2 Nghiệm của một số phương trình vi phân\n1.3 Phân loại phương trình vi phân\n\n\n\n\n2. Phương trình vi phân cấp một (First-Order Differential Equations)\n\n2.1 Phương trình tuyến tính; phương pháp nhân tử tích phân\n2.2 Phương trình tách biến\n2.3 Phương trình thuần nhất\n2.4 Phương trình Bernoulli và phi tuyến\n2.5 Phương trình tự trị và động lực học quần thể\n2.6 Phương trình chính xác và nhân tử tích phân\n2.7 Phương pháp Euler\n2.8 Định lý tồn tại và duy nhất nghiệm\n2.9 Phương trình sai phân cấp một\n\n\n\n\n3. Phương trình vi phân tuyến tính cấp hai\n\n3.1 Phương trình thuần nhất hệ số hằng\n3.2 Nghiệm Wronskian\n3.3 Nghiệm phức của phương trình đặc trưng\n3.4 Nghiệm bội\n3.5 Phương pháp hệ số bất định\n3.6 Phương pháp biến thiên tham số\n3.7 Dao động cơ học và điện\n3.8 Dao động cưỡng bức tuần hoàn\n\n\n\n\n4. Phương trình vi phân tuyến tính cấp cao\n\n4.1 Lý thuyết tổng quát\n4.2 Thuần nhất hệ số hằng\n4.3 Phương pháp hệ số bất định\n4.4 Biến thiên tham số\n\n\n\n\n5. Nghiệm chuỗi của phương trình cấp hai\n\n5.1 Ôn tập chuỗi lũy thừa\n5.2 Chuỗi quanh điểm chính quy (phần I)\n5.3 Chuỗi quanh điểm chính quy (phần II)\n5.4 Phương trình Euler\n5.5 Điểm kỳ dị chính quy (phần I)\n5.6 Điểm kỳ dị chính quy (phần II)\n5.7 Phương trình Bessel\n\n\n\n\n6. Phép biến đổi Laplace\n\n6.1 Định nghĩa\n6.2 Giải bài toán giá trị ban đầu\n6.3 Hàm bước\n6.4 Ngoại lực gián đoạn\n6.5 Hàm xung\n6.6 Tích chập\n\n\n\n\n7. Hệ phương trình vi phân tuyến tính cấp một\n\n7.1 Giới thiệu\n7.2 Ma trận\n7.3 Hệ tuyến tính; trị riêng, vectơ riêng\n7.4 Lý thuyết cơ bản\n7.5 Thuần nhất hệ số hằng\n7.6 Trị riêng phức\n7.7 Trị riêng hàm cơ bản\n7.8 Trị riêng lặp\n7.9 Hệ không thuần nhất",
-    "crumbs": [
-      "18.03",
-      "Phương trình vi phân"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/index.html",
-    "href": "note/linear-algebra/index.html",
-    "title": "Đại số tuyến tính",
-    "section": "",
-    "text": "Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).\nCác tài liệu mà tôi tham khảo:\n\ndaisotuyentinh\nLinear Algebra - Gilbert Strang\nEssence of linear algebra - 3blue1brown\n\nVề ưu và nhược điểm, có thể nói vui vẻ như sau:\n\nDaisotuyentinh.com: đơn giản, dễ hiểu, viết bằng Tiếng Việt, có các chứng minh, nhưng khó hiểu.\nLinear Gilbert của thầy Gilbert Strang: tài liệu của MIT, viết bằng Tiếng Anh, sẽ rất khó hiểu vì nó sẽ chứng minh một cách từ từ, nhưng nó sẽ kiểu như là gợi ý cách mình suy nghĩ là nhiều hơn, thêm một ưu điểm nữa là nó sẽ phù hợp hơn với những người thích suy nghĩ (còn tôi thì không).\nEssence of Linear Algebra của 3xanhdương1nâu: cực kỳ dị, sẽ không theo bất kỳ roadmap nào thường được thấy trong sách, nó sẽ chứng minh bằng hình học nhiều hơn (thật ra là 100% hình học), cực kỳ trực quan và dễ hiểu.",
-    "crumbs": [
-      "18.06",
-      "Đại số tuyến tính"
+      "Vector"
     ]
   },
   {
@@ -199,36 +88,202 @@
     ]
   },
   {
-    "objectID": "note/linear-algebra/vector.html#quan-điểm-của-vật-lý",
-    "href": "note/linear-algebra/vector.html#quan-điểm-của-vật-lý",
-    "title": "Vector",
-    "section": "Quan điểm của Vật lý",
-    "text": "Quan điểm của Vật lý\nVector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:\n\nĐộ dài\nHướng\n\nHai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.",
+    "objectID": "note/linear-algebra/index.html",
+    "href": "note/linear-algebra/index.html",
+    "title": "Đại số tuyến tính",
+    "section": "",
+    "text": "Bằng một số thông hiểu của tôi, tôi sẽ giải thích nó bằng hình học (vì hình học là môn tôi ghét nhất trong cấp 3 (đặc biệt là Vector (nhưng may mắn làm sao, đại số tuyến tính lại gắn liền với Vector))).\nCác tài liệu mà tôi tham khảo:\n\ndaisotuyentinh\nLinear Algebra - Gilbert Strang\nEssence of linear algebra - 3blue1brown\n\nVề ưu và nhược điểm, có thể nói vui vẻ như sau:\n\nDaisotuyentinh.com: đơn giản, dễ hiểu, viết bằng Tiếng Việt, có các chứng minh, nhưng khó hiểu.\nLinear Gilbert của thầy Gilbert Strang: tài liệu của MIT, viết bằng Tiếng Anh, sẽ rất khó hiểu vì nó sẽ chứng minh một cách từ từ, nhưng nó sẽ kiểu như là gợi ý cách mình suy nghĩ là nhiều hơn, thêm một ưu điểm nữa là nó sẽ phù hợp hơn với những người thích suy nghĩ (còn tôi thì không).\nEssence of Linear Algebra của 3xanhdương1nâu: cực kỳ dị, sẽ không theo bất kỳ roadmap nào thường được thấy trong sách, nó sẽ chứng minh bằng hình học nhiều hơn (thật ra là 100% hình học), cực kỳ trực quan và dễ hiểu.",
     "crumbs": [
       "18.06",
-      "Vector"
+      "Đại số tuyến tính"
     ]
   },
   {
-    "objectID": "note/linear-algebra/vector.html#quan-điểm-của-tin-học",
-    "href": "note/linear-algebra/vector.html#quan-điểm-của-tin-học",
-    "title": "Vector",
-    "section": "Quan điểm của Tin học",
-    "text": "Quan điểm của Tin học\nNó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu. Đúng vậy, nó khác là khác với hai môn còn lại",
+    "objectID": "note/differential-equations/index.html",
+    "href": "note/differential-equations/index.html",
+    "title": "Phương trình vi phân",
+    "section": "",
+    "text": "1. Giới thiệu (Introduction)\n\n1.1 Một số mô hình toán học cơ bản; Trường phương hướng\n1.2 Nghiệm của một số phương trình vi phân\n1.3 Phân loại phương trình vi phân\n\n\n\n\n2. Phương trình vi phân cấp một (First-Order Differential Equations)\n\n2.1 Phương trình tuyến tính; phương pháp nhân tử tích phân\n2.2 Phương trình tách biến\n2.3 Phương trình thuần nhất\n2.4 Phương trình Bernoulli và phi tuyến\n2.5 Phương trình tự trị và động lực học quần thể\n2.6 Phương trình chính xác và nhân tử tích phân\n2.7 Phương pháp Euler\n2.8 Định lý tồn tại và duy nhất nghiệm\n2.9 Phương trình sai phân cấp một\n\n\n\n\n3. Phương trình vi phân tuyến tính cấp hai\n\n3.1 Phương trình thuần nhất hệ số hằng\n3.2 Nghiệm Wronskian\n3.3 Nghiệm phức của phương trình đặc trưng\n3.4 Nghiệm bội\n3.5 Phương pháp hệ số bất định\n3.6 Phương pháp biến thiên tham số\n3.7 Dao động cơ học và điện\n3.8 Dao động cưỡng bức tuần hoàn\n\n\n\n\n4. Phương trình vi phân tuyến tính cấp cao\n\n4.1 Lý thuyết tổng quát\n4.2 Thuần nhất hệ số hằng\n4.3 Phương pháp hệ số bất định\n4.4 Biến thiên tham số\n\n\n\n\n5. Nghiệm chuỗi của phương trình cấp hai\n\n5.1 Ôn tập chuỗi lũy thừa\n5.2 Chuỗi quanh điểm chính quy (phần I)\n5.3 Chuỗi quanh điểm chính quy (phần II)\n5.4 Phương trình Euler\n5.5 Điểm kỳ dị chính quy (phần I)\n5.6 Điểm kỳ dị chính quy (phần II)\n5.7 Phương trình Bessel\n\n\n\n\n6. Phép biến đổi Laplace\n\n6.1 Định nghĩa\n6.2 Giải bài toán giá trị ban đầu\n6.3 Hàm bước\n6.4 Ngoại lực gián đoạn\n6.5 Hàm xung\n6.6 Tích chập\n\n\n\n\n7. Hệ phương trình vi phân tuyến tính cấp một\n\n7.1 Giới thiệu\n7.2 Ma trận\n7.3 Hệ tuyến tính; trị riêng, vectơ riêng\n7.4 Lý thuyết cơ bản\n7.5 Thuần nhất hệ số hằng\n7.6 Trị riêng phức\n7.7 Trị riêng hàm cơ bản\n7.8 Trị riêng lặp\n7.9 Hệ không thuần nhất",
     "crumbs": [
-      "18.06",
-      "Vector"
+      "18.03",
+      "Phương trình vi phân"
     ]
   },
   {
-    "objectID": "note/linear-algebra/vector.html#quan-điểm-của-toán-học",
-    "href": "note/linear-algebra/vector.html#quan-điểm-của-toán-học",
-    "title": "Vector",
-    "section": "Quan điểm của Toán học",
-    "text": "Quan điểm của Toán học\nMột cách khó hiểu và cực kỳ trừu tượng.\nMột vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:\n\nCộng hai vector\nNhân một vector với một số (scalar)\n\nVà chúng ra sẽ tìm hiểu nó sâu hơn trong chương Abstract Vector Spaces.",
+    "objectID": "donotReadme/18.03_DifferentialEquations.html",
+    "href": "donotReadme/18.03_DifferentialEquations.html",
+    "title": "Phương trình vi phân",
+    "section": "",
+    "text": "Lectures: 3 sessions / week, 1 hour / session\nRecitations : 2 sessions / week, 1 hour / seesion\n\n\n\nPrerequiste : 18.01\nCorequisite : 18.02\n\n\n\n\n\n\nEdwards, C., and D. Penney. Elementary Differential Equations with Boundary Value Problems. 6th ed. Upper Saddle River, NJ: Prentice Hall, 2003. ISBN: 9780136006138."
+  },
+  {
+    "objectID": "donotReadme/18.03_DifferentialEquations.html#time",
+    "href": "donotReadme/18.03_DifferentialEquations.html#time",
+    "title": "Phương trình vi phân",
+    "section": "",
+    "text": "Lectures: 3 sessions / week, 1 hour / session\nRecitations : 2 sessions / week, 1 hour / seesion"
+  },
+  {
+    "objectID": "donotReadme/18.03_DifferentialEquations.html#prerequiste-corequisite",
+    "href": "donotReadme/18.03_DifferentialEquations.html#prerequiste-corequisite",
+    "title": "Phương trình vi phân",
+    "section": "",
+    "text": "Prerequiste : 18.01\nCorequisite : 18.02"
+  },
+  {
+    "objectID": "donotReadme/18.03_DifferentialEquations.html#text",
+    "href": "donotReadme/18.03_DifferentialEquations.html#text",
+    "title": "Phương trình vi phân",
+    "section": "",
+    "text": "Edwards, C., and D. Penney. Elementary Differential Equations with Boundary Value Problems. 6th ed. Upper Saddle River, NJ: Prentice Hall, 2003. ISBN: 9780136006138."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Giới thiệu",
+    "section": "",
+    "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/determinant.html",
+    "href": "note/linear-algebra/determinant.html",
+    "title": "Determinant",
+    "section": "",
+    "text": "Determinant: Ý nghĩa hình học\nMột định thức của ma trận là phương của diện tích sau khi ánh xạ với diện tích trước ánh xạ.\n\ndet(\\mathbf A) = \\frac{\\text{area after T}}{\\text{area before T}}\n\n\n\n\n\nÝ nghĩa Determinant\n\n\\det(\\mathbf A) &gt; 0 : Trục cơ sở vẫn giữ nguyên (tức là \\hat i nằm bên phải \\hat j theo chiều đồng hồ).\n\\det(\\mathbf A) &lt; 0 : Trục cơ sở bị đảo (\\hat i nằm bên trái \\hat j theo chiều đồng hồ).\n\\det(\\mathbf A) = 0 : Chiều không gian bị giảm đi (tức là từ không gian \\mathbb R^n giảm xuống \\mathbb R^{n - 1} ,..., \\mathbb R^0).\n\n\n\n\nCách tính Determinant\n…\n\n\n\nMột số tính chất của Determinant\n\n\\det(\\mathbf I) = 1 (\\mathbf I là ma trận cơ sở, sẽ nói xâu hơn ở chương Matrix).\n\\det(\\mathbf {AB}) = \\det(\\mathbf A) \\cdot \\det(\\mathbf B)\n\\det(\\mathbf A^T) = \\det(\\mathbf A) (\\mathbf A^T là ma trận chuyển vị, sẽ nói xâu hơn ở chương Matrix)\n\\det(c \\mathbf A) = c^n \\det(\\mathbf A) nếu \\mathbf A là ma trận n \\times n\n\n\n\n\nSự sụp đổ của không gian",
     "crumbs": [
       "18.06",
-      "Vector"
+      "Determinant"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/linearcombspanbasis.html#span-in-2d",
+    "href": "note/linear-algebra/linearcombspanbasis.html#span-in-2d",
+    "title": "Linear Combinations and more",
+    "section": "Span in 2D",
+    "text": "Span in 2D\nVới hai vector \\mathbf v và \\mathbf w trong không gian hai chiều \\mathbb R^2, có 3 trường hợp khả dĩ sau đây:\n\nNếu hai vector không thẳng hàng với nhau: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\mathbb R^2 - một mặt phẳng.\nNếu hai vector thẳng hàng với nhau nhưng không bằng không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} - một đưởng thẳng.\nNếu hai vector đều là vector không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\{ 0 \\} - một gốc tọa độ.",
+    "crumbs": [
+      "18.06",
+      "Linear Combinations and more"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/linearcombspanbasis.html#span-in-3d",
+    "href": "note/linear-algebra/linearcombspanbasis.html#span-in-3d",
+    "title": "Linear Combinations and more",
+    "section": "Span in 3D",
+    "text": "Span in 3D\n\nChỉ có một vector khác vector không: span là một đường thẳng.\nCó 2 vector không thẳng hàng: span là mặt phẳng.\nCả 3 vector không thuộc cùng một mặt phẳng: span là tất cả không gian \\mathbb R^3.",
+    "crumbs": [
+      "18.06",
+      "Linear Combinations and more"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/linearcombspanbasis.html#basis",
+    "href": "note/linear-algebra/linearcombspanbasis.html#basis",
+    "title": "Linear Combinations and more",
+    "section": "Basis",
+    "text": "Basis\nNhư đã nói ở chương trước, một vector basis thường là: \n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space  \n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}\n\nVới không gian 2 chiều, và không gian 3 chiều là:\n\n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}\n\\space \\text{,} \\space\n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space\n\\hat{k} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}",
+    "crumbs": [
+      "18.06",
+      "Linear Combinations and more"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/linearcombspanbasis.html#non-standard-bases",
+    "href": "note/linear-algebra/linearcombspanbasis.html#non-standard-bases",
+    "title": "Linear Combinations and more",
+    "section": "Non-standard Bases",
+    "text": "Non-standard Bases\nNhưng cũng đôi lúc, chúng không “cơ sở” cho lắm.\nTưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.",
+    "crumbs": [
+      "18.06",
+      "Linear Combinations and more"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/matrix.html",
+    "href": "note/linear-algebra/matrix.html",
+    "title": "Matrix",
+    "section": "",
+    "text": "Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.\nThử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nVí dụ: Vector \\vec v (1, 2).",
+    "crumbs": [
+      "18.06",
+      "Matrix"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/matrix.html#ma-trận-cột",
+    "href": "note/linear-algebra/matrix.html#ma-trận-cột",
+    "title": "Matrix",
+    "section": "Ma trận cột",
+    "text": "Ma trận cột\nTa có thể biểu diễn Vector \\vec v trên bằng ma trận cột 1 \\times 2, được ký hiệu như sau:\n\n\\begin{bmatrix}\n1 \\\\\n2\n\\end{bmatrix}\n\nHay tổng quát hơn, ta có thể biểu diễn một vector nhiều chiều bằng ma trận cột gồm n giá trị \n\\begin{bmatrix}\na_1 \\\\\na_2 \\\\\na_3 \\\\\n\\vdots \\\\\na_n\n\\end{bmatrix}",
+    "crumbs": [
+      "18.06",
+      "Matrix"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/matrix.html#ma-trận-n-times-m",
+    "href": "note/linear-algebra/matrix.html#ma-trận-n-times-m",
+    "title": "Matrix",
+    "section": "Ma trận n \\times m",
+    "text": "Ma trận n \\times m\nLà tập hợp của m vector n chiều.\n\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1m} \\\\\na_{21} & a_{22} & \\cdots & a_{2m} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n1} & a_{n2} & \\cdots & a_{nm} \\\\\n\\end{bmatrix}",
+    "crumbs": [
+      "18.06",
+      "Matrix"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#độ-dài-của-vector",
+    "href": "note/multivariable-calculus/1.html#độ-dài-của-vector",
+    "title": "Vector and Matrices",
+    "section": "Độ dài của vector",
+    "text": "Độ dài của vector\nỞ cấp 3 chúng ta đã được học, nó chính là\n\n\\vec A &lt;a_1, a_2, a_3&gt; = \\sqrt{\\left(a_1^2 + a_2^2 + a_3^2 \\right)}",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
+    "href": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
+    "title": "Vector and Matrices",
+    "section": "Cộng vector và nhân vector với scalar",
+    "text": "Cộng vector và nhân vector với scalar\nQuá dễ, không bàn tới",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#section",
+    "href": "note/multivariable-calculus/1.html#section",
+    "title": "Vector and Matrices",
+    "section": "",
+    "text": "WarningLưu ý\n\n\n\nLưu ý rằng, các vector có cùng hướng và cùng độ dài là giống nhau, không quan trọng điểm đặt của nó. Điều này tớ cho rằng nó sẽ dễ dàng hơn trong việc truyền đạt phép cộng và nhân vector với một số sau này.",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#applications",
+    "href": "note/multivariable-calculus/1.html#applications",
+    "title": "Vector and Matrices",
+    "section": "Applications",
+    "text": "Applications\nỨng dụng của dot product:\n\n\nTính độ dài và góc (đặc biệt là góc)\n\n\nXác định tính trực giao",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
     ]
   }
 ]

@@ -8,7 +8,7 @@
 
 <meta name="author" content="TgX.2">
 
-<title>Linear Transformation – TgX.2</title>
+<title>Vector and Matrices – TgX.2</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -297,7 +297,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/linear-algebra/index.html">18.06</a></li><li class="breadcrumb-item"><a href="../../note/linear-algebra/lineartransformation.html">Linear Transformation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/multivariable-calculus/index.html">18.02</a></li><li class="breadcrumb-item"><a href="../../note/multivariable-calculus/1.html">Vector and Matrices</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -333,13 +333,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">18.02</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../note/multivariable-calculus/index.html" class="sidebar-item-text sidebar-link">
@@ -348,7 +348,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../note/multivariable-calculus/1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/multivariable-calculus/1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Vector and Matrices</span></a>
   </div>
 </li>
@@ -373,13 +373,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">18.06</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../note/linear-algebra/index.html" class="sidebar-item-text sidebar-link">
@@ -400,7 +400,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../note/linear-algebra/lineartransformation.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../note/linear-algebra/lineartransformation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear Transformation</span></a>
   </div>
 </li>
@@ -428,16 +428,24 @@ window.Quarto = {
     <h2 id="toc-title">Mục lục bài viết</h2>
    
   <ul>
-  <li><a href="#ánh-xạ-là-gì" id="toc-ánh-xạ-là-gì" class="nav-link active" data-scroll-target="#ánh-xạ-là-gì">Ánh xạ là gì?</a></li>
-  <li><a href="#ánh-xạ-tuyến-tính" id="toc-ánh-xạ-tuyến-tính" class="nav-link" data-scroll-target="#ánh-xạ-tuyến-tính">Ánh xạ tuyến tính</a></li>
-  <li><a href="#ma-trận-của-linear-transformation" id="toc-ma-trận-của-linear-transformation" class="nav-link" data-scroll-target="#ma-trận-của-linear-transformation">Ma trận của Linear Transformation</a></li>
-  <li><a href="#một-số-ví-dụ-về-những-cái-ánh-xạ-quan-trọng" id="toc-một-số-ví-dụ-về-những-cái-ánh-xạ-quan-trọng" class="nav-link" data-scroll-target="#một-số-ví-dụ-về-những-cái-ánh-xạ-quan-trọng">Một số ví dụ về những cái ánh xạ quan trọng</a>
+  <li><a href="#lời-bạt" id="toc-lời-bạt" class="nav-link active" data-scroll-target="#lời-bạt">Lời bạt</a></li>
+  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors">Vectors</a>
   <ul class="collapse">
-  <li><a href="#rotation" id="toc-rotation" class="nav-link" data-scroll-target="#rotation">Rotation</a></li>
-  <li><a href="#scaling" id="toc-scaling" class="nav-link" data-scroll-target="#scaling">Scaling</a></li>
-  <li><a href="#shear" id="toc-shear" class="nav-link" data-scroll-target="#shear">Shear</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#độ-dài-của-vector" id="toc-độ-dài-của-vector" class="nav-link" data-scroll-target="#độ-dài-của-vector">Độ dài của vector</a></li>
+  <li><a href="#cộng-vector-và-nhân-vector-với-scalar" id="toc-cộng-vector-và-nhân-vector-với-scalar" class="nav-link" data-scroll-target="#cộng-vector-và-nhân-vector-với-scalar">Cộng vector và nhân vector với scalar</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></li>
+  <li><a href="#dot-product" id="toc-dot-product" class="nav-link" data-scroll-target="#dot-product">Dot product</a>
+  <ul class="collapse">
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
+  </ul></li>
+  <li><a href="#determinants" id="toc-determinants" class="nav-link" data-scroll-target="#determinants">Determinants</a></li>
+  <li><a href="#cross-product" id="toc-cross-product" class="nav-link" data-scroll-target="#cross-product">Cross product</a></li>
+  <li><a href="#matrices-inverse-matrices" id="toc-matrices-inverse-matrices" class="nav-link" data-scroll-target="#matrices-inverse-matrices">Matrices; Inverse Matrices</a></li>
+  <li><a href="#square-systems-equation-of-planes" id="toc-square-systems-equation-of-planes" class="nav-link" data-scroll-target="#square-systems-equation-of-planes">Square systems; Equation of planes</a></li>
+  <li><a href="#parametric-equations-for-lines-and-curves" id="toc-parametric-equations-for-lines-and-curves" class="nav-link" data-scroll-target="#parametric-equations-for-lines-and-curves">Parametric equations for lines and curves</a></li>
+  <li><a href="#velocity-acceleration" id="toc-velocity-acceleration" class="nav-link" data-scroll-target="#velocity-acceleration">Velocity, Acceleration</a></li>
+  <li><a href="#keplers-second-law" id="toc-keplers-second-law" class="nav-link" data-scroll-target="#keplers-second-law">Kepler’s second law</a></li>
   </ul>
 </nav>
     </div>
@@ -445,9 +453,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/linear-algebra/index.html">18.06</a></li><li class="breadcrumb-item"><a href="../../note/linear-algebra/lineartransformation.html">Linear Transformation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/multivariable-calculus/index.html">18.02</a></li><li class="breadcrumb-item"><a href="../../note/multivariable-calculus/1.html">Vector and Matrices</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Linear Transformation</h1>
+<h1 class="title">Vector and Matrices</h1>
 </div>
 
 
@@ -471,106 +479,149 @@ window.Quarto = {
 
 
 <hr>
-<section id="ánh-xạ-là-gì" class="level1">
-<h1>Ánh xạ là gì?</h1>
-<p>Một ánh xạ là một hàm mà nó chuyển vector này sang vector khác.</p>
-<p>Mỗi một input vector sẽ chỉ đến một output vector.</p>
+<section id="lời-bạt" class="level1">
+<h1>Lời bạt</h1>
+<p>Thật ra lời bạt là lời nói ở cuối sách cơ, nhưng mà thôi, chấp nhận đi.</p>
+<p>Vector trong những lời tôi nói, ví dụ, và viết, suy nghĩ trong đầu bạn, ở chương <strong>18.02</strong> nên là vector trong mặt phẳng (2D), hoặc trong không gian 3 chiều (3D).</p>
+<p>Các tính chất hầu như (tất cả) đều giống nhau ở đa chiều khác nhau, nhưng sẽ dễ dàng và để chương <strong>18.06</strong> không bị mất đi tinh thần của nó. Các ví dụ trong chương này nên là 2d và 3d cho dễ hiểu.</p>
+<hr>
+</section>
+<section id="vectors" class="level1">
+<h1>Vectors</h1>
+<p>Vector thì không có gì đáng để chú tâm cả, bởi vì nó được giảng dạy khá nhiều trong môn hình học ở cấp 3, và có thể coi là cốt lõi của hình học cấp 3.</p>
+<p>Về vector thì có hai thứ để cấu tạo nên nó:</p>
+<ul>
+<li><span class="math inline">dir(\vec A)</span> : direction</li>
+<li><span class="math inline">|\vec A|</span> : magnitude / length</li>
+</ul>
+<p>Một vector cơ bản giới thiệu trong không gian ba chiều sau:</p>
 <p><span class="math display">
-T : \mathbb R ^ 2 \rightarrow \mathbb{R^2}
+\vec A = a_1 \hat i + a_2 \hat j + a_3 \hat k = &lt;a_1, a_2, a_3&gt;
 </span></p>
-<hr>
+<p>Một vector cũng có thể biểu diễn bằng hai điểm, ví dụ như là hai điểm P và Q thì vector <span class="math inline">\vec{PQ}</span> sẽ có đầu là điểm P và kết thúc ở điểm Q.</p>
+<section id="độ-dài-của-vector" class="level2">
+<h2 class="anchored" data-anchor-id="độ-dài-của-vector">Độ dài của vector</h2>
+<p>Ở cấp 3 chúng ta đã được học, nó chính là</p>
+<p><span class="math display">
+\vec A &lt;a_1, a_2, a_3&gt; = \sqrt{\left(a_1^2 + a_2^2 + a_3^2 \right)}
+</span></p>
 </section>
-<section id="ánh-xạ-tuyến-tính" class="level1">
-<h1>Ánh xạ tuyến tính</h1>
-<p>Một <strong>Linear Transformation</strong> nếu nó thỏa hai điều kiện sau đây:</p>
-<ol type="1">
-<li><strong>Additivity:</strong> <span class="math inline">T(\mathbf v + \mathbf w) = T(\mathbf v) + T(\mathbf w)</span></li>
-<li><strong>Homogeneity:</strong> <span class="math inline">T(c \cdot \mathbf v) = c \cdot T(\mathbf v)</span></li>
-</ol>
-<p>Với các vector <span class="math inline">v, w</span> và <strong>scalar</strong> c bất kỳ.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Geometric Intuition
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Một ánh xạ tuyến tính sẽ bóp méo các vector cơ sở, sao cho thỏa mãn:</p>
-<ol type="1">
-<li><strong>Các đường thẳng vẫn thẳng.</strong> (Không thể nào cong được)</li>
-<li><strong>Gốc tọa độ phải giữ nguyên.</strong></li>
-</ol>
-<p>Nếu các đường lưới vẫn song song và cách đều nhau sau phép biến đổi, thì đó là phép biến đổi tuyến tính.</p>
-<p><img src="../../img/2.png" class="img-fluid"></p>
-</div>
-</div>
-</div>
-<hr>
+<section id="cộng-vector-và-nhân-vector-với-scalar" class="level2">
+<h2 class="anchored" data-anchor-id="cộng-vector-và-nhân-vector-với-scalar">Cộng vector và nhân vector với scalar</h2>
+<p>Quá dễ, không bàn tới</p>
 </section>
-<section id="ma-trận-của-linear-transformation" class="level1">
-<h1>Ma trận của Linear Transformation</h1>
-<p>Với mỗi Linear Transformation <span class="math inline">T : \mathbb{R^2} \rightarrow \mathbb{R^2}</span> đều có thể hoàn toàn xác định nơi mà hai vector basis của mình <span class="math inline">\hat{i}</span> và <span class="math inline">\hat{j}</span> ở đâu sau khi ánh xạ.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Proof
+<span class="screen-reader-only">Warning</span>Lưu ý
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Với bất kỳ vector <span class="math inline">\mathbf{v} = \begin{bmatrix} x \\ y \end{bmatrix}</span> đều có thể viết dưới dạng: <span class="math inline">\mathbf v = x \hat i + y \hat j</span>.</p>
-<p>Sử dụng tính chất tuyến tính:</p>
-<p><span class="math display">
-T(\mathbf v) = T(x \hat i + y \hat j) = x T(\hat i) + y T(\hat j)
-</span></p>
-<p>Vì thế, nếu chúng ta biết được <span class="math inline">T(\hat i)</span> và <span class="math inline">T(\hat j)</span> hay là vị trí của hai vector basis <span class="math inline">\hat{i}</span> và <span class="math inline">\hat{j}</span> ở đâu sau khi áp <span class="math inline">T()</span>.</p>
+<p>Lưu ý rằng, các vector có cùng hướng và cùng độ dài là giống nhau, không quan trọng điểm đặt của nó. Điều này tớ cho rằng nó sẽ dễ dàng hơn trong việc truyền đạt phép cộng và nhân vector với một số sau này.</p>
 </div>
 </div>
-<p>Nếu <span class="math inline">T(\hat i) = \begin{bmatrix} a \\ c \end{bmatrix}</span> và <span class="math inline">T(\hat j) = \begin{bmatrix} b \\ d \end{bmatrix}</span>, <strong>Transformation Matrix</strong> của <span class="math inline">T</span> là:</p>
-<p><span class="math display">
-A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}
-</span></p>
 <hr>
 </section>
-<section id="một-số-ví-dụ-về-những-cái-ánh-xạ-quan-trọng" class="level1">
-<h1>Một số ví dụ về những cái ánh xạ quan trọng</h1>
-<section id="rotation" class="level2">
-<h2 class="anchored" data-anchor-id="rotation">Rotation</h2>
-<p><strong>Phép quay:</strong> một phép quay một góc <span class="math inline">\theta</span> ngược chiều:</p>
+</section>
+<section id="dot-product" class="level1">
+<h1>Dot product</h1>
+<p>Như ở cấp 3 ta đã học. Tổng quát hóa nó lên, tích vô hướng hai vector là:</p>
 <p><span class="math display">
-\mathbf{A}_{\theta} = \begin{bmatrix}
-\cos\theta &amp; -\sin\theta \\
-\sin\theta &amp; \cos\theta
-\end{bmatrix}
+\vec A \cdot \vec B = \sum{a_i b_i}
 </span></p>
-</section>
-<section id="scaling" class="level2">
-<h2 class="anchored" data-anchor-id="scaling">Scaling</h2>
-<p><strong>Phép co dãn:</strong> phóng trục hoành một lượng <span class="math inline">x</span> và trục tung một lượng <span class="math inline">y</span></p>
+<p>Và một cách khác theo hình học là:</p>
 <p><span class="math display">
-\mathbf A = \begin{bmatrix}
-x &amp; 0 \\
-0 &amp; y
-\end{bmatrix}
+\vec A \cdot \vec B = |\vec A| \cdot |\vec B| \cdot \cos(\theta)
 </span></p>
+<div class="callout callout-style-default callout-tip callout-empty-content callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Chứng minh
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="applications" class="level2">
+<h2 class="anchored" data-anchor-id="applications">Applications</h2>
+<p>Ứng dụng của dot product:</p>
+<ul>
+<li><ol type="1">
+<li>Tính độ dài và góc (đặc biệt là góc)</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Xác định tính trực giao</li>
+</ol></li>
+</ul>
+<hr>
 </section>
-<section id="shear" class="level2">
-<h2 class="anchored" data-anchor-id="shear">Shear</h2>
-<p><strong>Phép cắt:</strong> một trục sẽ giữ nguyên hướng, trong khi đó trục còn lại sẽ bị thay đổi một lượng <span class="math inline">k</span>.</p>
-<p>Ví dụ: <img src="../../img/3.png" class="img-fluid"></p>
 </section>
-<section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<section id="determinants" class="level1">
+<h1>Determinants</h1>
+<p>Định thức, như ở cấp 3 chúng ta đã được học định thức bậc nhất:</p>
+<p><span class="math display">
+\begin{vmatrix}
+a_1 &amp; a_2 \\
+b_1 &amp; b_2
+\end{vmatrix} = a_1b_2 - a_2b_1
+</span></p>
+<p>Và bây giờ tớ sẽ giới thiệu tới định thức <span class="math inline">3 \times 3</span></p>
+<p><span class="math display">
+\begin{vmatrix}
+a_1 &amp; a_2 &amp; a_3 \\
+b_1 &amp; b_2 &amp; b_3 \\
+c_1 &amp; c_2 &amp; c_3
+\end{vmatrix}
+= a_1 \begin{vmatrix}
+b_2 &amp; b_3 \\
+c_2 &amp; c_3
+\end{vmatrix}
+- a_2 \begin{vmatrix}
+b_1 &amp; b_3 \\
+c_1 &amp; c_3
+\end{vmatrix}
++ a_3 \begin{vmatrix}
+b_1 &amp; b_2 \\
+c_1 &amp; c_2 s
+\end{vmatrix}
+</span></p>
+<p>Còn <span class="math inline">\det(A_{n \times n})</span> thì sẽ được giới thiệu ở <strong>18.06</strong></p>
+<p>Một ứng dụng của định thức là diện tích tam giác tạo bởi hai vector <span class="math inline">\vec A</span> và <span class="math inline">\vec B</span>.</p>
+<hr>
+</section>
+<section id="cross-product" class="level1">
+<h1>Cross product</h1>
+<hr>
+</section>
+<section id="matrices-inverse-matrices" class="level1">
+<h1>Matrices; Inverse Matrices</h1>
+<hr>
+</section>
+<section id="square-systems-equation-of-planes" class="level1">
+<h1>Square systems; Equation of planes</h1>
+<hr>
+</section>
+<section id="parametric-equations-for-lines-and-curves" class="level1">
+<h1>Parametric equations for lines and curves</h1>
+<hr>
+</section>
+<section id="velocity-acceleration" class="level1">
+<h1>Velocity, Acceleration</h1>
+<hr>
+</section>
+<section id="keplers-second-law" class="level1">
+<h1>Kepler’s second law</h1>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -16,6 +16,7 @@ website:
       - section : "18.02"
         contents: 
           - note/multivariable-calculus/index.qmd
+          - note/multivariable-calculus/1.qmd
 
       - section : "18.03"
         contents: 
