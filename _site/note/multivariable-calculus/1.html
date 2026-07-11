@@ -441,8 +441,11 @@ window.Quarto = {
   </ul></li>
   <li><a href="#determinants" id="toc-determinants" class="nav-link" data-scroll-target="#determinants">Determinants</a></li>
   <li><a href="#cross-product" id="toc-cross-product" class="nav-link" data-scroll-target="#cross-product">Cross product</a></li>
-  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices">Matrices</a></li>
-  <li><a href="#inverse-matrices" id="toc-inverse-matrices" class="nav-link" data-scroll-target="#inverse-matrices">Inverse Matrices</a></li>
+  <li><a href="#matrices" id="toc-matrices" class="nav-link" data-scroll-target="#matrices">Matrices</a>
+  <ul class="collapse">
+  <li><a href="#identity-matrix" id="toc-identity-matrix" class="nav-link" data-scroll-target="#identity-matrix">Identity matrix</a></li>
+  <li><a href="#inverse-matrix" id="toc-inverse-matrix" class="nav-link" data-scroll-target="#inverse-matrix">Inverse matrix</a></li>
+  </ul></li>
   <li><a href="#square-systems-equation-of-planes" id="toc-square-systems-equation-of-planes" class="nav-link" data-scroll-target="#square-systems-equation-of-planes">Square systems; Equation of planes</a></li>
   <li><a href="#parametric-equations-for-lines-and-curves" id="toc-parametric-equations-for-lines-and-curves" class="nav-link" data-scroll-target="#parametric-equations-for-lines-and-curves">Parametric equations for lines and curves</a></li>
   <li><a href="#velocity-acceleration" id="toc-velocity-acceleration" class="nav-link" data-scroll-target="#velocity-acceleration">Velocity, Acceleration</a></li>
@@ -605,11 +608,77 @@ c_1 &amp; c_2 s
 </section>
 <section id="matrices" class="level1">
 <h1>Matrices</h1>
+<p>Ma trận là gì? Có lẽ sẽ được nói rõ hơn trong <strong>18.06</strong> nhưng bây giờ chúng ta sẽ hiểu nó đơn giản là một tập hợp các số nén trong một bảng <span class="math inline">n \times m</span> n,m tùy ý.</p>
+<p>Thường thì các đại lượng có liên hệ với nhau qua biến đổi tuyến tính; Ví dụ như là việc thay đổi hệ tọa độ, không phải là <span class="math inline">\hat i = &lt;1, 0, 0&gt;</span>, <span class="math inline">\hat j = &lt;0, 1, 0&gt;</span>, <span class="math inline">\hat k = &lt;0, 0, 1&gt;</span> nữa, mà sẽ là 3 vector tùy ý làm gốc tọa độ, vậy thì vector gốc ban đầu <span class="math inline">\vec V</span> sẽ ở đâu sau khi biến đổi tuyến tính.</p>
+<p>For example:</p>
+<p><span class="math display">
+\begin{cases}
+u_1 = 2x_1 + 3x_2 + 3x_3 \\
+u_2 = 2x_1 + 4x_2 + 5x_3 \\
+u_3 = x_1 + x_2 + 2x_3
+\end{cases}
+</span></p>
+<p>Khi viết dưới dạng nhân ma trận, sẽ là:</p>
+<p><span class="math display">
+\begin{bmatrix}
+2 &amp; 3 &amp; 3 \\
+2 &amp; 4 &amp; 5 \\
+1 &amp; 1 &amp; 2  
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+u_1 \\
+u_2 \\
+u_3
+\end{bmatrix}
+</span></p>
+<p>i.e.&nbsp;<span class="math inline">AX = U</span></p>
+<p>Việc nhân ma trận như thế nào, không cần bàn cãi gì nữa, nó là công việc của <strong>18.06</strong>, nhưng nếu bạn là học sinh chuyên tin thì sẽ biết nó hoạt động như thế nào.</p>
+<p>Đơn giản mà nói, nó sẽ là tích vô hướng giữa các hàng <span class="math inline">i</span> ma trận A và các cột <span class="math inline">j</span> của X, nó sẽ cho ra giá trị <span class="math inline">a_{ij}</span> của ma trận U.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Lưu ý
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Chính vì thế nên chiều dài của A phải bằng chiều cao của X.</p>
+</div>
+</div>
+</div>
+<section id="identity-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="identity-matrix">Identity matrix</h2>
+<p>Ma trận đơn vị là ma trận có số 1 ở đường chéo chính và tất cả số 0 ở các vị trí còn lại, ví dụ:</p>
+<p><span class="math display">
+I_{3 \times 3} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+</span></p>
+<p>và</p>
+<p><span class="math display">
+IX = X
+</span></p>
+<p>vì ma trận này không làm gì cả, đối chiếu với biến đổi tuyến tính, thì nó chính là không làm gì cả. Vì ma trận đơn vị này chính là hợp lại của các vector basis. ;)</p>
+</section>
+<section id="inverse-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="inverse-matrix">Inverse matrix</h2>
+<p>Ta thường giải <span class="math inline">Ax = B \Rightarrow x = \frac B A = A^{-1}B</span>. Vậy chúng ta có thể áp dụng nó trong ma trận được không?</p>
+<p>Được👍🏿.</p>
+<p>Vậy chúng ta tính</p>
 <hr>
 </section>
-<section id="inverse-matrices" class="level1">
-<h1>Inverse Matrices</h1>
-<hr>
 </section>
 <section id="square-systems-equation-of-planes" class="level1">
 <h1>Square systems; Equation of planes</h1>

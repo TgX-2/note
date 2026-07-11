@@ -285,5 +285,27 @@
       "18.02",
       "Vector and Matrices"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#identity-matrix",
+    "href": "note/multivariable-calculus/1.html#identity-matrix",
+    "title": "Vector and Matrices",
+    "section": "Identity matrix",
+    "text": "Identity matrix\nMa trận đơn vị là ma trận có số 1 ở đường chéo chính và tất cả số 0 ở các vị trí còn lại, ví dụ:\n\nI_{3 \\times 3} = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}\n\nvà\n\nIX = X\n\nvì ma trận này không làm gì cả, đối chiếu với biến đổi tuyến tính, thì nó chính là không làm gì cả. Vì ma trận đơn vị này chính là hợp lại của các vector basis. ;)",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#inverse-matrix",
+    "href": "note/multivariable-calculus/1.html#inverse-matrix",
+    "title": "Vector and Matrices",
+    "section": "Inverse matrix",
+    "text": "Inverse matrix\nTa thường giải Ax = B \\Rightarrow x = \\frac B A = A^{-1}B. Vậy chúng ta có thể áp dụng nó trong ma trận được không?\nĐược👍🏿.\nVậy chúng ta tính",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
   }
 ]

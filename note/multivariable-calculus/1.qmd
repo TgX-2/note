@@ -136,10 +136,79 @@ ___
 ___
 # Matrices
 
+Ma trận là gì? Có lẽ sẽ được nói rõ hơn trong **18.06** nhưng bây giờ chúng ta sẽ hiểu nó đơn giản là một tập hợp các số nén trong một bảng $n \times m$ n,m tùy ý.
 
-___
-# Inverse Matrices
+Thường thì các đại lượng có liên hệ với nhau qua biến đổi tuyến tính; Ví dụ như là việc thay đổi hệ tọa độ, không phải là $\hat i = <1, 0, 0>$, $\hat j = <0, 1, 0>$, $\hat k = <0, 0, 1>$ nữa, mà sẽ là 3 vector tùy ý làm gốc tọa độ, vậy thì vector gốc ban đầu $\vec V$ sẽ ở đâu sau khi biến đổi tuyến tính.
 
+For example:
+
+$$
+\begin{cases}
+u_1 = 2x_1 + 3x_2 + 3x_3 \\ 
+u_2 = 2x_1 + 4x_2 + 5x_3 \\ 
+u_3 = x_1 + x_2 + 2x_3
+\end{cases}
+$$
+
+Khi viết dưới dạng nhân ma trận, sẽ là:
+
+$$
+\begin{bmatrix}
+2 & 3 & 3 \\ 
+2 & 4 & 5 \\ 
+1 & 1 & 2  
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\ 
+x_2 \\ 
+x_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+u_1 \\ 
+u_2 \\ 
+u_3 
+\end{bmatrix}
+$$
+
+i.e. $AX = U$
+
+Việc nhân ma trận như thế nào, không cần bàn cãi gì nữa, nó là công việc của **18.06**, nhưng nếu bạn là học sinh chuyên tin thì sẽ biết nó hoạt động như thế nào.
+
+Đơn giản mà nói, nó sẽ là tích vô hướng giữa các hàng $i$ ma trận A và các cột $j$ của X, nó sẽ cho ra giá trị $a_{ij}$ của ma trận U.
+
+:::{.callout-warning collapse="true"}
+## Lưu ý
+Chính vì thế nên chiều dài của A phải bằng chiều cao của X.
+:::
+
+## Identity matrix
+
+Ma trận đơn vị là ma trận có số 1 ở đường chéo chính và tất cả số 0 ở các vị trí còn lại, ví dụ:
+
+$$
+I_{3 \times 3} = \begin{bmatrix}
+1 & 0 & 0 \\ 
+0 & 1 & 0 \\ 
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+và 
+
+$$
+IX = X 
+$$
+
+vì ma trận này không làm gì cả, đối chiếu với biến đổi tuyến tính, thì nó chính là không làm gì cả. Vì ma trận đơn vị này chính là hợp lại của các vector basis. ;)
+
+## Inverse matrix
+
+Ta thường giải $Ax = B \Rightarrow x = \frac B A = A^{-1}B$. Vậy chúng ta có thể áp dụng nó trong ma trận được không?
+
+Được👍🏿.
+
+Vậy chúng ta tính 
 
 ___
 # Square systems; Equation of planes
