@@ -446,8 +446,17 @@ window.Quarto = {
   <li><a href="#identity-matrix" id="toc-identity-matrix" class="nav-link" data-scroll-target="#identity-matrix">Identity matrix</a></li>
   <li><a href="#inverse-matrix" id="toc-inverse-matrix" class="nav-link" data-scroll-target="#inverse-matrix">Inverse matrix</a></li>
   </ul></li>
-  <li><a href="#square-systems-equation-of-planes" id="toc-square-systems-equation-of-planes" class="nav-link" data-scroll-target="#square-systems-equation-of-planes">Square systems; Equation of planes</a></li>
-  <li><a href="#parametric-equations-for-lines-and-curves" id="toc-parametric-equations-for-lines-and-curves" class="nav-link" data-scroll-target="#parametric-equations-for-lines-and-curves">Parametric equations for lines and curves</a></li>
+  <li><a href="#square-systems-equation-of-planes" id="toc-square-systems-equation-of-planes" class="nav-link" data-scroll-target="#square-systems-equation-of-planes">Square systems; Equation of planes</a>
+  <ul class="collapse">
+  <li><a href="#suy-nghiệm" id="toc-suy-nghiệm" class="nav-link" data-scroll-target="#suy-nghiệm">Suy nghiệm</a></li>
+  <li><a href="#homogeneous-systems" id="toc-homogeneous-systems" class="nav-link" data-scroll-target="#homogeneous-systems">Homogeneous Systems</a></li>
+  <li><a href="#general-systems" id="toc-general-systems" class="nav-link" data-scroll-target="#general-systems">General Systems</a></li>
+  </ul></li>
+  <li><a href="#parametric-equations-for-lines-and-curves" id="toc-parametric-equations-for-lines-and-curves" class="nav-link" data-scroll-target="#parametric-equations-for-lines-and-curves">Parametric equations for lines and curves</a>
+  <ul class="collapse">
+  <li><a href="#phương-trình-tham-số-cho-đường-thẳng" id="toc-phương-trình-tham-số-cho-đường-thẳng" class="nav-link" data-scroll-target="#phương-trình-tham-số-cho-đường-thẳng">Phương trình tham số cho đường thẳng</a></li>
+  <li><a href="#phương-trình-tham-số-cho-đường-cong" id="toc-phương-trình-tham-số-cho-đường-cong" class="nav-link" data-scroll-target="#phương-trình-tham-số-cho-đường-cong">Phương trình tham số cho đường cong</a></li>
+  </ul></li>
   <li><a href="#velocity-acceleration" id="toc-velocity-acceleration" class="nav-link" data-scroll-target="#velocity-acceleration">Velocity, Acceleration</a></li>
   <li><a href="#keplers-second-law" id="toc-keplers-second-law" class="nav-link" data-scroll-target="#keplers-second-law">Kepler’s second law</a></li>
   </ul>
@@ -676,17 +685,74 @@ IX = X
 <h2 class="anchored" data-anchor-id="inverse-matrix">Inverse matrix</h2>
 <p>Ta thường giải <span class="math inline">Ax = B \Rightarrow x = \frac B A = A^{-1}B</span>. Vậy chúng ta có thể áp dụng nó trong ma trận được không?</p>
 <p>Được👍🏿.</p>
-<p>Vậy chúng ta tính</p>
+<p>Vậy chúng ta tính <span class="math inline">A^{-1}</span> như thế nào.</p>
+<p>Bằng một cách thần kỳ, chúng ta biết được công thức <span class="math inline">A^{-1} = \frac 1 {\det(A)} adj(A)</span>. (Trong đó adj(A) là ma trận phụ hợp - adjoint matrix).</p>
+<p>Cách tính adj(A). Với mỗi giá trị hàng i cột j của bảng <span class="math inline">3 \times 3</span>, ta sẽ bỏ đi hàng i và cột j đó, chỉ còn lại bảng <span class="math inline">2 \times 2</span>, và giá trị <span class="math inline">adj(A)_{ij}</span> sẽ là định thức của bảng đó.</p>
+<p>Và thêm một bước nữa là chuyển vị bảng hiện tại, tức là tính <span class="math inline">adj(A)^T</span> sẽ cho bảng <span class="math inline">adj(A)</span> mà ta đang cần.</p>
+<p>Bước cuối cùng là tính <span class="math inline">\det(A)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Như bạn đã suy nghĩ:</p>
+<p><span class="math display">
+A^{-1}A = I
+</span></p>
+</div>
+</div>
 <hr>
 </section>
 </section>
 <section id="square-systems-equation-of-planes" class="level1">
 <h1>Square systems; Equation of planes</h1>
+<section id="suy-nghiệm" class="level2">
+<h2 class="anchored" data-anchor-id="suy-nghiệm">Suy nghiệm</h2>
+<p>Như ở trước ta đã đề cập, chúng ta có thể dùng <span class="math inline">X = A^{-1}B</span> để tính nghiệm của hệ phương trình. Và công thức để tính ma trận nghịch đảo là <span class="math inline">A^{-1} = \frac 1 {\det(A)} \cdot adj(A)</span>. Nhưng chúng ta chưa đề cập đến một việc, đó là mẫu số, hay chính là <span class="math inline">\det(A)</span> có thể bằng 0.</p>
+<p>Vì vậy, chúng ta sẽ suy luận ra nghiệm của hệ phương trình.</p>
+<p>Nếu <span class="math inline">\det(A) \neq 0</span> thì A sẽ được gọi là ma trận khả nghịch.</p>
+</section>
+<section id="homogeneous-systems" class="level2">
+<h2 class="anchored" data-anchor-id="homogeneous-systems">Homogeneous Systems</h2>
+<p>Đó là khi AX = 0, cả 3 mặt phẳng đều đi qua gốc tọa độ.</p>
+<p>Khi B = 0, tức là hệ phương trình gồm các phương trình có hệ số tự do = 0. Thì khi đó chúng ta có nghiệm tầm thường, đó chính là khi <span class="math inline">x, y, z, ... = 0</span>.</p>
+<p>Nghiệm tầm thường chỉ xảy ra khi ma trận A là khả nghịch, nếu ma trận A không khả nghịch, chúng ta sẽ có vô số nghiệm.</p>
+</section>
+<section id="general-systems" class="level2">
+<h2 class="anchored" data-anchor-id="general-systems">General Systems</h2>
+<p>Đó là khi AX = B, cả 3 mặt phẳng đều dịch chuyển song song so với mặt phẳng ban đầu mà cắt gốc tọa độ của nó.</p>
+<p>Nếu ma trận khả nghịch, thì chỉ có một đáp án duy nhất đó chính là <span class="math inline">X = A^{-1}B</span>.</p>
+<p>Nếu ma trận không khả nghịch, thì có hai khả năng là vô số nghiệm hoặc là vô nghiệm, chúng ta phải dùng khử Gauss để xác định xem là trường hợp nào, điều mà chắc chắn sẽ nói rõ hơn trong <strong>18.06</strong>.</p>
 <hr>
+</section>
 </section>
 <section id="parametric-equations-for-lines-and-curves" class="level1">
 <h1>Parametric equations for lines and curves</h1>
+<section id="phương-trình-tham-số-cho-đường-thẳng" class="level2">
+<h2 class="anchored" data-anchor-id="phương-trình-tham-số-cho-đường-thẳng">Phương trình tham số cho đường thẳng</h2>
+<p>Căn bản là giống cấp 3. Một hệ phương trình có vector chính phương (hoặc là 2 điểm AB trên đường thẳng đó tạo thành vector chính phương) <span class="math inline">\vec v = &lt;a, b, c&gt;</span> và điểm <span class="math inline">A = (x, y, z)</span> như sau:</p>
+<p><span class="math display">
+\begin{cases}
+x(t) = x + at \\
+y(t) = y + bt \\
+z(t) = z + ct
+\end{cases}
+</span></p>
+<p>Sẽ tưởng tượng rằng là có một điểm <span class="math inline">P(t) = (x(t), y(t), z(t))</span> chạy trên đường thẳng đó.</p>
+</section>
+<section id="phương-trình-tham-số-cho-đường-cong" class="level2">
+<h2 class="anchored" data-anchor-id="phương-trình-tham-số-cho-đường-cong">Phương trình tham số cho đường cong</h2>
+<p>Ở bài giảng thì thầy sử dụng đường cong <strong>cycloid</strong>, là một loại đường thẳng sinh ra khi ta cố gắng xác định đường đi cụ thể của một điểm đã xác định từ trước trên một đường tròn di chuyển bằng cách xoay tròn trong không gian.</p>
+<p>Có rất nhiều tham số có thể để lập phương trình, như là thời gian, góc, bán kính, …</p>
+<p>Nhưng chúng ta sẽ sử dụng góc, hay chính là <span class="math inline">\theta</span>.</p>
+<p>Về</p>
 <hr>
+</section>
 </section>
 <section id="velocity-acceleration" class="level1">
 <h1>Velocity, Acceleration</h1>

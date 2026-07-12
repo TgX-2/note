@@ -302,7 +302,62 @@
     "href": "note/multivariable-calculus/1.html#inverse-matrix",
     "title": "Vector and Matrices",
     "section": "Inverse matrix",
-    "text": "Inverse matrix\nTa thường giải Ax = B \\Rightarrow x = \\frac B A = A^{-1}B. Vậy chúng ta có thể áp dụng nó trong ma trận được không?\nĐược👍🏿.\nVậy chúng ta tính",
+    "text": "Inverse matrix\nTa thường giải Ax = B \\Rightarrow x = \\frac B A = A^{-1}B. Vậy chúng ta có thể áp dụng nó trong ma trận được không?\nĐược👍🏿.\nVậy chúng ta tính A^{-1} như thế nào.\nBằng một cách thần kỳ, chúng ta biết được công thức A^{-1} = \\frac 1 {\\det(A)} adj(A). (Trong đó adj(A) là ma trận phụ hợp - adjoint matrix).\nCách tính adj(A). Với mỗi giá trị hàng i cột j của bảng 3 \\times 3, ta sẽ bỏ đi hàng i và cột j đó, chỉ còn lại bảng 2 \\times 2, và giá trị adj(A)_{ij} sẽ là định thức của bảng đó.\nVà thêm một bước nữa là chuyển vị bảng hiện tại, tức là tính adj(A)^T sẽ cho bảng adj(A) mà ta đang cần.\nBước cuối cùng là tính \\det(A).\n\n\n\n\n\n\nTiptip\n\n\n\nNhư bạn đã suy nghĩ:\n\nA^{-1}A = I",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#suy-nghiệm",
+    "href": "note/multivariable-calculus/1.html#suy-nghiệm",
+    "title": "Vector and Matrices",
+    "section": "Suy nghiệm",
+    "text": "Suy nghiệm\nNhư ở trước ta đã đề cập, chúng ta có thể dùng X = A^{-1}B để tính nghiệm của hệ phương trình. Và công thức để tính ma trận nghịch đảo là A^{-1} = \\frac 1 {\\det(A)} \\cdot adj(A). Nhưng chúng ta chưa đề cập đến một việc, đó là mẫu số, hay chính là \\det(A) có thể bằng 0.\nVì vậy, chúng ta sẽ suy luận ra nghiệm của hệ phương trình.\nNếu \\det(A) \\neq 0 thì A sẽ được gọi là ma trận khả nghịch.",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#homogeneous-systems",
+    "href": "note/multivariable-calculus/1.html#homogeneous-systems",
+    "title": "Vector and Matrices",
+    "section": "Homogeneous Systems",
+    "text": "Homogeneous Systems\nĐó là khi AX = 0, cả 3 mặt phẳng đều đi qua gốc tọa độ.\nKhi B = 0, tức là hệ phương trình gồm các phương trình có hệ số tự do = 0. Thì khi đó chúng ta có nghiệm tầm thường, đó chính là khi x, y, z, ... = 0.\nNghiệm tầm thường chỉ xảy ra khi ma trận A là khả nghịch, nếu ma trận A không khả nghịch, chúng ta sẽ có vô số nghiệm.",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#general-systems",
+    "href": "note/multivariable-calculus/1.html#general-systems",
+    "title": "Vector and Matrices",
+    "section": "General Systems",
+    "text": "General Systems\nĐó là khi AX = B, cả 3 mặt phẳng đều dịch chuyển song song so với mặt phẳng ban đầu mà cắt gốc tọa độ của nó.\nNếu ma trận khả nghịch, thì chỉ có một đáp án duy nhất đó chính là X = A^{-1}B.\nNếu ma trận không khả nghịch, thì có hai khả năng là vô số nghiệm hoặc là vô nghiệm, chúng ta phải dùng khử Gauss để xác định xem là trường hợp nào, điều mà chắc chắn sẽ nói rõ hơn trong 18.06.",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
+    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
+    "title": "Vector and Matrices",
+    "section": "Phương trình tham số cho đường thẳng",
+    "text": "Phương trình tham số cho đường thẳng\nCăn bản là giống cấp 3. Một hệ phương trình có vector chính phương (hoặc là 2 điểm AB trên đường thẳng đó tạo thành vector chính phương) \\vec v = &lt;a, b, c&gt; và điểm A = (x, y, z) như sau:\n\n\\begin{cases}\nx(t) = x + at \\\\\ny(t) = y + bt \\\\\nz(t) = z + ct\n\\end{cases}\n\nSẽ tưởng tượng rằng là có một điểm P(t) = (x(t), y(t), z(t)) chạy trên đường thẳng đó.",
+    "crumbs": [
+      "18.02",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong",
+    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong",
+    "title": "Vector and Matrices",
+    "section": "Phương trình tham số cho đường cong",
+    "text": "Phương trình tham số cho đường cong\nỞ bài giảng thì thầy sử dụng đường cong cycloid, là một loại đường thẳng sinh ra khi ta cố gắng xác định đường đi cụ thể của một điểm đã xác định từ trước trên một đường tròn di chuyển bằng cách xoay tròn trong không gian.\nCó rất nhiều tham số có thể để lập phương trình, như là thời gian, góc, bán kính, …\nNhưng chúng ta sẽ sử dụng góc, hay chính là \\theta.\nVề",
     "crumbs": [
       "18.02",
       "Vector and Matrices"
