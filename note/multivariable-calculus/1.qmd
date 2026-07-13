@@ -27,9 +27,12 @@ Các tính chất hầu như (tất cả) đều giống nhau ở đa chiều kh
 
 ___
 # Vectors
-Vector thì không có gì đáng để chú tâm cả, bởi vì nó được giảng dạy khá nhiều trong môn hình học ở cấp 3, và có thể coi là cốt lõi của hình học cấp 3.
 
-Về vector thì có hai thứ để cấu tạo nên nó:
+:::{.callout-note}
+Các quan điểm về Vector của Toán học, Vật lý, và Tin học sẽ bàn rõ hơn ở **18.06**.
+:::
+
+ector có hai thứ để cấu tạo nên nó:
 
 * $dir(\vec A)$ : direction 
 * $|\vec A|$ : magnitude / length
@@ -52,7 +55,7 @@ $$
 
 ## Cộng vector và nhân vector với scalar
 
-Quá dễ, không bàn tới
+**18.06**
 
 ##
 
@@ -272,32 +275,123 @@ $$
 
 Sẽ tưởng tượng rằng là có một điểm $P(t) = (x(t), y(t), z(t))$ chạy trên đường thẳng đó.
 
-## Phương trình tham số cho đường cong
-Ở bài giảng thì thầy sử dụng đường cong **cycloid**, là một loại đường thẳng sinh ra khi ta cố gắng xác định đường đi cụ thể của một điểm đã xác định từ trước trên một đường tròn di chuyển bằng cách xoay tròn trong không gian.
+## Phương trình tham số cho đường cong Cycloid
+
+:::{.callout-tip collapse="true"}
+## Đường cong Cycloid
+Đường cong cycloid là một quỹ đạo cong được vẽ bởi một điểm nằm trên vành một đường tròn khi đường tròn đó lăn không trượt trên một mặt phẳng.
+
+![](../../img/5.png)
+:::
 
 Có rất nhiều tham số có thể để lập phương trình, như là thời gian, góc, bán kính, ...
 
 Nhưng chúng ta sẽ sử dụng góc, hay chính là $\theta$.
 
-Về 
+Ta biết được rằng phương trình Vector $\vec {OB}$ (trong đó O là gốc tọa độ, B là điểm trên đường cong) chính là $\vec {OA} + \vec {AI} + \vec {IB} $ (trong đó, A là điểm tiếp xúc giữa đường trong và trục X, I là tâm đường tròn).
 
+Ta có: 
+
+$$
+\vec {OB} = <t - sin(t), 1 - cos(t)>
+$$
 
 ___
 # Velocity
 
 Tiếp tục với đường cong **cycloid**.
 
+Và chúng ta đang cố gắng tìm một điểm $P(x(t), y(t), z(t))$, là điểm nằm trên đường cong và di chuyển theo thời gian $t$.
+
+## Position vector and Velocaity vector
+
+**Position vector** là vector nối từ gốc tọa độ đến điểm, chính là vector $\vec {OB}$, và nó cũng chính là $\vec v (t) = <x(t), y(t), z(t)>$.
+
+**Velocity vector** : chúng ta muốn biết độ lớn của vận tốc, hay chính là tốc độ và hướng của nó, vậy cách tốt nhất là dùng vector, hay ở đây chính là vector vận tốc.
+
+$$
+\vec v = \frac {\mathbf d \vec r}{\mathbf d t} = <\frac{\mathbf d x }{\mathbf d t}, \frac{\mathbf d y }{\mathbf d t}, \frac{\mathbf d z }{\mathbf d t}>
+$$
+
 :::{.callout-tip collapse="true"}
-Đường cong cyccloid là một quỹ đạo cong được vẽ bởi một điểm nằm trên vàng một đường tròn khi đường tròn đó lăn không trượt trên một mặt phẳng.
+## Ví dụ với cycloid
 
-![](../../img/5.png)
+Ta có $\vec r(t) = <t - sin(t), 1 - cos(t)>$, vậy vector vận tốc là:
+
+$$
+\vec v = <1 - cos(t), sin(t)>
+$$
+
+Chính vì thế, ngay tại thời điểm $t = 0$, $\vec v = 0$ và tốc độ $|\vec v| = 0$.
 :::
-
-
 
 ___
 # Acceleration
 
+**Tưởng tượng** bạn đang di chuyển một chiếc xe ô tô, và nó luôn duy trì ở tốc độ 50 km/h, bất kể khi vào cua! Và khi vào cua đó, bạn nghĩ rằng gia tốc của mình không hề thay đổi, vì tốc độ của mình luôn là một hằng số. Nhưng điều đó là sai, một điều khá trái với trực giá. Gia tốc là một đại lượng có hướng, vì vậy khi thay đổi góc để vào cua, vận tốc đã thay đổi!
 
+Công thức tính gia tốc là:
+
+$$
+\vec a(t) = \frac{\mathbf d \vec v}{\mathbf d t }
+$$
+
+:::{.callout-warning collapse="true"}
+## Chú ý
+Tốc độ là $|\vec v| = \left|\frac {\mathbf d \vec r}{\mathbf d t} \right|$, thứ mà chắc chắn là không bằng với $\frac {\mathbf d |\vec r|}{\mathbf d t }$.
+:::
 ___
 # Kepler's second law
+
+Bài đọc thêm, nếu thích, hãy đọc cái bên dưới:
+
+:::{.callout-note}
+## Kepler 1609
+To illustration of efficiency of vector methods, Kepler 1609, laws of planetarymotion: the motion of planets is in a plane, and area is swept out by the line from the sun to the planet at a constant rate. Issac Newton (about 70 years later) explained this using laws of gravitational
+attraction.
+
+Kepler’s law in vector form: area swept out in $\Delta t$ is area $\approx \frac 1 2 |\vec r \times \Delta \vec r| \approx \frac 1 2 |\vec r \times \vec v| \Delta t$ 
+So $\frac {\mathbf d }{\mathbf d t}(\text{area}) = \frac 1 2 |\vec v \times \vec r|$ is constant.
+Also, $\vec r \times \vec v$ is perpendicular to plane of motion, so $dir(\vec r \times \vec v) = const$
+Hence, Kepler's 2nd law says: $\vec r \times \vec v = const$.
+
+
+The usual product rule can be used to differentiate vector functions: $\frac{\mathbf d}{\mathbf d t}(\vec a \cdot \vec b), \frac{\mathbf d}{\mathbf d t}(\vec a \times \vec b)$, being
+careful about non-commutativity of cross-product.
+
+$$
+\frac {\mathbf d}{\mathbf d t}(\vec r \times \vec v) = \frac{\mathbf d \vec r}{\mathbf d t} \times \vec v + \vec r \times \frac{\mathbf d \vec v}{\mathbf d t} = \vec v \times \vec v + \vec r \times \vec a = \vec v \times \vec a
+$$
+
+So Kepler’s law $\Leftrightarrow \vec r \times \vec v = const \Leftrightarrow \vec r \times \vec a = 0 \Leftrightarrow \vec a // \vec r \Leftrightarrow$ the force $\vec F$ is central.
+
+(so Kepler’s law really means the force is directed $//\vec r$; it also applies to other central forces –
+e.g. electric charges.)
+:::
+
+# Exam 1A
+
+<!-- ```{=html}
+<iframe
+  src="../../doc/multivariable-calculus/exam_1A.pdf"
+  width="100%"
+  height="700"
+  border-radius=15px>
+</iframe>
+``` -->
+
+```{=html}
+<div style="
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  border: 1px solid #e5e7eb;
+">
+  <iframe
+    src="../../doc/multivariable-calculus/exam_1A.pdf"
+    width="100%"
+    height="700"
+    style="border: none;">
+  </iframe>
+</div>
+```

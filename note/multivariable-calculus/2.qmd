@@ -1,0 +1,61 @@
+---
+title: "Partial derivatives"
+chapter: "18.02 - Multivariable calculus"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+---
+
+___
+# Level curves
+
+
+___
+# Partial derivatives
+
+
+___
+# Tangent plane approximation
+
+
+___
+# Max-Min problmes
+
+
+___
+# Least squares
+
+
+___
+# Differentials
+
+___
+# Chain rule
+
+
+___
+# Gradient
+
+___
+# Directional derivative
+
+
+___
+# Tangent plane
+
+
+___
+# Lagrange multipliers
+
+
+___
+# Non-independent variables
+
