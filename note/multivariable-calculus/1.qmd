@@ -283,7 +283,20 @@ Về
 
 
 ___
-# Velocity, Acceleration
+# Velocity
+
+Tiếp tục với đường cong **cycloid**.
+
+:::{.callout-tip collapse="true"}
+Đường cong cyccloid là một quỹ đạo cong được vẽ bởi một điểm nằm trên vàng một đường tròn khi đường tròn đó lăn không trượt trên một mặt phẳng.
+
+![](../../img/5.png)
+:::
+
+
+
+___
+# Acceleration
 
 
 ___
