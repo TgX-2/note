@@ -202,10 +202,97 @@ plt.show()
 ___
 # Tangent plane approximation
 
+## Approximation formula
 
+If we change $x \rightarrow x + \Delta x$ and then $y \rightarrow y + \Delta y$.
+
+$z = f(x, y)$ : then we have approximation formula for $\Delta z$
+
+$$
+\Delta z \approx f_x \Delta x + f_y \Delta y
+$$
+
+:::{.callout-tip collapse="true"}
+## Rememeber
+that $f_x = \frac {\partial f}{\partial x}$ and the same with $f_y$.
+:::
+
+:::{.callout-note}
+## Justify
+:::
 ___
 # Max-Min problmes
 
+
+$$ 
+D(x, y) = \sum_{i = 1}^{n}{(y_i - (ax_i + b))^2}
+$$
+$$
+D(x, y) = \sum_{i = 1}^{n}{(y_i - (ax_i + b))^2}
+$$
+
+Minimum when $f_x = \frac{\partial D}{\partial a} = 0$ and $f_y = \frac{\partial D}{\partial b} = 0$
+
+$$
+\begin{cases}
+\sum_{i = 1}^{n}{(2\cdot(y_i - (ax_i + b)\cdot(-x_i))} = 0\\ 
+\sum_{i = 1}^{n}{(2\cdot(y_i - (ax_i + b)\cdot(-1))} = 0
+\end{cases} \\ 
+$$
+$$
+\Rightarrow 
+\begin{cases}
+\sum_{i = 1}^{n}{(-x_iy_i + ax_i^2 + bx_i)} = 0 \\ 
+\sum_{i = 1}^{n}{(-y_i + ax_i + b)} = 0 
+\end{cases}
+$$
+$$
+\Rightarrow
+\begin{cases}
+-\sum_{i = 1}^{n}{(x_iy_i)} + a\sum_{i = 1}^{n}{(x_i^2)} - b\sum_{i = 1}^{n}{x_i} = 0 \\ 
+-\sum_{i = 1}^{n}{y_i} + a\sum_{i = 1}^{n}{x_i} + nb = 0
+\end{cases}
+$$
+
+$$
+\Rightarrow
+\begin{cases}
+\left( \sum_{i = 1}^{n}{(x_i^2)} \right) \cdot a + \left( \sum_{i = 1}^{n}{x_i} \right) \cdot b = \sum_{i = 1}^{n}{(x_iy_i)} \\ 
+\left( \sum_{i = 1}^{n}{(x_i)} \right) \cdot a + n \cdot b = \sum_{i = 1}^{n}{(y_i)}
+\end{cases}
+$$
+
+$$
+\Rightarrow
+\begin{bmatrix}
+\sum x^2 & \sum x \\ 
+\sum x & n
+\end{bmatrix}
+\begin{bmatrix}
+a \\ b
+\end{bmatrix}
+= 
+\begin{bmatrix}
+\sum xy \\ 
+\sum y
+\end{bmatrix}
+$$
+
+In conclusion: 
+$$
+\begin{bmatrix}
+a \\ b
+\end{bmatrix}
+=
+\begin{bmatrix}
+\sum x^2 & \sum x \\ 
+\sum x & n
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+\sum xy \\ 
+\sum y
+\end{bmatrix}
+$$
 
 ___
 # Least squares

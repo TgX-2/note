@@ -395,5 +395,16 @@
       "18.02",
       "Partial derivatives"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#approximation-formula",
+    "href": "note/multivariable-calculus/2.html#approximation-formula",
+    "title": "Partial derivatives",
+    "section": "Approximation formula",
+    "text": "Approximation formula\nIf we change x \\rightarrow x + \\Delta x and then y \\rightarrow y + \\Delta y.\nz = f(x, y) : then we have approximation formula for \\Delta z\n\n\\Delta z \\approx f_x \\Delta x + f_y \\Delta y\n\n\n\n\n\n\n\nTipRememeber\n\n\n\n\n\nthat f_x = \\frac {\\partial f}{\\partial x} and the same with f_y.\n\n\n\n\n\n\n\n\n\nNoteJustify",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
   }
 ]

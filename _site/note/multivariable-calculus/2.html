@@ -442,7 +442,10 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#cách-tính-đạo-hàm-từng-phần" id="toc-cách-tính-đạo-hàm-từng-phần" class="nav-link" data-scroll-target="#cách-tính-đạo-hàm-từng-phần">Cách tính đạo hàm từng phần</a></li>
   </ul></li>
-  <li><a href="#tangent-plane-approximation" id="toc-tangent-plane-approximation" class="nav-link" data-scroll-target="#tangent-plane-approximation">Tangent plane approximation</a></li>
+  <li><a href="#tangent-plane-approximation" id="toc-tangent-plane-approximation" class="nav-link" data-scroll-target="#tangent-plane-approximation">Tangent plane approximation</a>
+  <ul class="collapse">
+  <li><a href="#approximation-formula" id="toc-approximation-formula" class="nav-link" data-scroll-target="#approximation-formula">Approximation formula</a></li>
+  </ul></li>
   <li><a href="#max-min-problmes" id="toc-max-min-problmes" class="nav-link" data-scroll-target="#max-min-problmes">Max-Min problmes</a></li>
   <li><a href="#least-squares" id="toc-least-squares" class="nav-link" data-scroll-target="#least-squares">Least squares</a></li>
   <li><a href="#differentials" id="toc-differentials" class="nav-link" data-scroll-target="#differentials">Differentials</a></li>
@@ -489,7 +492,7 @@ window.Quarto = {
 <h1>Functions of several variables</h1>
 <p>Như ta đã tiếp xúc với hàm đơn biến từ trước, ví dụ như <span class="math inline">f(x) = x^2</span> hay <span class="math inline">f(x) = -x + 2</span>. Thì trong không gian 3 chiều, hay tổng quát hơn là n chiều, chúng ta cũng có thể biểu diễn nó bằng <span class="math inline">n - 1</span> biến.</p>
 <p>Ví dụ: Hàm <span class="math inline">f(x, y) = x^2 + y^2</span></p>
-<div id="ced96ff2" class="cell" data-execution_count="1">
+<div id="cba12d4d" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -516,7 +519,7 @@ window.Quarto = {
 f_x = \frac {\partial f}{\partial x} = \lim _{\Delta x \rightarrow 0} \frac{f(x_0 + \Delta x, y_0) - f(x_0, y_0)}{\Delta x} \\
 f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_0, y_0 + \Delta y) - f(x_0, y_0)}{\Delta y}
 </span></p>
-<div id="c3f7f254" class="cell" data-execution_count="2">
+<div id="7f9b251c" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -529,7 +532,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <h2 class="anchored" data-anchor-id="cách-tính-đạo-hàm-từng-phần">Cách tính đạo hàm từng phần</h2>
 <p>Như đã nói ở trước, ta sẽ coi một biến là hằng số.</p>
 <p>Ví dụ hàm <span class="math inline">f(x, y) = x^2 + x^3y + 2y + 3x</span></p>
-<div id="3f207f0b" class="cell" data-execution_count="3">
+<div id="d445705a" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -538,7 +541,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 </div>
 </div>
 </div>
-<div id="a5418c98" class="cell" data-execution_count="4">
+<div id="e9991b6e" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -552,10 +555,107 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 </section>
 <section id="tangent-plane-approximation" class="level1">
 <h1>Tangent plane approximation</h1>
+<section id="approximation-formula" class="level2">
+<h2 class="anchored" data-anchor-id="approximation-formula">Approximation formula</h2>
+<p>If we change <span class="math inline">x \rightarrow x + \Delta x</span> and then <span class="math inline">y \rightarrow y + \Delta y</span>.</p>
+<p><span class="math inline">z = f(x, y)</span> : then we have approximation formula for <span class="math inline">\Delta z</span></p>
+<p><span class="math display">
+\Delta z \approx f_x \Delta x + f_y \Delta y
+</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Rememeber
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>that <span class="math inline">f_x = \frac {\partial f}{\partial x}</span> and the same with <span class="math inline">f_y</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-empty-content callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Justify
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
 <hr>
+</section>
 </section>
 <section id="max-min-problmes" class="level1">
 <h1>Max-Min problmes</h1>
+<p><span class="math display">
+D(x, y) = \sum_{i = 1}^{n}{(y_i - (ax_i + b))^2}
+</span> <span class="math display">
+D(x, y) = \sum_{i = 1}^{n}{(y_i - (ax_i + b))^2}
+</span></p>
+<p>Minimum when <span class="math inline">f_x = \frac{\partial D}{\partial a} = 0</span> and <span class="math inline">f_y = \frac{\partial D}{\partial b} = 0</span></p>
+<p><span class="math display">
+\begin{cases}
+\sum_{i = 1}^{n}{(2\cdot(y_i - (ax_i + b)\cdot(-x_i))} = 0\\
+\sum_{i = 1}^{n}{(2\cdot(y_i - (ax_i + b)\cdot(-1))} = 0
+\end{cases} \\
+</span> <span class="math display">
+\Rightarrow
+\begin{cases}
+\sum_{i = 1}^{n}{(-x_iy_i + ax_i^2 + bx_i)} = 0 \\
+\sum_{i = 1}^{n}{(-y_i + ax_i + b)} = 0
+\end{cases}
+</span> <span class="math display">
+\Rightarrow
+\begin{cases}
+-\sum_{i = 1}^{n}{(x_iy_i)} + a\sum_{i = 1}^{n}{(x_i^2)} - b\sum_{i = 1}^{n}{x_i} = 0 \\
+-\sum_{i = 1}^{n}{y_i} + a\sum_{i = 1}^{n}{x_i} + nb = 0
+\end{cases}
+</span></p>
+<p><span class="math display">
+\Rightarrow
+\begin{cases}
+\left( \sum_{i = 1}^{n}{(x_i^2)} \right) \cdot a + \left( \sum_{i = 1}^{n}{x_i} \right) \cdot b = \sum_{i = 1}^{n}{(x_iy_i)} \\
+\left( \sum_{i = 1}^{n}{(x_i)} \right) \cdot a + n \cdot b = \sum_{i = 1}^{n}{(y_i)}
+\end{cases}
+</span></p>
+<p><span class="math display">
+\Rightarrow
+\begin{bmatrix}
+\sum x^2 &amp; \sum x \\
+\sum x &amp; n
+\end{bmatrix}
+\begin{bmatrix}
+a \\ b
+\end{bmatrix}
+=
+\begin{bmatrix}
+\sum xy \\
+\sum y
+\end{bmatrix}
+</span></p>
+<p>In conclusion: <span class="math display">
+\begin{bmatrix}
+a \\ b
+\end{bmatrix}
+=
+\begin{bmatrix}
+\sum x^2 &amp; \sum x \\
+\sum x &amp; n
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+\sum xy \\
+\sum y
+\end{bmatrix}
+</span></p>
 <hr>
 </section>
 <section id="least-squares" class="level1">
