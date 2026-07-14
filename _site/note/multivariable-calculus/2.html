@@ -78,6 +78,49 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="../navigation.js" defer=""></script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../styles.css">
@@ -387,8 +430,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Mục lục bài viết</h2>
    
   <ul>
-  <li><a href="#level-curves" id="toc-level-curves" class="nav-link active" data-scroll-target="#level-curves">Level curves</a></li>
-  <li><a href="#partial-derivatives" id="toc-partial-derivatives" class="nav-link" data-scroll-target="#partial-derivatives">Partial derivatives</a></li>
+  <li><a href="#functions-of-several-variables" id="toc-functions-of-several-variables" class="nav-link active" data-scroll-target="#functions-of-several-variables">Functions of several variables</a>
+  <ul class="collapse">
+  <li><a href="#contour-plot" id="toc-contour-plot" class="nav-link" data-scroll-target="#contour-plot">Contour plot</a></li>
+  </ul></li>
+  <li><a href="#partial-derivatives" id="toc-partial-derivatives" class="nav-link" data-scroll-target="#partial-derivatives">Partial derivatives</a>
+  <ul class="collapse">
+  <li><a href="#cách-tính-đạo-hàm-từng-phần" id="toc-cách-tính-đạo-hàm-từng-phần" class="nav-link" data-scroll-target="#cách-tính-đạo-hàm-từng-phần">Cách tính đạo hàm từng phần</a></li>
+  </ul></li>
   <li><a href="#tangent-plane-approximation" id="toc-tangent-plane-approximation" class="nav-link" data-scroll-target="#tangent-plane-approximation">Tangent plane approximation</a></li>
   <li><a href="#max-min-problmes" id="toc-max-min-problmes" class="nav-link" data-scroll-target="#max-min-problmes">Max-Min problmes</a></li>
   <li><a href="#least-squares" id="toc-least-squares" class="nav-link" data-scroll-target="#least-squares">Least squares</a></li>
@@ -432,13 +481,70 @@ ul.task-list li input[type="checkbox"] {
 
 
 <hr>
-<section id="level-curves" class="level1">
-<h1>Level curves</h1>
+<section id="functions-of-several-variables" class="level1">
+<h1>Functions of several variables</h1>
+<p>Như ta đã tiếp xúc với hàm đơn biến từ trước, ví dụ như <span class="math inline">f(x) = x^2</span> hay <span class="math inline">f(x) = -x + 2</span>. Thì trong không gian 3 chiều, hay tổng quát hơn là n chiều, chúng ta cũng có thể biểu diễn nó bằng <span class="math inline">n - 1</span> biến.</p>
+<p>Ví dụ: Hàm <span class="math inline">f(x, y) = x^2 + y^2</span></p>
+<div id="9d9cf02c" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2_files/figure-html/cell-2-output-1.png" width="401" height="396" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="contour-plot" class="level2">
+<h2 class="anchored" data-anchor-id="contour-plot">Contour plot</h2>
+<p>Việc biểu diễn hình không gian 3 chiều trong mặt phẳng thật sự là rất khó nếu ta vẽ như trên, để giải quyết vấn đề đó, chúng ta đã có <strong>Contour plot</strong>.</p>
+<p>Đây chính là một kỹ thuật biểu diễn không gian 3 chiều trên mặt phẳng 2 chiều, khá là quen thuộc trong việc biểu diễn nhiệt độ vùng, độ cao của núi, … trong đó x và y là kinh độ và vỹ độ.</p>
+<p>Hãy xem ví dụ về <strong>Topographic map</strong> của đỉnh Himalaya dưới đây:</p>
+<p><img src="../../img/6.png" class="img-fluid"></p>
+<p>Ta có thể thấy các vành xung quanh đó, mỗi điểm trên vành sẽ có giá trị bằng chính xác một giá trị nào đó, giá trị của điểm giữa hai vành sẽ có giá trị ở giữa giá trị hai vành. Các vành không thể cắt nhau. Nếu một điểm nào đó mà các vành xếp gần nhau, chứng tỏ ở đó là vách núi, và ngược lại, nếu chúng xếp xa nhau, thì chứng tỏ đó là đồng bằng.</p>
 <hr>
+</section>
 </section>
 <section id="partial-derivatives" class="level1">
 <h1>Partial derivatives</h1>
+<p>Để khảo sát hàm tăng hay giảm trong hàm đơn biến, ta sử dụng đạo hàm, vậy thì làm sao để khảo sát nó trong hàm đa biến tại một mặt phẳng cố định? Đó là sử dụng đạo hàm riêng.</p>
+<p>Đạo hàm riêng khá là dễ hiểu, căn bản là coi một biến là hằng số, còn biến còn lại là biến, rồi đạo hàm như bình thường.</p>
+<p><span class="math display">
+f_x = \frac {\partial f}{\partial x} = \lim _{\Delta x \rightarrow 0} \frac{f(x_0 + \Delta x, y_0) - f(x_0, y_0)}{\Delta x} \\
+f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_0, y_0 + \Delta y) - f(x_0, y_0)}{\Delta y}
+</span></p>
+<div id="e7132d2f" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2_files/figure-html/cell-3-output-1.png" width="472" height="463" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="cách-tính-đạo-hàm-từng-phần" class="level2">
+<h2 class="anchored" data-anchor-id="cách-tính-đạo-hàm-từng-phần">Cách tính đạo hàm từng phần</h2>
+<p>Như đã nói ở trước, ta sẽ coi một biến là hằng số.</p>
+<p>Ví dụ hàm <span class="math inline">f(x, y) = x^2 + x^3y + 2y + 3x</span></p>
+<div id="33cb1209" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2_files/figure-html/cell-4-output-1.png" width="406" height="396" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="187a591f" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="2_files/figure-html/cell-5-output-1.png" width="514" height="453" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 <hr>
+</section>
 </section>
 <section id="tangent-plane-approximation" class="level1">
 <h1>Tangent plane approximation</h1>

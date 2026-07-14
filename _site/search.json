@@ -375,10 +375,17 @@
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html",
-    "href": "note/multivariable-calculus/2.html",
+    "objectID": "note/multivariable-calculus/2.html#contour-plot",
+    "href": "note/multivariable-calculus/2.html#contour-plot",
     "title": "Partial derivatives",
-    "section": "",
-    "text": "Level curves\n\n\n\nPartial derivatives\n\n\n\nTangent plane approximation\n\n\n\nMax-Min problmes\n\n\n\nLeast squares\n\n\n\nDifferentials\n\n\n\nChain rule\n\n\n\nGradient\n\n\n\nDirectional derivative\n\n\n\nTangent plane\n\n\n\nLagrange multipliers\n\n\n\nNon-independent variables"
+    "section": "Contour plot",
+    "text": "Contour plot\nViệc biểu diễn hình không gian 3 chiều trong mặt phẳng thật sự là rất khó nếu ta vẽ như trên, để giải quyết vấn đề đó, chúng ta đã có Contour plot.\nĐây chính là một kỹ thuật biểu diễn không gian 3 chiều trên mặt phẳng 2 chiều, khá là quen thuộc trong việc biểu diễn nhiệt độ vùng, độ cao của núi, … trong đó x và y là kinh độ và vỹ độ.\nHãy xem ví dụ về Topographic map của đỉnh Himalaya dưới đây:\n\nTa có thể thấy các vành xung quanh đó, mỗi điểm trên vành sẽ có giá trị bằng chính xác một giá trị nào đó, giá trị của điểm giữa hai vành sẽ có giá trị ở giữa giá trị hai vành. Các vành không thể cắt nhau. Nếu một điểm nào đó mà các vành xếp gần nhau, chứng tỏ ở đó là vách núi, và ngược lại, nếu chúng xếp xa nhau, thì chứng tỏ đó là đồng bằng."
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
+    "href": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
+    "title": "Partial derivatives",
+    "section": "Cách tính đạo hàm từng phần",
+    "text": "Cách tính đạo hàm từng phần\nNhư đã nói ở trước, ta sẽ coi một biến là hằng số.\nVí dụ hàm f(x, y) = x^2 + x^3y + 2y + 3x"
   }
 ]
