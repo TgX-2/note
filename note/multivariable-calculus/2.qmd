@@ -219,7 +219,7 @@ ___
 
 
 ___
-# Gradient
+# Gradientb
 
 ___
 # Directional derivative
