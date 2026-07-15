@@ -390,7 +390,7 @@
     "href": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
     "title": "Partial derivatives",
     "section": "Cách tính đạo hàm từng phần",
-    "text": "Cách tính đạo hàm từng phần\nNhư đã nói ở trước, ta sẽ coi một biến là hằng số.\nVí dụ hàm f(x, y) = x^2 + x^3y + 2y + 3x",
+    "text": "Cách tính đạo hàm từng phần\nNhư đã nói ở trước, ta sẽ coi một biến là hằng số.\nVí dụ hàm f(x, y) = x^2 + x^3y + 2y + 3x\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\nx = np.linspace(-2, 2, 100)\ny = np.linspace(-2, 2, 100)\nX, Y = np.meshgrid(x, y)\nZ = X**2 + Y*X**3 + 2*Y + 3*X\n\nfig = plt.figure(figsize=(6, 5))\nax = fig.add_subplot(111, projection='3d')\nsurf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none')\n\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()",
     "crumbs": [
       "18.02",
       "Partial derivatives"
@@ -401,7 +401,51 @@
     "href": "note/multivariable-calculus/2.html#approximation-formula",
     "title": "Partial derivatives",
     "section": "Approximation formula",
-    "text": "Approximation formula\nIf we change x \\rightarrow x + \\Delta x and then y \\rightarrow y + \\Delta y.\nz = f(x, y) : then we have approximation formula for \\Delta z\n\n\\Delta z \\approx f_x \\Delta x + f_y \\Delta y\n\n\n\n\n\n\n\nTipRememeber\n\n\n\n\n\nthat f_x = \\frac {\\partial f}{\\partial x} and the same with f_y.\n\n\n\n\n\n\n\n\n\nNoteJustify",
+    "text": "Approximation formula\nIf we change x \\rightarrow x + \\Delta x and then y \\rightarrow y + \\Delta y.\nz = f(x, y) : then we have approximation formula for \\Delta z\n\n\\Delta z \\approx f_x \\Delta x + f_y \\Delta y\n\n\n\n\n\n\n\nTipRememeber\n\n\n\n\n\nthat f_x = \\frac {\\partial f}{\\partial x} and the same with f_y.",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#tangent-plane",
+    "href": "note/multivariable-calculus/2.html#tangent-plane",
+    "title": "Partial derivatives",
+    "section": "Tangent plane",
+    "text": "Tangent plane\nTưởng tượng trong không gian mặt phẳng 2D, ta có tiếp tuyến là một đường thẳng là 1D.\nTương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.\nVí dụ: f(x, y) = x^2 + y^2\nTa xét tại điểm (x_0, y_0) = (1, 1), mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 1, 1\nx00, y00 = 4, 4\nz0 = f(x0, y0)\nz00 = f(x00, y00)\n\nx = np.linspace(-1, 5, 70)\ny = np.linspace(-1, 5, 70)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 2, x0 + 2, 20),\n    np.linspace(y0 - 2, y0 + 2, 20)\n)\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nXpp, Ypp = np.meshgrid(\n    np.linspace(x00 - 2, x00 + 2, 20),\n    np.linspace(y00 - 2, y00 + 2, 20)\n)\nZpp = z00 + fx(x00, y00) * (Xpp - x00) + fy(x00, y00) * (Ypp - y00)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\n\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.plot_surface(Xpp, Ypp, Zpp, alpha=0.5, color='red')\n\nax.scatter(x0, y0, z0, color='black', s=60)\nax.scatter(x00, y00, z00, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nax.legend()\n\nplt.show()",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
+    "href": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
+    "title": "Partial derivatives",
+    "section": "Điểm cực tiểu",
+    "text": "Điểm cực tiểu\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#điểm-cực-đại",
+    "href": "note/multivariable-calculus/2.html#điểm-cực-đại",
+    "title": "Partial derivatives",
+    "section": "Điểm cực đại",
+    "text": "Điểm cực đại\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 - y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#điểm-saddle",
+    "href": "note/multivariable-calculus/2.html#điểm-saddle",
+    "title": "Partial derivatives",
+    "section": "Điểm saddle",
+    "text": "Điểm saddle\nVừa là cực dại vừa là cực tiểu.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
     "crumbs": [
       "18.02",
       "Partial derivatives"

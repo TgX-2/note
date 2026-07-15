@@ -22,7 +22,9 @@ Như ta đã tiếp xúc với hàm đơn biến từ trước, ví dụ như $f
 Ví dụ: Hàm $f(x, y) = x^2 + y^2$
 
 ```{python}
-#| echo: false
+#| echo: true
+#| code-fold: true
+#| warning: false
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -34,7 +36,7 @@ Z = Y**2 + X**2
 
 fig = plt.figure(figsize=(6, 5))
 ax = fig.add_subplot(111, projection='3d')
-surf = ax.plot_surface(X, Y, Z, cmap='coolwarm', edgecolor='none')
+surf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none')
 
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
@@ -106,7 +108,7 @@ ax = fig.add_subplot(111, projection='3d')
 
 # Mặt cong
 ax.plot_surface(X, Y, Z,
-                cmap='coolwarm',
+                cmap='viridis',
                 alpha=0.65,
                 edgecolor='none')
 
@@ -149,7 +151,9 @@ Như đã nói ở trước, ta sẽ coi một biến là hằng số.
 Ví dụ hàm $f(x, y) = x^2 + x^3y + 2y + 3x$
 
 ```{python}
-#| echo: false
+#| echo: true
+#| code-fold: true
+#| warning: false
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -161,7 +165,7 @@ Z = X**2 + Y*X**3 + 2*Y + 3*X
 
 fig = plt.figure(figsize=(6, 5))
 ax = fig.add_subplot(111, projection='3d')
-surf = ax.plot_surface(X, Y, Z, cmap='coolwarm', edgecolor='none')
+surf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none')
 
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
@@ -170,34 +174,6 @@ ax.set_zlabel('Z')
 plt.show()
 ```
 
-```{python}
-#| echo: false
-import numpy as np
-import matplotlib.pyplot as plt
-
-y = np.linspace(-2, 2, 100)
-z = y**3 + 2
-
-# 3. Khởi tạo đồ thị 2D phẳng
-fig, ax = plt.subplots(figsize=(6, 5))
-
-# 4. Vẽ đường cong trên hệ tọa độ (Y, Z)
-ax.plot(y, z, color='blue', linewidth=2, label=r'$z = y^3 + 2$')
-
-# 5. Cấu hình nhãn trục cho đúng hệ tọa độ Oyz
-ax.set_xlabel('Trục Y')
-ax.set_ylabel('Trục Z')
-ax.set_title('Đồ thị đường cong trên mặt phẳng Oyz')
-
-# 6. Thêm lưới tọa độ và hệ trục trung tâm (tùy chọn để dễ nhìn hơn)
-ax.grid(True, linestyle='--', alpha=0.6)
-ax.axhline(0, color='black', linewidth=0.8) # Đường y = 0
-ax.axvline(0, color='black', linewidth=0.8) # Đường z = 0
-
-ax.legend()
-plt.show()
-
-```
 
 ___
 # Tangent plane approximation
@@ -217,16 +193,321 @@ $$
 that $f_x = \frac {\partial f}{\partial x}$ and the same with $f_y$.
 :::
 
-:::{.callout-note}
-## Justify
-:::
+## Tangent plane
+
+Tưởng tượng trong không gian mặt phẳng 2D, ta có tiếp tuyến là một đường thẳng là 1D.
+
+Tương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.
+
+Ví dụ: $f(x, y) = x^2 + y^2$
+
+Ta xét tại điểm $(x_0, y_0) = (1, 1)$, mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình. 
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x, y):
+    return x**2 + y**2
+
+def fx(x, y):
+    return 2 * x
+
+def fy(x, y):
+    return 2 * y
+
+x0, y0 = 1, 1
+x00, y00 = 4, 4
+z0 = f(x0, y0)
+z00 = f(x00, y00)
+
+x = np.linspace(-1, 5, 70)
+y = np.linspace(-1, 5, 70)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+Xp, Yp = np.meshgrid(
+    np.linspace(x0 - 2, x0 + 2, 20),
+    np.linspace(y0 - 2, y0 + 2, 20)
+)
+Zp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)
+
+Xpp, Ypp = np.meshgrid(
+    np.linspace(x00 - 2, x00 + 2, 20),
+    np.linspace(y00 - 2, y00 + 2, 20)
+)
+Zpp = z00 + fx(x00, y00) * (Xpp - x00) + fy(x00, y00) * (Ypp - y00)
+
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+ax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')
+
+ax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')
+ax.plot_surface(Xpp, Ypp, Zpp, alpha=0.5, color='red')
+
+ax.scatter(x0, y0, z0, color='black', s=60)
+ax.scatter(x00, y00, z00, color='black', s=60)
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+
+ax.legend()
+
+plt.show()
+
+```
 ___
 # Max-Min problmes
 
+Theo trực giác, điểm cực đại hoặc cực tiểu sẽ nằm ngang với trục cao 3D hoặc trục hoành 2D.
 
-$$ 
-D(x, y) = \sum_{i = 1}^{n}{(y_i - (ax_i + b))^2}
-$$
+Còn xét theo ngôn ngữ toán học, đó là khi tất cả đạo hàm riêng của từng thành phần bằng 0.
+
+Nhưng cũng vì thế mà sẽ có 3 trường hợp xảy ra:
+
+## Điểm cực tiểu
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x, y):
+    return x**2 + y**2
+
+def fx(x, y):
+    return 2 * x
+
+def fy(x, y):
+    return 2 * y
+
+x0, y0 = 0, 0
+z0 = f(x0, y0)
+
+x = np.linspace(-5, 5, 50)
+y = np.linspace(-5, 5, 50)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+Xp, Yp = np.meshgrid(
+    np.linspace(x0 - 3, x0 + 3, 20),
+    np.linspace(y0 - 3, y0 + 3, 20)
+)
+
+Zp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)
+
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+ax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')
+ax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')
+ax.scatter(x0, y0, z0, color='black', s=60)
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+
+x_curve = np.linspace(x0 - 5, x0 + 5, 200)
+y_curve = np.full_like(x_curve, y0)
+z_curve = f(x_curve, y_curve)
+
+ax.plot(x_curve, y_curve, z_curve,
+        color='black', linewidth=1.5,
+        label='Curve y=y0')
+
+y_curve2 = np.linspace(y0 - 5, y0 + 5, 200)
+x_curve2 = np.full_like(y_curve2, x0)
+z_curve2 = f(x_curve2, y_curve2)
+
+ax.plot(x_curve2, y_curve2, z_curve2,
+        color='purple', linewidth=2,
+        label='Curve x=x0')
+
+plt.show()
+
+```
+## Điểm cực đại
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x, y):
+    return - x**2 - y**2
+
+def fx(x, y):
+    return 2 * x
+
+def fy(x, y):
+    return 2 * y
+
+x0, y0 = 0, 0
+z0 = f(x0, y0)
+
+x = np.linspace(-5, 5, 50)
+y = np.linspace(-5, 5, 50)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+Xp, Yp = np.meshgrid(
+    np.linspace(x0 - 3, x0 + 3, 20),
+    np.linspace(y0 - 3, y0 + 3, 20)
+)
+
+Zp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)
+
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+ax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')
+ax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')
+ax.scatter(x0, y0, z0, color='black', s=60)
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+
+x_curve = np.linspace(x0 - 5, x0 + 5, 200)
+y_curve = np.full_like(x_curve, y0)
+z_curve = f(x_curve, y_curve)
+
+ax.plot(x_curve, y_curve, z_curve,
+        color='black', linewidth=1.5,
+        label='Curve y=y0')
+
+y_curve2 = np.linspace(y0 - 5, y0 + 5, 200)
+x_curve2 = np.full_like(y_curve2, x0)
+z_curve2 = f(x_curve2, y_curve2)
+
+ax.plot(x_curve2, y_curve2, z_curve2,
+        color='purple', linewidth=2,
+        label='Curve x=x0')
+
+plt.show()
+
+```
+## Điểm saddle
+
+Vừa là cực dại vừa là cực tiểu.
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f(x, y):
+    return - x**2 + y**2
+
+def fx(x, y):
+    return 2 * x
+
+def fy(x, y):
+    return 2 * y
+
+x0, y0 = 0, 0
+z0 = f(x0, y0)
+
+x = np.linspace(-5, 5, 50)
+y = np.linspace(-5, 5, 50)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+Xp, Yp = np.meshgrid(
+    np.linspace(x0 - 3, x0 + 3, 20),
+    np.linspace(y0 - 3, y0 + 3, 20)
+)
+
+Zp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)
+
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+ax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')
+ax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')
+ax.scatter(x0, y0, z0, color='black', s=60)
+
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
+
+x_curve = np.linspace(x0 - 5, x0 + 5, 200)
+y_curve = np.full_like(x_curve, y0)
+z_curve = f(x_curve, y_curve)
+
+ax.plot(x_curve, y_curve, z_curve,
+        color='black', linewidth=1.5,
+        label='Curve y=y0')
+
+y_curve2 = np.linspace(y0 - 5, y0 + 5, 200)
+x_curve2 = np.full_like(y_curve2, x0)
+z_curve2 = f(x_curve2, y_curve2)
+
+ax.plot(x_curve2, y_curve2, z_curve2,
+        color='purple', linewidth=2,
+        label='Curve x=x0')
+
+plt.show()
+
+```
+
+___
+# Least squares
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+n = 100
+
+x = np.random.uniform(0, 20, n)
+
+m_true = 2
+b_true = 5
+noise = np.random.normal(0, 3, n)
+
+y = m_true * x + b_true + noise
+
+m_fit, b_fit = np.polyfit(x, y, 1)
+
+plt.figure(figsize=(8,6))
+
+plt.scatter(x, y,
+            color='royalblue',
+            alpha=0.7,
+            label='Random points')
+
+x_line = np.linspace(min(x), max(x), 200)
+y_line = m_fit * x_line + b_fit
+
+plt.plot(x_line, y_line,
+         color='red',
+         linewidth=3,
+         label='Least Squares')
+
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Least Squares Fit")
+plt.grid(True)
+plt.legend()
+
+plt.show()
+```
+
 $$
 D(x, y) = \sum_{i = 1}^{n}{(y_i - (ax_i + b))^2}
 $$
@@ -293,10 +574,6 @@ a \\ b
 \sum y
 \end{bmatrix}
 $$
-
-___
-# Least squares
-
 
 ___
 # Differentials
