@@ -450,5 +450,16 @@
       "18.02",
       "Partial derivatives"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#general-case",
+    "href": "note/multivariable-calculus/2.html#general-case",
+    "title": "Partial derivatives",
+    "section": "General case",
+    "text": "General case\n\n\\frac {\\partial^2 f}{\\partial x^2} = f_{xx}; \\space\n\\frac {\\partial^2 f}{\\partial y^2} = f_{yy}; \\space\n\\frac {\\partial^2 f}{\\partial x \\partial y} = f_{xy} =\n\\frac {\\partial^2 f}{\\partial y \\partial x} = f_{yx}\n\nLet A = f_{xx}, B = f_{xy} and C = f_{yy}, we have 3 cases:\n\nAC - B^2 &lt; 0 \\Rightarrow saddle point.\nAC - B^2 = 0 \\Rightarrow cant conclude\nAC - B^2 &gt; 0\n\n\\rightarrow if A &gt; 0 local minimum.\n\\rightarrow if A &lt; 0 local maximum.",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
   }
 ]

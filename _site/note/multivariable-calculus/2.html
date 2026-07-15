@@ -489,9 +489,13 @@ window.Quarto = {
   <li><a href="#điểm-saddle" id="toc-điểm-saddle" class="nav-link" data-scroll-target="#điểm-saddle">Điểm saddle</a></li>
   </ul></li>
   <li><a href="#least-squares" id="toc-least-squares" class="nav-link" data-scroll-target="#least-squares">Least squares</a></li>
+  <li><a href="#second-derivative-test" id="toc-second-derivative-test" class="nav-link" data-scroll-target="#second-derivative-test">Second derivative test</a>
+  <ul class="collapse">
+  <li><a href="#general-case" id="toc-general-case" class="nav-link" data-scroll-target="#general-case">General case</a></li>
+  </ul></li>
   <li><a href="#differentials" id="toc-differentials" class="nav-link" data-scroll-target="#differentials">Differentials</a></li>
   <li><a href="#chain-rule" id="toc-chain-rule" class="nav-link" data-scroll-target="#chain-rule">Chain rule</a></li>
-  <li><a href="#gradientb" id="toc-gradientb" class="nav-link" data-scroll-target="#gradientb">Gradientb</a></li>
+  <li><a href="#gradient" id="toc-gradient" class="nav-link" data-scroll-target="#gradient">Gradient</a></li>
   <li><a href="#directional-derivative" id="toc-directional-derivative" class="nav-link" data-scroll-target="#directional-derivative">Directional derivative</a></li>
   <li><a href="#tangent-plane-1" id="toc-tangent-plane-1" class="nav-link" data-scroll-target="#tangent-plane-1">Tangent plane</a></li>
   <li><a href="#lagrange-multipliers" id="toc-lagrange-multipliers" class="nav-link" data-scroll-target="#lagrange-multipliers">Lagrange multipliers</a></li>
@@ -533,7 +537,7 @@ window.Quarto = {
 <h1>Functions of several variables</h1>
 <p>Như ta đã tiếp xúc với hàm đơn biến từ trước, ví dụ như <span class="math inline">f(x) = x^2</span> hay <span class="math inline">f(x) = -x + 2</span>. Thì trong không gian 3 chiều, hay tổng quát hơn là n chiều, chúng ta cũng có thể biểu diễn nó bằng <span class="math inline">n - 1</span> biến.</p>
 <p>Ví dụ: Hàm <span class="math inline">f(x, y) = x^2 + y^2</span></p>
-<div id="300fc02b" class="cell" data-execution_count="1">
+<div id="625bb9bd" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -581,7 +585,7 @@ window.Quarto = {
 f_x = \frac {\partial f}{\partial x} = \lim _{\Delta x \rightarrow 0} \frac{f(x_0 + \Delta x, y_0) - f(x_0, y_0)}{\Delta x} \\
 f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_0, y_0 + \Delta y) - f(x_0, y_0)}{\Delta y}
 </span></p>
-<div id="b8c2495d" class="cell" data-execution_count="2">
+<div id="38bfc496" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -594,7 +598,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <h2 class="anchored" data-anchor-id="cách-tính-đạo-hàm-từng-phần">Cách tính đạo hàm từng phần</h2>
 <p>Như đã nói ở trước, ta sẽ coi một biến là hằng số.</p>
 <p>Ví dụ hàm <span class="math inline">f(x, y) = x^2 + x^3y + 2y + 3x</span></p>
-<div id="57e380a5" class="cell" data-execution_count="3">
+<div id="a891701b" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -659,7 +663,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <p>Tương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.</p>
 <p>Ví dụ: <span class="math inline">f(x, y) = x^2 + y^2</span></p>
 <p>Ta xét tại điểm <span class="math inline">(x_0, y_0) = (1, 1)</span>, mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình.</p>
-<div id="575301fb" class="cell" data-execution_count="4">
+<div id="df3133b8" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -733,7 +737,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <p>Nhưng cũng vì thế mà sẽ có 3 trường hợp xảy ra:</p>
 <section id="điểm-cực-tiểu" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-cực-tiểu">Điểm cực tiểu</h2>
-<div id="2ef5accd" class="cell" data-execution_count="5">
+<div id="f26831ad" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -803,7 +807,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 </section>
 <section id="điểm-cực-đại" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-cực-đại">Điểm cực đại</h2>
-<div id="c2440589" class="cell" data-execution_count="6">
+<div id="d732ba14" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -874,7 +878,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <section id="điểm-saddle" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-saddle">Điểm saddle</h2>
 <p>Vừa là cực dại vừa là cực tiểu.</p>
-<div id="f1dd67ef" class="cell" data-execution_count="7">
+<div id="ec77fa51" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -946,7 +950,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 </section>
 <section id="least-squares" class="level1">
 <h1>Least squares</h1>
-<div id="65fb4f34" class="cell" data-execution_count="8">
+<div id="258c557c" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1055,6 +1059,49 @@ a \\ b
 </span></p>
 <hr>
 </section>
+<section id="second-derivative-test" class="level1">
+<h1>Second derivative test</h1>
+<p>Như đã nói ở trước, Second derivative có thể giúp xác định xem đó là suy biến, cực đại, cực tiểu, hay là điểm saddle (yên ngựa).</p>
+<p><span class="math display">
+w = a\left(x^2 + \frac b a xy\right) + cy^2
+</span></p>
+<p><span class="math display">
+w = a\left(x + \frac b {2a} y\right)^2 + \left(c - \frac {b^2}{4a}\right)y^2
+</span></p>
+<p><span class="math display">
+w = \frac 1 {4a} \left[ 4a^2 \left( x + \frac b {2a}y \right)^2  + (4ac - b^2)y^2 \right]
+</span></p>
+<p>3 cases:</p>
+<ol type="1">
+<li><span class="math inline">4ac - b^2 &lt; 0 \Rightarrow</span> saddle point.</li>
+<li><span class="math inline">4ac - b^2 = 0 \Rightarrow</span> degenerate critical point.</li>
+<li><span class="math inline">4ac - b^2 &gt; 0</span>
+<ul>
+<li><span class="math inline">\rightarrow</span> if <span class="math inline">a &gt; 0</span> minimum.</li>
+<li><span class="math inline">\rightarrow</span> if <span class="math inline">a &lt; 0</span> maximum.</li>
+</ul></li>
+</ol>
+<section id="general-case" class="level2">
+<h2 class="anchored" data-anchor-id="general-case">General case</h2>
+<p><span class="math display">
+\frac {\partial^2 f}{\partial x^2} = f_{xx}; \space
+\frac {\partial^2 f}{\partial y^2} = f_{yy}; \space
+\frac {\partial^2 f}{\partial x \partial y} = f_{xy} =
+\frac {\partial^2 f}{\partial y \partial x} = f_{yx}
+</span></p>
+<p>Let <span class="math inline">A = f_{xx}</span>, <span class="math inline">B = f_{xy}</span> and <span class="math inline">C = f_{yy}</span>, we have 3 cases:</p>
+<ol type="1">
+<li><span class="math inline">AC - B^2 &lt; 0 \Rightarrow</span> saddle point.</li>
+<li><span class="math inline">AC - B^2 = 0 \Rightarrow</span> cant conclude</li>
+<li><span class="math inline">AC - B^2 &gt; 0</span>
+<ul>
+<li><span class="math inline">\rightarrow</span> if <span class="math inline">A &gt; 0</span> local minimum.</li>
+<li><span class="math inline">\rightarrow</span> if <span class="math inline">A &lt; 0</span> local maximum.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
 <section id="differentials" class="level1">
 <h1>Differentials</h1>
 <hr>
@@ -1063,8 +1110,8 @@ a \\ b
 <h1>Chain rule</h1>
 <hr>
 </section>
-<section id="gradientb" class="level1">
-<h1>Gradientb</h1>
+<section id="gradient" class="level1">
+<h1>Gradient</h1>
 <hr>
 </section>
 <section id="directional-derivative" class="level1">

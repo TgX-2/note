@@ -576,6 +576,48 @@ a \\ b
 $$
 
 ___
+# Second derivative test 
+
+Như đã nói ở trước, Second derivative có thể giúp xác định xem đó là suy biến, cực đại, cực tiểu, hay là điểm saddle (yên ngựa).
+
+$$
+w = a\left(x^2 + \frac b a xy\right) + cy^2
+$$
+
+$$
+w = a\left(x + \frac b {2a} y\right)^2 + \left(c - \frac {b^2}{4a}\right)y^2
+$$
+
+$$
+w = \frac 1 {4a} \left[ 4a^2 \left( x + \frac b {2a}y \right)^2  + (4ac - b^2)y^2 \right]
+$$
+
+3 cases:
+
+1) $4ac - b^2 < 0 \Rightarrow$ saddle point.
+2) $4ac - b^2 = 0 \Rightarrow$ degenerate critical point.
+3) $4ac - b^2 > 0$
+    * $\rightarrow$ if $a > 0$ minimum.
+    * $\rightarrow$ if $a < 0$ maximum.
+
+## General case
+
+$$
+\frac {\partial^2 f}{\partial x^2} = f_{xx}; \space 
+\frac {\partial^2 f}{\partial y^2} = f_{yy}; \space
+\frac {\partial^2 f}{\partial x \partial y} = f_{xy} = 
+\frac {\partial^2 f}{\partial y \partial x} = f_{yx}
+$$
+
+Let $A = f_{xx}$, $B = f_{xy}$ and $C = f_{yy}$, we have 3 cases:
+
+1) $AC - B^2 < 0 \Rightarrow$ saddle point.
+2) $AC - B^2 = 0 \Rightarrow$ cant conclude
+3) $AC - B^2 > 0$
+    * $\rightarrow$ if $A > 0$ local minimum.
+    * $\rightarrow$ if $A < 0$ local maximum.
+
+___
 # Differentials
 
 ___
@@ -583,7 +625,7 @@ ___
 
 
 ___
-# Gradientb
+# Gradient
 
 ___
 # Directional derivative
