@@ -720,6 +720,28 @@ ___
 ___
 # Gradient
 
+Cho $f = f(x, y, z)$ với $x = x(t), y = y(t), z = z(t)$, **chainrule**: 
+
+$$
+\frac{\mathbf df}{\mathbf dt} = 
+f_x\frac{\mathbf dx}{\mathbf dt} + 
+f_x\frac{\mathbf dy}{\mathbf dt} + 
+f_x\frac{\mathbf dz}{\mathbf dt}  
+$$
+
+Giờ chúng ta sẽ viết nó dưới dạng khác:
+
+$$
+\frac{\mathbf df}{\mathbf dt} = \nabla f \cdot \frac{\mathbf d\vec r}{\mathbf dt}
+$$
+
+trong đó:
+
+$$
+\nabla w = <f_x, f_y, f_z> \quad
+\frac{\mathbf d \vec r}{\mathbf dt} = <\frac{\mathbf dx}{\mathbf dt},\frac{\mathbf dy}{\mathbf dt},\frac{\mathbf dz}{\mathbf dt}>
+$$
+
 ___
 # Directional derivative
 

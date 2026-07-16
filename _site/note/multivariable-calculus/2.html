@@ -541,7 +541,7 @@ window.Quarto = {
 <h1>Functions of several variables</h1>
 <p>Như ta đã tiếp xúc với hàm đơn biến từ trước, ví dụ như <span class="math inline">f(x) = x^2</span> hay <span class="math inline">f(x) = -x + 2</span>. Thì trong không gian 3 chiều, hay tổng quát hơn là n chiều, chúng ta cũng có thể biểu diễn nó bằng <span class="math inline">n - 1</span> biến.</p>
 <p>Ví dụ: Hàm <span class="math inline">f(x, y) = x^2 + y^2</span></p>
-<div id="676c0853" class="cell" data-execution_count="1">
+<div id="c3070192" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -589,7 +589,7 @@ window.Quarto = {
 f_x = \frac {\partial f}{\partial x} = \lim _{\Delta x \rightarrow 0} \frac{f(x_0 + \Delta x, y_0) - f(x_0, y_0)}{\Delta x} \\
 f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_0, y_0 + \Delta y) - f(x_0, y_0)}{\Delta y}
 </span></p>
-<div id="b614d849" class="cell" data-execution_count="2">
+<div id="65f7f9cc" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -602,7 +602,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <h2 class="anchored" data-anchor-id="cách-tính-đạo-hàm-từng-phần">Cách tính đạo hàm từng phần</h2>
 <p>Như đã nói ở trước, ta sẽ coi một biến là hằng số.</p>
 <p>Ví dụ hàm <span class="math inline">f(x, y) = x^2 + x^3y + 2y + 3x</span></p>
-<div id="3d9e9043" class="cell" data-execution_count="3">
+<div id="43438d05" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -667,7 +667,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <p>Tương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.</p>
 <p>Ví dụ: <span class="math inline">f(x, y) = x^2 + y^2</span></p>
 <p>Ta xét tại điểm <span class="math inline">(x_0, y_0) = (1, 1)</span>, mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình.</p>
-<div id="4bc181b2" class="cell" data-execution_count="4">
+<div id="94f7e22e" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -741,7 +741,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <p>Nhưng cũng vì thế mà sẽ có 3 trường hợp xảy ra:</p>
 <section id="điểm-cực-tiểu" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-cực-tiểu">Điểm cực tiểu</h2>
-<div id="24dc6bdc" class="cell" data-execution_count="5">
+<div id="348abef6" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -811,7 +811,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 </section>
 <section id="điểm-cực-đại" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-cực-đại">Điểm cực đại</h2>
-<div id="80261b72" class="cell" data-execution_count="6">
+<div id="dcc97da0" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -882,7 +882,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <section id="điểm-saddle" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-saddle">Điểm saddle</h2>
 <p>Vừa là cực dại vừa là cực tiểu.</p>
-<div id="20801316" class="cell" data-execution_count="7">
+<div id="15df4cca" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -954,7 +954,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 </section>
 <section id="least-squares" class="level1">
 <h1>Least squares</h1>
-<div id="1418f80a" class="cell" data-execution_count="8">
+<div id="7e977af0" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -998,7 +998,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="2_files/figure-html/cell-9-output-1.png" width="663" height="524" class="figure-img"></p>
+<p><img src="2_files/figure-html/cell-9-output-1.png" width="659" height="524" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1227,6 +1227,22 @@ f = t^2 e^t + \sin t
 </section>
 <section id="gradient" class="level1">
 <h1>Gradient</h1>
+<p>Cho <span class="math inline">f = f(x, y, z)</span> với <span class="math inline">x = x(t), y = y(t), z = z(t)</span>, <strong>chainrule</strong>:</p>
+<p><span class="math display">
+\frac{\mathbf df}{\mathbf dt} =
+f_x\frac{\mathbf dx}{\mathbf dt} +
+f_x\frac{\mathbf dy}{\mathbf dt} +
+f_x\frac{\mathbf dz}{\mathbf dt}  
+</span></p>
+<p>Giờ chúng ta sẽ viết nó dưới dạng khác:</p>
+<p><span class="math display">
+\frac{\mathbf df}{\mathbf dt} = \nabla f \cdot \frac{\mathbf d\vec r}{\mathbf dt}
+</span></p>
+<p>trong đó:</p>
+<p><span class="math display">
+\nabla w = &lt;f_x, f_y, f_z&gt; \quad
+\frac{\mathbf d \vec r}{\mathbf dt} = &lt;\frac{\mathbf dx}{\mathbf dt},\frac{\mathbf dy}{\mathbf dt},\frac{\mathbf dz}{\mathbf dt}&gt;
+</span></p>
 <hr>
 </section>
 <section id="directional-derivative" class="level1">
