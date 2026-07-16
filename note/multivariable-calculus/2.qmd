@@ -620,6 +620,99 @@ Let $A = f_{xx}$, $B = f_{xy}$ and $C = f_{yy}$, we have 3 cases:
 ___
 # Differentials
 
+## Cách tính
+**Trường hợp 1:** $x = x(t), y = y(t), z = z(t)$
+
+$$
+\frac{\mathbf d f}{\mathbf dt} = 
+\frac{\partial f}{\partial x} \frac{\mathbf dx}{\mathbf dt} +
+\frac{\partial f}{\partial y} \frac{\mathbf dy}{\mathbf dt} +
+\frac{\partial f}{\partial z} \frac{\mathbf dz}{\mathbf dt}
+$$
+
+**Trường hợp 2:** $x = x(u, v), y = y(u, v), z = z(u, v)$
+$$
+\frac{\partial f}{\partial u} = 
+\frac{\partial f}{\partial x} \frac{\partial x}{\partial u} +   
+\frac{\partial f}{\partial y} \frac{\partial y}{\partial u} +   
+\frac{\partial f}{\partial z} \frac{\partial z}{\partial u}  
+\\
+\frac{\partial f}{\partial v} = 
+\frac{\partial f}{\partial x} \frac{\partial x}{\partial v} +   
+\frac{\partial f}{\partial y} \frac{\partial y}{\partial v} +   
+\frac{\partial f}{\partial z} \frac{\partial z}{\partial v}  
+$$
+
+
+
+## Đạo hàm toàn phần
+
+$$
+f = f(x, y, z) \Rightarrow \mathbf df = f_x \mathbf d x + f_y \mathbf d y + f_z \mathbf d z 
+$$
+
+:::{.callout-note collapse="true"}
+## Example
+Quy tắc nhân, ta có $f = f(u, v) = uv$, đạo hàm toàn phần nó:
+$$
+\mathbf d f = v \mathbf d u + u \mathbf dv \space (=vu'+uv')
+$$
+
+Quy tắc thương, ta có $f = f(u, v) = \frac u v$, đạo hàm toàn phần:
+$$
+\mathbf d f = \frac 1 v \mathbf du - \frac u {v^2} \mathbf d v = \frac {v\mathbf du - u\mathbf dv}{v^2} 
+\space \left(=\frac{vu' - uv'}{v^2}\right) 
+$$
+:::
+
+Nói một cách khó hiểu, $\mathbf d x$ hay bất kể $\mathbf d$ gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là $\mathbf d x \neq \Delta x$. Chỉ khi nào $\Delta x$ tiến tới 0, thì khi đó $\mathbf d x \approx \Delta x$
+
+Vậy đạo hàm toàn phần có thể làm những gì:
+
+1. Nó biểu thị xem việc thay đổi các biến của f tác động thế nào đến f.
+2. Nó là "người giữ chỗ" cho công thức xấp xỉ: $\Delta f \approx f_x \Delta x + f_y \Delta y + f_z \Delta z$.
+3. Nếu các biến của f phụ thuộc vào tham số khác, ví dụ như $x = x(t), y = y(t), z = z(t)$, thì ta có thể chia nó cho $\mathbf d t$ để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành $\frac {\mathbf d f}{\mathbf d t} = \frac{\partial f}{\partial x}\frac {\mathbf d x}{\mathbf d t} + \frac{\partial f}{\partial y}\frac {\mathbf d y}{\mathbf d t} + \frac{\partial f}{\partial z}\frac {\mathbf d z}{\mathbf d t}$
+
+:::{.callout-note collapse="true"}
+## Example 
+Ví dụ như, $f = f(x, y, z) = x^2y + z$, và $x = t, y = e^t, z = \sin t$
+1. Ta đạo hàm như bình thường:
+$$
+f = t^2 e^t + \sin t
+\Rightarrow \frac {\mathbf df}{\mathbf dt} = e^t 2t + e^t t^2 + \cos t
+$$
+
+2. Đạo hàm sử dụng **Chain rule**:
+$$
+\frac{\partial f}{\partial x} = 2xy = 2te^t; 
+\frac{\partial f}{\partial y} = x^2 = t^2; 
+\frac{\partial f}{\partial z} = 1 
+$$
+
+$$
+\mathbf d x = 1; 
+\mathbf d y = e^t; 
+\mathbf d z = \cos t
+$$
+
+vậy đáp án cuối cùng là:
+
+$$
+\frac{\mathbf d f}{\mathbf dt} = 
+\frac{\partial f}{\partial x}\frac{\mathbf d x}{\mathbf dt} + 
+\frac{\partial f}{\partial y}\frac{\mathbf d y}{\mathbf dt} + 
+\frac{\partial f}{\partial z}\frac{\mathbf d z}{\mathbf dt} = 
+2te^t + e^t t^2 + \cos t
+$$
+:::
+
+:::{.callout-note collapse="true"}
+## Justify
+
+:::
+
+
+
 ___
 # Chain rule
 

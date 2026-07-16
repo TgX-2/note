@@ -493,7 +493,11 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#general-case" id="toc-general-case" class="nav-link" data-scroll-target="#general-case">General case</a></li>
   </ul></li>
-  <li><a href="#differentials" id="toc-differentials" class="nav-link" data-scroll-target="#differentials">Differentials</a></li>
+  <li><a href="#differentials" id="toc-differentials" class="nav-link" data-scroll-target="#differentials">Differentials</a>
+  <ul class="collapse">
+  <li><a href="#cách-tính" id="toc-cách-tính" class="nav-link" data-scroll-target="#cách-tính">Cách tính</a></li>
+  <li><a href="#đạo-hàm-toàn-phần" id="toc-đạo-hàm-toàn-phần" class="nav-link" data-scroll-target="#đạo-hàm-toàn-phần">Đạo hàm toàn phần</a></li>
+  </ul></li>
   <li><a href="#chain-rule" id="toc-chain-rule" class="nav-link" data-scroll-target="#chain-rule">Chain rule</a></li>
   <li><a href="#gradient" id="toc-gradient" class="nav-link" data-scroll-target="#gradient">Gradient</a></li>
   <li><a href="#directional-derivative" id="toc-directional-derivative" class="nav-link" data-scroll-target="#directional-derivative">Directional derivative</a></li>
@@ -537,7 +541,7 @@ window.Quarto = {
 <h1>Functions of several variables</h1>
 <p>Như ta đã tiếp xúc với hàm đơn biến từ trước, ví dụ như <span class="math inline">f(x) = x^2</span> hay <span class="math inline">f(x) = -x + 2</span>. Thì trong không gian 3 chiều, hay tổng quát hơn là n chiều, chúng ta cũng có thể biểu diễn nó bằng <span class="math inline">n - 1</span> biến.</p>
 <p>Ví dụ: Hàm <span class="math inline">f(x, y) = x^2 + y^2</span></p>
-<div id="625bb9bd" class="cell" data-execution_count="1">
+<div id="676c0853" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -585,7 +589,7 @@ window.Quarto = {
 f_x = \frac {\partial f}{\partial x} = \lim _{\Delta x \rightarrow 0} \frac{f(x_0 + \Delta x, y_0) - f(x_0, y_0)}{\Delta x} \\
 f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_0, y_0 + \Delta y) - f(x_0, y_0)}{\Delta y}
 </span></p>
-<div id="38bfc496" class="cell" data-execution_count="2">
+<div id="b614d849" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -598,7 +602,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <h2 class="anchored" data-anchor-id="cách-tính-đạo-hàm-từng-phần">Cách tính đạo hàm từng phần</h2>
 <p>Như đã nói ở trước, ta sẽ coi một biến là hằng số.</p>
 <p>Ví dụ hàm <span class="math inline">f(x, y) = x^2 + x^3y + 2y + 3x</span></p>
-<div id="a891701b" class="cell" data-execution_count="3">
+<div id="3d9e9043" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -663,7 +667,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <p>Tương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.</p>
 <p>Ví dụ: <span class="math inline">f(x, y) = x^2 + y^2</span></p>
 <p>Ta xét tại điểm <span class="math inline">(x_0, y_0) = (1, 1)</span>, mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình.</p>
-<div id="df3133b8" class="cell" data-execution_count="4">
+<div id="4bc181b2" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -737,7 +741,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <p>Nhưng cũng vì thế mà sẽ có 3 trường hợp xảy ra:</p>
 <section id="điểm-cực-tiểu" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-cực-tiểu">Điểm cực tiểu</h2>
-<div id="f26831ad" class="cell" data-execution_count="5">
+<div id="24dc6bdc" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -807,7 +811,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 </section>
 <section id="điểm-cực-đại" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-cực-đại">Điểm cực đại</h2>
-<div id="d732ba14" class="cell" data-execution_count="6">
+<div id="80261b72" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -878,7 +882,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <section id="điểm-saddle" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-saddle">Điểm saddle</h2>
 <p>Vừa là cực dại vừa là cực tiểu.</p>
-<div id="ec77fa51" class="cell" data-execution_count="7">
+<div id="20801316" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -950,7 +954,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 </section>
 <section id="least-squares" class="level1">
 <h1>Least squares</h1>
-<div id="258c557c" class="cell" data-execution_count="8">
+<div id="1418f80a" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -994,7 +998,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="2_files/figure-html/cell-9-output-1.png" width="659" height="524" class="figure-img"></p>
+<p><img src="2_files/figure-html/cell-9-output-1.png" width="663" height="524" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1104,7 +1108,118 @@ w = \frac 1 {4a} \left[ 4a^2 \left( x + \frac b {2a}y \right)^2  + (4ac - b^2)y^
 </section>
 <section id="differentials" class="level1">
 <h1>Differentials</h1>
+<section id="cách-tính" class="level2">
+<h2 class="anchored" data-anchor-id="cách-tính">Cách tính</h2>
+<p><strong>Trường hợp 1:</strong> <span class="math inline">x = x(t), y = y(t), z = z(t)</span></p>
+<p><span class="math display">
+\frac{\mathbf d f}{\mathbf dt} =
+\frac{\partial f}{\partial x} \frac{\mathbf dx}{\mathbf dt} +
+\frac{\partial f}{\partial y} \frac{\mathbf dy}{\mathbf dt} +
+\frac{\partial f}{\partial z} \frac{\mathbf dz}{\mathbf dt}
+</span></p>
+<p><strong>Trường hợp 2:</strong> <span class="math inline">x = x(u, v), y = y(u, v), z = z(u, v)</span> <span class="math display">
+\frac{\partial f}{\partial u} =
+\frac{\partial f}{\partial x} \frac{\partial x}{\partial u} +   
+\frac{\partial f}{\partial y} \frac{\partial y}{\partial u} +   
+\frac{\partial f}{\partial z} \frac{\partial z}{\partial u}  
+\\
+\frac{\partial f}{\partial v} =
+\frac{\partial f}{\partial x} \frac{\partial x}{\partial v} +   
+\frac{\partial f}{\partial y} \frac{\partial y}{\partial v} +   
+\frac{\partial f}{\partial z} \frac{\partial z}{\partial v}  
+</span></p>
+</section>
+<section id="đạo-hàm-toàn-phần" class="level2">
+<h2 class="anchored" data-anchor-id="đạo-hàm-toàn-phần">Đạo hàm toàn phần</h2>
+<p><span class="math display">
+f = f(x, y, z) \Rightarrow \mathbf df = f_x \mathbf d x + f_y \mathbf d y + f_z \mathbf d z
+</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Quy tắc nhân, ta có <span class="math inline">f = f(u, v) = uv</span>, đạo hàm toàn phần nó: <span class="math display">
+\mathbf d f = v \mathbf d u + u \mathbf dv \space (=vu'+uv')
+</span></p>
+<p>Quy tắc thương, ta có <span class="math inline">f = f(u, v) = \frac u v</span>, đạo hàm toàn phần: <span class="math display">
+\mathbf d f = \frac 1 v \mathbf du - \frac u {v^2} \mathbf d v = \frac {v\mathbf du - u\mathbf dv}{v^2}
+\space \left(=\frac{vu' - uv'}{v^2}\right)
+</span></p>
+</div>
+</div>
+</div>
+<p>Nói một cách khó hiểu, <span class="math inline">\mathbf d x</span> hay bất kể <span class="math inline">\mathbf d</span> gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là <span class="math inline">\mathbf d x \neq \Delta x</span>. Chỉ khi nào <span class="math inline">\Delta x</span> tiến tới 0, thì khi đó <span class="math inline">\mathbf d x \approx \Delta x</span></p>
+<p>Vậy đạo hàm toàn phần có thể làm những gì:</p>
+<ol type="1">
+<li>Nó biểu thị xem việc thay đổi các biến của f tác động thế nào đến f.</li>
+<li>Nó là “người giữ chỗ” cho công thức xấp xỉ: <span class="math inline">\Delta f \approx f_x \Delta x + f_y \Delta y + f_z \Delta z</span>.</li>
+<li>Nếu các biến của f phụ thuộc vào tham số khác, ví dụ như <span class="math inline">x = x(t), y = y(t), z = z(t)</span>, thì ta có thể chia nó cho <span class="math inline">\mathbf d t</span> để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành <span class="math inline">\frac {\mathbf d f}{\mathbf d t} = \frac{\partial f}{\partial x}\frac {\mathbf d x}{\mathbf d t} + \frac{\partial f}{\partial y}\frac {\mathbf d y}{\mathbf d t} + \frac{\partial f}{\partial z}\frac {\mathbf d z}{\mathbf d t}</span></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ví dụ như, <span class="math inline">f = f(x, y, z) = x^2y + z</span>, và <span class="math inline">x = t, y = e^t, z = \sin t</span> 1. Ta đạo hàm như bình thường: <span class="math display">
+f = t^2 e^t + \sin t
+\Rightarrow \frac {\mathbf df}{\mathbf dt} = e^t 2t + e^t t^2 + \cos t
+</span></p>
+<ol start="2" type="1">
+<li>Đạo hàm sử dụng <strong>Chain rule</strong>: <span class="math display">
+\frac{\partial f}{\partial x} = 2xy = 2te^t;
+\frac{\partial f}{\partial y} = x^2 = t^2;
+\frac{\partial f}{\partial z} = 1
+</span></li>
+</ol>
+<p><span class="math display">
+\mathbf d x = 1;
+\mathbf d y = e^t;
+\mathbf d z = \cos t
+</span></p>
+<p>vậy đáp án cuối cùng là:</p>
+<p><span class="math display">
+\frac{\mathbf d f}{\mathbf dt} =
+\frac{\partial f}{\partial x}\frac{\mathbf d x}{\mathbf dt} +
+\frac{\partial f}{\partial y}\frac{\mathbf d y}{\mathbf dt} +
+\frac{\partial f}{\partial z}\frac{\mathbf d z}{\mathbf dt} =
+2te^t + e^t t^2 + \cos t
+</span></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-empty-content callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Justify
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 <hr>
+</section>
 </section>
 <section id="chain-rule" class="level1">
 <h1>Chain rule</h1>
