@@ -456,29 +456,40 @@
     "href": "note/multivariable-calculus/2.html#general-case",
     "title": "Partial derivatives",
     "section": "General case",
-    "text": "General case\n\n\\frac {\\partial^2 f}{\\partial x^2} = f_{xx}; \\space\n\\frac {\\partial^2 f}{\\partial y^2} = f_{yy}; \\space\n\\frac {\\partial^2 f}{\\partial x \\partial y} = f_{xy} =\n\\frac {\\partial^2 f}{\\partial y \\partial x} = f_{yx}\n\nLet A = f_{xx}, B = f_{xy} and C = f_{yy}, we have 3 cases:\n\nAC - B^2 &lt; 0 \\Rightarrow saddle point.\nAC - B^2 = 0 \\Rightarrow cant conclude\nAC - B^2 &gt; 0\n\n\\rightarrow if A &gt; 0 local minimum.\n\\rightarrow if A &lt; 0 local maximum.",
+    "text": "General case\n\n\\frac {\\partial^2 f}{\\partial x^2} = f_{xx}; \\qquad\n\\frac {\\partial^2 f}{\\partial y^2} = f_{yy}; \\qquad\n\\frac {\\partial^2 f}{\\partial x \\partial y} = f_{xy} =\n\\frac {\\partial^2 f}{\\partial y \\partial x} = f_{yx}\n\nLet A = f_{xx}, B = f_{xy} and C = f_{yy}, we have 3 cases:\n\nAC - B^2 &lt; 0 \\Rightarrow saddle point.\nAC - B^2 = 0 \\Rightarrow cant conclude\nAC - B^2 &gt; 0\n\n\\rightarrow if A &gt; 0 local minimum.\n\\rightarrow if A &lt; 0 local maximum.",
     "crumbs": [
       "18.02",
       "Partial derivatives"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#cách-tính",
-    "href": "note/multivariable-calculus/2.html#cách-tính",
+    "objectID": "note/multivariable-calculus/2.html#total-differential",
+    "href": "note/multivariable-calculus/2.html#total-differential",
     "title": "Partial derivatives",
-    "section": "Cách tính",
-    "text": "Cách tính\nTrường hợp 1: x = x(t), y = y(t), z = z(t)\n\n\\frac{\\mathbf d f}{\\mathbf dt} =\n\\frac{\\partial f}{\\partial x} \\frac{\\mathbf dx}{\\mathbf dt} +\n\\frac{\\partial f}{\\partial y} \\frac{\\mathbf dy}{\\mathbf dt} +\n\\frac{\\partial f}{\\partial z} \\frac{\\mathbf dz}{\\mathbf dt}\n\nTrường hợp 2: x = x(u, v), y = y(u, v), z = z(u, v) \n\\frac{\\partial f}{\\partial u} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial u} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial u} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial u}  \n\\\\\n\\frac{\\partial f}{\\partial v} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial v} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial v} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial v}",
+    "section": "Total differential",
+    "text": "Total differential\nĐạo hàm toàn phần: Cho một hàm f ví dụ như phụ thuộc vào 3 biến số f = f(x, y, z) thì đạo hàm toàn phần của nó là: \n\\mathbf df = f_x \\mathbf d x + f_y \\mathbf d y + f_z \\mathbf d z",
     "crumbs": [
       "18.02",
       "Partial derivatives"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#đạo-hàm-toàn-phần",
-    "href": "note/multivariable-calculus/2.html#đạo-hàm-toàn-phần",
+    "objectID": "note/multivariable-calculus/2.html#chain-rule",
+    "href": "note/multivariable-calculus/2.html#chain-rule",
     "title": "Partial derivatives",
-    "section": "Đạo hàm toàn phần",
-    "text": "Đạo hàm toàn phần\n\nf = f(x, y, z) \\Rightarrow \\mathbf df = f_x \\mathbf d x + f_y \\mathbf d y + f_z \\mathbf d z\n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nQuy tắc nhân, ta có f = f(u, v) = uv, đạo hàm toàn phần nó: \n\\mathbf d f = v \\mathbf d u + u \\mathbf dv \\space (=vu'+uv')\n\nQuy tắc thương, ta có f = f(u, v) = \\frac u v, đạo hàm toàn phần: \n\\mathbf d f = \\frac 1 v \\mathbf du - \\frac u {v^2} \\mathbf d v = \\frac {v\\mathbf du - u\\mathbf dv}{v^2}\n\\space \\left(=\\frac{vu' - uv'}{v^2}\\right)\n\n\n\n\nNói một cách khó hiểu, \\mathbf d x hay bất kể \\mathbf d gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là \\mathbf d x \\neq \\Delta x. Chỉ khi nào \\Delta x tiến tới 0, thì khi đó \\mathbf d x \\approx \\Delta x\nVậy đạo hàm toàn phần có thể làm những gì:\n\nNó biểu thị xem việc thay đổi các biến của f tác động thế nào đến f.\nNó là “người giữ chỗ” cho công thức xấp xỉ: \\Delta f \\approx f_x \\Delta x + f_y \\Delta y + f_z \\Delta z.\nNếu các biến của f phụ thuộc vào tham số khác, ví dụ như x = x(t), y = y(t), z = z(t), thì ta có thể chia nó cho \\mathbf d t để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành \\frac {\\mathbf d f}{\\mathbf d t} = \\frac{\\partial f}{\\partial x}\\frac {\\mathbf d x}{\\mathbf d t} + \\frac{\\partial f}{\\partial y}\\frac {\\mathbf d y}{\\mathbf d t} + \\frac{\\partial f}{\\partial z}\\frac {\\mathbf d z}{\\mathbf d t}\n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nVí dụ như, f = f(x, y, z) = x^2y + z, và x = t, y = e^t, z = \\sin t 1. Ta đạo hàm như bình thường: \nf = t^2 e^t + \\sin t\n\\Rightarrow \\frac {\\mathbf df}{\\mathbf dt} = e^t 2t + e^t t^2 + \\cos t\n\n\nĐạo hàm sử dụng Chain rule: \n\\frac{\\partial f}{\\partial x} = 2xy = 2te^t;\n\\frac{\\partial f}{\\partial y} = x^2 = t^2;\n\\frac{\\partial f}{\\partial z} = 1\n\n\n\n\\mathbf d x = 1;\n\\mathbf d y = e^t;\n\\mathbf d z = \\cos t\n\nvậy đáp án cuối cùng là:\n\n\\frac{\\mathbf d f}{\\mathbf dt} =\n\\frac{\\partial f}{\\partial x}\\frac{\\mathbf d x}{\\mathbf dt} +\n\\frac{\\partial f}{\\partial y}\\frac{\\mathbf d y}{\\mathbf dt} +\n\\frac{\\partial f}{\\partial z}\\frac{\\mathbf d z}{\\mathbf dt} =\n2te^t + e^t t^2 + \\cos t\n\n\n\n\n\n\n\n\n\n\nNoteJustify",
+    "section": "Chain rule",
+    "text": "Chain rule\nTrường hợp 1: x = x(t), y = y(t), z = z(t)\n\n\\frac{\\mathbf d f}{\\mathbf dt} =\n\\frac{\\partial f}{\\partial x} \\frac{\\mathbf dx}{\\mathbf dt} +\n\\frac{\\partial f}{\\partial y} \\frac{\\mathbf dy}{\\mathbf dt} +\n\\frac{\\partial f}{\\partial z} \\frac{\\mathbf dz}{\\mathbf dt}\n\nTrường hợp 2: x = x(u, v), y = y(u, v), z = z(u, v) \n\\frac{\\partial f}{\\partial u} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial u} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial u} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial u}  \n\\\\[10pt]\n\\frac{\\partial f}{\\partial v} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial v} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial v} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial v}  \n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nQuy tắc nhân, ta có f = f(u, v) = uv, đạo hàm toàn phần nó: \n\\mathbf d f = v \\mathbf d u + u \\mathbf dv \\space (=vu'+uv')\n\nQuy tắc thương, ta có f = f(u, v) = \\frac u v, đạo hàm toàn phần: \n\\mathbf d f = \\frac 1 v \\mathbf du - \\frac u {v^2} \\mathbf d v = \\frac {v\\mathbf du - u\\mathbf dv}{v^2}\n\\space \\left(=\\frac{vu' - uv'}{v^2}\\right)",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#application",
+    "href": "note/multivariable-calculus/2.html#application",
+    "title": "Partial derivatives",
+    "section": "Application",
+    "text": "Application\nNói một cách khó hiểu, \\mathbf d x hay bất kể \\mathbf d gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là \\mathbf d x \\neq \\Delta x. Chỉ khi nào \\Delta x tiến tới 0, thì khi đó \\mathbf d x \\approx \\Delta x\nVậy đạo hàm toàn phần có thể làm những gì:\n\nNó biểu thị xem việc thay đổi các biến của f tác động thế nào đến f.\nNó là “người giữ chỗ” cho công thức xấp xỉ: \\Delta f \\approx f_x \\Delta x + f_y \\Delta y + f_z \\Delta z.\nNếu các biến của f phụ thuộc vào tham số khác, ví dụ như x = x(t), y = y(t), z = z(t), thì ta có thể chia nó cho \\mathbf d t để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành \\frac {\\mathbf d f}{\\mathbf d t} = \\frac{\\partial f}{\\partial x}\\frac {\\mathbf d x}{\\mathbf d t} + \\frac{\\partial f}{\\partial y}\\frac {\\mathbf d y}{\\mathbf d t} + \\frac{\\partial f}{\\partial z}\\frac {\\mathbf d z}{\\mathbf d t}\n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nVí dụ như, f = f(x, y, z) = x^2y + z, và x = t, y = e^t, z = \\sin t 1. Ta đạo hàm như bình thường: \nf = t^2 e^t + \\sin t\n\\Rightarrow \\frac {\\mathbf df}{\\mathbf dt} = e^t 2t + e^t t^2 + \\cos t\n\n\nĐạo hàm sử dụng Chain rule: \n\\frac{\\partial f}{\\partial x} = 2xy = 2te^t;\n\\frac{\\partial f}{\\partial y} = x^2 = t^2;\n\\frac{\\partial f}{\\partial z} = 1\n\n\n\n\\mathbf d x = 1;\n\\mathbf d y = e^t;\n\\mathbf d z = \\cos t\n\nvậy đáp án cuối cùng là:\n\n\\frac{\\mathbf d f}{\\mathbf dt} =\n\\frac{\\partial f}{\\partial x}\\frac{\\mathbf d x}{\\mathbf dt} +\n\\frac{\\partial f}{\\partial y}\\frac{\\mathbf d y}{\\mathbf dt} +\n\\frac{\\partial f}{\\partial z}\\frac{\\mathbf d z}{\\mathbf dt} =\n2te^t + e^t t^2 + \\cos t\n\n\n\n\n\n\n\n\n\n\nNoteJustify",
     "crumbs": [
       "18.02",
       "Partial derivatives"

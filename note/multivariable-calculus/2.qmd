@@ -65,7 +65,7 @@ ___
 Đạo hàm riêng khá là dễ hiểu, căn bản là coi một biến là hằng số, còn biến còn lại là biến, rồi đạo hàm như bình thường.
 
 $$
-f_x = \frac {\partial f}{\partial x} = \lim _{\Delta x \rightarrow 0} \frac{f(x_0 + \Delta x, y_0) - f(x_0, y_0)}{\Delta x} \\ 
+f_x = \frac {\partial f}{\partial x} = \lim _{\Delta x \rightarrow 0} \frac{f(x_0 + \Delta x, y_0) - f(x_0, y_0)}{\Delta x} \\[10pt]
 f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_0, y_0 + \Delta y) - f(x_0, y_0)}{\Delta y}
 $$
 
@@ -597,14 +597,14 @@ $$
 1) $4ac - b^2 < 0 \Rightarrow$ saddle point.
 2) $4ac - b^2 = 0 \Rightarrow$ degenerate critical point.
 3) $4ac - b^2 > 0$
-    * $\rightarrow$ if $a > 0$ minimum.
-    * $\rightarrow$ if $a < 0$ maximum.
+    $\qquad\rightarrow$ if $a > 0$ minimum.
+    $\qquad\rightarrow$ if $a < 0$ maximum.
 
 ## General case
 
 $$
-\frac {\partial^2 f}{\partial x^2} = f_{xx}; \space 
-\frac {\partial^2 f}{\partial y^2} = f_{yy}; \space
+\frac {\partial^2 f}{\partial x^2} = f_{xx}; \qquad
+\frac {\partial^2 f}{\partial y^2} = f_{yy}; \qquad
 \frac {\partial^2 f}{\partial x \partial y} = f_{xy} = 
 \frac {\partial^2 f}{\partial y \partial x} = f_{yx}
 $$
@@ -618,9 +618,17 @@ Let $A = f_{xx}$, $B = f_{xy}$ and $C = f_{yy}$, we have 3 cases:
     * $\rightarrow$ if $A < 0$ local maximum.
 
 ___
-# Differentials
+# Differentials, Chain rule
 
-## Cách tính
+## Total differential
+
+**Đạo hàm toàn phần:** Cho một hàm $f$ ví dụ như phụ thuộc vào 3 biến số $f = f(x, y, z)$ thì đạo hàm toàn phần của nó là:
+$$
+\mathbf df = f_x \mathbf d x + f_y \mathbf d y + f_z \mathbf d z 
+$$
+
+## Chain rule
+
 **Trường hợp 1:** $x = x(t), y = y(t), z = z(t)$
 
 $$
@@ -636,20 +644,13 @@ $$
 \frac{\partial f}{\partial x} \frac{\partial x}{\partial u} +   
 \frac{\partial f}{\partial y} \frac{\partial y}{\partial u} +   
 \frac{\partial f}{\partial z} \frac{\partial z}{\partial u}  
-\\
+\\[10pt]
 \frac{\partial f}{\partial v} = 
 \frac{\partial f}{\partial x} \frac{\partial x}{\partial v} +   
 \frac{\partial f}{\partial y} \frac{\partial y}{\partial v} +   
 \frac{\partial f}{\partial z} \frac{\partial z}{\partial v}  
 $$
 
-
-
-## Đạo hàm toàn phần
-
-$$
-f = f(x, y, z) \Rightarrow \mathbf df = f_x \mathbf d x + f_y \mathbf d y + f_z \mathbf d z 
-$$
 
 :::{.callout-note collapse="true"}
 ## Example
@@ -665,6 +666,7 @@ $$
 $$
 :::
 
+## Application
 Nói một cách khó hiểu, $\mathbf d x$ hay bất kể $\mathbf d$ gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là $\mathbf d x \neq \Delta x$. Chỉ khi nào $\Delta x$ tiến tới 0, thì khi đó $\mathbf d x \approx \Delta x$
 
 Vậy đạo hàm toàn phần có thể làm những gì:
@@ -710,12 +712,6 @@ $$
 ## Justify
 
 :::
-
-
-
-___
-# Chain rule
-
 
 ___
 # Gradient
