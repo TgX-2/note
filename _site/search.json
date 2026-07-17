@@ -494,5 +494,38 @@
       "18.02",
       "Partial derivatives"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#gradient-1",
+    "href": "note/multivariable-calculus/2.html#gradient-1",
+    "title": "Partial derivatives",
+    "section": "Gradient",
+    "text": "Gradient\nĐịnh nghĩa: \\nabla f = &lt;f_x, f_y, f_z&gt; - Là một vector Gradient.\nKhi đó thì vector sẽ vuông góc với mặt phẳng, và có hướng về phía mà có f(x, y, z) cao hơn. (Tức là nếu nó ở đoạn sườn dốc của một ngọn núi, thì nó sẽ nhìn lên phía trên đỉnh thay vì nhìn xuống dưới chân núi).\nVí dụ: Sau đây là một hàm bất kỳ, ta vẽ được như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, cmap='viridis')\n\nax.set_title('Surface Plot')\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()\n\n\n\n\n\n\n\n\n\ncó contour plot là:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nplt.figure(figsize=(7, 6))\ncontour = plt.contourf(X, Y, Z, levels=30, cmap='viridis')\nplt.colorbar(contour)\n\nplt.contour(X, Y, Z, levels=15, colors='black', linewidths=0.5)\n\nplt.title('Contour Plot')\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nvà vector gradient được vẽ màu đỏ như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-2, 2, 25)\ny = np.linspace(-2, 2, 25)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\ndZ_dY, dZ_dX = np.gradient(Z, y, x)\n\nplt.figure(figsize=(7, 6))\nplt.contour(X, Y, Z,\n            levels=20,\n            colors='gray',\n            linewidths=0.8,\n            alpha=0.4)\n\nplt.quiver(X, Y, dZ_dX, dZ_dY,\n           color='red',\n           scale=20)\n\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nCó thể thấy mọi vector đều vuông góc với level curves, và hướng về phía 2 điểm cực trị.",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#cách-tính",
+    "href": "note/multivariable-calculus/2.html#cách-tính",
+    "title": "Partial derivatives",
+    "section": "Cách tính",
+    "text": "Cách tính\nCho f = f(x, y, z) với x = x(t), y = y(t), z = z(t), chainrule:\n\n\\frac{\\mathbf df}{\\mathbf dt} =\nf_x\\frac{\\mathbf dx}{\\mathbf dt} +\nf_x\\frac{\\mathbf dy}{\\mathbf dt} +\nf_x\\frac{\\mathbf dz}{\\mathbf dt}  \n\nGiờ chúng ta sẽ viết nó dưới dạng khác:\n\n\\frac{\\mathbf df}{\\mathbf dt} = \\nabla f \\cdot \\frac{\\mathbf d\\vec r}{\\mathbf dt}\n\ntrong đó:\n\n\\nabla w = &lt;f_x, f_y, f_z&gt; \\quad\n\\frac{\\mathbf d \\vec r}{\\mathbf dt} = &lt;\\frac{\\mathbf dx}{\\mathbf dt},\\frac{\\mathbf dy}{\\mathbf dt},\\frac{\\mathbf dz}{\\mathbf dt}&gt;\n\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx0 = 1\ny0 = 1\ntheta_deg = 60.0\ntheta_rad = np.radians(theta_deg)\n\ndef f_3d(X, Y):\n    return np.exp(-((X - 1.5)**2 + Y**2)) + np.exp(-((X + 1.5)**2 + Y**2))\n\nx_range = np.linspace(-5, 5, 300)\ny_range = np.linspace(-5, 5, 300)\nX, Y = np.meshgrid(x_range, y_range)\nZ = f_3d(X, Y)\n\nt = np.linspace(-5, 5, 300)\nx_plane = x0 + t * np.sin(theta_rad)\ny_plane = y0 + t * np.cos(theta_rad)\nz_plane_line = f_3d(x_plane, y_plane)\n\nfig = plt.figure(figsize=(12, 5))\nax_3d = fig.add_subplot(121, projection='3d')\nax_2d = fig.add_subplot(122)\n\nax_3d.plot_surface(X, Y, Z, cmap='viridis', alpha=0.6, edgecolor='none')\n\nax_3d.plot(x_plane, y_plane, z_plane_line, color='red', linewidth=2.5, label='Giao tuyến')\nax_3d.scatter([x0], [y0], [f_3d(x0, y0)], color='black', s=20)\n\nz_grid = np.linspace(0, 1.2, 2)\nT, Z_plane = np.meshgrid(t, z_grid)\nX_plane_mesh = x0 + T * np.sin(theta_rad)\nY_plane_mesh = y0 + T * np.cos(theta_rad)\nax_3d.plot_surface(X_plane_mesh, Y_plane_mesh, Z_plane, color='red', alpha=0.15)\n\nax_3d.set_xlabel(\"X\")\nax_3d.set_ylabel(\"Y\")\nax_3d.set_zlabel(\"Z\")\nax_3d.set_zlim(0, 1.2)\n\nax_2d.plot(t, z_plane_line, color='red', linewidth=2)\nax_2d.axvline(0, color='gray', linestyle='--', alpha=0.7)\nax_2d.set_ylim(0, 1.2)\nax_2d.grid(True)\n\nplt.tight_layout()\nplt.show()",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#geometric",
+    "href": "note/multivariable-calculus/2.html#geometric",
+    "title": "Partial derivatives",
+    "section": "Geometric",
+    "text": "Geometric\n\nD_{\\hat {\\mathbf u}}f = \\nabla f \\cdot \\hat {\\mathbf u} = |\\nabla f|\\cos \\theta.\n\nMaximum Khi \\cos \\theta = 1, tức là khi vector gradient \\nabla f trùng hướng với \\hat {\\mathbf u}. Vậy hàm sẽ tăng nhanh nhất khi mà",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
   }
 ]

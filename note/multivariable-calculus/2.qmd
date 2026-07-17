@@ -716,6 +716,105 @@ $$
 ___
 # Gradient
 
+## Gradient
+
+**Định nghĩa:** $\nabla f = <f_x, f_y, f_z>$ - Là một vector Gradient.
+
+Khi đó thì vector sẽ vuông góc với mặt phẳng, và có hướng về phía mà có f(x, y, z) cao hơn. (Tức là nếu nó ở đoạn sườn dốc của một ngọn núi, thì nó sẽ nhìn lên phía trên đỉnh thay vì nhìn xuống dưới chân núi).
+
+**Ví dụ:** Sau đây là một hàm bất kỳ, ta vẽ được như sau:
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-4, 4, 300)
+y = np.linspace(-4, 4, 300)
+X, Y = np.meshgrid(x, y)
+
+Z = X*np.exp(-X**2 - Y**2)
+
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+ax.plot_surface(X, Y, Z, cmap='viridis')
+
+ax.set_title('Surface Plot')
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+
+plt.show()
+```
+
+có contour plot là:
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-4, 4, 300)
+y = np.linspace(-4, 4, 300)
+X, Y = np.meshgrid(x, y)
+
+Z = X*np.exp(-X**2 - Y**2)
+
+plt.figure(figsize=(7, 6))
+contour = plt.contourf(X, Y, Z, levels=30, cmap='viridis')
+plt.colorbar(contour)
+
+plt.contour(X, Y, Z, levels=15, colors='black', linewidths=0.5)
+
+plt.title('Contour Plot')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.axis('equal')
+plt.show()
+```
+
+và vector gradient được vẽ màu đỏ như sau:
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-2, 2, 25)
+y = np.linspace(-2, 2, 25)
+X, Y = np.meshgrid(x, y)
+
+Z = X*np.exp(-X**2 - Y**2)
+dZ_dY, dZ_dX = np.gradient(Z, y, x)
+
+plt.figure(figsize=(7, 6))
+plt.contour(X, Y, Z,
+            levels=20,
+            colors='gray',
+            linewidths=0.8,
+            alpha=0.4)
+
+plt.quiver(X, Y, dZ_dX, dZ_dY,
+           color='red',
+           scale=20)
+
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.axis('equal')
+plt.show()
+```
+
+Có thể thấy mọi vector đều vuông góc với level curves, và hướng về phía 2 điểm cực trị.
+
+## Cách tính
+
 Cho $f = f(x, y, z)$ với $x = x(t), y = y(t), z = z(t)$, **chainrule**: 
 
 $$
@@ -738,9 +837,94 @@ $$
 \frac{\mathbf d \vec r}{\mathbf dt} = <\frac{\mathbf dx}{\mathbf dt},\frac{\mathbf dy}{\mathbf dt},\frac{\mathbf dz}{\mathbf dt}>
 $$
 
+---
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x0 = 1
+y0 = 1
+theta_deg = 60.0
+theta_rad = np.radians(theta_deg)
+
+def f_3d(X, Y):
+    return np.exp(-((X - 1.5)**2 + Y**2)) + np.exp(-((X + 1.5)**2 + Y**2))
+
+x_range = np.linspace(-5, 5, 300)
+y_range = np.linspace(-5, 5, 300)
+X, Y = np.meshgrid(x_range, y_range)
+Z = f_3d(X, Y)
+
+t = np.linspace(-5, 5, 300)
+x_plane = x0 + t * np.sin(theta_rad)
+y_plane = y0 + t * np.cos(theta_rad)
+z_plane_line = f_3d(x_plane, y_plane)
+
+fig = plt.figure(figsize=(12, 5))
+ax_3d = fig.add_subplot(121, projection='3d')
+ax_2d = fig.add_subplot(122)
+
+ax_3d.plot_surface(X, Y, Z, cmap='viridis', alpha=0.6, edgecolor='none')
+
+ax_3d.plot(x_plane, y_plane, z_plane_line, color='red', linewidth=2.5, label='Giao tuyến')
+ax_3d.scatter([x0], [y0], [f_3d(x0, y0)], color='black', s=20)
+
+z_grid = np.linspace(0, 1.2, 2)
+T, Z_plane = np.meshgrid(t, z_grid)
+X_plane_mesh = x0 + T * np.sin(theta_rad)
+Y_plane_mesh = y0 + T * np.cos(theta_rad)
+ax_3d.plot_surface(X_plane_mesh, Y_plane_mesh, Z_plane, color='red', alpha=0.15)
+
+ax_3d.set_xlabel("X")
+ax_3d.set_ylabel("Y")
+ax_3d.set_zlabel("Z")
+ax_3d.set_zlim(0, 1.2)
+
+ax_2d.plot(t, z_plane_line, color='red', linewidth=2)
+ax_2d.axvline(0, color='gray', linestyle='--', alpha=0.7)
+ax_2d.set_ylim(0, 1.2)
+ax_2d.grid(True)
+
+plt.tight_layout()
+plt.show()
+```
+
 ___
 # Directional derivative
 
+Nếu ta có $\frac{\partial f}{\partial x}$ là theo đổi theo trục x, và $\frac{\partial f}{\partial y}$ là thay đổi theo trục y. Nhưng liệu có cách nào để khảo sát độ dốc của một vector basis bất không?
+
+Có. Và đó chính là **Directional derivative**. Cho một vector basis $|\hat {\mathbf u}| = <a, b> = 1$, s là đường cong bị cắt giữa mặt phẳng với hình, áp dụng chainrule, tốc độ thay đổi của f theo s là:
+
+$$
+\frac{\mathbf df}{\mathbf ds} = 
+\frac{\partial f}{\partial x}\frac{\mathbf dx}{\mathbf ds} +
+\frac{\partial f}{\partial y}\frac{\mathbf dy}{\mathbf ds} 
+$$
+
+Mà:
+
+$$
+\frac{\mathbf dx}{\mathbf ds} = a \qquad \frac{\mathbf dy}{\mathbf ds} = b
+$$
+
+do đó:
+
+$$
+D_{\hat {\mathbf u}}f = f_xa + f_yb
+$$
+
+## Geometric
+
+$$
+D_{\hat {\mathbf u}}f = \nabla f \cdot \hat {\mathbf u} = |\nabla f|\cos \theta.
+$$
+
+**Maximum** Khi $\cos \theta = 1$, tức là khi vector gradient $\nabla f$ trùng hướng với $\hat {\mathbf u}$. Vậy hàm sẽ tăng nhanh nhất khi mà 
 
 ___
 # Tangent plane
