@@ -36,7 +36,7 @@ Notehing to Commnet
 * Fourier Series
 * Multiple Integrals
 * Vector Calculus
-* Gradient
+* Gradient ✔️
 * Divergence
 * Curl
 * Line Integrals
