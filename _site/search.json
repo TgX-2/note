@@ -527,5 +527,16 @@
       "18.02",
       "Partial derivatives"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#chú-ý",
+    "href": "note/multivariable-calculus/2.html#chú-ý",
+    "title": "Partial derivatives",
+    "section": "Chú ý",
+    "text": "Chú ý\nCác notaion của đạo hàm riêng rất dễ bị nhầm lẫn, thì nó chỉ biểu thị là mức độ lệch của hàm này trên một biến cụ thể, chứ không hề nhắc đến việc các biến nào sẽ const.\n\n\n\n\n\n\nWarningVí dụ\n\n\n\nCho f(x, y) = x + y.\nDễ dàng tính được:\n\n\\frac{\\partial f}{\\partial x} = 1 \\qquad\n\\frac{\\partial f}{\\partial y} = 1\n\nGiờ ta đặt x = u; y = u + v, hàm f(x, y) = x + y = 2u + v, bây giờ đạo hàm riêng đã trở thành:\n\n\\frac{\\partial f}{\\partial u} = 2 \\qquad\n\\frac{\\partial f}{\\partial v} = 1\n\nRõ ràng u = x nhưng \\frac{\\partial f}{\\partial u} \\neq \\frac{\\partial f}{\\partial x}!\nVì đạo hàm riêng của f trên x là giữ nguyên y và thay đổi x. Còn đạo hàm riêng của f trên u là đạo hàm riêng của f trên x giữ nguyên y - x.\n\n\nVì vậy, trong một số trường hợp, đễ tránh bị nhầm lẫn, ta sử dụng đạo hàm riêng f trên x giữ nguyên y thay đổi x là:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y\n\nVì thế với ví dụ trên, ta có thể khẳng định rằng:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y =\n\\left(\\frac{\\partial f}{\\partial u} \\right)_y \\neq\n\\left(\\frac{\\partial f}{\\partial u} \\right)_v",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
   }
 ]

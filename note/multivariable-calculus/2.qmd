@@ -927,13 +927,139 @@ $$
 **Maximum** Khi $\cos \theta = 1$, tức là khi vector gradient $\nabla f$ trùng hướng với $\hat {\mathbf u}$. Vậy hàm sẽ tăng nhanh nhất khi mà 
 
 ___
-# Tangent plane
-
-
-___
 # Lagrange multipliers
 
+Cho 3 biến x, y, z và hàm f(x, y, z). Tìm điểm cực trị của hàm f. Biết 3 biến x, y, z cũng bị ràng buộc nào đó g(x, y, z) = c.
 
+**Ví dụ:** Cho 2 điểm x, y, tìm khoảng cách ngắn nhất từ điểm $A(x, y)$ đến gốc tọa độ, biết $g(x, y) = xy = 3$.
+
+:::{.callout-note collapse="true"}
+## Giải
+
+Lập hàm f(x, y) là bình phương khoảng cách từ điểm x, y đến gốc tọa độ.
+$$
+f(x, y) = x^2 + y^2
+$$
+
+Vector gradient của f: $\nabla f = <2x, 2y>$.
+
+Vector gradient của g: $\nabla g = <x, y>$.
+
+Đạt cực trị khi 2 vector gradient của nó song song với nhau, tức là $\nabla f // \nabla g \rightarrow \nabla f = \lambda \nabla g$.
+
+$$
+\begin{cases}
+2x = \lambda x \\ 
+2y = \lambda y \\ 
+g = c
+\end{cases}
+$$
+
+Giải ra được.
+:::
 ___
 # Non-independent variables
 
+Trong đời sống, ta thường gặp các hàm với các biến không độc lập với nhau, như $f(P, V, T) \rightarrow PV = nRT$. 
+
+Câu hỏi là, nếu $g(x, y, z) = c$ thì có thể nghĩ theo cách $z = z(x, y)$. Vậy $\partial z / \partial x, \partial z / \partial y?$.
+
+**Ví dụ:** Cho hàm $f(x, y, z) = x^2 + yz + z^3 = 8$ tại $(2, 3, 1)$.
+
+$$
+df = f_x\mathbf dx + f_y \mathbf dy + f_z \mathbf dz = 0 \\ 
+(2x)\mathbf dx + z\mathbf dy + (y + 3z^2)\mathbf dz = 0 \\ 
+$$
+
+Thay $(2, 3, 1)$ vào, ta được:
+
+$$
+4\mathbf dx + \mathbf dy + 6\mathbf dz = 0 \\ 
+\mathbf dz = - \frac 2 3 \mathbf dx - \frac 1 6 \mathbf dy
+$$
+
+Mà ta có công thức $\mathbf dz = \frac{\partial z}{\partial x} \mathbf dx + \frac{\partial z}{\partial y} \mathbf dy$.
+
+Vì vậy từ công thức trên ta được:
+
+$$
+\frac{\partial z}{\partial x} = -\frac{f_x}{f_z} \\ 
+\frac{\partial z}{\partial y} = -\frac{f_y}{f_z}
+$$
+
+## Chú ý
+
+Các notaion của đạo hàm riêng rất dễ bị nhầm lẫn, thì nó chỉ biểu thị là mức độ lệch của hàm này trên một biến cụ thể, chứ không hề nhắc đến việc các biến nào sẽ const.
+
+:::{.callout-warning}
+## Ví dụ
+
+Cho $f(x, y) = x + y$.
+
+Dễ dàng tính được: 
+
+$$
+\frac{\partial f}{\partial x} = 1 \qquad
+\frac{\partial f}{\partial y} = 1 
+$$
+
+Giờ ta đặt $x = u; y = u + v$, hàm $f(x, y) = x + y = 2u + v$, bây giờ đạo hàm riêng đã trở thành:
+
+$$
+\frac{\partial f}{\partial u} = 2 \qquad
+\frac{\partial f}{\partial v} = 1 
+$$
+
+Rõ ràng $u = x$ nhưng $\frac{\partial f}{\partial u} \neq \frac{\partial f}{\partial x}$!
+
+Vì đạo hàm riêng của f trên x là giữ nguyên y và thay đổi x. Còn đạo hàm riêng của f trên u là đạo hàm riêng của f trên x giữ nguyên y - x.
+:::
+
+Vì vậy, trong một số trường hợp, đễ tránh bị nhầm lẫn, ta sử dụng đạo hàm riêng f trên x giữ nguyên y thay đổi x là:
+
+$$
+\left(\frac{\partial f}{\partial x} \right)_y
+$$
+
+Vì thế với ví dụ trên, ta có thể khẳng định rằng:
+
+$$
+\left(\frac{\partial f}{\partial x} \right)_y = 
+\left(\frac{\partial f}{\partial u} \right)_y \neq
+\left(\frac{\partial f}{\partial u} \right)_v
+$$
+
+<!-- ___
+# Exam
+
+```{=html}
+<div style="
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  border: 1px solid #e5e7eb;
+">
+  <iframe
+    src="../../doc/multivariable-calculus/exam_2a.pdf"
+    width="100%"
+    height="700"
+    style="border: none;">
+  </iframe>
+</div>
+```
+
+```{=html}
+<div style="
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  border: 1px solid #e5e7eb;
+">
+  <iframe
+    src="../../doc/multivariable-calculus/exam_2b.pdf"
+    width="100%"
+    height="700"
+    style="border: none;">
+  </iframe>
+</div>
+``` -->
