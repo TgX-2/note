@@ -4,25 +4,42 @@ title: "Đạo hàm đa biến"
 
 ___
 # 1. Vector và ma trận - Vectors and Matrices
-* **1.0** Vectors
-* **1.1** Dot product
-* **1.2** Determinants; Cross product
-* **1.3** Matrices; Inverse Matrices
-* **1.4** Square systems; Equation of planes
-* **1.5** Parametric equations for lines and curves 
-* **1.6** Velocity, Acceleration; Kepler's second law
+* **1.1.** Vectors
+* **1.2.** Dot product
+* **1.3.** Determinants
+* **1.4.** Cross product
+* **1.5.** Matrices
+* **1.6.** Square systems; Equation of planes
+* **1.7.** Parametric equations for lines and curves
+* **1.8.** Velocity 
+* **1.9.** Acceleration
+* **1.10.** Kepler's Second law
 
 ___
 # 2. Đạo hàm riêng - Partial derivatives
-* **2.1** Level curves; Partial derivatives; Tangent plane approximation 
-* **2.2** Max-Min problmes; Least squares 
-* **2.3** Differentials; Chain rule
-* **2.4** Gradient ; Directional derivative; Tangent plane
-* **2.5** Lagrange multipliers
-* **2.6** Non-independent variables
+* **2.1.** Functions of several variables - *Hàm nhiều biến*
+    * **2.1.1.** Contour plot - *Đồ thị đường bao*
+* **2.2.** Parital derivatives - *Đạo hàm riêng*
+* **2.3.** Tangent plane approx - *Mặt phẳng tiếp tuyến*
+    * **2.3.1.** Appox formula - *Công thức xấp xỉ*
+    * **2.3.2.** Tangent plane - *Mặt phẳng tiếp tuyến*
+* **2.4.** Max - Min problems - *Bài toán cực trị*
+    * **2.4.1.** Max point - *Điểm cực đại*
+    * **2.4.2.** Min point - *Điểm cực tiểu*
+    * **2.4.3.** Saddle point - *Điểm yên ngựa*
+* **2.5.** Least squares - *Bài toán tối ưu*
+* **2.6.** Second derivative - *Đạo hàm bậc hai*
+* **2.7.** Differentials; Chain rule
+    * **2.7.1.** Total differential - *Đạo hàm toàn phần*
+    * **2.7.2.** Chain rule - *Quy tắc chuỗi*
+    * **2.7.3.** Application - *Ứng dụng*
+* **2.8.** Gradient - *Gradient*
+* **2.9.** Direction derivative - *Đạo hàm theo hướng*
+* **2.10.** Lagrange multipliers - *Nhân tử Lagrange*
+* **2.11.** Non-independent variables - *Các biến phụ thuộc*
 
 ___
-# 3. Tích phân kép và tích phân đường trong mặt phẳng - Doule integrals and Line integrals in the plane
+# 3. Tích phân kép và tích phân đường trong mặt phẳng - Double integrals and Line integrals in the plane
 * **3.1** Double integrals
 * **3.2** Double integrals in polar coordinates; Applications
 * **3.3** Change of variables
