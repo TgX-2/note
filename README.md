@@ -1,17 +1,22 @@
 # ノート
 
-原子核物理学の第4章を勉強しているうちに、その章の内容に関するプレゼンテーションを行う権利を得ました。そして、関連する話を調べているうちに、Max Planck の逸話に出会いました。
+原子核物理学の第4章を勉強しているうちに、その内容についてプレゼンテーションを担当することになりました。
 
-*"in dieser Wissenschaft schon fast alles erforscht sei, und es gelte, nur noch einige unbedeutende Lücken zu schließen"*
+関連する話題を調べている中で、マックス・プランクにまつわる逸話を知りました。
 
-*"Ich hege nicht den Wunsch, Neuland zu entdecken, sondern lediglich, die bereits bestehenden Fundamente der physikalischen Wissenschaft zu verstehen, vielleicht auch noch zu vertiefen"* 
+
+> *"in dieser Wissenschaft schon fast alles erforscht sei, und es gelte, nur noch einige unbedeutende Lücken zu schließen"*
+
+> *"Ich hege nicht den Wunsch, Neuland zu entdecken, sondern lediglich, die bereits bestehenden Fundamente der physikalischen Wissenschaft zu verstehen, vielleicht auch noch zu vertiefen"* 
 
 <div align="right">
-  - Max Planck -
+  ― Max Planck ― 
 </div>
 
 ---
 
-この記事の内容は、特定の誰かに向けたものではありません。学術的な文章ではありません。また、TgX.2 の見解を反映するものでもありません。
+この記事は、特定の誰かに向けて書いたものではありません。また、学術論文でもありません。
 
-すべて中立的な立場です。
+さらに、ここに書かれている内容は TgX.2 の見解や立場を反映するものではありません。
+
+内容はあくまで中立的な立場から記述しています。
