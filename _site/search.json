@@ -275,32 +275,95 @@
     ]
   },
   {
-    "objectID": "donotReadme/18.03_DifferentialEquations.html",
-    "href": "donotReadme/18.03_DifferentialEquations.html",
-    "title": "Phương trình vi phân",
+    "objectID": "donotReadme/readme.html",
+    "href": "donotReadme/readme.html",
+    "title": "Note",
     "section": "",
-    "text": "Lectures: 3 sessions / week, 1 hour / session\nRecitations : 2 sessions / week, 1 hour / seesion\n\n\n\nPrerequiste : 18.01\nCorequisite : 18.02\n\n\n\n\n\n\nEdwards, C., and D. Penney. Elementary Differential Equations with Boundary Value Problems. 6th ed. Upper Saddle River, NJ: Prentice Hall, 2003. ISBN: 9780136006138."
+    "text": "Notehing to Commnet\n\n1 - Toán học\n2 - Cơ học cổ điển\n3 - Điện và từ\n4 - Sóng và dao động\n5 - Thuyết tương đối hẹp\n6 - Cơ học lượng tử\n7 - Vật lý thống kê\n8 - Điện động lực học\n9 - Thuyết tương đối rộng\n10 - Lý thuyết trường lượng tử\n11 - Vật lý hạt\n12 - Vũ trụ học\nEnd"
   },
   {
-    "objectID": "donotReadme/18.03_DifferentialEquations.html#time",
-    "href": "donotReadme/18.03_DifferentialEquations.html#time",
-    "title": "Phương trình vi phân",
-    "section": "",
-    "text": "Lectures: 3 sessions / week, 1 hour / session\nRecitations : 2 sessions / week, 1 hour / seesion"
+    "objectID": "donotReadme/readme.html#topic",
+    "href": "donotReadme/readme.html#topic",
+    "title": "Note",
+    "section": "Topic",
+    "text": "Topic\n\nCalculus\n\nLimits\nDifferentiation\nIntegration\nTaylor Series\nFourier Series\nMultiple Integrals\nVector Calculus\nGradient ✔️\nDivergence\nCurl\nLine Integrals\nSurface Integrals\n\n\n\nLinear Algebra\n\nVectors\nVector Spaces\nBases and Dimension\nMatrices\nDeterminants\nEigenvalues\nEigenvectors\nInner Product Spaces\nIntroduction to Hilbert Spaces\n\n\n\nDifferential Equations\n\nOrdinary Differential Equations\nPartial Differential Equations\nSeparation of Variables\nFourier Transform\nLaplace Transform"
   },
   {
-    "objectID": "donotReadme/18.03_DifferentialEquations.html#prerequiste-corequisite",
-    "href": "donotReadme/18.03_DifferentialEquations.html#prerequiste-corequisite",
-    "title": "Phương trình vi phân",
-    "section": "",
-    "text": "Prerequiste : 18.01\nCorequisite : 18.02"
+    "objectID": "donotReadme/readme.html#topics",
+    "href": "donotReadme/readme.html#topics",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nNewtonian Mechanics\nWork and Energy\nMomentum\nCollisions\nRotational Motion\nOscillations\n\n\nAdvanced Topics\n\nLagrangian Mechanics\nHamiltonian Mechanics\nPrinciple of Least Action\nPhase Space"
   },
   {
-    "objectID": "donotReadme/18.03_DifferentialEquations.html#text",
-    "href": "donotReadme/18.03_DifferentialEquations.html#text",
-    "title": "Phương trình vi phân",
-    "section": "",
-    "text": "Edwards, C., and D. Penney. Elementary Differential Equations with Boundary Value Problems. 6th ed. Upper Saddle River, NJ: Prentice Hall, 2003. ISBN: 9780136006138."
+    "objectID": "donotReadme/readme.html#topics-1",
+    "href": "donotReadme/readme.html#topics-1",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nElectric Fields\nElectric Potential\nMagnetic Fields\nCircuits\nMaxwell’s Equations\nElectromagnetic Waves"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-2",
+    "href": "donotReadme/readme.html#topics-2",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nSimple Harmonic Motion\nDamped Oscillations\nDriven Oscillations\nWave Propagation\nStanding Waves\nFourier Analysis"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-3",
+    "href": "donotReadme/readme.html#topics-3",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nLorentz Transformations\nMinkowski Space\nFour-Vectors\nFour-Momentum\nIntroduction to Tensors"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-4",
+    "href": "donotReadme/readme.html#topics-4",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nWave Functions\nSchrödinger Equation\nOperators\nSpin\nAngular Momentum\nDirac Notation\nPerturbation Theory\nScattering Theory\nIdentical Particles"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-5",
+    "href": "donotReadme/readme.html#topics-5",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nEntropy\nThermodynamic Ensembles\nPartition Function\nBose–Einstein Statistics\nFermi–Dirac Statistics"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-6",
+    "href": "donotReadme/readme.html#topics-6",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nGreen’s Functions\nMultipole Expansion\nElectromagnetic Radiation\nGauge Transformations"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-7",
+    "href": "donotReadme/readme.html#topics-7",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nTensor Calculus\nMetrics\nCurvature\nGeodesics\nEinstein Field Equations\nSchwarzschild Solution\nBlack Holes"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-8",
+    "href": "donotReadme/readme.html#topics-8",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nCanonical Quantization\nPath Integrals\nKlein–Gordon Equation\nDirac Equation\nGauge Theory\nRenormalization\nFeynman Diagrams"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-9",
+    "href": "donotReadme/readme.html#topics-9",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nThe Standard Model\nHiggs Mechanism\nQuarks\nLeptons\nGauge Symmetry\nCP Violation"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-to-learn",
+    "href": "donotReadme/readme.html#topics-to-learn",
+    "title": "Note",
+    "section": "Topics to Learn",
+    "text": "Topics to Learn\n\nBig Bang Theory\nCosmic Inflation\nCosmic Microwave Background\nDark Matter\nDark Energy\nStructure Formation"
   },
   {
     "objectID": "about.html",
