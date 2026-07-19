@@ -17,6 +17,11 @@ format:
 ___
 # Functions of several variables
 
+:::{.callout-important}
+## tl;dr
+Hàm nhận nhiều biến đầu vào: $f(x, y, ...)$. Miền xác định là tập các điểm trong $\mathbb R^n$.
+:::
+
 Như ta đã tiếp xúc với hàm đơn biến từ trước, ví dụ như $f(x) = x^2$ hay $f(x) = -x + 2$. Thì trong không gian 3 chiều, hay tổng quát hơn là n chiều, chúng ta cũng có thể biểu diễn nó bằng $n - 1$ biến.
 
 Ví dụ: Hàm $f(x, y) = x^2 + y^2$
@@ -46,7 +51,10 @@ plt.show()
 ```
 
 ## Contour plot
-
+:::{.callout-important}
+## tl;dr
+Đường mức $f(x, y) = c$. Cho biết hình dạng bền mặt mà không cần vẽ 3D.
+:::
 Việc biểu diễn hình không gian 3 chiều trong mặt phẳng thật sự là rất khó nếu ta vẽ như trên, để giải quyết vấn đề đó, chúng ta đã có **Contour plot**.
 
 Đây chính là một kỹ thuật biểu diễn không gian 3 chiều trên mặt phẳng 2 chiều, khá là quen thuộc trong việc biểu diễn nhiệt độ vùng, độ cao của núi, ... trong đó x và y là kinh độ và vỹ độ.
@@ -59,6 +67,13 @@ Ta có thể thấy các vành xung quanh đó, mỗi điểm trên vành sẽ c
 
 ___
 # Partial derivatives
+
+:::{.callout-important}
+## tl;dr
+$\frac{\ppartial f}{\partial x}: thay đổi theo x, giữ các biến khác cố định.
+
+Đo độ dốc theo từng hướng tọa độ.
+:::
 
 Để khảo sát hàm tăng hay giảm trong hàm đơn biến, ta sử dụng đạo hàm, vậy thì làm sao để khảo sát nó trong hàm đa biến tại một mặt phẳng cố định? Đó là sử dụng đạo hàm riêng.
 
@@ -178,6 +193,11 @@ plt.show()
 ___
 # Tangent plane approximation
 
+:::{.callout-important}
+## tl;dr
+Là mặt phẳng tạo bởi 2 đường tiếp tuyến tại $(x_0, y_0)$.
+:::
+
 ## Approximation formula
 
 If we change $x \rightarrow x + \Delta x$ and then $y \rightarrow y + \Delta y$.
@@ -263,6 +283,11 @@ plt.show()
 ```
 ___
 # Max-Min problmes
+
+:::{.callout-important}
+## tl;dr
+Điểm cực trị khi $\nabla f = 0$. 
+:::
 
 Theo trực giác, điểm cực đại hoặc cực tiểu sẽ nằm ngang với trục cao 3D hoặc trục hoành 2D.
 
@@ -465,6 +490,11 @@ plt.show()
 ___
 # Least squares
 
+:::{.callout-important}
+## tl;dr
+Tìm đường/hàm khớp dữ liệu bằng cách tối thiểu hóa tổng bình phương sai số.
+:::
+
 ```{python}
 #| echo: true
 #| code-fold: true
@@ -578,6 +608,11 @@ $$
 ___
 # Second derivative test 
 
+:::{.callout-important}
+## tl;dr
+Đạo hàm bậc hai, dùng để xác định loại cực trị.
+:::
+
 Như đã nói ở trước, Second derivative có thể giúp xác định xem đó là suy biến, cực đại, cực tiểu, hay là điểm saddle (yên ngựa).
 
 $$
@@ -619,6 +654,19 @@ Let $A = f_{xx}$, $B = f_{xy}$ and $C = f_{yy}$, we have 3 cases:
 
 ___
 # Differentials, Chain rule
+
+:::{.callout-important}
+## tl;dr
+$$
+\mathbf df = \sum f_{x_i}\mathbf d{x_i}
+$$
+Nếu biến phụ thuộc nhau thì dùng quy tắc chuỗi: 
+$$
+\frac{\mathbf df}{\mathbf dt} = \sum f_{x_i} \frac{\mathbf d{x_i}}{\mathbf dt}
+$$
+
+
+:::
 
 ## Total differential
 
@@ -715,6 +763,15 @@ $$
 
 ___
 # Gradient
+
+:::{.callout-important}
+## tl;dr
+$$
+\nabla f = <f_x, f_y, ...>
+$$
+
+Chỉ hướng tăng nhanh nhất; độ lớn là tốc độ tăng lớn nhất. Vuông góc với đường mức.
+:::
 
 ## Gradient
 
@@ -896,6 +953,14 @@ plt.show()
 ___
 # Directional derivative
 
+:::{.callout-important}
+## tl;dr
+Đạo hàm theo hướng vector basis $\hat{\mathbf u}$:
+$$
+D_{\hat {\mathbf u}}f = \nabla f \cdot \hat{\mathbf u}
+$$
+:::
+
 Nếu ta có $\frac{\partial f}{\partial x}$ là theo đổi theo trục x, và $\frac{\partial f}{\partial y}$ là thay đổi theo trục y. Nhưng liệu có cách nào để khảo sát độ dốc của một vector basis bất không?
 
 Có. Và đó chính là **Directional derivative**. Cho một vector basis $|\hat {\mathbf u}| = <a, b> = 1$, s là đường cong bị cắt giữa mặt phẳng với hình, áp dụng chainrule, tốc độ thay đổi của f theo s là:
@@ -928,6 +993,12 @@ $$
 
 ___
 # Lagrange multipliers
+:::{.callout-important}
+## tl;dr
+Tìm điểm cực trị có ràng buộc $g = c$.
+
+Lập hệ phương trình với $\nabla f = \lambda \nabla g$ và $g = c$.
+:::
 
 Cho 3 biến x, y, z và hàm f(x, y, z). Tìm điểm cực trị của hàm f. Biết 3 biến x, y, z cũng bị ràng buộc nào đó g(x, y, z) = c.
 
@@ -959,6 +1030,13 @@ Giải ra được.
 :::
 ___
 # Non-independent variables
+
+:::{.callout-important}
+## tl;dr
+Các biến có ràng buộc. Khi lấy đạo hàm phải chỉ rõ biến nào được giữ cố định.
+
+Thường cần quy tắc chuỗi hoặc vi phân ẩn.
+:::
 
 Trong đời sống, ta thường gặp các hàm với các biến không độc lập với nhau, như $f(P, V, T) \rightarrow PV = nRT$. 
 

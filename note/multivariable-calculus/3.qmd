@@ -1,0 +1,71 @@
+---
+title: "Double integrals and Line integrals in the plane"
+chapter: "18.02 - Multivariable calculus"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+---
+
+___
+# Double integrals
+
+
+___
+# Exchanging order of integration
+
+
+___
+# Integration in polar coordinates
+
+___
+# Change of variables
+
+
+___
+# Vector fields
+
+
+___
+# Work and line integrals
+
+
+___
+# Geometric approach
+
+
+
+___
+# Physical interpretation
+
+
+
+___
+# Test for gradient fields
+
+
+
+___
+# Green’s theorem
+
+
+
+___
+# Flux
+
+
+
+___
+# Simply connected regions
+
+
+
+___
+# End
