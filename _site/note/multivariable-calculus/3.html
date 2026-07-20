@@ -78,6 +78,49 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="../navigation.js" defer=""></script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../styles.css">
@@ -397,8 +440,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Mục lục bài viết</h2>
    
   <ul>
-  <li><a href="#double-integrals" id="toc-double-integrals" class="nav-link active" data-scroll-target="#double-integrals">Double integrals</a></li>
-  <li><a href="#exchanging-order-of-integration" id="toc-exchanging-order-of-integration" class="nav-link" data-scroll-target="#exchanging-order-of-integration">Exchanging order of integration</a></li>
+  <li><a href="#double-integrals" id="toc-double-integrals" class="nav-link active" data-scroll-target="#double-integrals">Double integrals</a>
+  <ul class="collapse">
+  <li><a href="#cách-tính" id="toc-cách-tính" class="nav-link" data-scroll-target="#cách-tính">Cách tính</a></li>
+  <li><a href="#thử-đổi-thứ-tự" id="toc-thử-đổi-thứ-tự" class="nav-link" data-scroll-target="#thử-đổi-thứ-tự">Thử đổi thứ tự</a></li>
+  </ul></li>
   <li><a href="#integration-in-polar-coordinates" id="toc-integration-in-polar-coordinates" class="nav-link" data-scroll-target="#integration-in-polar-coordinates">Integration in polar coordinates</a></li>
   <li><a href="#change-of-variables" id="toc-change-of-variables" class="nav-link" data-scroll-target="#change-of-variables">Change of variables</a></li>
   <li><a href="#vector-fields" id="toc-vector-fields" class="nav-link" data-scroll-target="#vector-fields">Vector fields</a></li>
@@ -445,11 +491,32 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <section id="double-integrals" class="level1">
 <h1>Double integrals</h1>
+<section id="cách-tính" class="level2">
+<h2 class="anchored" data-anchor-id="cách-tính">Cách tính</h2>
+<p>Gồm 2 bước để tính <span class="math inline">\int \int S(x,y) \mathbf dx \mathbf dy</span></p>
+<ol type="1">
+<li>inner integral : giữ x là const</li>
+<li>outer integral : tính như bình thường</li>
+</ol>
+<p><strong>Ví dụ:</strong> <span class="math inline">\int_0^1 \int_0^1 (1 - x^2 - y^2) \mathbf dy \mathbf dx</span></p>
+<ol type="1">
+<li><p><span class="math display">
+\int_0^1(1 - x^2 - y^2)\mathbf dy = \left [y - x^2y - \frac {y^3} 3 \right]_0^1 = \frac 2 3 - x^2
+</span></p></li>
+<li><p><span class="math display">
+\int_0^1\left(\frac 2 3 - x^2 \right)\mathbf dx = \left[\frac 2 3 x - \frac 1 3 x^3\right]_0^1 = \frac 1 3
+</span></p></li>
+</ol>
+</section>
+<section id="thử-đổi-thứ-tự" class="level2">
+<h2 class="anchored" data-anchor-id="thử-đổi-thứ-tự">Thử đổi thứ tự</h2>
+<p>Đầu tiên, phải nói rằng: <span class="math display">
+\int_{x_{min}}^{x_{max}} \int_{y_{min(x)}}^{y_{max(x)}}S(x, y)\mathbf dy \mathbf dx
+=\int_{y_{min}}^{y_{max}} \int_{x_{min(y)}}^{x_{max(y)}}S(x, y)\mathbf dx \mathbf dy
+</span></p>
+<p>Tức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi có giúp việc tính tích phân dễ hơn hoặc khó hơn.</p>
 <hr>
 </section>
-<section id="exchanging-order-of-integration" class="level1">
-<h1>Exchanging order of integration</h1>
-<hr>
 </section>
 <section id="integration-in-polar-coordinates" class="level1">
 <h1>Integration in polar coordinates</h1>

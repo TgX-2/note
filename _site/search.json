@@ -603,11 +603,22 @@
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/3.html",
-    "href": "note/multivariable-calculus/3.html",
+    "objectID": "note/multivariable-calculus/3.html#cách-tính",
+    "href": "note/multivariable-calculus/3.html#cách-tính",
     "title": "Double integrals and Line integrals in the plane",
-    "section": "",
-    "text": "Double integrals\n\n\n\nExchanging order of integration\n\n\n\nIntegration in polar coordinates\n\n\n\nChange of variables\n\n\n\nVector fields\n\n\n\nWork and line integrals\n\n\n\nGeometric approach\n\n\n\nPhysical interpretation\n\n\n\nTest for gradient fields\n\n\n\nGreen’s theorem\n\n\n\nFlux\n\n\n\nSimply connected regions\n\n\n\nEnd",
+    "section": "Cách tính",
+    "text": "Cách tính\nGồm 2 bước để tính \\int \\int S(x,y) \\mathbf dx \\mathbf dy\n\ninner integral : giữ x là const\nouter integral : tính như bình thường\n\nVí dụ: \\int_0^1 \\int_0^1 (1 - x^2 - y^2) \\mathbf dy \\mathbf dx\n\n\n\\int_0^1(1 - x^2 - y^2)\\mathbf dy = \\left [y - x^2y - \\frac {y^3} 3 \\right]_0^1 = \\frac 2 3 - x^2\n\n\n\\int_0^1\\left(\\frac 2 3 - x^2 \\right)\\mathbf dx = \\left[\\frac 2 3 x - \\frac 1 3 x^3\\right]_0^1 = \\frac 1 3",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#thử-đổi-thứ-tự",
+    "href": "note/multivariable-calculus/3.html#thử-đổi-thứ-tự",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Thử đổi thứ tự",
+    "text": "Thử đổi thứ tự\nĐầu tiên, phải nói rằng: \n\\int_{x_{min}}^{x_{max}} \\int_{y_{min(x)}}^{y_{max(x)}}S(x, y)\\mathbf dy \\mathbf dx\n=\\int_{y_{min}}^{y_{max}} \\int_{x_{min(y)}}^{x_{max(y)}}S(x, y)\\mathbf dx \\mathbf dy\n\nTức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi có giúp việc tính tích phân dễ hơn hoặc khó hơn.",
     "crumbs": [
       "18.02",
       "Double integrals and Line integrals in the plane"
