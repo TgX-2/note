@@ -24,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -515,11 +550,137 @@ window.Quarto = {
 =\int_{y_{min}}^{y_{max}} \int_{x_{min(y)}}^{x_{max(y)}}S(x, y)\mathbf dx \mathbf dy
 </span></p>
 <p>Tức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi có giúp việc tính tích phân dễ hơn hoặc khó hơn.</p>
+<p><strong>Ví dụ:</strong> <span class="math display">
+\int_0^1 \int_x^{\sqrt x} \frac {e^y}{y} \mathbf dy \mathbf dx
+</span></p>
+<div id="1c7b34c0" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Miền x</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>, <span class="dv">500</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Hàm y = x</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> x</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> np.where(x <span class="op">&gt;=</span> <span class="dv">0</span>, np.sqrt(x), np.nan)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Vẽ hai đường</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y1, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=x</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y2, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$</span><span class="vs">y=</span><span class="dv">\s</span><span class="vs">qrt{x}</span><span class="dv">$</span><span class="vs">"</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> (x <span class="op">&gt;=</span> <span class="dv">0</span>) <span class="op">&amp;</span> (x <span class="op">&lt;=</span> <span class="dv">1</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.fill_between(</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    x[mask],</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    y1[mask],</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    y2[mask],</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.3</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Trục tọa độ</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">1.5</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>plt.gca().set_aspect(<span class="st">"equal"</span>, adjustable<span class="op">=</span><span class="st">"box"</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"$y$"</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>plt.grid(alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="3_files/figure-html/cell-2-output-1.png" width="547" height="509" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cách tư duy vẽ hình.
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">
+\int_a^b \int_{c(x)}^{d(x)} S(x, y) \mathbf dy \mathbf dx
+</span></p>
+<p>Nó sẽ là 2 đường thẳng là tập hợp các điểm <span class="math inline">c(x) \left\{ x \in \mathbb r | a \leq x \leq b \right\}</span> <span class="math inline">d(x) \left\{ x \in \mathbb r | a \leq x \leq b \right\}</span>.</p>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Giữ nguyên.</li>
+</ol>
+<p>Có thể thấy rằng việc tính <strong>inner integral</strong> <span class="math inline">\int_x^{\sqrt x}\frac {e^y} y \mathbf dy</span> rất khó.</p>
+<ol start="2" type="1">
+<li>Đổi thứ tự.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Chú ý!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nên nhớ rằng khi việc đổi thứ tự thì 2 biên cũng sẽ thay đổi!</p>
+</div>
+</div>
+<p>Lúc này hàm trở thành:</p>
+<p><span class="math display">
+\int_0^1 \int_{y^2}^y \frac {e^y} y \mathbf dx \mathbf dy
+</span></p>
+<p><strong>Innner</strong> <span class="math display">
+\int_{y^2}^y \frac {e^y} y \mathbf dx = \left[ \frac {e^y} y x \right]_{y^2}^y = e^y - ye^y
+</span></p>
+<p><strong>Outer</strong></p>
+<p><span class="math display">
+\int_0^1 \left(e^y - ye^y \right) \mathbf dy = \left[ -ye^y + 2e^y \right]_0^1 = e - 2
+</span></p>
 <hr>
 </section>
 </section>
 <section id="integration-in-polar-coordinates" class="level1">
 <h1>Integration in polar coordinates</h1>
+<p>Không chỉ việc dổi biến giúp tính tích phân dễ dàng hơn. Chúng ta cũng có một phương pháp khác là sử dụng tọa độ cực.</p>
+<p>Cách chuyển hàm trên tọa độ Đề các sang tọa độ cực, đó là chuyển:</p>
+<ul>
+<li><span class="math inline">x = r\cos\theta</span></li>
+<li><span class="math inline">y = r\sin\theta</span></li>
+</ul>
+<p>Vậy nên: <span class="math inline">\int\int S \mathbf dA = \int\int S_\theta r\mathbf dr \mathbf d\theta</span>. (<span class="math inline">\mathbf dA = \mathbf dx \mathbf dy = r\mathbf dr \mathbf d\theta \neq \mathbf dr \mathbf d\theta</span>)</p>
+<p><strong>Ví dụ</strong></p>
+<p>Tính: <span class="math display">
+\int \int_{x^2+y^2 \leq 1, x \geq0, y \geq 0}(1 - x^2 - y^2)\mathbf dx \mathbf dy
+\Rightarrow
+\int_0^{\pi/2}\int_0^1 (1 - r^2)r \mathbf dr \mathbf d\theta
+</span></p>
+<p><strong>Inner</strong> <span class="math display">
+\int_0^1 (r - r^3) \mathbf dr \mathbf =
+\left[ \frac 1 2 r^2 - \frac 1 4 r^4 \right]_0^1 =
+\frac 1 4
+</span></p>
+<p><strong>Outer</strong> <span class="math display">
+\int_0^{\pi/2} \frac 1 4 \mathbf d\theta = \frac \pi 8
+</span></p>
 <hr>
 </section>
 <section id="change-of-variables" class="level1">

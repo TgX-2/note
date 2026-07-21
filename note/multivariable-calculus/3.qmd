@@ -46,8 +46,131 @@ $$
 
 Tức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi có giúp việc tính tích phân dễ hơn hoặc khó hơn.
 
+**Ví dụ:** 
+$$
+\int_0^1 \int_x^{\sqrt x} \frac {e^y}{y} \mathbf dy \mathbf dx
+$$
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Miền x
+x = np.linspace(-0.5, 1.5, 500)
+
+# Hàm y = x
+y1 = x
+
+y2 = np.where(x >= 0, np.sqrt(x), np.nan)
+
+plt.figure(figsize=(6, 6))
+
+# Vẽ hai đường
+plt.plot(x, y1, label=r"$y=x$", linewidth=2)
+plt.plot(x, y2, label=r"$y=\sqrt{x}$", linewidth=2)
+
+mask = (x >= 0) & (x <= 1)
+plt.fill_between(
+    x[mask],
+    y1[mask],
+    y2[mask],
+    color="black",
+    alpha=0.3
+)
+
+# Trục tọa độ
+plt.axhline(0, color="black", linewidth=1)
+plt.axvline(0, color="black", linewidth=1)
+
+plt.xlim(-0.5, 1.5)
+plt.ylim(-0.5, 1.5)
+plt.gca().set_aspect("equal", adjustable="box")
+
+plt.xlabel("$x$")
+plt.ylabel("$y$")
+plt.legend()
+plt.grid(alpha=0.3)
+
+plt.show()
+```
+
+:::{.callout-tip collapse="true"}
+## Cách tư duy vẽ hình.
+
+$$
+\int_a^b \int_{c(x)}^{d(x)} S(x, y) \mathbf dy \mathbf dx
+$$
+
+Nó sẽ là 2 đường thẳng là tập hợp các điểm 
+$c(x) \left\{ x \in \mathbb r | a \leq x \leq b \right\}$
+$d(x) \left\{ x \in \mathbb r | a \leq x \leq b \right\}$.
+:::
+
+1) Giữ nguyên.
+
+Có thể thấy rằng việc tính **inner integral** $\int_x^{\sqrt x}\frac {e^y} y \mathbf dy$ rất khó.
+
+2) Đổi thứ tự.
+
+:::{.callout-warning}
+## Chú ý!
+Nên nhớ rằng khi việc đổi thứ tự thì 2 biên cũng sẽ thay đổi!
+:::
+
+Lúc này hàm trở thành:
+
+$$
+\int_0^1 \int_{y^2}^y \frac {e^y} y \mathbf dx \mathbf dy
+$$
+
+**Innner** 
+$$
+\int_{y^2}^y \frac {e^y} y \mathbf dx = \left[ \frac {e^y} y x \right]_{y^2}^y = e^y - ye^y
+$$
+
+**Outer**
+
+$$
+\int_0^1 \left(e^y - ye^y \right) \mathbf dy = \left[ -ye^y + 2e^y \right]_0^1 = e - 2
+$$
+
+
 ___
 # Integration in polar coordinates
+
+Không chỉ việc dổi biến giúp tính tích phân dễ dàng hơn. Chúng ta cũng có một phương pháp khác là sử dụng tọa độ cực.
+
+Cách chuyển hàm trên tọa độ Đề các sang tọa độ cực, đó là chuyển:
+
+* $x = r\cos\theta$
+* $y = r\sin\theta$
+
+Vậy nên: $\int\int S \mathbf dA = \int\int S_\theta r\mathbf dr \mathbf d\theta$. 
+($\mathbf dA = \mathbf dx \mathbf dy = r\mathbf dr \mathbf d\theta \neq \mathbf dr \mathbf d\theta$)
+
+**Ví dụ**
+
+Tính:
+$$
+\int \int_{x^2+y^2 \leq 1, x \geq0, y \geq 0}(1 - x^2 - y^2)\mathbf dx \mathbf dy 
+\Rightarrow
+\int_0^{\pi/2}\int_0^1 (1 - r^2)r \mathbf dr \mathbf d\theta
+$$
+
+**Inner**
+$$
+\int_0^1 (r - r^3) \mathbf dr \mathbf =
+\left[ \frac 1 2 r^2 - \frac 1 4 r^4 \right]_0^1 =
+\frac 1 4 
+$$
+
+**Outer**
+$$
+\int_0^{\pi/2} \frac 1 4 \mathbf d\theta = \frac \pi 8
+$$
 
 ___
 # Change of variables
