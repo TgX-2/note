@@ -481,7 +481,12 @@ window.Quarto = {
   <li><a href="#thử-đổi-thứ-tự" id="toc-thử-đổi-thứ-tự" class="nav-link" data-scroll-target="#thử-đổi-thứ-tự">Thử đổi thứ tự</a></li>
   </ul></li>
   <li><a href="#integration-in-polar-coordinates" id="toc-integration-in-polar-coordinates" class="nav-link" data-scroll-target="#integration-in-polar-coordinates">Integration in polar coordinates</a></li>
-  <li><a href="#change-of-variables" id="toc-change-of-variables" class="nav-link" data-scroll-target="#change-of-variables">Change of variables</a></li>
+  <li><a href="#change-of-variables" id="toc-change-of-variables" class="nav-link" data-scroll-target="#change-of-variables">Change of variables</a>
+  <ul class="collapse">
+  <li><a href="#đổi-biến" id="toc-đổi-biến" class="nav-link" data-scroll-target="#đổi-biến">Đổi biến</a></li>
+  <li><a href="#jacobians" id="toc-jacobians" class="nav-link" data-scroll-target="#jacobians">Jacobians</a></li>
+  <li><a href="#tính-biên" id="toc-tính-biên" class="nav-link" data-scroll-target="#tính-biên">Tính biên</a></li>
+  </ul></li>
   <li><a href="#vector-fields" id="toc-vector-fields" class="nav-link" data-scroll-target="#vector-fields">Vector fields</a></li>
   <li><a href="#work-and-line-integrals" id="toc-work-and-line-integrals" class="nav-link" data-scroll-target="#work-and-line-integrals">Work and line integrals</a></li>
   <li><a href="#geometric-approach" id="toc-geometric-approach" class="nav-link" data-scroll-target="#geometric-approach">Geometric approach</a></li>
@@ -549,11 +554,11 @@ window.Quarto = {
 \int_{x_{min}}^{x_{max}} \int_{y_{min(x)}}^{y_{max(x)}}S(x, y)\mathbf dy \mathbf dx
 =\int_{y_{min}}^{y_{max}} \int_{x_{min(y)}}^{x_{max(y)}}S(x, y)\mathbf dx \mathbf dy
 </span></p>
-<p>Tức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi có giúp việc tính tích phân dễ hơn hoặc khó hơn.</p>
+<p>Tức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi thứ tự có giúp việc tính tích phân dễ hơn hoặc khó hơn.</p>
 <p><strong>Ví dụ:</strong> <span class="math display">
 \int_0^1 \int_x^{\sqrt x} \frac {e^y}{y} \mathbf dy \mathbf dx
 </span></p>
-<div id="1c7b34c0" class="cell" data-execution_count="1">
+<div id="2d30f1b6" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -660,7 +665,7 @@ window.Quarto = {
 </section>
 <section id="integration-in-polar-coordinates" class="level1">
 <h1>Integration in polar coordinates</h1>
-<p>Không chỉ việc dổi biến giúp tính tích phân dễ dàng hơn. Chúng ta cũng có một phương pháp khác là sử dụng tọa độ cực.</p>
+<p>Không chỉ việc đổi thứ tự tích phân giúp tính tích phân dễ dàng hơn. Chúng ta cũng có một phương pháp khác là sử dụng tọa độ cực.</p>
 <p>Cách chuyển hàm trên tọa độ Đề các sang tọa độ cực, đó là chuyển:</p>
 <ul>
 <li><span class="math inline">x = r\cos\theta</span></li>
@@ -685,7 +690,195 @@ window.Quarto = {
 </section>
 <section id="change-of-variables" class="level1">
 <h1>Change of variables</h1>
+<p>Ngoài việc đổi thứ tự tích phân, đổi sang tọa độ cực. Thì chúng ta có thêm một phương pháp nữa để tính tích phân trong một số trường hợp, đó là đổi biển.</p>
+<section id="đổi-biến" class="level2">
+<h2 class="anchored" data-anchor-id="đổi-biến">Đổi biến</h2>
+<p><strong>Ví dụ</strong> việc tính:</p>
+<p><span class="math display">
+\int_0^1\int_0^1 (3x-2y)(x+y) \mathbf dx \mathbf dy
+</span></p>
+<p>Tôi cảm thấy quá khó, vậy nên tôi có thể thử đổi biến. Đặt <span class="math inline">u = (3x-2y) \qquad v = (x+y)</span>, phương trình bây giờ trở thành:</p>
+<p><span class="math display">
+\int_a^b \int_c^d (uv) |J| \mathbf du \mathbf dv
+</span></p>
+<p>Và giờ việc của chúng ta là phải tính lại biên và tính <span class="math inline">\lambda</span>, bằng cách sử dụng <strong>Jacobian</strong> và một số tư duy hình học để tính biên.</p>
+</section>
+<section id="jacobians" class="level2">
+<h2 class="anchored" data-anchor-id="jacobians">Jacobians</h2>
+<p>Ta có công thức xấp xỉ như sau:</p>
+<p><span class="math display">
+\Delta u \approx u_x\Delta x + u_y\Delta y \qquad
+\Delta v \approx v_x\Delta x + v_y\Delta y
+</span> <span class="math display">
+\Rightarrow
+\begin{bmatrix}
+\Delta u \\
+\Delta v
+\end{bmatrix}
+\approx
+\begin{bmatrix}
+u_x &amp; u_y \\
+v_x &amp; v_y
+\end{bmatrix}
+\begin{bmatrix}
+\Delta x \\
+\Delta y
+\end{bmatrix}
+</span></p>
+<p>Vậy hệ số <span class="math inline">\frac{\mathbf du \mathbf dv}{\mathbf dx \mathbf dy}</span> sẽ phải là định thức của ma trận vuông kia.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Tại sao?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Việc này nếu chưa học <strong>18.06</strong> thì khá là khó để suy nghĩ. Nhưng hãy suy nghĩ như thế này.</p>
+<p>Ta có 2 hình, bên trái chỉ <span class="math inline">\mathbf dA = \mathbf dx \mathbf dy</span> và bên phải là <span class="math inline">\mathbf dA' = \mathbf du \mathbf dv</span>, việc của chúng ta là tính hệ số diện tích của nó. Hay chính là chúng thu to hay thu nhỏ với hệ số bao nhiêu.</p>
+<div id="281c2f74" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> axes[<span class="dv">0</span>]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>e1 <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">0</span>])</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>e2 <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ax.quiver(<span class="dv">0</span>, <span class="dv">0</span>, e1[<span class="dv">0</span>], e1[<span class="dv">1</span>],</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>          angles<span class="op">=</span><span class="st">'xy'</span>, scale_units<span class="op">=</span><span class="st">'xy'</span>, scale<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span><span class="st">'C0'</span>, width<span class="op">=</span><span class="fl">0.008</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ax.quiver(<span class="dv">0</span>, <span class="dv">0</span>, e2[<span class="dv">0</span>], e2[<span class="dv">1</span>],</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>          angles<span class="op">=</span><span class="st">'xy'</span>, scale_units<span class="op">=</span><span class="st">'xy'</span>, scale<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span><span class="st">'C0'</span>, width<span class="op">=</span><span class="fl">0.008</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>square <span class="op">=</span> np.array([</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">0</span>],</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">0</span>],</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">1</span>],</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>ax.fill(square[:,<span class="dv">0</span>], square[:,<span class="dv">1</span>], color<span class="op">=</span><span class="st">'gray'</span>, alpha<span class="op">=</span><span class="fl">0.35</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">1.05</span>, <span class="op">-</span><span class="fl">0.08</span>, <span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1,0</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="op">-</span><span class="fl">0.15</span>, <span class="fl">1.05</span>, <span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">0,1</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="op">-</span><span class="fl">0.08</span>, <span class="op">-</span><span class="fl">0.12</span>, <span class="vs">r'</span><span class="dv">$</span><span class="vs">O</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">1.6</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">0.5</span>, <span class="fl">1.6</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$x$"</span>)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$y$"</span>)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> axes[<span class="dv">1</span>]</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> np.array([<span class="dv">3</span>, <span class="dv">1</span>])</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>])</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>ax.quiver(<span class="dv">0</span>, <span class="dv">0</span>, u[<span class="dv">0</span>], u[<span class="dv">1</span>],</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>          angles<span class="op">=</span><span class="st">'xy'</span>, scale_units<span class="op">=</span><span class="st">'xy'</span>, scale<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span><span class="st">'C0'</span>, width<span class="op">=</span><span class="fl">0.008</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>ax.quiver(<span class="dv">0</span>, <span class="dv">0</span>, v[<span class="dv">0</span>], v[<span class="dv">1</span>],</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>          angles<span class="op">=</span><span class="st">'xy'</span>, scale_units<span class="op">=</span><span class="st">'xy'</span>, scale<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span><span class="st">'C0'</span>, width<span class="op">=</span><span class="fl">0.008</span>)</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>parallelogram <span class="op">=</span> np.array([</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">0</span>],</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    u,</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    u <span class="op">+</span> v,</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    v</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>ax.fill(parallelogram[:,<span class="dv">0</span>], parallelogram[:,<span class="dv">1</span>],</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'gray'</span>, alpha<span class="op">=</span><span class="fl">0.35</span>)</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>ax.text(u[<span class="dv">0</span>]<span class="op">+</span><span class="fl">0.1</span>, u[<span class="dv">1</span>], <span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">3,1</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>ax.text(v[<span class="dv">0</span>]<span class="op">-</span><span class="fl">0.9</span>, v[<span class="dv">1</span>], <span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">-2,1</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>ax.text((u<span class="op">+</span>v)[<span class="dv">0</span>]<span class="op">+</span><span class="fl">0.1</span>, (u<span class="op">+</span>v)[<span class="dv">1</span>]<span class="op">+</span><span class="fl">0.05</span>, <span class="vs">r'</span><span class="dv">$</span><span class="kw">(</span><span class="vs">1,2</span><span class="kw">)</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="op">-</span><span class="fl">0.08</span>, <span class="op">-</span><span class="fl">0.12</span>, <span class="vs">r'</span><span class="dv">$</span><span class="vs">O</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">3.5</span>, <span class="dv">4</span>)</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">1</span>, <span class="dv">3</span>)</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$u$"</span>)</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$v$"</span>)</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="3_files/figure-html/cell-3-output-1.png" width="1145" height="550" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Và thứ chúng ta đang tìm chính là định thức của ma trận? (Toi khong biet giai thich nhu the nao nua, hay chco <strong>18.06 Linear Algebra</strong>).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Định nghĩa
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>the Jacobian is <span class="math display">
+J = \frac{\partial(u, v)}{\partial(x, y)} =
+\begin{vmatrix}
+u_x &amp; u_y \\
+v_x &amp; v_y
+\end{vmatrix}
+</span></p>
+<p>Then <span class="math display">
+\mathbf du \mathbf dv = |J|\mathbf dx \mathbf dy = \frac{\partial(u, v)}{\partial(x, y)} \mathbf dx \mathbf dy
+</span></p>
+</div>
+</div>
+<p><strong>Ví dụ</strong> Chuyển hệ tọa độ Đề-các sang tọa độ cực.</p>
+<p>Ta đặt <span class="math inline">x = r\cos\theta \qquad y = r\sin\theta</span>.</p>
+<p>The Jacobian: <span class="math display">
+J  = \frac{\partial(x, y)}{\partial(r, \theta)} =
+\begin{vmatrix}
+x_r &amp; x_{\theta} \\
+y_r &amp; y_{\theta}
+\end{vmatrix} =
+\begin{vmatrix}
+\cos\theta &amp; -r\sin\theta \\
+\sin\theta &amp; r\cos\theta
+\end{vmatrix} =
+r\cos^2\theta + r\sin^2\theta = r
+</span></p>
+<p>Vậy suy ra: <span class="math inline">\mathbf dx \mathbf dy = r \mathbf dr \mathbf d\theta</span>.</p>
+</section>
+<section id="tính-biên" class="level2">
+<h2 class="anchored" data-anchor-id="tính-biên">Tính biên</h2>
 <hr>
+</section>
 </section>
 <section id="vector-fields" class="level1">
 <h1>Vector fields</h1>

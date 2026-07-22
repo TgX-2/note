@@ -44,7 +44,7 @@ $$
 =\int_{y_{min}}^{y_{max}} \int_{x_{min(y)}}^{x_{max(y)}}S(x, y)\mathbf dx \mathbf dy
 $$
 
-Tức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi có giúp việc tính tích phân dễ hơn hoặc khó hơn.
+Tức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi thứ tự có giúp việc tính tích phân dễ hơn hoặc khó hơn.
 
 **Ví dụ:** 
 $$
@@ -141,7 +141,7 @@ $$
 ___
 # Integration in polar coordinates
 
-Không chỉ việc dổi biến giúp tính tích phân dễ dàng hơn. Chúng ta cũng có một phương pháp khác là sử dụng tọa độ cực.
+Không chỉ việc đổi thứ tự tích phân giúp tính tích phân dễ dàng hơn. Chúng ta cũng có một phương pháp khác là sử dụng tọa độ cực.
 
 Cách chuyển hàm trên tọa độ Đề các sang tọa độ cực, đó là chuyển:
 
@@ -169,12 +169,193 @@ $$
 
 **Outer**
 $$
-\int_0^{\pi/2} \frac 1 4 \mathbf d\theta = \frac \pi 8
+\int_0^{\pi/2} \frac 1 4 \mathbf d\theta = \frac \pi 8 
 $$
 
 ___
 # Change of variables
 
+Ngoài việc đổi thứ tự tích phân, đổi sang tọa độ cực. Thì chúng ta có thêm một phương pháp nữa để tính tích phân trong một số trường hợp, đó là đổi biển.
+
+## Đổi biến
+
+**Ví dụ** việc tính:
+
+$$
+\int_0^1\int_0^1 (3x-2y)(x+y) \mathbf dx \mathbf dy
+$$
+
+Tôi cảm thấy quá khó, vậy nên tôi có thể thử đổi biến. Đặt $u = (3x-2y) \qquad v = (x+y)$, phương trình bây giờ trở thành:
+
+$$
+\int_a^b \int_c^d (uv) |J| \mathbf du \mathbf dv
+$$
+
+Và giờ việc của chúng ta là phải tính lại biên và tính $\lambda$, bằng cách sử dụng **Jacobian** và một số tư duy hình học để tính biên.
+
+
+## Jacobians
+
+Ta có công thức xấp xỉ như sau:
+
+$$
+\Delta u \approx u_x\Delta x + u_y\Delta y \qquad 
+\Delta v \approx v_x\Delta x + v_y\Delta y
+$$
+$$
+\Rightarrow 
+\begin{bmatrix}
+\Delta u \\ 
+\Delta v
+\end{bmatrix} 
+\approx
+\begin{bmatrix}
+u_x & u_y \\ 
+v_x & v_y
+\end{bmatrix}
+\begin{bmatrix}
+\Delta x \\ 
+\Delta y
+\end{bmatrix}
+$$
+
+Vậy hệ số $\frac{\mathbf du \mathbf dv}{\mathbf dx \mathbf dy}$ sẽ phải là định thức của ma trận vuông kia.
+
+:::{.callout-tip collapse="true"}
+## Tại sao?
+Việc này nếu chưa học **18.06** thì khá là khó để suy nghĩ. Nhưng hãy suy nghĩ như thế này.
+
+Ta có 2 hình, bên trái chỉ $\mathbf dA = \mathbf dx \mathbf dy$ và bên phải là $\mathbf dA' = \mathbf du \mathbf dv$, việc của chúng ta là tính hệ số diện tích của nó. Hay chính là chúng thu to hay thu nhỏ với hệ số bao nhiêu.
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 6))
+ax = axes[0]
+
+ax.axhline(0, color='black')
+ax.axvline(0, color='black')
+
+e1 = np.array([1, 0])
+e2 = np.array([0, 1])
+
+ax.quiver(0, 0, e1[0], e1[1],
+          angles='xy', scale_units='xy', scale=1,
+          color='C0', width=0.008)
+
+ax.quiver(0, 0, e2[0], e2[1],
+          angles='xy', scale_units='xy', scale=1,
+          color='C0', width=0.008)
+
+square = np.array([
+    [0, 0],
+    [1, 0],
+    [1, 1],
+    [0, 1]
+])
+
+ax.fill(square[:,0], square[:,1], color='gray', alpha=0.35)
+
+ax.text(1.05, -0.08, r'$(1,0)$')
+ax.text(-0.15, 1.05, r'$(0,1)$')
+ax.text(-0.08, -0.12, r'$O$')
+
+ax.set_xlim(-0.5, 1.6)
+ax.set_ylim(-0.5, 1.6)
+ax.set_aspect('equal')
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
+ax.grid(True)
+
+
+ax = axes[1]
+
+ax.axhline(0, color='black')
+ax.axvline(0, color='black')
+
+u = np.array([3, 1])
+v = np.array([-2, 1])
+
+ax.quiver(0, 0, u[0], u[1],
+          angles='xy', scale_units='xy', scale=1,
+          color='C0', width=0.008)
+
+ax.quiver(0, 0, v[0], v[1],
+          angles='xy', scale_units='xy', scale=1,
+          color='C0', width=0.008)
+
+parallelogram = np.array([
+    [0, 0],
+    u,
+    u + v,
+    v
+])
+
+ax.fill(parallelogram[:,0], parallelogram[:,1],
+        color='gray', alpha=0.35)
+
+ax.text(u[0]+0.1, u[1], r'$(3,1)$')
+ax.text(v[0]-0.9, v[1], r'$(-2,1)$')
+ax.text((u+v)[0]+0.1, (u+v)[1]+0.05, r'$(1,2)$')
+ax.text(-0.08, -0.12, r'$O$')
+
+ax.set_xlim(-3.5, 4)
+ax.set_ylim(-1, 3)
+ax.set_aspect('equal')
+ax.set_xlabel("$u$")
+ax.set_ylabel("$v$")
+ax.grid(True)
+
+plt.tight_layout()
+plt.show()
+```
+
+Và thứ chúng ta đang tìm chính là định thức của ma trận? (Toi khong biet giai thich nhu the nao nua, hay chco **18.06 Linear Algebra**).
+:::
+
+:::{.callout-warning}
+## Định nghĩa
+the Jacobian is 
+$$
+J = \frac{\partial(u, v)}{\partial(x, y)} = 
+\begin{vmatrix}
+u_x & u_y \\
+v_x & v_y
+\end{vmatrix}
+$$
+
+Then
+$$
+\mathbf du \mathbf dv = |J|\mathbf dx \mathbf dy = \frac{\partial(u, v)}{\partial(x, y)} \mathbf dx \mathbf dy
+$$
+:::
+
+**Ví dụ** Chuyển hệ tọa độ Đề-các sang tọa độ cực.
+
+Ta đặt $x = r\cos\theta \qquad y = r\sin\theta$.
+
+The Jacobian: 
+$$
+J  = \frac{\partial(x, y)}{\partial(r, \theta)} = 
+\begin{vmatrix}
+x_r & x_{\theta} \\
+y_r & y_{\theta}
+\end{vmatrix} = 
+\begin{vmatrix}
+\cos\theta & -r\sin\theta \\ 
+\sin\theta & r\cos\theta
+\end{vmatrix} = 
+r\cos^2\theta + r\sin^2\theta = r
+$$
+
+Vậy suy ra: $\mathbf dx \mathbf dy = r \mathbf dr \mathbf d\theta$.
+
+
+## Tính biên
 
 ___
 # Vector fields
