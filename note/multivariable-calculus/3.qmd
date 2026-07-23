@@ -355,11 +355,180 @@ $$
 Vậy suy ra: $\mathbf dx \mathbf dy = r \mathbf dr \mathbf d\theta$.
 
 
-## Tính biên
+## Tính biên - notyet
 
 ___
 # Vector fields
 
+Trường vector có khá nhiều ứng dụng trong đời sống, như biểu đồ gió:
+![](../../img/7.png)
+hay là trường lực, trường hấp dẫn, ...
+
+$$
+\vec F = M\hat{\mathbf i} + N\hat{\mathbf j}, \qquad M = M(x, y), N = N(x, y) 
+$$
+
+Mỗi điểm trong mặt phẳng đều có môt vector $\vec F$, vector này phụ thuộc vào x, y.
+
+Một số hình ảnh ví dụ về trường Vector.
+
+**Ví dụ 1** $\vec F = 2 \hat{\mathbf i} + \hat{\mathbf j}$
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 15)
+y = np.linspace(-3, 3, 15)
+X, Y = np.meshgrid(x, y)
+
+U = np.full_like(X, 2.0)
+V = np.full_like(Y, 1.0)
+
+magnitude = np.sqrt(U**2 + V**2)
+
+plt.figure(figsize=(6, 6))
+q = plt.quiver(
+    X, Y, U, V,
+    magnitude,
+    cmap="viridis",
+    angles="xy",
+    scale_units="xy",
+    scale=8,
+    pivot="mid"
+)
+
+plt.colorbar(q, label=r"$|\mathbf{F}|$")
+plt.xlim(-3.5, 3.5)
+plt.ylim(-3.5, 3.5)
+plt.gca().set_aspect("equal")
+plt.grid(True)
+plt.show()
+```
+
+Mọi vector đều cùng hướng, cùng độ lớn tại mọi điểm.
+
+**Ví dụ 2** $\vec F = x \hat{\mathbf i}$
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 15)
+y = np.linspace(-3, 3, 15)
+X, Y = np.meshgrid(x, y)
+
+U = X
+V = np.zeros_like(X)
+
+magnitude = np.sqrt(U**2 + V**2)
+
+plt.figure(figsize=(6, 6))
+q = plt.quiver(
+    X, Y, U, V,
+    magnitude,
+    cmap="viridis",
+    angles="xy",
+    scale_units="xy",
+    scale=8,
+    pivot="mid"
+)
+
+plt.colorbar(q, label=r"$|\mathbf{F}|$")
+plt.xlim(-3.5, 3.5)
+plt.ylim(-3.5, 3.5)
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.gca().set_aspect("equal")
+plt.grid(True)
+plt.show()
+```
+
+**Ví dụ 3** $\vec F = x \hat{\mathbf i} + y \hat{\mathbf j}$
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 15)
+y = np.linspace(-3, 3, 15)
+X, Y = np.meshgrid(x, y)
+
+U = X
+V = Y
+
+magnitude = np.sqrt(U**2 + V**2)
+
+plt.figure(figsize=(6, 6))
+q = plt.quiver(
+    X, Y, U, V,
+    magnitude,
+    cmap="viridis",
+    angles="xy",
+    scale_units="xy",
+    scale=10,
+    pivot="mid"
+)
+
+plt.colorbar(q, label=r"$|\mathbf{F}|$")
+plt.xlim(-3.5, 3.5)
+plt.ylim(-3.5, 3.5)
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.gca().set_aspect("equal")
+plt.grid(True)
+plt.title(r"$\mathbf{F}=x\mathbf{i}+y\mathbf{j}$")
+plt.show()
+```
+
+**Ví dụ 4** $\vec F = -y \hat{\mathbf i} + x\hat{\mathbf j}$
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 15)
+y = np.linspace(-3, 3, 15)
+X, Y = np.meshgrid(x, y)
+
+U = -Y
+V = X
+
+magnitude = np.sqrt(U**2 + V**2)
+
+plt.figure(figsize=(6, 6))
+q = plt.quiver(
+    X, Y, U, V,
+    magnitude,
+    cmap="viridis",
+    angles="xy",
+    scale_units="xy",
+    scale=10,
+    pivot="mid"
+)
+
+plt.colorbar(q, label=r"$|\mathbf{F}|$")
+plt.xlim(-3.5, 3.5)
+plt.ylim(-3.5, 3.5)
+plt.xlabel("$x$")
+plt.ylabel("$y$")
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.gca().set_aspect("equal")
+plt.grid(True)
+plt.title(r"$\mathbf{F}=-y\mathbf{i}+x\mathbf{j}$")
+plt.show()
+```
 
 ___
 # Work and line integrals
