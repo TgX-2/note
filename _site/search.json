@@ -669,11 +669,22 @@
     ]
   },
   {
+    "objectID": "note/multivariable-calculus/3.html#cách-tính-tích-phân-đường",
+    "href": "note/multivariable-calculus/3.html#cách-tính-tích-phân-đường",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Cách tính tích phân đường",
+    "text": "Cách tính tích phân đường\nVí dụ Tính F = &lt;2xy, x^2y&gt; với đường y = x^2, 0 \\leq x \\leq 1.\nBước 1: Tham số hóa.\nTa sẽ cố biểu diễn x và y theo một biến, ở đây ta gọi là t. Ý nghĩa của t là tại t = 0, thì đang ở điểm (0, 0) và tại t = 1 thì đang ở điểm (1, 1).\n\nx = t \\qquad \\mathbf dx = 1\\mathbf dt \\\\\ny = t^2 \\qquad \\mathbf dy = 2t\\mathbf dt\n\nBước 2: Tìm công thức.\nTa đã biết rằng: \n\\int_C \\vec F \\cdot \\mathbf d\\vec r = \\int_C &lt;2xy, x^2y&gt;\\cdot&lt;\\mathbf dx, \\mathbf dy&gt; = \\int_C 2xy\\mathbf dx + x^2y\\mathbf dy\n\nBước 3: Thay số vào và tính.\n\n\\int_0^1 2tt^21\\mathbf dt + t^2t^2 2t\\mathbf dt\n \n= \\int_0^1 2t^3 + 2t^5 \\mathbf dt\n\n\n= \\left[2 \\frac {t^4} 4 \\right]_0^1 + \\left[2 \\frac{t^6} 6 \\right]_0^1 = \\frac 1 2 + \\frac 1 3 = \\frac 5 6",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
+  },
+  {
     "objectID": "note/multivariable-calculus/3.html#fundamental-theorem-of-calculus-for-line-integral",
     "href": "note/multivariable-calculus/3.html#fundamental-theorem-of-calculus-for-line-integral",
     "title": "Double integrals and Line integrals in the plane",
     "section": "Fundamental theorem of calculus for line integral",
-    "text": "Fundamental theorem of calculus for line integral\nChúng ta đã học ở giải tích một biến rằng:\n\n\\int_a^b f'(x) \\mathbf dx = f(b) - f(a)\n\nThì chúng ta cũng có định lý cơ bản của giải tích cho tích phân đường. Điều này được áp dụng nếu như \\vec F là Gradient fields.\nKhi đó định lý cho tích phân đường C có hàm F là một Gradient fiedls đi từ P0 đến P1 là:\n\n\\int_C \\nabla f \\cdot \\mathbf d\\vec r = f(P_1) - f(P_0)\n\nHay:\n\n\\int_C f_x \\mathbf dx + f_y \\mathbf dy = \\int_C \\mathbf df = f(P_1) - f(P_0)\n\n\n\n\n\n\n\nNoteProof\n\n\n\n\n\\int_C \\nabla f \\cdot \\mathbf d\\vec r\n \n= \\int_{t_0}^{t_1} \\left(f_x \\frac{\\mathbf dx}{\\mathbf dt} + f_y \\frac{\\mathbf dx}{\\mathbf dt} \\right) \\mathbf dt\n\n\n= \\int_{t_0}^{t_1} \\frac{\\mathbf df}{\\mathbf dt}\\mathbf dt\n \n= \\left[f(x(t), y(t)) \\right]_{t_0}^{t_1}\n \n= f(P_1) - f(P_0)\n\n\n\nQuay lại với ví dụ bài tập ở trên. Bằng một cách thần kỳ nào đó, tôi biết được f(x, y) = xy suy ra \\nabla f = &lt;y, x&gt;. Trường vector của chúng ta là trường vector gradient. Vậy nên chúng ta có thể áp dụng định lý cơ bản này.\nVì điểm đầu = điểm cuối nên đáp án = 0. Hoàn toàn phù hợp",
+    "text": "Fundamental theorem of calculus for line integral\nChúng ta đã học ở giải tích một biến rằng:\n\n\\int_a^b f'(x) \\mathbf dx = f(b) - f(a)\n\nThì chúng ta cũng có định lý cơ bản của giải tích cho tích phân đường. Điều này được áp dụng nếu như \\vec F là Gradient fields.\nKhi đó định lý cho tích phân đường C có hàm F là một Gradient fiedls đi từ P0 đến P1 là:\n\n\\int_C \\nabla f \\cdot \\mathbf d\\vec r = f(P_1) - f(P_0)\n\nHay:\n\n\\int_C f_x \\mathbf dx + f_y \\mathbf dy = \\int_C \\mathbf df = f(P_1) - f(P_0)\n\n\n\n\n\n\n\nNoteProof\n\n\n\n\n\\int_C \\nabla f \\cdot \\mathbf d\\vec r\n \n= \\int_{t_0}^{t_1} \\left(f_x \\frac{\\mathbf dx}{\\mathbf dt} + f_y \\frac{\\mathbf dx}{\\mathbf dt} \\right) \\mathbf dt\n\n\n= \\int_{t_0}^{t_1} \\frac{\\mathbf df}{\\mathbf dt}\\mathbf dt\n \n= \\left[f(x(t), y(t)) \\right]_{t_0}^{t_1}\n \n= f(P_1) - f(P_0)\n\n\n\nQuay lại với ví dụ bài tập ở trên. Bằng một cách thần kỳ nào đó, tôi biết được f(x, y) = xy suy ra \\nabla f = &lt;y, x&gt;. Trường vector của chúng ta là trường vector gradient. Vậy nên chúng ta có thể áp dụng định lý cơ bản này.\nVì điểm đầu = điểm cuối nên đáp án = 0. Hoàn toàn phù hợp.",
     "crumbs": [
       "18.02",
       "Double integrals and Line integrals in the plane"
@@ -684,7 +695,7 @@
     "href": "note/multivariable-calculus/3.html#path-independence-1",
     "title": "Double integrals and Line integrals in the plane",
     "section": "Path independence",
-    "text": "Path independence",
+    "text": "Path independence\nTừ đó ta suy ra một định nghĩa mới, đường đi độc lập, giá trị của tích phân đường chỉ phụ thuộc vào điểm đầu và điểm cuối, không phụ thuộc vào nó đi đường nào.\nĐiều này khi và chỉ khi trường vector là conservative, \\vec F = \\nabla f, khi đó:\n\n\\int_c \\vec F \\mathbf d\\vec r = f(B) - f(A)\n\nVí dụ\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\ndef colored_line(ax, x, y, cmap='viridis', lw=5):\n    points = np.array([x, y]).T.reshape(-1, 1, 2)\n    segments = np.concatenate([points[:-1], points[1:]], axis=1)\n\n    lc = LineCollection(\n        segments,\n        cmap=cmap,\n        norm=plt.Normalize(0, 1)\n    )\n\n    lc.set_array(np.linspace(0, 1, len(x)-1))\n    lc.set_linewidth(lw)\n    ax.add_collection(lc)\n    return lc\nt = np.linspace(0, 1, 500)\n\n# C1 (đường dưới)\nx1 = 4 * t\ny1 = -1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\n\n# C2 (đường trên)\nx2 = 4 * t\ny2 =  1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\nfig, ax = plt.subplots(figsize=(9,5))\n\ncolored_line(ax, x1, y1, cmap='viridis', lw=5)\ncolored_line(ax, x2, y2, cmap='viridis', lw=5)\nk = 320\nax.annotate(\n    \"\",\n    xy=(x1[k+8], y1[k+8]),\n    xytext=(x1[k], y1[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\nk = 270\nax.annotate(\n    \"\",\n    xy=(x2[k+8], y2[k+8]),\n    xytext=(x2[k], y2[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\n\nax.scatter([0,4],[0,0], color='black', s=40)\n\nax.text(-0.22,-0.18,r\"$P_0$\",fontsize=18)\nax.text(4.08,-0.18,r\"$P_1$\",fontsize=18)\n\nax.text(2.45,-1.35,r\"$C_1$\",fontsize=18)\nax.text(2.45, 1.15,r\"$C_2$\",fontsize=18)\nax.set_aspect('equal')\nax.set_xlim(-0.5,4.5)\nax.set_ylim(-2.0,2.0)\n\nax.axis('off')\n\nplt.tight_layout()\nplt.show()",
     "crumbs": [
       "18.02",
       "Double integrals and Line integrals in the plane"
