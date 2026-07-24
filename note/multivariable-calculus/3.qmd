@@ -531,8 +531,17 @@ plt.show()
 ```
 
 ___
-# Work and line integrals
+# Line integrals
 
+## Công
+
+$A = Fs = \vec F \cdot \Delta \vec r$ cho một chuyển động nhỏ $\Delta \vec r$. Tổng công được tính bằng cách tính tổng các cái này theo một quỹ đạo C.
+
+Tưởng tượng có một đường cong C. Một điểm di chuyển trên quỹ đạo đó, và có lực tại mỗi điểm là khác nhau. Công tại một điểm bằng tích vô hướng của F với vector tiếp tuyến tại điểm đó. Và tổng công là khi ta chia nhỏ các vector tiếp tuyến, đến vô hạn.
+
+$$
+W = \int_C \vec F \cdot \mathbf d\vec r \left(= \lim_{\Delta \vec r \rightarrow 0} \sum_i \vec F \cdot \Delta \vec r_i \right)
+$$
 
 ___
 # Geometric approach
@@ -540,12 +549,221 @@ ___
 
 
 ___
-# Physical interpretation
+# Path independence
+
+**Tính** Tích phân đường $C = C_1 + C_2 + C_3$ trong trường vector $\vec F = <y, x>$ sau:
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-1.6, 1.6, 17)
+y = np.linspace(-1.6, 1.6, 17)
+X, Y = np.meshgrid(x, y)
+
+U = Y
+V = X
+
+fig, ax = plt.subplots(figsize=(7,7))
+
+ax.quiver(
+    X, Y, U, V,
+    color='steelblue',
+    alpha=0.75,
+    angles='xy',
+    scale_units='xy',
+    scale=12,
+    width=0.003
+)
+
+ax.annotate(
+    "",
+    xy=(1,0),
+    xytext=(0,0),
+    arrowprops=dict(
+        arrowstyle="->",
+        lw=4,
+        color="midnightblue"
+    )
+)
+
+theta = np.linspace(0, np.pi/4, 200)
+x_arc = np.cos(theta)
+y_arc = np.sin(theta)
+
+ax.plot(x_arc, y_arc, color='midnightblue', lw=4)
+
+i = 120
+ax.annotate(
+    "",
+    xy=(x_arc[i+5], y_arc[i+5]),
+    xytext=(x_arc[i], y_arc[i]),
+    arrowprops=dict(
+        arrowstyle="->",
+        color="midnightblue",
+        lw=4
+    )
+)
+
+p = np.sqrt(2)/2
+
+ax.annotate(
+    "",
+    xy=(0,0),
+    xytext=(p,p),
+    arrowprops=dict(
+        arrowstyle="->",
+        lw=4,
+        color="midnightblue"
+    )
+)
+
+ax.text(0.48, -0.08, r"$C_1$", fontsize=16)
+ax.text(0.95, 0.45, r"$C_2$", fontsize=16)
+ax.text(0.28, 0.42, r"$C_3$", fontsize=16)
+
+ax.set_xlim(-1.6,1.6)
+ax.set_ylim(-1.6,1.6)
+
+ax.set_aspect("equal")
+
+ax.spines['left'].set_position('zero')
+ax.spines['bottom'].set_position('zero')
+ax.spines['right'].set_visible(False)
+ax.spines['top'].set_visible(False)
+
+ax.set_xticks(np.arange(-1.5,1.6,0.5))
+ax.set_yticks(np.arange(-1.5,1.6,0.5))
+
+ax.set_xlabel("$x$", fontsize=14)
+ax.set_ylabel("$y$", fontsize=14, rotation=0)
+
+plt.tight_layout()
+plt.show()
+```
+
+***Công thức***
+$$
+\int_C \vec F \cdot \mathbf d\vec r = \int_C y\mathbf dx + x\mathbf dy
+$$
+
+***Tính C1***
+
+Ta có: $x = t \qquad y = 0 \qquad \Rightarrow \qquad \mathbf dx = 1 \mathbf dt \qquad \mathbf dy = 0$
+$$
+\int_C y\mathbf dx + x\mathbf dy = \int_0^1 0 \mathbf dt = 0
+$$
+
+***Tính C2***
+
+Dùng tọa độ cực. 
+
+Thay $x = r\cos\theta \qquad y = r\sin\theta \qquad \\ \Rightarrow \qquad \mathbf dx = -r\sin\theta \mathbf d\theta \qquad \mathbf dy = r\cos\theta \mathbf d\theta$.
+
+Vì là góc 45 độ nên, $0 \leq \theta \leq \pi/4$.
+
+$$
+\int_C y\mathbf dx + x\mathbf dy = \int_0^{\pi/4} r\sin\theta(-r\sin\theta\mathbf d\theta) + 
+r\cos\theta r\cos\theta\mathbf d\theta
+$$
+
+$$
+= \int_0^{\pi/4} -r^2\sin^2\theta\mathbf d\theta + r^2\cos^2\theta\mathbf d\theta
+$$
+
+$$
+= \int_0^{\pi/4} (\cos^2\theta - \sin^2\theta)\mathbf d\theta \\ 
+= \int_0^{\pi/4} \cos(2\theta)\mathbf d\theta \\ 
+= \left[\frac 1 2 \sin(2\theta) \right]_0^{\pi/4} = \frac 1 2 
+$$
+
+***Tính C3***
+
+Thay vì tính công từ điểm cuối C2 đến gốc tọa độ, thì ta có thể tính công từ gốc tọa độ đến điểm cuối C2, chính nó bằng -C3.
+
+Làm tương tự mấy cái kia ta được, 
+$$
+x = t \qquad y = t \\ 
+\mathbf dx = \mathbf dt \qquad \mathbf dy = \mathbf dt
+$$
+
+$$
+\int_C y\mathbf dx + x\mathbf dy = \int_0^{\frac 1 {\sqrt 2}} t\mathbf dt + t\mathbf dt
+$$
+
+$$
+\int_0^{\frac 1 {\sqrt 2}} 2t dt 
+$$
+
+$$
+\left[t^2 \right]_0^{\frac 1 {\sqrt 2}} = \frac 1 2
+$$
+
+Vậy tổng công là: 
+$$
+\int_C = \int_{C_1} + \int_{C_2} + \int_{C_3} = \frac 1 2 + 0 - \frac 1 2 = 0
+$$
+
+Nhưng chúng ta có thể tính được cái này bằng một cách khác nhanh hơn!
+
+Bằng định lý cơ bản của giải tích về tích phân đường.
+
+## Fundamental theorem of calculus for line integral
+
+Chúng ta đã học ở giải tích một biến rằng:
+
+$$
+\int_a^b f'(x) \mathbf dx = f(b) - f(a)
+$$
+
+Thì chúng ta cũng có định lý cơ bản của giải tích cho tích phân đường. Điều này được áp dụng nếu như $\vec F$ là Gradient fields. 
+
+Khi đó định lý cho tích phân đường C có hàm F là một Gradient fiedls đi từ P0 đến P1 là:
+
+$$
+\int_C \nabla f \cdot \mathbf d\vec r = f(P_1) - f(P_0)
+$$
+
+Hay:
+
+$$
+\int_C f_x \mathbf dx + f_y \mathbf dy = \int_C \mathbf df = f(P_1) - f(P_0)
+$$
+
+:::{.callout-note}
+## Proof
+$$
+\int_C \nabla f \cdot \mathbf d\vec r
+$$
+$$
+= \int_{t_0}^{t_1} \left(f_x \frac{\mathbf dx}{\mathbf dt} + f_y \frac{\mathbf dx}{\mathbf dt} \right) \mathbf dt
+$$
+
+$$
+= \int_{t_0}^{t_1} \frac{\mathbf df}{\mathbf dt}\mathbf dt
+$$
+$$
+= \left[f(x(t), y(t)) \right]_{t_0}^{t_1}
+$$
+$$
+= f(P_1) - f(P_0)
+$$
+:::
 
 
+Quay lại với ví dụ bài tập ở trên.
+Bằng một cách thần kỳ nào đó, tôi biết được $f(x, y) = xy$ suy ra $\nabla f = <y, x>$. Trường vector của chúng ta là trường vector gradient. Vậy nên chúng ta có thể áp dụng định lý cơ bản này.
+
+Vì điểm đầu = điểm cuối nên đáp án = 0. Hoàn toàn phù hợp
+
+
+## Path independence
 
 ___
-# Test for gradient fields
+# Consevative fields
 
 
 

@@ -488,10 +488,17 @@ window.Quarto = {
   <li><a href="#tính-biên---notyet" id="toc-tính-biên---notyet" class="nav-link" data-scroll-target="#tính-biên---notyet">Tính biên - notyet</a></li>
   </ul></li>
   <li><a href="#vector-fields" id="toc-vector-fields" class="nav-link" data-scroll-target="#vector-fields">Vector fields</a></li>
-  <li><a href="#work-and-line-integrals" id="toc-work-and-line-integrals" class="nav-link" data-scroll-target="#work-and-line-integrals">Work and line integrals</a></li>
+  <li><a href="#line-integrals" id="toc-line-integrals" class="nav-link" data-scroll-target="#line-integrals">Line integrals</a>
+  <ul class="collapse">
+  <li><a href="#công" id="toc-công" class="nav-link" data-scroll-target="#công">Công</a></li>
+  </ul></li>
   <li><a href="#geometric-approach" id="toc-geometric-approach" class="nav-link" data-scroll-target="#geometric-approach">Geometric approach</a></li>
-  <li><a href="#physical-interpretation" id="toc-physical-interpretation" class="nav-link" data-scroll-target="#physical-interpretation">Physical interpretation</a></li>
-  <li><a href="#test-for-gradient-fields" id="toc-test-for-gradient-fields" class="nav-link" data-scroll-target="#test-for-gradient-fields">Test for gradient fields</a></li>
+  <li><a href="#path-independence" id="toc-path-independence" class="nav-link" data-scroll-target="#path-independence">Path independence</a>
+  <ul class="collapse">
+  <li><a href="#fundamental-theorem-of-calculus-for-line-integral" id="toc-fundamental-theorem-of-calculus-for-line-integral" class="nav-link" data-scroll-target="#fundamental-theorem-of-calculus-for-line-integral">Fundamental theorem of calculus for line integral</a></li>
+  <li><a href="#path-independence-1" id="toc-path-independence-1" class="nav-link" data-scroll-target="#path-independence-1">Path independence</a></li>
+  </ul></li>
+  <li><a href="#consevative-fields" id="toc-consevative-fields" class="nav-link" data-scroll-target="#consevative-fields">Consevative fields</a></li>
   <li><a href="#greens-theorem" id="toc-greens-theorem" class="nav-link" data-scroll-target="#greens-theorem">Green’s theorem</a></li>
   <li><a href="#flux" id="toc-flux" class="nav-link" data-scroll-target="#flux">Flux</a></li>
   <li><a href="#simply-connected-regions" id="toc-simply-connected-regions" class="nav-link" data-scroll-target="#simply-connected-regions">Simply connected regions</a></li>
@@ -558,7 +565,7 @@ window.Quarto = {
 <p><strong>Ví dụ:</strong> <span class="math display">
 \int_0^1 \int_x^{\sqrt x} \frac {e^y}{y} \mathbf dy \mathbf dx
 </span></p>
-<div id="737fb9f4" class="cell" data-execution_count="1">
+<div id="6ee44589" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -740,7 +747,7 @@ v_x &amp; v_y
 <div class="callout-body-container callout-body">
 <p>Việc này nếu chưa học <strong>18.06</strong> thì khá là khó để suy nghĩ. Nhưng hãy suy nghĩ như thế này.</p>
 <p>Ta có 2 hình, bên trái chỉ <span class="math inline">\mathbf dA = \mathbf dx \mathbf dy</span> và bên phải là <span class="math inline">\mathbf dA' = \mathbf du \mathbf dv</span>, việc của chúng ta là tính hệ số diện tích của nó. Hay chính là chúng thu to hay thu nhỏ với hệ số bao nhiêu.</p>
-<div id="07b4dda3" class="cell" data-execution_count="2">
+<div id="8a65e0d3" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -889,7 +896,7 @@ r\cos^2\theta + r\sin^2\theta = r
 <p>Mỗi điểm trong mặt phẳng đều có môt vector <span class="math inline">\vec F</span>, vector này phụ thuộc vào x, y.</p>
 <p>Một số hình ảnh ví dụ về trường Vector.</p>
 <p><strong>Ví dụ 1</strong> <span class="math inline">\vec F = 2 \hat{\mathbf i} + \hat{\mathbf j}</span></p>
-<div id="0f6827d8" class="cell" data-execution_count="3">
+<div id="2dfa34c2" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -932,7 +939,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 <p>Mọi vector đều cùng hướng, cùng độ lớn tại mọi điểm.</p>
 <p><strong>Ví dụ 2</strong> <span class="math inline">\vec F = x \hat{\mathbf i}</span></p>
-<div id="599219f3" class="cell" data-execution_count="4">
+<div id="666fa54a" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -976,7 +983,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 </div>
 <p><strong>Ví dụ 3</strong> <span class="math inline">\vec F = x \hat{\mathbf i} + y \hat{\mathbf j}</span></p>
-<div id="b3baaeda" class="cell" data-execution_count="5">
+<div id="c0d11b87" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1021,7 +1028,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 </div>
 <p><strong>Ví dụ 4</strong> <span class="math inline">\vec F = -y \hat{\mathbf i} + x\hat{\mathbf j}</span></p>
-<div id="bb9ed96a" class="cell" data-execution_count="6">
+<div id="92aab363" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1069,20 +1076,215 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 <hr>
 </section>
-<section id="work-and-line-integrals" class="level1">
-<h1>Work and line integrals</h1>
+<section id="line-integrals" class="level1">
+<h1>Line integrals</h1>
+<section id="công" class="level2">
+<h2 class="anchored" data-anchor-id="công">Công</h2>
+<p><span class="math inline">A = Fs = \vec F \cdot \Delta \vec r</span> cho một chuyển động nhỏ <span class="math inline">\Delta \vec r</span>. Tổng công được tính bằng cách tính tổng các cái này theo một quỹ đạo C.</p>
+<p>Tưởng tượng có một đường cong C. Một điểm di chuyển trên quỹ đạo đó, và có lực tại mỗi điểm là khác nhau. Công tại một điểm bằng tích vô hướng của F với vector tiếp tuyến tại điểm đó. Và tổng công là khi ta chia nhỏ các vector tiếp tuyến, đến vô hạn.</p>
+<p><span class="math display">
+W = \int_C \vec F \cdot \mathbf d\vec r \left(= \lim_{\Delta \vec r \rightarrow 0} \sum_i \vec F \cdot \Delta \vec r_i \right)
+</span></p>
 <hr>
+</section>
 </section>
 <section id="geometric-approach" class="level1">
 <h1>Geometric approach</h1>
 <hr>
 </section>
-<section id="physical-interpretation" class="level1">
-<h1>Physical interpretation</h1>
+<section id="path-independence" class="level1">
+<h1>Path independence</h1>
+<p><strong>Tính</strong> Tích phân đường <span class="math inline">C = C_1 + C_2 + C_3</span> trong trường vector <span class="math inline">\vec F = &lt;y, x&gt;</span> sau:</p>
+<div id="52f0e098" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.6</span>, <span class="fl">1.6</span>, <span class="dv">17</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="fl">1.6</span>, <span class="fl">1.6</span>, <span class="dv">17</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> Y</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>V <span class="op">=</span> X</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">7</span>,<span class="dv">7</span>))</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>ax.quiver(</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    X, Y, U, V,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'steelblue'</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.75</span>,</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    angles<span class="op">=</span><span class="st">'xy'</span>,</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    scale_units<span class="op">=</span><span class="st">'xy'</span>,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    scale<span class="op">=</span><span class="dv">12</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="fl">0.003</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>ax.annotate(</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    xy<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">0</span>),</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    xytext<span class="op">=</span>(<span class="dv">0</span>,<span class="dv">0</span>),</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    arrowprops<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>,</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="dv">4</span>,</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"midnightblue"</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.linspace(<span class="dv">0</span>, np.pi<span class="op">/</span><span class="dv">4</span>, <span class="dv">200</span>)</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>x_arc <span class="op">=</span> np.cos(theta)</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>y_arc <span class="op">=</span> np.sin(theta)</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>ax.plot(x_arc, y_arc, color<span class="op">=</span><span class="st">'midnightblue'</span>, lw<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">120</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>ax.annotate(</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    xy<span class="op">=</span>(x_arc[i<span class="op">+</span><span class="dv">5</span>], y_arc[i<span class="op">+</span><span class="dv">5</span>]),</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    xytext<span class="op">=</span>(x_arc[i], y_arc[i]),</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>    arrowprops<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>        arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>,</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"midnightblue"</span>,</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="dv">4</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> np.sqrt(<span class="dv">2</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>ax.annotate(</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>    xy<span class="op">=</span>(<span class="dv">0</span>,<span class="dv">0</span>),</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>    xytext<span class="op">=</span>(p,p),</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>    arrowprops<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>        arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>,</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="dv">4</span>,</span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"midnightblue"</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.48</span>, <span class="op">-</span><span class="fl">0.08</span>, <span class="vs">r"</span><span class="dv">$</span><span class="vs">C_1</span><span class="dv">$</span><span class="vs">"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.95</span>, <span class="fl">0.45</span>, <span class="vs">r"</span><span class="dv">$</span><span class="vs">C_2</span><span class="dv">$</span><span class="vs">"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.28</span>, <span class="fl">0.42</span>, <span class="vs">r"</span><span class="dv">$</span><span class="vs">C_3</span><span class="dv">$</span><span class="vs">"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">1.6</span>,<span class="fl">1.6</span>)</span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">1.6</span>,<span class="fl">1.6</span>)</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'left'</span>].set_position(<span class="st">'zero'</span>)</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'bottom'</span>].set_position(<span class="st">'zero'</span>)</span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(np.arange(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.6</span>,<span class="fl">0.5</span>))</span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>ax.set_yticks(np.arange(<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">1.6</span>,<span class="fl">0.5</span>))</span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"$x$"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"$y$"</span>, fontsize<span class="op">=</span><span class="dv">14</span>, rotation<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="3_files/figure-html/cell-8-output-1.png" width="662" height="662" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>Công thức</em></strong> <span class="math display">
+\int_C \vec F \cdot \mathbf d\vec r = \int_C y\mathbf dx + x\mathbf dy
+</span></p>
+<p><strong><em>Tính C1</em></strong></p>
+<p>Ta có: <span class="math inline">x = t \qquad y = 0 \qquad \Rightarrow \qquad \mathbf dx = 1 \mathbf dt \qquad \mathbf dy = 0</span> <span class="math display">
+\int_C y\mathbf dx + x\mathbf dy = \int_0^1 0 \mathbf dt = 0
+</span></p>
+<p><strong><em>Tính C2</em></strong></p>
+<p>Dùng tọa độ cực.</p>
+<p>Thay <span class="math inline">x = r\cos\theta \qquad y = r\sin\theta \qquad \\ \Rightarrow \qquad \mathbf dx = -r\sin\theta \mathbf d\theta \qquad \mathbf dy = r\cos\theta \mathbf d\theta</span>.</p>
+<p>Vì là góc 45 độ nên, <span class="math inline">0 \leq \theta \leq \pi/4</span>.</p>
+<p><span class="math display">
+\int_C y\mathbf dx + x\mathbf dy = \int_0^{\pi/4} r\sin\theta(-r\sin\theta\mathbf d\theta) +
+r\cos\theta r\cos\theta\mathbf d\theta
+</span></p>
+<p><span class="math display">
+= \int_0^{\pi/4} -r^2\sin^2\theta\mathbf d\theta + r^2\cos^2\theta\mathbf d\theta
+</span></p>
+<p><span class="math display">
+= \int_0^{\pi/4} (\cos^2\theta - \sin^2\theta)\mathbf d\theta \\
+= \int_0^{\pi/4} \cos(2\theta)\mathbf d\theta \\
+= \left[\frac 1 2 \sin(2\theta) \right]_0^{\pi/4} = \frac 1 2
+</span></p>
+<p><strong><em>Tính C3</em></strong></p>
+<p>Thay vì tính công từ điểm cuối C2 đến gốc tọa độ, thì ta có thể tính công từ gốc tọa độ đến điểm cuối C2, chính nó bằng -C3.</p>
+<p>Làm tương tự mấy cái kia ta được, <span class="math display">
+x = t \qquad y = t \\
+\mathbf dx = \mathbf dt \qquad \mathbf dy = \mathbf dt
+</span></p>
+<p><span class="math display">
+\int_C y\mathbf dx + x\mathbf dy = \int_0^{\frac 1 {\sqrt 2}} t\mathbf dt + t\mathbf dt
+</span></p>
+<p><span class="math display">
+\int_0^{\frac 1 {\sqrt 2}} 2t dt
+</span></p>
+<p><span class="math display">
+\left[t^2 \right]_0^{\frac 1 {\sqrt 2}} = \frac 1 2
+</span></p>
+<p>Vậy tổng công là: <span class="math display">
+\int_C = \int_{C_1} + \int_{C_2} + \int_{C_3} = \frac 1 2 + 0 - \frac 1 2 = 0
+</span></p>
+<p>Nhưng chúng ta có thể tính được cái này bằng một cách khác nhanh hơn!</p>
+<p>Bằng định lý cơ bản của giải tích về tích phân đường.</p>
+<section id="fundamental-theorem-of-calculus-for-line-integral" class="level2">
+<h2 class="anchored" data-anchor-id="fundamental-theorem-of-calculus-for-line-integral">Fundamental theorem of calculus for line integral</h2>
+<p>Chúng ta đã học ở giải tích một biến rằng:</p>
+<p><span class="math display">
+\int_a^b f'(x) \mathbf dx = f(b) - f(a)
+</span></p>
+<p>Thì chúng ta cũng có định lý cơ bản của giải tích cho tích phân đường. Điều này được áp dụng nếu như <span class="math inline">\vec F</span> là Gradient fields.</p>
+<p>Khi đó định lý cho tích phân đường C có hàm F là một Gradient fiedls đi từ P0 đến P1 là:</p>
+<p><span class="math display">
+\int_C \nabla f \cdot \mathbf d\vec r = f(P_1) - f(P_0)
+</span></p>
+<p>Hay:</p>
+<p><span class="math display">
+\int_C f_x \mathbf dx + f_y \mathbf dy = \int_C \mathbf df = f(P_1) - f(P_0)
+</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Proof
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">
+\int_C \nabla f \cdot \mathbf d\vec r
+</span> <span class="math display">
+= \int_{t_0}^{t_1} \left(f_x \frac{\mathbf dx}{\mathbf dt} + f_y \frac{\mathbf dx}{\mathbf dt} \right) \mathbf dt
+</span></p>
+<p><span class="math display">
+= \int_{t_0}^{t_1} \frac{\mathbf df}{\mathbf dt}\mathbf dt
+</span> <span class="math display">
+= \left[f(x(t), y(t)) \right]_{t_0}^{t_1}
+</span> <span class="math display">
+= f(P_1) - f(P_0)
+</span></p>
+</div>
+</div>
+<p>Quay lại với ví dụ bài tập ở trên. Bằng một cách thần kỳ nào đó, tôi biết được <span class="math inline">f(x, y) = xy</span> suy ra <span class="math inline">\nabla f = &lt;y, x&gt;</span>. Trường vector của chúng ta là trường vector gradient. Vậy nên chúng ta có thể áp dụng định lý cơ bản này.</p>
+<p>Vì điểm đầu = điểm cuối nên đáp án = 0. Hoàn toàn phù hợp</p>
+</section>
+<section id="path-independence-1" class="level2">
+<h2 class="anchored" data-anchor-id="path-independence-1">Path independence</h2>
 <hr>
 </section>
-<section id="test-for-gradient-fields" class="level1">
-<h1>Test for gradient fields</h1>
+</section>
+<section id="consevative-fields" class="level1">
+<h1>Consevative fields</h1>
 <hr>
 </section>
 <section id="greens-theorem" class="level1">

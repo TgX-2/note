@@ -656,5 +656,38 @@
       "18.02",
       "Double integrals and Line integrals in the plane"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#công",
+    "href": "note/multivariable-calculus/3.html#công",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Công",
+    "text": "Công\nA = Fs = \\vec F \\cdot \\Delta \\vec r cho một chuyển động nhỏ \\Delta \\vec r. Tổng công được tính bằng cách tính tổng các cái này theo một quỹ đạo C.\nTưởng tượng có một đường cong C. Một điểm di chuyển trên quỹ đạo đó, và có lực tại mỗi điểm là khác nhau. Công tại một điểm bằng tích vô hướng của F với vector tiếp tuyến tại điểm đó. Và tổng công là khi ta chia nhỏ các vector tiếp tuyến, đến vô hạn.\n\nW = \\int_C \\vec F \\cdot \\mathbf d\\vec r \\left(= \\lim_{\\Delta \\vec r \\rightarrow 0} \\sum_i \\vec F \\cdot \\Delta \\vec r_i \\right)",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#fundamental-theorem-of-calculus-for-line-integral",
+    "href": "note/multivariable-calculus/3.html#fundamental-theorem-of-calculus-for-line-integral",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Fundamental theorem of calculus for line integral",
+    "text": "Fundamental theorem of calculus for line integral\nChúng ta đã học ở giải tích một biến rằng:\n\n\\int_a^b f'(x) \\mathbf dx = f(b) - f(a)\n\nThì chúng ta cũng có định lý cơ bản của giải tích cho tích phân đường. Điều này được áp dụng nếu như \\vec F là Gradient fields.\nKhi đó định lý cho tích phân đường C có hàm F là một Gradient fiedls đi từ P0 đến P1 là:\n\n\\int_C \\nabla f \\cdot \\mathbf d\\vec r = f(P_1) - f(P_0)\n\nHay:\n\n\\int_C f_x \\mathbf dx + f_y \\mathbf dy = \\int_C \\mathbf df = f(P_1) - f(P_0)\n\n\n\n\n\n\n\nNoteProof\n\n\n\n\n\\int_C \\nabla f \\cdot \\mathbf d\\vec r\n \n= \\int_{t_0}^{t_1} \\left(f_x \\frac{\\mathbf dx}{\\mathbf dt} + f_y \\frac{\\mathbf dx}{\\mathbf dt} \\right) \\mathbf dt\n\n\n= \\int_{t_0}^{t_1} \\frac{\\mathbf df}{\\mathbf dt}\\mathbf dt\n \n= \\left[f(x(t), y(t)) \\right]_{t_0}^{t_1}\n \n= f(P_1) - f(P_0)\n\n\n\nQuay lại với ví dụ bài tập ở trên. Bằng một cách thần kỳ nào đó, tôi biết được f(x, y) = xy suy ra \\nabla f = &lt;y, x&gt;. Trường vector của chúng ta là trường vector gradient. Vậy nên chúng ta có thể áp dụng định lý cơ bản này.\nVì điểm đầu = điểm cuối nên đáp án = 0. Hoàn toàn phù hợp",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#path-independence-1",
+    "href": "note/multivariable-calculus/3.html#path-independence-1",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Path independence",
+    "text": "Path independence",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
   }
 ]
