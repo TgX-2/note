@@ -695,7 +695,7 @@
     "href": "note/multivariable-calculus/3.html#path-independence-1",
     "title": "Double integrals and Line integrals in the plane",
     "section": "Path independence",
-    "text": "Path independence\nTừ đó ta suy ra một định nghĩa mới, đường đi độc lập, giá trị của tích phân đường chỉ phụ thuộc vào điểm đầu và điểm cuối, không phụ thuộc vào nó đi đường nào.\nĐiều này khi và chỉ khi trường vector là conservative, \\vec F = \\nabla f, khi đó:\n\n\\int_c \\vec F \\mathbf d\\vec r = f(B) - f(A)\n\nVí dụ\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\ndef colored_line(ax, x, y, cmap='viridis', lw=5):\n    points = np.array([x, y]).T.reshape(-1, 1, 2)\n    segments = np.concatenate([points[:-1], points[1:]], axis=1)\n\n    lc = LineCollection(\n        segments,\n        cmap=cmap,\n        norm=plt.Normalize(0, 1)\n    )\n\n    lc.set_array(np.linspace(0, 1, len(x)-1))\n    lc.set_linewidth(lw)\n    ax.add_collection(lc)\n    return lc\nt = np.linspace(0, 1, 500)\n\n# C1 (đường dưới)\nx1 = 4 * t\ny1 = -1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\n\n# C2 (đường trên)\nx2 = 4 * t\ny2 =  1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\nfig, ax = plt.subplots(figsize=(9,5))\n\ncolored_line(ax, x1, y1, cmap='viridis', lw=5)\ncolored_line(ax, x2, y2, cmap='viridis', lw=5)\nk = 320\nax.annotate(\n    \"\",\n    xy=(x1[k+8], y1[k+8]),\n    xytext=(x1[k], y1[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\nk = 270\nax.annotate(\n    \"\",\n    xy=(x2[k+8], y2[k+8]),\n    xytext=(x2[k], y2[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\n\nax.scatter([0,4],[0,0], color='black', s=40)\n\nax.text(-0.22,-0.18,r\"$P_0$\",fontsize=18)\nax.text(4.08,-0.18,r\"$P_1$\",fontsize=18)\n\nax.text(2.45,-1.35,r\"$C_1$\",fontsize=18)\nax.text(2.45, 1.15,r\"$C_2$\",fontsize=18)\nax.set_aspect('equal')\nax.set_xlim(-0.5,4.5)\nax.set_ylim(-2.0,2.0)\n\nax.axis('off')\n\nplt.tight_layout()\nplt.show()",
+    "text": "Path independence\nTừ đó ta suy ra một định nghĩa mới, đường đi độc lập, giá trị của tích phân đường chỉ phụ thuộc vào điểm đầu và điểm cuối, không phụ thuộc vào nó đi đường nào.\nĐiều này khi và chỉ khi trường vector là conservative, \\vec F = \\nabla f, khi đó:\n\n\\int_c \\vec F \\mathbf d\\vec r = f(B) - f(A)\n\nVí dụ\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\ndef colored_line(ax, x, y, cmap='viridis', lw=5):\n    points = np.array([x, y]).T.reshape(-1, 1, 2)\n    segments = np.concatenate([points[:-1], points[1:]], axis=1)\n\n    lc = LineCollection(\n        segments,\n        cmap=cmap,\n        norm=plt.Normalize(0, 1)\n    )\n\n    lc.set_array(np.linspace(0, 1, len(x)-1))\n    lc.set_linewidth(lw)\n    ax.add_collection(lc)\n    return lc\nt = np.linspace(0, 1, 500)\n\nx1 = 4 * t\ny1 = -1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\n\nx2 = 4 * t\ny2 =  1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\nfig, ax = plt.subplots(figsize=(9,5))\n\ncolored_line(ax, x1, y1, cmap='viridis', lw=5)\ncolored_line(ax, x2, y2, cmap='viridis', lw=5)\nk = 320\nax.annotate(\n    \"\",\n    xy=(x1[k+8], y1[k+8]),\n    xytext=(x1[k], y1[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\nk = 270\nax.annotate(\n    \"\",\n    xy=(x2[k+8], y2[k+8]),\n    xytext=(x2[k], y2[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\n\nax.scatter([0,4],[0,0], color='black', s=40)\n\nax.text(-0.22,-0.18,r\"$P_0$\",fontsize=18)\nax.text(4.08,-0.18,r\"$P_1$\",fontsize=18)\n\nax.text(2.45,-1.35,r\"$C_1$\",fontsize=18)\nax.text(2.45, 1.15,r\"$C_2$\",fontsize=18)\nax.set_aspect('equal')\nax.set_xlim(-0.5,4.5)\nax.set_ylim(-2.0,2.0)\n\nax.axis('off')\n\nplt.tight_layout()\nplt.show()",
     "crumbs": [
       "18.02",
       "Double integrals and Line integrals in the plane"
@@ -718,6 +718,28 @@
     "title": "Double integrals and Line integrals in the plane",
     "section": "Cách 2: Sử dụng Nguyên hàm",
     "text": "Cách 2: Sử dụng Nguyên hàm\nTa muốn tìm một hàm f(x, y) mà nó có:\n\n\\begin{align}\nf_x = 4x^2 + 8xy \\tag{1} \\\\\nf_y = 3y^2 + 4x^2 \\tag{2}\n\\end{align}\n\nNguyên hàm f_x\nTa sẽ coi y như là một hằng số, vì vậy ở cuối ta phải cộng cho một hàm số chỉ theo một biến y (bởi vì khi đạo hàm nó đã biến mất, giống như C trong nguyên hàm một biến).\n\n(1) \\Rightarrow f = \\frac 4 3 x^3 + 4x^2y + g(y)\n\nVậy hàm f(x, y) = \\frac 4 3 x^3 + 4x^2y + g(y) (3)\nTìm g(y)\nTa lại đạo hàm riêng hàm f theo y, rồi lại so sánh 2 biểu thức với nhau.\n\n(3) \\Rightarrow f_y = 4x^2 + g'(y)\n\nVà ta có:\n\n(2) = (3) \\\\\n\\Rightarrow 3y^2 + 4x^2 = 4x^2 + g'(y)\n\n\ng'(y) = 3y^2 \\qquad \\Rightarrow \\qquad g(y) = y^3 + C\n\nTổng kết lại\nHàm trở thành:\n\nf(x, y) = \\frac 4 3 x^3 + 4x^2y + y^3 + C\n\nHoàn toàn giống với cách 1!",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#tại-sao-lại-là-n_x---m_y",
+    "href": "note/multivariable-calculus/3.html#tại-sao-lại-là-n_x---m_y",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Tại sao lại là N_x - M_y",
+    "text": "Tại sao lại là N_x - M_y\nCứ tưởng ta đặt một vật tại một điểm trong trường.\nNó sẽ chịu ảnh hưởng bởi 2 hiệu ứng N_y và M_x.\nNếu chúng bằng nhau, thì có nghĩa là hai hiệu ứng có xu hướng triệt tiêu nhau, và khi đó không có curl. Dẫn đến việc hàm đó có tính bảo toàn.\nCòn nếu chúng không bảo toàn, thứ tức là còn một hiệu ứng nhiều hoặc ít hơn thằng còn lại.\nĐiều này cũng dẫn đến việc, độ lớn và dấu của Curl cũng biểu thị một sự việc gì đó.",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#interpretation-of-curl",
+    "href": "note/multivariable-calculus/3.html#interpretation-of-curl",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Interpretation of curl",
+    "text": "Interpretation of curl\nVí dụ \\vec F = &lt;x, y&gt;\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-3, 3, 15)\ny = np.linspace(-3, 3, 15)\nX, Y = np.meshgrid(x, y)\n\nU = X\nV = Y\n\nmagnitude = np.sqrt(U**2 + V**2)\n\nplt.figure(figsize=(6, 6))\nq = plt.quiver(\n    X, Y, U, V,\n    magnitude,\n    cmap=\"viridis\",\n    angles=\"xy\",\n    scale_units=\"xy\",\n    scale=10,\n    pivot=\"mid\"\n)\n\nplt.axhline(0, color=\"black\", linewidth=0.8)\nplt.axvline(0, color=\"black\", linewidth=0.8)\nplt.gca().set_aspect(\"equal\")\nplt.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\n\nKhi đó:\n\nM = x \\qquad N = y \\\\\nM_y = 0 \\qquad N_x = 0\n\n\n\\Rightarrow \\text{curl}(\\vec F) = 0",
     "crumbs": [
       "18.02",
       "Double integrals and Line integrals in the plane"

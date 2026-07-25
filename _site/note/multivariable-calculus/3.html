@@ -500,12 +500,16 @@ window.Quarto = {
   </ul></li>
   <li><a href="#consevative-fields" id="toc-consevative-fields" class="nav-link" data-scroll-target="#consevative-fields">Consevative fields</a></li>
   <li><a href="#test-for-gradient-fields" id="toc-test-for-gradient-fields" class="nav-link" data-scroll-target="#test-for-gradient-fields">Test for Gradient fields</a></li>
-  <li><a href="#finding-the-potential" id="toc-finding-the-potential" class="nav-link" data-scroll-target="#finding-the-potential">Finding the potential</a>
+  <li><a href="#finding-the-potential-function" id="toc-finding-the-potential-function" class="nav-link" data-scroll-target="#finding-the-potential-function">Finding the potential function</a>
   <ul class="collapse">
   <li><a href="#cách-1-sử-dụng-tích-phân-đường" id="toc-cách-1-sử-dụng-tích-phân-đường" class="nav-link" data-scroll-target="#cách-1-sử-dụng-tích-phân-đường">Cách 1: Sử dụng tích phân đường</a></li>
   <li><a href="#cách-2-sử-dụng-nguyên-hàm" id="toc-cách-2-sử-dụng-nguyên-hàm" class="nav-link" data-scroll-target="#cách-2-sử-dụng-nguyên-hàm">Cách 2: Sử dụng Nguyên hàm</a></li>
   </ul></li>
-  <li><a href="#curl" id="toc-curl" class="nav-link" data-scroll-target="#curl">Curl</a></li>
+  <li><a href="#curl" id="toc-curl" class="nav-link" data-scroll-target="#curl">Curl</a>
+  <ul class="collapse">
+  <li><a href="#tại-sao-lại-là-n_x---m_y" id="toc-tại-sao-lại-là-n_x---m_y" class="nav-link" data-scroll-target="#tại-sao-lại-là-n_x---m_y">Tại sao lại là <span class="math inline">N_x - M_y</span></a></li>
+  <li><a href="#interpretation-of-curl" id="toc-interpretation-of-curl" class="nav-link" data-scroll-target="#interpretation-of-curl">Interpretation of curl</a></li>
+  </ul></li>
   <li><a href="#greens-theorem" id="toc-greens-theorem" class="nav-link" data-scroll-target="#greens-theorem">Green’s theorem</a></li>
   <li><a href="#flux" id="toc-flux" class="nav-link" data-scroll-target="#flux">Flux</a></li>
   <li><a href="#simply-connected-regions" id="toc-simply-connected-regions" class="nav-link" data-scroll-target="#simply-connected-regions">Simply connected regions</a></li>
@@ -572,7 +576,7 @@ window.Quarto = {
 <p><strong>Ví dụ:</strong> <span class="math display">
 \int_0^1 \int_x^{\sqrt x} \frac {e^y}{y} \mathbf dy \mathbf dx
 </span></p>
-<div id="ddf21db4" class="cell" data-execution_count="1">
+<div id="4d7ca79b" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -754,7 +758,7 @@ v_x &amp; v_y
 <div class="callout-body-container callout-body">
 <p>Việc này nếu chưa học <strong>18.06</strong> thì khá là khó để suy nghĩ. Nhưng hãy suy nghĩ như thế này.</p>
 <p>Ta có 2 hình, bên trái chỉ <span class="math inline">\mathbf dA = \mathbf dx \mathbf dy</span> và bên phải là <span class="math inline">\mathbf dA' = \mathbf du \mathbf dv</span>, việc của chúng ta là tính hệ số diện tích của nó. Hay chính là chúng thu to hay thu nhỏ với hệ số bao nhiêu.</p>
-<div id="7a7816e3" class="cell" data-execution_count="2">
+<div id="590966eb" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -903,7 +907,7 @@ r\cos^2\theta + r\sin^2\theta = r
 <p>Mỗi điểm trong mặt phẳng đều có môt vector <span class="math inline">\vec F</span>, vector này phụ thuộc vào x, y.</p>
 <p>Một số hình ảnh ví dụ về trường Vector.</p>
 <p><strong>Ví dụ 1</strong> <span class="math inline">\vec F = 2 \hat{\mathbf i} + \hat{\mathbf j}</span></p>
-<div id="5092631f" class="cell" data-execution_count="3">
+<div id="4f3d6c48" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -946,7 +950,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 <p>Mọi vector đều cùng hướng, cùng độ lớn tại mọi điểm.</p>
 <p><strong>Ví dụ 2</strong> <span class="math inline">\vec F = x \hat{\mathbf i}</span></p>
-<div id="f2eb77e7" class="cell" data-execution_count="4">
+<div id="095f4f2f" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -990,7 +994,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 </div>
 <p><strong>Ví dụ 3</strong> <span class="math inline">\vec F = x \hat{\mathbf i} + y \hat{\mathbf j}</span></p>
-<div id="6856593e" class="cell" data-execution_count="5">
+<div id="c02b850f" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1035,7 +1039,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 </div>
 <p><strong>Ví dụ 4</strong> <span class="math inline">\vec F = -y \hat{\mathbf i} + x\hat{\mathbf j}</span></p>
-<div id="41f0bffb" class="cell" data-execution_count="6">
+<div id="e141f863" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1121,7 +1125,7 @@ y = t^2 \qquad \mathbf dy = 2t\mathbf dt
 <section id="path-independence" class="level1">
 <h1>Path independence</h1>
 <p><strong>Tính</strong> Tích phân đường <span class="math inline">C = C_1 + C_2 + C_3</span> trong trường vector <span class="math inline">\vec F = &lt;y, x&gt;</span> sau:</p>
-<div id="a13d6924" class="cell" data-execution_count="7">
+<div id="8ba02540" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1321,7 +1325,7 @@ x = t \qquad y = t \\
 \int_c \vec F \mathbf d\vec r = f(B) - f(A)
 </span></p>
 <p><strong>Ví dụ</strong></p>
-<div id="61762aeb" class="cell" data-execution_count="8">
+<div id="3acccaff" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1343,55 +1347,53 @@ x = t \qquad y = t \\
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> lc</span>
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">500</span>)</span>
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co"># C1 (đường dưới)</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> t</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> <span class="op">-</span><span class="fl">1.35</span> <span class="op">*</span> np.sin(np.pi <span class="op">*</span> t) <span class="op">*</span> np.sin(<span class="fl">0.9</span> <span class="op">*</span> np.pi <span class="op">*</span> t)</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co"># C2 (đường trên)</span></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> t</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span>  <span class="fl">1.35</span> <span class="op">*</span> np.sin(np.pi <span class="op">*</span> t) <span class="op">*</span> np.sin(<span class="fl">0.9</span> <span class="op">*</span> np.pi <span class="op">*</span> t)</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>,<span class="dv">5</span>))</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>colored_line(ax, x1, y1, cmap<span class="op">=</span><span class="st">'viridis'</span>, lw<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>colored_line(ax, x2, y2, cmap<span class="op">=</span><span class="st">'viridis'</span>, lw<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">320</span></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>ax.annotate(</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    xy<span class="op">=</span>(x1[k<span class="op">+</span><span class="dv">8</span>], y1[k<span class="op">+</span><span class="dv">8</span>]),</span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    xytext<span class="op">=</span>(x1[k], y1[k]),</span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    arrowprops<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>        arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>,</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"black"</span>,</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="dv">2</span></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">270</span></span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>ax.annotate(</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    xy<span class="op">=</span>(x2[k<span class="op">+</span><span class="dv">8</span>], y2[k<span class="op">+</span><span class="dv">8</span>]),</span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>    xytext<span class="op">=</span>(x2[k], y2[k]),</span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>    arrowprops<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>        arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>,</span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"black"</span>,</span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="dv">2</span></span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> t</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> <span class="op">-</span><span class="fl">1.35</span> <span class="op">*</span> np.sin(np.pi <span class="op">*</span> t) <span class="op">*</span> np.sin(<span class="fl">0.9</span> <span class="op">*</span> np.pi <span class="op">*</span> t)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> <span class="dv">4</span> <span class="op">*</span> t</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span>  <span class="fl">1.35</span> <span class="op">*</span> np.sin(np.pi <span class="op">*</span> t) <span class="op">*</span> np.sin(<span class="fl">0.9</span> <span class="op">*</span> np.pi <span class="op">*</span> t)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">9</span>,<span class="dv">5</span>))</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>colored_line(ax, x1, y1, cmap<span class="op">=</span><span class="st">'viridis'</span>, lw<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>colored_line(ax, x2, y2, cmap<span class="op">=</span><span class="st">'viridis'</span>, lw<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">320</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>ax.annotate(</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    xy<span class="op">=</span>(x1[k<span class="op">+</span><span class="dv">8</span>], y1[k<span class="op">+</span><span class="dv">8</span>]),</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    xytext<span class="op">=</span>(x1[k], y1[k]),</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    arrowprops<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>        arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>,</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">270</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>ax.annotate(</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">""</span>,</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>    xy<span class="op">=</span>(x2[k<span class="op">+</span><span class="dv">8</span>], y2[k<span class="op">+</span><span class="dv">8</span>]),</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>    xytext<span class="op">=</span>(x2[k], y2[k]),</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    arrowprops<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>        arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>,</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>        lw<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>ax.scatter([<span class="dv">0</span>,<span class="dv">4</span>],[<span class="dv">0</span>,<span class="dv">0</span>], color<span class="op">=</span><span class="st">'black'</span>, s<span class="op">=</span><span class="dv">40</span>)</span>
 <span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>ax.scatter([<span class="dv">0</span>,<span class="dv">4</span>],[<span class="dv">0</span>,<span class="dv">0</span>], color<span class="op">=</span><span class="st">'black'</span>, s<span class="op">=</span><span class="dv">40</span>)</span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="op">-</span><span class="fl">0.22</span>,<span class="op">-</span><span class="fl">0.18</span>,<span class="vs">r"</span><span class="dv">$</span><span class="vs">P_0</span><span class="dv">$</span><span class="vs">"</span>,fontsize<span class="op">=</span><span class="dv">18</span>)</span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">4.08</span>,<span class="op">-</span><span class="fl">0.18</span>,<span class="vs">r"</span><span class="dv">$</span><span class="vs">P_1</span><span class="dv">$</span><span class="vs">"</span>,fontsize<span class="op">=</span><span class="dv">18</span>)</span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">2.45</span>,<span class="op">-</span><span class="fl">1.35</span>,<span class="vs">r"</span><span class="dv">$</span><span class="vs">C_1</span><span class="dv">$</span><span class="vs">"</span>,fontsize<span class="op">=</span><span class="dv">18</span>)</span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">2.45</span>, <span class="fl">1.15</span>,<span class="vs">r"</span><span class="dv">$</span><span class="vs">C_2</span><span class="dv">$</span><span class="vs">"</span>,fontsize<span class="op">=</span><span class="dv">18</span>)</span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">4.5</span>)</span>
-<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">2.0</span>,<span class="fl">2.0</span>)</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="op">-</span><span class="fl">0.22</span>,<span class="op">-</span><span class="fl">0.18</span>,<span class="vs">r"</span><span class="dv">$</span><span class="vs">P_0</span><span class="dv">$</span><span class="vs">"</span>,fontsize<span class="op">=</span><span class="dv">18</span>)</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">4.08</span>,<span class="op">-</span><span class="fl">0.18</span>,<span class="vs">r"</span><span class="dv">$</span><span class="vs">P_1</span><span class="dv">$</span><span class="vs">"</span>,fontsize<span class="op">=</span><span class="dv">18</span>)</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">2.45</span>,<span class="op">-</span><span class="fl">1.35</span>,<span class="vs">r"</span><span class="dv">$</span><span class="vs">C_1</span><span class="dv">$</span><span class="vs">"</span>,fontsize<span class="op">=</span><span class="dv">18</span>)</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">2.45</span>, <span class="fl">1.15</span>,<span class="vs">r"</span><span class="dv">$</span><span class="vs">C_2</span><span class="dv">$</span><span class="vs">"</span>,fontsize<span class="op">=</span><span class="dv">18</span>)</span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">'equal'</span>)</span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">4.5</span>)</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">2.0</span>,<span class="fl">2.0</span>)</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">'off'</span>)</span>
 <span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">'off'</span>)</span>
-<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -1406,6 +1408,8 @@ x = t \qquad y = t \\
 </section>
 <section id="consevative-fields" class="level1">
 <h1>Consevative fields</h1>
+<p>Là trường vector bảo toàn.</p>
+<p>Nếu ta có một trường vector <span class="math inline">F(x, y)</span> và tồn tại một hàm vô hướng <span class="math inline">f(x, y)</span> sau cho <span class="math inline">\vec F = \nabla f</span>. Thì trường vector đó được gọi là <strong>conservative</strong>.</p>
 <hr>
 </section>
 <section id="test-for-gradient-fields" class="level1">
@@ -1419,8 +1423,8 @@ M_y = N_x \\
 </span></p>
 <hr>
 </section>
-<section id="finding-the-potential" class="level1">
-<h1>Finding the potential</h1>
+<section id="finding-the-potential-function" class="level1">
+<h1>Finding the potential function</h1>
 <p>Đầu tiên, ta phải chắc chắn rằng <span class="math inline">\vec F</span> là trường Gradient. Sau đó chúng ta có 2 cách để tính hàm thế năng <span class="math inline">f</span>.</p>
 <p>Sử dụng lại ví dụ ở trên, ta có <span class="math inline">\vec F = &lt;4x^2 + 8xy, 3y^2 + 4x^2&gt;</span>.</p>
 <section id="cách-1-sử-dụng-tích-phân-đường" class="level2">
@@ -1433,7 +1437,7 @@ M_y = N_x \\
 <p><span class="math display">
 f(x_1, y_1) = \int_C \vec F \mathbf d\vec r + f(0, 0)
 </span></p>
-<div id="cef5c479" class="cell" data-execution_count="9">
+<div id="8e3bfd0e" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1600,7 +1604,87 @@ f(x, y) = \frac 4 3 x^3 + 4x^2y + y^3 + C
 </section>
 <section id="curl" class="level1">
 <h1>Curl</h1>
+<p>Chúng ta có <span class="math inline">N_x = M_y</span> <span class="math inline">\Leftrightarrow</span> <span class="math inline">\vec F</span> là một trường Gradient.</p>
+<p>Suy ra trường vector <span class="math inline">\vec F</span> bảo toàn: <span class="math inline">\oint_C \vec F \cdot \mathbf d\vec r = 0</span> cho bất kỳ đường cong khép kín nào.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Lưu ý
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ký hiệu <span class="math inline">\oint</span> và <span class="math inline">\int</span> không khác nhau.</p>
+<p><span class="math inline">\oint</span> chỉ muốn nhắc nhở rằng ta đang tích phân trên một đường cong khép kín.</p>
+</div>
+</div>
+<p>Curl cho biết mức độ mà trường vector không có tính bảo toàn, hay trực quan hơn trong hình học, đó chính độ xoáy của trường.</p>
+<p><span class="math display">
+\text {curl}(\vec F) = N_x - M_y
+</span></p>
+<section id="tại-sao-lại-là-n_x---m_y" class="level2">
+<h2 class="anchored" data-anchor-id="tại-sao-lại-là-n_x---m_y">Tại sao lại là <span class="math inline">N_x - M_y</span></h2>
+<p>Cứ tưởng ta đặt một vật tại một điểm trong trường.</p>
+<p>Nó sẽ chịu ảnh hưởng bởi 2 hiệu ứng <span class="math inline">N_y</span> và <span class="math inline">M_x</span>.</p>
+<p>Nếu chúng bằng nhau, thì có nghĩa là hai hiệu ứng có xu hướng triệt tiêu nhau, và khi đó không có curl. Dẫn đến việc hàm đó có tính bảo toàn.</p>
+<p>Còn nếu chúng không bảo toàn, thứ tức là còn một hiệu ứng nhiều hoặc ít hơn thằng còn lại.</p>
+<p>Điều này cũng dẫn đến việc, độ lớn và dấu của <strong>Curl</strong> cũng biểu thị một sự việc gì đó.</p>
+</section>
+<section id="interpretation-of-curl" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation-of-curl">Interpretation of curl</h2>
+<p><strong>Ví dụ</strong> <span class="math inline">\vec F = &lt;x, y&gt;</span></p>
+<div id="7dad062d" class="cell" data-execution_count="10">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">15</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">15</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> X</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>V <span class="op">=</span> Y</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>magnitude <span class="op">=</span> np.sqrt(U<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> V<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> plt.quiver(</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    X, Y, U, V,</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    magnitude,</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"viridis"</span>,</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    angles<span class="op">=</span><span class="st">"xy"</span>,</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    scale_units<span class="op">=</span><span class="st">"xy"</span>,</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    scale<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    pivot<span class="op">=</span><span class="st">"mid"</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>plt.gca().set_aspect(<span class="st">"equal"</span>)</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="3_files/figure-html/cell-11-output-1.png" width="492" height="485" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Khi đó:</p>
+<p><span class="math display">
+M = x \qquad N = y \\
+M_y = 0 \qquad N_x = 0
+</span></p>
+<p><span class="math display">
+\Rightarrow \text{curl}(\vec F) = 0
+</span></p>
 <hr>
+</section>
 </section>
 <section id="greens-theorem" class="level1">
 <h1>Green’s theorem</h1>

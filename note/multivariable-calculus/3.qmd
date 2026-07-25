@@ -832,11 +832,9 @@ def colored_line(ax, x, y, cmap='viridis', lw=5):
     return lc
 t = np.linspace(0, 1, 500)
 
-# C1 (đường dưới)
 x1 = 4 * t
 y1 = -1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)
 
-# C2 (đường trên)
 x2 = 4 * t
 y2 =  1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)
 fig, ax = plt.subplots(figsize=(9,5))
@@ -885,6 +883,13 @@ plt.show()
 ___
 # Consevative fields
 
+Là trường vector bảo toàn.
+
+Nếu ta có một trường vector $F(x, y)$ và tồn tại một hàm vô hướng $f(x, y)$ sau cho $\vec F = \nabla f$.
+Thì trường vector đó được gọi là **conservative**.
+
+
+
 ___
 # Test for Gradient fields
 
@@ -899,7 +904,7 @@ M_y = N_x \\
 $$
 
 ___
-# Finding the potential
+# Finding the potential function
 
 Đầu tiên, ta phải chắc chắn rằng $\vec F$ là trường Gradient. Sau đó chúng ta có 2 cách để tính hàm thế năng $f$.
 
@@ -1111,6 +1116,85 @@ Hoàn toàn giống với cách 1!
 
 ___
 # Curl
+
+Chúng ta có $N_x = M_y$ $\Leftrightarrow$ $\vec F$ là một trường Gradient.
+
+Suy ra trường vector $\vec F$ bảo toàn: $\oint_C \vec F \cdot \mathbf d\vec r = 0$ cho bất kỳ đường cong khép kín nào.
+
+:::{.callout-note}
+## Lưu ý
+Ký hiệu $\oint$ và $\int$ không khác nhau.
+
+$\oint$ chỉ muốn nhắc nhở rằng ta đang tích phân trên một đường cong khép kín.
+:::
+
+Curl cho biết mức độ mà trường vector không có tính bảo toàn, hay trực quan hơn trong hình học, đó chính độ xoáy của trường.
+
+$$
+\text {curl}(\vec F) = N_x - M_y
+$$
+
+
+## Tại sao lại là $N_x - M_y$
+
+Cứ tưởng ta đặt một vật tại một điểm trong trường.
+
+Nó sẽ chịu ảnh hưởng bởi 2 hiệu ứng $N_y$ và $M_x$.
+
+Nếu chúng bằng nhau, thì có nghĩa là hai hiệu ứng có xu hướng triệt tiêu nhau, và khi đó không có curl. Dẫn đến việc hàm đó có tính bảo toàn.
+
+Còn nếu chúng không bảo toàn, thứ tức là còn một hiệu ứng nhiều hoặc ít hơn thằng còn lại.
+
+Điều này cũng dẫn đến việc, độ lớn và dấu của **Curl** cũng biểu thị một sự việc gì đó.
+
+## Interpretation of curl
+
+**Ví dụ** $\vec F = <x, y>$
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 15)
+y = np.linspace(-3, 3, 15)
+X, Y = np.meshgrid(x, y)
+
+U = X
+V = Y
+
+magnitude = np.sqrt(U**2 + V**2)
+
+plt.figure(figsize=(6, 6))
+q = plt.quiver(
+    X, Y, U, V,
+    magnitude,
+    cmap="viridis",
+    angles="xy",
+    scale_units="xy",
+    scale=10,
+    pivot="mid"
+)
+
+plt.axhline(0, color="black", linewidth=0.8)
+plt.axvline(0, color="black", linewidth=0.8)
+plt.gca().set_aspect("equal")
+plt.grid(True)
+plt.show()
+```
+
+Khi đó:
+
+$$
+M = x \qquad N = y \\ 
+M_y = 0 \qquad N_x = 0
+$$
+
+$$
+\Rightarrow \text{curl}(\vec F) = 0
+$$
 
 ___
 # Green’s theorem
