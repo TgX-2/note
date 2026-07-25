@@ -700,5 +700,27 @@
       "18.02",
       "Double integrals and Line integrals in the plane"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#cách-1-sử-dụng-tích-phân-đường",
+    "href": "note/multivariable-calculus/3.html#cách-1-sử-dụng-tích-phân-đường",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Cách 1: Sử dụng tích phân đường",
+    "text": "Cách 1: Sử dụng tích phân đường\nGiả sử đường cong bắt đầu từ điểm (0, 0) đến (x_1, y_1) thì khi đó:\n\n\\int_C \\vec F \\mathbf d\\vec r = f(x_1, y_1) - f(0, 0)\n\nChuyển vế:\n\nf(x_1, y_1) = \\int_C \\vec F \\mathbf d\\vec r + f(0, 0)\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-1.6, 1.6, 17)\ny = np.linspace(-1.6, 1.6, 17)\n\nX, Y = np.meshgrid(x, y)\n\nU = 4*X**2 + 8*X*Y\nV = 3*Y**2 + 4*X**2\n\nspeed = np.sqrt(U**2 + V**2)\n\nfig, ax = plt.subplots(figsize=(6,6))\n\nq = ax.quiver(\n    X, Y, U, V, speed,\n    cmap=\"viridis\",\n    pivot=\"mid\",\n    scale=65\n)\n\nax.annotate(\n    \"\",\n    xy=(1,0),\n    xytext=(0,0),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        lw=3,\n        color=\"purple\"\n    )\n)\n\nax.text(0.45, -0.12, r\"$C_1$\", fontsize=14, color=\"purple\")\n\nax.annotate(\n    \"\",\n    xy=(1,1),\n    xytext=(1,0),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        lw=3,\n        color=\"purple\"\n    )\n)\n\nax.text(1.05, 0.45, r\"$C_2$\", fontsize=14, color=\"purple\")\n\nax.annotate(\n    \"\",\n    xy=(1,1),\n    xytext=(0,0),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        lw=3,\n        color=\"purple\"\n    )\n)\n\nax.text(0.42, 0.58, r\"$C_3$\", fontsize=14, color=\"purple\")\n\nax.set_xlim(-1.6, 1.6)\nax.set_ylim(-1.6, 1.6)\n\nax.set_aspect(\"equal\")\n\nax.axhline(0, color=\"black\", lw=1)\nax.axvline(0, color=\"black\", lw=1)\n\nax.set_xlabel(\"$x$\")\nax.set_ylabel(\"$y$\")\n\n# ax.set_xticks(np.arange(-1.5, 1.6, 0.5))\n# ax.set_yticks(np.arange(-1.5, 1.6, 0.5))\n\n# plt.colorbar(q, label=r\"$|\\mathbf{F}|$\")\n\nplt.tight_layout()\nplt.show()\nplt.show()\n\n\n\n\n\n\n\n\n\nCó rất nhiều đường đi khả dĩ, ví dụ như là C_3 hoặc là C_1 + C_2, … Cách chọn tùy thuộc vào bạn.\nTôi sẽ chọn cách tính C_1 + C_2.\n\n\\int_C = \\int_{C_1} + \\int_{C_2}\n\nTính C_1\n\ny = 0 \\qquad \\mathbf dy = 0\n\n\n\\int_{C_1} = \\int_0^{x_1} (4x^2) \\mathbf dx\n \n= \\left[\\frac 4 3 x^3 \\right]_0^{x_1} = \\frac 4 3 {x_1}^3\n\nTính C_2\n\nx = x_1 \\qquad \\mathbf dx = 0\n\n\n\\int_{C_2} = \\int_0^{y_1} (3y^2 + 4{x_1}^2)\\mathbf dy\n \n= \\left[y^3 + 4{x_1}^2y \\right]_0^{y_1} = {y_1}^3 + 4{x_1}^2{y_1}\n\nTính C\n\n\\int_C = \\int_{C_1} + \\int_{C_2} = \\frac 4 3 {x_1}^3 + {y_1}^3 + 4{x_1}^2{y_1}\n\nVậy\n\nf(x_1, y_1) = \\frac 4 3 {x_1}^3 + {y_1}^3 + 4{x_1}^2{y_1} + C\n\nhay\n\nf(x, y) = \\frac 4 3 {x}^3 + {y}^3 + 4{x}^2{y} + C",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#cách-2-sử-dụng-nguyên-hàm",
+    "href": "note/multivariable-calculus/3.html#cách-2-sử-dụng-nguyên-hàm",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Cách 2: Sử dụng Nguyên hàm",
+    "text": "Cách 2: Sử dụng Nguyên hàm\nTa muốn tìm một hàm f(x, y) mà nó có:\n\n\\begin{align}\nf_x = 4x^2 + 8xy \\tag{1} \\\\\nf_y = 3y^2 + 4x^2 \\tag{2}\n\\end{align}\n\nNguyên hàm f_x\nTa sẽ coi y như là một hằng số, vì vậy ở cuối ta phải cộng cho một hàm số chỉ theo một biến y (bởi vì khi đạo hàm nó đã biến mất, giống như C trong nguyên hàm một biến).\n\n(1) \\Rightarrow f = \\frac 4 3 x^3 + 4x^2y + g(y)\n\nVậy hàm f(x, y) = \\frac 4 3 x^3 + 4x^2y + g(y) (3)\nTìm g(y)\nTa lại đạo hàm riêng hàm f theo y, rồi lại so sánh 2 biểu thức với nhau.\n\n(3) \\Rightarrow f_y = 4x^2 + g'(y)\n\nVà ta có:\n\n(2) = (3) \\\\\n\\Rightarrow 3y^2 + 4x^2 = 4x^2 + g'(y)\n\n\ng'(y) = 3y^2 \\qquad \\Rightarrow \\qquad g(y) = y^3 + C\n\nTổng kết lại\nHàm trở thành:\n\nf(x, y) = \\frac 4 3 x^3 + 4x^2y + y^3 + C\n\nHoàn toàn giống với cách 1!",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
   }
 ]

@@ -599,7 +599,7 @@ V = X
 
 speed = np.sqrt(U**2 + V**2)
 
-fig, ax = plt.subplots(figsize=(8,8))
+fig, ax = plt.subplots(figsize=(6,6))
 
 q = ax.quiver(
     X, Y, U, V, speed,
@@ -885,7 +885,232 @@ plt.show()
 ___
 # Consevative fields
 
+___
+# Test for Gradient fields
 
+Trường vector $F = <M, N>$ là trường gradient $\vec F = \nabla f$ khi $N_x = f_{yx} = f_{xy} = M_y$ tại mọi điểm. Ta có thể kiềm chứng được vế đầu tiên ở phần này, và vế sau *"tại mọi điểm"* ta sẽ được kiểm chứng sau khi học phần sau.
+
+**Ví dụ** Để $\vec F = <4x^2 + axy, 3y^2 + 4x^2>$ là trường Gradient, thì a = ?
+
+$$
+M_y = N_x \\ 
+\Rightarrow ax = 8x \\ 
+\Rightarrow a = 8
+$$
+
+___
+# Finding the potential
+
+Đầu tiên, ta phải chắc chắn rằng $\vec F$ là trường Gradient. Sau đó chúng ta có 2 cách để tính hàm thế năng $f$.
+
+Sử dụng lại ví dụ ở trên, ta có $\vec F = <4x^2 + 8xy, 3y^2 + 4x^2>$.
+
+## Cách 1: Sử dụng tích phân đường
+
+Giả sử đường cong bắt đầu từ điểm $(0, 0)$ đến $(x_1, y_1)$ thì khi đó:
+
+$$
+\int_C \vec F \mathbf d\vec r = f(x_1, y_1) - f(0, 0)
+$$
+
+Chuyển vế:
+
+$$
+f(x_1, y_1) = \int_C \vec F \mathbf d\vec r + f(0, 0)
+$$
+
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-1.6, 1.6, 17)
+y = np.linspace(-1.6, 1.6, 17)
+
+X, Y = np.meshgrid(x, y)
+
+U = 4*X**2 + 8*X*Y
+V = 3*Y**2 + 4*X**2
+
+speed = np.sqrt(U**2 + V**2)
+
+fig, ax = plt.subplots(figsize=(6,6))
+
+q = ax.quiver(
+    X, Y, U, V, speed,
+    cmap="viridis",
+    pivot="mid",
+    scale=65
+)
+
+ax.annotate(
+    "",
+    xy=(1,0),
+    xytext=(0,0),
+    arrowprops=dict(
+        arrowstyle="->",
+        lw=3,
+        color="purple"
+    )
+)
+
+ax.text(0.45, -0.12, r"$C_1$", fontsize=14, color="purple")
+
+ax.annotate(
+    "",
+    xy=(1,1),
+    xytext=(1,0),
+    arrowprops=dict(
+        arrowstyle="->",
+        lw=3,
+        color="purple"
+    )
+)
+
+ax.text(1.05, 0.45, r"$C_2$", fontsize=14, color="purple")
+
+ax.annotate(
+    "",
+    xy=(1,1),
+    xytext=(0,0),
+    arrowprops=dict(
+        arrowstyle="->",
+        lw=3,
+        color="purple"
+    )
+)
+
+ax.text(0.42, 0.58, r"$C_3$", fontsize=14, color="purple")
+
+ax.set_xlim(-1.6, 1.6)
+ax.set_ylim(-1.6, 1.6)
+
+ax.set_aspect("equal")
+
+ax.axhline(0, color="black", lw=1)
+ax.axvline(0, color="black", lw=1)
+
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
+
+# ax.set_xticks(np.arange(-1.5, 1.6, 0.5))
+# ax.set_yticks(np.arange(-1.5, 1.6, 0.5))
+
+# plt.colorbar(q, label=r"$|\mathbf{F}|$")
+
+plt.tight_layout()
+plt.show()
+plt.show()
+```
+
+Có rất nhiều đường đi khả dĩ, ví dụ như là $C_3$ hoặc là $C_1 + C_2$, ... Cách chọn tùy thuộc vào bạn.
+
+Tôi sẽ chọn cách tính $C_1 + C_2$.
+
+$$
+\int_C = \int_{C_1} + \int_{C_2}
+$$
+
+***Tính $C_1$***
+
+$$
+y = 0 \qquad \mathbf dy = 0
+$$
+
+$$
+\int_{C_1} = \int_0^{x_1} (4x^2) \mathbf dx
+$$
+$$
+= \left[\frac 4 3 x^3 \right]_0^{x_1} = \frac 4 3 {x_1}^3
+$$
+
+***Tính $C_2$***
+
+$$
+x = x_1 \qquad \mathbf dx = 0
+$$
+
+$$
+\int_{C_2} = \int_0^{y_1} (3y^2 + 4{x_1}^2)\mathbf dy
+$$
+$$
+= \left[y^3 + 4{x_1}^2y \right]_0^{y_1} = {y_1}^3 + 4{x_1}^2{y_1} 
+$$
+
+***Tính $C$***
+
+$$
+\int_C = \int_{C_1} + \int_{C_2} = \frac 4 3 {x_1}^3 + {y_1}^3 + 4{x_1}^2{y_1}
+$$
+
+Vậy 
+
+$$
+f(x_1, y_1) = \frac 4 3 {x_1}^3 + {y_1}^3 + 4{x_1}^2{y_1} + C
+$$
+
+hay
+
+$$
+f(x, y) = \frac 4 3 {x}^3 + {y}^3 + 4{x}^2{y} + C
+$$
+
+## Cách 2: Sử dụng Nguyên hàm
+
+Ta muốn tìm một hàm $f(x, y)$ mà nó có:
+
+$$
+\begin{align}
+f_x = 4x^2 + 8xy \tag{1} \\
+f_y = 3y^2 + 4x^2 \tag{2}
+\end{align}
+$$
+
+***Nguyên hàm $f_x$***
+
+Ta sẽ coi y như là một hằng số, vì vậy ở cuối ta phải cộng cho một hàm số chỉ theo một biến y (bởi vì khi đạo hàm nó đã biến mất, giống như C trong nguyên hàm một biến).
+
+$$
+(1) \Rightarrow f = \frac 4 3 x^3 + 4x^2y + g(y)
+$$
+
+Vậy hàm $f(x, y) = \frac 4 3 x^3 + 4x^2y + g(y)$ $(3)$
+
+***Tìm g(y)***
+
+Ta lại đạo hàm riêng hàm f theo y, rồi lại so sánh 2 biểu thức với nhau.
+
+$$
+(3) \Rightarrow f_y = 4x^2 + g'(y)
+$$
+
+Và ta có:
+
+$$
+(2) = (3) \\ 
+\Rightarrow 3y^2 + 4x^2 = 4x^2 + g'(y)
+$$
+
+$$
+g'(y) = 3y^2 \qquad \Rightarrow \qquad g(y) = y^3 + C
+$$
+
+***Tổng kết lại***
+
+Hàm trở thành:
+
+$$
+f(x, y) = \frac 4 3 x^3 + 4x^2y + y^3 + C
+$$
+
+Hoàn toàn giống với cách 1!
+
+___
+# Curl
 
 ___
 # Green’s theorem
