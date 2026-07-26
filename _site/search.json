@@ -744,5 +744,38 @@
       "18.02",
       "Double integrals and Line integrals in the plane"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#công-thức",
+    "href": "note/multivariable-calculus/3.html#công-thức",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Công thức",
+    "text": "Công thức\nNếu C là một đường cong khép kín:\n\n\\oint_C \\vec F\\cdot \\mathbf d\\vec r = \\int\\int_R \\text{curl}\\vec F \\mathbf dA\n\nhay\n\n\\oint_C M\\mathbf dx + N\\mathbf dy = \\int\\int_R (N_x - M_y)\\mathbf dA\n\nVí dụ Tính đường tròn khép kín C bán kính 1 tâm I(2, 0), ngược chiều kim đồng hồ, và R là hình tròn bên trong:\n\n\\oint_C ye^{-x}\\mathbf dx + \\left(\\frac 1 2 x^2 - e^{-x} \\right) \\mathbf dy\n\nThử tưởng tượng nếu bạn làm cách tích phân đường như bình thường thì sẽ rất là khó, chúng ta có thể thay độ cực vào, hoặc là sử dụng \\mathbf dx \\mathbf dy! Nhưng rất đáng để thử mà, đúng không?\nBây giờ chúng ta sử dụng Green’s Thm.\n\nN = \\frac 1 2 x^2 - e^{-x} \\qquad N_x = x + e^{-x} \\\\\nM = ye^{-x} \\qquad \\qquad M_y = e{-x}\n\n\n\\oint_C ye^{-x}\\mathbf dx + \\left(\\frac 1 2 x^2 - e^{-x} \\right) \\mathbf dy\n= \\int\\int_R N_x - M_y \\mathbf dA = \\int\\int_R (x + e^{-x}) - e^{-x} \\mathbf dA\n\nhay rút gọn lại là:\n\n\\int\\int_R x \\mathbf dA = 2\\pi\n\n\n\n\n\n\n\nImportantChú ý\n\n\n\n\n\nGreen’s Theorem hoạt động với đường cong khép kín ngược chiều đồng hồ.\nVà Curl được tính là N_x - M_y.\nĐó là quy ước!",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#ứng-dụng",
+    "href": "note/multivariable-calculus/3.html#ứng-dụng",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Ứng dụng",
+    "text": "Ứng dụng",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/3.html#chứng-minh",
+    "href": "note/multivariable-calculus/3.html#chứng-minh",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Chứng minh",
+    "text": "Chứng minh\n2 nhận xét sơ bộ:\n\nNếu một cái bằng 0 và cái còn lại giữ nguyên thì: \n\\oint M \\mathbf dx = -\\int\\int_R M_y \\mathbf dA \\qquad \\oint N \\mathbf dy = \\int\\int_R N_x \\mathbf dA\n\nNếu nó đúng với 2 vùng R_1 và R_2 thì khi hợp lại nó cũng đúng R = R_1 \\cup R_2:\n\n\n\\oint_C = \\oint_{C_1} + \\oint_{C_2} \\qquad \\int\\int_R = \\int\\int_{R_1} + \\int\\int_{R_2}\n\nVà bây giờ chúng ta sẽ chứng minh \\oint_C M\\mathbf dx = -\\int\\int M_y\\mathbf dA (Nếu điều này đúng, thì tự khắc việc \\oint N \\mathbf dy = \\int\\int_R N_x \\mathbf dA cũng đúng, ta sẽ dùng cái này vì nó sẽ dễ nhìn hơn).\n\n\\oint_C M\\mathbf dx = -\\int\\int M_y\\mathbf dA\n\nLHS:\n\n\\oint_C = \\int_{C_1} + \\int_{C_2} + \\int_{C_3} + \\int_{C_4}\n\nNhưng trong hình vẽ ta thấy C_2 và C_4 là một đường thẳng song song với trục tung vậy nên \\int_{C_2}M\\mathbf dx = \\int_{C_4}M\\mathbf dx =0.\n\n\\int_{C_1} + \\int_{C_3} = \\int_a^b M(x, f_0(x)) \\mathbf dx - \\int_a^b M(x, f_1(x)) \\mathbf dx  \n\nRHS:\n\n-\\int\\int_R M_y \\mathbf dA = \\int_a^b \\int_{f_0(x)}^{f_1(x)} M_y \\mathbf dy \\mathbf dx\n\n\n= -\\int_a^b \\left[M(x, f_1(x)) - M(x, f_0(x)) \\right]\\mathbf dx = LHS",
+    "crumbs": [
+      "18.02",
+      "Double integrals and Line integrals in the plane"
+    ]
   }
 ]

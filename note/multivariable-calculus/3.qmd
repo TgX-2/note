@@ -1199,7 +1199,100 @@ $$
 ___
 # Green’s theorem
 
+## Công thức
 
+Nếu C là một đường cong khép kín:
+
+$$
+\oint_C \vec F\cdot \mathbf d\vec r = \int\int_R \text{curl}\vec F \mathbf dA
+$$
+
+hay
+
+$$
+\oint_C M\mathbf dx + N\mathbf dy = \int\int_R (N_x - M_y)\mathbf dA
+$$
+
+**Ví dụ** Tính đường tròn khép kín C bán kính 1 tâm $I(2, 0)$, ngược chiều kim đồng hồ, và R là hình tròn bên trong:
+
+$$
+\oint_C ye^{-x}\mathbf dx + \left(\frac 1 2 x^2 - e^{-x} \right) \mathbf dy
+$$
+
+Thử tưởng tượng nếu bạn làm cách tích phân đường như bình thường thì sẽ rất là khó, chúng ta có thể thay độ cực vào, hoặc là sử dụng $\mathbf dx \mathbf dy$! Nhưng rất đáng để thử mà, đúng không?
+
+Bây giờ chúng ta sử dụng Green's Thm.
+
+$$
+N = \frac 1 2 x^2 - e^{-x} \qquad N_x = x + e^{-x} \\ 
+M = ye^{-x} \qquad \qquad M_y = e{-x}
+$$
+
+$$
+\oint_C ye^{-x}\mathbf dx + \left(\frac 1 2 x^2 - e^{-x} \right) \mathbf dy
+= \int\int_R N_x - M_y \mathbf dA = \int\int_R (x + e^{-x}) - e^{-x} \mathbf dA
+$$
+
+hay rút gọn lại là:
+
+$$
+\int\int_R x \mathbf dA = 2\pi
+$$
+
+:::{.callout-important collapse="true"} 
+## Chú ý
+Green's Theorem hoạt động với đường cong khép kín **ngược chiều đồng hồ**.
+
+Và Curl được tính là $N_x - M_y$.
+
+Đó là quy ước!
+:::
+
+## Ứng dụng
+
+
+## Chứng minh
+
+2 nhận xét sơ bộ:
+
+1) Nếu một cái bằng 0 và cái còn lại giữ nguyên thì:
+$$
+\oint M \mathbf dx = -\int\int_R M_y \mathbf dA \qquad \oint N \mathbf dy = \int\int_R N_x \mathbf dA
+$$
+
+2) Nếu nó đúng với 2 vùng $R_1$ và $R_2$ thì khi hợp lại nó cũng đúng $R = R_1 \cup R_2$:
+
+$$
+\oint_C = \oint_{C_1} + \oint_{C_2} \qquad \int\int_R = \int\int_{R_1} + \int\int_{R_2} 
+$$
+
+Và bây giờ chúng ta sẽ chứng minh $\oint_C M\mathbf dx = -\int\int M_y\mathbf dA$ (Nếu điều này đúng, thì tự khắc việc $\oint N \mathbf dy = \int\int_R N_x \mathbf dA$ cũng đúng, ta sẽ dùng cái này vì nó sẽ dễ nhìn hơn).
+
+$$
+\oint_C M\mathbf dx = -\int\int M_y\mathbf dA
+$$
+
+**LHS:**
+
+$$
+\oint_C = \int_{C_1} + \int_{C_2} + \int_{C_3} + \int_{C_4}
+$$
+
+Nhưng trong hình vẽ ta thấy $C_2$ và $C_4$ là một đường thẳng song song với trục tung vậy nên $\int_{C_2}M\mathbf dx = \int_{C_4}M\mathbf dx =0$.
+
+$$
+\int_{C_1} + \int_{C_3} = \int_a^b M(x, f_0(x)) \mathbf dx - \int_a^b M(x, f_1(x)) \mathbf dx  
+$$
+
+**RHS:**
+
+$$
+-\int\int_R M_y \mathbf dA = \int_a^b \int_{f_0(x)}^{f_1(x)} M_y \mathbf dy \mathbf dx
+$$
+
+$$
+= -\int_a^b \left[M(x, f_1(x)) - M(x, f_0(x)) \right]\mathbf dx = LHS
+$$
 
 ___
 # Flux
