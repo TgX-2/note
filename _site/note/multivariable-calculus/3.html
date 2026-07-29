@@ -558,6 +558,19 @@ window.Quarto = {
 <hr>
 <section id="double-integrals" class="level1">
 <h1>Double integrals</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tích phân trên miền 2D.</p>
+</div>
+</div>
 <section id="cách-tính" class="level2">
 <h2 class="anchored" data-anchor-id="cách-tính">Cách tính</h2>
 <p>Gồm 2 bước để tính <span class="math inline">\int \int S(x,y) \mathbf dx \mathbf dy</span></p>
@@ -585,7 +598,7 @@ window.Quarto = {
 <p><strong>Ví dụ:</strong> <span class="math display">
 \int_0^1 \int_x^{\sqrt x} \frac {e^y}{y} \mathbf dy \mathbf dx
 </span></p>
-<div id="3cfeb479" class="cell" data-execution_count="1">
+<div id="29cd2fb6" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -638,7 +651,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -647,7 +660,7 @@ window.Quarto = {
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span class="math display">
 \int_a^b \int_{c(x)}^{d(x)} S(x, y) \mathbf dy \mathbf dx
@@ -754,7 +767,7 @@ v_x &amp; v_y
 </span></p>
 <p>Vậy hệ số <span class="math inline">\frac{\mathbf du \mathbf dv}{\mathbf dx \mathbf dy}</span> sẽ phải là định thức của ma trận vuông kia.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -763,11 +776,11 @@ v_x &amp; v_y
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Việc này nếu chưa học <strong>18.06</strong> thì khá là khó để suy nghĩ. Nhưng hãy suy nghĩ như thế này.</p>
 <p>Ta có 2 hình, bên trái chỉ <span class="math inline">\mathbf dA = \mathbf dx \mathbf dy</span> và bên phải là <span class="math inline">\mathbf dA' = \mathbf du \mathbf dv</span>, việc của chúng ta là tính hệ số diện tích của nó. Hay chính là chúng thu to hay thu nhỏ với hệ số bao nhiêu.</p>
-<div id="ab578986" class="cell" data-execution_count="2">
+<div id="76973c70" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -916,7 +929,7 @@ r\cos^2\theta + r\sin^2\theta = r
 <p>Mỗi điểm trong mặt phẳng đều có môt vector <span class="math inline">\vec F</span>, vector này phụ thuộc vào x, y.</p>
 <p>Một số hình ảnh ví dụ về trường Vector.</p>
 <p><strong>Ví dụ 1</strong> <span class="math inline">\vec F = 2 \hat{\mathbf i} + \hat{\mathbf j}</span></p>
-<div id="b6605afc" class="cell" data-execution_count="3">
+<div id="dfce6b82" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -959,7 +972,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 <p>Mọi vector đều cùng hướng, cùng độ lớn tại mọi điểm.</p>
 <p><strong>Ví dụ 2</strong> <span class="math inline">\vec F = x \hat{\mathbf i}</span></p>
-<div id="7b2f8328" class="cell" data-execution_count="4">
+<div id="2c5174fa" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1003,7 +1016,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 </div>
 <p><strong>Ví dụ 3</strong> <span class="math inline">\vec F = x \hat{\mathbf i} + y \hat{\mathbf j}</span></p>
-<div id="db07ca2a" class="cell" data-execution_count="5">
+<div id="4d65737c" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1048,7 +1061,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 </div>
 <p><strong>Ví dụ 4</strong> <span class="math inline">\vec F = -y \hat{\mathbf i} + x\hat{\mathbf j}</span></p>
-<div id="f29443b9" class="cell" data-execution_count="6">
+<div id="c3b5bf4a" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1134,7 +1147,7 @@ y = t^2 \qquad \mathbf dy = 2t\mathbf dt
 <section id="path-independence" class="level1">
 <h1>Path independence</h1>
 <p><strong>Tính</strong> Tích phân đường <span class="math inline">C = C_1 + C_2 + C_3</span> trong trường vector <span class="math inline">\vec F = &lt;y, x&gt;</span> sau:</p>
-<div id="e9b26787" class="cell" data-execution_count="7">
+<div id="0a279771" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1334,7 +1347,7 @@ x = t \qquad y = t \\
 \int_c \vec F \mathbf d\vec r = f(B) - f(A)
 </span></p>
 <p><strong>Ví dụ</strong></p>
-<div id="8c4a9987" class="cell" data-execution_count="8">
+<div id="6d4231da" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1446,7 +1459,7 @@ M_y = N_x \\
 <p><span class="math display">
 f(x_1, y_1) = \int_C \vec F \mathbf d\vec r + f(0, 0)
 </span></p>
-<div id="318432ad" class="cell" data-execution_count="9">
+<div id="0eebf4fe" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1644,7 +1657,7 @@ f(x, y) = \frac 4 3 x^3 + 4x^2y + y^3 + C
 <section id="interpretation-of-curl" class="level2">
 <h2 class="anchored" data-anchor-id="interpretation-of-curl">Interpretation of curl</h2>
 <p><strong>Ví dụ</strong> <span class="math inline">\vec F = &lt;x, y&gt;</span></p>
-<div id="cb6e0c1b" class="cell" data-execution_count="10">
+<div id="20f7c006" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1726,7 +1739,7 @@ M = ye^{-x} \qquad \qquad M_y = e{-x}
 \int\int_R x \mathbf dA = 2\pi
 </span></p>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1735,7 +1748,7 @@ M = ye^{-x} \qquad \qquad M_y = e{-x}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Green’s Theorem hoạt động với đường cong khép kín <strong>ngược chiều đồng hồ</strong>.</p>
 <p>Và Curl được tính là <span class="math inline">N_x - M_y</span>.</p>
@@ -1823,7 +1836,7 @@ curl(\vec F) = N_x - M_y
 <p><span class="math display">
 \oint_C \vec F \cdot \hat{\mathbf n}\mathbf dS = \int\int_R \text{div}(\vec F)\mathbf dA
 </span></p>
-<div id="da6b1504" class="cell" data-execution_count="11">
+<div id="aada8c28" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1907,6 +1920,9 @@ curl(\vec F) = N_x - M_y
 </section>
 <section id="simply-connected-regions" class="level1">
 <h1>Simply connected regions</h1>
+<p>more about validity of greens theorem and things like that</p>
+<p>greens theorem have 2 form, oint f t ds = intint curl f dA and oint f n ds = intint div f dA</p>
+<p>if curl f = 0 and domain where f defined is simply connected then, f is conservatice and also gradient.</p>
 <hr>
 </section>
 <section id="end" class="level1">

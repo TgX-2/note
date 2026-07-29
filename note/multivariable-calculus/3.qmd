@@ -15,7 +15,12 @@ format:
 ---
 
 ___
-# Double integrals
+# Double integrals 
+
+:::{.callout-important}
+## tl;dr
+Tích phân trên miền 2D.
+:::
 
 ## Cách tính
 
@@ -1417,7 +1422,15 @@ plt.show()
 ___
 # Simply connected regions
 
+more about validity of greens theorem and things like that
 
+greens theorem have 2 form, 
+oint f t ds = intint curl f dA
+and
+oint f n ds = intint div f dA 
+ 
+
+if curl f  = 0 and domain where f defined is simply connected then, f is conservatice and also gradient.
 
 ___
 # End
