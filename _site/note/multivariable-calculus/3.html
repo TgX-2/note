@@ -499,7 +499,6 @@ window.Quarto = {
   <li><a href="#path-independence-1" id="toc-path-independence-1" class="nav-link" data-scroll-target="#path-independence-1">Path independence</a></li>
   </ul></li>
   <li><a href="#consevative-fields" id="toc-consevative-fields" class="nav-link" data-scroll-target="#consevative-fields">Consevative fields</a></li>
-  <li><a href="#test-for-gradient-fields" id="toc-test-for-gradient-fields" class="nav-link" data-scroll-target="#test-for-gradient-fields">Test for Gradient fields</a></li>
   <li><a href="#finding-the-potential-function" id="toc-finding-the-potential-function" class="nav-link" data-scroll-target="#finding-the-potential-function">Finding the potential function</a>
   <ul class="collapse">
   <li><a href="#cách-1-sử-dụng-tích-phân-đường" id="toc-cách-1-sử-dụng-tích-phân-đường" class="nav-link" data-scroll-target="#cách-1-sử-dụng-tích-phân-đường">Cách 1: Sử dụng tích phân đường</a></li>
@@ -568,7 +567,17 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Tích phân trên miền 2D.</p>
+<p>Tích phân kép dùng để cộng dồn một đại lượng trên một miền hai chiều. Giống như trong tích phân ta có:</p>
+<p><span class="math display">
+\int_a^b f(x)\mathbf dx
+</span></p>
+<p>thì ta có tích phân kép: <span class="math display">
+\int\int_R f(x, y)\mathbf dx \mathbf dy
+</span></p>
+<ul>
+<li><strong><em>Cách tính:</em></strong> Tích phân trong và tích phân ngoài.</li>
+<li><strong><em>Thử đổi thứ tự:</em></strong> Có thể chuyển thứ tự tích phân để bài toán dễ dàng hơn.</li>
+</ul>
 </div>
 </div>
 <section id="cách-tính" class="level2">
@@ -598,7 +607,7 @@ window.Quarto = {
 <p><strong>Ví dụ:</strong> <span class="math display">
 \int_0^1 \int_x^{\sqrt x} \frac {e^y}{y} \mathbf dy \mathbf dx
 </span></p>
-<div id="29cd2fb6" class="cell" data-execution_count="1">
+<div id="4fec7923" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -705,6 +714,23 @@ window.Quarto = {
 </section>
 <section id="integration-in-polar-coordinates" class="level1">
 <h1>Integration in polar coordinates</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nếu miền có dạng hình tròn hay đối xứng tròn, … có thể đổi sang hệ tọa độ cực để dễ dàng tính tích phân hơn:</p>
+<p><span class="math display">
+x = r\cos\theta \qquad y = r\sin\theta
+</span></p>
+<p>Nhớ phải có hệ số Jacobian: <span class="math inline">\mathbf dx \mathbf dy = r\mathbf dr\mathbf d\theta</span>.</p>
+</div>
+</div>
 <p>Không chỉ việc đổi thứ tự tích phân giúp tính tích phân dễ dàng hơn. Chúng ta cũng có một phương pháp khác là sử dụng tọa độ cực.</p>
 <p>Cách chuyển hàm trên tọa độ Đề các sang tọa độ cực, đó là chuyển:</p>
 <ul>
@@ -730,6 +756,26 @@ window.Quarto = {
 </section>
 <section id="change-of-variables" class="level1">
 <h1>Change of variables</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Đổi biến giúp các miền phức tạp trở nên đơn giản hơn (giống như việc đổi hệ tọa độ cực).</p>
+<p>Ta có hệ số Jacobians, <span class="math inline">\mathbf du \mathbf dv = |J|\mathbf dx \mathbf dy</span>:</p>
+<p><span class="math display">
+J = \frac{\partial(u, v)}{\partial(x, y)} = \begin{vmatrix}
+u_x &amp; u_y \\
+v_x &amp; v_y
+\end{vmatrix}
+</span></p>
+</div>
+</div>
 <p>Ngoài việc đổi thứ tự tích phân, đổi sang tọa độ cực. Thì chúng ta có thêm một phương pháp nữa để tính tích phân trong một số trường hợp, đó là đổi biển.</p>
 <section id="đổi-biến" class="level2">
 <h2 class="anchored" data-anchor-id="đổi-biến">Đổi biến</h2>
@@ -767,7 +813,7 @@ v_x &amp; v_y
 </span></p>
 <p>Vậy hệ số <span class="math inline">\frac{\mathbf du \mathbf dv}{\mathbf dx \mathbf dy}</span> sẽ phải là định thức của ma trận vuông kia.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -776,11 +822,11 @@ v_x &amp; v_y
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Việc này nếu chưa học <strong>18.06</strong> thì khá là khó để suy nghĩ. Nhưng hãy suy nghĩ như thế này.</p>
 <p>Ta có 2 hình, bên trái chỉ <span class="math inline">\mathbf dA = \mathbf dx \mathbf dy</span> và bên phải là <span class="math inline">\mathbf dA' = \mathbf du \mathbf dv</span>, việc của chúng ta là tính hệ số diện tích của nó. Hay chính là chúng thu to hay thu nhỏ với hệ số bao nhiêu.</p>
-<div id="76973c70" class="cell" data-execution_count="2">
+<div id="277812c3" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -922,6 +968,19 @@ r\cos^2\theta + r\sin^2\theta = r
 </section>
 <section id="vector-fields" class="level1">
 <h1>Vector fields</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Trường Vector là việc mọi điểm trong không gian đều có vector.</p>
+</div>
+</div>
 <p>Trường vector có khá nhiều ứng dụng trong đời sống, như biểu đồ gió: <img src="../../img/7.png" class="img-fluid"> hay là trường lực, trường hấp dẫn, …</p>
 <p><span class="math display">
 \vec F = M\hat{\mathbf i} + N\hat{\mathbf j}, \qquad M = M(x, y), N = N(x, y)
@@ -929,7 +988,7 @@ r\cos^2\theta + r\sin^2\theta = r
 <p>Mỗi điểm trong mặt phẳng đều có môt vector <span class="math inline">\vec F</span>, vector này phụ thuộc vào x, y.</p>
 <p>Một số hình ảnh ví dụ về trường Vector.</p>
 <p><strong>Ví dụ 1</strong> <span class="math inline">\vec F = 2 \hat{\mathbf i} + \hat{\mathbf j}</span></p>
-<div id="dfce6b82" class="cell" data-execution_count="3">
+<div id="69be2110" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -972,7 +1031,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 <p>Mọi vector đều cùng hướng, cùng độ lớn tại mọi điểm.</p>
 <p><strong>Ví dụ 2</strong> <span class="math inline">\vec F = x \hat{\mathbf i}</span></p>
-<div id="2c5174fa" class="cell" data-execution_count="4">
+<div id="e02c5a25" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1016,7 +1075,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 </div>
 <p><strong>Ví dụ 3</strong> <span class="math inline">\vec F = x \hat{\mathbf i} + y \hat{\mathbf j}</span></p>
-<div id="4d65737c" class="cell" data-execution_count="5">
+<div id="7984d95f" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1061,7 +1120,7 @@ r\cos^2\theta + r\sin^2\theta = r
 </div>
 </div>
 <p><strong>Ví dụ 4</strong> <span class="math inline">\vec F = -y \hat{\mathbf i} + x\hat{\mathbf j}</span></p>
-<div id="c3b5bf4a" class="cell" data-execution_count="6">
+<div id="d5b95817" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1111,6 +1170,19 @@ r\cos^2\theta + r\sin^2\theta = r
 </section>
 <section id="line-integrals" class="level1">
 <h1>Line integrals</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tích phân đường là cộng dồn một đại lượng dọc theo một đường cong thay vì trên một khoảng hay một miền.</p>
+</div>
+</div>
 <section id="công" class="level2">
 <h2 class="anchored" data-anchor-id="công">Công</h2>
 <p><span class="math inline">A = Fs = \vec F \cdot \Delta \vec r</span> cho một chuyển động nhỏ <span class="math inline">\Delta \vec r</span>. Tổng công được tính bằng cách tính tổng các cái này theo một quỹ đạo C.</p>
@@ -1146,8 +1218,25 @@ y = t^2 \qquad \mathbf dy = 2t\mathbf dt
 </section>
 <section id="path-independence" class="level1">
 <h1>Path independence</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Một số tích phân đường chỉ phụ thuộc vào điểm đầu và điểm cuối, không phụ thuộc vào đường đi.</p>
+<p>Định lý cơ bản nhất của tích phân đường giống như trong tích phân một biến, nếu trường vector là gradient của một hàm thế năng, tích phân đường bằng hiệu hai giá trị của hàm thế năng tại hai đầu mút.</p>
+<p><span class="math display">
+\text{If} \qquad \vec F = \nabla f \qquad \text{then} \qquad \int_C \nabla f \cdot \mathbf d\vec r= f(P_1) - f(P_0)
+</span></p>
+</div>
+</div>
 <p><strong>Tính</strong> Tích phân đường <span class="math inline">C = C_1 + C_2 + C_3</span> trong trường vector <span class="math inline">\vec F = &lt;y, x&gt;</span> sau:</p>
-<div id="0a279771" class="cell" data-execution_count="7">
+<div id="fd83c21a" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1347,7 +1436,7 @@ x = t \qquad y = t \\
 \int_c \vec F \mathbf d\vec r = f(B) - f(A)
 </span></p>
 <p><strong>Ví dụ</strong></p>
-<div id="6d4231da" class="cell" data-execution_count="8">
+<div id="0e85e784" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1430,12 +1519,36 @@ x = t \qquad y = t \\
 </section>
 <section id="consevative-fields" class="level1">
 <h1>Consevative fields</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Trường bảo toàn là trường có hàm thế năng. Công của đường kín luôn bằng không.</p>
+</div>
+</div>
 <p>Là trường vector bảo toàn.</p>
-<p>Nếu ta có một trường vector <span class="math inline">F(x, y)</span> và tồn tại một hàm vô hướng <span class="math inline">f(x, y)</span> sau cho <span class="math inline">\vec F = \nabla f</span>. Thì trường vector đó được gọi là <strong>conservative</strong>.</p>
-<hr>
-</section>
-<section id="test-for-gradient-fields" class="level1">
-<h1>Test for Gradient fields</h1>
+<p>Nếu ta có một trường vector <span class="math inline">F(x, y)</span> và tồn tại một hàm vô hướng <span class="math inline">f(x, y)</span> sau cho <span class="math inline">\vec F = \nabla f</span>. Thì trường vector đó được gọi là <strong>conservative</strong>. ___ # Test for Gradient fields</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ta có thể kiểm tra trường vector <span class="math inline">\vec F</span> có phải là trường gradient không bằng việc kiểm tra <span class="math display">
+N_x = M_y
+</span> tại mọi điểm hay không.</p>
+</div>
+</div>
 <p>Trường vector <span class="math inline">F = &lt;M, N&gt;</span> là trường gradient <span class="math inline">\vec F = \nabla f</span> khi <span class="math inline">N_x = f_{yx} = f_{xy} = M_y</span> tại mọi điểm. Ta có thể kiềm chứng được vế đầu tiên ở phần này, và vế sau <em>“tại mọi điểm”</em> ta sẽ được kiểm chứng sau khi học phần sau.</p>
 <p><strong>Ví dụ</strong> Để <span class="math inline">\vec F = &lt;4x^2 + axy, 3y^2 + 4x^2&gt;</span> là trường Gradient, thì a = ?</p>
 <p><span class="math display">
@@ -1447,6 +1560,24 @@ M_y = N_x \\
 </section>
 <section id="finding-the-potential-function" class="level1">
 <h1>Finding the potential function</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ví dụ cho một trường và tìm tích phân đường bất kỳ. Ta biết được rằng trường đó là bảo toàn. Thì ta có thể tính được tích phân đường đó bằng cách sử dụng định lý cơ bản của tích phân đường.</p>
+<p>Nhưng chúng ta chưa có hàm thế năng vì vậy chúng ta phải đi tìm nó.</p>
+<ul>
+<li>Cách 1: Chọn một điểm gốc rồi định nghĩa hàm thế năng bằng tích phân đường từ điểm gốc đến điểm bất kỳ.</li>
+<li>Cách 2: Nguyên hàm.</li>
+</ul>
+</div>
+</div>
 <p>Đầu tiên, ta phải chắc chắn rằng <span class="math inline">\vec F</span> là trường Gradient. Sau đó chúng ta có 2 cách để tính hàm thế năng <span class="math inline">f</span>.</p>
 <p>Sử dụng lại ví dụ ở trên, ta có <span class="math inline">\vec F = &lt;4x^2 + 8xy, 3y^2 + 4x^2&gt;</span>.</p>
 <section id="cách-1-sử-dụng-tích-phân-đường" class="level2">
@@ -1459,7 +1590,7 @@ M_y = N_x \\
 <p><span class="math display">
 f(x_1, y_1) = \int_C \vec F \mathbf d\vec r + f(0, 0)
 </span></p>
-<div id="0eebf4fe" class="cell" data-execution_count="9">
+<div id="61970984" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1626,6 +1757,22 @@ f(x, y) = \frac 4 3 x^3 + 4x^2y + y^3 + C
 </section>
 <section id="curl" class="level1">
 <h1>Curl</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Curl đo xu hướng quay của trường vector quanh một điểm. Giống như việc đặt chong chóng vào một điểm nào đó rồi xem nó quay như thế nào (hay là việc so sánh hai xu hướng là quay trái và quay phải). <span class="math display">
+\text{curl}(\vec F) = N_x - M_y
+</span></p>
+<p>Curl dương tức là xu hướng quay ngược chiều kim đồng hồ. Curl âm tức là là xu hướng quay thuận chiều kim đồng hồ. Curl = 0 tức là không có xu hướng quay.</p>
+</div>
+</div>
 <p>Chúng ta có <span class="math inline">N_x = M_y</span> <span class="math inline">\Leftrightarrow</span> <span class="math inline">\vec F</span> là một trường Gradient.</p>
 <p>Suy ra trường vector <span class="math inline">\vec F</span> bảo toàn: <span class="math inline">\oint_C \vec F \cdot \mathbf d\vec r = 0</span> cho bất kỳ đường cong khép kín nào.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1657,7 +1804,7 @@ f(x, y) = \frac 4 3 x^3 + 4x^2y + y^3 + C
 <section id="interpretation-of-curl" class="level2">
 <h2 class="anchored" data-anchor-id="interpretation-of-curl">Interpretation of curl</h2>
 <p><strong>Ví dụ</strong> <span class="math inline">\vec F = &lt;x, y&gt;</span></p>
-<div id="20f7c006" class="cell" data-execution_count="10">
+<div id="4a325763" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1710,11 +1857,27 @@ M_y = 0 \qquad N_x = 0
 </section>
 <section id="greens-theorem" class="level1">
 <h1>Green’s theorem</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tích phân của một đường cong C đóng kín bằng tích phân kép các curl bên trong miền đóng kín.</p>
+<p><span class="math display">
+\oint_C \vec F \cdot \mathbf d\vec r = \int\int_R \text{curl}(\vec F)\mathbf dA
+</span></p>
+</div>
+</div>
 <section id="công-thức" class="level2">
 <h2 class="anchored" data-anchor-id="công-thức">Công thức</h2>
 <p>Nếu C là một đường cong khép kín:</p>
 <p><span class="math display">
-\oint_C \vec F\cdot \mathbf d\vec r = \int\int_R \text{curl}\vec F \mathbf dA
+\oint_C \vec F\cdot \mathbf d\vec r = \int\int_R \text{curl}(\vec F) \mathbf dA
 </span></p>
 <p>hay</p>
 <p><span class="math display">
@@ -1739,7 +1902,7 @@ M = ye^{-x} \qquad \qquad M_y = e{-x}
 \int\int_R x \mathbf dA = 2\pi
 </span></p>
 <div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1748,7 +1911,7 @@ M = ye^{-x} \qquad \qquad M_y = e{-x}
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Green’s Theorem hoạt động với đường cong khép kín <strong>ngược chiều đồng hồ</strong>.</p>
 <p>Và Curl được tính là <span class="math inline">N_x - M_y</span>.</p>
@@ -1796,6 +1959,30 @@ M = ye^{-x} \qquad \qquad M_y = e{-x}
 </section>
 <section id="flux" class="level1">
 <h1>Flux</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Flux đo lượng trường Vector đi xuyên qua một đường cong hay bề mặt. Công thức tính thông lượng là:</p>
+<p><span class="math display">
+\int_C \vec F \cdot \hat{\mathbf u}\mathbf dS = \int_C -N\mathbf dx + M\mathbf dy
+</span></p>
+<p>Divergence đo mức độ nguồn hoặc hồ của trường vector tại một điểm, tức lượng trường phát ra hoặc hội tụ vào.</p>
+<p><span class="math display">
+\text{div}(\vec F) = M_x + N_y
+</span></p>
+<p>Green’s theorem cho thông lượng</p>
+<p><span class="math display">
+\oint_C \vec F \hat{\mathbf n}\mathbf ds = \int\int_C \text{div}(\vec F)\mathbf dA
+</span></p>
+</div>
+</div>
 <p>Flux là thông lượng, như cái tên của nó thì nó đo tốc độ một lượng vector đi qua một đường cong trong trường vector.</p>
 <p>Hay có thể nói là Flux là một dạng khác của Line integral, trong đó, một trường vector <span class="math inline">\vec F = &lt;M, N&gt;</span> và vector tiếp tuyến <span class="math inline">\hat{\mathbf T}\mathbf dS = &lt;\mathbf dx, \mathbf dy&gt;</span> thì tích phân đường sẽ là:</p>
 <p><span class="math display">
@@ -1836,7 +2023,7 @@ curl(\vec F) = N_x - M_y
 <p><span class="math display">
 \oint_C \vec F \cdot \hat{\mathbf n}\mathbf dS = \int\int_R \text{div}(\vec F)\mathbf dA
 </span></p>
-<div id="aada8c28" class="cell" data-execution_count="11">
+<div id="b3bf7d9f" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1876,7 +2063,7 @@ curl(\vec F) = N_x - M_y
 <span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>Fx_vis <span class="op">=</span> (Fx <span class="op">/</span> F_len) <span class="op">*</span> <span class="fl">1.5</span></span>
 <span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>Fy_vis <span class="op">=</span> (Fy <span class="op">/</span> F_len) <span class="op">*</span> <span class="fl">1.5</span></span>
 <span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>), dpi<span class="op">=</span><span class="dv">120</span>)</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>), dpi<span class="op">=</span><span class="dv">120</span>)</span>
 <span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> ax.quiver(X, Y, U_norm, V_norm, mag, cmap<span class="op">=</span><span class="st">'viridis'</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, angles<span class="op">=</span><span class="st">'xy'</span>, scale<span class="op">=</span><span class="dv">25</span>, width<span class="op">=</span><span class="fl">0.0035</span>)</span>
 <span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
@@ -1894,7 +2081,7 @@ curl(\vec F) = N_x - M_y
 <span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>                arrowprops<span class="op">=</span><span class="bu">dict</span>(arrowstyle<span class="op">=</span><span class="st">"-&gt;"</span>, color<span class="op">=</span><span class="st">'#1f77b4'</span>, lw<span class="op">=</span><span class="fl">1.5</span>, mutation_scale<span class="op">=</span><span class="dv">15</span>))</span>
 <span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>ax.plot(x0, y0, <span class="st">'ko'</span>, markersize<span class="op">=</span><span class="dv">7</span>, zorder<span class="op">=</span><span class="dv">6</span>)</span>
-<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>ax.quiver(x0, y0, Fx_vis, Fy_vis, color<span class="op">=</span><span class="st">'crimson'</span>, angles<span class="op">=</span><span class="st">'xy'</span>, scale_units<span class="op">=</span><span class="st">'xy'</span>, scale<span class="op">=</span><span class="dv">1</span>, zorder<span class="op">=</span><span class="dv">7</span>, width<span class="op">=</span><span class="fl">0.004</span>)</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="co"># ax.quiver(x0, y0, Fx_vis, Fy_vis, color='crimson', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)</span></span>
 <span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>ax.quiver(x0, y0, ux, uy, color<span class="op">=</span><span class="st">'mediumseagreen'</span>, angles<span class="op">=</span><span class="st">'xy'</span>, scale_units<span class="op">=</span><span class="st">'xy'</span>, scale<span class="op">=</span><span class="dv">1</span>, zorder<span class="op">=</span><span class="dv">7</span>, width<span class="op">=</span><span class="fl">0.004</span>)</span>
 <span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>ax.quiver(x0, y0, nx, ny, color<span class="op">=</span><span class="st">'darkorchid'</span>, angles<span class="op">=</span><span class="st">'xy'</span>, scale_units<span class="op">=</span><span class="st">'xy'</span>, scale<span class="op">=</span><span class="dv">1</span>, zorder<span class="op">=</span><span class="dv">7</span>, width<span class="op">=</span><span class="fl">0.004</span>)</span>
 <span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a></span>
@@ -1910,7 +2097,7 @@ curl(\vec F) = N_x - M_y
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-12-output-1.png" width="1095" height="947" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-12-output-1.png" width="587" height="508" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1920,6 +2107,19 @@ curl(\vec F) = N_x - M_y
 </section>
 <section id="simply-connected-regions" class="level1">
 <h1>Simply connected regions</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Miền đơn liên là miền không có lỗ. Điều kiện này rất quan trọng để các định lý như Green’s Theorem và các tiêu chuẩn nhận biết trường bảo toàn được áp dụng một cách đầy đủ.</p>
+</div>
+</div>
 <p>more about validity of greens theorem and things like that</p>
 <p>greens theorem have 2 form, oint f t ds = intint curl f dA and oint f n ds = intint div f dA</p>
 <p>if curl f = 0 and domain where f defined is simply connected then, f is conservatice and also gradient.</p>

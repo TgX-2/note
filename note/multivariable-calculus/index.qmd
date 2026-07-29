@@ -40,37 +40,37 @@ ___
 
 ___
 # 3. Tích phân kép và tích phân đường trong mặt phẳng - Double integrals and Line integrals in the plane
-* **3.1.** Tích phân kép
-    * **3.1.1.** Phương pháp tính tích phân kép (theo định lý Fubini)
-    * **3.1.2.** Đổi thứ tự
-    * **3.1.3.** Tích phân trên tọa độ cực
+* **3.1.** Double integral
+    * **3.1.1.** Calculation
+    * **3.1.2.** Change the order
+* **3.2.** Integration in Polar coordinates
 * **3.3.** Change of variables
-    * **3.3.1.** Đổi biến
-    * **3.3.2.** Định thức Jacobian
-    * **3.3.3.** Tính biên
+    * **3.3.1.** Change of variables 
+    * **3.3.2.** Jacobians
+    * **3.3.3.** Calculation upperr and lower limit
 * **3.4.** Vector fields
 * **3.5.** Line integrals
-    * **3.5.1.** Tính công
-    * **3.5.2.** Cách tính Tích phân đường
+    * **3.5.1.** Work
+    * **3.5.2.** Calculation Line integrals
 * **3.6.** Path independence
-    * **3.6.1.** Định lý Tích phân đường cơ bản
-    * **3.6.2.** Tính không phụ thuộc vào đường đi
+    * **3.6.1.** Fundamental theorem of calculus for line integral
+    * **3.6.2.** Path independence
 * **3.7.** Conservative fields
 * **3.8.** Test for Gradient fields
 * **3.9.** Finding the Potential function
-    * **3.9.1.** Cách 1: Sử dụng Line integral
-    * **3.9.2.** Cách 2: Sử dụng Antiderivatives
+    * **3.9.1.** Method 1: Using Line integral
+    * **3.9.2.** Method 2: Using Antiderivatives
 * **3.10.** Curl
-    * **3.10.1.** Tại sao lại là $N_x - M_y$
-    * **3.10.2.** Diễn giải Curl
+    * **3.10.1.** Why $N_x - M_y$?
+    * **3.10.2.** Interpretation Curl
 * **3.11** Green's Theorem
-    * **3.11.1.** Công thức
-    * **3.11.2.** Ứng dụng
-    * **3.11.3.** Chứng minh
-* **3.12.** Thông lượng
+    * **3.11.1.** Calculation
+    * **3.11.2.** Application
+    * **3.11.3.** Proof
+* **3.12.** Flux
     * **3.12.1.** Divergence
-    * **3.12.2.** Dạng thông lượng của định lý Green
-* **3.13.** Vùng liên thông đơn
+    * **3.12.2.** Green's theorem for flux
+* **3.13.** Simply connected regions 
 
 
 

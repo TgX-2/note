@@ -19,7 +19,19 @@ ___
 
 :::{.callout-important}
 ## tl;dr
-Tích phân trên miền 2D.
+Tích phân kép dùng để cộng dồn một đại lượng trên một miền hai chiều. Giống như trong tích phân ta có:
+
+$$
+\int_a^b f(x)\mathbf dx
+$$
+
+thì ta có tích phân kép:
+$$
+\int\int_R f(x, y)\mathbf dx \mathbf dy
+$$
+
+- ***Cách tính:*** Tích phân trong và tích phân ngoài.
+- ***Thử đổi thứ tự:*** Có thể chuyển thứ tự tích phân để bài toán dễ dàng hơn.
 :::
 
 ## Cách tính
@@ -146,6 +158,17 @@ $$
 ___
 # Integration in polar coordinates
 
+:::{.callout-important}
+## tl;dr
+Nếu miền có dạng hình tròn hay đối xứng tròn, ... có thể đổi sang hệ tọa độ cực để dễ dàng tính tích phân hơn:
+
+$$
+x = r\cos\theta \qquad y = r\sin\theta
+$$
+
+Nhớ phải có hệ số Jacobian: $\mathbf dx \mathbf dy = r\mathbf dr\mathbf d\theta$.
+:::
+
 Không chỉ việc đổi thứ tự tích phân giúp tính tích phân dễ dàng hơn. Chúng ta cũng có một phương pháp khác là sử dụng tọa độ cực.
 
 Cách chuyển hàm trên tọa độ Đề các sang tọa độ cực, đó là chuyển:
@@ -179,6 +202,20 @@ $$
 
 ___
 # Change of variables
+
+:::{.callout-important}
+## tl;dr
+Đổi biến giúp các miền phức tạp trở nên đơn giản hơn (giống như việc đổi hệ tọa độ cực).
+
+Ta có hệ số Jacobians, $\mathbf du \mathbf dv = |J|\mathbf dx \mathbf dy$: 
+
+$$
+J = \frac{\partial(u, v)}{\partial(x, y)} = \begin{vmatrix}
+u_x & u_y \\ 
+v_x & v_y
+\end{vmatrix}
+$$
+:::
 
 Ngoài việc đổi thứ tự tích phân, đổi sang tọa độ cực. Thì chúng ta có thêm một phương pháp nữa để tính tích phân trong một số trường hợp, đó là đổi biển.
 
@@ -365,6 +402,11 @@ Vậy suy ra: $\mathbf dx \mathbf dy = r \mathbf dr \mathbf d\theta$.
 ___
 # Vector fields
 
+:::{.callout-important}
+## tl;dr
+Trường Vector là việc mọi điểm trong không gian đều có vector.
+:::
+
 Trường vector có khá nhiều ứng dụng trong đời sống, như biểu đồ gió:
 ![](../../img/7.png)
 hay là trường lực, trường hấp dẫn, ...
@@ -538,6 +580,11 @@ plt.show()
 ___
 # Line integrals
 
+:::{.callout-important}
+## tl;dr
+Tích phân đường là cộng dồn một đại lượng dọc theo một đường cong thay vì trên một khoảng hay một miền.
+:::
+
 ## Công
 
 $A = Fs = \vec F \cdot \Delta \vec r$ cho một chuyển động nhỏ $\Delta \vec r$. Tổng công được tính bằng cách tính tổng các cái này theo một quỹ đạo C.
@@ -583,6 +630,17 @@ $$
 
 ___
 # Path independence
+
+:::{.callout-important}
+## tl;dr
+Một số tích phân đường chỉ phụ thuộc vào điểm đầu và điểm cuối, không phụ thuộc vào đường đi. 
+
+Định lý cơ bản nhất của tích phân đường giống như trong tích phân một biến, nếu trường vector là gradient của một hàm thế năng, tích phân đường bằng hiệu hai giá trị của hàm thế năng tại hai đầu mút.
+
+$$
+\text{If} \qquad \vec F = \nabla f \qquad \text{then} \qquad \int_C \nabla f \cdot \mathbf d\vec r= f(P_1) - f(P_0) 
+$$
+:::
 
 **Tính** Tích phân đường $C = C_1 + C_2 + C_3$ trong trường vector $\vec F = <y, x>$ sau:
 
@@ -888,15 +946,27 @@ plt.show()
 ___
 # Consevative fields
 
+:::{.callout-important}
+## tl;dr
+Trường bảo toàn là trường có hàm thế năng. Công của đường kín luôn bằng không.
+:::
+
 Là trường vector bảo toàn.
 
 Nếu ta có một trường vector $F(x, y)$ và tồn tại một hàm vô hướng $f(x, y)$ sau cho $\vec F = \nabla f$.
 Thì trường vector đó được gọi là **conservative**.
-
-
-
 ___
 # Test for Gradient fields
+
+:::{.callout-important}
+## tl;dr
+Ta có thể kiểm tra trường vector $\vec F$ có phải là trường gradient không bằng việc kiểm tra
+$$
+N_x = M_y
+$$
+tại mọi điểm hay không.
+:::
+
 
 Trường vector $F = <M, N>$ là trường gradient $\vec F = \nabla f$ khi $N_x = f_{yx} = f_{xy} = M_y$ tại mọi điểm. Ta có thể kiềm chứng được vế đầu tiên ở phần này, và vế sau *"tại mọi điểm"* ta sẽ được kiểm chứng sau khi học phần sau.
 
@@ -910,6 +980,16 @@ $$
 
 ___
 # Finding the potential function
+
+:::{.callout-important}
+## tl;dr
+Ví dụ cho một trường và tìm tích phân đường bất kỳ. Ta biết được rằng trường đó là bảo toàn. Thì ta có thể tính được tích phân đường đó bằng cách sử dụng định lý cơ bản của tích phân đường.
+
+Nhưng chúng ta chưa có hàm thế năng vì vậy chúng ta phải đi tìm nó.
+
+- Cách 1: Chọn một điểm gốc rồi định nghĩa hàm thế năng bằng tích phân đường từ điểm gốc đến điểm bất kỳ.
+- Cách 2: Nguyên hàm.
+:::
 
 Đầu tiên, ta phải chắc chắn rằng $\vec F$ là trường Gradient. Sau đó chúng ta có 2 cách để tính hàm thế năng $f$.
 
@@ -1122,6 +1202,19 @@ Hoàn toàn giống với cách 1!
 ___
 # Curl
 
+:::{.callout-important}
+## tl;dr
+Curl đo xu hướng quay của trường vector quanh một điểm. Giống như việc đặt chong chóng vào một điểm nào đó rồi xem nó quay như thế nào (hay là việc so sánh hai xu hướng là quay trái và quay phải).
+$$
+\text{curl}(\vec F) = N_x - M_y
+$$
+
+Curl dương tức là xu hướng quay ngược chiều kim đồng hồ.
+Curl âm tức là là xu hướng quay thuận chiều kim đồng hồ.
+Curl = 0 tức là không có xu hướng quay.
+
+:::
+
 Chúng ta có $N_x = M_y$ $\Leftrightarrow$ $\vec F$ là một trường Gradient.
 
 Suy ra trường vector $\vec F$ bảo toàn: $\oint_C \vec F \cdot \mathbf d\vec r = 0$ cho bất kỳ đường cong khép kín nào.
@@ -1204,12 +1297,21 @@ $$
 ___
 # Green’s theorem
 
+:::{.callout-important}
+## tl;dr
+Tích phân của một đường cong C đóng kín bằng tích phân kép các curl bên trong miền đóng kín.
+
+$$
+\oint_C \vec F \cdot \mathbf d\vec r = \int\int_R \text{curl}(\vec F)\mathbf dA
+$$
+:::
+
 ## Công thức
 
 Nếu C là một đường cong khép kín:
 
 $$
-\oint_C \vec F\cdot \mathbf d\vec r = \int\int_R \text{curl}\vec F \mathbf dA
+\oint_C \vec F\cdot \mathbf d\vec r = \int\int_R \text{curl}(\vec F) \mathbf dA
 $$
 
 hay
@@ -1302,6 +1404,27 @@ $$
 ___
 # Flux
 
+:::{.callout-important}
+## tl;dr
+Flux đo lượng trường Vector đi xuyên qua một đường cong hay bề mặt. Công thức tính thông lượng là:
+
+$$
+\int_C \vec F \cdot \hat{\mathbf u}\mathbf dS = \int_C -N\mathbf dx + M\mathbf dy
+$$
+
+Divergence đo mức độ nguồn hoặc hồ của trường vector tại một điểm, tức lượng trường phát ra hoặc hội tụ vào.
+
+$$
+\text{div}(\vec F) = M_x + N_y
+$$
+
+Green's theorem cho thông lượng
+
+$$
+\oint_C \vec F \hat{\mathbf n}\mathbf ds = \int\int_C \text{div}(\vec F)\mathbf dA
+$$
+:::
+
 Flux là thông lượng, như cái tên của nó thì nó đo tốc độ một lượng vector đi qua một đường cong trong trường vector. 
 
 Hay có thể nói là Flux là một dạng khác của Line integral, trong đó, một trường vector $\vec F = <M, N>$ và vector tiếp tuyến $\hat{\mathbf T}\mathbf dS = <\mathbf dx, \mathbf dy>$ thì tích phân đường sẽ là:
@@ -1387,7 +1510,7 @@ F_len = np.hypot(Fx, Fy)
 Fx_vis = (Fx / F_len) * 1.5
 Fy_vis = (Fy / F_len) * 1.5
 
-fig, ax = plt.subplots(figsize=(10, 8), dpi=120)
+fig, ax = plt.subplots(figsize=(5, 5), dpi=120)
 
 q = ax.quiver(X, Y, U_norm, V_norm, mag, cmap='viridis', alpha=0.35, angles='xy', scale=25, width=0.0035)
 
@@ -1405,7 +1528,7 @@ for at in arrow_t:
                 arrowprops=dict(arrowstyle="->", color='#1f77b4', lw=1.5, mutation_scale=15))
 
 ax.plot(x0, y0, 'ko', markersize=7, zorder=6)
-ax.quiver(x0, y0, Fx_vis, Fy_vis, color='crimson', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)
+# ax.quiver(x0, y0, Fx_vis, Fy_vis, color='crimson', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)
 ax.quiver(x0, y0, ux, uy, color='mediumseagreen', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)
 ax.quiver(x0, y0, nx, ny, color='darkorchid', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)
 
@@ -1421,6 +1544,11 @@ plt.show()
 
 ___
 # Simply connected regions
+
+:::{.callout-important}
+## tl;dr
+Miền đơn liên là miền không có lỗ. Điều kiện này rất quan trọng để các định lý như Green's Theorem và các tiêu chuẩn nhận biết trường bảo toàn được áp dụng một cách đầy đủ.
+:::
 
 more about validity of greens theorem and things like that
 
