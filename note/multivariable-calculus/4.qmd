@@ -1,0 +1,88 @@
+---
+title: "Triple integrals and Surface integrals in 3D space"
+chapter: "18.02 - Multivariable calculus"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+---
+
+___
+# Triple integrals
+
+## Cylindrical coordinates
+
+### Applications
+
+## Spherical coordinates
+
+### Volume element
+
+### Example
+
+## Application to gravitation
+
+### General setup
+
+---
+
+# Vector fields in space
+
+## Line integrals in space
+
+## Gradient fields
+
+### Curl
+
+### Interpretation of curl for velocity fields
+
+## Del operator
+
+### Divergence
+
+### Physical interpretation
+
+---
+
+# Parametric surfaces
+
+## Implicit surfaces
+
+## Flux
+
+### Geometric interpretation of flux
+
+### Flux through a graph
+
+## Orientability
+
+---
+
+# Divergence theorem
+
+## Physical interpretation
+
+## Proof of divergence theorem
+
+## Diffusion equation
+
+---
+
+# Stokes’ theorem
+
+## “Proof” of Stokes
+
+## Stokes and path independence
+
+## Stokes and surface independence
+
+---
+
+# End

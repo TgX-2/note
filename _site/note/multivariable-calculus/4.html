@@ -8,7 +8,7 @@
 
 <meta name="author" content="TgX.2">
 
-<title>Determinant – TgX.2</title>
+<title>Triple integrals and Surface integrals in 3D space – TgX.2</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -78,49 +78,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="../navigation.js" defer=""></script>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../styles.css">
@@ -297,7 +254,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/linear-algebra/index.html">18.06</a></li><li class="breadcrumb-item"><a href="../../note/linear-algebra/determinant.html">Determinant</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/multivariable-calculus/index.html">18.02</a></li><li class="breadcrumb-item"><a href="../../note/multivariable-calculus/4.html">Triple integrals and Surface integrals in 3D space</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -333,13 +290,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">18.02</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../note/multivariable-calculus/index.html" class="sidebar-item-text sidebar-link">
@@ -366,7 +323,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../note/multivariable-calculus/4.html" class="sidebar-item-text sidebar-link">
+  <a href="../../note/multivariable-calculus/4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Triple integrals and Surface integrals in 3D space</span></a>
   </div>
 </li>
@@ -391,13 +348,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">18.06</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../note/linear-algebra/index.html" class="sidebar-item-text sidebar-link">
@@ -424,7 +381,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../note/linear-algebra/determinant.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../note/linear-algebra/determinant.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Determinant</span></a>
   </div>
 </li>
@@ -446,11 +403,59 @@ window.Quarto = {
     <h2 id="toc-title">Mục lục bài viết</h2>
    
   <ul>
-  <li><a href="#determinant-ý-nghĩa-hình-học" id="toc-determinant-ý-nghĩa-hình-học" class="nav-link active" data-scroll-target="#determinant-ý-nghĩa-hình-học">Determinant: Ý nghĩa hình học</a></li>
-  <li><a href="#ý-nghĩa-determinant" id="toc-ý-nghĩa-determinant" class="nav-link" data-scroll-target="#ý-nghĩa-determinant">Ý nghĩa Determinant</a></li>
-  <li><a href="#cách-tính-determinant" id="toc-cách-tính-determinant" class="nav-link" data-scroll-target="#cách-tính-determinant">Cách tính Determinant</a></li>
-  <li><a href="#một-số-tính-chất-của-determinant" id="toc-một-số-tính-chất-của-determinant" class="nav-link" data-scroll-target="#một-số-tính-chất-của-determinant">Một số tính chất của Determinant</a></li>
-  <li><a href="#sự-sụp-đổ-của-không-gian" id="toc-sự-sụp-đổ-của-không-gian" class="nav-link" data-scroll-target="#sự-sụp-đổ-của-không-gian">Sự sụp đổ của không gian</a></li>
+  <li><a href="#triple-integrals" id="toc-triple-integrals" class="nav-link active" data-scroll-target="#triple-integrals">Triple integrals</a>
+  <ul class="collapse">
+  <li><a href="#cylindrical-coordinates" id="toc-cylindrical-coordinates" class="nav-link" data-scroll-target="#cylindrical-coordinates">Cylindrical coordinates</a>
+  <ul class="collapse">
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
+  </ul></li>
+  <li><a href="#spherical-coordinates" id="toc-spherical-coordinates" class="nav-link" data-scroll-target="#spherical-coordinates">Spherical coordinates</a>
+  <ul class="collapse">
+  <li><a href="#volume-element" id="toc-volume-element" class="nav-link" data-scroll-target="#volume-element">Volume element</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  </ul></li>
+  <li><a href="#application-to-gravitation" id="toc-application-to-gravitation" class="nav-link" data-scroll-target="#application-to-gravitation">Application to gravitation</a>
+  <ul class="collapse">
+  <li><a href="#general-setup" id="toc-general-setup" class="nav-link" data-scroll-target="#general-setup">General setup</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#vector-fields-in-space" id="toc-vector-fields-in-space" class="nav-link" data-scroll-target="#vector-fields-in-space">Vector fields in space</a>
+  <ul class="collapse">
+  <li><a href="#line-integrals-in-space" id="toc-line-integrals-in-space" class="nav-link" data-scroll-target="#line-integrals-in-space">Line integrals in space</a></li>
+  <li><a href="#gradient-fields" id="toc-gradient-fields" class="nav-link" data-scroll-target="#gradient-fields">Gradient fields</a>
+  <ul class="collapse">
+  <li><a href="#curl" id="toc-curl" class="nav-link" data-scroll-target="#curl">Curl</a></li>
+  <li><a href="#interpretation-of-curl-for-velocity-fields" id="toc-interpretation-of-curl-for-velocity-fields" class="nav-link" data-scroll-target="#interpretation-of-curl-for-velocity-fields">Interpretation of curl for velocity fields</a></li>
+  </ul></li>
+  <li><a href="#del-operator" id="toc-del-operator" class="nav-link" data-scroll-target="#del-operator">Del operator</a>
+  <ul class="collapse">
+  <li><a href="#divergence" id="toc-divergence" class="nav-link" data-scroll-target="#divergence">Divergence</a></li>
+  <li><a href="#physical-interpretation" id="toc-physical-interpretation" class="nav-link" data-scroll-target="#physical-interpretation">Physical interpretation</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#parametric-surfaces" id="toc-parametric-surfaces" class="nav-link" data-scroll-target="#parametric-surfaces">Parametric surfaces</a>
+  <ul class="collapse">
+  <li><a href="#implicit-surfaces" id="toc-implicit-surfaces" class="nav-link" data-scroll-target="#implicit-surfaces">Implicit surfaces</a></li>
+  <li><a href="#flux" id="toc-flux" class="nav-link" data-scroll-target="#flux">Flux</a>
+  <ul class="collapse">
+  <li><a href="#geometric-interpretation-of-flux" id="toc-geometric-interpretation-of-flux" class="nav-link" data-scroll-target="#geometric-interpretation-of-flux">Geometric interpretation of flux</a></li>
+  <li><a href="#flux-through-a-graph" id="toc-flux-through-a-graph" class="nav-link" data-scroll-target="#flux-through-a-graph">Flux through a graph</a></li>
+  </ul></li>
+  <li><a href="#orientability" id="toc-orientability" class="nav-link" data-scroll-target="#orientability">Orientability</a></li>
+  </ul></li>
+  <li><a href="#divergence-theorem" id="toc-divergence-theorem" class="nav-link" data-scroll-target="#divergence-theorem">Divergence theorem</a>
+  <ul class="collapse">
+  <li><a href="#physical-interpretation-1" id="toc-physical-interpretation-1" class="nav-link" data-scroll-target="#physical-interpretation-1">Physical interpretation</a></li>
+  <li><a href="#proof-of-divergence-theorem" id="toc-proof-of-divergence-theorem" class="nav-link" data-scroll-target="#proof-of-divergence-theorem">Proof of divergence theorem</a></li>
+  <li><a href="#diffusion-equation" id="toc-diffusion-equation" class="nav-link" data-scroll-target="#diffusion-equation">Diffusion equation</a></li>
+  </ul></li>
+  <li><a href="#stokes-theorem" id="toc-stokes-theorem" class="nav-link" data-scroll-target="#stokes-theorem">Stokes’ theorem</a>
+  <ul class="collapse">
+  <li><a href="#proof-of-stokes" id="toc-proof-of-stokes" class="nav-link" data-scroll-target="#proof-of-stokes">“Proof” of Stokes</a></li>
+  <li><a href="#stokes-and-path-independence" id="toc-stokes-and-path-independence" class="nav-link" data-scroll-target="#stokes-and-path-independence">Stokes and path independence</a></li>
+  <li><a href="#stokes-and-surface-independence" id="toc-stokes-and-surface-independence" class="nav-link" data-scroll-target="#stokes-and-surface-independence">Stokes and surface independence</a></li>
+  </ul></li>
+  <li><a href="#end" id="toc-end" class="nav-link" data-scroll-target="#end">End</a></li>
   </ul>
 </nav>
     </div>
@@ -458,9 +463,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/linear-algebra/index.html">18.06</a></li><li class="breadcrumb-item"><a href="../../note/linear-algebra/determinant.html">Determinant</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/multivariable-calculus/index.html">18.02</a></li><li class="breadcrumb-item"><a href="../../note/multivariable-calculus/4.html">Triple integrals and Surface integrals in 3D space</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Determinant</h1>
+<h1 class="title">Triple integrals and Surface integrals in 3D space</h1>
 </div>
 
 
@@ -484,41 +489,103 @@ window.Quarto = {
 
 
 <hr>
-<section id="determinant-ý-nghĩa-hình-học" class="level1">
-<h1>Determinant: Ý nghĩa hình học</h1>
-<p>Một định thức của ma trận là phương của diện tích sau khi ánh xạ với diện tích trước ánh xạ.</p>
-<p><span class="math display">
-det(\mathbf A) = \frac{\text{area after T}}{\text{area before T}}
-</span></p>
-<p><img src="../img/4.png" class="img-fluid"></p>
+<section id="triple-integrals" class="level1">
+<h1>Triple integrals</h1>
+<section id="cylindrical-coordinates" class="level2">
+<h2 class="anchored" data-anchor-id="cylindrical-coordinates">Cylindrical coordinates</h2>
+<section id="applications" class="level3">
+<h3 class="anchored" data-anchor-id="applications">Applications</h3>
+</section>
+</section>
+<section id="spherical-coordinates" class="level2">
+<h2 class="anchored" data-anchor-id="spherical-coordinates">Spherical coordinates</h2>
+<section id="volume-element" class="level3">
+<h3 class="anchored" data-anchor-id="volume-element">Volume element</h3>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+</section>
+</section>
+<section id="application-to-gravitation" class="level2">
+<h2 class="anchored" data-anchor-id="application-to-gravitation">Application to gravitation</h2>
+<section id="general-setup" class="level3">
+<h3 class="anchored" data-anchor-id="general-setup">General setup</h3>
 <hr>
 </section>
-<section id="ý-nghĩa-determinant" class="level1">
-<h1>Ý nghĩa Determinant</h1>
-<ul>
-<li><span class="math inline">\det(\mathbf A) &gt; 0</span> : Trục cơ sở vẫn giữ nguyên (tức là <span class="math inline">\hat i</span> nằm bên phải <span class="math inline">\hat j</span> theo chiều đồng hồ).</li>
-<li><span class="math inline">\det(\mathbf A) &lt; 0</span> : Trục cơ sở bị đảo (<span class="math inline">\hat i</span> nằm bên trái <span class="math inline">\hat j</span> theo chiều đồng hồ).</li>
-<li><span class="math inline">\det(\mathbf A) = 0</span> : Chiều không gian bị giảm đi (tức là từ không gian <span class="math inline">\mathbb R^n</span> giảm xuống <span class="math inline">\mathbb R^{n - 1} ,..., \mathbb R^0</span>).</li>
-</ul>
+</section>
+</section>
+<section id="vector-fields-in-space" class="level1">
+<h1>Vector fields in space</h1>
+<section id="line-integrals-in-space" class="level2">
+<h2 class="anchored" data-anchor-id="line-integrals-in-space">Line integrals in space</h2>
+</section>
+<section id="gradient-fields" class="level2">
+<h2 class="anchored" data-anchor-id="gradient-fields">Gradient fields</h2>
+<section id="curl" class="level3">
+<h3 class="anchored" data-anchor-id="curl">Curl</h3>
+</section>
+<section id="interpretation-of-curl-for-velocity-fields" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation-of-curl-for-velocity-fields">Interpretation of curl for velocity fields</h3>
+</section>
+</section>
+<section id="del-operator" class="level2">
+<h2 class="anchored" data-anchor-id="del-operator">Del operator</h2>
+<section id="divergence" class="level3">
+<h3 class="anchored" data-anchor-id="divergence">Divergence</h3>
+</section>
+<section id="physical-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="physical-interpretation">Physical interpretation</h3>
 <hr>
 </section>
-<section id="cách-tính-determinant" class="level1">
-<h1>Cách tính Determinant</h1>
-<p>…</p>
+</section>
+</section>
+<section id="parametric-surfaces" class="level1">
+<h1>Parametric surfaces</h1>
+<section id="implicit-surfaces" class="level2">
+<h2 class="anchored" data-anchor-id="implicit-surfaces">Implicit surfaces</h2>
+</section>
+<section id="flux" class="level2">
+<h2 class="anchored" data-anchor-id="flux">Flux</h2>
+<section id="geometric-interpretation-of-flux" class="level3">
+<h3 class="anchored" data-anchor-id="geometric-interpretation-of-flux">Geometric interpretation of flux</h3>
+</section>
+<section id="flux-through-a-graph" class="level3">
+<h3 class="anchored" data-anchor-id="flux-through-a-graph">Flux through a graph</h3>
+</section>
+</section>
+<section id="orientability" class="level2">
+<h2 class="anchored" data-anchor-id="orientability">Orientability</h2>
 <hr>
 </section>
-<section id="một-số-tính-chất-của-determinant" class="level1">
-<h1>Một số tính chất của Determinant</h1>
-<ol type="1">
-<li><span class="math inline">\det(\mathbf I) = 1</span> <em>(<span class="math inline">\mathbf I</span> là ma trận cơ sở, sẽ nói xâu hơn ở chương <strong>Matrix</strong>)</em>.</li>
-<li><span class="math inline">\det(\mathbf {AB}) = \det(\mathbf A) \cdot \det(\mathbf B)</span></li>
-<li><span class="math inline">\det(\mathbf A^T) = \det(\mathbf A)</span> <em>(<span class="math inline">\mathbf A^T</span> là ma trận chuyển vị, sẽ nói xâu hơn ở chương <strong>Matrix</strong>)</em></li>
-<li><span class="math inline">\det(c \mathbf A) = c^n \det(\mathbf A)</span> nếu <span class="math inline">\mathbf A</span> là ma trận <span class="math inline">n \times n</span></li>
-</ol>
+</section>
+<section id="divergence-theorem" class="level1">
+<h1>Divergence theorem</h1>
+<section id="physical-interpretation-1" class="level2">
+<h2 class="anchored" data-anchor-id="physical-interpretation-1">Physical interpretation</h2>
+</section>
+<section id="proof-of-divergence-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-divergence-theorem">Proof of divergence theorem</h2>
+</section>
+<section id="diffusion-equation" class="level2">
+<h2 class="anchored" data-anchor-id="diffusion-equation">Diffusion equation</h2>
 <hr>
 </section>
-<section id="sự-sụp-đổ-của-không-gian" class="level1">
-<h1>Sự sụp đổ của không gian</h1>
+</section>
+<section id="stokes-theorem" class="level1">
+<h1>Stokes’ theorem</h1>
+<section id="proof-of-stokes" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-stokes">“Proof” of Stokes</h2>
+</section>
+<section id="stokes-and-path-independence" class="level2">
+<h2 class="anchored" data-anchor-id="stokes-and-path-independence">Stokes and path independence</h2>
+</section>
+<section id="stokes-and-surface-independence" class="level2">
+<h2 class="anchored" data-anchor-id="stokes-and-surface-independence">Stokes and surface independence</h2>
+<hr>
+</section>
+</section>
+<section id="end" class="level1">
+<h1>End</h1>
 
 
 </section>
