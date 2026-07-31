@@ -17,7 +17,298 @@ format:
 ___
 # Triple integrals
 
+Tương tự như trong tích phân kép, tích phân bội ba có dạng:
+
+$$
+\iiint f(x, y, z) \mathbf dV
+$$
+
+Nhớ rằng, $\mathbf dV$ có thể là $\mathbf dx \mathbf dy \mathbf dz$ hoặc là $r \mathbf dr\mathbf d\theta\mathbf dz$, ...
+
+
+**Ví dụ:**
+
+Tìm thể tích phần giới hạn bởi 2 paraboloid:
+
+$$
+z = x^2 + y^2 \tag{1}
+$$
+
+$$
+z = 4 - x^2 - y^2 \tag{2}
+$$
+
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-np.sqrt(2), np.sqrt(2), 300)
+y = np.linspace(-np.sqrt(2), np.sqrt(2), 300)
+
+X, Y = np.meshgrid(x, y)
+R2 = X**2 + Y**2
+
+Z1 = R2                 
+Z2 = 4 - R2              
+mask = R2 <= 2
+
+Z1 = np.where(mask, Z1, np.nan)
+Z2 = np.where(mask, Z2, np.nan)
+
+fig = plt.figure(figsize=(6, 6))
+ax = fig.add_subplot(111, projection="3d")
+
+ax.plot_surface(
+    X, Y, Z1,
+    cmap="viridis",
+    alpha=0.72,
+    linewidth=0,
+    antialiased=True
+)
+
+ax.plot_surface(
+    X, Y, Z2,
+    cmap="magma",
+    alpha=0.72,
+    linewidth=0,
+    antialiased=True
+)
+
+theta = np.linspace(0, 2*np.pi, 500)
+
+r = np.sqrt(2)
+
+xc = r * np.cos(theta)
+yc = r * np.sin(theta)
+zc = np.full_like(theta, 2)
+
+ax.plot(
+    xc, yc, zc,
+    color="black",
+    linewidth=3
+)
+
+ax.set_xlabel(r"$x$", fontsize=13)
+ax.set_ylabel(r"$y$", fontsize=13)
+ax.set_zlabel(r"$z$", fontsize=13)
+
+ax.set_xlim(-1.6, 1.6)
+ax.set_ylim(-1.6, 1.6)
+ax.set_zlim(0, 4)
+
+ax.view_init(elev=28, azim=45)
+
+ax.legend()
+
+plt.tight_layout()
+plt.show()
+```
+
+Ta sẽ tích phân $\mathbf dz$ trước.
+
+:::{.callout-tip collapse="true"}
+## Suy nghĩ tại sao lại là dz trước
+Bởi vì từ hai điểm x và y, ta có thể dễ dàng xác định được biên của z khi tích phân, đó là hai hàm.
+:::
+
+Bây giờ phương trình trở thành:
+
+$$
+\int_?^?\int_?^?\int_{x^2 + y^2}^{4 - x^2 - y^2} 1\mathbf dz \mathbf dy \mathbf dx
+$$
+
+Việc tính biên của x và y, ta có thể thấy rằng nó chính là một hình tròn trên mặt phẳng Oxy. Nhưng mà đó chỉ là nhìn hình ta biết, vì vậy chúng ta phải lập luận bằng toán học:
+
+$$
+z_{bottom} < z_{top} \\ 
+\Rightarrow x^2 + y^2 < 4 - x^2 - y^2 \\ 
+\Rightarrow x^2 + y^2 < 2
+$$
+
+Chính xác là nó chính là hình tròn với bán kính là $\sqrt2$.
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-np.sqrt(2), np.sqrt(2), 250)
+y = np.linspace(-np.sqrt(2), np.sqrt(2), 250)
+X, Y = np.meshgrid(x, y)
+
+R2 = X**2 + Y**2
+mask = R2 <= 2
+
+Z1 = np.where(mask, R2, np.nan)
+Z2 = np.where(mask, 4 - R2, np.nan)
+
+fig = plt.figure(figsize=(6, 6))
+ax = fig.add_subplot(111, projection="3d")
+
+ax.plot_surface(
+    X, Y, Z1,
+    cmap="viridis",
+    alpha=0.7,
+    linewidth=0,
+    antialiased=True
+)
+
+ax.plot_surface(
+    X, Y, Z2,
+    cmap="magma",
+    alpha=0.7,
+    linewidth=0,
+    antialiased=True
+)
+
+theta = np.linspace(0, 2*np.pi, 500)
+r = np.sqrt(2)
+
+xc = r * np.cos(theta)
+yc = r * np.sin(theta)
+zc = np.full_like(theta, 2)
+
+ax.plot(
+    xc, yc, zc,
+    color="black",
+    linewidth=3
+)
+
+ax.plot(
+    xc, yc, np.zeros_like(theta),
+    color="black",
+    linewidth=1.5,
+    alpha=0.5
+)
+
+ax.plot_trisurf(
+    xc, yc, np.zeros_like(theta),
+    color="gray",
+    alpha=0.18,
+    linewidth=0
+)
+
+ax.set_xlabel(r"$x$", fontsize=13)
+ax.set_ylabel(r"$y$", fontsize=13)
+ax.set_zlabel(r"$z$", fontsize=13)
+
+ax.set_xlim(-1.7, 1.7)
+ax.set_ylim(-1.7, 1.7)
+ax.set_zlim(0, 4)
+
+ax.view_init(elev=28, azim=45)
+
+plt.tight_layout()
+plt.show()
+```
+
+Vì vậy ta có thể khiến y phụ thuộc vào x. Bằng phương trình đường tròn.
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+y = np.linspace(-2, 2, 500)
+
+z1 = y**2
+z2 = 4 - y**2
+
+a = np.sqrt(2)
+y0 = 0.75
+
+z_bottom = y0**2
+z_top = 4 - y0**2
+
+fig, ax = plt.subplots(figsize=(6, 6))
+
+ax.plot(y, z1, color=plt.cm.viridis(0.5), linewidth=1.5)
+ax.plot(y, z2, color=plt.cm.magma(0.5), linewidth=1.5)
+
+ax.scatter([-a, a], [2, 2], color="black", s=45, zorder=3)
+
+ax.plot([-a, -a], [0, 2], "--", color="black", linewidth=1)
+ax.plot([a, a], [0, 2], "--", color="black", linewidth=1)
+
+ax.scatter(y0, 0, color="black", s=45, zorder=6)
+
+ax.plot([y0, y0], [0, z_bottom], "--", color="black", linewidth=1.3)
+ax.plot([y0, y0], [z_bottom, z_top], color="black", linewidth=4)
+ax.plot([y0, y0], [z_top, 0], "--", color="black", linewidth=1.3)
+
+ax.axhline(0, color="black", linewidth=1.8)
+ax.axvline(0, color="black", linewidth=1.8)
+
+ax.annotate(
+    "",
+    xy=(2.15, 0),
+    xytext=(2.0, 0),
+    arrowprops=dict(arrowstyle="->", color="black", linewidth=1.8)
+)
+
+ax.annotate(
+    "",
+    xy=(0, 4.35),
+    xytext=(0, 4.15),
+    arrowprops=dict(arrowstyle="->", color="black", linewidth=1.8)
+)
+
+ax.text(2.18, -0.12, r"$y$", fontsize=18)
+ax.text(0.08, 4.28, r"$z$", fontsize=18)
+
+ax.text(-a, -0.22, r"$-\sqrt{2}$", ha="center", fontsize=15)
+ax.text(a, -0.22, r"$\sqrt{2}$", ha="center", fontsize=15)
+ax.text(-0.15, 2.05, r"$2$", ha="right", fontsize=14)
+ax.text(y0, -0.22, r"$y_0$", ha="center", fontsize=15)
+
+ax.set_xlim(-2.15, 2.15)
+ax.set_ylim(-0.35, 4.45)
+ax.set_aspect("equal", adjustable="box")
+ax.set_xticks([])
+ax.set_yticks([])
+
+for spine in ax.spines.values():
+    spine.set_visible(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+Vậy cuối cùng phương trình trở thành:
+
+$$
+\int_{-\sqrt2}^{\sqrt2}\int_{-\sqrt{2-x^2}}^{\sqrt{2 - x^2}}\int_{x^2 + y^2}^{4 - x^2 - y^2} 1 \mathbf dz \mathbf dy \mathbf dx
+$$
+
+Nhưng mà nó khá là khó và rất rối để ngồi nguyên hàm rồi tính.
+
 ## Cylindrical coordinates
+
+Vì thế chúng ta đã có tọa độ trụ.
+
+Nó chính là bản nâng cấp của tọa độ cực, vì thế:
+
+$$
+x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
+$$
+
+Với r là khoảng cách đến z, $\theta$ là khoảng góc từ mặt phẳng xz.
+
+Tọa độ trục chính xác là tọa độ cực nhưng thêm trục cao.
+
+Hàm bây giờ trở thành:
+
+$$
+\int_0^{2\pi}\int_0^{\sqrt2}\int_{x^2 + y^2}^{4 - x^2 - y^2}1\mathbf dz r\mathbf dr\mathbf d\theta
+$$
 
 ### Applications
 

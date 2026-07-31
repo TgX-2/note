@@ -805,7 +805,7 @@
     "href": "note/multivariable-calculus/4.html#cylindrical-coordinates",
     "title": "Triple integrals and Surface integrals in 3D space",
     "section": "Cylindrical coordinates",
-    "text": "Cylindrical coordinates\n\nApplications",
+    "text": "Cylindrical coordinates\nVì thế chúng ta đã có tọa độ trụ.\nNó chính là bản nâng cấp của tọa độ cực, vì thế:\n\nx = r\\cos\\theta \\qquad y = r\\sin\\theta \\qquad z = z\n\nVới r là khoảng cách đến z, \\theta là khoảng góc từ mặt phẳng xz.\nTọa độ trục chính xác là tọa độ cực nhưng thêm trục cao.\nHàm bây giờ trở thành:\n\n\\int_0^{2\\pi}\\int_0^{\\sqrt2}\\int_{x^2 + y^2}^{4 - x^2 - y^2}1\\mathbf dz r\\mathbf dr\\mathbf d\\theta\n\n\nApplications",
     "crumbs": [
       "18.02",
       "Triple integrals and Surface integrals in 3D space"
