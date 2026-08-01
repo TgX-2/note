@@ -801,33 +801,11 @@
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#cylindrical-coordinates",
-    "href": "note/multivariable-calculus/4.html#cylindrical-coordinates",
+    "objectID": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
+    "href": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
     "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Cylindrical coordinates",
-    "text": "Cylindrical coordinates\nVì thế chúng ta đã có tọa độ trụ.\nNó chính là bản nâng cấp của tọa độ cực, vì thế:\n\nx = r\\cos\\theta \\qquad y = r\\sin\\theta \\qquad z = z\n\nVới r là khoảng cách đến z, \\theta là khoảng góc từ mặt phẳng xz.\nTọa độ trục chính xác là tọa độ cực nhưng thêm trục cao.\nHàm bây giờ trở thành:\n\n\\int_0^{2\\pi}\\int_0^{\\sqrt2}\\int_{x^2 + y^2}^{4 - x^2 - y^2}1\\mathbf dz r\\mathbf dr\\mathbf d\\theta\n\n\nApplications",
-    "crumbs": [
-      "18.02",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#spherical-coordinates",
-    "href": "note/multivariable-calculus/4.html#spherical-coordinates",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Spherical coordinates",
-    "text": "Spherical coordinates\n\nVolume element\n\n\nExample",
-    "crumbs": [
-      "18.02",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#application-to-gravitation",
-    "href": "note/multivariable-calculus/4.html#application-to-gravitation",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Application to gravitation",
-    "text": "Application to gravitation\n\nGeneral setup",
+    "section": "Tích phân bội ba trong tọa độ cầu",
+    "text": "Tích phân bội ba trong tọa độ cầu\n\n\\mathbf dV = \\rho^2\\sin\\phi \\mathbf d\\rho \\mathbf d\\phi\\mathbf d\\theta\n\nVí dụ: Tính thể tích phần chóp được tạo bởi một hình cầu \\rho = 1 và cắt ngang bởi mặt phẳng z = \\frac 1 {\\sqrt2}.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nR = 1.0\nz0 = 1 / np.sqrt(2)\n\nfig = plt.figure(figsize=(6, 6))\nax = fig.add_subplot(111, projection='3d')\n\n\nu = np.linspace(0, 2*np.pi, 200)\nv = np.linspace(0, np.pi, 150)\n\nU, V = np.meshgrid(u, v)\n\nX = R * np.cos(U) * np.sin(V)\nY = R * np.sin(U) * np.sin(V)\nZ = R * np.cos(V)\n\n\nXu = np.ma.masked_where(Z &lt; z0, X)\nYu = np.ma.masked_where(Z &lt; z0, Y)\nZu = np.ma.masked_where(Z &lt; z0, Z)\n\nax.plot_surface(\n    Xu, Yu, Zu,\n    cmap='plasma',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=1\n)\n\nXl = np.ma.masked_where(Z &gt; z0, X)\nYl = np.ma.masked_where(Z &gt; z0, Y)\nZl = np.ma.masked_where(Z &gt; z0, Z)\n\nax.plot_surface(\n    Xl, Yl, Zl,\n    cmap='viridis',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=0.5\n)\n\nr = np.sqrt(R**2 - z0**2)\n\nx = np.linspace(-r, r, 200)\ny = np.linspace(-r, r, 200)\n\nXp, Yp = np.meshgrid(x, y)\n\nmask = Xp**2 + Yp**2 &lt;= r**2\n\nXp = np.ma.masked_where(~mask, Xp)\nYp = np.ma.masked_where(~mask, Yp)\nZp = np.ma.masked_where(~mask, np.full_like(Xp, z0))\n\nax.plot_surface(\n    Xp, Yp, Zp,\n    color='white',\n    alpha=0.70,\n    linewidth=0,\n    shade=False\n)\n\nt = np.linspace(0, 2*np.pi, 500)\n\nxc = r * np.cos(t)\nyc = r * np.sin(t)\nzc = np.full_like(t, z0)\n\nax.plot(\n    xc, yc, zc,\n    color='black',\n    linewidth=3\n)\n\nlim = 1.05\n\nax.set_xlim(-lim, lim)\nax.set_ylim(-lim, lim)\nax.set_zlim(-lim, lim)\n\n\nax.set_box_aspect((1, 1, 1))\n\nax.view_init(elev=28, azim=45)\n\nax.set_xlabel(r'$x$', fontsize=16)\nax.set_ylabel(r'$y$', fontsize=16)\nax.set_zlabel(r'$z$', fontsize=16)\n\nax.grid(True)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\int_0^{2\\pi}\\int_0^{\\pi/4}\\int_{\\frac 1 {\\sqrt2\\cos\\phi}}^1\\rho^2\\sin\\phi\\mathbf d\\rho\\mathbf d\\phi\\mathbf d\\theta\n\nTự tính.\n\n\\frac {2\\pi} 3 - \\frac {5\\pi}{6\\sqrt2}",
     "crumbs": [
       "18.02",
       "Triple integrals and Surface integrals in 3D space"

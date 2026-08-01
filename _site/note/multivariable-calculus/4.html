@@ -69,7 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../img/fav.ico" rel="icon">
+<link href="../../img/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -481,21 +481,15 @@ window.Quarto = {
     <h2 id="toc-title">Mục lục bài viết</h2>
    
   <ul>
-  <li><a href="#triple-integrals" id="toc-triple-integrals" class="nav-link active" data-scroll-target="#triple-integrals">Triple integrals</a>
-  <ul class="collapse">
-  <li><a href="#cylindrical-coordinates" id="toc-cylindrical-coordinates" class="nav-link" data-scroll-target="#cylindrical-coordinates">Cylindrical coordinates</a>
-  <ul class="collapse">
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
-  </ul></li>
+  <li><a href="#triple-integrals" id="toc-triple-integrals" class="nav-link active" data-scroll-target="#triple-integrals">Triple integrals</a></li>
+  <li><a href="#cylindrical-coordinates" id="toc-cylindrical-coordinates" class="nav-link" data-scroll-target="#cylindrical-coordinates">Cylindrical coordinates</a></li>
   <li><a href="#spherical-coordinates" id="toc-spherical-coordinates" class="nav-link" data-scroll-target="#spherical-coordinates">Spherical coordinates</a>
   <ul class="collapse">
-  <li><a href="#volume-element" id="toc-volume-element" class="nav-link" data-scroll-target="#volume-element">Volume element</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#tích-phân-bội-ba-trong-tọa-độ-cầu" id="toc-tích-phân-bội-ba-trong-tọa-độ-cầu" class="nav-link" data-scroll-target="#tích-phân-bội-ba-trong-tọa-độ-cầu">Tích phân bội ba trong tọa độ cầu</a></li>
   </ul></li>
-  <li><a href="#application-to-gravitation" id="toc-application-to-gravitation" class="nav-link" data-scroll-target="#application-to-gravitation">Application to gravitation</a>
+  <li><a href="#application-to-gravitation---đọc-thêm" id="toc-application-to-gravitation---đọc-thêm" class="nav-link" data-scroll-target="#application-to-gravitation---đọc-thêm">Application to gravitation - Đọc thêm</a>
   <ul class="collapse">
   <li><a href="#general-setup" id="toc-general-setup" class="nav-link" data-scroll-target="#general-setup">General setup</a></li>
-  </ul></li>
   </ul></li>
   <li><a href="#vector-fields-in-space" id="toc-vector-fields-in-space" class="nav-link" data-scroll-target="#vector-fields-in-space">Vector fields in space</a>
   <ul class="collapse">
@@ -582,7 +576,7 @@ z = x^2 + y^2 \tag{1}
 <p><span class="math display">
 z = 4 - x^2 - y^2 \tag{2}
 </span></p>
-<div id="9678dd00" class="cell" data-execution_count="1">
+<div id="14368e09" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -685,7 +679,7 @@ z_{bottom} &lt; z_{top} \\
 \Rightarrow x^2 + y^2 &lt; 2
 </span></p>
 <p>Chính xác là nó chính là hình tròn với bán kính là <span class="math inline">\sqrt2</span>.</p>
-<div id="414c694b" class="cell" data-execution_count="2">
+<div id="d173b11f" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -769,7 +763,7 @@ z_{bottom} &lt; z_{top} \\
 </div>
 </div>
 <p>Vì vậy ta có thể khiến y phụ thuộc vào x. Bằng phương trình đường tròn.</p>
-<div id="c7e31e61" class="cell" data-execution_count="3">
+<div id="1522d6db" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -852,8 +846,10 @@ z_{bottom} &lt; z_{top} \\
 \int_{-\sqrt2}^{\sqrt2}\int_{-\sqrt{2-x^2}}^{\sqrt{2 - x^2}}\int_{x^2 + y^2}^{4 - x^2 - y^2} 1 \mathbf dz \mathbf dy \mathbf dx
 </span></p>
 <p>Nhưng mà nó khá là khó và rất rối để ngồi nguyên hàm rồi tính.</p>
-<section id="cylindrical-coordinates" class="level2">
-<h2 class="anchored" data-anchor-id="cylindrical-coordinates">Cylindrical coordinates</h2>
+<hr>
+</section>
+<section id="cylindrical-coordinates" class="level1">
+<h1>Cylindrical coordinates</h1>
 <p>Vì thế chúng ta đã có tọa độ trụ.</p>
 <p>Nó chính là bản nâng cấp của tọa độ cực, vì thế:</p>
 <p><span class="math display">
@@ -865,25 +861,302 @@ x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
 <p><span class="math display">
 \int_0^{2\pi}\int_0^{\sqrt2}\int_{x^2 + y^2}^{4 - x^2 - y^2}1\mathbf dz r\mathbf dr\mathbf d\theta
 </span></p>
-<section id="applications" class="level3">
-<h3 class="anchored" data-anchor-id="applications">Applications</h3>
+<hr>
+</section>
+<section id="spherical-coordinates" class="level1">
+<h1>Spherical coordinates</h1>
+<p>Tọa độ cầu.</p>
+<p>Để miêu tả một điểm trong không gian, hiện tại chúng ta đã có 3 cách:</p>
+<ul>
+<li><strong>3D:</strong> <span class="math inline">(x, y, z)</span></li>
+<li><strong>Cylindrical coordinates:</strong> <span class="math inline">(r, \theta, z)</span></li>
+<li><strong>Spherical coordinates:</strong> <span class="math inline">(\rho, \phi, \theta)</span></li>
+</ul>
+<p>Trong tọa độ cầu, các tham số biểu diễn:</p>
+<ul>
+<li><span class="math inline">\rho</span>: Khoảng cách từ điểm đến gốc tọa độ.</li>
+<li><span class="math inline">\phi</span>: Khoảng cách với trục z (<span class="math inline">0 \leq \phi \leq \pi</span>).</li>
+<li><span class="math inline">\theta</span>: Khoảng cách với mặt phẳng xz (<span class="math inline">0 \leq \theta \leq 2\pi</span>).</li>
+</ul>
+<div id="73113831" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">1.2</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>phi <span class="op">=</span> np.deg2rad(<span class="dv">45</span>)     </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.deg2rad(<span class="dv">35</span>)    </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> rho<span class="op">*</span>np.sin(phi)<span class="op">*</span>np.cos(theta)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> rho<span class="op">*</span>np.sin(phi)<span class="op">*</span>np.sin(theta)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> rho<span class="op">*</span>np.cos(phi)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">6</span>))</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>ax.quiver(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,L,<span class="dv">0</span>,<span class="dv">0</span>,color<span class="op">=</span><span class="st">'black'</span>,arrow_length_ratio<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>ax.quiver(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,L,<span class="dv">0</span>,color<span class="op">=</span><span class="st">'black'</span>,arrow_length_ratio<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>ax.quiver(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,L,color<span class="op">=</span><span class="st">'black'</span>,arrow_length_ratio<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>ax.text(L<span class="op">+</span><span class="fl">0.05</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="st">'x'</span>,fontsize<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="dv">0</span>,L<span class="op">+</span><span class="fl">0.05</span>,<span class="dv">0</span>,<span class="st">'y'</span>,fontsize<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="dv">0</span>,<span class="dv">0</span>,L<span class="op">+</span><span class="fl">0.05</span>,<span class="st">'z'</span>,fontsize<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="st">'O'</span>,fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>ax.scatter(x,y,z,s<span class="op">=</span><span class="dv">40</span>,color<span class="op">=</span><span class="st">'crimson'</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>ax.text(x<span class="op">+</span><span class="fl">0.03</span>,y<span class="op">+</span><span class="fl">0.03</span>,z<span class="op">+</span><span class="fl">0.03</span>,<span class="vs">r'</span><span class="dv">$</span><span class="vs">A</span><span class="dv">$</span><span class="vs">'</span>,fontsize<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>,x],[<span class="dv">0</span>,y],[<span class="dv">0</span>,z],</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'crimson'</span>,</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>        linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="co"># rho label</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>ax.text(x<span class="op">*</span><span class="fl">0.45</span>,y<span class="op">*</span><span class="fl">0.45</span>,z<span class="op">*</span><span class="fl">0.45</span>,<span class="vs">r'</span><span class="dv">$</span><span class="ch">\r</span><span class="vs">ho</span><span class="dv">$</span><span class="vs">'</span>,fontsize<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> rho<span class="op">*</span>np.sin(phi)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>ax.plot([<span class="dv">0</span>,x],[<span class="dv">0</span>,y],[<span class="dv">0</span>,<span class="dv">0</span>],</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        <span class="st">'--'</span>,color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>ax.plot([x,x],[y,y],[<span class="dv">0</span>,z],</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>        <span class="st">'--'</span>,color<span class="op">=</span><span class="st">'gray'</span>,linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.linspace(<span class="dv">0</span>,L,<span class="dv">2</span>)</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>U,V <span class="op">=</span> np.meshgrid(u,v)</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> U<span class="op">*</span>x</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> U<span class="op">*</span>y</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> V</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>    X,Y,Z,</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'steelblue'</span>,</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.20</span>,</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>    shade<span class="op">=</span><span class="va">False</span></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>R1 <span class="op">=</span> <span class="fl">0.35</span></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>,theta,<span class="dv">120</span>)</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>ax.plot(</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>    R1<span class="op">*</span>np.cos(t),</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>    R1<span class="op">*</span>np.sin(t),</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>    np.zeros_like(t),</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'green'</span>,</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>mid <span class="op">=</span> theta<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>ax.text(</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.12</span><span class="op">*</span>R1<span class="op">*</span>np.cos(mid),</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.12</span><span class="op">*</span>R1<span class="op">*</span>np.sin(mid),</span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span>,</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r'</span><span class="dv">$</span><span class="ch">\t</span><span class="vs">heta</span><span class="dv">$</span><span class="vs">'</span>,</span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">13</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>R2 <span class="op">=</span> <span class="fl">0.45</span></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> np.linspace(<span class="dv">0</span>,phi,<span class="dv">120</span>)</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>xx <span class="op">=</span> R2<span class="op">*</span>np.sin(p)<span class="op">*</span>np.cos(theta)</span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>yy <span class="op">=</span> R2<span class="op">*</span>np.sin(p)<span class="op">*</span>np.sin(theta)</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>zz <span class="op">=</span> R2<span class="op">*</span>np.cos(p)</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>ax.plot(xx,yy,zz,</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'purple'</span>,</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>        linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="bu">len</span>(xx)<span class="op">//</span><span class="dv">2</span></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>ax.text(</span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>    xx[m]<span class="op">+</span><span class="fl">0.02</span>,</span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>    yy[m]<span class="op">+</span><span class="fl">0.02</span>,</span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>    zz[m],</span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r'</span><span class="dv">$</span><span class="er">\</span><span class="vs">phi</span><span class="dv">$</span><span class="vs">'</span>,</span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">13</span></span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="fl">0.2</span>,<span class="fl">1.4</span>)</span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="fl">0.2</span>,<span class="fl">1.2</span>)</span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>ax.set_zlim(<span class="dv">0</span>,<span class="fl">1.4</span>)</span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>ax.set_box_aspect([<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>ax.set_xticks([])</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a>ax.set_yticks([])</span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>ax.set_zticks([])</span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">False</span>)</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>ax.xaxis.pane.fill<span class="op">=</span><span class="va">False</span></span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>ax.yaxis.pane.fill<span class="op">=</span><span class="va">False</span></span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>ax.zaxis.pane.fill<span class="op">=</span><span class="va">False</span></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="4_files/figure-html/cell-5-output-1.png" width="566" height="566" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Công thức:</p>
+<p><span class="math display">
+x = \rho\sin\phi\cos\theta \\
+y = \rho\sin\phi\sin\theta \\
+z = \rho\cos\phi
+</span></p>
+<p>và</p>
+<p><span class="math display">
+\rho = \sqrt{x ^2 + y^2 + z^2} = \sqrt{r^2 + z^2}
+</span></p>
+<section id="tích-phân-bội-ba-trong-tọa-độ-cầu" class="level2">
+<h2 class="anchored" data-anchor-id="tích-phân-bội-ba-trong-tọa-độ-cầu">Tích phân bội ba trong tọa độ cầu</h2>
+<p><span class="math display">
+\mathbf dV = \rho^2\sin\phi \mathbf d\rho \mathbf d\phi\mathbf d\theta
+</span></p>
+<p><strong>Ví dụ:</strong> Tính thể tích phần chóp được tạo bởi một hình cầu <span class="math inline">\rho = 1</span> và cắt ngang bởi mặt phẳng <span class="math inline">z = \frac 1 {\sqrt2}</span>.</p>
+<div id="7b6706ab" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>z0 <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> np.sqrt(<span class="dv">2</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">200</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> np.linspace(<span class="dv">0</span>, np.pi, <span class="dv">150</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>U, V <span class="op">=</span> np.meshgrid(u, v)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> R <span class="op">*</span> np.cos(U) <span class="op">*</span> np.sin(V)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> R <span class="op">*</span> np.sin(U) <span class="op">*</span> np.sin(V)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>Z <span class="op">=</span> R <span class="op">*</span> np.cos(V)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>Xu <span class="op">=</span> np.ma.masked_where(Z <span class="op">&lt;</span> z0, X)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>Yu <span class="op">=</span> np.ma.masked_where(Z <span class="op">&lt;</span> z0, Y)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>Zu <span class="op">=</span> np.ma.masked_where(Z <span class="op">&lt;</span> z0, Z)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    Xu, Yu, Zu,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">'plasma'</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    rcount<span class="op">=</span><span class="dv">180</span>,</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    ccount<span class="op">=</span><span class="dv">180</span>,</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    antialiased<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    shade<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>Xl <span class="op">=</span> np.ma.masked_where(Z <span class="op">&gt;</span> z0, X)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>Yl <span class="op">=</span> np.ma.masked_where(Z <span class="op">&gt;</span> z0, Y)</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>Zl <span class="op">=</span> np.ma.masked_where(Z <span class="op">&gt;</span> z0, Z)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    Xl, Yl, Zl,</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">'viridis'</span>,</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    rcount<span class="op">=</span><span class="dv">180</span>,</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    ccount<span class="op">=</span><span class="dv">180</span>,</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    antialiased<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    shade<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.5</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.sqrt(R<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> z0<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span>r, r, <span class="dv">200</span>)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.linspace(<span class="op">-</span>r, r, <span class="dv">200</span>)</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>Xp, Yp <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> Xp<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> Yp<span class="op">**</span><span class="dv">2</span> <span class="op">&lt;=</span> r<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>Xp <span class="op">=</span> np.ma.masked_where(<span class="op">~</span>mask, Xp)</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>Yp <span class="op">=</span> np.ma.masked_where(<span class="op">~</span>mask, Yp)</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>Zp <span class="op">=</span> np.ma.masked_where(<span class="op">~</span>mask, np.full_like(Xp, z0))</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>    Xp, Yp, Zp,</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'white'</span>,</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.70</span>,</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>    shade<span class="op">=</span><span class="va">False</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">500</span>)</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>xc <span class="op">=</span> r <span class="op">*</span> np.cos(t)</span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>yc <span class="op">=</span> r <span class="op">*</span> np.sin(t)</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>zc <span class="op">=</span> np.full_like(t, z0)</span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>ax.plot(</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>    xc, yc, zc,</span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'black'</span>,</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">3</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>lim <span class="op">=</span> <span class="fl">1.05</span></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span>lim, lim)</span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span>lim, lim)</span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>ax.set_zlim(<span class="op">-</span>lim, lim)</span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a>ax.set_box_aspect((<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>ax.view_init(elev<span class="op">=</span><span class="dv">28</span>, azim<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="vs">r'</span><span class="dv">$</span><span class="vs">x</span><span class="dv">$</span><span class="vs">'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="vs">r'</span><span class="dv">$</span><span class="vs">y</span><span class="dv">$</span><span class="vs">'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="vs">r'</span><span class="dv">$</span><span class="vs">z</span><span class="dv">$</span><span class="vs">'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="4_files/figure-html/cell-6-output-1.png" width="566" height="581" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math display">
+\int_0^{2\pi}\int_0^{\pi/4}\int_{\frac 1 {\sqrt2\cos\phi}}^1\rho^2\sin\phi\mathbf d\rho\mathbf d\phi\mathbf d\theta
+</span></p>
+<p>Tự tính.</p>
+<p><span class="math display">
+\frac {2\pi} 3 - \frac {5\pi}{6\sqrt2}
+</span></p>
+<hr>
 </section>
 </section>
-<section id="spherical-coordinates" class="level2">
-<h2 class="anchored" data-anchor-id="spherical-coordinates">Spherical coordinates</h2>
-<section id="volume-element" class="level3">
-<h3 class="anchored" data-anchor-id="volume-element">Volume element</h3>
-</section>
-<section id="example" class="level3">
-<h3 class="anchored" data-anchor-id="example">Example</h3>
-</section>
-</section>
-<section id="application-to-gravitation" class="level2">
-<h2 class="anchored" data-anchor-id="application-to-gravitation">Application to gravitation</h2>
+<section id="application-to-gravitation---đọc-thêm" class="level1">
+<h1>Application to gravitation - Đọc thêm</h1>
 <section id="general-setup" class="level3">
 <h3 class="anchored" data-anchor-id="general-setup">General setup</h3>
 <hr>
-</section>
 </section>
 </section>
 <section id="vector-fields-in-space" class="level1">

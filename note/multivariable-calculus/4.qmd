@@ -290,7 +290,8 @@ $$
 
 Nhưng mà nó khá là khó và rất rối để ngồi nguyên hàm rồi tính.
 
-## Cylindrical coordinates
+___
+# Cylindrical coordinates
 
 Vì thế chúng ta đã có tọa độ trụ.
 
@@ -310,15 +311,293 @@ $$
 \int_0^{2\pi}\int_0^{\sqrt2}\int_{x^2 + y^2}^{4 - x^2 - y^2}1\mathbf dz r\mathbf dr\mathbf d\theta
 $$
 
-### Applications
+___
+# Spherical coordinates
 
-## Spherical coordinates
+Tọa độ cầu.
 
-### Volume element
+Để miêu tả một điểm trong không gian, hiện tại chúng ta đã có 3 cách:
 
-### Example
+- **3D:** $(x, y, z)$
+- **Cylindrical coordinates:** $(r, \theta, z)$
+- **Spherical coordinates:** $(\rho, \phi, \theta)$
+ 
+Trong tọa độ cầu, các tham số biểu diễn:
 
-## Application to gravitation
+- $\rho$: Khoảng cách từ điểm đến gốc tọa độ.
+- $\phi$: Khoảng cách với trục z ($0 \leq \phi \leq \pi$).
+- $\theta$: Khoảng cách với mặt phẳng xz ($0 \leq \theta \leq 2\pi$).
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+rho = 1.2
+phi = np.deg2rad(45)     
+theta = np.deg2rad(35)    
+
+x = rho*np.sin(phi)*np.cos(theta)
+y = rho*np.sin(phi)*np.sin(theta)
+z = rho*np.cos(phi)
+
+fig = plt.figure(figsize=(6,6))
+ax = fig.add_subplot(111, projection='3d')
+
+L = 1.5
+
+ax.quiver(0,0,0,L,0,0,color='black',arrow_length_ratio=0.05)
+ax.quiver(0,0,0,0,L,0,color='black',arrow_length_ratio=0.05)
+ax.quiver(0,0,0,0,0,L,color='black',arrow_length_ratio=0.05)
+
+ax.text(L+0.05,0,0,'x',fontsize=13)
+ax.text(0,L+0.05,0,'y',fontsize=13)
+ax.text(0,0,L+0.05,'z',fontsize=13)
+ax.text(0,0,0,'O',fontsize=12)
+
+ax.scatter(x,y,z,s=40,color='crimson')
+ax.text(x+0.03,y+0.03,z+0.03,r'$A$',fontsize=13)
+
+ax.plot([0,x],[0,y],[0,z],
+        color='crimson',
+        linewidth=2)
+
+# rho label
+ax.text(x*0.45,y*0.45,z*0.45,r'$\rho$',fontsize=13)
+
+r = rho*np.sin(phi)
+
+ax.plot([0,x],[0,y],[0,0],
+        '--',color='gray',linewidth=1)
+
+ax.plot([x,x],[y,y],[0,z],
+        '--',color='gray',linewidth=1)
+
+u = np.linspace(0,1,2)
+v = np.linspace(0,L,2)
+
+U,V = np.meshgrid(u,v)
+
+X = U*x
+Y = U*y
+Z = V
+
+ax.plot_surface(
+    X,Y,Z,
+    color='steelblue',
+    alpha=0.20,
+    linewidth=0,
+    shade=False
+)
+
+R1 = 0.35
+
+t = np.linspace(0,theta,120)
+
+ax.plot(
+    R1*np.cos(t),
+    R1*np.sin(t),
+    np.zeros_like(t),
+    color='green',
+    linewidth=2
+)
+
+mid = theta/2
+
+ax.text(
+    1.12*R1*np.cos(mid),
+    1.12*R1*np.sin(mid),
+    0,
+    r'$\theta$',
+    fontsize=13
+)
+
+R2 = 0.45
+
+p = np.linspace(0,phi,120)
+
+xx = R2*np.sin(p)*np.cos(theta)
+yy = R2*np.sin(p)*np.sin(theta)
+zz = R2*np.cos(p)
+
+ax.plot(xx,yy,zz,
+        color='purple',
+        linewidth=2)
+
+m = len(xx)//2
+
+ax.text(
+    xx[m]+0.02,
+    yy[m]+0.02,
+    zz[m],
+    r'$\phi$',
+    fontsize=13
+)
+
+ax.set_xlim(-0.2,1.4)
+ax.set_ylim(-0.2,1.2)
+ax.set_zlim(0,1.4)
+
+ax.set_box_aspect([1,1,1])
+
+ax.set_xticks([])
+ax.set_yticks([])
+ax.set_zticks([])
+
+ax.grid(False)
+
+ax.xaxis.pane.fill=False
+ax.yaxis.pane.fill=False
+ax.zaxis.pane.fill=False
+
+plt.tight_layout()
+plt.show()
+```
+
+Công thức:
+
+$$
+x = \rho\sin\phi\cos\theta \\ 
+y = \rho\sin\phi\sin\theta \\ 
+z = \rho\cos\phi
+$$
+
+và 
+
+$$
+\rho = \sqrt{x ^2 + y^2 + z^2} = \sqrt{r^2 + z^2}
+$$
+
+## Tích phân bội ba trong tọa độ cầu
+
+$$
+\mathbf dV = \rho^2\sin\phi \mathbf d\rho \mathbf d\phi\mathbf d\theta 
+$$
+
+**Ví dụ:** Tính thể tích phần chóp được tạo bởi một hình cầu $\rho = 1$ và cắt ngang bởi mặt phẳng $z = \frac 1 {\sqrt2}$.
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+
+R = 1.0
+z0 = 1 / np.sqrt(2)
+
+fig = plt.figure(figsize=(6, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+
+u = np.linspace(0, 2*np.pi, 200)
+v = np.linspace(0, np.pi, 150)
+
+U, V = np.meshgrid(u, v)
+
+X = R * np.cos(U) * np.sin(V)
+Y = R * np.sin(U) * np.sin(V)
+Z = R * np.cos(V)
+
+
+Xu = np.ma.masked_where(Z < z0, X)
+Yu = np.ma.masked_where(Z < z0, Y)
+Zu = np.ma.masked_where(Z < z0, Z)
+
+ax.plot_surface(
+    Xu, Yu, Zu,
+    cmap='plasma',
+    rcount=180,
+    ccount=180,
+    linewidth=0,
+    antialiased=True,
+    shade=True,
+    alpha=1
+)
+
+Xl = np.ma.masked_where(Z > z0, X)
+Yl = np.ma.masked_where(Z > z0, Y)
+Zl = np.ma.masked_where(Z > z0, Z)
+
+ax.plot_surface(
+    Xl, Yl, Zl,
+    cmap='viridis',
+    rcount=180,
+    ccount=180,
+    linewidth=0,
+    antialiased=True,
+    shade=True,
+    alpha=0.5
+)
+
+r = np.sqrt(R**2 - z0**2)
+
+x = np.linspace(-r, r, 200)
+y = np.linspace(-r, r, 200)
+
+Xp, Yp = np.meshgrid(x, y)
+
+mask = Xp**2 + Yp**2 <= r**2
+
+Xp = np.ma.masked_where(~mask, Xp)
+Yp = np.ma.masked_where(~mask, Yp)
+Zp = np.ma.masked_where(~mask, np.full_like(Xp, z0))
+
+ax.plot_surface(
+    Xp, Yp, Zp,
+    color='white',
+    alpha=0.70,
+    linewidth=0,
+    shade=False
+)
+
+t = np.linspace(0, 2*np.pi, 500)
+
+xc = r * np.cos(t)
+yc = r * np.sin(t)
+zc = np.full_like(t, z0)
+
+ax.plot(
+    xc, yc, zc,
+    color='black',
+    linewidth=3
+)
+
+lim = 1.05
+
+ax.set_xlim(-lim, lim)
+ax.set_ylim(-lim, lim)
+ax.set_zlim(-lim, lim)
+
+
+ax.set_box_aspect((1, 1, 1))
+
+ax.view_init(elev=28, azim=45)
+
+ax.set_xlabel(r'$x$', fontsize=16)
+ax.set_ylabel(r'$y$', fontsize=16)
+ax.set_zlabel(r'$z$', fontsize=16)
+
+ax.grid(True)
+
+plt.tight_layout()
+plt.show()
+```
+
+$$
+\int_0^{2\pi}\int_0^{\pi/4}\int_{\frac 1 {\sqrt2\cos\phi}}^1\rho^2\sin\phi\mathbf d\rho\mathbf d\phi\mathbf d\theta
+$$
+
+Tự tính.
+
+$$
+\frac {2\pi} 3 - \frac {5\pi}{6\sqrt2}
+$$
+
+___
+# Application to gravitation - Đọc thêm
 
 ### General setup
 
