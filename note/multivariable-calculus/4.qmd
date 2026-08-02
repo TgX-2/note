@@ -476,6 +476,84 @@ $$
 \mathbf dV = \rho^2\sin\phi \mathbf d\rho \mathbf d\phi\mathbf d\theta 
 $$
 
+:::{.callout-note collapse="true"}
+## The Jacobians
+
+Ta có:
+
+$$
+x = \rho\sin\phi\cos\theta \qquad y = \rho\sin\phi\sin\theta \qquad z = \rho\cos\phi
+$$
+
+$$
+J = \frac{\partial(x, y, z)}{\partial(\rho, \phi, \theta)} = \begin{vmatrix}
+x_\rho & x_\phi & x_\theta \\ 
+y_\rho & y_\phi & y_\theta \\ 
+z_\rho & z_\phi & z_\theta 
+\end{vmatrix}
+$$
+
+$$
+J = x_\rho\begin{vmatrix} 
+y_\phi & y_\theta \\ 
+z_\phi & z_\theta 
+\end{vmatrix} - x_\phi\begin{vmatrix}
+y_\rho & y_\theta \\ 
+z_\rho & z_\theta 
+\end{vmatrix} + x_\theta\begin{vmatrix}
+y_\rho & y_\phi \\ 
+z_\rho & z_\phi 
+\end{vmatrix}
+$$
+
+$$
+x_\rho = \sin\phi\cos\theta \qquad 
+x_\phi = \rho\cos\phi\cos\theta \qquad 
+x_\theta = -\rho\sin\phi\sin\theta \\ 
+y_\rho = \sin\phi\sin\theta \qquad 
+y_\phi = \rho\cos\phi\sin\theta \qquad 
+y_\theta = \rho\sin\phi\cos\theta \\ 
+z_\rho = \cos\phi \qquad 
+z_\phi = -\rho\sin\phi \qquad
+z_\theta = 0
+$$
+
+$$
+\begin{vmatrix}
+y_\phi & y_\theta \\ 
+z_\phi & z_\theta 
+\end{vmatrix} = \rho^2\sin\phi^2\cos\theta
+$$
+
+$$
+\begin{vmatrix}
+y_\rho & y_\theta \\ 
+z_\rho & z_\theta 
+\end{vmatrix} = -\rho\sin\phi\cos\phi\cos\theta
+$$
+
+$$
+\begin{vmatrix}
+y_\rho & y_\phi \\ 
+z_\rho & z_\phi 
+\end{vmatrix} = -\rho\sin\theta
+$$
+
+$$
+\Rightarrow J = \rho^2\sin\phi^3\cos\theta^2 + \rho^2\sin\phi\cos\phi^2\cos\theta^2 + \rho^2\sin\theta^2\sin\phi 
+$$
+
+$$
+\Rightarrow J = \rho^2\sin\phi(\sin\phi^2\cos\theta^2 + \cos\phi^2\cos\theta^2 + \sin\theta^2)
+$$
+
+$$
+\Rightarrow J = \rho^2\sin\phi
+$$
+
+Cuối cùng: $\mathbf dx\mathbf dy \mathbf dz = \rho^2\sin\phi \mathbf d\rho\mathbf d\phi \mathbf d\theta$
+:::
+
 **Ví dụ:** Tính thể tích phần chóp được tạo bởi một hình cầu $\rho = 1$ và cắt ngang bởi mặt phẳng $z = \frac 1 {\sqrt2}$.
 
 ```{python}
@@ -597,9 +675,18 @@ $$
 $$
 
 ___
-# Application to gravitation - Đọc thêm
+# Application to gravitation
 
-### General setup
+:::{.callout-important}
+## tl;dr
+Phần này là đọc thêm (Không phải là do tôi hiểu gì cả nên không biết viết gì cả.
+:::
+
+Gravitational force exerted on mass m at origin by a mass $\Delta M$ at $(x, y, z)$ is given by $|\vec F| = \frac{G\Delta M m}{\rho^2}$, $dir(\vec F) = \frac{<x, y, z>} \rho$, i.e. $\vec F = \frac{G \Delta M m}{\rho^3}$. (G = gravitational constant).
+
+If instead of a point mass we have a solid with density $\delsity$
+
+## General setup
 
 ---
 

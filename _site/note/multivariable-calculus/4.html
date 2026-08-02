@@ -487,7 +487,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#tích-phân-bội-ba-trong-tọa-độ-cầu" id="toc-tích-phân-bội-ba-trong-tọa-độ-cầu" class="nav-link" data-scroll-target="#tích-phân-bội-ba-trong-tọa-độ-cầu">Tích phân bội ba trong tọa độ cầu</a></li>
   </ul></li>
-  <li><a href="#application-to-gravitation---đọc-thêm" id="toc-application-to-gravitation---đọc-thêm" class="nav-link" data-scroll-target="#application-to-gravitation---đọc-thêm">Application to gravitation - Đọc thêm</a>
+  <li><a href="#application-to-gravitation" id="toc-application-to-gravitation" class="nav-link" data-scroll-target="#application-to-gravitation">Application to gravitation</a>
   <ul class="collapse">
   <li><a href="#general-setup" id="toc-general-setup" class="nav-link" data-scroll-target="#general-setup">General setup</a></li>
   </ul></li>
@@ -576,7 +576,7 @@ z = x^2 + y^2 \tag{1}
 <p><span class="math display">
 z = 4 - x^2 - y^2 \tag{2}
 </span></p>
-<div id="14368e09" class="cell" data-execution_count="1">
+<div id="d44bc40a" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -679,7 +679,7 @@ z_{bottom} &lt; z_{top} \\
 \Rightarrow x^2 + y^2 &lt; 2
 </span></p>
 <p>Chính xác là nó chính là hình tròn với bán kính là <span class="math inline">\sqrt2</span>.</p>
-<div id="d173b11f" class="cell" data-execution_count="2">
+<div id="5689e0de" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -763,7 +763,7 @@ z_{bottom} &lt; z_{top} \\
 </div>
 </div>
 <p>Vì vậy ta có thể khiến y phụ thuộc vào x. Bằng phương trình đường tròn.</p>
-<div id="1522d6db" class="cell" data-execution_count="3">
+<div id="7e7128a7" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -878,7 +878,7 @@ x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
 <li><span class="math inline">\phi</span>: Khoảng cách với trục z (<span class="math inline">0 \leq \phi \leq \pi</span>).</li>
 <li><span class="math inline">\theta</span>: Khoảng cách với mặt phẳng xz (<span class="math inline">0 \leq \theta \leq 2\pi</span>).</li>
 </ul>
-<div id="73113831" class="cell" data-execution_count="4">
+<div id="ad8ab0d2" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1027,8 +1027,85 @@ z = \rho\cos\phi
 <p><span class="math display">
 \mathbf dV = \rho^2\sin\phi \mathbf d\rho \mathbf d\phi\mathbf d\theta
 </span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Jacobians
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Ta có:</p>
+<p><span class="math display">
+x = \rho\sin\phi\cos\theta \qquad y = \rho\sin\phi\sin\theta \qquad z = \rho\cos\phi
+</span></p>
+<p><span class="math display">
+J = \frac{\partial(x, y, z)}{\partial(\rho, \phi, \theta)} = \begin{vmatrix}
+x_\rho &amp; x_\phi &amp; x_\theta \\
+y_\rho &amp; y_\phi &amp; y_\theta \\
+z_\rho &amp; z_\phi &amp; z_\theta
+\end{vmatrix}
+</span></p>
+<p><span class="math display">
+J = x_\rho\begin{vmatrix}
+y_\phi &amp; y_\theta \\
+z_\phi &amp; z_\theta
+\end{vmatrix} - x_\phi\begin{vmatrix}
+y_\rho &amp; y_\theta \\
+z_\rho &amp; z_\theta
+\end{vmatrix} + x_\theta\begin{vmatrix}
+y_\rho &amp; y_\phi \\
+z_\rho &amp; z_\phi
+\end{vmatrix}
+</span></p>
+<p><span class="math display">
+x_\rho = \sin\phi\cos\theta \qquad
+x_\phi = \rho\cos\phi\cos\theta \qquad
+x_\theta = -\rho\sin\phi\sin\theta \\
+y_\rho = \sin\phi\sin\theta \qquad
+y_\phi = \rho\cos\phi\sin\theta \qquad
+y_\theta = \rho\sin\phi\cos\theta \\
+z_\rho = \cos\phi \qquad
+z_\phi = -\rho\sin\phi \qquad
+z_\theta = 0
+</span></p>
+<p><span class="math display">
+\begin{vmatrix}
+y_\phi &amp; y_\theta \\
+z_\phi &amp; z_\theta
+\end{vmatrix} = \rho^2\sin\phi^2\cos\theta
+</span></p>
+<p><span class="math display">
+\begin{vmatrix}
+y_\rho &amp; y_\theta \\
+z_\rho &amp; z_\theta
+\end{vmatrix} = -\rho\sin\phi\cos\phi\cos\theta
+</span></p>
+<p><span class="math display">
+\begin{vmatrix}
+y_\rho &amp; y_\phi \\
+z_\rho &amp; z_\phi
+\end{vmatrix} = -\rho\sin\theta
+</span></p>
+<p><span class="math display">
+\Rightarrow J = \rho^2\sin\phi^3\cos\theta^2 + \rho^2\sin\phi\cos\phi^2\cos\theta^2 + \rho^2\sin\theta^2\sin\phi
+</span></p>
+<p><span class="math display">
+\Rightarrow J = \rho^2\sin\phi(\sin\phi^2\cos\theta^2 + \cos\phi^2\cos\theta^2 + \sin\theta^2)
+</span></p>
+<p><span class="math display">
+\Rightarrow J = \rho^2\sin\phi
+</span></p>
+<p>Cuối cùng: <span class="math inline">\mathbf dx\mathbf dy \mathbf dz = \rho^2\sin\phi \mathbf d\rho\mathbf d\phi \mathbf d\theta</span></p>
+</div>
+</div>
+</div>
 <p><strong>Ví dụ:</strong> Tính thể tích phần chóp được tạo bởi một hình cầu <span class="math inline">\rho = 1</span> và cắt ngang bởi mặt phẳng <span class="math inline">z = \frac 1 {\sqrt2}</span>.</p>
-<div id="7b6706ab" class="cell" data-execution_count="5">
+<div id="b3f04cff" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1152,10 +1229,25 @@ z = \rho\cos\phi
 <hr>
 </section>
 </section>
-<section id="application-to-gravitation---đọc-thêm" class="level1">
-<h1>Application to gravitation - Đọc thêm</h1>
-<section id="general-setup" class="level3">
-<h3 class="anchored" data-anchor-id="general-setup">General setup</h3>
+<section id="application-to-gravitation" class="level1">
+<h1>Application to gravitation</h1>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>tl;dr
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Phần này là đọc thêm (Không phải là do tôi hiểu gì cả nên không biết viết gì cả.</p>
+</div>
+</div>
+<p>Gravitational force exerted on mass m at origin by a mass <span class="math inline">\Delta M</span> at <span class="math inline">(x, y, z)</span> is given by <span class="math inline">|\vec F| = \frac{G\Delta M m}{\rho^2}</span>, <span class="math inline">dir(\vec F) = \frac{&lt;x, y, z&gt;} \rho</span>, i.e.&nbsp;<span class="math inline">\vec F = \frac{G \Delta M m}{\rho^3}</span>. (G = gravitational constant).</p>
+<p>If instead of a point mass we have a solid with density <span class="math inline">\delsity</span></p>
+<section id="general-setup" class="level2">
+<h2 class="anchored" data-anchor-id="general-setup">General setup</h2>
 <hr>
 </section>
 </section>
