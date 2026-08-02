@@ -686,60 +686,89 @@ Gravitational force exerted on mass m at origin by a mass $\Delta M$ at $(x, y, 
 
 If instead of a point mass we have a solid with density $\delsity$
 
-## General setup
 
 ---
-
 # Vector fields in space
 
-## Line integrals in space
+Giống như trong mặt phẳng, trường vector trong không gian là chỉ việc ở tại mọi điểm đều có một vector phụ thuộc vào $(x, y, z)$.
 
-## Gradient fields
+$$
+\vec F = <P, Q, R>
+$$
 
-### Curl
+**Ví dụ:** 
 
-### Interpretation of curl for velocity fields
+- Trường lực hấp dẫn giữa một vật ở góc tọa độ có khối lượng M và một điểm ở $(x, y, z)$.
 
-## Del operator
+Trường $\vec F$ hướng thẳng về gốc tọa độ, và độ lớn tỉ lệ thuận $\frac c {\rho^2}$
 
-### Divergence
+$$
+\vec F = -c \frac{<x, y, z>}{\rho^3}
+$$
 
-### Physical interpretation
+- Trường điện từ và trường từ trường.
 
----
+- Trường vận tốc.
 
-# Parametric surfaces
+- Trường Gradient, $u = u(x, y, z) \qquad \nabla u = <u_x, u_y, u_z>$
 
-## Implicit surfaces
+___
+# Flux 3D
 
-## Flux
+Như trong mặt phẳng, ta có:
 
-### Geometric interpretation of flux
+$$
+\int_C \vec F \cdot \hat{\mathbf n} \mathbf ds
+$$
 
-### Flux through a graph
+mô tả thông lượng thông qua một đường cong trong một trường vector $\vec F$.
 
-## Orientability
+Và bây giờ chúng ta đang làm việc trong không gian vì vậy chúng ta không thể tính được bao nhiêu gió đi qua một đường cong, mà phải là qua một mặt phẳng. Vì vậy chúng ta không thể dùng tích phân đường nữa mà phải sử dụng tích phân mặt.
 
----
+Với trường vector $\vec F$, mặt phẳng S, vector pháp tuyến $\hat{\mathbf n}$, FLux:
 
-# Divergence theorem
+$$
+\iint \vec F \cdot \hat{\mathbf n}\mathbf dS
+$$
 
-## Physical interpretation
+Notation: $\mathbf d\vec S = \hat{\mathbf n}\mathbf dS$.
 
-## Proof of divergence theorem
+:::{.callout-caution}
+## Chú ý
 
-## Diffusion equation
+- Chiều của $\hat{\mathbf n}$: Không có một quy ước chuẩn nào cho chiều của vector pháp tuyến. Việc lựa chọn như thế nào ảnh hướng khá nhiều đến kết quả cuối cùng. Nó cũng giống với Flux trong 2D, việc vector đâm vào cùng hướng hay ngược hướng với vector pháp tuyến sẽ quyết định đến dấu.
 
----
+- Không có một công thức đẹp giống như trong 2D, $\int_C M\mathbf dx + N\mathbf dy$ là điều không có trong không gian.
+:::
 
-# Stokes’ theorem
+**Ví dụ 1:** Cho trường vector $\vec F = <x ,y, z>$, và một hình cầu tâm ở gốc tọa độ và bán kính a.
 
-## “Proof” of Stokes
+$$
+\hat{\mathbf n} = \frac 1 a <x, y, z> (\text{other choice: } -\frac 1 a <x, y, z>)
+$$
 
-## Stokes and path independence
+$$
+\iint_S \vec F \cdot \hat{\mathbf n}\mathbf dS = \iint_S a \mathbf dS = 4\pi a^3
+$$
 
-## Stokes and surface independence
+## Một số kiểu tham số hóa
 
----
+0) Mặt phẳng $z = a$ song song với mặt phẳng xy: 
+$$
+\hat{\mathbf n} = \pm \hat{\mathbf k} \qquad \mathbf dS = \mathbf dx \mathbf dy
+$$
 
-# End
+1) Hình cầu bán kính a, tâm tại gốc tọa độ, dùng $\phi, \theta$:
+$$
+\hat{\mathbf n} = \frac 1 a <x, y, z> \qquad \mathbf dS = a^2\sin\phi\mathbf d\phi\mathbf d\theta 
+$$
+
+2) Hình trụ bán kính a, tâm ở trục z, dùng $z, \theta$:
+$$
+\hat{\mathbf n} = \frac 1 a <x, y, 0> \qquad \mathbf dS = a\mathbf dz\mathbf d\theta 
+$$
+
+3) Hình phụ thuộc vào x và y, $z = f(x, y)$, dùng $x, y$:
+$$
+\hat{\mathbf n}\mathbf dS = <-f_x, -f_y, 1>\mathbf dx\mathbf dy
+$$

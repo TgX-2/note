@@ -487,47 +487,12 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#tích-phân-bội-ba-trong-tọa-độ-cầu" id="toc-tích-phân-bội-ba-trong-tọa-độ-cầu" class="nav-link" data-scroll-target="#tích-phân-bội-ba-trong-tọa-độ-cầu">Tích phân bội ba trong tọa độ cầu</a></li>
   </ul></li>
-  <li><a href="#application-to-gravitation" id="toc-application-to-gravitation" class="nav-link" data-scroll-target="#application-to-gravitation">Application to gravitation</a>
+  <li><a href="#application-to-gravitation" id="toc-application-to-gravitation" class="nav-link" data-scroll-target="#application-to-gravitation">Application to gravitation</a></li>
+  <li><a href="#vector-fields-in-space" id="toc-vector-fields-in-space" class="nav-link" data-scroll-target="#vector-fields-in-space">Vector fields in space</a></li>
+  <li><a href="#flux-3d" id="toc-flux-3d" class="nav-link" data-scroll-target="#flux-3d">Flux 3D</a>
   <ul class="collapse">
-  <li><a href="#general-setup" id="toc-general-setup" class="nav-link" data-scroll-target="#general-setup">General setup</a></li>
+  <li><a href="#một-số-kiểu-tham-số-hóa" id="toc-một-số-kiểu-tham-số-hóa" class="nav-link" data-scroll-target="#một-số-kiểu-tham-số-hóa">Một số kiểu tham số hóa</a></li>
   </ul></li>
-  <li><a href="#vector-fields-in-space" id="toc-vector-fields-in-space" class="nav-link" data-scroll-target="#vector-fields-in-space">Vector fields in space</a>
-  <ul class="collapse">
-  <li><a href="#line-integrals-in-space" id="toc-line-integrals-in-space" class="nav-link" data-scroll-target="#line-integrals-in-space">Line integrals in space</a></li>
-  <li><a href="#gradient-fields" id="toc-gradient-fields" class="nav-link" data-scroll-target="#gradient-fields">Gradient fields</a>
-  <ul class="collapse">
-  <li><a href="#curl" id="toc-curl" class="nav-link" data-scroll-target="#curl">Curl</a></li>
-  <li><a href="#interpretation-of-curl-for-velocity-fields" id="toc-interpretation-of-curl-for-velocity-fields" class="nav-link" data-scroll-target="#interpretation-of-curl-for-velocity-fields">Interpretation of curl for velocity fields</a></li>
-  </ul></li>
-  <li><a href="#del-operator" id="toc-del-operator" class="nav-link" data-scroll-target="#del-operator">Del operator</a>
-  <ul class="collapse">
-  <li><a href="#divergence" id="toc-divergence" class="nav-link" data-scroll-target="#divergence">Divergence</a></li>
-  <li><a href="#physical-interpretation" id="toc-physical-interpretation" class="nav-link" data-scroll-target="#physical-interpretation">Physical interpretation</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#parametric-surfaces" id="toc-parametric-surfaces" class="nav-link" data-scroll-target="#parametric-surfaces">Parametric surfaces</a>
-  <ul class="collapse">
-  <li><a href="#implicit-surfaces" id="toc-implicit-surfaces" class="nav-link" data-scroll-target="#implicit-surfaces">Implicit surfaces</a></li>
-  <li><a href="#flux" id="toc-flux" class="nav-link" data-scroll-target="#flux">Flux</a>
-  <ul class="collapse">
-  <li><a href="#geometric-interpretation-of-flux" id="toc-geometric-interpretation-of-flux" class="nav-link" data-scroll-target="#geometric-interpretation-of-flux">Geometric interpretation of flux</a></li>
-  <li><a href="#flux-through-a-graph" id="toc-flux-through-a-graph" class="nav-link" data-scroll-target="#flux-through-a-graph">Flux through a graph</a></li>
-  </ul></li>
-  <li><a href="#orientability" id="toc-orientability" class="nav-link" data-scroll-target="#orientability">Orientability</a></li>
-  </ul></li>
-  <li><a href="#divergence-theorem" id="toc-divergence-theorem" class="nav-link" data-scroll-target="#divergence-theorem">Divergence theorem</a>
-  <ul class="collapse">
-  <li><a href="#physical-interpretation-1" id="toc-physical-interpretation-1" class="nav-link" data-scroll-target="#physical-interpretation-1">Physical interpretation</a></li>
-  <li><a href="#proof-of-divergence-theorem" id="toc-proof-of-divergence-theorem" class="nav-link" data-scroll-target="#proof-of-divergence-theorem">Proof of divergence theorem</a></li>
-  <li><a href="#diffusion-equation" id="toc-diffusion-equation" class="nav-link" data-scroll-target="#diffusion-equation">Diffusion equation</a></li>
-  </ul></li>
-  <li><a href="#stokes-theorem" id="toc-stokes-theorem" class="nav-link" data-scroll-target="#stokes-theorem">Stokes’ theorem</a>
-  <ul class="collapse">
-  <li><a href="#proof-of-stokes" id="toc-proof-of-stokes" class="nav-link" data-scroll-target="#proof-of-stokes">“Proof” of Stokes</a></li>
-  <li><a href="#stokes-and-path-independence" id="toc-stokes-and-path-independence" class="nav-link" data-scroll-target="#stokes-and-path-independence">Stokes and path independence</a></li>
-  <li><a href="#stokes-and-surface-independence" id="toc-stokes-and-surface-independence" class="nav-link" data-scroll-target="#stokes-and-surface-independence">Stokes and surface independence</a></li>
-  </ul></li>
-  <li><a href="#end" id="toc-end" class="nav-link" data-scroll-target="#end">End</a></li>
   </ul>
 </nav>
     </div>
@@ -576,7 +541,7 @@ z = x^2 + y^2 \tag{1}
 <p><span class="math display">
 z = 4 - x^2 - y^2 \tag{2}
 </span></p>
-<div id="db579bb1" class="cell" data-execution_count="1">
+<div id="1e93e3fc" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -679,7 +644,7 @@ z_{bottom} &lt; z_{top} \\
 \Rightarrow x^2 + y^2 &lt; 2
 </span></p>
 <p>Chính xác là nó chính là hình tròn với bán kính là <span class="math inline">\sqrt2</span>.</p>
-<div id="6a3f4876" class="cell" data-execution_count="2">
+<div id="61380c5c" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -763,7 +728,7 @@ z_{bottom} &lt; z_{top} \\
 </div>
 </div>
 <p>Vì vậy ta có thể khiến y phụ thuộc vào x. Bằng phương trình đường tròn.</p>
-<div id="310b7e6c" class="cell" data-execution_count="3">
+<div id="c830f3ed" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -878,7 +843,7 @@ x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
 <li><span class="math inline">\phi</span>: Khoảng cách với trục z (<span class="math inline">0 \leq \phi \leq \pi</span>).</li>
 <li><span class="math inline">\theta</span>: Khoảng cách với mặt phẳng xz (<span class="math inline">0 \leq \theta \leq 2\pi</span>).</li>
 </ul>
-<div id="2a32914a" class="cell" data-execution_count="4">
+<div id="896af6f9" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1105,7 +1070,7 @@ z_\rho &amp; z_\phi
 </div>
 </div>
 <p><strong>Ví dụ:</strong> Tính thể tích phần chóp được tạo bởi một hình cầu <span class="math inline">\rho = 1</span> và cắt ngang bởi mặt phẳng <span class="math inline">z = \frac 1 {\sqrt2}</span>.</p>
-<div id="14c204b0" class="cell" data-execution_count="5">
+<div id="40974476" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1246,85 +1211,84 @@ z_\rho &amp; z_\phi
 </div>
 <p>Gravitational force exerted on mass m at origin by a mass <span class="math inline">\Delta M</span> at <span class="math inline">(x, y, z)</span> is given by <span class="math inline">|\vec F| = \frac{G\Delta M m}{\rho^2}</span>, <span class="math inline">dir(\vec F) = \frac{&lt;x, y, z&gt;} \rho</span>, i.e.&nbsp;<span class="math inline">\vec F = \frac{G \Delta M m}{\rho^3}</span>. (G = gravitational constant).</p>
 <p>If instead of a point mass we have a solid with density <span class="math inline">\delsity</span></p>
-<section id="general-setup" class="level2">
-<h2 class="anchored" data-anchor-id="general-setup">General setup</h2>
 <hr>
-</section>
 </section>
 <section id="vector-fields-in-space" class="level1">
 <h1>Vector fields in space</h1>
-<section id="line-integrals-in-space" class="level2">
-<h2 class="anchored" data-anchor-id="line-integrals-in-space">Line integrals in space</h2>
-</section>
-<section id="gradient-fields" class="level2">
-<h2 class="anchored" data-anchor-id="gradient-fields">Gradient fields</h2>
-<section id="curl" class="level3">
-<h3 class="anchored" data-anchor-id="curl">Curl</h3>
-</section>
-<section id="interpretation-of-curl-for-velocity-fields" class="level3">
-<h3 class="anchored" data-anchor-id="interpretation-of-curl-for-velocity-fields">Interpretation of curl for velocity fields</h3>
-</section>
-</section>
-<section id="del-operator" class="level2">
-<h2 class="anchored" data-anchor-id="del-operator">Del operator</h2>
-<section id="divergence" class="level3">
-<h3 class="anchored" data-anchor-id="divergence">Divergence</h3>
-</section>
-<section id="physical-interpretation" class="level3">
-<h3 class="anchored" data-anchor-id="physical-interpretation">Physical interpretation</h3>
+<p>Giống như trong mặt phẳng, trường vector trong không gian là chỉ việc ở tại mọi điểm đều có một vector phụ thuộc vào <span class="math inline">(x, y, z)</span>.</p>
+<p><span class="math display">
+\vec F = &lt;P, Q, R&gt;
+</span></p>
+<p><strong>Ví dụ:</strong></p>
+<ul>
+<li>Trường lực hấp dẫn giữa một vật ở góc tọa độ có khối lượng M và một điểm ở <span class="math inline">(x, y, z)</span>.</li>
+</ul>
+<p>Trường <span class="math inline">\vec F</span> hướng thẳng về gốc tọa độ, và độ lớn tỉ lệ thuận <span class="math inline">\frac c {\rho^2}</span></p>
+<p><span class="math display">
+\vec F = -c \frac{&lt;x, y, z&gt;}{\rho^3}
+</span></p>
+<ul>
+<li><p>Trường điện từ và trường từ trường.</p></li>
+<li><p>Trường vận tốc.</p></li>
+<li><p>Trường Gradient, <span class="math inline">u = u(x, y, z) \qquad \nabla u = &lt;u_x, u_y, u_z&gt;</span></p></li>
+</ul>
 <hr>
 </section>
-</section>
-</section>
-<section id="parametric-surfaces" class="level1">
-<h1>Parametric surfaces</h1>
-<section id="implicit-surfaces" class="level2">
-<h2 class="anchored" data-anchor-id="implicit-surfaces">Implicit surfaces</h2>
-</section>
-<section id="flux" class="level2">
-<h2 class="anchored" data-anchor-id="flux">Flux</h2>
-<section id="geometric-interpretation-of-flux" class="level3">
-<h3 class="anchored" data-anchor-id="geometric-interpretation-of-flux">Geometric interpretation of flux</h3>
-</section>
-<section id="flux-through-a-graph" class="level3">
-<h3 class="anchored" data-anchor-id="flux-through-a-graph">Flux through a graph</h3>
-</section>
-</section>
-<section id="orientability" class="level2">
-<h2 class="anchored" data-anchor-id="orientability">Orientability</h2>
-<hr>
-</section>
-</section>
-<section id="divergence-theorem" class="level1">
-<h1>Divergence theorem</h1>
-<section id="physical-interpretation-1" class="level2">
-<h2 class="anchored" data-anchor-id="physical-interpretation-1">Physical interpretation</h2>
-</section>
-<section id="proof-of-divergence-theorem" class="level2">
-<h2 class="anchored" data-anchor-id="proof-of-divergence-theorem">Proof of divergence theorem</h2>
-</section>
-<section id="diffusion-equation" class="level2">
-<h2 class="anchored" data-anchor-id="diffusion-equation">Diffusion equation</h2>
-<hr>
-</section>
-</section>
-<section id="stokes-theorem" class="level1">
-<h1>Stokes’ theorem</h1>
-<section id="proof-of-stokes" class="level2">
-<h2 class="anchored" data-anchor-id="proof-of-stokes">“Proof” of Stokes</h2>
-</section>
-<section id="stokes-and-path-independence" class="level2">
-<h2 class="anchored" data-anchor-id="stokes-and-path-independence">Stokes and path independence</h2>
-</section>
-<section id="stokes-and-surface-independence" class="level2">
-<h2 class="anchored" data-anchor-id="stokes-and-surface-independence">Stokes and surface independence</h2>
-<hr>
-</section>
-</section>
-<section id="end" class="level1">
-<h1>End</h1>
+<section id="flux-3d" class="level1">
+<h1>Flux 3D</h1>
+<p>Như trong mặt phẳng, ta có:</p>
+<p><span class="math display">
+\int_C \vec F \cdot \hat{\mathbf n} \mathbf ds
+</span></p>
+<p>mô tả thông lượng thông qua một đường cong trong một trường vector <span class="math inline">\vec F</span>.</p>
+<p>Và bây giờ chúng ta đang làm việc trong không gian vì vậy chúng ta không thể tính được bao nhiêu gió đi qua một đường cong, mà phải là qua một mặt phẳng. Vì vậy chúng ta không thể dùng tích phân đường nữa mà phải sử dụng tích phân mặt.</p>
+<p>Với trường vector <span class="math inline">\vec F</span>, mặt phẳng S, vector pháp tuyến <span class="math inline">\hat{\mathbf n}</span>, FLux:</p>
+<p><span class="math display">
+\iint \vec F \cdot \hat{\mathbf n}\mathbf dS
+</span></p>
+<p>Notation: <span class="math inline">\mathbf d\vec S = \hat{\mathbf n}\mathbf dS</span>.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Chú ý
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Chiều của <span class="math inline">\hat{\mathbf n}</span>: Không có một quy ước chuẩn nào cho chiều của vector pháp tuyến. Việc lựa chọn như thế nào ảnh hướng khá nhiều đến kết quả cuối cùng. Nó cũng giống với Flux trong 2D, việc vector đâm vào cùng hướng hay ngược hướng với vector pháp tuyến sẽ quyết định đến dấu.</p></li>
+<li><p>Không có một công thức đẹp giống như trong 2D, <span class="math inline">\int_C M\mathbf dx + N\mathbf dy</span> là điều không có trong không gian.</p></li>
+</ul>
+</div>
+</div>
+<p><strong>Ví dụ 1:</strong> Cho trường vector <span class="math inline">\vec F = &lt;x ,y, z&gt;</span>, và một hình cầu tâm ở gốc tọa độ và bán kính a.</p>
+<p><span class="math display">
+\hat{\mathbf n} = \frac 1 a &lt;x, y, z&gt; (\text{other choice: } -\frac 1 a &lt;x, y, z&gt;)
+</span></p>
+<p><span class="math display">
+\iint_S \vec F \cdot \hat{\mathbf n}\mathbf dS = \iint_S a \mathbf dS = 4\pi a^3
+</span></p>
+<section id="một-số-kiểu-tham-số-hóa" class="level2">
+<h2 class="anchored" data-anchor-id="một-số-kiểu-tham-số-hóa">Một số kiểu tham số hóa</h2>
+<ol start="0" type="1">
+<li><p>Mặt phẳng <span class="math inline">z = a</span> song song với mặt phẳng xy: <span class="math display">
+\hat{\mathbf n} = \pm \hat{\mathbf k} \qquad \mathbf dS = \mathbf dx \mathbf dy
+</span></p></li>
+<li><p>Hình cầu bán kính a, tâm tại gốc tọa độ, dùng <span class="math inline">\phi, \theta</span>: <span class="math display">
+\hat{\mathbf n} = \frac 1 a &lt;x, y, z&gt; \qquad \mathbf dS = a^2\sin\phi\mathbf d\phi\mathbf d\theta
+</span></p></li>
+<li><p>Hình trụ bán kính a, tâm ở trục z, dùng <span class="math inline">z, \theta</span>: <span class="math display">
+\hat{\mathbf n} = \frac 1 a &lt;x, y, 0&gt; \qquad \mathbf dS = a\mathbf dz\mathbf d\theta
+</span></p></li>
+<li><p>Hình phụ thuộc vào x và y, <span class="math inline">z = f(x, y)</span>, dùng <span class="math inline">x, y</span>: <span class="math display">
+\hat{\mathbf n}\mathbf dS = &lt;-f_x, -f_y, 1&gt;\mathbf dx\mathbf dy
+</span></p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
