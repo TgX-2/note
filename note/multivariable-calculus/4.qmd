@@ -772,3 +772,13 @@ $$
 $$
 \hat{\mathbf n}\mathbf dS = <-f_x, -f_y, 1>\mathbf dx\mathbf dy
 $$
+
+___
+# Flux through a graph
+
+## Parametric surfaces
+
+## Implicit surfaces
+
+___
+# Divergence theorem - Gauss-Green theorem

@@ -493,6 +493,12 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#một-số-kiểu-tham-số-hóa" id="toc-một-số-kiểu-tham-số-hóa" class="nav-link" data-scroll-target="#một-số-kiểu-tham-số-hóa">Một số kiểu tham số hóa</a></li>
   </ul></li>
+  <li><a href="#flux-through-a-graph" id="toc-flux-through-a-graph" class="nav-link" data-scroll-target="#flux-through-a-graph">Flux through a graph</a>
+  <ul class="collapse">
+  <li><a href="#parametric-surfaces" id="toc-parametric-surfaces" class="nav-link" data-scroll-target="#parametric-surfaces">Parametric surfaces</a></li>
+  <li><a href="#implicit-surfaces" id="toc-implicit-surfaces" class="nav-link" data-scroll-target="#implicit-surfaces">Implicit surfaces</a></li>
+  </ul></li>
+  <li><a href="#divergence-theorem---gauss-green-theorem" id="toc-divergence-theorem---gauss-green-theorem" class="nav-link" data-scroll-target="#divergence-theorem---gauss-green-theorem">Divergence theorem - Gauss-Green theorem</a></li>
   </ul>
 </nav>
     </div>
@@ -541,7 +547,7 @@ z = x^2 + y^2 \tag{1}
 <p><span class="math display">
 z = 4 - x^2 - y^2 \tag{2}
 </span></p>
-<div id="1e93e3fc" class="cell" data-execution_count="1">
+<div id="098a5399" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -644,7 +650,7 @@ z_{bottom} &lt; z_{top} \\
 \Rightarrow x^2 + y^2 &lt; 2
 </span></p>
 <p>Chính xác là nó chính là hình tròn với bán kính là <span class="math inline">\sqrt2</span>.</p>
-<div id="61380c5c" class="cell" data-execution_count="2">
+<div id="a8faafcd" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -728,7 +734,7 @@ z_{bottom} &lt; z_{top} \\
 </div>
 </div>
 <p>Vì vậy ta có thể khiến y phụ thuộc vào x. Bằng phương trình đường tròn.</p>
-<div id="c830f3ed" class="cell" data-execution_count="3">
+<div id="0b264fe5" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -843,7 +849,7 @@ x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
 <li><span class="math inline">\phi</span>: Khoảng cách với trục z (<span class="math inline">0 \leq \phi \leq \pi</span>).</li>
 <li><span class="math inline">\theta</span>: Khoảng cách với mặt phẳng xz (<span class="math inline">0 \leq \theta \leq 2\pi</span>).</li>
 </ul>
-<div id="896af6f9" class="cell" data-execution_count="4">
+<div id="4c36456c" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1070,7 +1076,7 @@ z_\rho &amp; z_\phi
 </div>
 </div>
 <p><strong>Ví dụ:</strong> Tính thể tích phần chóp được tạo bởi một hình cầu <span class="math inline">\rho = 1</span> và cắt ngang bởi mặt phẳng <span class="math inline">z = \frac 1 {\sqrt2}</span>.</p>
-<div id="40974476" class="cell" data-execution_count="5">
+<div id="ed596f12" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1286,9 +1292,23 @@ z_\rho &amp; z_\phi
 \hat{\mathbf n}\mathbf dS = &lt;-f_x, -f_y, 1&gt;\mathbf dx\mathbf dy
 </span></p></li>
 </ol>
-
-
+<hr>
 </section>
+</section>
+<section id="flux-through-a-graph" class="level1">
+<h1>Flux through a graph</h1>
+<section id="parametric-surfaces" class="level2">
+<h2 class="anchored" data-anchor-id="parametric-surfaces">Parametric surfaces</h2>
+</section>
+<section id="implicit-surfaces" class="level2">
+<h2 class="anchored" data-anchor-id="implicit-surfaces">Implicit surfaces</h2>
+<hr>
+</section>
+</section>
+<section id="divergence-theorem---gauss-green-theorem" class="level1">
+<h1>Divergence theorem - Gauss-Green theorem</h1>
+
+
 </section>
 
 </main> <!-- /main -->
