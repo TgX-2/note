@@ -497,8 +497,18 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#parametric-surfaces" id="toc-parametric-surfaces" class="nav-link" data-scroll-target="#parametric-surfaces">Parametric surfaces</a></li>
   <li><a href="#implicit-surfaces" id="toc-implicit-surfaces" class="nav-link" data-scroll-target="#implicit-surfaces">Implicit surfaces</a></li>
+  </ul></li>
+  <li><a href="#divergence-theorem---gauss-green-theorem" id="toc-divergence-theorem---gauss-green-theorem" class="nav-link" data-scroll-target="#divergence-theorem---gauss-green-theorem">Divergence theorem - Gauss-Green theorem</a>
+  <ul class="collapse">
   <li><a href="#ý-nghĩa-hình-học" id="toc-ý-nghĩa-hình-học" class="nav-link" data-scroll-target="#ý-nghĩa-hình-học">Ý nghĩa hình học</a></li>
   </ul></li>
+  <li><a href="#del-notation" id="toc-del-notation" class="nav-link" data-scroll-target="#del-notation">Del notation</a>
+  <ul class="collapse">
+  <li><a href="#physical-interpretation" id="toc-physical-interpretation" class="nav-link" data-scroll-target="#physical-interpretation">Physical interpretation</a></li>
+  </ul></li>
+  <li><a href="#proof-of-gauss-green-thm." id="toc-proof-of-gauss-green-thm." class="nav-link" data-scroll-target="#proof-of-gauss-green-thm.">Proof of Gauss-Green thm.</a></li>
+  <li><a href="#applications-of-gauss-green-thm." id="toc-applications-of-gauss-green-thm." class="nav-link" data-scroll-target="#applications-of-gauss-green-thm.">Applications of Gauss-Green thm.</a></li>
+  <li><a href="#end" id="toc-end" class="nav-link" data-scroll-target="#end">End</a></li>
   </ul>
 </nav>
     </div>
@@ -547,7 +557,7 @@ z = x^2 + y^2 \tag{1}
 <p><span class="math display">
 z = 4 - x^2 - y^2 \tag{2}
 </span></p>
-<div id="0183715d" class="cell" data-execution_count="1">
+<div id="59d920ef" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -650,7 +660,7 @@ z_{bottom} &lt; z_{top} \\
 \Rightarrow x^2 + y^2 &lt; 2
 </span></p>
 <p>Chính xác là nó chính là hình tròn với bán kính là <span class="math inline">\sqrt2</span>.</p>
-<div id="86efe732" class="cell" data-execution_count="2">
+<div id="430cee64" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -734,7 +744,7 @@ z_{bottom} &lt; z_{top} \\
 </div>
 </div>
 <p>Vì vậy ta có thể khiến y phụ thuộc vào x. Bằng phương trình đường tròn.</p>
-<div id="6a4d05fc" class="cell" data-execution_count="3">
+<div id="70b1c336" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -849,7 +859,7 @@ x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
 <li><span class="math inline">\phi</span>: Khoảng cách với trục z (<span class="math inline">0 \leq \phi \leq \pi</span>).</li>
 <li><span class="math inline">\theta</span>: Khoảng cách với mặt phẳng xz (<span class="math inline">0 \leq \theta \leq 2\pi</span>).</li>
 </ul>
-<div id="69080cd9" class="cell" data-execution_count="4">
+<div id="90ae0e01" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1076,7 +1086,7 @@ z_\rho &amp; z_\phi
 </div>
 </div>
 <p><strong>Ví dụ:</strong> Tính thể tích phần chóp được tạo bởi một hình cầu <span class="math inline">\rho = 1</span> và cắt ngang bởi mặt phẳng <span class="math inline">z = \frac 1 {\sqrt2}</span>.</p>
-<div id="4e48e746" class="cell" data-execution_count="5">
+<div id="1e766288" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1300,7 +1310,7 @@ z_\rho &amp; z_\phi
 <p><strong>Cách tính <span class="math inline">dS</span>:</strong> của một mặt được viết dưới dạng đồ thị: <span class="math display">
 z = f(x, y)
 </span></p>
-<div id="b1f0563e" class="cell" data-execution_count="6">
+<div id="da61e747" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1549,7 +1559,12 @@ d\vec S = \left(\frac{\partial \vec r}{\partial u} \times \frac{\partial \vec r}
 </ol>
 <p><span class="math display">
 \hat n dS = \pm \frac {|\vec N|}{|\vec N \cdot \hat k|}dxdy
-</span> ___ # Divergence theorem - Gauss-Green theorem</p>
+</span></p>
+<hr>
+</section>
+</section>
+<section id="divergence-theorem---gauss-green-theorem" class="level1">
+<h1>Divergence theorem - Gauss-Green theorem</h1>
 <p>Cho:</p>
 <ul>
 <li><span class="math inline">V</span> là một khối trong không gian</li>
@@ -1565,7 +1580,6 @@ d\vec S = \left(\frac{\partial \vec r}{\partial u} \times \frac{\partial \vec r}
 <li><span class="math inline">\hat n</span> là vector pháp tuyến đơn vị hướng ra ngoài.</li>
 <li><span class="math inline">\nabla \cdot \mathbf F</span> là divergence của trường vector, <span class="math inline">div(&lt;P, Q, R&gt;) = P_x + Q_y + R_z</span>.</li>
 </ul>
-</section>
 <section id="ý-nghĩa-hình-học" class="level2">
 <h2 class="anchored" data-anchor-id="ý-nghĩa-hình-học">Ý nghĩa hình học</h2>
 <p><strong>LHS:</strong> <span class="math display">
@@ -1578,9 +1592,41 @@ d\vec S = \left(\frac{\partial \vec r}{\partial u} \times \frac{\partial \vec r}
 <p>là tổng nguồn phát sinh bên trong khối.</p>
 <p>Nếu divergence dương <span class="math inline">\longrightarrow</span> trường được tạo ra bên trong.</p>
 <p>Nếu divergence âm <span class="math inline">\longrightarrow</span> trường được hút vào bên trong.</p>
-
-
+<hr>
 </section>
+</section>
+<section id="del-notation" class="level1">
+<h1>Del notation</h1>
+<p><span class="math display">
+\nabla = \left&lt;\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right&gt;
+</span></p>
+<p><strong>Ví dụ:</strong></p>
+<ul>
+<li><p>Gradient: <span class="math inline">\nabla f</span> <span class="math display">
+\nabla f = \left&lt;\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right&gt;
+</span></p></li>
+<li><p>Divergence: <span class="math inline">\nabla \cdot \mathbf F</span></p></li>
+</ul>
+<p><span class="math display">
+\nabla \cdot \mathbf F= \left&lt;\frac{\partial}{\partial x}P, \frac{\partial}{\partial y}Q, \frac{\partial}{\partial z} R\right&gt; = P_x + Q_y + R_z
+</span></p>
+<section id="physical-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="physical-interpretation">Physical interpretation</h2>
+<hr>
+</section>
+</section>
+<section id="proof-of-gauss-green-thm." class="level1">
+<h1>Proof of Gauss-Green thm.</h1>
+<hr>
+</section>
+<section id="applications-of-gauss-green-thm." class="level1">
+<h1>Applications of Gauss-Green thm.</h1>
+<hr>
+</section>
+<section id="end" class="level1">
+<h1>End</h1>
+
+
 </section>
 
 </main> <!-- /main -->

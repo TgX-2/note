@@ -1045,6 +1045,7 @@ Nếu ta có:
 $$
 \hat n dS = \pm \frac {|\vec N|}{|\vec N \cdot \hat k|}dxdy
 $$
+
 ___
 # Divergence theorem - Gauss-Green theorem
 
@@ -1084,7 +1085,40 @@ Nếu divergence dương $\longrightarrow$ trường được tạo ra bên tron
 
 Nếu divergence âm $\longrightarrow$ trường được hút vào bên trong.
 
+___
+# Del notation
+
+$$
+\nabla = \left<\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right>
+$$
+
+**Ví dụ:**
+
+- Gradient: $\nabla f$
+$$
+\nabla f = \left<\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right>
+$$
+
+- Divergence: $\nabla \cdot \mathbf F$
+
+$$
+\nabla \cdot \mathbf F= \left<\frac{\partial}{\partial x}P, \frac{\partial}{\partial y}Q, \frac{\partial}{\partial z} R\right> = P_x + Q_y + R_z
+$$
+
+## Physical interpretation
+
+___
+# Proof of Gauss-Green thm.
+
+
+___
+# Applications of Gauss-Green thm.
 
 
 
 
+
+
+
+___
+# End
