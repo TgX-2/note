@@ -776,9 +776,315 @@ $$
 ___
 # Flux through a graph
 
+**Cách tính $dS$:** của một mặt được viết dưới dạng đồ thị:
+$$
+z = f(x, y)
+$$
+
+```{python}
+#| echo: true
+#| code-fold: true
+#| warning: false
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+
+def f(x, y):
+    return 0.25*x**2 + 0.15*y**2 + 0.10*x*y
+
+x = np.linspace(-0.8, 1.8, 60)
+y = np.linspace(-0.8, 1.8, 60)
+X, Y = np.meshgrid(x, y)
+Z = f(X, Y)
+
+x0 = 0.4
+y0 = 0.3
+dx = 0.55
+dy = 0.45
+
+B1 = np.array([x0, y0, 0])
+B2 = np.array([x0+dx, y0, 0])
+B3 = np.array([x0+dx, y0+dy, 0])
+B4 = np.array([x0, y0+dy, 0])
+
+P1 = np.array([x0, y0, f(x0,y0)])
+P2 = np.array([x0+dx, y0, f(x0+dx,y0)])
+P3 = np.array([x0, y0+dy, f(x0,y0+dy)])
+P4 = np.array([x0+dx, y0+dy, f(x0+dx,y0+dy)])
+
+u = P2-P1
+v = P3-P1
+
+# Normal
+n = np.cross(u,v)
+n = n/np.linalg.norm(n)*0.35
+
+fig = plt.figure(figsize=(6,7))
+ax = fig.add_subplot(111, projection='3d')
+
+ax.plot_surface(
+    X, Y, Z,
+    cmap='viridis',
+    alpha=0.3,
+    edgecolor='0.5',
+    linewidth=0.3,
+    antialiased=True
+)
+
+bottom = np.vstack([B1,B2,B3,B4,B1])
+ax.plot(
+    bottom[:,0],
+    bottom[:,1],
+    bottom[:,2],
+    color='black',
+    linewidth=2
+)
+
+for b,p in zip([B1,B2,B3,B4],[P1,P2,P4,P3]):
+    ax.plot(
+        [b[0],p[0]],
+        [b[1],p[1]],
+        [b[2],p[2]],
+        '--',
+        color='0.6',
+        linewidth=1
+    )
+
+poly = Poly3DCollection(
+    [[P1,P2,P4,P3]],
+    facecolor='royalblue',
+    alpha=0.45,
+    edgecolor='navy',
+    linewidth=2
+)
+ax.add_collection3d(poly)
+
+ax.scatter(
+    [P1[0],P2[0],P3[0],P4[0]],
+    [P1[1],P2[1],P3[1],P4[1]],
+    [P1[2],P2[2],P3[2],P4[2]],
+    color='k',
+    s=30
+)
+
+ax.quiver(
+    *P1,
+    *u,
+    color='crimson',
+    linewidth=2.5,
+    arrow_length_ratio=0.12
+)
+
+ax.quiver(
+    *P1,
+    *v,
+    color='forestgreen',
+    linewidth=2.5,
+    arrow_length_ratio=0.12
+)
+
+ax.quiver(
+    *P1,
+    *n,
+    color='purple',
+    linewidth=2.5,
+    arrow_length_ratio=0.18
+)
+
+ax.text(*(P1+[-0.08,-0.08,0.05]), r"$P$", fontsize=13)
+ax.text(*(P2+[0.02,-0.05,0.04]), r"$P_x$", fontsize=13)
+ax.text(*(P3+[-0.08,0.02,0.04]), r"$P_y$", fontsize=13)
+ax.text(*(P4+[0.02,0.02,0.04]), r"$P_{xy}$", fontsize=13)
+
+ax.text(
+    (B1[0]+B2[0])/2,
+    B1[1]-0.08,
+    0,
+    r"$dx$",
+    fontsize=13
+)
+
+ax.text(
+    B4[0]-0.08,
+    (B1[1]+B4[1])/2,
+    0,
+    r"$dy$",
+    fontsize=13
+)
+
+ax.text(*(P1+0.55*u), r"$\mathbf{u}$", fontsize=14, color='crimson')
+ax.text(*(P1+0.55*v), r"$\mathbf{v}$", fontsize=14, color='forestgreen')
+ax.text(*(P1+1.05*n), r"$\mathbf{u}\times\mathbf{v}$",
+        fontsize=13, color='purple')
+
+ax.set_xlabel("$x$", fontsize=12)
+ax.set_ylabel("$y$", fontsize=12)
+ax.set_zlabel("$z$", fontsize=12)
+
+ax.set_xlim(-0.2,1.5)
+ax.set_ylim(-0.2,1.4)
+ax.set_zlim(0,1.2)
+
+ax.set_box_aspect([1,1,0.8])
+
+ax.view_init(elev=32, azim=-122)
+
+ax.grid(False)
+
+plt.tight_layout()
+plt.show()
+```
+
+$$
+\Delta \vec S = \vec u \times \vec v
+$$
+
+Mà ta có:
+
+$$
+\vec u = <\Delta x, 0, f_x\Delta x> = \Delta x <1, 0, f_x>
+$$
+
+vì $f(x + \Delta x, y) \approx f(x, y) + f_x\Delta x$
+
+Tương tự với $\vec v$, ta có:
+
+$$
+\vec v = \Delta y<0, 1, f_y>
+$$
+
+$$
+\Delta \vec S = \vec u \times \vec v = \Delta x <1, 0, f_x>\times \Delta y<0, 1, f_y>
+$$
+
+Tính Cross product:
+
+$$
+\begin{vmatrix}
+\hat i & \hat j & \hat k \\
+1 & 0 & f_x \\  
+0 & 1 & f_y 
+\end{vmatrix} = 
+\hat i \begin{vmatrix}
+0 & f_x \\ 
+1 & f_y
+\end{vmatrix} - 
+\hat j \begin{vmatrix}
+1 & f_x \\ 
+0 & f_y
+\end{vmatrix} +
+\hat k \begin{vmatrix}
+1 & 0 \\ 
+0 & 1
+\end{vmatrix}
+$$
+$$
+\Rightarrow -f_x \hat i - f_y \hat j + \hat k
+$$
+
+Cuối cùng:
+
+$$
+\Delta \vec S = \pm<-f_x,-f_y,1>\Delta x \Delta y
+$$
+
+hay
+
+$$
+d\vec S = \pm<-f_x, -f_y, 1>dxdy
+$$
+
 ## Parametric surfaces
 
-## Implicit surfaces
+Nếu tất cả các biến phụ thuộc vào tham số, ví dụ như:
 
+$$
+\begin{cases}
+x = x(u, v) \\ 
+y = y(u, v) \\ 
+z = z(u, v) \\ 
+<x, y, z> = \vec r = r(u, v) \\ 
+\end{cases}
+$$
+
+Thế thì ta có thể tính thông lượng sử dụng hai biến u và v. Ta có:
+
+$$
+\frac {\partial \vec r}{\partial u}\Delta u = 
+\left<\frac{\partial x}{\partial u}\Delta x,
+\frac{\partial y}{\partial u}\Delta y,
+\frac{\partial z}{\partial u}\Delta z
+\right> 
+$$
+
+$$
+\frac {\partial \vec r}{\partial v}\Delta v = 
+\left<\frac{\partial x}{\partial v}\Delta x,
+\frac{\partial y}{\partial v}\Delta y,
+\frac{\partial z}{\partial v}\Delta z
+\right> 
+$$
+
+$$
+\Delta S = \left(\frac{\partial \vec r}{\partial u}\Delta u \right) \times \left(\frac{\partial \vec r}{\partial v}\Delta v \right) = 
+\left(\frac{\partial \vec r}{\partial u} \times \frac{\partial \vec r}{\partial v} \right)\Delta x \Delta y
+$$
+
+Cuối cùng:
+
+$$
+d\vec S = \left(\frac{\partial \vec r}{\partial u} \times \frac{\partial \vec r}{\partial v} \right)dxdy
+$$
+
+## Implicit surfaces
+Nếu ta có:
+
+1) $ax + by + cz = d$ $\longrightarrow \vec N = <a, b, c>$
+2) Mặt phẳng g(x, y, z) = 0 $\longrightarrow \vec N = \nabla g$
+
+$$
+\hat n dS = \pm \frac {|\vec N|}{|\vec N \cdot \hat k|}dxdy
+$$
 ___
 # Divergence theorem - Gauss-Green theorem
+
+Cho:
+
+* $V$ là một khối trong không gian
+* $S = \partial V$ là mặt kín bao quanh $V$
+* $F = (P, Q, R)$ là trường vector
+
+Khi đó:
+
+$$
+\iint_S \mathbf F \cdot \hat n dS = \iiint_V \nabla \cdot \mathbf F dV
+$$
+
+trong đó:
+
+* $\hat n$ là vector pháp tuyến đơn vị hướng ra ngoài.
+* $\nabla \cdot \mathbf F$ là divergence của trường vector, $div(<P, Q, R>) = P_x + Q_y + R_z$.
+
+## Ý nghĩa hình học
+**LHS:**
+$$
+\iint_S \mathbf F \cdot \hat n dS
+$$
+
+là tổng lượng trường đi xuyên qua mặt kín.
+
+**RHS:**
+$$
+\iiint \nabla \cdot \mathbf F dV
+$$
+
+là tổng nguồn phát sinh bên trong khối.
+
+Nếu divergence dương $\longrightarrow$ trường được tạo ra bên trong.
+
+Nếu divergence âm $\longrightarrow$ trường được hút vào bên trong.
+
+
+
+
+

@@ -827,7 +827,7 @@
     "href": "note/multivariable-calculus/4.html#parametric-surfaces",
     "title": "Triple integrals and Surface integrals in 3D space",
     "section": "Parametric surfaces",
-    "text": "Parametric surfaces",
+    "text": "Parametric surfaces\nNếu tất cả các biến phụ thuộc vào tham số, ví dụ như:\n\n\\begin{cases}\nx = x(u, v) \\\\\ny = y(u, v) \\\\\nz = z(u, v) \\\\\n&lt;x, y, z&gt; = \\vec r = r(u, v) \\\\\n\\end{cases}\n\nThế thì ta có thể tính thông lượng sử dụng hai biến u và v. Ta có:\n\n\\frac {\\partial \\vec r}{\\partial u}\\Delta u =\n\\left&lt;\\frac{\\partial x}{\\partial u}\\Delta x,\n\\frac{\\partial y}{\\partial u}\\Delta y,\n\\frac{\\partial z}{\\partial u}\\Delta z\n\\right&gt;\n\n\n\\frac {\\partial \\vec r}{\\partial v}\\Delta v =\n\\left&lt;\\frac{\\partial x}{\\partial v}\\Delta x,\n\\frac{\\partial y}{\\partial v}\\Delta y,\n\\frac{\\partial z}{\\partial v}\\Delta z\n\\right&gt;\n\n\n\\Delta S = \\left(\\frac{\\partial \\vec r}{\\partial u}\\Delta u \\right) \\times \\left(\\frac{\\partial \\vec r}{\\partial v}\\Delta v \\right) =\n\\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)\\Delta x \\Delta y\n\nCuối cùng:\n\nd\\vec S = \\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)dxdy",
     "crumbs": [
       "18.02",
       "Triple integrals and Surface integrals in 3D space"
@@ -838,7 +838,18 @@
     "href": "note/multivariable-calculus/4.html#implicit-surfaces",
     "title": "Triple integrals and Surface integrals in 3D space",
     "section": "Implicit surfaces",
-    "text": "Implicit surfaces",
+    "text": "Implicit surfaces\nNếu ta có:\n\nax + by + cz = d \\longrightarrow \\vec N = &lt;a, b, c&gt;\nMặt phẳng g(x, y, z) = 0 \\longrightarrow \\vec N = \\nabla g\n\n\n\\hat n dS = \\pm \\frac {|\\vec N|}{|\\vec N \\cdot \\hat k|}dxdy\n ___ # Divergence theorem - Gauss-Green theorem\nCho:\n\nV là một khối trong không gian\nS = \\partial V là mặt kín bao quanh V\nF = (P, Q, R) là trường vector\n\nKhi đó:\n\n\\iint_S \\mathbf F \\cdot \\hat n dS = \\iiint_V \\nabla \\cdot \\mathbf F dV\n\ntrong đó:\n\n\\hat n là vector pháp tuyến đơn vị hướng ra ngoài.\n\\nabla \\cdot \\mathbf F là divergence của trường vector, div(&lt;P, Q, R&gt;) = P_x + Q_y + R_z.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
+    "href": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Ý nghĩa hình học",
+    "text": "Ý nghĩa hình học\nLHS: \n\\iint_S \\mathbf F \\cdot \\hat n dS\n\nlà tổng lượng trường đi xuyên qua mặt kín.\nRHS: \n\\iiint \\nabla \\cdot \\mathbf F dV\n\nlà tổng nguồn phát sinh bên trong khối.\nNếu divergence dương \\longrightarrow trường được tạo ra bên trong.\nNếu divergence âm \\longrightarrow trường được hút vào bên trong.",
     "crumbs": [
       "18.02",
       "Triple integrals and Surface integrals in 3D space"
