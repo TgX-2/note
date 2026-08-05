@@ -865,5 +865,82 @@
       "18.02",
       "Triple integrals and Surface integrals in 3D space"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
+    "href": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 1: Tách cách thành phần và chứng minh",
+    "text": "Bước 1: Tách cách thành phần và chứng minh\nTa cần chứng minh:\n\n\\iint_C \\mathbf F \\cdot d\\vec S = \\iiint_D \\nabla \\cdot \\mathbf F dV\n\nvới \\mathbf F = &lt;P, Q, R&gt;. Do:\n\n\\nabla \\cdot \\mathbf F = P_x + Q_y + R_z\n\nnên\n\n\\iiint_D (P_x + Q_y + R_z)dV =\n\\iiint_D P_x dV +\n\\iiint_D Q_y dV +\n\\iiint_D R_z dV\n\n\n\\iint_S \\mathbf F \\cdot d\\vec S =\n\\iint_S PdS_x +\n\\iint_S QdS_y +\n\\iint_S RdS_z\n\nVì các thành phần độc lập với nhau, vì vậy chỉ cần chứng minh:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_z dV\n\nvà tương tự với \\iint_S P\\hat i \\cdot d\\vec S, \\iint_SQ\\hat j\\cdot d\\vec S.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
+    "href": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 2: Miền đơn giản theo phương z",
+    "text": "Bước 2: Miền đơn giản theo phương z\nGiả sử miền D = \\{(x, y, z) : (x, y) \\in \\mathbb U, z_1(x, y) \\leq x \\leq z_2(x, y)\\}.\nTức là miền bị kẹp giữa hai mặt:\n\nBottom: z = z_1(x, y)\nTop: z = z_2(x, y)",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
+    "href": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 3: Tính tích phân thể tích",
+    "text": "Bước 3: Tính tích phân thể tích\nTa có \\iiint_D R_zdV, do miền đơn giản theo z, nên thành:\n\n\\iint_U \\left(\\int_{z_1}^{z_2}R_zdz \\right)dxdy\n\nÁp dụng fundamental theorem of calculus \\int_{z_1}^{z_2}R_zdz = R(x, y, z_2) - R(x, y, z_1), nên:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
+    "href": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 4: Flux through top",
+    "text": "Bước 4: Flux through top\nTa có mặt trên z = z_2(x, y), tham số hóa ta được:\n\n\\mathbf r(x, y) = (x, y, z_2(x, y))\n\nCó hai vector tiếp tuyến:\n\n\\mathbf r_x = (1, 0, z_{2x}) \\qquad \\mathbf r_y = (0, 1, z_{2y})\n\ntích có hướng:\n\n\\mathbf r_x \\times \\mathbf r_y = &lt;-z_{2x}, -z_{2y}, 1&gt;\n\nVậy:\n\nd\\vec S = \\left&lt;-\\frac{\\partial z_2}{\\partial x}, -\\frac{\\partial z_2}{\\partial y}, 1\\right&gt;dxdy\n\ntích vô hướng:\n\nR\\hat k \\cdot d\\vec S = &lt;0, 0, R&gt;\\cdot&lt;-z_{2x}, -z_{2y}, 1&gt; = R\n\ndo đó:\n\n\\iint_{top}R\\hat k \\cdot d\\vec S = \\iint_U R(x, y, z_2)dxdy",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
+    "href": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 5: Flux through bottom",
+    "text": "Bước 5: Flux through bottom\nTương tự nhưng mà tiếp tuyến đổi hướng, vậy nên:\n\nd\\vec S = \\left&lt;\\frac{\\partial z_1}{\\partial x}, \\frac{\\partial z_1}{\\partial y}, -1\\right&gt;dxdy\n\nVậy:\n\n\\iint_{bottom}R\\hat k \\cdot d\\vec S = -\\iint_U R(x, y, z_1)dxdy",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
+    "href": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 6: Flux through sides",
+    "text": "Bước 6: Flux through sides\nCác pháp tuyến nằm ngang, và các mặt phẳng nằm dựng đứng, vậy nên thông lượng qua các mặt = 0.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
+    "href": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 7: Tổng kết",
+    "text": "Bước 7: Tổng kết\nThông lượng toàn bộ mặt:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U R(x, y, z_2)dxdy -\n\\iint_U R(x, y, z_1)dxdy\n\nHay tóm gọn lại:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U (R(x, y, z_2) - R(x, y, z_1))dxdy\n\nMà ở bước 3, ta tính được:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy\n\nVậy:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_zdV",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
   }
 ]
