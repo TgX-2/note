@@ -516,7 +516,14 @@ window.Quarto = {
   <li><a href="#bước-6-flux-through-sides" id="toc-bước-6-flux-through-sides" class="nav-link" data-scroll-target="#bước-6-flux-through-sides">Bước 6: Flux through sides</a></li>
   <li><a href="#bước-7-tổng-kết" id="toc-bước-7-tổng-kết" class="nav-link" data-scroll-target="#bước-7-tổng-kết">Bước 7: Tổng kết</a></li>
   </ul></li>
-  <li><a href="#applications-of-gauss-green-thm." id="toc-applications-of-gauss-green-thm." class="nav-link" data-scroll-target="#applications-of-gauss-green-thm.">Applications of Gauss-Green thm.</a></li>
+  <li><a href="#laplacian" id="toc-laplacian" class="nav-link" data-scroll-target="#laplacian">Laplacian</a>
+  <ul class="collapse">
+  <li><a href="#ý-nghĩa-của-laplacian" id="toc-ý-nghĩa-của-laplacian" class="nav-link" data-scroll-target="#ý-nghĩa-của-laplacian">Ý nghĩa của Laplacian</a></li>
+  </ul></li>
+  <li><a href="#applications-of-gauss-green-thm." id="toc-applications-of-gauss-green-thm." class="nav-link" data-scroll-target="#applications-of-gauss-green-thm.">Applications of Gauss-Green thm.</a>
+  <ul class="collapse">
+  <li><a href="#diffusion-equation" id="toc-diffusion-equation" class="nav-link" data-scroll-target="#diffusion-equation">Diffusion equation</a></li>
+  </ul></li>
   <li><a href="#end" id="toc-end" class="nav-link" data-scroll-target="#end">End</a></li>
   </ul>
 </nav>
@@ -566,7 +573,7 @@ z = x^2 + y^2 \tag{1}
 <p><span class="math display">
 z = 4 - x^2 - y^2 \tag{2}
 </span></p>
-<div id="14572e9b" class="cell" data-execution_count="1">
+<div id="9a993240" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -669,7 +676,7 @@ z_{bottom} &lt; z_{top} \\
 \Rightarrow x^2 + y^2 &lt; 2
 </span></p>
 <p>Chính xác là nó chính là hình tròn với bán kính là <span class="math inline">\sqrt2</span>.</p>
-<div id="d6ab2147" class="cell" data-execution_count="2">
+<div id="1905b523" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -753,7 +760,7 @@ z_{bottom} &lt; z_{top} \\
 </div>
 </div>
 <p>Vì vậy ta có thể khiến y phụ thuộc vào x. Bằng phương trình đường tròn.</p>
-<div id="29f3338c" class="cell" data-execution_count="3">
+<div id="31024bd5" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -868,7 +875,7 @@ x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
 <li><span class="math inline">\phi</span>: Khoảng cách với trục z (<span class="math inline">0 \leq \phi \leq \pi</span>).</li>
 <li><span class="math inline">\theta</span>: Khoảng cách với mặt phẳng xz (<span class="math inline">0 \leq \theta \leq 2\pi</span>).</li>
 </ul>
-<div id="a4bab336" class="cell" data-execution_count="4">
+<div id="9c3c7cd4" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1095,7 +1102,7 @@ z_\rho &amp; z_\phi
 </div>
 </div>
 <p><strong>Ví dụ:</strong> Tính thể tích phần chóp được tạo bởi một hình cầu <span class="math inline">\rho = 1</span> và cắt ngang bởi mặt phẳng <span class="math inline">z = \frac 1 {\sqrt2}</span>.</p>
-<div id="fe8ad107" class="cell" data-execution_count="5">
+<div id="56ab34ff" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1319,7 +1326,7 @@ z_\rho &amp; z_\phi
 <p><strong>Cách tính <span class="math inline">dS</span>:</strong> của một mặt được viết dưới dạng đồ thị: <span class="math display">
 z = f(x, y)
 </span></p>
-<div id="466e9c02" class="cell" data-execution_count="6">
+<div id="cf5daa2d" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1741,9 +1748,49 @@ d\vec S = \left&lt;\frac{\partial z_1}{\partial x}, \frac{\partial z_1}{\partial
 <hr>
 </section>
 </section>
+<section id="laplacian" class="level1">
+<h1>Laplacian</h1>
+<p>Toán tử Laplace là một toán tử vi phân bậc hai trong giải tích vectơ, được định nghĩa là độ phân kỳ của đạo hàm bậc nhất của một hàm vô hướng.</p>
+<p>Ký hiệu là: <span class="math inline">\nabla^2</span> hoặc <span class="math inline">\Delta</span>.</p>
+<ul>
+<li><span class="math inline">\nabla \cdot \nabla \mathbf F = \nabla^2 \mathbf F = \Delta \mathbf F</span></li>
+<li>2D: <span class="math inline">\frac{\partial^2f}{\partial x^2} + \frac{\partial^2f}{\partial y^2}</span></li>
+<li>3D: <span class="math inline">\frac{\partial^2f}{\partial x^2} + \frac{\partial^2f}{\partial y^2} + \frac{\partial^2f}{\partial z^2}</span></li>
+</ul>
+<section id="ý-nghĩa-của-laplacian" class="level2">
+<h2 class="anchored" data-anchor-id="ý-nghĩa-của-laplacian">Ý nghĩa của Laplacian</h2>
+<p>Laplacian đo xem giá trị tại một điểm cao hơn hay thấp hơn trung bình các điểm lân cận.</p>
+<p>Nếu <span class="math display">
+\nabla^2f&gt;0
+</span> thì điểm đó thấp hơn vùng xung quanh <span class="math inline">\Rightarrow</span> chất hoặc nhiệt sẽ chảy vào <span class="math inline">\Rightarrow</span> u tăng.</p>
+<p>Nếu <span class="math display">
+\nabla^2f&lt;0
+</span> thì điểm đó cao hơn vùng xung quanh <span class="math inline">\Rightarrow</span> chất hoặc nhiệt sẽ chảy ra <span class="math inline">\Rightarrow</span> u giảm.</p>
+<p>Do đo phương trình khuếch tán luôn có xu hướng làm trung bình hóa phân bố theo thời gian.</p>
+<hr>
+</section>
+</section>
 <section id="applications-of-gauss-green-thm." class="level1">
 <h1>Applications of Gauss-Green thm.</h1>
+<section id="diffusion-equation" class="level2">
+<h2 class="anchored" data-anchor-id="diffusion-equation">Diffusion equation</h2>
+<p>Phương trình khuếch tán ví dụ như quản lý chuyển động của khói trong không khí (đứng yên), màu thuốc nhuộm trong dung dịch, …</p>
+<p>Phương trình là:</p>
+<p><span class="math display">
+\frac{\partial u}{\partial t} = k\nabla^2u
+= k \left(\frac{\partial^2u}{\partial x^2} +
+\frac{\partial^2u}{\partial y^2} +
+\frac{\partial^2u}{\partial z^2} \right)
+</span></p>
+<p>Trong đó:</p>
+<ul>
+<li><span class="math inline">u = (x, y, z, t)</span> là đại lượng khuếch tán tại <span class="math inline">x, y, z</span> vào thời điểm <span class="math inline">t</span>.</li>
+<li><span class="math inline">k</span> là hệ số khuếch tán.</li>
+<li><span class="math inline">\nabla^2</span> toán tử Laplacian.</li>
+</ul>
+<p>Và <strong>heat equation</strong> là một trường hợp đặc biệt của <strong>diffusion equation</strong>.</p>
 <hr>
+</section>
 </section>
 <section id="end" class="level1">
 <h1>End</h1>

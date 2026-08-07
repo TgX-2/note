@@ -942,5 +942,27 @@
       "18.02",
       "Triple integrals and Surface integrals in 3D space"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
+    "href": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Ý nghĩa của Laplacian",
+    "text": "Ý nghĩa của Laplacian\nLaplacian đo xem giá trị tại một điểm cao hơn hay thấp hơn trung bình các điểm lân cận.\nNếu \n\\nabla^2f&gt;0\n thì điểm đó thấp hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy vào \\Rightarrow u tăng.\nNếu \n\\nabla^2f&lt;0\n thì điểm đó cao hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy ra \\Rightarrow u giảm.\nDo đo phương trình khuếch tán luôn có xu hướng làm trung bình hóa phân bố theo thời gian.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#diffusion-equation",
+    "href": "note/multivariable-calculus/4.html#diffusion-equation",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Diffusion equation",
+    "text": "Diffusion equation\nPhương trình khuếch tán ví dụ như quản lý chuyển động của khói trong không khí (đứng yên), màu thuốc nhuộm trong dung dịch, …\nPhương trình là:\n\n\\frac{\\partial u}{\\partial t} = k\\nabla^2u\n= k \\left(\\frac{\\partial^2u}{\\partial x^2} +\n\\frac{\\partial^2u}{\\partial y^2} +\n\\frac{\\partial^2u}{\\partial z^2} \\right)\n\nTrong đó:\n\nu = (x, y, z, t) là đại lượng khuếch tán tại x, y, z vào thời điểm t.\nk là hệ số khuếch tán.\n\\nabla^2 toán tử Laplacian.\n\nVà heat equation là một trường hợp đặc biệt của diffusion equation.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
   }
 ]

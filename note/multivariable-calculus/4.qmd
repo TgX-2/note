@@ -1257,12 +1257,55 @@ $$
 $$
 
 ___
+# Laplacian
+
+Toán tử Laplace là một toán tử vi phân bậc hai trong giải tích vectơ, được định nghĩa là độ phân kỳ của đạo hàm bậc nhất của một hàm vô hướng.
+
+Ký hiệu là: $\nabla^2$ hoặc $\Delta$.
+
+* $\nabla \cdot \nabla \mathbf F = \nabla^2 \mathbf F = \Delta \mathbf F$
+* 2D: $\frac{\partial^2f}{\partial x^2} + \frac{\partial^2f}{\partial y^2}$
+* 3D: $\frac{\partial^2f}{\partial x^2} + \frac{\partial^2f}{\partial y^2} + \frac{\partial^2f}{\partial z^2}$
+
+## Ý nghĩa của Laplacian
+Laplacian đo xem giá trị tại một điểm cao hơn hay thấp hơn trung bình các điểm lân cận.
+
+Nếu 
+$$
+\nabla^2f>0
+$$
+thì điểm đó thấp hơn vùng xung quanh $\Rightarrow$ chất hoặc nhiệt sẽ chảy vào $\Rightarrow$ u tăng.
+
+Nếu 
+$$
+\nabla^2f<0
+$$
+thì điểm đó cao hơn vùng xung quanh $\Rightarrow$ chất hoặc nhiệt sẽ chảy ra $\Rightarrow$ u giảm.
+
+Do đo phương trình khuếch tán luôn có xu hướng làm trung bình hóa phân bố theo thời gian.
+
+___
 # Applications of Gauss-Green thm.
 
+## Diffusion equation
+Phương trình khuếch tán ví dụ như quản lý chuyển động của khói trong không khí (đứng yên), màu thuốc nhuộm trong dung dịch, ...
 
+Phương trình là:
 
+$$
+\frac{\partial u}{\partial t} = k\nabla^2u 
+= k \left(\frac{\partial^2u}{\partial x^2} + 
+\frac{\partial^2u}{\partial y^2} +
+\frac{\partial^2u}{\partial z^2} \right)
+$$
 
+Trong đó:
 
+* $u = (x, y, z, t)$ là đại lượng khuếch tán tại $x, y, z$ vào thời điểm $t$.
+* $k$ là hệ số khuếch tán.
+* $\nabla^2$ toán tử Laplacian.
+
+Và **heat equation** là một trường hợp đặc biệt của **diffusion equation**.
 
 
 ___
