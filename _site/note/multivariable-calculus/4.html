@@ -562,9 +562,9 @@ window.Quarto = {
 <h1>Triple integrals</h1>
 <p>Tương tự như trong tích phân kép, tích phân bội ba có dạng:</p>
 <p><span class="math display">
-\iiint f(x, y, z) \mathbf dV
+\iiint f(x, y, z) \mathrm dV
 </span></p>
-<p>Nhớ rằng, <span class="math inline">\mathbf dV</span> có thể là <span class="math inline">\mathbf dx \mathbf dy \mathbf dz</span> hoặc là <span class="math inline">r \mathbf dr\mathbf d\theta\mathbf dz</span>, …</p>
+<p>Nhớ rằng, <span class="math inline">\mathrm dV</span> có thể là <span class="math inline">\mathrm dx \mathrm dy \mathrm dz</span> hoặc là <span class="math inline">r \mathrm dr\mathrm d\theta\mathrm dz</span>, …</p>
 <p><strong>Ví dụ:</strong></p>
 <p>Tìm thể tích phần giới hạn bởi 2 paraboloid:</p>
 <p><span class="math display">
@@ -573,7 +573,7 @@ z = x^2 + y^2 \tag{1}
 <p><span class="math display">
 z = 4 - x^2 - y^2 \tag{2}
 </span></p>
-<div id="9a993240" class="cell" data-execution_count="1">
+<div id="9952ed2b" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -648,7 +648,7 @@ z = 4 - x^2 - y^2 \tag{2}
 </div>
 </div>
 </div>
-<p>Ta sẽ tích phân <span class="math inline">\mathbf dz</span> trước.</p>
+<p>Ta sẽ tích phân <span class="math inline">\mathrm dz</span> trước.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -667,7 +667,7 @@ z = 4 - x^2 - y^2 \tag{2}
 </div>
 <p>Bây giờ phương trình trở thành:</p>
 <p><span class="math display">
-\int_?^?\int_?^?\int_{x^2 + y^2}^{4 - x^2 - y^2} 1\mathbf dz \mathbf dy \mathbf dx
+\int_?^?\int_?^?\int_{x^2 + y^2}^{4 - x^2 - y^2} 1\mathrm dz \mathrm dy \mathrm dx
 </span></p>
 <p>Việc tính biên của x và y, ta có thể thấy rằng nó chính là một hình tròn trên mặt phẳng Oxy. Nhưng mà đó chỉ là nhìn hình ta biết, vì vậy chúng ta phải lập luận bằng toán học:</p>
 <p><span class="math display">
@@ -676,7 +676,7 @@ z_{bottom} &lt; z_{top} \\
 \Rightarrow x^2 + y^2 &lt; 2
 </span></p>
 <p>Chính xác là nó chính là hình tròn với bán kính là <span class="math inline">\sqrt2</span>.</p>
-<div id="1905b523" class="cell" data-execution_count="2">
+<div id="b5d2463b" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -760,7 +760,7 @@ z_{bottom} &lt; z_{top} \\
 </div>
 </div>
 <p>Vì vậy ta có thể khiến y phụ thuộc vào x. Bằng phương trình đường tròn.</p>
-<div id="31024bd5" class="cell" data-execution_count="3">
+<div id="5a30f0fb" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -840,7 +840,7 @@ z_{bottom} &lt; z_{top} \\
 </div>
 <p>Vậy cuối cùng phương trình trở thành:</p>
 <p><span class="math display">
-\int_{-\sqrt2}^{\sqrt2}\int_{-\sqrt{2-x^2}}^{\sqrt{2 - x^2}}\int_{x^2 + y^2}^{4 - x^2 - y^2} 1 \mathbf dz \mathbf dy \mathbf dx
+\int_{-\sqrt2}^{\sqrt2}\int_{-\sqrt{2-x^2}}^{\sqrt{2 - x^2}}\int_{x^2 + y^2}^{4 - x^2 - y^2} 1 \mathrm dz \mathrm dy \mathrm dx
 </span></p>
 <p>Nhưng mà nó khá là khó và rất rối để ngồi nguyên hàm rồi tính.</p>
 <hr>
@@ -856,7 +856,7 @@ x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
 <p>Tọa độ trục chính xác là tọa độ cực nhưng thêm trục cao.</p>
 <p>Hàm bây giờ trở thành:</p>
 <p><span class="math display">
-\int_0^{2\pi}\int_0^{\sqrt2}\int_{x^2 + y^2}^{4 - x^2 - y^2}1\mathbf dz r\mathbf dr\mathbf d\theta
+\int_0^{2\pi}\int_0^{\sqrt2}\int_{x^2 + y^2}^{4 - x^2 - y^2}1\mathrm dz r\mathrm dr\mathrm d\theta
 </span></p>
 <hr>
 </section>
@@ -875,7 +875,7 @@ x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
 <li><span class="math inline">\phi</span>: Khoảng cách với trục z (<span class="math inline">0 \leq \phi \leq \pi</span>).</li>
 <li><span class="math inline">\theta</span>: Khoảng cách với mặt phẳng xz (<span class="math inline">0 \leq \theta \leq 2\pi</span>).</li>
 </ul>
-<div id="9c3c7cd4" class="cell" data-execution_count="4">
+<div id="5fe6a4f2" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1022,7 +1022,7 @@ z = \rho\cos\phi
 <section id="tích-phân-bội-ba-trong-tọa-độ-cầu" class="level2">
 <h2 class="anchored" data-anchor-id="tích-phân-bội-ba-trong-tọa-độ-cầu">Tích phân bội ba trong tọa độ cầu</h2>
 <p><span class="math display">
-\mathbf dV = \rho^2\sin\phi \mathbf d\rho \mathbf d\phi\mathbf d\theta
+\mathrm dV = \rho^2\sin\phi \mathrm d\rho \mathrm d\phi\mathrm d\theta
 </span></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -1097,12 +1097,12 @@ z_\rho &amp; z_\phi
 <p><span class="math display">
 \Rightarrow J = \rho^2\sin\phi
 </span></p>
-<p>Cuối cùng: <span class="math inline">\mathbf dx\mathbf dy \mathbf dz = \rho^2\sin\phi \mathbf d\rho\mathbf d\phi \mathbf d\theta</span></p>
+<p>Cuối cùng: <span class="math inline">\mathrm dx\mathrm dy \mathrm dz = \rho^2\sin\phi \mathrm d\rho\mathrm d\phi \mathrm d\theta</span></p>
 </div>
 </div>
 </div>
 <p><strong>Ví dụ:</strong> Tính thể tích phần chóp được tạo bởi một hình cầu <span class="math inline">\rho = 1</span> và cắt ngang bởi mặt phẳng <span class="math inline">z = \frac 1 {\sqrt2}</span>.</p>
-<div id="56ab34ff" class="cell" data-execution_count="5">
+<div id="8a7d1fd3" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1217,7 +1217,7 @@ z_\rho &amp; z_\phi
 </div>
 </div>
 <p><span class="math display">
-\int_0^{2\pi}\int_0^{\pi/4}\int_{\frac 1 {\sqrt2\cos\phi}}^1\rho^2\sin\phi\mathbf d\rho\mathbf d\phi\mathbf d\theta
+\int_0^{2\pi}\int_0^{\pi/4}\int_{\frac 1 {\sqrt2\cos\phi}}^1\rho^2\sin\phi\mathrm d\rho\mathrm d\phi\mathrm d\theta
 </span></p>
 <p>Tự tính.</p>
 <p><span class="math display">
@@ -1270,15 +1270,15 @@ z_\rho &amp; z_\phi
 <h1>Flux 3D</h1>
 <p>Như trong mặt phẳng, ta có:</p>
 <p><span class="math display">
-\int_C \vec F \cdot \hat{\mathbf n} \mathbf ds
+\int_C \vec F \cdot \hat{\mathbf n} \mathrm ds
 </span></p>
 <p>mô tả thông lượng thông qua một đường cong trong một trường vector <span class="math inline">\vec F</span>.</p>
 <p>Và bây giờ chúng ta đang làm việc trong không gian vì vậy chúng ta không thể tính được bao nhiêu gió đi qua một đường cong, mà phải là qua một mặt phẳng. Vì vậy chúng ta không thể dùng tích phân đường nữa mà phải sử dụng tích phân mặt.</p>
 <p>Với trường vector <span class="math inline">\vec F</span>, mặt phẳng S, vector pháp tuyến <span class="math inline">\hat{\mathbf n}</span>, FLux:</p>
 <p><span class="math display">
-\iint \vec F \cdot \hat{\mathbf n}\mathbf dS
+\iint \vec F \cdot \hat{\mathbf n}\mathrm dS
 </span></p>
-<p>Notation: <span class="math inline">\mathbf d\vec S = \hat{\mathbf n}\mathbf dS</span>.</p>
+<p>Notation: <span class="math inline">\mathrm d\vec S = \hat{\mathbf n}\mathrm dS</span>.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1291,7 +1291,7 @@ z_\rho &amp; z_\phi
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>Chiều của <span class="math inline">\hat{\mathbf n}</span>: Không có một quy ước chuẩn nào cho chiều của vector pháp tuyến. Việc lựa chọn như thế nào ảnh hướng khá nhiều đến kết quả cuối cùng. Nó cũng giống với Flux trong 2D, việc vector đâm vào cùng hướng hay ngược hướng với vector pháp tuyến sẽ quyết định đến dấu.</p></li>
-<li><p>Không có một công thức đẹp giống như trong 2D, <span class="math inline">\int_C M\mathbf dx + N\mathbf dy</span> là điều không có trong không gian.</p></li>
+<li><p>Không có một công thức đẹp giống như trong 2D, <span class="math inline">\int_C M\mathrm dx + N\mathrm dy</span> là điều không có trong không gian.</p></li>
 </ul>
 </div>
 </div>
@@ -1300,22 +1300,22 @@ z_\rho &amp; z_\phi
 \hat{\mathbf n} = \frac 1 a &lt;x, y, z&gt; (\text{other choice: } -\frac 1 a &lt;x, y, z&gt;)
 </span></p>
 <p><span class="math display">
-\iint_S \vec F \cdot \hat{\mathbf n}\mathbf dS = \iint_S a \mathbf dS = 4\pi a^3
+\iint_S \vec F \cdot \hat{\mathbf n}\mathrm dS = \iint_S a \mathrm dS = 4\pi a^3
 </span></p>
 <section id="một-số-kiểu-tham-số-hóa" class="level2">
 <h2 class="anchored" data-anchor-id="một-số-kiểu-tham-số-hóa">Một số kiểu tham số hóa</h2>
 <ol start="0" type="1">
 <li><p>Mặt phẳng <span class="math inline">z = a</span> song song với mặt phẳng xy: <span class="math display">
-\hat{\mathbf n} = \pm \hat{\mathbf k} \qquad \mathbf dS = \mathbf dx \mathbf dy
+\hat{\mathbf n} = \pm \hat{\mathbf k} \qquad \mathrm dS = \mathrm dx \mathrm dy
 </span></p></li>
 <li><p>Hình cầu bán kính a, tâm tại gốc tọa độ, dùng <span class="math inline">\phi, \theta</span>: <span class="math display">
-\hat{\mathbf n} = \frac 1 a &lt;x, y, z&gt; \qquad \mathbf dS = a^2\sin\phi\mathbf d\phi\mathbf d\theta
+\hat{\mathbf n} = \frac 1 a &lt;x, y, z&gt; \qquad \mathrm dS = a^2\sin\phi\mathrm d\phi\mathrm d\theta
 </span></p></li>
 <li><p>Hình trụ bán kính a, tâm ở trục z, dùng <span class="math inline">z, \theta</span>: <span class="math display">
-\hat{\mathbf n} = \frac 1 a &lt;x, y, 0&gt; \qquad \mathbf dS = a\mathbf dz\mathbf d\theta
+\hat{\mathbf n} = \frac 1 a &lt;x, y, 0&gt; \qquad \mathrm dS = a\mathrm dz\mathrm d\theta
 </span></p></li>
 <li><p>Hình phụ thuộc vào x và y, <span class="math inline">z = f(x, y)</span>, dùng <span class="math inline">x, y</span>: <span class="math display">
-\hat{\mathbf n}\mathbf dS = &lt;-f_x, -f_y, 1&gt;\mathbf dx\mathbf dy
+\hat{\mathbf n}\mathrm dS = &lt;-f_x, -f_y, 1&gt;\mathrm dx\mathrm dy
 </span></p></li>
 </ol>
 <hr>
@@ -1326,7 +1326,7 @@ z_\rho &amp; z_\phi
 <p><strong>Cách tính <span class="math inline">dS</span>:</strong> của một mặt được viết dưới dạng đồ thị: <span class="math display">
 z = f(x, y)
 </span></p>
-<div id="cf5daa2d" class="cell" data-execution_count="6">
+<div id="8854b3f1" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>

@@ -20,10 +20,10 @@ ___
 Tương tự như trong tích phân kép, tích phân bội ba có dạng:
 
 $$
-\iiint f(x, y, z) \mathbf dV
+\iiint f(x, y, z) \mathrm dV
 $$
 
-Nhớ rằng, $\mathbf dV$ có thể là $\mathbf dx \mathbf dy \mathbf dz$ hoặc là $r \mathbf dr\mathbf d\theta\mathbf dz$, ...
+Nhớ rằng, $\mathrm dV$ có thể là $\mathrm dx \mathrm dy \mathrm dz$ hoặc là $r \mathrm dr\mathrm d\theta\mathrm dz$, ...
 
 
 **Ví dụ:**
@@ -108,7 +108,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-Ta sẽ tích phân $\mathbf dz$ trước.
+Ta sẽ tích phân $\mathrm dz$ trước.
 
 :::{.callout-tip collapse="true"}
 ## Suy nghĩ tại sao lại là dz trước
@@ -118,7 +118,7 @@ Bởi vì từ hai điểm x và y, ta có thể dễ dàng xác định đượ
 Bây giờ phương trình trở thành:
 
 $$
-\int_?^?\int_?^?\int_{x^2 + y^2}^{4 - x^2 - y^2} 1\mathbf dz \mathbf dy \mathbf dx
+\int_?^?\int_?^?\int_{x^2 + y^2}^{4 - x^2 - y^2} 1\mathrm dz \mathrm dy \mathrm dx
 $$
 
 Việc tính biên của x và y, ta có thể thấy rằng nó chính là một hình tròn trên mặt phẳng Oxy. Nhưng mà đó chỉ là nhìn hình ta biết, vì vậy chúng ta phải lập luận bằng toán học:
@@ -285,7 +285,7 @@ plt.show()
 Vậy cuối cùng phương trình trở thành:
 
 $$
-\int_{-\sqrt2}^{\sqrt2}\int_{-\sqrt{2-x^2}}^{\sqrt{2 - x^2}}\int_{x^2 + y^2}^{4 - x^2 - y^2} 1 \mathbf dz \mathbf dy \mathbf dx
+\int_{-\sqrt2}^{\sqrt2}\int_{-\sqrt{2-x^2}}^{\sqrt{2 - x^2}}\int_{x^2 + y^2}^{4 - x^2 - y^2} 1 \mathrm dz \mathrm dy \mathrm dx
 $$
 
 Nhưng mà nó khá là khó và rất rối để ngồi nguyên hàm rồi tính.
@@ -308,7 +308,7 @@ Tọa độ trục chính xác là tọa độ cực nhưng thêm trục cao.
 Hàm bây giờ trở thành:
 
 $$
-\int_0^{2\pi}\int_0^{\sqrt2}\int_{x^2 + y^2}^{4 - x^2 - y^2}1\mathbf dz r\mathbf dr\mathbf d\theta
+\int_0^{2\pi}\int_0^{\sqrt2}\int_{x^2 + y^2}^{4 - x^2 - y^2}1\mathrm dz r\mathrm dr\mathrm d\theta
 $$
 
 ___
@@ -473,7 +473,7 @@ $$
 ## Tích phân bội ba trong tọa độ cầu
 
 $$
-\mathbf dV = \rho^2\sin\phi \mathbf d\rho \mathbf d\phi\mathbf d\theta 
+\mathrm dV = \rho^2\sin\phi \mathrm d\rho \mathrm d\phi\mathrm d\theta 
 $$
 
 :::{.callout-note collapse="true"}
@@ -551,7 +551,7 @@ $$
 \Rightarrow J = \rho^2\sin\phi
 $$
 
-Cuối cùng: $\mathbf dx\mathbf dy \mathbf dz = \rho^2\sin\phi \mathbf d\rho\mathbf d\phi \mathbf d\theta$
+Cuối cùng: $\mathrm dx\mathrm dy \mathrm dz = \rho^2\sin\phi \mathrm d\rho\mathrm d\phi \mathrm d\theta$
 :::
 
 **Ví dụ:** Tính thể tích phần chóp được tạo bởi một hình cầu $\rho = 1$ và cắt ngang bởi mặt phẳng $z = \frac 1 {\sqrt2}$.
@@ -665,7 +665,7 @@ plt.show()
 ```
 
 $$
-\int_0^{2\pi}\int_0^{\pi/4}\int_{\frac 1 {\sqrt2\cos\phi}}^1\rho^2\sin\phi\mathbf d\rho\mathbf d\phi\mathbf d\theta
+\int_0^{2\pi}\int_0^{\pi/4}\int_{\frac 1 {\sqrt2\cos\phi}}^1\rho^2\sin\phi\mathrm d\rho\mathrm d\phi\mathrm d\theta
 $$
 
 Tự tính.
@@ -718,7 +718,7 @@ ___
 Như trong mặt phẳng, ta có:
 
 $$
-\int_C \vec F \cdot \hat{\mathbf n} \mathbf ds
+\int_C \vec F \cdot \hat{\mathbf n} \mathrm ds
 $$
 
 mô tả thông lượng thông qua một đường cong trong một trường vector $\vec F$.
@@ -728,17 +728,17 @@ Và bây giờ chúng ta đang làm việc trong không gian vì vậy chúng ta
 Với trường vector $\vec F$, mặt phẳng S, vector pháp tuyến $\hat{\mathbf n}$, FLux:
 
 $$
-\iint \vec F \cdot \hat{\mathbf n}\mathbf dS
+\iint \vec F \cdot \hat{\mathbf n}\mathrm dS
 $$
 
-Notation: $\mathbf d\vec S = \hat{\mathbf n}\mathbf dS$.
+Notation: $\mathrm d\vec S = \hat{\mathbf n}\mathrm dS$.
 
 :::{.callout-caution}
 ## Chú ý
 
 - Chiều của $\hat{\mathbf n}$: Không có một quy ước chuẩn nào cho chiều của vector pháp tuyến. Việc lựa chọn như thế nào ảnh hướng khá nhiều đến kết quả cuối cùng. Nó cũng giống với Flux trong 2D, việc vector đâm vào cùng hướng hay ngược hướng với vector pháp tuyến sẽ quyết định đến dấu.
 
-- Không có một công thức đẹp giống như trong 2D, $\int_C M\mathbf dx + N\mathbf dy$ là điều không có trong không gian.
+- Không có một công thức đẹp giống như trong 2D, $\int_C M\mathrm dx + N\mathrm dy$ là điều không có trong không gian.
 :::
 
 **Ví dụ 1:** Cho trường vector $\vec F = <x ,y, z>$, và một hình cầu tâm ở gốc tọa độ và bán kính a.
@@ -748,29 +748,29 @@ $$
 $$
 
 $$
-\iint_S \vec F \cdot \hat{\mathbf n}\mathbf dS = \iint_S a \mathbf dS = 4\pi a^3
+\iint_S \vec F \cdot \hat{\mathbf n}\mathrm dS = \iint_S a \mathrm dS = 4\pi a^3
 $$
 
 ## Một số kiểu tham số hóa
 
 0) Mặt phẳng $z = a$ song song với mặt phẳng xy: 
 $$
-\hat{\mathbf n} = \pm \hat{\mathbf k} \qquad \mathbf dS = \mathbf dx \mathbf dy
+\hat{\mathbf n} = \pm \hat{\mathbf k} \qquad \mathrm dS = \mathrm dx \mathrm dy
 $$
 
 1) Hình cầu bán kính a, tâm tại gốc tọa độ, dùng $\phi, \theta$:
 $$
-\hat{\mathbf n} = \frac 1 a <x, y, z> \qquad \mathbf dS = a^2\sin\phi\mathbf d\phi\mathbf d\theta 
+\hat{\mathbf n} = \frac 1 a <x, y, z> \qquad \mathrm dS = a^2\sin\phi\mathrm d\phi\mathrm d\theta 
 $$
 
 2) Hình trụ bán kính a, tâm ở trục z, dùng $z, \theta$:
 $$
-\hat{\mathbf n} = \frac 1 a <x, y, 0> \qquad \mathbf dS = a\mathbf dz\mathbf d\theta 
+\hat{\mathbf n} = \frac 1 a <x, y, 0> \qquad \mathrm dS = a\mathrm dz\mathrm d\theta 
 $$
 
 3) Hình phụ thuộc vào x và y, $z = f(x, y)$, dùng $x, y$:
 $$
-\hat{\mathbf n}\mathbf dS = <-f_x, -f_y, 1>\mathbf dx\mathbf dy
+\hat{\mathbf n}\mathrm dS = <-f_x, -f_y, 1>\mathrm dx\mathrm dy
 $$
 
 ___

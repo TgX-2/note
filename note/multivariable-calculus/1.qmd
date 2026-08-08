@@ -310,7 +310,7 @@ Và chúng ta đang cố gắng tìm một điểm $P(x(t), y(t), z(t))$, là đ
 **Velocity vector** : chúng ta muốn biết độ lớn của vận tốc, hay chính là tốc độ và hướng của nó, vậy cách tốt nhất là dùng vector, hay ở đây chính là vector vận tốc.
 
 $$
-\vec v = \frac {\mathbf d \vec r}{\mathbf d t} = <\frac{\mathbf d x }{\mathbf d t}, \frac{\mathbf d y }{\mathbf d t}, \frac{\mathbf d z }{\mathbf d t}>
+\vec v = \frac {\mathrm d \vec r}{\mathrm d t} = <\frac{\mathrm d x }{\mathrm d t}, \frac{\mathrm d y }{\mathrm d t}, \frac{\mathrm d z }{\mathrm d t}>
 $$
 
 :::{.callout-tip collapse="true"}
@@ -333,12 +333,12 @@ ___
 Công thức tính gia tốc là:
 
 $$
-\vec a(t) = \frac{\mathbf d \vec v}{\mathbf d t }
+\vec a(t) = \frac{\mathrm d \vec v}{\mathrm d t }
 $$
 
 :::{.callout-warning collapse="true"}
 ## Chú ý
-Tốc độ là $|\vec v| = \left|\frac {\mathbf d \vec r}{\mathbf d t} \right|$, thứ mà chắc chắn là không bằng với $\frac {\mathbf d |\vec r|}{\mathbf d t }$.
+Tốc độ là $|\vec v| = \left|\frac {\mathrm d \vec r}{\mathrm d t} \right|$, thứ mà chắc chắn là không bằng với $\frac {\mathrm d |\vec r|}{\mathrm d t }$.
 :::
 ___
 # Kepler's second law
@@ -351,16 +351,16 @@ To illustration of efficiency of vector methods, Kepler 1609, laws of planetarym
 attraction.
 
 Kepler’s law in vector form: area swept out in $\Delta t$ is area $\approx \frac 1 2 |\vec r \times \Delta \vec r| \approx \frac 1 2 |\vec r \times \vec v| \Delta t$ 
-So $\frac {\mathbf d }{\mathbf d t}(\text{area}) = \frac 1 2 |\vec v \times \vec r|$ is constant.
+So $\frac {\mathrm d }{\mathrm d t}(\text{area}) = \frac 1 2 |\vec v \times \vec r|$ is constant.
 Also, $\vec r \times \vec v$ is perpendicular to plane of motion, so $dir(\vec r \times \vec v) = const$
 Hence, Kepler's 2nd law says: $\vec r \times \vec v = const$.
 
 
-The usual product rule can be used to differentiate vector functions: $\frac{\mathbf d}{\mathbf d t}(\vec a \cdot \vec b), \frac{\mathbf d}{\mathbf d t}(\vec a \times \vec b)$, being
+The usual product rule can be used to differentiate vector functions: $\frac{\mathrm d}{\mathrm d t}(\vec a \cdot \vec b), \frac{\mathrm d}{\mathrm d t}(\vec a \times \vec b)$, being
 careful about non-commutativity of cross-product.
 
 $$
-\frac {\mathbf d}{\mathbf d t}(\vec r \times \vec v) = \frac{\mathbf d \vec r}{\mathbf d t} \times \vec v + \vec r \times \frac{\mathbf d \vec v}{\mathbf d t} = \vec v \times \vec v + \vec r \times \vec a = \vec v \times \vec a
+\frac {\mathrm d}{\mathrm d t}(\vec r \times \vec v) = \frac{\mathrm d \vec r}{\mathrm d t} \times \vec v + \vec r \times \frac{\mathrm d \vec v}{\mathrm d t} = \vec v \times \vec v + \vec r \times \vec a = \vec v \times \vec a
 $$
 
 So Kepler’s law $\Leftrightarrow \vec r \times \vec v = const \Leftrightarrow \vec r \times \vec a = 0 \Leftrightarrow \vec a // \vec r \Leftrightarrow$ the force $\vec F$ is central.

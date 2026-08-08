@@ -658,11 +658,11 @@ ___
 :::{.callout-important}
 ## tl;dr
 $$
-\mathbf df = \sum f_{x_i}\mathbf d{x_i}
+\mathrm df = \sum f_{x_i}\mathrm d{x_i}
 $$
 Nếu biến phụ thuộc nhau thì dùng quy tắc chuỗi: 
 $$
-\frac{\mathbf df}{\mathbf dt} = \sum f_{x_i} \frac{\mathbf d{x_i}}{\mathbf dt}
+\frac{\mathrm df}{\mathrm dt} = \sum f_{x_i} \frac{\mathrm d{x_i}}{\mathrm dt}
 $$
 
 
@@ -672,7 +672,7 @@ $$
 
 **Đạo hàm toàn phần:** Cho một hàm $f$ ví dụ như phụ thuộc vào 3 biến số $f = f(x, y, z)$ thì đạo hàm toàn phần của nó là:
 $$
-\mathbf df = f_x \mathbf d x + f_y \mathbf d y + f_z \mathbf d z 
+\mathrm df = f_x \mathrm d x + f_y \mathrm d y + f_z \mathrm d z 
 $$
 
 ## Chain rule
@@ -680,10 +680,10 @@ $$
 **Trường hợp 1:** $x = x(t), y = y(t), z = z(t)$
 
 $$
-\frac{\mathbf d f}{\mathbf dt} = 
-\frac{\partial f}{\partial x} \frac{\mathbf dx}{\mathbf dt} +
-\frac{\partial f}{\partial y} \frac{\mathbf dy}{\mathbf dt} +
-\frac{\partial f}{\partial z} \frac{\mathbf dz}{\mathbf dt}
+\frac{\mathrm d f}{\mathrm dt} = 
+\frac{\partial f}{\partial x} \frac{\mathrm dx}{\mathrm dt} +
+\frac{\partial f}{\partial y} \frac{\mathrm dy}{\mathrm dt} +
+\frac{\partial f}{\partial z} \frac{\mathrm dz}{\mathrm dt}
 $$
 
 **Trường hợp 2:** $x = x(u, v), y = y(u, v), z = z(u, v)$
@@ -704,24 +704,24 @@ $$
 ## Example
 Quy tắc nhân, ta có $f = f(u, v) = uv$, đạo hàm toàn phần nó:
 $$
-\mathbf d f = v \mathbf d u + u \mathbf dv \space (=vu'+uv')
+\mathrm d f = v \mathrm d u + u \mathrm dv \space (=vu'+uv')
 $$
 
 Quy tắc thương, ta có $f = f(u, v) = \frac u v$, đạo hàm toàn phần:
 $$
-\mathbf d f = \frac 1 v \mathbf du - \frac u {v^2} \mathbf d v = \frac {v\mathbf du - u\mathbf dv}{v^2} 
+\mathrm d f = \frac 1 v \mathrm du - \frac u {v^2} \mathrm d v = \frac {v\mathrm du - u\mathrm dv}{v^2} 
 \space \left(=\frac{vu' - uv'}{v^2}\right) 
 $$
 :::
 
 ## Application
-Nói một cách khó hiểu, $\mathbf d x$ hay bất kể $\mathbf d$ gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là $\mathbf d x \neq \Delta x$. Chỉ khi nào $\Delta x$ tiến tới 0, thì khi đó $\mathbf d x \approx \Delta x$
+Nói một cách khó hiểu, $\mathrm d x$ hay bất kể $\mathrm d$ gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là $\mathrm d x \neq \Delta x$. Chỉ khi nào $\Delta x$ tiến tới 0, thì khi đó $\mathrm d x \approx \Delta x$
 
 Vậy đạo hàm toàn phần có thể làm những gì:
 
 1. Nó biểu thị xem việc thay đổi các biến của f tác động thế nào đến f.
 2. Nó là "người giữ chỗ" cho công thức xấp xỉ: $\Delta f \approx f_x \Delta x + f_y \Delta y + f_z \Delta z$.
-3. Nếu các biến của f phụ thuộc vào tham số khác, ví dụ như $x = x(t), y = y(t), z = z(t)$, thì ta có thể chia nó cho $\mathbf d t$ để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành $\frac {\mathbf d f}{\mathbf d t} = \frac{\partial f}{\partial x}\frac {\mathbf d x}{\mathbf d t} + \frac{\partial f}{\partial y}\frac {\mathbf d y}{\mathbf d t} + \frac{\partial f}{\partial z}\frac {\mathbf d z}{\mathbf d t}$
+3. Nếu các biến của f phụ thuộc vào tham số khác, ví dụ như $x = x(t), y = y(t), z = z(t)$, thì ta có thể chia nó cho $\mathrm d t$ để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành $\frac {\mathrm d f}{\mathrm d t} = \frac{\partial f}{\partial x}\frac {\mathrm d x}{\mathrm d t} + \frac{\partial f}{\partial y}\frac {\mathrm d y}{\mathrm d t} + \frac{\partial f}{\partial z}\frac {\mathrm d z}{\mathrm d t}$
 
 :::{.callout-note collapse="true"}
 ## Example 
@@ -729,7 +729,7 @@ Ví dụ như, $f = f(x, y, z) = x^2y + z$, và $x = t, y = e^t, z = \sin t$
 1. Ta đạo hàm như bình thường:
 $$
 f = t^2 e^t + \sin t
-\Rightarrow \frac {\mathbf df}{\mathbf dt} = e^t 2t + e^t t^2 + \cos t
+\Rightarrow \frac {\mathrm df}{\mathrm dt} = e^t 2t + e^t t^2 + \cos t
 $$
 
 2. Đạo hàm sử dụng **Chain rule**:
@@ -740,18 +740,18 @@ $$
 $$
 
 $$
-\mathbf d x = 1; 
-\mathbf d y = e^t; 
-\mathbf d z = \cos t
+\mathrm d x = 1; 
+\mathrm d y = e^t; 
+\mathrm d z = \cos t
 $$
 
 vậy đáp án cuối cùng là:
 
 $$
-\frac{\mathbf d f}{\mathbf dt} = 
-\frac{\partial f}{\partial x}\frac{\mathbf d x}{\mathbf dt} + 
-\frac{\partial f}{\partial y}\frac{\mathbf d y}{\mathbf dt} + 
-\frac{\partial f}{\partial z}\frac{\mathbf d z}{\mathbf dt} = 
+\frac{\mathrm d f}{\mathrm dt} = 
+\frac{\partial f}{\partial x}\frac{\mathrm d x}{\mathrm dt} + 
+\frac{\partial f}{\partial y}\frac{\mathrm d y}{\mathrm dt} + 
+\frac{\partial f}{\partial z}\frac{\mathrm d z}{\mathrm dt} = 
 2te^t + e^t t^2 + \cos t
 $$
 :::
@@ -875,23 +875,23 @@ Có thể thấy mọi vector đều vuông góc với level curves, và hướn
 Cho $f = f(x, y, z)$ với $x = x(t), y = y(t), z = z(t)$, **chainrule**: 
 
 $$
-\frac{\mathbf df}{\mathbf dt} = 
-f_x\frac{\mathbf dx}{\mathbf dt} + 
-f_x\frac{\mathbf dy}{\mathbf dt} + 
-f_x\frac{\mathbf dz}{\mathbf dt}  
+\frac{\mathrm df}{\mathrm dt} = 
+f_x\frac{\mathrm dx}{\mathrm dt} + 
+f_x\frac{\mathrm dy}{\mathrm dt} + 
+f_x\frac{\mathrm dz}{\mathrm dt}  
 $$
 
 Giờ chúng ta sẽ viết nó dưới dạng khác:
 
 $$
-\frac{\mathbf df}{\mathbf dt} = \nabla f \cdot \frac{\mathbf d\vec r}{\mathbf dt}
+\frac{\mathrm df}{\mathrm dt} = \nabla f \cdot \frac{\mathrm d\vec r}{\mathrm dt}
 $$
 
 trong đó:
 
 $$
 \nabla w = <f_x, f_y, f_z> \quad
-\frac{\mathbf d \vec r}{\mathbf dt} = <\frac{\mathbf dx}{\mathbf dt},\frac{\mathbf dy}{\mathbf dt},\frac{\mathbf dz}{\mathbf dt}>
+\frac{\mathrm d \vec r}{\mathrm dt} = <\frac{\mathrm dx}{\mathrm dt},\frac{\mathrm dy}{\mathrm dt},\frac{\mathrm dz}{\mathrm dt}>
 $$
 
 ---
@@ -966,15 +966,15 @@ Nếu ta có $\frac{\partial f}{\partial x}$ là theo đổi theo trục x, và 
 Có. Và đó chính là **Directional derivative**. Cho một vector basis $|\hat {\mathbf u}| = <a, b> = 1$, s là đường cong bị cắt giữa mặt phẳng với hình, áp dụng chainrule, tốc độ thay đổi của f theo s là:
 
 $$
-\frac{\mathbf df}{\mathbf ds} = 
-\frac{\partial f}{\partial x}\frac{\mathbf dx}{\mathbf ds} +
-\frac{\partial f}{\partial y}\frac{\mathbf dy}{\mathbf ds} 
+\frac{\mathrm df}{\mathrm ds} = 
+\frac{\partial f}{\partial x}\frac{\mathrm dx}{\mathrm ds} +
+\frac{\partial f}{\partial y}\frac{\mathrm dy}{\mathrm ds} 
 $$
 
 Mà:
 
 $$
-\frac{\mathbf dx}{\mathbf ds} = a \qquad \frac{\mathbf dy}{\mathbf ds} = b
+\frac{\mathrm dx}{\mathrm ds} = a \qquad \frac{\mathrm dy}{\mathrm ds} = b
 $$
 
 do đó:
@@ -1045,18 +1045,18 @@ Câu hỏi là, nếu $g(x, y, z) = c$ thì có thể nghĩ theo cách $z = z(x,
 **Ví dụ:** Cho hàm $f(x, y, z) = x^2 + yz + z^3 = 8$ tại $(2, 3, 1)$.
 
 $$
-df = f_x\mathbf dx + f_y \mathbf dy + f_z \mathbf dz = 0 \\ 
-(2x)\mathbf dx + z\mathbf dy + (y + 3z^2)\mathbf dz = 0 \\ 
+df = f_x\mathrm dx + f_y \mathrm dy + f_z \mathrm dz = 0 \\ 
+(2x)\mathrm dx + z\mathrm dy + (y + 3z^2)\mathrm dz = 0 \\ 
 $$
 
 Thay $(2, 3, 1)$ vào, ta được:
 
 $$
-4\mathbf dx + \mathbf dy + 6\mathbf dz = 0 \\ 
-\mathbf dz = - \frac 2 3 \mathbf dx - \frac 1 6 \mathbf dy
+4\mathrm dx + \mathrm dy + 6\mathrm dz = 0 \\ 
+\mathrm dz = - \frac 2 3 \mathrm dx - \frac 1 6 \mathrm dy
 $$
 
-Mà ta có công thức $\mathbf dz = \frac{\partial z}{\partial x} \mathbf dx + \frac{\partial z}{\partial y} \mathbf dy$.
+Mà ta có công thức $\mathrm dz = \frac{\partial z}{\partial x} \mathrm dx + \frac{\partial z}{\partial y} \mathrm dy$.
 
 Vì vậy từ công thức trên ta được:
 

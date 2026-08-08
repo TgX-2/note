@@ -818,7 +818,7 @@ z(t) = z + ct
 <p><strong>Position vector</strong> là vector nối từ gốc tọa độ đến điểm, chính là vector <span class="math inline">\vec {OB}</span>, và nó cũng chính là <span class="math inline">\vec v (t) = &lt;x(t), y(t), z(t)&gt;</span>.</p>
 <p><strong>Velocity vector</strong> : chúng ta muốn biết độ lớn của vận tốc, hay chính là tốc độ và hướng của nó, vậy cách tốt nhất là dùng vector, hay ở đây chính là vector vận tốc.</p>
 <p><span class="math display">
-\vec v = \frac {\mathbf d \vec r}{\mathbf d t} = &lt;\frac{\mathbf d x }{\mathbf d t}, \frac{\mathbf d y }{\mathbf d t}, \frac{\mathbf d z }{\mathbf d t}&gt;
+\vec v = \frac {\mathrm d \vec r}{\mathrm d t} = &lt;\frac{\mathrm d x }{\mathrm d t}, \frac{\mathrm d y }{\mathrm d t}, \frac{\mathrm d z }{\mathrm d t}&gt;
 </span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -848,7 +848,7 @@ z(t) = z + ct
 <p><strong>Tưởng tượng</strong> bạn đang di chuyển một chiếc xe ô tô, và nó luôn duy trì ở tốc độ 50 km/h, bất kể khi vào cua! Và khi vào cua đó, bạn nghĩ rằng gia tốc của mình không hề thay đổi, vì tốc độ của mình luôn là một hằng số. Nhưng điều đó là sai, một điều khá trái với trực giá. Gia tốc là một đại lượng có hướng, vì vậy khi thay đổi góc để vào cua, vận tốc đã thay đổi!</p>
 <p>Công thức tính gia tốc là:</p>
 <p><span class="math display">
-\vec a(t) = \frac{\mathbf d \vec v}{\mathbf d t }
+\vec a(t) = \frac{\mathrm d \vec v}{\mathrm d t }
 </span></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -862,7 +862,7 @@ z(t) = z + ct
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Tốc độ là <span class="math inline">|\vec v| = \left|\frac {\mathbf d \vec r}{\mathbf d t} \right|</span>, thứ mà chắc chắn là không bằng với <span class="math inline">\frac {\mathbf d |\vec r|}{\mathbf d t }</span>.</p>
+<p>Tốc độ là <span class="math inline">|\vec v| = \left|\frac {\mathrm d \vec r}{\mathrm d t} \right|</span>, thứ mà chắc chắn là không bằng với <span class="math inline">\frac {\mathrm d |\vec r|}{\mathrm d t }</span>.</p>
 </div>
 </div>
 </div>
@@ -882,10 +882,10 @@ z(t) = z + ct
 </div>
 <div class="callout-body-container callout-body">
 <p>To illustration of efficiency of vector methods, Kepler 1609, laws of planetarymotion: the motion of planets is in a plane, and area is swept out by the line from the sun to the planet at a constant rate. Issac Newton (about 70 years later) explained this using laws of gravitational attraction.</p>
-<p>Kepler’s law in vector form: area swept out in <span class="math inline">\Delta t</span> is area <span class="math inline">\approx \frac 1 2 |\vec r \times \Delta \vec r| \approx \frac 1 2 |\vec r \times \vec v| \Delta t</span> So <span class="math inline">\frac {\mathbf d }{\mathbf d t}(\text{area}) = \frac 1 2 |\vec v \times \vec r|</span> is constant. Also, <span class="math inline">\vec r \times \vec v</span> is perpendicular to plane of motion, so <span class="math inline">dir(\vec r \times \vec v) = const</span> Hence, Kepler’s 2nd law says: <span class="math inline">\vec r \times \vec v = const</span>.</p>
-<p>The usual product rule can be used to differentiate vector functions: <span class="math inline">\frac{\mathbf d}{\mathbf d t}(\vec a \cdot \vec b), \frac{\mathbf d}{\mathbf d t}(\vec a \times \vec b)</span>, being careful about non-commutativity of cross-product.</p>
+<p>Kepler’s law in vector form: area swept out in <span class="math inline">\Delta t</span> is area <span class="math inline">\approx \frac 1 2 |\vec r \times \Delta \vec r| \approx \frac 1 2 |\vec r \times \vec v| \Delta t</span> So <span class="math inline">\frac {\mathrm d }{\mathrm d t}(\text{area}) = \frac 1 2 |\vec v \times \vec r|</span> is constant. Also, <span class="math inline">\vec r \times \vec v</span> is perpendicular to plane of motion, so <span class="math inline">dir(\vec r \times \vec v) = const</span> Hence, Kepler’s 2nd law says: <span class="math inline">\vec r \times \vec v = const</span>.</p>
+<p>The usual product rule can be used to differentiate vector functions: <span class="math inline">\frac{\mathrm d}{\mathrm d t}(\vec a \cdot \vec b), \frac{\mathrm d}{\mathrm d t}(\vec a \times \vec b)</span>, being careful about non-commutativity of cross-product.</p>
 <p><span class="math display">
-\frac {\mathbf d}{\mathbf d t}(\vec r \times \vec v) = \frac{\mathbf d \vec r}{\mathbf d t} \times \vec v + \vec r \times \frac{\mathbf d \vec v}{\mathbf d t} = \vec v \times \vec v + \vec r \times \vec a = \vec v \times \vec a
+\frac {\mathrm d}{\mathrm d t}(\vec r \times \vec v) = \frac{\mathrm d \vec r}{\mathrm d t} \times \vec v + \vec r \times \frac{\mathrm d \vec v}{\mathrm d t} = \vec v \times \vec v + \vec r \times \vec a = \vec v \times \vec a
 </span></p>
 <p>So Kepler’s law <span class="math inline">\Leftrightarrow \vec r \times \vec v = const \Leftrightarrow \vec r \times \vec a = 0 \Leftrightarrow \vec a // \vec r \Leftrightarrow</span> the force <span class="math inline">\vec F</span> is central.</p>
 <p>(so Kepler’s law really means the force is directed <span class="math inline">//\vec r</span>; it also applies to other central forces – e.g.&nbsp;electric charges.)</p>
