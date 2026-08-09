@@ -1307,6 +1307,10 @@ Trong đó:
 
 Và **heat equation** là một trường hợp đặc biệt của **diffusion equation**.
 
+___
+# Line integrals in space
+
+y nhu 2d
 
 ___
 # End

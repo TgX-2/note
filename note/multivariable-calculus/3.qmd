@@ -955,6 +955,7 @@ Là trường vector bảo toàn.
 
 Nếu ta có một trường vector $F(x, y)$ và tồn tại một hàm vô hướng $f(x, y)$ sau cho $\vec F = \nabla f$.
 Thì trường vector đó được gọi là **conservative**.
+
 ___
 # Test for Gradient fields
 
