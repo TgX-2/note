@@ -964,5 +964,27 @@
       "18.02",
       "Triple integrals and Surface integrals in 3D space"
     ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#test-for-gradient-fields",
+    "href": "note/multivariable-calculus/4.html#test-for-gradient-fields",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Test for Gradient fields",
+    "text": "Test for Gradient fields\nCho trường vector \\mathbf F = &lt;P, Q, R&gt; = &lt;f_x, f_y, f_z&gt;.\nVà:\n\n\\begin{cases}\nf_{xy} = f_{yx} \\\\\nf_{xz} = f_{zx} \\\\\nf_{yz} = f_{yz} \\\\\n\\end{cases} \\Rightarrow\n\\begin{cases}\nP_y = Q_x \\\\\nP_z = R_x \\\\\nQ_z = R_y\n\\end{cases}\n\n\\mathbf F là trường Gradient nếu và chỉ nếu thỏa mãn các điều kiện trên (cho rằng trường vector được định nghĩa khắp không gian hoặc là vùng liên đơn).\nVí dụ: tìm a, b để trường \\mathbf F = &lt;axy, x^2 + z^3, byz^2 - 4z^3&gt; là trường vector.\n\nP = axy \\qquad \\rightarrow \\qquad P_y = ax \\qquad P_z = 0 \\\\\nQ = x^2 + z^3 \\qquad \\rightarrow \\qquad Q_x = 2x \\qquad Q_z = 3z^2 \\\\\nR = byz^2 - 4z^3 \\qquad \\rightarrow \\qquad R_x = 0 \\qquad R_y = bz^2\n\n\n\\begin{cases}\nP_y = ax = 2x = Q_x \\\\\nP_z = 0 = 0 = R_z \\\\\nQ_z = 3z^2 = bz^2 = R_y\n\\end{cases} \\Rightarrow\n\\begin{cases}\na = 2 \\\\ b = 3\n\\end{cases}",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#finding-potential-function",
+    "href": "note/multivariable-calculus/4.html#finding-potential-function",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Finding Potential function",
+    "text": "Finding Potential function\nCách 1: Nguyên hàm\n\nf_x = 2xy \\rightarrow f = x^2y + g(y, z)\n\nĐạo hàm theo y:\n\n\\Rightarrow \\frac{\\partial f}{\\partial y} = x^2 + \\frac{\\partial g(y, z)}{\\partial y} = f_y = x^2 + z^3\n\\Rightarrow g_y = z^3\n\nNguyên hàm lại g_y:\n\ng = yz^3 + h(z)",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
   }
 ]

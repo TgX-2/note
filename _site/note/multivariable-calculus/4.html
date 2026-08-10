@@ -525,6 +525,11 @@ window.Quarto = {
   <li><a href="#diffusion-equation" id="toc-diffusion-equation" class="nav-link" data-scroll-target="#diffusion-equation">Diffusion equation</a></li>
   </ul></li>
   <li><a href="#line-integrals-in-space" id="toc-line-integrals-in-space" class="nav-link" data-scroll-target="#line-integrals-in-space">Line integrals in space</a></li>
+  <li><a href="#gradient-fields" id="toc-gradient-fields" class="nav-link" data-scroll-target="#gradient-fields">Gradient fields</a>
+  <ul class="collapse">
+  <li><a href="#test-for-gradient-fields" id="toc-test-for-gradient-fields" class="nav-link" data-scroll-target="#test-for-gradient-fields">Test for Gradient fields</a></li>
+  <li><a href="#finding-potential-function" id="toc-finding-potential-function" class="nav-link" data-scroll-target="#finding-potential-function">Finding Potential function</a></li>
+  </ul></li>
   <li><a href="#end" id="toc-end" class="nav-link" data-scroll-target="#end">End</a></li>
   </ul>
 </nav>
@@ -574,7 +579,7 @@ z = x^2 + y^2 \tag{1}
 <p><span class="math display">
 z = 4 - x^2 - y^2 \tag{2}
 </span></p>
-<div id="1ce3865c" class="cell" data-execution_count="1">
+<div id="6692bc87" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -677,7 +682,7 @@ z_{bottom} &lt; z_{top} \\
 \Rightarrow x^2 + y^2 &lt; 2
 </span></p>
 <p>Chính xác là nó chính là hình tròn với bán kính là <span class="math inline">\sqrt2</span>.</p>
-<div id="9074efba" class="cell" data-execution_count="2">
+<div id="9eeb2718" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -761,7 +766,7 @@ z_{bottom} &lt; z_{top} \\
 </div>
 </div>
 <p>Vì vậy ta có thể khiến y phụ thuộc vào x. Bằng phương trình đường tròn.</p>
-<div id="890f4955" class="cell" data-execution_count="3">
+<div id="da839733" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -876,7 +881,7 @@ x = r\cos\theta \qquad y = r\sin\theta \qquad z = z
 <li><span class="math inline">\phi</span>: Khoảng cách với trục z (<span class="math inline">0 \leq \phi \leq \pi</span>).</li>
 <li><span class="math inline">\theta</span>: Khoảng cách với mặt phẳng xz (<span class="math inline">0 \leq \theta \leq 2\pi</span>).</li>
 </ul>
-<div id="f6b5fd34" class="cell" data-execution_count="4">
+<div id="bf6a8b59" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1103,7 +1108,7 @@ z_\rho &amp; z_\phi
 </div>
 </div>
 <p><strong>Ví dụ:</strong> Tính thể tích phần chóp được tạo bởi một hình cầu <span class="math inline">\rho = 1</span> và cắt ngang bởi mặt phẳng <span class="math inline">z = \frac 1 {\sqrt2}</span>.</p>
-<div id="7a2f60be" class="cell" data-execution_count="5">
+<div id="8b49f8e8" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1327,7 +1332,7 @@ z_\rho &amp; z_\phi
 <p><strong>Cách tính <span class="math inline">dS</span>:</strong> của một mặt được viết dưới dạng đồ thị: <span class="math display">
 z = f(x, y)
 </span></p>
-<div id="6fe69f2c" class="cell" data-execution_count="6">
+<div id="2a059334" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1795,8 +1800,105 @@ d\vec S = \left&lt;\frac{\partial z_1}{\partial x}, \frac{\partial z_1}{\partial
 </section>
 <section id="line-integrals-in-space" class="level1">
 <h1>Line integrals in space</h1>
-<p>y nhu 2d</p>
+<p>Cho trường vector <span class="math inline">\mathbf F = &lt;P, Q, R&gt;</span>, đường cong C trong không gian, <span class="math inline">\mathrm d\vec r = &lt;\mathrm dx, \mathrm dy, \mathrm dz&gt;</span>. Công:</p>
+<p><span class="math display">
+\int_C \mathbf F \cdot \mathrm d\vec r = \int_C P\mathrm dx + Q\mathrm dy + R \mathrm dz
+</span></p>
+<p><strong>Ví dụ:</strong> <span class="math inline">\mathbf F = &lt;yz, xz, xy&gt;</span>, <span class="math inline">C: x = t^3, y = t^2, z = t. 0 \leq t \leq 1</span>. Tính công?</p>
+<div id="75734874" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="4_files/figure-html/cell-8-output-1.png" width="479" height="465" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math display">
+x = t^3 \qquad y = t^2 \qquad z = t \\
+\mathrm dx = 3t^2 \mathrm dt \qquad
+\mathrm dy = 2t \mathrm dt \qquad
+\mathrm dz = 1 \mathrm dt
+</span></p>
+<p><span class="math display">
+\int_C \mathbf F \cdot \mathrm d \vec r = \int_C yz \mathrm dx + xz \mathrm dy + xy \mathrm dz
+</span></p>
+<p><span class="math display">
+\int_0^1 6t^5 \mathrm dt = \left[6\frac {t^6}6 \right]_0^1 = 1
+</span></p>
+<p>Tổng quát hơn, biểu diễn <span class="math inline">(x, y, z)</span> bằng một biến duy nhất.</p>
+<p><strong>Ví dụ:</strong> cùng với trường vector <span class="math inline">\mathbf F</span> bên trên, đường cong <span class="math inline">C'</span> là đoạn từ điểm từ <span class="math inline">(0, 0, 0)</span> đến <span class="math inline">(1, 0, 0)</span> đến <span class="math inline">(1, 1, 0)</span> đến <span class="math inline">(1, 1, 1)</span>.</p>
+<p><span class="math display">
+\int_C = \int_{C_1} + \int_{C_2} + \int_{C_3}
+</span></p>
+<p>Với các đường trên mặt phẳng xy. Ta có <span class="math inline">z = 0 \qquad \mathrm dz = 0</span>, vậy nên:</p>
+<p><span class="math display">
+\int_{C_1} = \int_{C_2} = 0
+</span></p>
+<p>với <span class="math inline">C_3</span>, <span class="math inline">x = y = 1 \qquad \mathrm dx = \mathrm dy = 0</span>, vậy nên:</p>
+<p><span class="math display">
+\int_{C_3} = \int_0^1 1 \mathrm dz = 1
+</span></p>
+<p>Nhận thấy rằng cả hai ví dụ đều là từ điểm <span class="math inline">(0, 0, 0)</span> đến điểm <span class="math inline">(1, 1, 1)</span>, và đều có đáp án bằng 1. Bởi vì trường vector <span class="math inline">\mathbf F</span> là conservative, là bảo toàn. <span class="math inline">\mathbf F = \nabla(xyz) = &lt;yz, xz, xy&gt;</span>.</p>
+<p>Định lý thứ nhất của tích phân, ta có hàm thế năng <span class="math inline">f</span>, tính được:</p>
+<p><span class="math display">
+\int_{P_0}^{P_1} \nabla f \cdot \mathrm d \vec r = f(P_1) - f(P_0)
+</span></p>
 <hr>
+</section>
+<section id="gradient-fields" class="level1">
+<h1>Gradient fields</h1>
+<section id="test-for-gradient-fields" class="level2">
+<h2 class="anchored" data-anchor-id="test-for-gradient-fields">Test for Gradient fields</h2>
+<p>Cho trường vector <span class="math inline">\mathbf F = &lt;P, Q, R&gt; = &lt;f_x, f_y, f_z&gt;</span>.</p>
+<p>Và:</p>
+<p><span class="math display">
+\begin{cases}
+f_{xy} = f_{yx} \\
+f_{xz} = f_{zx} \\
+f_{yz} = f_{yz} \\
+\end{cases} \Rightarrow
+\begin{cases}
+P_y = Q_x \\
+P_z = R_x \\
+Q_z = R_y
+\end{cases}
+</span></p>
+<p><span class="math inline">\mathbf F</span> là trường Gradient nếu và chỉ nếu thỏa mãn các điều kiện trên (cho rằng trường vector được định nghĩa khắp không gian hoặc là vùng liên đơn).</p>
+<p><strong>Ví dụ:</strong> tìm a, b để trường <span class="math inline">\mathbf F = &lt;axy, x^2 + z^3, byz^2 - 4z^3&gt;</span> là trường vector.</p>
+<p><span class="math display">
+P = axy \qquad \rightarrow \qquad P_y = ax \qquad P_z = 0 \\
+Q = x^2 + z^3 \qquad \rightarrow \qquad Q_x = 2x \qquad Q_z = 3z^2 \\
+R = byz^2 - 4z^3 \qquad \rightarrow \qquad R_x = 0 \qquad R_y = bz^2
+</span></p>
+<p><span class="math display">
+\begin{cases}
+P_y = ax = 2x = Q_x \\
+P_z = 0 = 0 = R_z \\
+Q_z = 3z^2 = bz^2 = R_y
+\end{cases} \Rightarrow
+\begin{cases}
+a = 2 \\ b = 3
+\end{cases}
+</span></p>
+</section>
+<section id="finding-potential-function" class="level2">
+<h2 class="anchored" data-anchor-id="finding-potential-function">Finding Potential function</h2>
+<p><strong>Cách 1:</strong> Nguyên hàm</p>
+<p><span class="math display">
+f_x = 2xy \rightarrow f = x^2y + g(y, z)
+</span></p>
+<p>Đạo hàm theo y:</p>
+<p><span class="math display">
+\Rightarrow \frac{\partial f}{\partial y} = x^2 + \frac{\partial g(y, z)}{\partial y} = f_y = x^2 + z^3
+\Rightarrow g_y = z^3
+</span></p>
+<p>Nguyên hàm lại <span class="math inline">g_y</span>:</p>
+<p><span class="math display">
+g = yz^3 + h(z)
+</span></p>
+<hr>
+</section>
 </section>
 <section id="end" class="level1">
 <h1>End</h1>
