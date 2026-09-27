@@ -1,0 +1,46 @@
+---
+title: "Olympiad Calculus"
+chapter: "olympiad"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Table of Contents"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+---
+
+# Calculus Outline
+
+## Series and Function
+
+## Single variable Calculus
+
+### 1) Single variable differential
+
+#### Fermat theorem
+#### Rolle theorem
+#### Lagrange theorem
+#### Cauchy theorem
+#### L'Hopital 
+
+### 2) Single variable integral
+
+### 3) Series, Sequences of functions and series of functions
+some test to determine whether a series is converges or diverges
+
+#### Integral test Cauchy
+#### Leibniz test
+#### Ratio test D'Alembert
+#### Root test Cauchy
+#### Abel's test
+#### Power series
+
+
+
+
+## Metric space
