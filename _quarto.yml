@@ -38,6 +38,19 @@ website:
           - note/linear-algebra/determinant.qmd
           - note/linear-algebra/matrix.qmd
 
+      - section : "18.100 - Real Analysis"
+        contents:
+          - note/real-analysis/index.qmd
+          - note/real-analysis/1.qmd
+          - note/real-analysis/2.qmd
+          - note/real-analysis/3.qmd
+          - note/real-analysis/4.qmd
+          - note/real-analysis/5.qmd
+          - note/real-analysis/6.qmd
+          - note/real-analysis/7.qmd
+          
+
+
 
 format:
   html:

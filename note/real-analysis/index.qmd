@@ -1,0 +1,17 @@
+---
+title: "Real Analysis"
+chapter: "18.100 - Real Analysis"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+---
+
+Cảm ứng mạnh mẽ từ 18.100 phân tích thực của MIT OCW, và là bản dịch tiếng Việt (có thể không chính xác của **Basic Analysis I by Jiri Lebl**).

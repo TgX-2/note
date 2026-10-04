@@ -8,7 +8,7 @@
 
 <meta name="author" content="TgX.2">
 
-<title>Olympiad Calculus – TgX.2</title>
+<title>Số thực – TgX.2</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -78,6 +78,49 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="../navigation.js" defer=""></script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../styles.css">
@@ -254,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/olympiad/index.html">Olympiad</a></li><li class="breadcrumb-item"><a href="../../note/olympiad/index.html">Olympiad Calculus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/real-analysis/index.html">18.100 - Real Analysis</a></li><li class="breadcrumb-item"><a href="../../note/real-analysis/1.html">Số thực</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -290,16 +333,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Olympiad</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../note/olympiad/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../note/olympiad/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Olympiad Calculus</span></a>
   </div>
 </li>
@@ -412,16 +455,61 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">18.100 - Real Analysis</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">note/real-analysis/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../note/real-analysis/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Real Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../note/real-analysis/1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Số thực</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../note/real-analysis/2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dãy và chuỗi</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../note/real-analysis/3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hàm liên tục</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../note/real-analysis/4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Đạo hàm</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../note/real-analysis/5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tích phân Riemann</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../note/real-analysis/6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chuỗi hàm</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../note/real-analysis/7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Không gian Metric</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -431,19 +519,20 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of Contents</h2>
+    <h2 id="toc-title">Mục lục bài viết</h2>
    
   <ul>
-  <li><a href="#calculus-outline" id="toc-calculus-outline" class="nav-link active" data-scroll-target="#calculus-outline">Calculus Outline</a>
+  <li><a href="#chapter-1-real-numbers" id="toc-chapter-1-real-numbers" class="nav-link active" data-scroll-target="#chapter-1-real-numbers">Chapter 1: Real numbers</a>
   <ul class="collapse">
-  <li><a href="#series-and-function" id="toc-series-and-function" class="nav-link" data-scroll-target="#series-and-function">Series and Function</a></li>
-  <li><a href="#single-variable-calculus" id="toc-single-variable-calculus" class="nav-link" data-scroll-target="#single-variable-calculus">Single variable Calculus</a>
+  <li><a href="#các-tính-chất-cơ-bản" id="toc-các-tính-chất-cơ-bản" class="nav-link" data-scroll-target="#các-tính-chất-cơ-bản">1.1. Các tính chất cơ bản</a></li>
+  <li><a href="#tập-hợp-các-số-thực" id="toc-tập-hợp-các-số-thực" class="nav-link" data-scroll-target="#tập-hợp-các-số-thực">1.2. Tập hợp các số thực</a>
   <ul class="collapse">
-  <li><a href="#single-variable-differential" id="toc-single-variable-differential" class="nav-link" data-scroll-target="#single-variable-differential">1) Single variable differential</a></li>
-  <li><a href="#single-variable-integral" id="toc-single-variable-integral" class="nav-link" data-scroll-target="#single-variable-integral">2) Single variable integral</a></li>
-  <li><a href="#series-sequences-of-functions-and-series-of-functions" id="toc-series-sequences-of-functions-and-series-of-functions" class="nav-link" data-scroll-target="#series-sequences-of-functions-and-series-of-functions">3) Series, Sequences of functions and series of functions</a></li>
+  <li><a href="#tập-hợp-các-số-thực-1" id="toc-tập-hợp-các-số-thực-1" class="nav-link" data-scroll-target="#tập-hợp-các-số-thực-1">1.2.1. Tập hợp các số thực</a></li>
+  <li><a href="#tính-chất-archimedes" id="toc-tính-chất-archimedes" class="nav-link" data-scroll-target="#tính-chất-archimedes">1.2.2. Tính chất Archimedes</a></li>
+  <li><a href="#sử-dụng-supremum-và-infimum" id="toc-sử-dụng-supremum-và-infimum" class="nav-link" data-scroll-target="#sử-dụng-supremum-và-infimum">1.2.3. Sử dụng supremum và infimum</a></li>
+  <li><a href="#maxima-và-minima" id="toc-maxima-và-minima" class="nav-link" data-scroll-target="#maxima-và-minima">1.2.4. Maxima và minima</a></li>
   </ul></li>
-  <li><a href="#metric-space" id="toc-metric-space" class="nav-link" data-scroll-target="#metric-space">Metric space</a></li>
+  <li><a href="#giá-trị-tuyệt-đối-và-hàm-bị-chặn" id="toc-giá-trị-tuyệt-đối-và-hàm-bị-chặn" class="nav-link" data-scroll-target="#giá-trị-tuyệt-đối-và-hàm-bị-chặn">1.3. Giá trị tuyệt đối và hàm bị chặn</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -452,9 +541,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/olympiad/index.html">Olympiad</a></li><li class="breadcrumb-item"><a href="../../note/olympiad/index.html">Olympiad Calculus</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../note/real-analysis/index.html">18.100 - Real Analysis</a></li><li class="breadcrumb-item"><a href="../../note/real-analysis/1.html">Số thực</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Olympiad Calculus</h1>
+<h1 class="title">Số thực</h1>
 </div>
 
 
@@ -477,59 +566,191 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="calculus-outline" class="level1">
-<h1>Calculus Outline</h1>
-<section id="series-and-function" class="level2">
-<h2 class="anchored" data-anchor-id="series-and-function">Series and Function</h2>
+<section id="chapter-1-real-numbers" class="level1">
+<h1>Chapter 1: Real numbers</h1>
+<section id="các-tính-chất-cơ-bản" class="level2">
+<h2 class="anchored" data-anchor-id="các-tính-chất-cơ-bản">1.1. Các tính chất cơ bản</h2>
+<p><strong>Định nghĩa 1.1.1. Tập sắp thứ tự (ordered set):</strong> Là tập hợp S đi kèm quan hệ thứ tự “&lt;” thỏa mãn hai điều kiện:</p>
+<ol type="1">
+<li><p><em>Tính tam phân (Trichotomy)</em>: <span class="math inline">\forall x, y \in S</span>, chỉ có đúng ba trường hợp <span class="math inline">x &lt; y, x &gt; y, x = y</span> xảy ra.</p></li>
+<li><p><em>Tính bắc cầu (Transitivity)</em>: Nếu <span class="math inline">x &lt; y</span> và <span class="math inline">y &lt; z</span> thì <span class="math inline">x &lt; z</span>.</p></li>
+</ol>
+<p>Tập số hữu tỉ <span class="math inline">\mathbb{Q}</span>, hay số tự nhiên và số nguyên đều là tập số thứ tự.</p>
+<p>Ngoài tập số, còn có các kiểu tập hợp sắp thứ tự khác. Ví dụ trong từ điển, các từ có tính chất bắc cầu và tam phân, dựa trên bảng chữ cái để xét thằng nào lớn hơn, bé hơn.</p>
+<p><strong>Định nghĩa 1.1.2. Chặn trên, chặn dưới, và Tập bị chặn:</strong></p>
+<p>Gọi <span class="math inline">E \subset S</span>, trong đó <span class="math inline">S</span> là một tập có thứ tự:</p>
+<ol type="i">
+<li><p>Nếu tồn tại một <span class="math inline">b \in S</span>, mà <span class="math inline">x \leq b, \forall x \in E</span>, thì ta nói rằng E bị chặn trên và b là cận trên của E.</p></li>
+<li><p>Nếu tồn tại một <span class="math inline">b \in S</span>, mà <span class="math inline">x \geq b, \forall x \in E</span>, thì ta nói rằng E bị chặn dưới và b là cận dưới của E.</p></li>
+<li><p>Nếu tồn tại một cận dưới <span class="math inline">b_0</span> của E mà <span class="math inline">b_0 \leq b</span>, với b là mọi cận trên của E. Thì ta gọi <span class="math inline">b_0</span> là cận trên nhỏ nhất (least upper bound) hoặc là <em>supremum</em> của E. Ta ký hiệu:</p></li>
+</ol>
+<p><span class="math display">
+\sup E := b_0
+</span></p>
+<ol start="4" type="i">
+<li>Tương tự, nếu tồn tại một cận dưới <span class="math inline">b_0</span> của E mà <span class="math inline">b_0 \geq b</span>, với b là cận dưới của E. Thì ta gọi <span class="math inline">b_0</span> là cận dưới lớn nhất (greatest lower bound) hoặc là <em>infimum</em> của E. Ta ký hiệu:</li>
+</ol>
+<p><span class="math display">
+\inf E := b_0
+</span></p>
+<p>Khi một tập E vừa bị chặn trên và bị chặn dưới, ta đơn giản nói rằng tập E bị chặn.</p>
+<p><img src="../../img/8.png" class="img-fluid"></p>
+<p>Một ví dụ đơn giản: Gọi <span class="math inline">S := \{a, b, c, d, e\}</span> được sắp xếp theo thứ tự <span class="math inline">a &lt; b &lt; c &lt; d &lt; e</span>, và gọi <span class="math inline">E := \{a, c\}</span>. Thì khi đó c, d, và e là cận trên của E, và c chính là cận trên nhỏ nhất hay supremum của E.</p>
+<p>Một supremum hoặc infimum của E không nhất thiết phải nằm trong E. Ví dụ, tập <span class="math inline">E:=\{x \in \mathbb Q : x &lt; 1\}</span> có supremum là 1, nhưng 1 không nằm trong E.</p>
+<p><strong>Định nghĩa 1.1.3. Tính Least-upper-bound</strong></p>
+<p>Một tập có thứ tự S, có tính leastupperbound nếu với mỗi tập con không rỗng <span class="math inline">E \subset S</span> đều bị chặn trên và có cận trên nhỏ nhất.</p>
+<p><span class="math display">
+\sup E \in S
+</span></p>
+<p>Tính chặn trên nhỏ nhất thường được gọi là tính chất hoàn chỉnh <em>(completeness property)</em> hoặc tính chất hoàn chỉnh Dedekind <em>(Dedekind completeness property)</em>. Và số thực có tính chất này.</p>
+<p><strong>Ví dụ 1.1.4.</strong></p>
+<p>Tập hợp số hữu tỉ <span class="math inline">\mathbb{Q}</span> không có tính chất hoàn chỉnh. Ví dụ như tập con <span class="math inline">\{x \in \mathbb Q : x^2 &lt; 2\}</span> không có supremum trong <span class="math inline">\mathbb{Q}</span>.</p>
+<p>Việc Q koong có tính chất leastupperbound là một trong những lý do quan trọng ta làm việc với số thực trong analysis. Tập Q thì ổn với mấy ông đại số, nhưng những analysts cần những tính chất leastupperbound để làm việc.</p>
+<p><strong>Định nghĩa 1.1.5. Trường:</strong></p>
+<p>Một tập hợp F được gọi là trường nếu nó thỏa mãn các tiên đề sau:</p>
+<p>(A1) If <span class="math inline">x, y \in F</span> then <span class="math inline">x + y \in F</span></p>
+<p>(A2) <span class="math inline">x + y = y + x, \forall x, y \in F</span></p>
+<p>(A3) <span class="math inline">(x + y) + z = x + (y + z), \forall x, y, z \in F</span></p>
+<p>(A4) <span class="math inline">\exists 0\in F : 0 + x = x, \forall x \in F</span></p>
+<p>(A5) <span class="math inline">\forall x \in F, \exists -x \in F : x + (-x) = 0</span></p>
+<p>(M1) If <span class="math inline">x, y \in F</span> then <span class="math inline">xy \in F</span></p>
+<p>(M2) <span class="math inline">xy = yx, \forall x, y \in F</span></p>
+<p>(M3) <span class="math inline">(xy)z = x(yz), \forall x, y, z \in F</span></p>
+<p>(M4) <span class="math inline">\exists 1 \in F (1 \neq 0) : 1x = x, \forall x \in F</span></p>
+<p>(M5) <span class="math inline">\forall x \in F (x \neq 0), \exists 1/x \in F : x(1/x) = 1</span></p>
+<ol start="550" type="I">
+<li><span class="math inline">x(y + z) = xy + xz, \forall x, y, z \in F</span></li>
+</ol>
+<p><strong>Ví dụ 1.1.6.</strong></p>
+<p>Tập hợp số hữu tỉ Q là một trường. Tập hợp số nguyên N không phải là trường (vi phạm điều M5).</p>
+<p><strong>Định nghĩa 1.1.7. Trường có thứ tự:</strong></p>
+<p>Một trường F được gọi là có thứ tự nếu F là một tập hợp có thứ tự và:</p>
+<ol type="i">
+<li><p><span class="math inline">\forall x, y, z \in F, x &lt; y \implies x + z &lt; y + z</span></p></li>
+<li><p><span class="math inline">\forall x, y \in F :  x, y &gt; 0 \implies xy &gt; 0</span></p></li>
+</ol>
+<p><strong>Mệnh đề 1.1.8.</strong> Cho F là một trường có thứ tự và <span class="math inline">x, y, z \in F</span>. Khi đó:</p>
+<ol type="i">
+<li><p>If <span class="math inline">x &gt; 0</span> then <span class="math inline">-x &lt; 0</span> <em>(vice versa)</em>.</p></li>
+<li><p>If <span class="math inline">x &gt; 0</span> and <span class="math inline">y &lt; z</span> then <span class="math inline">xy &lt; xz</span>.</p></li>
+<li><p>If <span class="math inline">x &lt; 0</span> and <span class="math inline">y &lt; z</span> then <span class="math inline">xy &gt; xz</span></p></li>
+<li><p>If <span class="math inline">x \neq 0</span> then <span class="math inline">x^2 &gt; 0</span>.</p></li>
+<li><p>If <span class="math inline">0 &lt; x &lt; y</span> then <span class="math inline">0 &lt; \frac 1 y &lt; \frac 1 x</span>.</p></li>
+<li><p>If <span class="math inline">0 &lt; x &lt; y</span> then <span class="math inline">x^2 &lt; y^2</span>.</p></li>
+<li><p>If <span class="math inline">x \leq y</span> and <span class="math inline">z \leq w</span> then <span class="math inline">x + z \leq y + w</span>.</p></li>
+</ol>
 </section>
-<section id="single-variable-calculus" class="level2">
-<h2 class="anchored" data-anchor-id="single-variable-calculus">Single variable Calculus</h2>
-<section id="single-variable-differential" class="level3">
-<h3 class="anchored" data-anchor-id="single-variable-differential">1) Single variable differential</h3>
-<section id="fermat-theorem" class="level4">
-<h4 class="anchored" data-anchor-id="fermat-theorem">Fermat theorem</h4>
+<section id="tập-hợp-các-số-thực" class="level2">
+<h2 class="anchored" data-anchor-id="tập-hợp-các-số-thực">1.2. Tập hợp các số thực</h2>
+<section id="tập-hợp-các-số-thực-1" class="level3">
+<h3 class="anchored" data-anchor-id="tập-hợp-các-số-thực-1">1.2.1. Tập hợp các số thực</h3>
+<p><strong>Định lý 1.2.1.</strong> Tồn tại duy nhất một trường có thứ tự <span class="math inline">\mathbb{R}</span> với tính chất leastupperbound mà <span class="math inline">\mathbb{Q} \subset \mathbb{R}</span>.</p>
+<p><strong>Mệnh đề 1.2.2.</strong> Nếu tồn tại <span class="math inline">x \in \mathbb{R}</span> mà <span class="math inline">x \leq \epsilon, \forall \epsilon \in \mathbb{R}, (\epsilon &gt; 0)</span>, khi đó <span class="math inline">x \leq 0</span>.</p>
 </section>
-<section id="rolle-theorem" class="level4">
-<h4 class="anchored" data-anchor-id="rolle-theorem">Rolle theorem</h4>
+<section id="tính-chất-archimedes" class="level3">
+<h3 class="anchored" data-anchor-id="tính-chất-archimedes">1.2.2. Tính chất Archimedes</h3>
+<p><strong>Định lý 1.2.4.</strong></p>
+<ol type="i">
+<li><p><em>Tính chất Achimedes:</em> <span class="math inline">x, y \in \mathbb{R}, \exists n \in \mathbb{N} : nx &gt; y</span></p></li>
+<li><p><em><span class="math inline">\mathbb{Q}</span> dày đặc trong <span class="math inline">\mathbb{R}</span>:</em> <span class="math inline">x, y \in \mathbb{R}, \exists r \in \mathbb{Q} : x &lt; r &lt; y</span></p></li>
+</ol>
+<p><strong>Hệ quả 1.2.5.</strong> <span class="math inline">\inf \left\{\frac 1 n : n \in \mathbb{N}\right\}</span></p>
 </section>
-<section id="lagrange-theorem" class="level4">
-<h4 class="anchored" data-anchor-id="lagrange-theorem">Lagrange theorem</h4>
+<section id="sử-dụng-supremum-và-infimum" class="level3">
+<h3 class="anchored" data-anchor-id="sử-dụng-supremum-và-infimum">1.2.3. Sử dụng supremum và infimum</h3>
+<p>Suprema và Infima hoàn toàn tương thích với các biểu thức đại số. Cho một tập hợp con <span class="math inline">A \subset \mathbb{R}</span> và <span class="math inline">x \in \mathbb{R}</span>, chúng ta định nghĩa:</p>
+<p><span class="math display">
+x + A := \{x + y \in \mathbb{R} : y \in A\} \\
+xA := \{xy \in \mathbb{R} : y \in A\}
+</span></p>
+<p><strong>Mệnh đề 1.2.6.</strong> Cho <span class="math inline">A \subset \mathbb{R}</span> không rỗng:</p>
+<ol type="i">
+<li><p>If <span class="math inline">x \in \mathbb{R}</span> and A is bounded above, then <span class="math inline">\sup(x + A) = x + \sup A</span></p></li>
+<li><p>If <span class="math inline">x \in \mathbb{R}</span> and A is bounded below, then <span class="math inline">\inf(x + A) = x + \inf A</span></p></li>
+<li><p>If <span class="math inline">x &gt; 0</span> and A is bounded above, then <span class="math inline">\sup(xA) = x(\sup A)</span></p></li>
+<li><p>If <span class="math inline">x &gt; 0</span> and A is bounded below, then <span class="math inline">\inf(xA) = x(\inf A)</span></p></li>
+<li><p>If <span class="math inline">x &lt; 0</span> and A is bounded below, then <span class="math inline">\sup(xA) = x(\inf A)</span></p></li>
+<li><p>If <span class="math inline">x &lt; 0</span> and A is bounded above, then <span class="math inline">\inf(xA) = x(\sup A)</span></p></li>
+</ol>
+<p><strong>Mệnh đề 1.2.7.</strong> Cho hai tập hợp <span class="math inline">A, B \subset \mathbb{R}</span> không rỗng, và <span class="math inline">x \leq y, x \in \mathbb{A}, y \in \mathbb{B}</span>. Sau đó thì A bị chặn trên, B bị chặn dưới, khi đó <span class="math inline">\sup A \leq \inf B</span>.</p>
+<p><strong>Mệnh đề 1.2.8.</strong> Nếu <span class="math inline">S \subset \mathbb{R}</span> không rỗng và bị chặn trên, thì sau đó với mỗi <span class="math inline">\epsilon &gt; 0</span>, tồn tại một <span class="math inline">x \in S</span> mà <span class="math inline">(\sup S) - \epsilon &lt; x \leq \sup S</span></p>
+<p>Để sử dụng suprema và infima thuận tiện và dễ dàng hơn nữa, ta muốn viết <span class="math inline">\sup A</span> và <span class="math inline">\inf A</span> mà không cần phải lo lắng gì về việc A có bị chặn hay rỗng hay không, ta sẽ định nghĩa một số thứ như sau.</p>
+<p><strong>Định nghĩa 1.2.9.</strong> Cho <span class="math inline">A \subset \mathbb{R}</span> là một tập:</p>
+<ol type="i">
+<li><p>Nếu A rỗng, thì <span class="math inline">\sup A := -\infty</span></p></li>
+<li><p>Nếu A không bị chặn trên, thì <span class="math inline">\sup A := \infty</span></p></li>
+<li><p>Nếu A rỗng thì <span class="math inline">\inf A := \infty</span></p></li>
+<li><p>Nếu A không bị chặn dưới, thì <span class="math inline">\inf A := -\infty</span></p></li>
+</ol>
+<p><strong>Định nghĩa 1.2.10. Tập số thực mở rộng:</strong></p>
+<p><span class="math display">
+\mathbb{R}^* := \mathbb{R} \cup \{-\infty, \infty\}
+</span></p>
+<p>mà ở đó:</p>
+<p><span class="math display">
+-\infty &lt; \infty \qquad
+-\infty &lt; x \qquad
+x &lt; \infty \qquad
+\forall x \in \mathbb{R}
+</span></p>
 </section>
-<section id="cauchy-theorem" class="level4">
-<h4 class="anchored" data-anchor-id="cauchy-theorem">Cauchy theorem</h4>
-</section>
-<section id="lhopital" class="level4">
-<h4 class="anchored" data-anchor-id="lhopital">L’Hopital</h4>
-</section>
-</section>
-<section id="single-variable-integral" class="level3">
-<h3 class="anchored" data-anchor-id="single-variable-integral">2) Single variable integral</h3>
-</section>
-<section id="series-sequences-of-functions-and-series-of-functions" class="level3">
-<h3 class="anchored" data-anchor-id="series-sequences-of-functions-and-series-of-functions">3) Series, Sequences of functions and series of functions</h3>
-<p>some test to determine whether a series is converges or diverges</p>
-<section id="integral-test-cauchy" class="level4">
-<h4 class="anchored" data-anchor-id="integral-test-cauchy">Integral test Cauchy</h4>
-</section>
-<section id="leibniz-test" class="level4">
-<h4 class="anchored" data-anchor-id="leibniz-test">Leibniz test</h4>
-</section>
-<section id="ratio-test-dalembert" class="level4">
-<h4 class="anchored" data-anchor-id="ratio-test-dalembert">Ratio test D’Alembert</h4>
-</section>
-<section id="root-test-cauchy" class="level4">
-<h4 class="anchored" data-anchor-id="root-test-cauchy">Root test Cauchy</h4>
-</section>
-<section id="abels-test" class="level4">
-<h4 class="anchored" data-anchor-id="abels-test">Abel’s test</h4>
-</section>
-<section id="power-series" class="level4">
-<h4 class="anchored" data-anchor-id="power-series">Power series</h4>
+<section id="maxima-và-minima" class="level3">
+<h3 class="anchored" data-anchor-id="maxima-và-minima">1.2.4. Maxima và minima</h3>
+<p>Nó cũng tương tự như supremum và infimum, nhưng thường đước sử dụng trong các tập hữu hạn thay vì vô hạn. Và cũng có ý chỉ rằng supremum của tập cũng nằm trong tập (vice versa).</p>
+<p>Có thể nói rằng supremum và infimum dùng trong các tập vô hạn, và không nhất thiết chúng phải nằm trong tập đó. Còn maximum và minimum dùng trong các tập hữu hạn và chúng phải nằm trong tập đó.</p>
 </section>
 </section>
-</section>
-<section id="metric-space" class="level2">
-<h2 class="anchored" data-anchor-id="metric-space">Metric space</h2>
+<section id="giá-trị-tuyệt-đối-và-hàm-bị-chặn" class="level2">
+<h2 class="anchored" data-anchor-id="giá-trị-tuyệt-đối-và-hàm-bị-chặn">1.3. Giá trị tuyệt đối và hàm bị chặn</h2>
+<p>Một khái niệm mà chúng ta sẽ gặp đi gặp lại nhiều lần đó chính là giá trị tuyết đối. Here is the formal defination:</p>
+<p><span class="math display">
+|x| := \begin{cases}
+x &amp; \text{if} \ x \geq 0 \\
+-x &amp; \text{if} \ x &lt; 0
+\end{cases}
+</span></p>
+<p><strong>Mệnh đề 1.3.1.</strong></p>
+<ol type="i">
+<li><p><span class="math inline">|x| \geq 0, |x| = 0</span> khi và chỉ khi <span class="math inline">x = 0</span>.</p></li>
+<li><p><span class="math inline">|-x| = |x|, \forall x \in \mathbb{R}</span></p></li>
+<li><p><span class="math inline">|xy| = |x||y|, \forall x, y \in \mathbb{R}</span></p></li>
+<li><p><span class="math inline">|x|^2 = x^2, \forall x \in \mathbb{R}</span></p></li>
+<li><p><span class="math inline">|x| \leq y</span> khi và chỉ khi <span class="math inline">-y \leq x \leq y</span></p></li>
+<li><p><span class="math inline">-|x| \leq x \leq |x|, \forall x \in \mathbb{R}</span></p></li>
+</ol>
+<p><strong>Mệnh đề 1.3.2. Bất đẳng thức tam giác:</strong></p>
+<p><span class="math display">
+|x + y| \leq |x| + |y|, \forall x, y \in \mathbb{R}
+</span></p>
+<p><strong>Hệ quả 1.3.3.</strong> Cho <span class="math inline">x, y \in \mathbb{R}</span></p>
+<ol type="i">
+<li><p>Bất đẳng thức tam giác ngược: <span class="math inline">||x| - |y|| \leq |x - y|</span>.</p></li>
+<li><p><span class="math inline">|x - y| \leq |x| + |y|</span></p></li>
+</ol>
+<p><strong>Hệ quả 1.3.4.</strong> Cho <span class="math inline">x_1, x_2, ..., x_n \in \mathbb{R}</span>, khi đó:</p>
+<p><span class="math display">
+|x_1 + x_2 + ... + x_n| \leq |x_1| + |x_2| + ... + |x_n|
+</span></p>
+<p><strong>Định nghĩa 1.3.6.</strong> Giả sử rằng <span class="math inline">f : D \rightarrow \mathbb{R}</span> là một hàm. Ta gọi f bị chặn nếu tồn tại một số M sao cho <span class="math inline">|f(x)| \leq M, \forall x \in D</span>.</p>
+<p><img src="../../img/9.png" class="img-fluid"></p>
+<p>Với hàm <span class="math inline">f : D \rightarrow \mathbb{R}</span>, ta viết</p>
+<p><span class="math display">
+\sup_{x \in D} f(x) := \sup f(D) \qquad
+\inf_{x \in D} f(x) := \inf f(D)
+</span></p>
+<p>Ta cũng có thể thay <span class="math inline">x \in D</span> bằng biểu thức, ví dụ như:</p>
+<p><span class="math display">
+\sup_{x \in D} f(x) = \sup_{-1\leq x\leq 5}(x^2 - 9x + 1) = 11
+</span></p>
+<p><strong>Mệnh đề 1.3.7.</strong> Nếu <span class="math inline">f : D \rightarrow \mathbb{R}</span> và <span class="math inline">g : D \rightarrow \mathbb{R}</span> và</p>
+<p><span class="math display">
+f(x) \leq g(x) \qquad \forall x \in D
+</span></p>
+<p>thì khi đó:</p>
+<p><span class="math display">
+\sup_{x \in D} f(x) \leq \sup_{x \in D} g(x) \qquad
+\inf_{x \in D} f(x) \leq \inf_{x \in D} g(x)
+</span></p>
 
 
 </section>
