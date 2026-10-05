@@ -1,344 +1,395 @@
 [
   {
-    "objectID": "note/multivariable-calculus/index.html",
-    "href": "note/multivariable-calculus/index.html",
-    "title": "Đạo hàm đa biến",
+    "objectID": "note/real-analysis/index.html",
+    "href": "note/real-analysis/index.html",
+    "title": "Real Analysis",
     "section": "",
-    "text": "1. Vector và ma trận - Vectors and Matrices\n\n1.1. Vectors\n1.2. Dot product\n1.3. Determinants\n1.4. Cross product\n1.5. Matrices\n1.6. Square systems; Equation of planes\n1.7. Parametric equations for lines and curves\n1.8. Velocity\n1.9. Acceleration\n1.10. Kepler’s Second law\n\n\n\n\n2. Đạo hàm riêng - Partial derivatives\n\n2.1. Functions of several variables - Hàm nhiều biến\n\n2.1.1. Contour plot - Đồ thị đường bao\n\n2.2. Parital derivatives - Đạo hàm riêng\n2.3. Tangent plane approx - Mặt phẳng tiếp tuyến\n\n2.3.1. Appox formula - Công thức xấp xỉ\n2.3.2. Tangent plane - Mặt phẳng tiếp tuyến\n\n2.4. Max - Min problems - Bài toán cực trị\n\n2.4.1. Max point - Điểm cực đại\n2.4.2. Min point - Điểm cực tiểu\n2.4.3. Saddle point - Điểm yên ngựa\n\n2.5. Least squares - Bài toán tối ưu\n2.6. Second derivative - Đạo hàm bậc hai\n2.7. Differentials; Chain rule\n\n2.7.1. Total differential - Đạo hàm toàn phần\n2.7.2. Chain rule - Quy tắc chuỗi\n2.7.3. Application - Ứng dụng\n\n2.8. Gradient - Gradient\n2.9. Direction derivative - Đạo hàm theo hướng\n2.10. Lagrange multipliers - Nhân tử Lagrange\n2.11. Non-independent variables - Các biến phụ thuộc\n\n\n\n\n3. Tích phân kép và tích phân đường trong mặt phẳng - Double integrals and Line integrals in the plane\n\n3.1. Double integral\n\n3.1.1. Calculation\n3.1.2. Change the order\n\n3.2. Integration in Polar coordinates\n3.3. Change of variables\n\n3.3.1. Change of variables\n3.3.2. Jacobians\n3.3.3. Calculation upperr and lower limit\n\n3.4. Vector fields\n3.5. Line integrals\n\n3.5.1. Work\n3.5.2. Calculation Line integrals\n\n3.6. Path independence\n\n3.6.1. Fundamental theorem of calculus for line integral\n3.6.2. Path independence\n\n3.7. Conservative fields\n3.8. Test for Gradient fields\n3.9. Finding the Potential function\n\n3.9.1. Method 1: Using Line integral\n3.9.2. Method 2: Using Antiderivatives\n\n3.10. Curl\n\n3.10.1. Why N_x - M_y?\n3.10.2. Interpretation Curl\n\n3.11 Green’s Theorem\n\n3.11.1. Calculation\n3.11.2. Application\n3.11.3. Proof\n\n3.12. Flux\n\n3.12.1. Divergence\n3.12.2. Green’s theorem for flux\n\n3.13. Simply connected regions\n\n\n\n\n4. Tích phân bội ba và tích phân mặt trong không gian ba chiều - Triple integrals and Surface integrals in the 3-space\n\n4.1 Triple integrals in rectangular and cylindrical coordinates\n4.2 Spherical coordinates; Surface area\n4.3 Vector fields in 3D; Surface integrals and flux\n4.4 Divergence theorem\n4.5 Divergence theorem and its Applications and Proof\n4.6 Line integrals in space, Curl, Exactness and potentials\n4.7 Stokes’s theorem\n4.8 Topological considerations\n4.9 Maxwell’s equations",
+    "text": "Cảm ứng mạnh mẽ từ 18.100 phân tích thực của MIT OCW, và là bản dịch tiếng Việt (có thể không chính xác của Basic Analysis I by Jiri Lebl).",
     "crumbs": [
-      "18.02",
-      "Đạo hàm đa biến"
+      "18.100 - Real Analysis",
+      "Real Analysis"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/3.html#cách-tính",
-    "href": "note/multivariable-calculus/3.html#cách-tính",
-    "title": "Double integrals and Line integrals in the plane",
+    "objectID": "note/olympiad/index.html",
+    "href": "note/olympiad/index.html",
+    "title": "Olympiad Calculus",
+    "section": "",
+    "text": "some test to determine whether a series is converges or diverges",
+    "crumbs": [
+      "Olympiad",
+      "Olympiad Calculus"
+    ]
+  },
+  {
+    "objectID": "note/olympiad/index.html#single-variable-calculus",
+    "href": "note/olympiad/index.html#single-variable-calculus",
+    "title": "Olympiad Calculus",
+    "section": "",
+    "text": "some test to determine whether a series is converges or diverges",
+    "crumbs": [
+      "Olympiad",
+      "Olympiad Calculus"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
+    "href": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Tích phân bội ba trong tọa độ cầu",
+    "text": "Tích phân bội ba trong tọa độ cầu\n\n\\mathrm dV = \\rho^2\\sin\\phi \\mathrm d\\rho \\mathrm d\\phi\\mathrm d\\theta\n\n\n\n\n\n\n\nNoteThe Jacobians\n\n\n\n\n\nTa có:\n\nx = \\rho\\sin\\phi\\cos\\theta \\qquad y = \\rho\\sin\\phi\\sin\\theta \\qquad z = \\rho\\cos\\phi\n\n\nJ = \\frac{\\partial(x, y, z)}{\\partial(\\rho, \\phi, \\theta)} = \\begin{vmatrix}\nx_\\rho & x_\\phi & x_\\theta \\\\\ny_\\rho & y_\\phi & y_\\theta \\\\\nz_\\rho & z_\\phi & z_\\theta\n\\end{vmatrix}\n\n\nJ = x_\\rho\\begin{vmatrix}\ny_\\phi & y_\\theta \\\\\nz_\\phi & z_\\theta\n\\end{vmatrix} - x_\\phi\\begin{vmatrix}\ny_\\rho & y_\\theta \\\\\nz_\\rho & z_\\theta\n\\end{vmatrix} + x_\\theta\\begin{vmatrix}\ny_\\rho & y_\\phi \\\\\nz_\\rho & z_\\phi\n\\end{vmatrix}\n\n\nx_\\rho = \\sin\\phi\\cos\\theta \\qquad\nx_\\phi = \\rho\\cos\\phi\\cos\\theta \\qquad\nx_\\theta = -\\rho\\sin\\phi\\sin\\theta \\\\\ny_\\rho = \\sin\\phi\\sin\\theta \\qquad\ny_\\phi = \\rho\\cos\\phi\\sin\\theta \\qquad\ny_\\theta = \\rho\\sin\\phi\\cos\\theta \\\\\nz_\\rho = \\cos\\phi \\qquad\nz_\\phi = -\\rho\\sin\\phi \\qquad\nz_\\theta = 0\n\n\n\\begin{vmatrix}\ny_\\phi & y_\\theta \\\\\nz_\\phi & z_\\theta\n\\end{vmatrix} = \\rho^2\\sin\\phi^2\\cos\\theta\n\n\n\\begin{vmatrix}\ny_\\rho & y_\\theta \\\\\nz_\\rho & z_\\theta\n\\end{vmatrix} = -\\rho\\sin\\phi\\cos\\phi\\cos\\theta\n\n\n\\begin{vmatrix}\ny_\\rho & y_\\phi \\\\\nz_\\rho & z_\\phi\n\\end{vmatrix} = -\\rho\\sin\\theta\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi^3\\cos\\theta^2 + \\rho^2\\sin\\phi\\cos\\phi^2\\cos\\theta^2 + \\rho^2\\sin\\theta^2\\sin\\phi\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi(\\sin\\phi^2\\cos\\theta^2 + \\cos\\phi^2\\cos\\theta^2 + \\sin\\theta^2)\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi\n\nCuối cùng: \\mathrm dx\\mathrm dy \\mathrm dz = \\rho^2\\sin\\phi \\mathrm d\\rho\\mathrm d\\phi \\mathrm d\\theta\n\n\n\nVí dụ: Tính thể tích phần chóp được tạo bởi một hình cầu \\rho = 1 và cắt ngang bởi mặt phẳng z = \\frac 1 {\\sqrt2}.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nR = 1.0\nz0 = 1 / np.sqrt(2)\n\nfig = plt.figure(figsize=(6, 6))\nax = fig.add_subplot(111, projection='3d')\n\n\nu = np.linspace(0, 2*np.pi, 200)\nv = np.linspace(0, np.pi, 150)\n\nU, V = np.meshgrid(u, v)\n\nX = R * np.cos(U) * np.sin(V)\nY = R * np.sin(U) * np.sin(V)\nZ = R * np.cos(V)\n\n\nXu = np.ma.masked_where(Z &lt; z0, X)\nYu = np.ma.masked_where(Z &lt; z0, Y)\nZu = np.ma.masked_where(Z &lt; z0, Z)\n\nax.plot_surface(\n    Xu, Yu, Zu,\n    cmap='plasma',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=1\n)\n\nXl = np.ma.masked_where(Z &gt; z0, X)\nYl = np.ma.masked_where(Z &gt; z0, Y)\nZl = np.ma.masked_where(Z &gt; z0, Z)\n\nax.plot_surface(\n    Xl, Yl, Zl,\n    cmap='viridis',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=0.5\n)\n\nr = np.sqrt(R**2 - z0**2)\n\nx = np.linspace(-r, r, 200)\ny = np.linspace(-r, r, 200)\n\nXp, Yp = np.meshgrid(x, y)\n\nmask = Xp**2 + Yp**2 &lt;= r**2\n\nXp = np.ma.masked_where(~mask, Xp)\nYp = np.ma.masked_where(~mask, Yp)\nZp = np.ma.masked_where(~mask, np.full_like(Xp, z0))\n\nax.plot_surface(\n    Xp, Yp, Zp,\n    color='white',\n    alpha=0.70,\n    linewidth=0,\n    shade=False\n)\n\nt = np.linspace(0, 2*np.pi, 500)\n\nxc = r * np.cos(t)\nyc = r * np.sin(t)\nzc = np.full_like(t, z0)\n\nax.plot(\n    xc, yc, zc,\n    color='black',\n    linewidth=3\n)\n\nlim = 1.05\n\nax.set_xlim(-lim, lim)\nax.set_ylim(-lim, lim)\nax.set_zlim(-lim, lim)\n\n\nax.set_box_aspect((1, 1, 1))\n\nax.view_init(elev=28, azim=45)\n\nax.set_xlabel(r'$x$', fontsize=16)\nax.set_ylabel(r'$y$', fontsize=16)\nax.set_zlabel(r'$z$', fontsize=16)\n\nax.grid(True)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\int_0^{2\\pi}\\int_0^{\\pi/4}\\int_{\\frac 1 {\\sqrt2\\cos\\phi}}^1\\rho^2\\sin\\phi\\mathrm d\\rho\\mathrm d\\phi\\mathrm d\\theta\n\nTự tính.\n\n\\frac {2\\pi} 3 - \\frac {5\\pi}{6\\sqrt2}",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#một-số-kiểu-tham-số-hóa",
+    "href": "note/multivariable-calculus/4.html#một-số-kiểu-tham-số-hóa",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Một số kiểu tham số hóa",
+    "text": "Một số kiểu tham số hóa\n\nMặt phẳng z = a song song với mặt phẳng xy: \n\\hat{\\mathbf n} = \\pm \\hat{\\mathbf k} \\qquad \\mathrm dS = \\mathrm dx \\mathrm dy\n\nHình cầu bán kính a, tâm tại gốc tọa độ, dùng \\phi, \\theta: \n\\hat{\\mathbf n} = \\frac 1 a &lt;x, y, z&gt; \\qquad \\mathrm dS = a^2\\sin\\phi\\mathrm d\\phi\\mathrm d\\theta\n\nHình trụ bán kính a, tâm ở trục z, dùng z, \\theta: \n\\hat{\\mathbf n} = \\frac 1 a &lt;x, y, 0&gt; \\qquad \\mathrm dS = a\\mathrm dz\\mathrm d\\theta\n\nHình phụ thuộc vào x và y, z = f(x, y), dùng x, y: \n\\hat{\\mathbf n}\\mathrm dS = &lt;-f_x, -f_y, 1&gt;\\mathrm dx\\mathrm dy",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#parametric-surfaces",
+    "href": "note/multivariable-calculus/4.html#parametric-surfaces",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Parametric surfaces",
+    "text": "Parametric surfaces\nNếu tất cả các biến phụ thuộc vào tham số, ví dụ như:\n\n\\begin{cases}\nx = x(u, v) \\\\\ny = y(u, v) \\\\\nz = z(u, v) \\\\\n&lt;x, y, z&gt; = \\vec r = r(u, v) \\\\\n\\end{cases}\n\nThế thì ta có thể tính thông lượng sử dụng hai biến u và v. Ta có:\n\n\\frac {\\partial \\vec r}{\\partial u}\\Delta u =\n\\left&lt;\\frac{\\partial x}{\\partial u}\\Delta x,\n\\frac{\\partial y}{\\partial u}\\Delta y,\n\\frac{\\partial z}{\\partial u}\\Delta z\n\\right&gt;\n\n\n\\frac {\\partial \\vec r}{\\partial v}\\Delta v =\n\\left&lt;\\frac{\\partial x}{\\partial v}\\Delta x,\n\\frac{\\partial y}{\\partial v}\\Delta y,\n\\frac{\\partial z}{\\partial v}\\Delta z\n\\right&gt;\n\n\n\\Delta S = \\left(\\frac{\\partial \\vec r}{\\partial u}\\Delta u \\right) \\times \\left(\\frac{\\partial \\vec r}{\\partial v}\\Delta v \\right) =\n\\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)\\Delta x \\Delta y\n\nCuối cùng:\n\nd\\vec S = \\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)dxdy",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#implicit-surfaces",
+    "href": "note/multivariable-calculus/4.html#implicit-surfaces",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Implicit surfaces",
+    "text": "Implicit surfaces\nNếu ta có:\n\nax + by + cz = d \\longrightarrow \\vec N = &lt;a, b, c&gt;\nMặt phẳng g(x, y, z) = 0 \\longrightarrow \\vec N = \\nabla g\n\n\n\\hat n dS = \\pm \\frac {|\\vec N|}{|\\vec N \\cdot \\hat k|}dxdy",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
+    "href": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Ý nghĩa hình học",
+    "text": "Ý nghĩa hình học\nLHS: \n\\iint_S \\mathbf F \\cdot \\hat n dS\n\nlà tổng lượng trường đi xuyên qua mặt kín.\nRHS: \n\\iiint \\nabla \\cdot \\mathbf F dV\n\nlà tổng nguồn phát sinh bên trong khối.\nNếu divergence dương \\longrightarrow trường được tạo ra bên trong.\nNếu divergence âm \\longrightarrow trường được hút vào bên trong.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#physical-interpretation",
+    "href": "note/multivariable-calculus/4.html#physical-interpretation",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Physical interpretation",
+    "text": "Physical interpretation",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
+    "href": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 1: Tách cách thành phần và chứng minh",
+    "text": "Bước 1: Tách cách thành phần và chứng minh\nTa cần chứng minh:\n\n\\iint_C \\mathbf F \\cdot d\\vec S = \\iiint_D \\nabla \\cdot \\mathbf F dV\n\nvới \\mathbf F = &lt;P, Q, R&gt;. Do:\n\n\\nabla \\cdot \\mathbf F = P_x + Q_y + R_z\n\nnên\n\n\\iiint_D (P_x + Q_y + R_z)dV =\n\\iiint_D P_x dV +\n\\iiint_D Q_y dV +\n\\iiint_D R_z dV\n\n\n\\iint_S \\mathbf F \\cdot d\\vec S =\n\\iint_S PdS_x +\n\\iint_S QdS_y +\n\\iint_S RdS_z\n\nVì các thành phần độc lập với nhau, vì vậy chỉ cần chứng minh:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_z dV\n\nvà tương tự với \\iint_S P\\hat i \\cdot d\\vec S, \\iint_SQ\\hat j\\cdot d\\vec S.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
+    "href": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 2: Miền đơn giản theo phương z",
+    "text": "Bước 2: Miền đơn giản theo phương z\nGiả sử miền D = \\{(x, y, z) : (x, y) \\in \\mathbb U, z_1(x, y) \\leq x \\leq z_2(x, y)\\}.\nTức là miền bị kẹp giữa hai mặt:\n\nBottom: z = z_1(x, y)\nTop: z = z_2(x, y)",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
+    "href": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 3: Tính tích phân thể tích",
+    "text": "Bước 3: Tính tích phân thể tích\nTa có \\iiint_D R_zdV, do miền đơn giản theo z, nên thành:\n\n\\iint_U \\left(\\int_{z_1}^{z_2}R_zdz \\right)dxdy\n\nÁp dụng fundamental theorem of calculus \\int_{z_1}^{z_2}R_zdz = R(x, y, z_2) - R(x, y, z_1), nên:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
+    "href": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 4: Flux through top",
+    "text": "Bước 4: Flux through top\nTa có mặt trên z = z_2(x, y), tham số hóa ta được:\n\n\\mathbf r(x, y) = (x, y, z_2(x, y))\n\nCó hai vector tiếp tuyến:\n\n\\mathbf r_x = (1, 0, z_{2x}) \\qquad \\mathbf r_y = (0, 1, z_{2y})\n\ntích có hướng:\n\n\\mathbf r_x \\times \\mathbf r_y = &lt;-z_{2x}, -z_{2y}, 1&gt;\n\nVậy:\n\nd\\vec S = \\left&lt;-\\frac{\\partial z_2}{\\partial x}, -\\frac{\\partial z_2}{\\partial y}, 1\\right&gt;dxdy\n\ntích vô hướng:\n\nR\\hat k \\cdot d\\vec S = &lt;0, 0, R&gt;\\cdot&lt;-z_{2x}, -z_{2y}, 1&gt; = R\n\ndo đó:\n\n\\iint_{top}R\\hat k \\cdot d\\vec S = \\iint_U R(x, y, z_2)dxdy",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
+    "href": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 5: Flux through bottom",
+    "text": "Bước 5: Flux through bottom\nTương tự nhưng mà tiếp tuyến đổi hướng, vậy nên:\n\nd\\vec S = \\left&lt;\\frac{\\partial z_1}{\\partial x}, \\frac{\\partial z_1}{\\partial y}, -1\\right&gt;dxdy\n\nVậy:\n\n\\iint_{bottom}R\\hat k \\cdot d\\vec S = -\\iint_U R(x, y, z_1)dxdy",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
+    "href": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 6: Flux through sides",
+    "text": "Bước 6: Flux through sides\nCác pháp tuyến nằm ngang, và các mặt phẳng nằm dựng đứng, vậy nên thông lượng qua các mặt = 0.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
+    "href": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 7: Tổng kết",
+    "text": "Bước 7: Tổng kết\nThông lượng toàn bộ mặt:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U R(x, y, z_2)dxdy -\n\\iint_U R(x, y, z_1)dxdy\n\nHay tóm gọn lại:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U (R(x, y, z_2) - R(x, y, z_1))dxdy\n\nMà ở bước 3, ta tính được:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy\n\nVậy:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_zdV",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
+    "href": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Ý nghĩa của Laplacian",
+    "text": "Ý nghĩa của Laplacian\nLaplacian đo xem giá trị tại một điểm cao hơn hay thấp hơn trung bình các điểm lân cận.\nNếu \n\\nabla^2f&gt;0\n thì điểm đó thấp hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy vào \\Rightarrow u tăng.\nNếu \n\\nabla^2f&lt;0\n thì điểm đó cao hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy ra \\Rightarrow u giảm.\nDo đo phương trình khuếch tán luôn có xu hướng làm trung bình hóa phân bố theo thời gian.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#diffusion-equation",
+    "href": "note/multivariable-calculus/4.html#diffusion-equation",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Diffusion equation",
+    "text": "Diffusion equation\nPhương trình khuếch tán ví dụ như quản lý chuyển động của khói trong không khí (đứng yên), màu thuốc nhuộm trong dung dịch, …\nPhương trình là:\n\n\\frac{\\partial u}{\\partial t} = k\\nabla^2u\n= k \\left(\\frac{\\partial^2u}{\\partial x^2} +\n\\frac{\\partial^2u}{\\partial y^2} +\n\\frac{\\partial^2u}{\\partial z^2} \\right)\n\nTrong đó:\n\nu = (x, y, z, t) là đại lượng khuếch tán tại x, y, z vào thời điểm t.\nk là hệ số khuếch tán.\n\\nabla^2 toán tử Laplacian.\n\nVà heat equation là một trường hợp đặc biệt của diffusion equation.",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#test-for-gradient-fields",
+    "href": "note/multivariable-calculus/4.html#test-for-gradient-fields",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Test for Gradient fields",
+    "text": "Test for Gradient fields\nCho trường vector \\mathbf F = &lt;P, Q, R&gt; = &lt;f_x, f_y, f_z&gt;.\nVà:\n\n\\begin{cases}\nf_{xy} = f_{yx} \\\\\nf_{xz} = f_{zx} \\\\\nf_{yz} = f_{yz} \\\\\n\\end{cases} \\Rightarrow\n\\begin{cases}\nP_y = Q_x \\\\\nP_z = R_x \\\\\nQ_z = R_y\n\\end{cases}\n\n\\mathbf F là trường Gradient nếu và chỉ nếu thỏa mãn các điều kiện trên (cho rằng trường vector được định nghĩa khắp không gian hoặc là vùng liên đơn).\nVí dụ: tìm a, b để trường \\mathbf F = &lt;axy, x^2 + z^3, byz^2 - 4z^3&gt; là trường vector.\n\nP = axy \\qquad \\rightarrow \\qquad P_y = ax \\qquad P_z = 0 \\\\\nQ = x^2 + z^3 \\qquad \\rightarrow \\qquad Q_x = 2x \\qquad Q_z = 3z^2 \\\\\nR = byz^2 - 4z^3 \\qquad \\rightarrow \\qquad R_x = 0 \\qquad R_y = bz^2\n\n\n\\begin{cases}\nP_y = ax = 2x = Q_x \\\\\nP_z = 0 = 0 = R_z \\\\\nQ_z = 3z^2 = bz^2 = R_y\n\\end{cases} \\Rightarrow\n\\begin{cases}\na = 2 \\\\ b = 3\n\\end{cases}",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#finding-potential-function",
+    "href": "note/multivariable-calculus/4.html#finding-potential-function",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Finding Potential function",
+    "text": "Finding Potential function\nCách 1: Nguyên hàm\n\nf_x = 2xy \\rightarrow f = x^2y + g(y, z)\n\nĐạo hàm theo y:\n\n\\Rightarrow \\frac{\\partial f}{\\partial y} = x^2 + \\frac{\\partial g(y, z)}{\\partial y} = f_y = x^2 + z^3\n\\Rightarrow g_y = z^3\n\nNguyên hàm lại g_y:\n\ng = yz^3 + h(z)",
+    "crumbs": [
+      "18.02",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#contour-plot",
+    "href": "note/multivariable-calculus/2.html#contour-plot",
+    "title": "Partial derivatives",
+    "section": "Contour plot",
+    "text": "Contour plot\n\n\n\n\n\n\nImportanttl;dr\n\n\n\nĐường mức f(x, y) = c. Cho biết hình dạng bền mặt mà không cần vẽ 3D.\n\n\nViệc biểu diễn hình không gian 3 chiều trong mặt phẳng thật sự là rất khó nếu ta vẽ như trên, để giải quyết vấn đề đó, chúng ta đã có Contour plot.\nĐây chính là một kỹ thuật biểu diễn không gian 3 chiều trên mặt phẳng 2 chiều, khá là quen thuộc trong việc biểu diễn nhiệt độ vùng, độ cao của núi, … trong đó x và y là kinh độ và vỹ độ.\nHãy xem ví dụ về Topographic map của đỉnh Himalaya dưới đây:\n\nTa có thể thấy các vành xung quanh đó, mỗi điểm trên vành sẽ có giá trị bằng chính xác một giá trị nào đó, giá trị của điểm giữa hai vành sẽ có giá trị ở giữa giá trị hai vành. Các vành không thể cắt nhau. Nếu một điểm nào đó mà các vành xếp gần nhau, chứng tỏ ở đó là vách núi, và ngược lại, nếu chúng xếp xa nhau, thì chứng tỏ đó là đồng bằng.",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
+    "href": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
+    "title": "Partial derivatives",
+    "section": "Cách tính đạo hàm từng phần",
+    "text": "Cách tính đạo hàm từng phần\nNhư đã nói ở trước, ta sẽ coi một biến là hằng số.\nVí dụ hàm f(x, y) = x^2 + x^3y + 2y + 3x\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\nx = np.linspace(-2, 2, 100)\ny = np.linspace(-2, 2, 100)\nX, Y = np.meshgrid(x, y)\nZ = X**2 + Y*X**3 + 2*Y + 3*X\n\nfig = plt.figure(figsize=(6, 5))\nax = fig.add_subplot(111, projection='3d')\nsurf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none')\n\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#approximation-formula",
+    "href": "note/multivariable-calculus/2.html#approximation-formula",
+    "title": "Partial derivatives",
+    "section": "Approximation formula",
+    "text": "Approximation formula\nIf we change x \\rightarrow x + \\Delta x and then y \\rightarrow y + \\Delta y.\nz = f(x, y) : then we have approximation formula for \\Delta z\n\n\\Delta z \\approx f_x \\Delta x + f_y \\Delta y\n\n\n\n\n\n\n\nTipRememeber\n\n\n\n\n\nthat f_x = \\frac {\\partial f}{\\partial x} and the same with f_y.",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#tangent-plane",
+    "href": "note/multivariable-calculus/2.html#tangent-plane",
+    "title": "Partial derivatives",
+    "section": "Tangent plane",
+    "text": "Tangent plane\nTưởng tượng trong không gian mặt phẳng 2D, ta có tiếp tuyến là một đường thẳng là 1D.\nTương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.\nVí dụ: f(x, y) = x^2 + y^2\nTa xét tại điểm (x_0, y_0) = (1, 1), mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 1, 1\nx00, y00 = 4, 4\nz0 = f(x0, y0)\nz00 = f(x00, y00)\n\nx = np.linspace(-1, 5, 70)\ny = np.linspace(-1, 5, 70)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 2, x0 + 2, 20),\n    np.linspace(y0 - 2, y0 + 2, 20)\n)\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nXpp, Ypp = np.meshgrid(\n    np.linspace(x00 - 2, x00 + 2, 20),\n    np.linspace(y00 - 2, y00 + 2, 20)\n)\nZpp = z00 + fx(x00, y00) * (Xpp - x00) + fy(x00, y00) * (Ypp - y00)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\n\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.plot_surface(Xpp, Ypp, Zpp, alpha=0.5, color='red')\n\nax.scatter(x0, y0, z0, color='black', s=60)\nax.scatter(x00, y00, z00, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nax.legend()\n\nplt.show()",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
+    "href": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
+    "title": "Partial derivatives",
+    "section": "Điểm cực tiểu",
+    "text": "Điểm cực tiểu\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#điểm-cực-đại",
+    "href": "note/multivariable-calculus/2.html#điểm-cực-đại",
+    "title": "Partial derivatives",
+    "section": "Điểm cực đại",
+    "text": "Điểm cực đại\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 - y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#điểm-saddle",
+    "href": "note/multivariable-calculus/2.html#điểm-saddle",
+    "title": "Partial derivatives",
+    "section": "Điểm saddle",
+    "text": "Điểm saddle\nVừa là cực dại vừa là cực tiểu.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#general-case",
+    "href": "note/multivariable-calculus/2.html#general-case",
+    "title": "Partial derivatives",
+    "section": "General case",
+    "text": "General case\n\n\\frac {\\partial^2 f}{\\partial x^2} = f_{xx}; \\qquad\n\\frac {\\partial^2 f}{\\partial y^2} = f_{yy}; \\qquad\n\\frac {\\partial^2 f}{\\partial x \\partial y} = f_{xy} =\n\\frac {\\partial^2 f}{\\partial y \\partial x} = f_{yx}\n\nLet A = f_{xx}, B = f_{xy} and C = f_{yy}, we have 3 cases:\n\nAC - B^2 &lt; 0 \\Rightarrow saddle point.\nAC - B^2 = 0 \\Rightarrow cant conclude\nAC - B^2 &gt; 0\n\n\\rightarrow if A &gt; 0 local minimum.\n\\rightarrow if A &lt; 0 local maximum.",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#total-differential",
+    "href": "note/multivariable-calculus/2.html#total-differential",
+    "title": "Partial derivatives",
+    "section": "Total differential",
+    "text": "Total differential\nĐạo hàm toàn phần: Cho một hàm f ví dụ như phụ thuộc vào 3 biến số f = f(x, y, z) thì đạo hàm toàn phần của nó là: \n\\mathrm df = f_x \\mathrm d x + f_y \\mathrm d y + f_z \\mathrm d z",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#chain-rule",
+    "href": "note/multivariable-calculus/2.html#chain-rule",
+    "title": "Partial derivatives",
+    "section": "Chain rule",
+    "text": "Chain rule\nTrường hợp 1: x = x(t), y = y(t), z = z(t)\n\n\\frac{\\mathrm d f}{\\mathrm dt} =\n\\frac{\\partial f}{\\partial x} \\frac{\\mathrm dx}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial y} \\frac{\\mathrm dy}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial z} \\frac{\\mathrm dz}{\\mathrm dt}\n\nTrường hợp 2: x = x(u, v), y = y(u, v), z = z(u, v) \n\\frac{\\partial f}{\\partial u} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial u} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial u} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial u}  \n\\\\[10pt]\n\\frac{\\partial f}{\\partial v} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial v} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial v} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial v}  \n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nQuy tắc nhân, ta có f = f(u, v) = uv, đạo hàm toàn phần nó: \n\\mathrm d f = v \\mathrm d u + u \\mathrm dv \\space (=vu'+uv')\n\nQuy tắc thương, ta có f = f(u, v) = \\frac u v, đạo hàm toàn phần: \n\\mathrm d f = \\frac 1 v \\mathrm du - \\frac u {v^2} \\mathrm d v = \\frac {v\\mathrm du - u\\mathrm dv}{v^2}\n\\space \\left(=\\frac{vu' - uv'}{v^2}\\right)",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#application",
+    "href": "note/multivariable-calculus/2.html#application",
+    "title": "Partial derivatives",
+    "section": "Application",
+    "text": "Application\nNói một cách khó hiểu, \\mathrm d x hay bất kể \\mathrm d gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là \\mathrm d x \\neq \\Delta x. Chỉ khi nào \\Delta x tiến tới 0, thì khi đó \\mathrm d x \\approx \\Delta x\nVậy đạo hàm toàn phần có thể làm những gì:\n\nNó biểu thị xem việc thay đổi các biến của f tác động thế nào đến f.\nNó là “người giữ chỗ” cho công thức xấp xỉ: \\Delta f \\approx f_x \\Delta x + f_y \\Delta y + f_z \\Delta z.\nNếu các biến của f phụ thuộc vào tham số khác, ví dụ như x = x(t), y = y(t), z = z(t), thì ta có thể chia nó cho \\mathrm d t để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành \\frac {\\mathrm d f}{\\mathrm d t} = \\frac{\\partial f}{\\partial x}\\frac {\\mathrm d x}{\\mathrm d t} + \\frac{\\partial f}{\\partial y}\\frac {\\mathrm d y}{\\mathrm d t} + \\frac{\\partial f}{\\partial z}\\frac {\\mathrm d z}{\\mathrm d t}\n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nVí dụ như, f = f(x, y, z) = x^2y + z, và x = t, y = e^t, z = \\sin t 1. Ta đạo hàm như bình thường: \nf = t^2 e^t + \\sin t\n\\Rightarrow \\frac {\\mathrm df}{\\mathrm dt} = e^t 2t + e^t t^2 + \\cos t\n\n\nĐạo hàm sử dụng Chain rule: \n\\frac{\\partial f}{\\partial x} = 2xy = 2te^t;\n\\frac{\\partial f}{\\partial y} = x^2 = t^2;\n\\frac{\\partial f}{\\partial z} = 1\n\n\n\n\\mathrm d x = 1;\n\\mathrm d y = e^t;\n\\mathrm d z = \\cos t\n\nvậy đáp án cuối cùng là:\n\n\\frac{\\mathrm d f}{\\mathrm dt} =\n\\frac{\\partial f}{\\partial x}\\frac{\\mathrm d x}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial y}\\frac{\\mathrm d y}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial z}\\frac{\\mathrm d z}{\\mathrm dt} =\n2te^t + e^t t^2 + \\cos t\n\n\n\n\n\n\n\n\n\n\nNoteJustify",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#gradient-1",
+    "href": "note/multivariable-calculus/2.html#gradient-1",
+    "title": "Partial derivatives",
+    "section": "Gradient",
+    "text": "Gradient\nĐịnh nghĩa: \\nabla f = &lt;f_x, f_y, f_z&gt; - Là một vector Gradient.\nKhi đó thì vector sẽ vuông góc với mặt phẳng, và có hướng về phía mà có f(x, y, z) cao hơn. (Tức là nếu nó ở đoạn sườn dốc của một ngọn núi, thì nó sẽ nhìn lên phía trên đỉnh thay vì nhìn xuống dưới chân núi).\nVí dụ: Sau đây là một hàm bất kỳ, ta vẽ được như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, cmap='viridis')\n\nax.set_title('Surface Plot')\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()\n\n\n\n\n\n\n\n\n\ncó contour plot là:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nplt.figure(figsize=(7, 6))\ncontour = plt.contourf(X, Y, Z, levels=30, cmap='viridis')\nplt.colorbar(contour)\n\nplt.contour(X, Y, Z, levels=15, colors='black', linewidths=0.5)\n\nplt.title('Contour Plot')\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nvà vector gradient được vẽ màu đỏ như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-2, 2, 25)\ny = np.linspace(-2, 2, 25)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\ndZ_dY, dZ_dX = np.gradient(Z, y, x)\n\nplt.figure(figsize=(7, 6))\nplt.contour(X, Y, Z,\n            levels=20,\n            colors='gray',\n            linewidths=0.8,\n            alpha=0.4)\n\nplt.quiver(X, Y, dZ_dX, dZ_dY,\n           color='red',\n           scale=20)\n\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nCó thể thấy mọi vector đều vuông góc với level curves, và hướng về phía 2 điểm cực trị.",
+    "crumbs": [
+      "18.02",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#cách-tính",
+    "href": "note/multivariable-calculus/2.html#cách-tính",
+    "title": "Partial derivatives",
     "section": "Cách tính",
-    "text": "Cách tính\nGồm 2 bước để tính \\int \\int S(x,y) \\mathrm dx \\mathrm dy\n\ninner integral : giữ x là const\nouter integral : tính như bình thường\n\nVí dụ: \\int_0^1 \\int_0^1 (1 - x^2 - y^2) \\mathrm dy \\mathrm dx\n\n\n\\int_0^1(1 - x^2 - y^2)\\mathrm dy = \\left [y - x^2y - \\frac {y^3} 3 \\right]_0^1 = \\frac 2 3 - x^2\n\n\n\\int_0^1\\left(\\frac 2 3 - x^2 \\right)\\mathrm dx = \\left[\\frac 2 3 x - \\frac 1 3 x^3\\right]_0^1 = \\frac 1 3",
+    "text": "Cách tính\nCho f = f(x, y, z) với x = x(t), y = y(t), z = z(t), chainrule:\n\n\\frac{\\mathrm df}{\\mathrm dt} =\nf_x\\frac{\\mathrm dx}{\\mathrm dt} +\nf_x\\frac{\\mathrm dy}{\\mathrm dt} +\nf_x\\frac{\\mathrm dz}{\\mathrm dt}  \n\nGiờ chúng ta sẽ viết nó dưới dạng khác:\n\n\\frac{\\mathrm df}{\\mathrm dt} = \\nabla f \\cdot \\frac{\\mathrm d\\vec r}{\\mathrm dt}\n\ntrong đó:\n\n\\nabla w = &lt;f_x, f_y, f_z&gt; \\quad\n\\frac{\\mathrm d \\vec r}{\\mathrm dt} = &lt;\\frac{\\mathrm dx}{\\mathrm dt},\\frac{\\mathrm dy}{\\mathrm dt},\\frac{\\mathrm dz}{\\mathrm dt}&gt;\n\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx0 = 1\ny0 = 1\ntheta_deg = 60.0\ntheta_rad = np.radians(theta_deg)\n\ndef f_3d(X, Y):\n    return np.exp(-((X - 1.5)**2 + Y**2)) + np.exp(-((X + 1.5)**2 + Y**2))\n\nx_range = np.linspace(-5, 5, 300)\ny_range = np.linspace(-5, 5, 300)\nX, Y = np.meshgrid(x_range, y_range)\nZ = f_3d(X, Y)\n\nt = np.linspace(-5, 5, 300)\nx_plane = x0 + t * np.sin(theta_rad)\ny_plane = y0 + t * np.cos(theta_rad)\nz_plane_line = f_3d(x_plane, y_plane)\n\nfig = plt.figure(figsize=(12, 5))\nax_3d = fig.add_subplot(121, projection='3d')\nax_2d = fig.add_subplot(122)\n\nax_3d.plot_surface(X, Y, Z, cmap='viridis', alpha=0.6, edgecolor='none')\n\nax_3d.plot(x_plane, y_plane, z_plane_line, color='red', linewidth=2.5, label='Giao tuyến')\nax_3d.scatter([x0], [y0], [f_3d(x0, y0)], color='black', s=20)\n\nz_grid = np.linspace(0, 1.2, 2)\nT, Z_plane = np.meshgrid(t, z_grid)\nX_plane_mesh = x0 + T * np.sin(theta_rad)\nY_plane_mesh = y0 + T * np.cos(theta_rad)\nax_3d.plot_surface(X_plane_mesh, Y_plane_mesh, Z_plane, color='red', alpha=0.15)\n\nax_3d.set_xlabel(\"X\")\nax_3d.set_ylabel(\"Y\")\nax_3d.set_zlabel(\"Z\")\nax_3d.set_zlim(0, 1.2)\n\nax_2d.plot(t, z_plane_line, color='red', linewidth=2)\nax_2d.axvline(0, color='gray', linestyle='--', alpha=0.7)\nax_2d.set_ylim(0, 1.2)\nax_2d.grid(True)\n\nplt.tight_layout()\nplt.show()",
     "crumbs": [
       "18.02",
-      "Double integrals and Line integrals in the plane"
+      "Partial derivatives"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/3.html#thử-đổi-thứ-tự",
-    "href": "note/multivariable-calculus/3.html#thử-đổi-thứ-tự",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Thử đổi thứ tự",
-    "text": "Thử đổi thứ tự\nĐầu tiên, phải nói rằng: \n\\int_{x_{min}}^{x_{max}} \\int_{y_{min(x)}}^{y_{max(x)}}S(x, y)\\mathrm dy \\mathrm dx\n=\\int_{y_{min}}^{y_{max}} \\int_{x_{min(y)}}^{x_{max(y)}}S(x, y)\\mathrm dx \\mathrm dy\n\nTức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi thứ tự có giúp việc tính tích phân dễ hơn hoặc khó hơn.\nVí dụ: \n\\int_0^1 \\int_x^{\\sqrt x} \\frac {e^y}{y} \\mathrm dy \\mathrm dx\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Miền x\nx = np.linspace(-0.5, 1.5, 500)\n\n# Hàm y = x\ny1 = x\n\ny2 = np.where(x &gt;= 0, np.sqrt(x), np.nan)\n\nplt.figure(figsize=(6, 6))\n\n# Vẽ hai đường\nplt.plot(x, y1, label=r\"$y=x$\", linewidth=2)\nplt.plot(x, y2, label=r\"$y=\\sqrt{x}$\", linewidth=2)\n\nmask = (x &gt;= 0) & (x &lt;= 1)\nplt.fill_between(\n    x[mask],\n    y1[mask],\n    y2[mask],\n    color=\"black\",\n    alpha=0.3\n)\n\n# Trục tọa độ\nplt.axhline(0, color=\"black\", linewidth=1)\nplt.axvline(0, color=\"black\", linewidth=1)\n\nplt.xlim(-0.5, 1.5)\nplt.ylim(-0.5, 1.5)\nplt.gca().set_aspect(\"equal\", adjustable=\"box\")\n\nplt.xlabel(\"$x$\")\nplt.ylabel(\"$y$\")\nplt.legend()\nplt.grid(alpha=0.3)\n\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipCách tư duy vẽ hình.\n\n\n\n\n\n\n\\int_a^b \\int_{c(x)}^{d(x)} S(x, y) \\mathrm dy \\mathrm dx\n\nNó sẽ là 2 đường thẳng là tập hợp các điểm c(x) \\left\\{ x \\in \\mathbb r | a \\leq x \\leq b \\right\\} d(x) \\left\\{ x \\in \\mathbb r | a \\leq x \\leq b \\right\\}.\n\n\n\n\nGiữ nguyên.\n\nCó thể thấy rằng việc tính inner integral \\int_x^{\\sqrt x}\\frac {e^y} y \\mathrm dy rất khó.\n\nĐổi thứ tự.\n\n\n\n\n\n\n\nWarningChú ý!\n\n\n\nNên nhớ rằng khi việc đổi thứ tự thì 2 biên cũng sẽ thay đổi!\n\n\nLúc này hàm trở thành:\n\n\\int_0^1 \\int_{y^2}^y \\frac {e^y} y \\mathrm dx \\mathrm dy\n\nInnner \n\\int_{y^2}^y \\frac {e^y} y \\mathrm dx = \\left[ \\frac {e^y} y x \\right]_{y^2}^y = e^y - ye^y\n\nOuter\n\n\\int_0^1 \\left(e^y - ye^y \\right) \\mathrm dy = \\left[ -ye^y + 2e^y \\right]_0^1 = e - 2",
+    "objectID": "note/multivariable-calculus/2.html#geometric",
+    "href": "note/multivariable-calculus/2.html#geometric",
+    "title": "Partial derivatives",
+    "section": "Geometric",
+    "text": "Geometric\n\nD_{\\hat {\\mathbf u}}f = \\nabla f \\cdot \\hat {\\mathbf u} = |\\nabla f|\\cos \\theta.\n\nMaximum Khi \\cos \\theta = 1, tức là khi vector gradient \\nabla f trùng hướng với \\hat {\\mathbf u}. Vậy hàm sẽ tăng nhanh nhất khi mà",
     "crumbs": [
       "18.02",
-      "Double integrals and Line integrals in the plane"
+      "Partial derivatives"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/3.html#đổi-biến",
-    "href": "note/multivariable-calculus/3.html#đổi-biến",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Đổi biến",
-    "text": "Đổi biến\nVí dụ việc tính:\n\n\\int_0^1\\int_0^1 (3x-2y)(x+y) \\mathrm dx \\mathrm dy\n\nTôi cảm thấy quá khó, vậy nên tôi có thể thử đổi biến. Đặt u = (3x-2y) \\qquad v = (x+y), phương trình bây giờ trở thành:\n\n\\int_a^b \\int_c^d (uv) |J| \\mathrm du \\mathrm dv\n\nVà giờ việc của chúng ta là phải tính lại biên và tính \\lambda, bằng cách sử dụng Jacobian và một số tư duy hình học để tính biên.",
+    "objectID": "note/multivariable-calculus/2.html#chú-ý",
+    "href": "note/multivariable-calculus/2.html#chú-ý",
+    "title": "Partial derivatives",
+    "section": "Chú ý",
+    "text": "Chú ý\nCác notaion của đạo hàm riêng rất dễ bị nhầm lẫn, thì nó chỉ biểu thị là mức độ lệch của hàm này trên một biến cụ thể, chứ không hề nhắc đến việc các biến nào sẽ const.\n\n\n\n\n\n\nWarningVí dụ\n\n\n\nCho f(x, y) = x + y.\nDễ dàng tính được:\n\n\\frac{\\partial f}{\\partial x} = 1 \\qquad\n\\frac{\\partial f}{\\partial y} = 1\n\nGiờ ta đặt x = u; y = u + v, hàm f(x, y) = x + y = 2u + v, bây giờ đạo hàm riêng đã trở thành:\n\n\\frac{\\partial f}{\\partial u} = 2 \\qquad\n\\frac{\\partial f}{\\partial v} = 1\n\nRõ ràng u = x nhưng \\frac{\\partial f}{\\partial u} \\neq \\frac{\\partial f}{\\partial x}!\nVì đạo hàm riêng của f trên x là giữ nguyên y và thay đổi x. Còn đạo hàm riêng của f trên u là đạo hàm riêng của f trên x giữ nguyên y - x.\n\n\nVì vậy, trong một số trường hợp, đễ tránh bị nhầm lẫn, ta sử dụng đạo hàm riêng f trên x giữ nguyên y thay đổi x là:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y\n\nVì thế với ví dụ trên, ta có thể khẳng định rằng:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y =\n\\left(\\frac{\\partial f}{\\partial u} \\right)_y \\neq\n\\left(\\frac{\\partial f}{\\partial u} \\right)_v",
     "crumbs": [
       "18.02",
-      "Double integrals and Line integrals in the plane"
+      "Partial derivatives"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/3.html#jacobians",
-    "href": "note/multivariable-calculus/3.html#jacobians",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Jacobians",
-    "text": "Jacobians\nTa có công thức xấp xỉ như sau:\n\n\\Delta u \\approx u_x\\Delta x + u_y\\Delta y \\qquad\n\\Delta v \\approx v_x\\Delta x + v_y\\Delta y\n \n\\Rightarrow\n\\begin{bmatrix}\n\\Delta u \\\\\n\\Delta v\n\\end{bmatrix}\n\\approx\n\\begin{bmatrix}\nu_x & u_y \\\\\nv_x & v_y\n\\end{bmatrix}\n\\begin{bmatrix}\n\\Delta x \\\\\n\\Delta y\n\\end{bmatrix}\n\nVậy hệ số \\frac{\\mathrm du \\mathrm dv}{\\mathrm dx \\mathrm dy} sẽ phải là định thức của ma trận vuông kia.\n\n\n\n\n\n\nTipTại sao?\n\n\n\n\n\nViệc này nếu chưa học 18.06 thì khá là khó để suy nghĩ. Nhưng hãy suy nghĩ như thế này.\nTa có 2 hình, bên trái chỉ \\mathrm dA = \\mathrm dx \\mathrm dy và bên phải là \\mathrm dA' = \\mathrm du \\mathrm dv, việc của chúng ta là tính hệ số diện tích của nó. Hay chính là chúng thu to hay thu nhỏ với hệ số bao nhiêu.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfig, axes = plt.subplots(1, 2, figsize=(12, 6))\nax = axes[0]\n\nax.axhline(0, color='black')\nax.axvline(0, color='black')\n\ne1 = np.array([1, 0])\ne2 = np.array([0, 1])\n\nax.quiver(0, 0, e1[0], e1[1],\n          angles='xy', scale_units='xy', scale=1,\n          color='C0', width=0.008)\n\nax.quiver(0, 0, e2[0], e2[1],\n          angles='xy', scale_units='xy', scale=1,\n          color='C0', width=0.008)\n\nsquare = np.array([\n    [0, 0],\n    [1, 0],\n    [1, 1],\n    [0, 1]\n])\n\nax.fill(square[:,0], square[:,1], color='gray', alpha=0.35)\n\nax.text(1.05, -0.08, r'$(1,0)$')\nax.text(-0.15, 1.05, r'$(0,1)$')\nax.text(-0.08, -0.12, r'$O$')\n\nax.set_xlim(-0.5, 1.6)\nax.set_ylim(-0.5, 1.6)\nax.set_aspect('equal')\nax.set_xlabel(\"$x$\")\nax.set_ylabel(\"$y$\")\nax.grid(True)\n\n\nax = axes[1]\n\nax.axhline(0, color='black')\nax.axvline(0, color='black')\n\nu = np.array([3, 1])\nv = np.array([-2, 1])\n\nax.quiver(0, 0, u[0], u[1],\n          angles='xy', scale_units='xy', scale=1,\n          color='C0', width=0.008)\n\nax.quiver(0, 0, v[0], v[1],\n          angles='xy', scale_units='xy', scale=1,\n          color='C0', width=0.008)\n\nparallelogram = np.array([\n    [0, 0],\n    u,\n    u + v,\n    v\n])\n\nax.fill(parallelogram[:,0], parallelogram[:,1],\n        color='gray', alpha=0.35)\n\nax.text(u[0]+0.1, u[1], r'$(3,1)$')\nax.text(v[0]-0.9, v[1], r'$(-2,1)$')\nax.text((u+v)[0]+0.1, (u+v)[1]+0.05, r'$(1,2)$')\nax.text(-0.08, -0.12, r'$O$')\n\nax.set_xlim(-3.5, 4)\nax.set_ylim(-1, 3)\nax.set_aspect('equal')\nax.set_xlabel(\"$u$\")\nax.set_ylabel(\"$v$\")\nax.grid(True)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n\nVà thứ chúng ta đang tìm chính là định thức của ma trận? (Toi khong biet giai thich nhu the nao nua, hay chco 18.06 Linear Algebra).\n\n\n\n\n\n\n\n\n\nWarningĐịnh nghĩa\n\n\n\nthe Jacobian is \nJ = \\frac{\\partial(u, v)}{\\partial(x, y)} =\n\\begin{vmatrix}\nu_x & u_y \\\\\nv_x & v_y\n\\end{vmatrix}\n\nThen \n\\mathrm du \\mathrm dv = |J|\\mathrm dx \\mathrm dy = \\frac{\\partial(u, v)}{\\partial(x, y)} \\mathrm dx \\mathrm dy\n\n\n\nVí dụ Chuyển hệ tọa độ Đề-các sang tọa độ cực.\nTa đặt x = r\\cos\\theta \\qquad y = r\\sin\\theta.\nThe Jacobian: \nJ  = \\frac{\\partial(x, y)}{\\partial(r, \\theta)} =\n\\begin{vmatrix}\nx_r & x_{\\theta} \\\\\ny_r & y_{\\theta}\n\\end{vmatrix} =\n\\begin{vmatrix}\n\\cos\\theta & -r\\sin\\theta \\\\\n\\sin\\theta & r\\cos\\theta\n\\end{vmatrix} =\nr\\cos^2\\theta + r\\sin^2\\theta = r\n\nVậy suy ra: \\mathrm dx \\mathrm dy = r \\mathrm dr \\mathrm d\\theta.",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#tính-biên---notyet",
-    "href": "note/multivariable-calculus/3.html#tính-biên---notyet",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Tính biên - notyet",
-    "text": "Tính biên - notyet",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#công",
-    "href": "note/multivariable-calculus/3.html#công",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Công",
-    "text": "Công\nA = Fs = \\vec F \\cdot \\Delta \\vec r cho một chuyển động nhỏ \\Delta \\vec r. Tổng công được tính bằng cách tính tổng các cái này theo một quỹ đạo C.\nTưởng tượng có một đường cong C. Một điểm di chuyển trên quỹ đạo đó, và có lực tại mỗi điểm là khác nhau. Công tại một điểm bằng tích vô hướng của F với vector tiếp tuyến tại điểm đó. Và tổng công là khi ta chia nhỏ các vector tiếp tuyến, đến vô hạn.\n\nW = \\int_C \\vec F \\cdot \\mathrm d\\vec r \\left(= \\lim_{\\Delta \\vec r \\rightarrow 0} \\sum_i \\vec F \\cdot \\Delta \\vec r_i \\right)",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#cách-tính-tích-phân-đường",
-    "href": "note/multivariable-calculus/3.html#cách-tính-tích-phân-đường",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Cách tính tích phân đường",
-    "text": "Cách tính tích phân đường\nVí dụ Tính F = &lt;2xy, x^2y&gt; với đường y = x^2, 0 \\leq x \\leq 1.\nBước 1: Tham số hóa.\nTa sẽ cố biểu diễn x và y theo một biến, ở đây ta gọi là t. Ý nghĩa của t là tại t = 0, thì đang ở điểm (0, 0) và tại t = 1 thì đang ở điểm (1, 1).\n\nx = t \\qquad \\mathrm dx = 1\\mathrm dt \\\\\ny = t^2 \\qquad \\mathrm dy = 2t\\mathrm dt\n\nBước 2: Tìm công thức.\nTa đã biết rằng: \n\\int_C \\vec F \\cdot \\mathrm d\\vec r = \\int_C &lt;2xy, x^2y&gt;\\cdot&lt;\\mathrm dx, \\mathrm dy&gt; = \\int_C 2xy\\mathrm dx + x^2y\\mathrm dy\n\nBước 3: Thay số vào và tính.\n\n\\int_0^1 2tt^21\\mathrm dt + t^2t^2 2t\\mathrm dt\n \n= \\int_0^1 2t^3 + 2t^5 \\mathrm dt\n\n\n= \\left[2 \\frac {t^4} 4 \\right]_0^1 + \\left[2 \\frac{t^6} 6 \\right]_0^1 = \\frac 1 2 + \\frac 1 3 = \\frac 5 6",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#fundamental-theorem-of-calculus-for-line-integral",
-    "href": "note/multivariable-calculus/3.html#fundamental-theorem-of-calculus-for-line-integral",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Fundamental theorem of calculus for line integral",
-    "text": "Fundamental theorem of calculus for line integral\nChúng ta đã học ở giải tích một biến rằng:\n\n\\int_a^b f'(x) \\mathrm dx = f(b) - f(a)\n\nThì chúng ta cũng có định lý cơ bản của giải tích cho tích phân đường. Điều này được áp dụng nếu như \\vec F là Gradient fields.\nKhi đó định lý cho tích phân đường C có hàm F là một Gradient fiedls đi từ P0 đến P1 là:\n\n\\int_C \\nabla f \\cdot \\mathrm d\\vec r = f(P_1) - f(P_0)\n\nHay:\n\n\\int_C f_x \\mathrm dx + f_y \\mathrm dy = \\int_C \\mathrm df = f(P_1) - f(P_0)\n\n\n\n\n\n\n\nNoteProof\n\n\n\n\n\\int_C \\nabla f \\cdot \\mathrm d\\vec r\n \n= \\int_{t_0}^{t_1} \\left(f_x \\frac{\\mathrm dx}{\\mathrm dt} + f_y \\frac{\\mathrm dx}{\\mathrm dt} \\right) \\mathrm dt\n\n\n= \\int_{t_0}^{t_1} \\frac{\\mathrm df}{\\mathrm dt}\\mathrm dt\n \n= \\left[f(x(t), y(t)) \\right]_{t_0}^{t_1}\n \n= f(P_1) - f(P_0)\n\n\n\nQuay lại với ví dụ bài tập ở trên. Bằng một cách thần kỳ nào đó, tôi biết được f(x, y) = xy suy ra \\nabla f = &lt;y, x&gt;. Trường vector của chúng ta là trường vector gradient. Vậy nên chúng ta có thể áp dụng định lý cơ bản này.\nVì điểm đầu = điểm cuối nên đáp án = 0. Hoàn toàn phù hợp.",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#path-independence-1",
-    "href": "note/multivariable-calculus/3.html#path-independence-1",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Path independence",
-    "text": "Path independence\nTừ đó ta suy ra một định nghĩa mới, đường đi độc lập, giá trị của tích phân đường chỉ phụ thuộc vào điểm đầu và điểm cuối, không phụ thuộc vào nó đi đường nào.\nĐiều này khi và chỉ khi trường vector là conservative, \\vec F = \\nabla f, khi đó:\n\n\\int_c \\vec F \\mathrm d\\vec r = f(B) - f(A)\n\nVí dụ\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\ndef colored_line(ax, x, y, cmap='viridis', lw=5):\n    points = np.array([x, y]).T.reshape(-1, 1, 2)\n    segments = np.concatenate([points[:-1], points[1:]], axis=1)\n\n    lc = LineCollection(\n        segments,\n        cmap=cmap,\n        norm=plt.Normalize(0, 1)\n    )\n\n    lc.set_array(np.linspace(0, 1, len(x)-1))\n    lc.set_linewidth(lw)\n    ax.add_collection(lc)\n    return lc\nt = np.linspace(0, 1, 500)\n\nx1 = 4 * t\ny1 = -1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\n\nx2 = 4 * t\ny2 =  1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\nfig, ax = plt.subplots(figsize=(9,5))\n\ncolored_line(ax, x1, y1, cmap='viridis', lw=5)\ncolored_line(ax, x2, y2, cmap='viridis', lw=5)\nk = 320\nax.annotate(\n    \"\",\n    xy=(x1[k+8], y1[k+8]),\n    xytext=(x1[k], y1[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\nk = 270\nax.annotate(\n    \"\",\n    xy=(x2[k+8], y2[k+8]),\n    xytext=(x2[k], y2[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\n\nax.scatter([0,4],[0,0], color='black', s=40)\n\nax.text(-0.22,-0.18,r\"$P_0$\",fontsize=18)\nax.text(4.08,-0.18,r\"$P_1$\",fontsize=18)\n\nax.text(2.45,-1.35,r\"$C_1$\",fontsize=18)\nax.text(2.45, 1.15,r\"$C_2$\",fontsize=18)\nax.set_aspect('equal')\nax.set_xlim(-0.5,4.5)\nax.set_ylim(-2.0,2.0)\n\nax.axis('off')\n\nplt.tight_layout()\nplt.show()",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#cách-1-sử-dụng-tích-phân-đường",
-    "href": "note/multivariable-calculus/3.html#cách-1-sử-dụng-tích-phân-đường",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Cách 1: Sử dụng tích phân đường",
-    "text": "Cách 1: Sử dụng tích phân đường\nGiả sử đường cong bắt đầu từ điểm (0, 0) đến (x_1, y_1) thì khi đó:\n\n\\int_C \\vec F \\mathrm d\\vec r = f(x_1, y_1) - f(0, 0)\n\nChuyển vế:\n\nf(x_1, y_1) = \\int_C \\vec F \\mathrm d\\vec r + f(0, 0)\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-1.6, 1.6, 17)\ny = np.linspace(-1.6, 1.6, 17)\n\nX, Y = np.meshgrid(x, y)\n\nU = 4*X**2 + 8*X*Y\nV = 3*Y**2 + 4*X**2\n\nspeed = np.sqrt(U**2 + V**2)\n\nfig, ax = plt.subplots(figsize=(6,6))\n\nq = ax.quiver(\n    X, Y, U, V, speed,\n    cmap=\"viridis\",\n    pivot=\"mid\",\n    scale=65\n)\n\nax.annotate(\n    \"\",\n    xy=(1,0),\n    xytext=(0,0),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        lw=3,\n        color=\"purple\"\n    )\n)\n\nax.text(0.45, -0.12, r\"$C_1$\", fontsize=14, color=\"purple\")\n\nax.annotate(\n    \"\",\n    xy=(1,1),\n    xytext=(1,0),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        lw=3,\n        color=\"purple\"\n    )\n)\n\nax.text(1.05, 0.45, r\"$C_2$\", fontsize=14, color=\"purple\")\n\nax.annotate(\n    \"\",\n    xy=(1,1),\n    xytext=(0,0),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        lw=3,\n        color=\"purple\"\n    )\n)\n\nax.text(0.42, 0.58, r\"$C_3$\", fontsize=14, color=\"purple\")\n\nax.set_xlim(-1.6, 1.6)\nax.set_ylim(-1.6, 1.6)\n\nax.set_aspect(\"equal\")\n\nax.axhline(0, color=\"black\", lw=1)\nax.axvline(0, color=\"black\", lw=1)\n\nax.set_xlabel(\"$x$\")\nax.set_ylabel(\"$y$\")\n\n# ax.set_xticks(np.arange(-1.5, 1.6, 0.5))\n# ax.set_yticks(np.arange(-1.5, 1.6, 0.5))\n\n# plt.colorbar(q, label=r\"$|\\mathbf{F}|$\")\n\nplt.tight_layout()\nplt.show()\nplt.show()\n\n\n\n\n\n\n\n\n\nCó rất nhiều đường đi khả dĩ, ví dụ như là C_3 hoặc là C_1 + C_2, … Cách chọn tùy thuộc vào bạn.\nTôi sẽ chọn cách tính C_1 + C_2.\n\n\\int_C = \\int_{C_1} + \\int_{C_2}\n\nTính C_1\n\ny = 0 \\qquad \\mathrm dy = 0\n\n\n\\int_{C_1} = \\int_0^{x_1} (4x^2) \\mathrm dx\n \n= \\left[\\frac 4 3 x^3 \\right]_0^{x_1} = \\frac 4 3 {x_1}^3\n\nTính C_2\n\nx = x_1 \\qquad \\mathrm dx = 0\n\n\n\\int_{C_2} = \\int_0^{y_1} (3y^2 + 4{x_1}^2)\\mathrm dy\n \n= \\left[y^3 + 4{x_1}^2y \\right]_0^{y_1} = {y_1}^3 + 4{x_1}^2{y_1}\n\nTính C\n\n\\int_C = \\int_{C_1} + \\int_{C_2} = \\frac 4 3 {x_1}^3 + {y_1}^3 + 4{x_1}^2{y_1}\n\nVậy\n\nf(x_1, y_1) = \\frac 4 3 {x_1}^3 + {y_1}^3 + 4{x_1}^2{y_1} + C\n\nhay\n\nf(x, y) = \\frac 4 3 {x}^3 + {y}^3 + 4{x}^2{y} + C",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#cách-2-sử-dụng-nguyên-hàm",
-    "href": "note/multivariable-calculus/3.html#cách-2-sử-dụng-nguyên-hàm",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Cách 2: Sử dụng Nguyên hàm",
-    "text": "Cách 2: Sử dụng Nguyên hàm\nTa muốn tìm một hàm f(x, y) mà nó có:\n\n\\begin{align}\nf_x = 4x^2 + 8xy \\tag{1} \\\\\nf_y = 3y^2 + 4x^2 \\tag{2}\n\\end{align}\n\nNguyên hàm f_x\nTa sẽ coi y như là một hằng số, vì vậy ở cuối ta phải cộng cho một hàm số chỉ theo một biến y (bởi vì khi đạo hàm nó đã biến mất, giống như C trong nguyên hàm một biến).\n\n(1) \\Rightarrow f = \\frac 4 3 x^3 + 4x^2y + g(y)\n\nVậy hàm f(x, y) = \\frac 4 3 x^3 + 4x^2y + g(y) (3)\nTìm g(y)\nTa lại đạo hàm riêng hàm f theo y, rồi lại so sánh 2 biểu thức với nhau.\n\n(3) \\Rightarrow f_y = 4x^2 + g'(y)\n\nVà ta có:\n\n(2) = (3) \\\\\n\\Rightarrow 3y^2 + 4x^2 = 4x^2 + g'(y)\n\n\ng'(y) = 3y^2 \\qquad \\Rightarrow \\qquad g(y) = y^3 + C\n\nTổng kết lại\nHàm trở thành:\n\nf(x, y) = \\frac 4 3 x^3 + 4x^2y + y^3 + C\n\nHoàn toàn giống với cách 1!",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#tại-sao-lại-là-n_x---m_y",
-    "href": "note/multivariable-calculus/3.html#tại-sao-lại-là-n_x---m_y",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Tại sao lại là N_x - M_y",
-    "text": "Tại sao lại là N_x - M_y\nCứ tưởng ta đặt một vật tại một điểm trong trường.\nNó sẽ chịu ảnh hưởng bởi 2 hiệu ứng N_y và M_x.\nNếu chúng bằng nhau, thì có nghĩa là hai hiệu ứng có xu hướng triệt tiêu nhau, và khi đó không có curl. Dẫn đến việc hàm đó có tính bảo toàn.\nCòn nếu chúng không bảo toàn, thứ tức là còn một hiệu ứng nhiều hoặc ít hơn thằng còn lại.\nĐiều này cũng dẫn đến việc, độ lớn và dấu của Curl cũng biểu thị một sự việc gì đó.",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#interpretation-of-curl",
-    "href": "note/multivariable-calculus/3.html#interpretation-of-curl",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Interpretation of curl",
-    "text": "Interpretation of curl\nVí dụ \\vec F = &lt;x, y&gt;\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-3, 3, 15)\ny = np.linspace(-3, 3, 15)\nX, Y = np.meshgrid(x, y)\n\nU = X\nV = Y\n\nmagnitude = np.sqrt(U**2 + V**2)\n\nplt.figure(figsize=(6, 6))\nq = plt.quiver(\n    X, Y, U, V,\n    magnitude,\n    cmap=\"viridis\",\n    angles=\"xy\",\n    scale_units=\"xy\",\n    scale=10,\n    pivot=\"mid\"\n)\n\nplt.axhline(0, color=\"black\", linewidth=0.8)\nplt.axvline(0, color=\"black\", linewidth=0.8)\nplt.gca().set_aspect(\"equal\")\nplt.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\n\nKhi đó:\n\nM = x \\qquad N = y \\\\\nM_y = 0 \\qquad N_x = 0\n\n\n\\Rightarrow \\text{curl}(\\vec F) = 0",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#công-thức",
-    "href": "note/multivariable-calculus/3.html#công-thức",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Công thức",
-    "text": "Công thức\nNếu C là một đường cong khép kín:\n\n\\oint_C \\vec F\\cdot \\mathrm d\\vec r = \\int\\int_R \\text{curl}(\\vec F) \\mathrm dA\n\nhay\n\n\\oint_C M\\mathrm dx + N\\mathrm dy = \\int\\int_R (N_x - M_y)\\mathrm dA\n\nVí dụ Tính đường tròn khép kín C bán kính 1 tâm I(2, 0), ngược chiều kim đồng hồ, và R là hình tròn bên trong:\n\n\\oint_C ye^{-x}\\mathrm dx + \\left(\\frac 1 2 x^2 - e^{-x} \\right) \\mathrm dy\n\nThử tưởng tượng nếu bạn làm cách tích phân đường như bình thường thì sẽ rất là khó, chúng ta có thể thay độ cực vào, hoặc là sử dụng \\mathrm dx \\mathrm dy! Nhưng rất đáng để thử mà, đúng không?\nBây giờ chúng ta sử dụng Green’s Thm.\n\nN = \\frac 1 2 x^2 - e^{-x} \\qquad N_x = x + e^{-x} \\\\\nM = ye^{-x} \\qquad \\qquad M_y = e{-x}\n\n\n\\oint_C ye^{-x}\\mathrm dx + \\left(\\frac 1 2 x^2 - e^{-x} \\right) \\mathrm dy\n= \\int\\int_R N_x - M_y \\mathrm dA = \\int\\int_R (x + e^{-x}) - e^{-x} \\mathrm dA\n\nhay rút gọn lại là:\n\n\\int\\int_R x \\mathrm dA = 2\\pi\n\n\n\n\n\n\n\nImportantChú ý\n\n\n\n\n\nGreen’s Theorem hoạt động với đường cong khép kín ngược chiều đồng hồ.\nVà Curl được tính là N_x - M_y.\nĐó là quy ước!",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#ứng-dụng",
-    "href": "note/multivariable-calculus/3.html#ứng-dụng",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Ứng dụng",
-    "text": "Ứng dụng",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#chứng-minh",
-    "href": "note/multivariable-calculus/3.html#chứng-minh",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Chứng minh",
-    "text": "Chứng minh\n2 nhận xét sơ bộ:\n\nNếu một cái bằng 0 và cái còn lại giữ nguyên thì: \n\\oint M \\mathrm dx = -\\int\\int_R M_y \\mathrm dA \\qquad \\oint N \\mathrm dy = \\int\\int_R N_x \\mathrm dA\n\nNếu nó đúng với 2 vùng R_1 và R_2 thì khi hợp lại nó cũng đúng R = R_1 \\cup R_2:\n\n\n\\oint_C = \\oint_{C_1} + \\oint_{C_2} \\qquad \\int\\int_R = \\int\\int_{R_1} + \\int\\int_{R_2}\n\nVà bây giờ chúng ta sẽ chứng minh \\oint_C M\\mathrm dx = -\\int\\int M_y\\mathrm dA (Nếu điều này đúng, thì tự khắc việc \\oint N \\mathrm dy = \\int\\int_R N_x \\mathrm dA cũng đúng, ta sẽ dùng cái này vì nó sẽ dễ nhìn hơn).\n\n\\oint_C M\\mathrm dx = -\\int\\int M_y\\mathrm dA\n\nLHS:\n\n\\oint_C = \\int_{C_1} + \\int_{C_2} + \\int_{C_3} + \\int_{C_4}\n\nNhưng trong hình vẽ ta thấy C_2 và C_4 là một đường thẳng song song với trục tung vậy nên \\int_{C_2}M\\mathrm dx = \\int_{C_4}M\\mathrm dx =0.\n\n\\int_{C_1} + \\int_{C_3} = \\int_a^b M(x, f_0(x)) \\mathrm dx - \\int_a^b M(x, f_1(x)) \\mathrm dx  \n\nRHS:\n\n-\\int\\int_R M_y \\mathrm dA = \\int_a^b \\int_{f_0(x)}^{f_1(x)} M_y \\mathrm dy \\mathrm dx\n\n\n= -\\int_a^b \\left[M(x, f_1(x)) - M(x, f_0(x)) \\right]\\mathrm dx = LHS",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#divergence",
-    "href": "note/multivariable-calculus/3.html#divergence",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Divergence",
-    "text": "Divergence\n\n\n\n\n\n\nNoteNhắc lại\n\n\n\nTa có:\n\ncurl(\\vec F) = N_x - M_y\n\n\n\nDivergence có lẽ sẽ được nhắc lại kỹ hơn ở các phần sau, nhưng hiện tại ta biết công thức của nó là:\n\n\\text{div}(\\vec F) = P_x + Q_y\n\ntrong trường vector \\vec F = &lt;P, Q&gt;",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/3.html#greens-theorem-for-tangential-vector",
-    "href": "note/multivariable-calculus/3.html#greens-theorem-for-tangential-vector",
-    "title": "Double integrals and Line integrals in the plane",
-    "section": "Green’s Theorem for tangential vector",
-    "text": "Green’s Theorem for tangential vector\nTương tự như trong Green’s thm trong trường vector normal, là tổng của các \\text{curl}(\\vec F).\nThì Green’s thm trong trường vector tangent sẽ là tổng của các \\text{div}(\\vec F).\n\n\\oint_C \\vec F \\cdot \\hat{\\mathbf n}\\mathrm dS = \\int\\int_R \\text{div}(\\vec F)\\mathrm dA\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nt = np.linspace(-1.5, 2.5, 400)\nx_c = t + 0.8 * np.sin(3 * t)\ny_c = 0.4 * t**2 + 0.9 * np.cos(2.5 * t)\n\nx_min, x_max = np.min(x_c) - 1.0, np.max(x_c) + 1.0\ny_min, y_max = np.min(y_c) - 1.0, np.max(y_c) + 1.0\n\ngrid_x = np.linspace(x_min, x_max, 25)\ngrid_y = np.linspace(y_min, y_max, 25)\nX, Y = np.meshgrid(grid_x, grid_y)\n\nU = 4 * X**2 + 8 * X * Y\nV = 3 * Y**2 + 4 * X**2\nmag = np.hypot(U, V)\nmag_norm = np.where(mag == 0, 1, mag)\nU_norm = U / mag_norm\nV_norm = V / mag_norm\n\nt0 = 0.8\nx0 = t0 + 0.8 * np.sin(3 * t0)\ny0 = 0.4 * t0**2 + 0.9 * np.cos(2.5 * t0)\n\ndx_dt = 1 + 0.8 * 3 * np.cos(3 * t0)\ndy_dt = 0.8 * t0 - 0.9 * 2.5 * np.sin(2.5 * t0)\ntangent_len = np.hypot(dx_dt, dy_dt)\n\nux, uy = dx_dt / tangent_len, dy_dt / tangent_len\nnx, ny = dy_dt / tangent_len, -dx_dt / tangent_len \nFx = 4 * x0**2 + 8 * x0 * y0\nFy = 3 * y0**2 + 4 * x0**2\nF_len = np.hypot(Fx, Fy)\nFx_vis = (Fx / F_len) * 1.5\nFy_vis = (Fy / F_len) * 1.5\n\nfig, ax = plt.subplots(figsize=(5, 5), dpi=120)\n\nq = ax.quiver(X, Y, U_norm, V_norm, mag, cmap='viridis', alpha=0.35, angles='xy', scale=25, width=0.0035)\n\nax.plot(x_c, y_c, color='#1f77b4', linewidth=1.5)\n\narrow_t = np.linspace(-1.0, 2.0, 6)\nfor at in arrow_t:\n    ax_pt = at + 0.8 * np.sin(3 * at)\n    ay_pt = 0.4 * at**2 + 0.9 * np.cos(2.5 * at)\n    adx = 1 + 0.8 * 3 * np.cos(3 * at)\n    ady = 0.8 * at - 0.9 * 2.5 * np.sin(2.5 * at)\n    alen = np.hypot(adx, ady)\n    ax.annotate('', xy=(ax_pt + 0.15*adx/alen, ay_pt + 0.15*ady/alen), \n                xytext=(ax_pt, ay_pt),\n                arrowprops=dict(arrowstyle=\"-&gt;\", color='#1f77b4', lw=1.5, mutation_scale=15))\n\nax.plot(x0, y0, 'ko', markersize=7, zorder=6)\n# ax.quiver(x0, y0, Fx_vis, Fy_vis, color='crimson', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)\nax.quiver(x0, y0, ux, uy, color='mediumseagreen', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)\nax.quiver(x0, y0, nx, ny, color='darkorchid', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)\n\nax.set_xlim(x_min, x_max)\nax.set_ylim(y_min, y_max)\nax.set_aspect('equal')\nax.grid(True, linestyle=':', alpha=0.4)\n\nplt.tight_layout()\nplt.savefig('vector_field_curve.png', bbox_inches='tight')\nplt.show()",
-    "crumbs": [
-      "18.02",
-      "Double integrals and Line integrals in the plane"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#độ-dài-của-vector",
-    "href": "note/multivariable-calculus/1.html#độ-dài-của-vector",
-    "title": "Vector and Matrices",
-    "section": "Độ dài của vector",
-    "text": "Độ dài của vector\nỞ cấp 3 chúng ta đã được học, nó chính là\n\n\\vec A &lt;a_1, a_2, a_3&gt; = \\sqrt{\\left(a_1^2 + a_2^2 + a_3^2 \\right)}",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
-    "href": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
-    "title": "Vector and Matrices",
-    "section": "Cộng vector và nhân vector với scalar",
-    "text": "Cộng vector và nhân vector với scalar\n18.06",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#section",
-    "href": "note/multivariable-calculus/1.html#section",
-    "title": "Vector and Matrices",
+    "objectID": "note/MA006/index.html",
+    "href": "note/MA006/index.html",
+    "title": "Calculus",
     "section": "",
-    "text": "WarningLưu ý\n\n\n\nLưu ý rằng, các vector có cùng hướng và cùng độ dài là giống nhau, không quan trọng điểm đặt của nó. Điều này tớ cho rằng nó sẽ dễ dàng hơn trong việc truyền đạt phép cộng và nhân vector với một số sau này.",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#applications",
-    "href": "note/multivariable-calculus/1.html#applications",
-    "title": "Vector and Matrices",
-    "section": "Applications",
-    "text": "Applications\nỨng dụng của dot product:\n\n\nTính độ dài và góc (đặc biệt là góc)\n\n\nXác định tính trực giao",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#identity-matrix",
-    "href": "note/multivariable-calculus/1.html#identity-matrix",
-    "title": "Vector and Matrices",
-    "section": "Identity matrix",
-    "text": "Identity matrix\nMa trận đơn vị là ma trận có số 1 ở đường chéo chính và tất cả số 0 ở các vị trí còn lại, ví dụ:\n\nI_{3 \\times 3} = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}\n\nvà\n\nIX = X\n\nvì ma trận này không làm gì cả, đối chiếu với biến đổi tuyến tính, thì nó chính là không làm gì cả. Vì ma trận đơn vị này chính là hợp lại của các vector basis. ;)",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#inverse-matrix",
-    "href": "note/multivariable-calculus/1.html#inverse-matrix",
-    "title": "Vector and Matrices",
-    "section": "Inverse matrix",
-    "text": "Inverse matrix\nTa thường giải Ax = B \\Rightarrow x = \\frac B A = A^{-1}B. Vậy chúng ta có thể áp dụng nó trong ma trận được không?\nĐược👍🏿.\nVậy chúng ta tính A^{-1} như thế nào.\nBằng một cách thần kỳ, chúng ta biết được công thức A^{-1} = \\frac 1 {\\det(A)} adj(A). (Trong đó adj(A) là ma trận phụ hợp - adjoint matrix).\nCách tính adj(A). Với mỗi giá trị hàng i cột j của bảng 3 \\times 3, ta sẽ bỏ đi hàng i và cột j đó, chỉ còn lại bảng 2 \\times 2, và giá trị adj(A)_{ij} sẽ là định thức của bảng đó.\nVà thêm một bước nữa là chuyển vị bảng hiện tại, tức là tính adj(A)^T sẽ cho bảng adj(A) mà ta đang cần.\nBước cuối cùng là tính \\det(A).\n\n\n\n\n\n\nTiptip\n\n\n\nNhư bạn đã suy nghĩ:\n\nA^{-1}A = I",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#suy-nghiệm",
-    "href": "note/multivariable-calculus/1.html#suy-nghiệm",
-    "title": "Vector and Matrices",
-    "section": "Suy nghiệm",
-    "text": "Suy nghiệm\nNhư ở trước ta đã đề cập, chúng ta có thể dùng X = A^{-1}B để tính nghiệm của hệ phương trình. Và công thức để tính ma trận nghịch đảo là A^{-1} = \\frac 1 {\\det(A)} \\cdot adj(A). Nhưng chúng ta chưa đề cập đến một việc, đó là mẫu số, hay chính là \\det(A) có thể bằng 0.\nVì vậy, chúng ta sẽ suy luận ra nghiệm của hệ phương trình.\nNếu \\det(A) \\neq 0 thì A sẽ được gọi là ma trận khả nghịch.",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#homogeneous-systems",
-    "href": "note/multivariable-calculus/1.html#homogeneous-systems",
-    "title": "Vector and Matrices",
-    "section": "Homogeneous Systems",
-    "text": "Homogeneous Systems\nĐó là khi AX = 0, cả 3 mặt phẳng đều đi qua gốc tọa độ.\nKhi B = 0, tức là hệ phương trình gồm các phương trình có hệ số tự do = 0. Thì khi đó chúng ta có nghiệm tầm thường, đó chính là khi x, y, z, ... = 0.\nNghiệm tầm thường chỉ xảy ra khi ma trận A là khả nghịch, nếu ma trận A không khả nghịch, chúng ta sẽ có vô số nghiệm.",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#general-systems",
-    "href": "note/multivariable-calculus/1.html#general-systems",
-    "title": "Vector and Matrices",
-    "section": "General Systems",
-    "text": "General Systems\nĐó là khi AX = B, cả 3 mặt phẳng đều dịch chuyển song song so với mặt phẳng ban đầu mà cắt gốc tọa độ của nó.\nNếu ma trận khả nghịch, thì chỉ có một đáp án duy nhất đó chính là X = A^{-1}B.\nNếu ma trận không khả nghịch, thì có hai khả năng là vô số nghiệm hoặc là vô nghiệm, chúng ta phải dùng khử Gauss để xác định xem là trường hợp nào, điều mà chắc chắn sẽ nói rõ hơn trong 18.06.",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
-    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
-    "title": "Vector and Matrices",
-    "section": "Phương trình tham số cho đường thẳng",
-    "text": "Phương trình tham số cho đường thẳng\nCăn bản là giống cấp 3. Một hệ phương trình có vector chính phương (hoặc là 2 điểm AB trên đường thẳng đó tạo thành vector chính phương) \\vec v = &lt;a, b, c&gt; và điểm A = (x, y, z) như sau:\n\n\\begin{cases}\nx(t) = x + at \\\\\ny(t) = y + bt \\\\\nz(t) = z + ct\n\\end{cases}\n\nSẽ tưởng tượng rằng là có một điểm P(t) = (x(t), y(t), z(t)) chạy trên đường thẳng đó.",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong-cycloid",
-    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong-cycloid",
-    "title": "Vector and Matrices",
-    "section": "Phương trình tham số cho đường cong Cycloid",
-    "text": "Phương trình tham số cho đường cong Cycloid\n\n\n\n\n\n\nTipĐường cong Cycloid\n\n\n\n\n\nĐường cong cycloid là một quỹ đạo cong được vẽ bởi một điểm nằm trên vành một đường tròn khi đường tròn đó lăn không trượt trên một mặt phẳng.\n\n\n\n\nCó rất nhiều tham số có thể để lập phương trình, như là thời gian, góc, bán kính, …\nNhưng chúng ta sẽ sử dụng góc, hay chính là \\theta.\nTa biết được rằng phương trình Vector \\vec {OB} (trong đó O là gốc tọa độ, B là điểm trên đường cong) chính là $ + + $ (trong đó, A là điểm tiếp xúc giữa đường trong và trục X, I là tâm đường tròn).\nTa có:\n\n\\vec {OB} = &lt;t - sin(t), 1 - cos(t)&gt;",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#position-vector-and-velocaity-vector",
-    "href": "note/multivariable-calculus/1.html#position-vector-and-velocaity-vector",
-    "title": "Vector and Matrices",
-    "section": "Position vector and Velocaity vector",
-    "text": "Position vector and Velocaity vector\nPosition vector là vector nối từ gốc tọa độ đến điểm, chính là vector \\vec {OB}, và nó cũng chính là \\vec v (t) = &lt;x(t), y(t), z(t)&gt;.\nVelocity vector : chúng ta muốn biết độ lớn của vận tốc, hay chính là tốc độ và hướng của nó, vậy cách tốt nhất là dùng vector, hay ở đây chính là vector vận tốc.\n\n\\vec v = \\frac {\\mathrm d \\vec r}{\\mathrm d t} = &lt;\\frac{\\mathrm d x }{\\mathrm d t}, \\frac{\\mathrm d y }{\\mathrm d t}, \\frac{\\mathrm d z }{\\mathrm d t}&gt;\n\n\n\n\n\n\n\nTipVí dụ với cycloid\n\n\n\n\n\nTa có \\vec r(t) = &lt;t - sin(t), 1 - cos(t)&gt;, vậy vector vận tốc là:\n\n\\vec v = &lt;1 - cos(t), sin(t)&gt;\n\nChính vì thế, ngay tại thời điểm t = 0, \\vec v = 0 và tốc độ |\\vec v| = 0.",
-    "crumbs": [
-      "18.02",
-      "Vector and Matrices"
-    ]
+    "text": "Chap 1"
   },
   {
     "objectID": "note/linear-algebra/matrix.html",
@@ -636,399 +687,344 @@
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#contour-plot",
-    "href": "note/multivariable-calculus/2.html#contour-plot",
-    "title": "Partial derivatives",
-    "section": "Contour plot",
-    "text": "Contour plot\n\n\n\n\n\n\nImportanttl;dr\n\n\n\nĐường mức f(x, y) = c. Cho biết hình dạng bền mặt mà không cần vẽ 3D.\n\n\nViệc biểu diễn hình không gian 3 chiều trong mặt phẳng thật sự là rất khó nếu ta vẽ như trên, để giải quyết vấn đề đó, chúng ta đã có Contour plot.\nĐây chính là một kỹ thuật biểu diễn không gian 3 chiều trên mặt phẳng 2 chiều, khá là quen thuộc trong việc biểu diễn nhiệt độ vùng, độ cao của núi, … trong đó x và y là kinh độ và vỹ độ.\nHãy xem ví dụ về Topographic map của đỉnh Himalaya dưới đây:\n\nTa có thể thấy các vành xung quanh đó, mỗi điểm trên vành sẽ có giá trị bằng chính xác một giá trị nào đó, giá trị của điểm giữa hai vành sẽ có giá trị ở giữa giá trị hai vành. Các vành không thể cắt nhau. Nếu một điểm nào đó mà các vành xếp gần nhau, chứng tỏ ở đó là vách núi, và ngược lại, nếu chúng xếp xa nhau, thì chứng tỏ đó là đồng bằng.",
+    "objectID": "note/multivariable-calculus/1.html#độ-dài-của-vector",
+    "href": "note/multivariable-calculus/1.html#độ-dài-của-vector",
+    "title": "Vector and Matrices",
+    "section": "Độ dài của vector",
+    "text": "Độ dài của vector\nỞ cấp 3 chúng ta đã được học, nó chính là\n\n\\vec A &lt;a_1, a_2, a_3&gt; = \\sqrt{\\left(a_1^2 + a_2^2 + a_3^2 \\right)}",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
-    "href": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
-    "title": "Partial derivatives",
-    "section": "Cách tính đạo hàm từng phần",
-    "text": "Cách tính đạo hàm từng phần\nNhư đã nói ở trước, ta sẽ coi một biến là hằng số.\nVí dụ hàm f(x, y) = x^2 + x^3y + 2y + 3x\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\nx = np.linspace(-2, 2, 100)\ny = np.linspace(-2, 2, 100)\nX, Y = np.meshgrid(x, y)\nZ = X**2 + Y*X**3 + 2*Y + 3*X\n\nfig = plt.figure(figsize=(6, 5))\nax = fig.add_subplot(111, projection='3d')\nsurf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none')\n\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()",
+    "objectID": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
+    "href": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
+    "title": "Vector and Matrices",
+    "section": "Cộng vector và nhân vector với scalar",
+    "text": "Cộng vector và nhân vector với scalar\n18.06",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#approximation-formula",
-    "href": "note/multivariable-calculus/2.html#approximation-formula",
-    "title": "Partial derivatives",
-    "section": "Approximation formula",
-    "text": "Approximation formula\nIf we change x \\rightarrow x + \\Delta x and then y \\rightarrow y + \\Delta y.\nz = f(x, y) : then we have approximation formula for \\Delta z\n\n\\Delta z \\approx f_x \\Delta x + f_y \\Delta y\n\n\n\n\n\n\n\nTipRememeber\n\n\n\n\n\nthat f_x = \\frac {\\partial f}{\\partial x} and the same with f_y.",
+    "objectID": "note/multivariable-calculus/1.html#section",
+    "href": "note/multivariable-calculus/1.html#section",
+    "title": "Vector and Matrices",
+    "section": "",
+    "text": "WarningLưu ý\n\n\n\nLưu ý rằng, các vector có cùng hướng và cùng độ dài là giống nhau, không quan trọng điểm đặt của nó. Điều này tớ cho rằng nó sẽ dễ dàng hơn trong việc truyền đạt phép cộng và nhân vector với một số sau này.",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#tangent-plane",
-    "href": "note/multivariable-calculus/2.html#tangent-plane",
-    "title": "Partial derivatives",
-    "section": "Tangent plane",
-    "text": "Tangent plane\nTưởng tượng trong không gian mặt phẳng 2D, ta có tiếp tuyến là một đường thẳng là 1D.\nTương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.\nVí dụ: f(x, y) = x^2 + y^2\nTa xét tại điểm (x_0, y_0) = (1, 1), mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 1, 1\nx00, y00 = 4, 4\nz0 = f(x0, y0)\nz00 = f(x00, y00)\n\nx = np.linspace(-1, 5, 70)\ny = np.linspace(-1, 5, 70)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 2, x0 + 2, 20),\n    np.linspace(y0 - 2, y0 + 2, 20)\n)\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nXpp, Ypp = np.meshgrid(\n    np.linspace(x00 - 2, x00 + 2, 20),\n    np.linspace(y00 - 2, y00 + 2, 20)\n)\nZpp = z00 + fx(x00, y00) * (Xpp - x00) + fy(x00, y00) * (Ypp - y00)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\n\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.plot_surface(Xpp, Ypp, Zpp, alpha=0.5, color='red')\n\nax.scatter(x0, y0, z0, color='black', s=60)\nax.scatter(x00, y00, z00, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nax.legend()\n\nplt.show()",
+    "objectID": "note/multivariable-calculus/1.html#applications",
+    "href": "note/multivariable-calculus/1.html#applications",
+    "title": "Vector and Matrices",
+    "section": "Applications",
+    "text": "Applications\nỨng dụng của dot product:\n\n\nTính độ dài và góc (đặc biệt là góc)\n\n\nXác định tính trực giao",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
-    "href": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
-    "title": "Partial derivatives",
-    "section": "Điểm cực tiểu",
-    "text": "Điểm cực tiểu\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "objectID": "note/multivariable-calculus/1.html#identity-matrix",
+    "href": "note/multivariable-calculus/1.html#identity-matrix",
+    "title": "Vector and Matrices",
+    "section": "Identity matrix",
+    "text": "Identity matrix\nMa trận đơn vị là ma trận có số 1 ở đường chéo chính và tất cả số 0 ở các vị trí còn lại, ví dụ:\n\nI_{3 \\times 3} = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}\n\nvà\n\nIX = X\n\nvì ma trận này không làm gì cả, đối chiếu với biến đổi tuyến tính, thì nó chính là không làm gì cả. Vì ma trận đơn vị này chính là hợp lại của các vector basis. ;)",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#điểm-cực-đại",
-    "href": "note/multivariable-calculus/2.html#điểm-cực-đại",
-    "title": "Partial derivatives",
-    "section": "Điểm cực đại",
-    "text": "Điểm cực đại\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 - y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "objectID": "note/multivariable-calculus/1.html#inverse-matrix",
+    "href": "note/multivariable-calculus/1.html#inverse-matrix",
+    "title": "Vector and Matrices",
+    "section": "Inverse matrix",
+    "text": "Inverse matrix\nTa thường giải Ax = B \\Rightarrow x = \\frac B A = A^{-1}B. Vậy chúng ta có thể áp dụng nó trong ma trận được không?\nĐược👍🏿.\nVậy chúng ta tính A^{-1} như thế nào.\nBằng một cách thần kỳ, chúng ta biết được công thức A^{-1} = \\frac 1 {\\det(A)} adj(A). (Trong đó adj(A) là ma trận phụ hợp - adjoint matrix).\nCách tính adj(A). Với mỗi giá trị hàng i cột j của bảng 3 \\times 3, ta sẽ bỏ đi hàng i và cột j đó, chỉ còn lại bảng 2 \\times 2, và giá trị adj(A)_{ij} sẽ là định thức của bảng đó.\nVà thêm một bước nữa là chuyển vị bảng hiện tại, tức là tính adj(A)^T sẽ cho bảng adj(A) mà ta đang cần.\nBước cuối cùng là tính \\det(A).\n\n\n\n\n\n\nTiptip\n\n\n\nNhư bạn đã suy nghĩ:\n\nA^{-1}A = I",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#điểm-saddle",
-    "href": "note/multivariable-calculus/2.html#điểm-saddle",
-    "title": "Partial derivatives",
-    "section": "Điểm saddle",
-    "text": "Điểm saddle\nVừa là cực dại vừa là cực tiểu.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "objectID": "note/multivariable-calculus/1.html#suy-nghiệm",
+    "href": "note/multivariable-calculus/1.html#suy-nghiệm",
+    "title": "Vector and Matrices",
+    "section": "Suy nghiệm",
+    "text": "Suy nghiệm\nNhư ở trước ta đã đề cập, chúng ta có thể dùng X = A^{-1}B để tính nghiệm của hệ phương trình. Và công thức để tính ma trận nghịch đảo là A^{-1} = \\frac 1 {\\det(A)} \\cdot adj(A). Nhưng chúng ta chưa đề cập đến một việc, đó là mẫu số, hay chính là \\det(A) có thể bằng 0.\nVì vậy, chúng ta sẽ suy luận ra nghiệm của hệ phương trình.\nNếu \\det(A) \\neq 0 thì A sẽ được gọi là ma trận khả nghịch.",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#general-case",
-    "href": "note/multivariable-calculus/2.html#general-case",
-    "title": "Partial derivatives",
-    "section": "General case",
-    "text": "General case\n\n\\frac {\\partial^2 f}{\\partial x^2} = f_{xx}; \\qquad\n\\frac {\\partial^2 f}{\\partial y^2} = f_{yy}; \\qquad\n\\frac {\\partial^2 f}{\\partial x \\partial y} = f_{xy} =\n\\frac {\\partial^2 f}{\\partial y \\partial x} = f_{yx}\n\nLet A = f_{xx}, B = f_{xy} and C = f_{yy}, we have 3 cases:\n\nAC - B^2 &lt; 0 \\Rightarrow saddle point.\nAC - B^2 = 0 \\Rightarrow cant conclude\nAC - B^2 &gt; 0\n\n\\rightarrow if A &gt; 0 local minimum.\n\\rightarrow if A &lt; 0 local maximum.",
+    "objectID": "note/multivariable-calculus/1.html#homogeneous-systems",
+    "href": "note/multivariable-calculus/1.html#homogeneous-systems",
+    "title": "Vector and Matrices",
+    "section": "Homogeneous Systems",
+    "text": "Homogeneous Systems\nĐó là khi AX = 0, cả 3 mặt phẳng đều đi qua gốc tọa độ.\nKhi B = 0, tức là hệ phương trình gồm các phương trình có hệ số tự do = 0. Thì khi đó chúng ta có nghiệm tầm thường, đó chính là khi x, y, z, ... = 0.\nNghiệm tầm thường chỉ xảy ra khi ma trận A là khả nghịch, nếu ma trận A không khả nghịch, chúng ta sẽ có vô số nghiệm.",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#total-differential",
-    "href": "note/multivariable-calculus/2.html#total-differential",
-    "title": "Partial derivatives",
-    "section": "Total differential",
-    "text": "Total differential\nĐạo hàm toàn phần: Cho một hàm f ví dụ như phụ thuộc vào 3 biến số f = f(x, y, z) thì đạo hàm toàn phần của nó là: \n\\mathrm df = f_x \\mathrm d x + f_y \\mathrm d y + f_z \\mathrm d z",
+    "objectID": "note/multivariable-calculus/1.html#general-systems",
+    "href": "note/multivariable-calculus/1.html#general-systems",
+    "title": "Vector and Matrices",
+    "section": "General Systems",
+    "text": "General Systems\nĐó là khi AX = B, cả 3 mặt phẳng đều dịch chuyển song song so với mặt phẳng ban đầu mà cắt gốc tọa độ của nó.\nNếu ma trận khả nghịch, thì chỉ có một đáp án duy nhất đó chính là X = A^{-1}B.\nNếu ma trận không khả nghịch, thì có hai khả năng là vô số nghiệm hoặc là vô nghiệm, chúng ta phải dùng khử Gauss để xác định xem là trường hợp nào, điều mà chắc chắn sẽ nói rõ hơn trong 18.06.",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#chain-rule",
-    "href": "note/multivariable-calculus/2.html#chain-rule",
-    "title": "Partial derivatives",
-    "section": "Chain rule",
-    "text": "Chain rule\nTrường hợp 1: x = x(t), y = y(t), z = z(t)\n\n\\frac{\\mathrm d f}{\\mathrm dt} =\n\\frac{\\partial f}{\\partial x} \\frac{\\mathrm dx}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial y} \\frac{\\mathrm dy}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial z} \\frac{\\mathrm dz}{\\mathrm dt}\n\nTrường hợp 2: x = x(u, v), y = y(u, v), z = z(u, v) \n\\frac{\\partial f}{\\partial u} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial u} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial u} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial u}  \n\\\\[10pt]\n\\frac{\\partial f}{\\partial v} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial v} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial v} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial v}  \n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nQuy tắc nhân, ta có f = f(u, v) = uv, đạo hàm toàn phần nó: \n\\mathrm d f = v \\mathrm d u + u \\mathrm dv \\space (=vu'+uv')\n\nQuy tắc thương, ta có f = f(u, v) = \\frac u v, đạo hàm toàn phần: \n\\mathrm d f = \\frac 1 v \\mathrm du - \\frac u {v^2} \\mathrm d v = \\frac {v\\mathrm du - u\\mathrm dv}{v^2}\n\\space \\left(=\\frac{vu' - uv'}{v^2}\\right)",
+    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
+    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
+    "title": "Vector and Matrices",
+    "section": "Phương trình tham số cho đường thẳng",
+    "text": "Phương trình tham số cho đường thẳng\nCăn bản là giống cấp 3. Một hệ phương trình có vector chính phương (hoặc là 2 điểm AB trên đường thẳng đó tạo thành vector chính phương) \\vec v = &lt;a, b, c&gt; và điểm A = (x, y, z) như sau:\n\n\\begin{cases}\nx(t) = x + at \\\\\ny(t) = y + bt \\\\\nz(t) = z + ct\n\\end{cases}\n\nSẽ tưởng tượng rằng là có một điểm P(t) = (x(t), y(t), z(t)) chạy trên đường thẳng đó.",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#application",
-    "href": "note/multivariable-calculus/2.html#application",
-    "title": "Partial derivatives",
-    "section": "Application",
-    "text": "Application\nNói một cách khó hiểu, \\mathrm d x hay bất kể \\mathrm d gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là \\mathrm d x \\neq \\Delta x. Chỉ khi nào \\Delta x tiến tới 0, thì khi đó \\mathrm d x \\approx \\Delta x\nVậy đạo hàm toàn phần có thể làm những gì:\n\nNó biểu thị xem việc thay đổi các biến của f tác động thế nào đến f.\nNó là “người giữ chỗ” cho công thức xấp xỉ: \\Delta f \\approx f_x \\Delta x + f_y \\Delta y + f_z \\Delta z.\nNếu các biến của f phụ thuộc vào tham số khác, ví dụ như x = x(t), y = y(t), z = z(t), thì ta có thể chia nó cho \\mathrm d t để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành \\frac {\\mathrm d f}{\\mathrm d t} = \\frac{\\partial f}{\\partial x}\\frac {\\mathrm d x}{\\mathrm d t} + \\frac{\\partial f}{\\partial y}\\frac {\\mathrm d y}{\\mathrm d t} + \\frac{\\partial f}{\\partial z}\\frac {\\mathrm d z}{\\mathrm d t}\n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nVí dụ như, f = f(x, y, z) = x^2y + z, và x = t, y = e^t, z = \\sin t 1. Ta đạo hàm như bình thường: \nf = t^2 e^t + \\sin t\n\\Rightarrow \\frac {\\mathrm df}{\\mathrm dt} = e^t 2t + e^t t^2 + \\cos t\n\n\nĐạo hàm sử dụng Chain rule: \n\\frac{\\partial f}{\\partial x} = 2xy = 2te^t;\n\\frac{\\partial f}{\\partial y} = x^2 = t^2;\n\\frac{\\partial f}{\\partial z} = 1\n\n\n\n\\mathrm d x = 1;\n\\mathrm d y = e^t;\n\\mathrm d z = \\cos t\n\nvậy đáp án cuối cùng là:\n\n\\frac{\\mathrm d f}{\\mathrm dt} =\n\\frac{\\partial f}{\\partial x}\\frac{\\mathrm d x}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial y}\\frac{\\mathrm d y}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial z}\\frac{\\mathrm d z}{\\mathrm dt} =\n2te^t + e^t t^2 + \\cos t\n\n\n\n\n\n\n\n\n\n\nNoteJustify",
+    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong-cycloid",
+    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong-cycloid",
+    "title": "Vector and Matrices",
+    "section": "Phương trình tham số cho đường cong Cycloid",
+    "text": "Phương trình tham số cho đường cong Cycloid\n\n\n\n\n\n\nTipĐường cong Cycloid\n\n\n\n\n\nĐường cong cycloid là một quỹ đạo cong được vẽ bởi một điểm nằm trên vành một đường tròn khi đường tròn đó lăn không trượt trên một mặt phẳng.\n\n\n\n\nCó rất nhiều tham số có thể để lập phương trình, như là thời gian, góc, bán kính, …\nNhưng chúng ta sẽ sử dụng góc, hay chính là \\theta.\nTa biết được rằng phương trình Vector \\vec {OB} (trong đó O là gốc tọa độ, B là điểm trên đường cong) chính là $ + + $ (trong đó, A là điểm tiếp xúc giữa đường trong và trục X, I là tâm đường tròn).\nTa có:\n\n\\vec {OB} = &lt;t - sin(t), 1 - cos(t)&gt;",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#gradient-1",
-    "href": "note/multivariable-calculus/2.html#gradient-1",
-    "title": "Partial derivatives",
-    "section": "Gradient",
-    "text": "Gradient\nĐịnh nghĩa: \\nabla f = &lt;f_x, f_y, f_z&gt; - Là một vector Gradient.\nKhi đó thì vector sẽ vuông góc với mặt phẳng, và có hướng về phía mà có f(x, y, z) cao hơn. (Tức là nếu nó ở đoạn sườn dốc của một ngọn núi, thì nó sẽ nhìn lên phía trên đỉnh thay vì nhìn xuống dưới chân núi).\nVí dụ: Sau đây là một hàm bất kỳ, ta vẽ được như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, cmap='viridis')\n\nax.set_title('Surface Plot')\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()\n\n\n\n\n\n\n\n\n\ncó contour plot là:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nplt.figure(figsize=(7, 6))\ncontour = plt.contourf(X, Y, Z, levels=30, cmap='viridis')\nplt.colorbar(contour)\n\nplt.contour(X, Y, Z, levels=15, colors='black', linewidths=0.5)\n\nplt.title('Contour Plot')\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nvà vector gradient được vẽ màu đỏ như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-2, 2, 25)\ny = np.linspace(-2, 2, 25)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\ndZ_dY, dZ_dX = np.gradient(Z, y, x)\n\nplt.figure(figsize=(7, 6))\nplt.contour(X, Y, Z,\n            levels=20,\n            colors='gray',\n            linewidths=0.8,\n            alpha=0.4)\n\nplt.quiver(X, Y, dZ_dX, dZ_dY,\n           color='red',\n           scale=20)\n\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nCó thể thấy mọi vector đều vuông góc với level curves, và hướng về phía 2 điểm cực trị.",
+    "objectID": "note/multivariable-calculus/1.html#position-vector-and-velocaity-vector",
+    "href": "note/multivariable-calculus/1.html#position-vector-and-velocaity-vector",
+    "title": "Vector and Matrices",
+    "section": "Position vector and Velocaity vector",
+    "text": "Position vector and Velocaity vector\nPosition vector là vector nối từ gốc tọa độ đến điểm, chính là vector \\vec {OB}, và nó cũng chính là \\vec v (t) = &lt;x(t), y(t), z(t)&gt;.\nVelocity vector : chúng ta muốn biết độ lớn của vận tốc, hay chính là tốc độ và hướng của nó, vậy cách tốt nhất là dùng vector, hay ở đây chính là vector vận tốc.\n\n\\vec v = \\frac {\\mathrm d \\vec r}{\\mathrm d t} = &lt;\\frac{\\mathrm d x }{\\mathrm d t}, \\frac{\\mathrm d y }{\\mathrm d t}, \\frac{\\mathrm d z }{\\mathrm d t}&gt;\n\n\n\n\n\n\n\nTipVí dụ với cycloid\n\n\n\n\n\nTa có \\vec r(t) = &lt;t - sin(t), 1 - cos(t)&gt;, vậy vector vận tốc là:\n\n\\vec v = &lt;1 - cos(t), sin(t)&gt;\n\nChính vì thế, ngay tại thời điểm t = 0, \\vec v = 0 và tốc độ |\\vec v| = 0.",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Vector and Matrices"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#cách-tính",
-    "href": "note/multivariable-calculus/2.html#cách-tính",
-    "title": "Partial derivatives",
+    "objectID": "note/multivariable-calculus/3.html#cách-tính",
+    "href": "note/multivariable-calculus/3.html#cách-tính",
+    "title": "Double integrals and Line integrals in the plane",
     "section": "Cách tính",
-    "text": "Cách tính\nCho f = f(x, y, z) với x = x(t), y = y(t), z = z(t), chainrule:\n\n\\frac{\\mathrm df}{\\mathrm dt} =\nf_x\\frac{\\mathrm dx}{\\mathrm dt} +\nf_x\\frac{\\mathrm dy}{\\mathrm dt} +\nf_x\\frac{\\mathrm dz}{\\mathrm dt}  \n\nGiờ chúng ta sẽ viết nó dưới dạng khác:\n\n\\frac{\\mathrm df}{\\mathrm dt} = \\nabla f \\cdot \\frac{\\mathrm d\\vec r}{\\mathrm dt}\n\ntrong đó:\n\n\\nabla w = &lt;f_x, f_y, f_z&gt; \\quad\n\\frac{\\mathrm d \\vec r}{\\mathrm dt} = &lt;\\frac{\\mathrm dx}{\\mathrm dt},\\frac{\\mathrm dy}{\\mathrm dt},\\frac{\\mathrm dz}{\\mathrm dt}&gt;\n\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx0 = 1\ny0 = 1\ntheta_deg = 60.0\ntheta_rad = np.radians(theta_deg)\n\ndef f_3d(X, Y):\n    return np.exp(-((X - 1.5)**2 + Y**2)) + np.exp(-((X + 1.5)**2 + Y**2))\n\nx_range = np.linspace(-5, 5, 300)\ny_range = np.linspace(-5, 5, 300)\nX, Y = np.meshgrid(x_range, y_range)\nZ = f_3d(X, Y)\n\nt = np.linspace(-5, 5, 300)\nx_plane = x0 + t * np.sin(theta_rad)\ny_plane = y0 + t * np.cos(theta_rad)\nz_plane_line = f_3d(x_plane, y_plane)\n\nfig = plt.figure(figsize=(12, 5))\nax_3d = fig.add_subplot(121, projection='3d')\nax_2d = fig.add_subplot(122)\n\nax_3d.plot_surface(X, Y, Z, cmap='viridis', alpha=0.6, edgecolor='none')\n\nax_3d.plot(x_plane, y_plane, z_plane_line, color='red', linewidth=2.5, label='Giao tuyến')\nax_3d.scatter([x0], [y0], [f_3d(x0, y0)], color='black', s=20)\n\nz_grid = np.linspace(0, 1.2, 2)\nT, Z_plane = np.meshgrid(t, z_grid)\nX_plane_mesh = x0 + T * np.sin(theta_rad)\nY_plane_mesh = y0 + T * np.cos(theta_rad)\nax_3d.plot_surface(X_plane_mesh, Y_plane_mesh, Z_plane, color='red', alpha=0.15)\n\nax_3d.set_xlabel(\"X\")\nax_3d.set_ylabel(\"Y\")\nax_3d.set_zlabel(\"Z\")\nax_3d.set_zlim(0, 1.2)\n\nax_2d.plot(t, z_plane_line, color='red', linewidth=2)\nax_2d.axvline(0, color='gray', linestyle='--', alpha=0.7)\nax_2d.set_ylim(0, 1.2)\nax_2d.grid(True)\n\nplt.tight_layout()\nplt.show()",
+    "text": "Cách tính\nGồm 2 bước để tính \\int \\int S(x,y) \\mathrm dx \\mathrm dy\n\ninner integral : giữ x là const\nouter integral : tính như bình thường\n\nVí dụ: \\int_0^1 \\int_0^1 (1 - x^2 - y^2) \\mathrm dy \\mathrm dx\n\n\n\\int_0^1(1 - x^2 - y^2)\\mathrm dy = \\left [y - x^2y - \\frac {y^3} 3 \\right]_0^1 = \\frac 2 3 - x^2\n\n\n\\int_0^1\\left(\\frac 2 3 - x^2 \\right)\\mathrm dx = \\left[\\frac 2 3 x - \\frac 1 3 x^3\\right]_0^1 = \\frac 1 3",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#geometric",
-    "href": "note/multivariable-calculus/2.html#geometric",
-    "title": "Partial derivatives",
-    "section": "Geometric",
-    "text": "Geometric\n\nD_{\\hat {\\mathbf u}}f = \\nabla f \\cdot \\hat {\\mathbf u} = |\\nabla f|\\cos \\theta.\n\nMaximum Khi \\cos \\theta = 1, tức là khi vector gradient \\nabla f trùng hướng với \\hat {\\mathbf u}. Vậy hàm sẽ tăng nhanh nhất khi mà",
+    "objectID": "note/multivariable-calculus/3.html#thử-đổi-thứ-tự",
+    "href": "note/multivariable-calculus/3.html#thử-đổi-thứ-tự",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Thử đổi thứ tự",
+    "text": "Thử đổi thứ tự\nĐầu tiên, phải nói rằng: \n\\int_{x_{min}}^{x_{max}} \\int_{y_{min(x)}}^{y_{max(x)}}S(x, y)\\mathrm dy \\mathrm dx\n=\\int_{y_{min}}^{y_{max}} \\int_{x_{min(y)}}^{x_{max(y)}}S(x, y)\\mathrm dx \\mathrm dy\n\nTức là dù có tính cái nào trước, đáp án vẫn là như nhau. Một số trường hợp việc đổi thứ tự có giúp việc tính tích phân dễ hơn hoặc khó hơn.\nVí dụ: \n\\int_0^1 \\int_x^{\\sqrt x} \\frac {e^y}{y} \\mathrm dy \\mathrm dx\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Miền x\nx = np.linspace(-0.5, 1.5, 500)\n\n# Hàm y = x\ny1 = x\n\ny2 = np.where(x &gt;= 0, np.sqrt(x), np.nan)\n\nplt.figure(figsize=(6, 6))\n\n# Vẽ hai đường\nplt.plot(x, y1, label=r\"$y=x$\", linewidth=2)\nplt.plot(x, y2, label=r\"$y=\\sqrt{x}$\", linewidth=2)\n\nmask = (x &gt;= 0) & (x &lt;= 1)\nplt.fill_between(\n    x[mask],\n    y1[mask],\n    y2[mask],\n    color=\"black\",\n    alpha=0.3\n)\n\n# Trục tọa độ\nplt.axhline(0, color=\"black\", linewidth=1)\nplt.axvline(0, color=\"black\", linewidth=1)\n\nplt.xlim(-0.5, 1.5)\nplt.ylim(-0.5, 1.5)\nplt.gca().set_aspect(\"equal\", adjustable=\"box\")\n\nplt.xlabel(\"$x$\")\nplt.ylabel(\"$y$\")\nplt.legend()\nplt.grid(alpha=0.3)\n\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipCách tư duy vẽ hình.\n\n\n\n\n\n\n\\int_a^b \\int_{c(x)}^{d(x)} S(x, y) \\mathrm dy \\mathrm dx\n\nNó sẽ là 2 đường thẳng là tập hợp các điểm c(x) \\left\\{ x \\in \\mathbb r | a \\leq x \\leq b \\right\\} d(x) \\left\\{ x \\in \\mathbb r | a \\leq x \\leq b \\right\\}.\n\n\n\n\nGiữ nguyên.\n\nCó thể thấy rằng việc tính inner integral \\int_x^{\\sqrt x}\\frac {e^y} y \\mathrm dy rất khó.\n\nĐổi thứ tự.\n\n\n\n\n\n\n\nWarningChú ý!\n\n\n\nNên nhớ rằng khi việc đổi thứ tự thì 2 biên cũng sẽ thay đổi!\n\n\nLúc này hàm trở thành:\n\n\\int_0^1 \\int_{y^2}^y \\frac {e^y} y \\mathrm dx \\mathrm dy\n\nInnner \n\\int_{y^2}^y \\frac {e^y} y \\mathrm dx = \\left[ \\frac {e^y} y x \\right]_{y^2}^y = e^y - ye^y\n\nOuter\n\n\\int_0^1 \\left(e^y - ye^y \\right) \\mathrm dy = \\left[ -ye^y + 2e^y \\right]_0^1 = e - 2",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/2.html#chú-ý",
-    "href": "note/multivariable-calculus/2.html#chú-ý",
-    "title": "Partial derivatives",
-    "section": "Chú ý",
-    "text": "Chú ý\nCác notaion của đạo hàm riêng rất dễ bị nhầm lẫn, thì nó chỉ biểu thị là mức độ lệch của hàm này trên một biến cụ thể, chứ không hề nhắc đến việc các biến nào sẽ const.\n\n\n\n\n\n\nWarningVí dụ\n\n\n\nCho f(x, y) = x + y.\nDễ dàng tính được:\n\n\\frac{\\partial f}{\\partial x} = 1 \\qquad\n\\frac{\\partial f}{\\partial y} = 1\n\nGiờ ta đặt x = u; y = u + v, hàm f(x, y) = x + y = 2u + v, bây giờ đạo hàm riêng đã trở thành:\n\n\\frac{\\partial f}{\\partial u} = 2 \\qquad\n\\frac{\\partial f}{\\partial v} = 1\n\nRõ ràng u = x nhưng \\frac{\\partial f}{\\partial u} \\neq \\frac{\\partial f}{\\partial x}!\nVì đạo hàm riêng của f trên x là giữ nguyên y và thay đổi x. Còn đạo hàm riêng của f trên u là đạo hàm riêng của f trên x giữ nguyên y - x.\n\n\nVì vậy, trong một số trường hợp, đễ tránh bị nhầm lẫn, ta sử dụng đạo hàm riêng f trên x giữ nguyên y thay đổi x là:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y\n\nVì thế với ví dụ trên, ta có thể khẳng định rằng:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y =\n\\left(\\frac{\\partial f}{\\partial u} \\right)_y \\neq\n\\left(\\frac{\\partial f}{\\partial u} \\right)_v",
+    "objectID": "note/multivariable-calculus/3.html#đổi-biến",
+    "href": "note/multivariable-calculus/3.html#đổi-biến",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Đổi biến",
+    "text": "Đổi biến\nVí dụ việc tính:\n\n\\int_0^1\\int_0^1 (3x-2y)(x+y) \\mathrm dx \\mathrm dy\n\nTôi cảm thấy quá khó, vậy nên tôi có thể thử đổi biến. Đặt u = (3x-2y) \\qquad v = (x+y), phương trình bây giờ trở thành:\n\n\\int_a^b \\int_c^d (uv) |J| \\mathrm du \\mathrm dv\n\nVà giờ việc của chúng ta là phải tính lại biên và tính \\lambda, bằng cách sử dụng Jacobian và một số tư duy hình học để tính biên.",
     "crumbs": [
       "18.02",
-      "Partial derivatives"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
-    "href": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Tích phân bội ba trong tọa độ cầu",
-    "text": "Tích phân bội ba trong tọa độ cầu\n\n\\mathrm dV = \\rho^2\\sin\\phi \\mathrm d\\rho \\mathrm d\\phi\\mathrm d\\theta\n\n\n\n\n\n\n\nNoteThe Jacobians\n\n\n\n\n\nTa có:\n\nx = \\rho\\sin\\phi\\cos\\theta \\qquad y = \\rho\\sin\\phi\\sin\\theta \\qquad z = \\rho\\cos\\phi\n\n\nJ = \\frac{\\partial(x, y, z)}{\\partial(\\rho, \\phi, \\theta)} = \\begin{vmatrix}\nx_\\rho & x_\\phi & x_\\theta \\\\\ny_\\rho & y_\\phi & y_\\theta \\\\\nz_\\rho & z_\\phi & z_\\theta\n\\end{vmatrix}\n\n\nJ = x_\\rho\\begin{vmatrix}\ny_\\phi & y_\\theta \\\\\nz_\\phi & z_\\theta\n\\end{vmatrix} - x_\\phi\\begin{vmatrix}\ny_\\rho & y_\\theta \\\\\nz_\\rho & z_\\theta\n\\end{vmatrix} + x_\\theta\\begin{vmatrix}\ny_\\rho & y_\\phi \\\\\nz_\\rho & z_\\phi\n\\end{vmatrix}\n\n\nx_\\rho = \\sin\\phi\\cos\\theta \\qquad\nx_\\phi = \\rho\\cos\\phi\\cos\\theta \\qquad\nx_\\theta = -\\rho\\sin\\phi\\sin\\theta \\\\\ny_\\rho = \\sin\\phi\\sin\\theta \\qquad\ny_\\phi = \\rho\\cos\\phi\\sin\\theta \\qquad\ny_\\theta = \\rho\\sin\\phi\\cos\\theta \\\\\nz_\\rho = \\cos\\phi \\qquad\nz_\\phi = -\\rho\\sin\\phi \\qquad\nz_\\theta = 0\n\n\n\\begin{vmatrix}\ny_\\phi & y_\\theta \\\\\nz_\\phi & z_\\theta\n\\end{vmatrix} = \\rho^2\\sin\\phi^2\\cos\\theta\n\n\n\\begin{vmatrix}\ny_\\rho & y_\\theta \\\\\nz_\\rho & z_\\theta\n\\end{vmatrix} = -\\rho\\sin\\phi\\cos\\phi\\cos\\theta\n\n\n\\begin{vmatrix}\ny_\\rho & y_\\phi \\\\\nz_\\rho & z_\\phi\n\\end{vmatrix} = -\\rho\\sin\\theta\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi^3\\cos\\theta^2 + \\rho^2\\sin\\phi\\cos\\phi^2\\cos\\theta^2 + \\rho^2\\sin\\theta^2\\sin\\phi\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi(\\sin\\phi^2\\cos\\theta^2 + \\cos\\phi^2\\cos\\theta^2 + \\sin\\theta^2)\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi\n\nCuối cùng: \\mathrm dx\\mathrm dy \\mathrm dz = \\rho^2\\sin\\phi \\mathrm d\\rho\\mathrm d\\phi \\mathrm d\\theta\n\n\n\nVí dụ: Tính thể tích phần chóp được tạo bởi một hình cầu \\rho = 1 và cắt ngang bởi mặt phẳng z = \\frac 1 {\\sqrt2}.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nR = 1.0\nz0 = 1 / np.sqrt(2)\n\nfig = plt.figure(figsize=(6, 6))\nax = fig.add_subplot(111, projection='3d')\n\n\nu = np.linspace(0, 2*np.pi, 200)\nv = np.linspace(0, np.pi, 150)\n\nU, V = np.meshgrid(u, v)\n\nX = R * np.cos(U) * np.sin(V)\nY = R * np.sin(U) * np.sin(V)\nZ = R * np.cos(V)\n\n\nXu = np.ma.masked_where(Z &lt; z0, X)\nYu = np.ma.masked_where(Z &lt; z0, Y)\nZu = np.ma.masked_where(Z &lt; z0, Z)\n\nax.plot_surface(\n    Xu, Yu, Zu,\n    cmap='plasma',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=1\n)\n\nXl = np.ma.masked_where(Z &gt; z0, X)\nYl = np.ma.masked_where(Z &gt; z0, Y)\nZl = np.ma.masked_where(Z &gt; z0, Z)\n\nax.plot_surface(\n    Xl, Yl, Zl,\n    cmap='viridis',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=0.5\n)\n\nr = np.sqrt(R**2 - z0**2)\n\nx = np.linspace(-r, r, 200)\ny = np.linspace(-r, r, 200)\n\nXp, Yp = np.meshgrid(x, y)\n\nmask = Xp**2 + Yp**2 &lt;= r**2\n\nXp = np.ma.masked_where(~mask, Xp)\nYp = np.ma.masked_where(~mask, Yp)\nZp = np.ma.masked_where(~mask, np.full_like(Xp, z0))\n\nax.plot_surface(\n    Xp, Yp, Zp,\n    color='white',\n    alpha=0.70,\n    linewidth=0,\n    shade=False\n)\n\nt = np.linspace(0, 2*np.pi, 500)\n\nxc = r * np.cos(t)\nyc = r * np.sin(t)\nzc = np.full_like(t, z0)\n\nax.plot(\n    xc, yc, zc,\n    color='black',\n    linewidth=3\n)\n\nlim = 1.05\n\nax.set_xlim(-lim, lim)\nax.set_ylim(-lim, lim)\nax.set_zlim(-lim, lim)\n\n\nax.set_box_aspect((1, 1, 1))\n\nax.view_init(elev=28, azim=45)\n\nax.set_xlabel(r'$x$', fontsize=16)\nax.set_ylabel(r'$y$', fontsize=16)\nax.set_zlabel(r'$z$', fontsize=16)\n\nax.grid(True)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\int_0^{2\\pi}\\int_0^{\\pi/4}\\int_{\\frac 1 {\\sqrt2\\cos\\phi}}^1\\rho^2\\sin\\phi\\mathrm d\\rho\\mathrm d\\phi\\mathrm d\\theta\n\nTự tính.\n\n\\frac {2\\pi} 3 - \\frac {5\\pi}{6\\sqrt2}",
+    "objectID": "note/multivariable-calculus/3.html#jacobians",
+    "href": "note/multivariable-calculus/3.html#jacobians",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Jacobians",
+    "text": "Jacobians\nTa có công thức xấp xỉ như sau:\n\n\\Delta u \\approx u_x\\Delta x + u_y\\Delta y \\qquad\n\\Delta v \\approx v_x\\Delta x + v_y\\Delta y\n \n\\Rightarrow\n\\begin{bmatrix}\n\\Delta u \\\\\n\\Delta v\n\\end{bmatrix}\n\\approx\n\\begin{bmatrix}\nu_x & u_y \\\\\nv_x & v_y\n\\end{bmatrix}\n\\begin{bmatrix}\n\\Delta x \\\\\n\\Delta y\n\\end{bmatrix}\n\nVậy hệ số \\frac{\\mathrm du \\mathrm dv}{\\mathrm dx \\mathrm dy} sẽ phải là định thức của ma trận vuông kia.\n\n\n\n\n\n\nTipTại sao?\n\n\n\n\n\nViệc này nếu chưa học 18.06 thì khá là khó để suy nghĩ. Nhưng hãy suy nghĩ như thế này.\nTa có 2 hình, bên trái chỉ \\mathrm dA = \\mathrm dx \\mathrm dy và bên phải là \\mathrm dA' = \\mathrm du \\mathrm dv, việc của chúng ta là tính hệ số diện tích của nó. Hay chính là chúng thu to hay thu nhỏ với hệ số bao nhiêu.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfig, axes = plt.subplots(1, 2, figsize=(12, 6))\nax = axes[0]\n\nax.axhline(0, color='black')\nax.axvline(0, color='black')\n\ne1 = np.array([1, 0])\ne2 = np.array([0, 1])\n\nax.quiver(0, 0, e1[0], e1[1],\n          angles='xy', scale_units='xy', scale=1,\n          color='C0', width=0.008)\n\nax.quiver(0, 0, e2[0], e2[1],\n          angles='xy', scale_units='xy', scale=1,\n          color='C0', width=0.008)\n\nsquare = np.array([\n    [0, 0],\n    [1, 0],\n    [1, 1],\n    [0, 1]\n])\n\nax.fill(square[:,0], square[:,1], color='gray', alpha=0.35)\n\nax.text(1.05, -0.08, r'$(1,0)$')\nax.text(-0.15, 1.05, r'$(0,1)$')\nax.text(-0.08, -0.12, r'$O$')\n\nax.set_xlim(-0.5, 1.6)\nax.set_ylim(-0.5, 1.6)\nax.set_aspect('equal')\nax.set_xlabel(\"$x$\")\nax.set_ylabel(\"$y$\")\nax.grid(True)\n\n\nax = axes[1]\n\nax.axhline(0, color='black')\nax.axvline(0, color='black')\n\nu = np.array([3, 1])\nv = np.array([-2, 1])\n\nax.quiver(0, 0, u[0], u[1],\n          angles='xy', scale_units='xy', scale=1,\n          color='C0', width=0.008)\n\nax.quiver(0, 0, v[0], v[1],\n          angles='xy', scale_units='xy', scale=1,\n          color='C0', width=0.008)\n\nparallelogram = np.array([\n    [0, 0],\n    u,\n    u + v,\n    v\n])\n\nax.fill(parallelogram[:,0], parallelogram[:,1],\n        color='gray', alpha=0.35)\n\nax.text(u[0]+0.1, u[1], r'$(3,1)$')\nax.text(v[0]-0.9, v[1], r'$(-2,1)$')\nax.text((u+v)[0]+0.1, (u+v)[1]+0.05, r'$(1,2)$')\nax.text(-0.08, -0.12, r'$O$')\n\nax.set_xlim(-3.5, 4)\nax.set_ylim(-1, 3)\nax.set_aspect('equal')\nax.set_xlabel(\"$u$\")\nax.set_ylabel(\"$v$\")\nax.grid(True)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n\nVà thứ chúng ta đang tìm chính là định thức của ma trận? (Toi khong biet giai thich nhu the nao nua, hay chco 18.06 Linear Algebra).\n\n\n\n\n\n\n\n\n\nWarningĐịnh nghĩa\n\n\n\nthe Jacobian is \nJ = \\frac{\\partial(u, v)}{\\partial(x, y)} =\n\\begin{vmatrix}\nu_x & u_y \\\\\nv_x & v_y\n\\end{vmatrix}\n\nThen \n\\mathrm du \\mathrm dv = |J|\\mathrm dx \\mathrm dy = \\frac{\\partial(u, v)}{\\partial(x, y)} \\mathrm dx \\mathrm dy\n\n\n\nVí dụ Chuyển hệ tọa độ Đề-các sang tọa độ cực.\nTa đặt x = r\\cos\\theta \\qquad y = r\\sin\\theta.\nThe Jacobian: \nJ  = \\frac{\\partial(x, y)}{\\partial(r, \\theta)} =\n\\begin{vmatrix}\nx_r & x_{\\theta} \\\\\ny_r & y_{\\theta}\n\\end{vmatrix} =\n\\begin{vmatrix}\n\\cos\\theta & -r\\sin\\theta \\\\\n\\sin\\theta & r\\cos\\theta\n\\end{vmatrix} =\nr\\cos^2\\theta + r\\sin^2\\theta = r\n\nVậy suy ra: \\mathrm dx \\mathrm dy = r \\mathrm dr \\mathrm d\\theta.",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#một-số-kiểu-tham-số-hóa",
-    "href": "note/multivariable-calculus/4.html#một-số-kiểu-tham-số-hóa",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Một số kiểu tham số hóa",
-    "text": "Một số kiểu tham số hóa\n\nMặt phẳng z = a song song với mặt phẳng xy: \n\\hat{\\mathbf n} = \\pm \\hat{\\mathbf k} \\qquad \\mathrm dS = \\mathrm dx \\mathrm dy\n\nHình cầu bán kính a, tâm tại gốc tọa độ, dùng \\phi, \\theta: \n\\hat{\\mathbf n} = \\frac 1 a &lt;x, y, z&gt; \\qquad \\mathrm dS = a^2\\sin\\phi\\mathrm d\\phi\\mathrm d\\theta\n\nHình trụ bán kính a, tâm ở trục z, dùng z, \\theta: \n\\hat{\\mathbf n} = \\frac 1 a &lt;x, y, 0&gt; \\qquad \\mathrm dS = a\\mathrm dz\\mathrm d\\theta\n\nHình phụ thuộc vào x và y, z = f(x, y), dùng x, y: \n\\hat{\\mathbf n}\\mathrm dS = &lt;-f_x, -f_y, 1&gt;\\mathrm dx\\mathrm dy",
+    "objectID": "note/multivariable-calculus/3.html#tính-biên---notyet",
+    "href": "note/multivariable-calculus/3.html#tính-biên---notyet",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Tính biên - notyet",
+    "text": "Tính biên - notyet",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#parametric-surfaces",
-    "href": "note/multivariable-calculus/4.html#parametric-surfaces",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Parametric surfaces",
-    "text": "Parametric surfaces\nNếu tất cả các biến phụ thuộc vào tham số, ví dụ như:\n\n\\begin{cases}\nx = x(u, v) \\\\\ny = y(u, v) \\\\\nz = z(u, v) \\\\\n&lt;x, y, z&gt; = \\vec r = r(u, v) \\\\\n\\end{cases}\n\nThế thì ta có thể tính thông lượng sử dụng hai biến u và v. Ta có:\n\n\\frac {\\partial \\vec r}{\\partial u}\\Delta u =\n\\left&lt;\\frac{\\partial x}{\\partial u}\\Delta x,\n\\frac{\\partial y}{\\partial u}\\Delta y,\n\\frac{\\partial z}{\\partial u}\\Delta z\n\\right&gt;\n\n\n\\frac {\\partial \\vec r}{\\partial v}\\Delta v =\n\\left&lt;\\frac{\\partial x}{\\partial v}\\Delta x,\n\\frac{\\partial y}{\\partial v}\\Delta y,\n\\frac{\\partial z}{\\partial v}\\Delta z\n\\right&gt;\n\n\n\\Delta S = \\left(\\frac{\\partial \\vec r}{\\partial u}\\Delta u \\right) \\times \\left(\\frac{\\partial \\vec r}{\\partial v}\\Delta v \\right) =\n\\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)\\Delta x \\Delta y\n\nCuối cùng:\n\nd\\vec S = \\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)dxdy",
+    "objectID": "note/multivariable-calculus/3.html#công",
+    "href": "note/multivariable-calculus/3.html#công",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Công",
+    "text": "Công\nA = Fs = \\vec F \\cdot \\Delta \\vec r cho một chuyển động nhỏ \\Delta \\vec r. Tổng công được tính bằng cách tính tổng các cái này theo một quỹ đạo C.\nTưởng tượng có một đường cong C. Một điểm di chuyển trên quỹ đạo đó, và có lực tại mỗi điểm là khác nhau. Công tại một điểm bằng tích vô hướng của F với vector tiếp tuyến tại điểm đó. Và tổng công là khi ta chia nhỏ các vector tiếp tuyến, đến vô hạn.\n\nW = \\int_C \\vec F \\cdot \\mathrm d\\vec r \\left(= \\lim_{\\Delta \\vec r \\rightarrow 0} \\sum_i \\vec F \\cdot \\Delta \\vec r_i \\right)",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#implicit-surfaces",
-    "href": "note/multivariable-calculus/4.html#implicit-surfaces",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Implicit surfaces",
-    "text": "Implicit surfaces\nNếu ta có:\n\nax + by + cz = d \\longrightarrow \\vec N = &lt;a, b, c&gt;\nMặt phẳng g(x, y, z) = 0 \\longrightarrow \\vec N = \\nabla g\n\n\n\\hat n dS = \\pm \\frac {|\\vec N|}{|\\vec N \\cdot \\hat k|}dxdy",
+    "objectID": "note/multivariable-calculus/3.html#cách-tính-tích-phân-đường",
+    "href": "note/multivariable-calculus/3.html#cách-tính-tích-phân-đường",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Cách tính tích phân đường",
+    "text": "Cách tính tích phân đường\nVí dụ Tính F = &lt;2xy, x^2y&gt; với đường y = x^2, 0 \\leq x \\leq 1.\nBước 1: Tham số hóa.\nTa sẽ cố biểu diễn x và y theo một biến, ở đây ta gọi là t. Ý nghĩa của t là tại t = 0, thì đang ở điểm (0, 0) và tại t = 1 thì đang ở điểm (1, 1).\n\nx = t \\qquad \\mathrm dx = 1\\mathrm dt \\\\\ny = t^2 \\qquad \\mathrm dy = 2t\\mathrm dt\n\nBước 2: Tìm công thức.\nTa đã biết rằng: \n\\int_C \\vec F \\cdot \\mathrm d\\vec r = \\int_C &lt;2xy, x^2y&gt;\\cdot&lt;\\mathrm dx, \\mathrm dy&gt; = \\int_C 2xy\\mathrm dx + x^2y\\mathrm dy\n\nBước 3: Thay số vào và tính.\n\n\\int_0^1 2tt^21\\mathrm dt + t^2t^2 2t\\mathrm dt\n \n= \\int_0^1 2t^3 + 2t^5 \\mathrm dt\n\n\n= \\left[2 \\frac {t^4} 4 \\right]_0^1 + \\left[2 \\frac{t^6} 6 \\right]_0^1 = \\frac 1 2 + \\frac 1 3 = \\frac 5 6",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
-    "href": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Ý nghĩa hình học",
-    "text": "Ý nghĩa hình học\nLHS: \n\\iint_S \\mathbf F \\cdot \\hat n dS\n\nlà tổng lượng trường đi xuyên qua mặt kín.\nRHS: \n\\iiint \\nabla \\cdot \\mathbf F dV\n\nlà tổng nguồn phát sinh bên trong khối.\nNếu divergence dương \\longrightarrow trường được tạo ra bên trong.\nNếu divergence âm \\longrightarrow trường được hút vào bên trong.",
+    "objectID": "note/multivariable-calculus/3.html#fundamental-theorem-of-calculus-for-line-integral",
+    "href": "note/multivariable-calculus/3.html#fundamental-theorem-of-calculus-for-line-integral",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Fundamental theorem of calculus for line integral",
+    "text": "Fundamental theorem of calculus for line integral\nChúng ta đã học ở giải tích một biến rằng:\n\n\\int_a^b f'(x) \\mathrm dx = f(b) - f(a)\n\nThì chúng ta cũng có định lý cơ bản của giải tích cho tích phân đường. Điều này được áp dụng nếu như \\vec F là Gradient fields.\nKhi đó định lý cho tích phân đường C có hàm F là một Gradient fiedls đi từ P0 đến P1 là:\n\n\\int_C \\nabla f \\cdot \\mathrm d\\vec r = f(P_1) - f(P_0)\n\nHay:\n\n\\int_C f_x \\mathrm dx + f_y \\mathrm dy = \\int_C \\mathrm df = f(P_1) - f(P_0)\n\n\n\n\n\n\n\nNoteProof\n\n\n\n\n\\int_C \\nabla f \\cdot \\mathrm d\\vec r\n \n= \\int_{t_0}^{t_1} \\left(f_x \\frac{\\mathrm dx}{\\mathrm dt} + f_y \\frac{\\mathrm dx}{\\mathrm dt} \\right) \\mathrm dt\n\n\n= \\int_{t_0}^{t_1} \\frac{\\mathrm df}{\\mathrm dt}\\mathrm dt\n \n= \\left[f(x(t), y(t)) \\right]_{t_0}^{t_1}\n \n= f(P_1) - f(P_0)\n\n\n\nQuay lại với ví dụ bài tập ở trên. Bằng một cách thần kỳ nào đó, tôi biết được f(x, y) = xy suy ra \\nabla f = &lt;y, x&gt;. Trường vector của chúng ta là trường vector gradient. Vậy nên chúng ta có thể áp dụng định lý cơ bản này.\nVì điểm đầu = điểm cuối nên đáp án = 0. Hoàn toàn phù hợp.",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#physical-interpretation",
-    "href": "note/multivariable-calculus/4.html#physical-interpretation",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Physical interpretation",
-    "text": "Physical interpretation",
+    "objectID": "note/multivariable-calculus/3.html#path-independence-1",
+    "href": "note/multivariable-calculus/3.html#path-independence-1",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Path independence",
+    "text": "Path independence\nTừ đó ta suy ra một định nghĩa mới, đường đi độc lập, giá trị của tích phân đường chỉ phụ thuộc vào điểm đầu và điểm cuối, không phụ thuộc vào nó đi đường nào.\nĐiều này khi và chỉ khi trường vector là conservative, \\vec F = \\nabla f, khi đó:\n\n\\int_c \\vec F \\mathrm d\\vec r = f(B) - f(A)\n\nVí dụ\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom matplotlib.collections import LineCollection\ndef colored_line(ax, x, y, cmap='viridis', lw=5):\n    points = np.array([x, y]).T.reshape(-1, 1, 2)\n    segments = np.concatenate([points[:-1], points[1:]], axis=1)\n\n    lc = LineCollection(\n        segments,\n        cmap=cmap,\n        norm=plt.Normalize(0, 1)\n    )\n\n    lc.set_array(np.linspace(0, 1, len(x)-1))\n    lc.set_linewidth(lw)\n    ax.add_collection(lc)\n    return lc\nt = np.linspace(0, 1, 500)\n\nx1 = 4 * t\ny1 = -1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\n\nx2 = 4 * t\ny2 =  1.35 * np.sin(np.pi * t) * np.sin(0.9 * np.pi * t)\nfig, ax = plt.subplots(figsize=(9,5))\n\ncolored_line(ax, x1, y1, cmap='viridis', lw=5)\ncolored_line(ax, x2, y2, cmap='viridis', lw=5)\nk = 320\nax.annotate(\n    \"\",\n    xy=(x1[k+8], y1[k+8]),\n    xytext=(x1[k], y1[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\nk = 270\nax.annotate(\n    \"\",\n    xy=(x2[k+8], y2[k+8]),\n    xytext=(x2[k], y2[k]),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        color=\"black\",\n        lw=2\n    )\n)\n\nax.scatter([0,4],[0,0], color='black', s=40)\n\nax.text(-0.22,-0.18,r\"$P_0$\",fontsize=18)\nax.text(4.08,-0.18,r\"$P_1$\",fontsize=18)\n\nax.text(2.45,-1.35,r\"$C_1$\",fontsize=18)\nax.text(2.45, 1.15,r\"$C_2$\",fontsize=18)\nax.set_aspect('equal')\nax.set_xlim(-0.5,4.5)\nax.set_ylim(-2.0,2.0)\n\nax.axis('off')\n\nplt.tight_layout()\nplt.show()",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
-    "href": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 1: Tách cách thành phần và chứng minh",
-    "text": "Bước 1: Tách cách thành phần và chứng minh\nTa cần chứng minh:\n\n\\iint_C \\mathbf F \\cdot d\\vec S = \\iiint_D \\nabla \\cdot \\mathbf F dV\n\nvới \\mathbf F = &lt;P, Q, R&gt;. Do:\n\n\\nabla \\cdot \\mathbf F = P_x + Q_y + R_z\n\nnên\n\n\\iiint_D (P_x + Q_y + R_z)dV =\n\\iiint_D P_x dV +\n\\iiint_D Q_y dV +\n\\iiint_D R_z dV\n\n\n\\iint_S \\mathbf F \\cdot d\\vec S =\n\\iint_S PdS_x +\n\\iint_S QdS_y +\n\\iint_S RdS_z\n\nVì các thành phần độc lập với nhau, vì vậy chỉ cần chứng minh:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_z dV\n\nvà tương tự với \\iint_S P\\hat i \\cdot d\\vec S, \\iint_SQ\\hat j\\cdot d\\vec S.",
+    "objectID": "note/multivariable-calculus/3.html#cách-1-sử-dụng-tích-phân-đường",
+    "href": "note/multivariable-calculus/3.html#cách-1-sử-dụng-tích-phân-đường",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Cách 1: Sử dụng tích phân đường",
+    "text": "Cách 1: Sử dụng tích phân đường\nGiả sử đường cong bắt đầu từ điểm (0, 0) đến (x_1, y_1) thì khi đó:\n\n\\int_C \\vec F \\mathrm d\\vec r = f(x_1, y_1) - f(0, 0)\n\nChuyển vế:\n\nf(x_1, y_1) = \\int_C \\vec F \\mathrm d\\vec r + f(0, 0)\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-1.6, 1.6, 17)\ny = np.linspace(-1.6, 1.6, 17)\n\nX, Y = np.meshgrid(x, y)\n\nU = 4*X**2 + 8*X*Y\nV = 3*Y**2 + 4*X**2\n\nspeed = np.sqrt(U**2 + V**2)\n\nfig, ax = plt.subplots(figsize=(6,6))\n\nq = ax.quiver(\n    X, Y, U, V, speed,\n    cmap=\"viridis\",\n    pivot=\"mid\",\n    scale=65\n)\n\nax.annotate(\n    \"\",\n    xy=(1,0),\n    xytext=(0,0),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        lw=3,\n        color=\"purple\"\n    )\n)\n\nax.text(0.45, -0.12, r\"$C_1$\", fontsize=14, color=\"purple\")\n\nax.annotate(\n    \"\",\n    xy=(1,1),\n    xytext=(1,0),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        lw=3,\n        color=\"purple\"\n    )\n)\n\nax.text(1.05, 0.45, r\"$C_2$\", fontsize=14, color=\"purple\")\n\nax.annotate(\n    \"\",\n    xy=(1,1),\n    xytext=(0,0),\n    arrowprops=dict(\n        arrowstyle=\"-&gt;\",\n        lw=3,\n        color=\"purple\"\n    )\n)\n\nax.text(0.42, 0.58, r\"$C_3$\", fontsize=14, color=\"purple\")\n\nax.set_xlim(-1.6, 1.6)\nax.set_ylim(-1.6, 1.6)\n\nax.set_aspect(\"equal\")\n\nax.axhline(0, color=\"black\", lw=1)\nax.axvline(0, color=\"black\", lw=1)\n\nax.set_xlabel(\"$x$\")\nax.set_ylabel(\"$y$\")\n\n# ax.set_xticks(np.arange(-1.5, 1.6, 0.5))\n# ax.set_yticks(np.arange(-1.5, 1.6, 0.5))\n\n# plt.colorbar(q, label=r\"$|\\mathbf{F}|$\")\n\nplt.tight_layout()\nplt.show()\nplt.show()\n\n\n\n\n\n\n\n\n\nCó rất nhiều đường đi khả dĩ, ví dụ như là C_3 hoặc là C_1 + C_2, … Cách chọn tùy thuộc vào bạn.\nTôi sẽ chọn cách tính C_1 + C_2.\n\n\\int_C = \\int_{C_1} + \\int_{C_2}\n\nTính C_1\n\ny = 0 \\qquad \\mathrm dy = 0\n\n\n\\int_{C_1} = \\int_0^{x_1} (4x^2) \\mathrm dx\n \n= \\left[\\frac 4 3 x^3 \\right]_0^{x_1} = \\frac 4 3 {x_1}^3\n\nTính C_2\n\nx = x_1 \\qquad \\mathrm dx = 0\n\n\n\\int_{C_2} = \\int_0^{y_1} (3y^2 + 4{x_1}^2)\\mathrm dy\n \n= \\left[y^3 + 4{x_1}^2y \\right]_0^{y_1} = {y_1}^3 + 4{x_1}^2{y_1}\n\nTính C\n\n\\int_C = \\int_{C_1} + \\int_{C_2} = \\frac 4 3 {x_1}^3 + {y_1}^3 + 4{x_1}^2{y_1}\n\nVậy\n\nf(x_1, y_1) = \\frac 4 3 {x_1}^3 + {y_1}^3 + 4{x_1}^2{y_1} + C\n\nhay\n\nf(x, y) = \\frac 4 3 {x}^3 + {y}^3 + 4{x}^2{y} + C",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
-    "href": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 2: Miền đơn giản theo phương z",
-    "text": "Bước 2: Miền đơn giản theo phương z\nGiả sử miền D = \\{(x, y, z) : (x, y) \\in \\mathbb U, z_1(x, y) \\leq x \\leq z_2(x, y)\\}.\nTức là miền bị kẹp giữa hai mặt:\n\nBottom: z = z_1(x, y)\nTop: z = z_2(x, y)",
+    "objectID": "note/multivariable-calculus/3.html#cách-2-sử-dụng-nguyên-hàm",
+    "href": "note/multivariable-calculus/3.html#cách-2-sử-dụng-nguyên-hàm",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Cách 2: Sử dụng Nguyên hàm",
+    "text": "Cách 2: Sử dụng Nguyên hàm\nTa muốn tìm một hàm f(x, y) mà nó có:\n\n\\begin{align}\nf_x = 4x^2 + 8xy \\tag{1} \\\\\nf_y = 3y^2 + 4x^2 \\tag{2}\n\\end{align}\n\nNguyên hàm f_x\nTa sẽ coi y như là một hằng số, vì vậy ở cuối ta phải cộng cho một hàm số chỉ theo một biến y (bởi vì khi đạo hàm nó đã biến mất, giống như C trong nguyên hàm một biến).\n\n(1) \\Rightarrow f = \\frac 4 3 x^3 + 4x^2y + g(y)\n\nVậy hàm f(x, y) = \\frac 4 3 x^3 + 4x^2y + g(y) (3)\nTìm g(y)\nTa lại đạo hàm riêng hàm f theo y, rồi lại so sánh 2 biểu thức với nhau.\n\n(3) \\Rightarrow f_y = 4x^2 + g'(y)\n\nVà ta có:\n\n(2) = (3) \\\\\n\\Rightarrow 3y^2 + 4x^2 = 4x^2 + g'(y)\n\n\ng'(y) = 3y^2 \\qquad \\Rightarrow \\qquad g(y) = y^3 + C\n\nTổng kết lại\nHàm trở thành:\n\nf(x, y) = \\frac 4 3 x^3 + 4x^2y + y^3 + C\n\nHoàn toàn giống với cách 1!",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
-    "href": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 3: Tính tích phân thể tích",
-    "text": "Bước 3: Tính tích phân thể tích\nTa có \\iiint_D R_zdV, do miền đơn giản theo z, nên thành:\n\n\\iint_U \\left(\\int_{z_1}^{z_2}R_zdz \\right)dxdy\n\nÁp dụng fundamental theorem of calculus \\int_{z_1}^{z_2}R_zdz = R(x, y, z_2) - R(x, y, z_1), nên:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy",
+    "objectID": "note/multivariable-calculus/3.html#tại-sao-lại-là-n_x---m_y",
+    "href": "note/multivariable-calculus/3.html#tại-sao-lại-là-n_x---m_y",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Tại sao lại là N_x - M_y",
+    "text": "Tại sao lại là N_x - M_y\nCứ tưởng ta đặt một vật tại một điểm trong trường.\nNó sẽ chịu ảnh hưởng bởi 2 hiệu ứng N_y và M_x.\nNếu chúng bằng nhau, thì có nghĩa là hai hiệu ứng có xu hướng triệt tiêu nhau, và khi đó không có curl. Dẫn đến việc hàm đó có tính bảo toàn.\nCòn nếu chúng không bảo toàn, thứ tức là còn một hiệu ứng nhiều hoặc ít hơn thằng còn lại.\nĐiều này cũng dẫn đến việc, độ lớn và dấu của Curl cũng biểu thị một sự việc gì đó.",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
-    "href": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 4: Flux through top",
-    "text": "Bước 4: Flux through top\nTa có mặt trên z = z_2(x, y), tham số hóa ta được:\n\n\\mathbf r(x, y) = (x, y, z_2(x, y))\n\nCó hai vector tiếp tuyến:\n\n\\mathbf r_x = (1, 0, z_{2x}) \\qquad \\mathbf r_y = (0, 1, z_{2y})\n\ntích có hướng:\n\n\\mathbf r_x \\times \\mathbf r_y = &lt;-z_{2x}, -z_{2y}, 1&gt;\n\nVậy:\n\nd\\vec S = \\left&lt;-\\frac{\\partial z_2}{\\partial x}, -\\frac{\\partial z_2}{\\partial y}, 1\\right&gt;dxdy\n\ntích vô hướng:\n\nR\\hat k \\cdot d\\vec S = &lt;0, 0, R&gt;\\cdot&lt;-z_{2x}, -z_{2y}, 1&gt; = R\n\ndo đó:\n\n\\iint_{top}R\\hat k \\cdot d\\vec S = \\iint_U R(x, y, z_2)dxdy",
+    "objectID": "note/multivariable-calculus/3.html#interpretation-of-curl",
+    "href": "note/multivariable-calculus/3.html#interpretation-of-curl",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Interpretation of curl",
+    "text": "Interpretation of curl\nVí dụ \\vec F = &lt;x, y&gt;\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-3, 3, 15)\ny = np.linspace(-3, 3, 15)\nX, Y = np.meshgrid(x, y)\n\nU = X\nV = Y\n\nmagnitude = np.sqrt(U**2 + V**2)\n\nplt.figure(figsize=(6, 6))\nq = plt.quiver(\n    X, Y, U, V,\n    magnitude,\n    cmap=\"viridis\",\n    angles=\"xy\",\n    scale_units=\"xy\",\n    scale=10,\n    pivot=\"mid\"\n)\n\nplt.axhline(0, color=\"black\", linewidth=0.8)\nplt.axvline(0, color=\"black\", linewidth=0.8)\nplt.gca().set_aspect(\"equal\")\nplt.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\n\nKhi đó:\n\nM = x \\qquad N = y \\\\\nM_y = 0 \\qquad N_x = 0\n\n\n\\Rightarrow \\text{curl}(\\vec F) = 0",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
-    "href": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 5: Flux through bottom",
-    "text": "Bước 5: Flux through bottom\nTương tự nhưng mà tiếp tuyến đổi hướng, vậy nên:\n\nd\\vec S = \\left&lt;\\frac{\\partial z_1}{\\partial x}, \\frac{\\partial z_1}{\\partial y}, -1\\right&gt;dxdy\n\nVậy:\n\n\\iint_{bottom}R\\hat k \\cdot d\\vec S = -\\iint_U R(x, y, z_1)dxdy",
+    "objectID": "note/multivariable-calculus/3.html#công-thức",
+    "href": "note/multivariable-calculus/3.html#công-thức",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Công thức",
+    "text": "Công thức\nNếu C là một đường cong khép kín:\n\n\\oint_C \\vec F\\cdot \\mathrm d\\vec r = \\int\\int_R \\text{curl}(\\vec F) \\mathrm dA\n\nhay\n\n\\oint_C M\\mathrm dx + N\\mathrm dy = \\int\\int_R (N_x - M_y)\\mathrm dA\n\nVí dụ Tính đường tròn khép kín C bán kính 1 tâm I(2, 0), ngược chiều kim đồng hồ, và R là hình tròn bên trong:\n\n\\oint_C ye^{-x}\\mathrm dx + \\left(\\frac 1 2 x^2 - e^{-x} \\right) \\mathrm dy\n\nThử tưởng tượng nếu bạn làm cách tích phân đường như bình thường thì sẽ rất là khó, chúng ta có thể thay độ cực vào, hoặc là sử dụng \\mathrm dx \\mathrm dy! Nhưng rất đáng để thử mà, đúng không?\nBây giờ chúng ta sử dụng Green’s Thm.\n\nN = \\frac 1 2 x^2 - e^{-x} \\qquad N_x = x + e^{-x} \\\\\nM = ye^{-x} \\qquad \\qquad M_y = e{-x}\n\n\n\\oint_C ye^{-x}\\mathrm dx + \\left(\\frac 1 2 x^2 - e^{-x} \\right) \\mathrm dy\n= \\int\\int_R N_x - M_y \\mathrm dA = \\int\\int_R (x + e^{-x}) - e^{-x} \\mathrm dA\n\nhay rút gọn lại là:\n\n\\int\\int_R x \\mathrm dA = 2\\pi\n\n\n\n\n\n\n\nImportantChú ý\n\n\n\n\n\nGreen’s Theorem hoạt động với đường cong khép kín ngược chiều đồng hồ.\nVà Curl được tính là N_x - M_y.\nĐó là quy ước!",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
-    "href": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 6: Flux through sides",
-    "text": "Bước 6: Flux through sides\nCác pháp tuyến nằm ngang, và các mặt phẳng nằm dựng đứng, vậy nên thông lượng qua các mặt = 0.",
+    "objectID": "note/multivariable-calculus/3.html#ứng-dụng",
+    "href": "note/multivariable-calculus/3.html#ứng-dụng",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Ứng dụng",
+    "text": "Ứng dụng",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
-    "href": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 7: Tổng kết",
-    "text": "Bước 7: Tổng kết\nThông lượng toàn bộ mặt:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U R(x, y, z_2)dxdy -\n\\iint_U R(x, y, z_1)dxdy\n\nHay tóm gọn lại:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U (R(x, y, z_2) - R(x, y, z_1))dxdy\n\nMà ở bước 3, ta tính được:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy\n\nVậy:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_zdV",
+    "objectID": "note/multivariable-calculus/3.html#chứng-minh",
+    "href": "note/multivariable-calculus/3.html#chứng-minh",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Chứng minh",
+    "text": "Chứng minh\n2 nhận xét sơ bộ:\n\nNếu một cái bằng 0 và cái còn lại giữ nguyên thì: \n\\oint M \\mathrm dx = -\\int\\int_R M_y \\mathrm dA \\qquad \\oint N \\mathrm dy = \\int\\int_R N_x \\mathrm dA\n\nNếu nó đúng với 2 vùng R_1 và R_2 thì khi hợp lại nó cũng đúng R = R_1 \\cup R_2:\n\n\n\\oint_C = \\oint_{C_1} + \\oint_{C_2} \\qquad \\int\\int_R = \\int\\int_{R_1} + \\int\\int_{R_2}\n\nVà bây giờ chúng ta sẽ chứng minh \\oint_C M\\mathrm dx = -\\int\\int M_y\\mathrm dA (Nếu điều này đúng, thì tự khắc việc \\oint N \\mathrm dy = \\int\\int_R N_x \\mathrm dA cũng đúng, ta sẽ dùng cái này vì nó sẽ dễ nhìn hơn).\n\n\\oint_C M\\mathrm dx = -\\int\\int M_y\\mathrm dA\n\nLHS:\n\n\\oint_C = \\int_{C_1} + \\int_{C_2} + \\int_{C_3} + \\int_{C_4}\n\nNhưng trong hình vẽ ta thấy C_2 và C_4 là một đường thẳng song song với trục tung vậy nên \\int_{C_2}M\\mathrm dx = \\int_{C_4}M\\mathrm dx =0.\n\n\\int_{C_1} + \\int_{C_3} = \\int_a^b M(x, f_0(x)) \\mathrm dx - \\int_a^b M(x, f_1(x)) \\mathrm dx  \n\nRHS:\n\n-\\int\\int_R M_y \\mathrm dA = \\int_a^b \\int_{f_0(x)}^{f_1(x)} M_y \\mathrm dy \\mathrm dx\n\n\n= -\\int_a^b \\left[M(x, f_1(x)) - M(x, f_0(x)) \\right]\\mathrm dx = LHS",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
-    "href": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Ý nghĩa của Laplacian",
-    "text": "Ý nghĩa của Laplacian\nLaplacian đo xem giá trị tại một điểm cao hơn hay thấp hơn trung bình các điểm lân cận.\nNếu \n\\nabla^2f&gt;0\n thì điểm đó thấp hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy vào \\Rightarrow u tăng.\nNếu \n\\nabla^2f&lt;0\n thì điểm đó cao hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy ra \\Rightarrow u giảm.\nDo đo phương trình khuếch tán luôn có xu hướng làm trung bình hóa phân bố theo thời gian.",
+    "objectID": "note/multivariable-calculus/3.html#divergence",
+    "href": "note/multivariable-calculus/3.html#divergence",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Divergence",
+    "text": "Divergence\n\n\n\n\n\n\nNoteNhắc lại\n\n\n\nTa có:\n\ncurl(\\vec F) = N_x - M_y\n\n\n\nDivergence có lẽ sẽ được nhắc lại kỹ hơn ở các phần sau, nhưng hiện tại ta biết công thức của nó là:\n\n\\text{div}(\\vec F) = P_x + Q_y\n\ntrong trường vector \\vec F = &lt;P, Q&gt;",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#diffusion-equation",
-    "href": "note/multivariable-calculus/4.html#diffusion-equation",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Diffusion equation",
-    "text": "Diffusion equation\nPhương trình khuếch tán ví dụ như quản lý chuyển động của khói trong không khí (đứng yên), màu thuốc nhuộm trong dung dịch, …\nPhương trình là:\n\n\\frac{\\partial u}{\\partial t} = k\\nabla^2u\n= k \\left(\\frac{\\partial^2u}{\\partial x^2} +\n\\frac{\\partial^2u}{\\partial y^2} +\n\\frac{\\partial^2u}{\\partial z^2} \\right)\n\nTrong đó:\n\nu = (x, y, z, t) là đại lượng khuếch tán tại x, y, z vào thời điểm t.\nk là hệ số khuếch tán.\n\\nabla^2 toán tử Laplacian.\n\nVà heat equation là một trường hợp đặc biệt của diffusion equation.",
+    "objectID": "note/multivariable-calculus/3.html#greens-theorem-for-tangential-vector",
+    "href": "note/multivariable-calculus/3.html#greens-theorem-for-tangential-vector",
+    "title": "Double integrals and Line integrals in the plane",
+    "section": "Green’s Theorem for tangential vector",
+    "text": "Green’s Theorem for tangential vector\nTương tự như trong Green’s thm trong trường vector normal, là tổng của các \\text{curl}(\\vec F).\nThì Green’s thm trong trường vector tangent sẽ là tổng của các \\text{div}(\\vec F).\n\n\\oint_C \\vec F \\cdot \\hat{\\mathbf n}\\mathrm dS = \\int\\int_R \\text{div}(\\vec F)\\mathrm dA\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nt = np.linspace(-1.5, 2.5, 400)\nx_c = t + 0.8 * np.sin(3 * t)\ny_c = 0.4 * t**2 + 0.9 * np.cos(2.5 * t)\n\nx_min, x_max = np.min(x_c) - 1.0, np.max(x_c) + 1.0\ny_min, y_max = np.min(y_c) - 1.0, np.max(y_c) + 1.0\n\ngrid_x = np.linspace(x_min, x_max, 25)\ngrid_y = np.linspace(y_min, y_max, 25)\nX, Y = np.meshgrid(grid_x, grid_y)\n\nU = 4 * X**2 + 8 * X * Y\nV = 3 * Y**2 + 4 * X**2\nmag = np.hypot(U, V)\nmag_norm = np.where(mag == 0, 1, mag)\nU_norm = U / mag_norm\nV_norm = V / mag_norm\n\nt0 = 0.8\nx0 = t0 + 0.8 * np.sin(3 * t0)\ny0 = 0.4 * t0**2 + 0.9 * np.cos(2.5 * t0)\n\ndx_dt = 1 + 0.8 * 3 * np.cos(3 * t0)\ndy_dt = 0.8 * t0 - 0.9 * 2.5 * np.sin(2.5 * t0)\ntangent_len = np.hypot(dx_dt, dy_dt)\n\nux, uy = dx_dt / tangent_len, dy_dt / tangent_len\nnx, ny = dy_dt / tangent_len, -dx_dt / tangent_len \nFx = 4 * x0**2 + 8 * x0 * y0\nFy = 3 * y0**2 + 4 * x0**2\nF_len = np.hypot(Fx, Fy)\nFx_vis = (Fx / F_len) * 1.5\nFy_vis = (Fy / F_len) * 1.5\n\nfig, ax = plt.subplots(figsize=(5, 5), dpi=120)\n\nq = ax.quiver(X, Y, U_norm, V_norm, mag, cmap='viridis', alpha=0.35, angles='xy', scale=25, width=0.0035)\n\nax.plot(x_c, y_c, color='#1f77b4', linewidth=1.5)\n\narrow_t = np.linspace(-1.0, 2.0, 6)\nfor at in arrow_t:\n    ax_pt = at + 0.8 * np.sin(3 * at)\n    ay_pt = 0.4 * at**2 + 0.9 * np.cos(2.5 * at)\n    adx = 1 + 0.8 * 3 * np.cos(3 * at)\n    ady = 0.8 * at - 0.9 * 2.5 * np.sin(2.5 * at)\n    alen = np.hypot(adx, ady)\n    ax.annotate('', xy=(ax_pt + 0.15*adx/alen, ay_pt + 0.15*ady/alen), \n                xytext=(ax_pt, ay_pt),\n                arrowprops=dict(arrowstyle=\"-&gt;\", color='#1f77b4', lw=1.5, mutation_scale=15))\n\nax.plot(x0, y0, 'ko', markersize=7, zorder=6)\n# ax.quiver(x0, y0, Fx_vis, Fy_vis, color='crimson', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)\nax.quiver(x0, y0, ux, uy, color='mediumseagreen', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)\nax.quiver(x0, y0, nx, ny, color='darkorchid', angles='xy', scale_units='xy', scale=1, zorder=7, width=0.004)\n\nax.set_xlim(x_min, x_max)\nax.set_ylim(y_min, y_max)\nax.set_aspect('equal')\nax.grid(True, linestyle=':', alpha=0.4)\n\nplt.tight_layout()\nplt.savefig('vector_field_curve.png', bbox_inches='tight')\nplt.show()",
     "crumbs": [
       "18.02",
-      "Triple integrals and Surface integrals in 3D space"
+      "Double integrals and Line integrals in the plane"
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/4.html#test-for-gradient-fields",
-    "href": "note/multivariable-calculus/4.html#test-for-gradient-fields",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Test for Gradient fields",
-    "text": "Test for Gradient fields\nCho trường vector \\mathbf F = &lt;P, Q, R&gt; = &lt;f_x, f_y, f_z&gt;.\nVà:\n\n\\begin{cases}\nf_{xy} = f_{yx} \\\\\nf_{xz} = f_{zx} \\\\\nf_{yz} = f_{yz} \\\\\n\\end{cases} \\Rightarrow\n\\begin{cases}\nP_y = Q_x \\\\\nP_z = R_x \\\\\nQ_z = R_y\n\\end{cases}\n\n\\mathbf F là trường Gradient nếu và chỉ nếu thỏa mãn các điều kiện trên (cho rằng trường vector được định nghĩa khắp không gian hoặc là vùng liên đơn).\nVí dụ: tìm a, b để trường \\mathbf F = &lt;axy, x^2 + z^3, byz^2 - 4z^3&gt; là trường vector.\n\nP = axy \\qquad \\rightarrow \\qquad P_y = ax \\qquad P_z = 0 \\\\\nQ = x^2 + z^3 \\qquad \\rightarrow \\qquad Q_x = 2x \\qquad Q_z = 3z^2 \\\\\nR = byz^2 - 4z^3 \\qquad \\rightarrow \\qquad R_x = 0 \\qquad R_y = bz^2\n\n\n\\begin{cases}\nP_y = ax = 2x = Q_x \\\\\nP_z = 0 = 0 = R_z \\\\\nQ_z = 3z^2 = bz^2 = R_y\n\\end{cases} \\Rightarrow\n\\begin{cases}\na = 2 \\\\ b = 3\n\\end{cases}",
-    "crumbs": [
-      "18.02",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#finding-potential-function",
-    "href": "note/multivariable-calculus/4.html#finding-potential-function",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Finding Potential function",
-    "text": "Finding Potential function\nCách 1: Nguyên hàm\n\nf_x = 2xy \\rightarrow f = x^2y + g(y, z)\n\nĐạo hàm theo y:\n\n\\Rightarrow \\frac{\\partial f}{\\partial y} = x^2 + \\frac{\\partial g(y, z)}{\\partial y} = f_y = x^2 + z^3\n\\Rightarrow g_y = z^3\n\nNguyên hàm lại g_y:\n\ng = yz^3 + h(z)",
-    "crumbs": [
-      "18.02",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/MA006/index.html",
-    "href": "note/MA006/index.html",
-    "title": "Calculus",
+    "objectID": "note/multivariable-calculus/index.html",
+    "href": "note/multivariable-calculus/index.html",
+    "title": "Đạo hàm đa biến",
     "section": "",
-    "text": "Chap 1",
+    "text": "1. Vector và ma trận - Vectors and Matrices\n\n1.1. Vectors\n1.2. Dot product\n1.3. Determinants\n1.4. Cross product\n1.5. Matrices\n1.6. Square systems; Equation of planes\n1.7. Parametric equations for lines and curves\n1.8. Velocity\n1.9. Acceleration\n1.10. Kepler’s Second law\n\n\n\n\n2. Đạo hàm riêng - Partial derivatives\n\n2.1. Functions of several variables - Hàm nhiều biến\n\n2.1.1. Contour plot - Đồ thị đường bao\n\n2.2. Parital derivatives - Đạo hàm riêng\n2.3. Tangent plane approx - Mặt phẳng tiếp tuyến\n\n2.3.1. Appox formula - Công thức xấp xỉ\n2.3.2. Tangent plane - Mặt phẳng tiếp tuyến\n\n2.4. Max - Min problems - Bài toán cực trị\n\n2.4.1. Max point - Điểm cực đại\n2.4.2. Min point - Điểm cực tiểu\n2.4.3. Saddle point - Điểm yên ngựa\n\n2.5. Least squares - Bài toán tối ưu\n2.6. Second derivative - Đạo hàm bậc hai\n2.7. Differentials; Chain rule\n\n2.7.1. Total differential - Đạo hàm toàn phần\n2.7.2. Chain rule - Quy tắc chuỗi\n2.7.3. Application - Ứng dụng\n\n2.8. Gradient - Gradient\n2.9. Direction derivative - Đạo hàm theo hướng\n2.10. Lagrange multipliers - Nhân tử Lagrange\n2.11. Non-independent variables - Các biến phụ thuộc\n\n\n\n\n3. Tích phân kép và tích phân đường trong mặt phẳng - Double integrals and Line integrals in the plane\n\n3.1. Double integral\n\n3.1.1. Calculation\n3.1.2. Change the order\n\n3.2. Integration in Polar coordinates\n3.3. Change of variables\n\n3.3.1. Change of variables\n3.3.2. Jacobians\n3.3.3. Calculation upperr and lower limit\n\n3.4. Vector fields\n3.5. Line integrals\n\n3.5.1. Work\n3.5.2. Calculation Line integrals\n\n3.6. Path independence\n\n3.6.1. Fundamental theorem of calculus for line integral\n3.6.2. Path independence\n\n3.7. Conservative fields\n3.8. Test for Gradient fields\n3.9. Finding the Potential function\n\n3.9.1. Method 1: Using Line integral\n3.9.2. Method 2: Using Antiderivatives\n\n3.10. Curl\n\n3.10.1. Why N_x - M_y?\n3.10.2. Interpretation Curl\n\n3.11 Green’s Theorem\n\n3.11.1. Calculation\n3.11.2. Application\n3.11.3. Proof\n\n3.12. Flux\n\n3.12.1. Divergence\n3.12.2. Green’s theorem for flux\n\n3.13. Simply connected regions\n\n\n\n\n4. Tích phân bội ba và tích phân mặt trong không gian ba chiều - Triple integrals and Surface integrals in the 3-space\n\n4.1 Triple integrals in rectangular and cylindrical coordinates\n4.2 Spherical coordinates; Surface area\n4.3 Vector fields in 3D; Surface integrals and flux\n4.4 Divergence theorem\n4.5 Divergence theorem and its Applications and Proof\n4.6 Line integrals in space, Curl, Exactness and potentials\n4.7 Stokes’s theorem\n4.8 Topological considerations\n4.9 Maxwell’s equations",
     "crumbs": [
-      "MA006",
-      "Calculus"
-    ]
-  },
-  {
-    "objectID": "note/olympiad/index.html",
-    "href": "note/olympiad/index.html",
-    "title": "Olympiad Calculus",
-    "section": "",
-    "text": "some test to determine whether a series is converges or diverges",
-    "crumbs": [
-      "Olympiad",
-      "Olympiad Calculus"
-    ]
-  },
-  {
-    "objectID": "note/olympiad/index.html#single-variable-calculus",
-    "href": "note/olympiad/index.html#single-variable-calculus",
-    "title": "Olympiad Calculus",
-    "section": "",
-    "text": "some test to determine whether a series is converges or diverges",
-    "crumbs": [
-      "Olympiad",
-      "Olympiad Calculus"
-    ]
-  },
-  {
-    "objectID": "note/real-analysis/index.html",
-    "href": "note/real-analysis/index.html",
-    "title": "Real Analysis",
-    "section": "",
-    "text": "Cảm ứng mạnh mẽ từ 18.100 phân tích thực của MIT OCW, và là bản dịch tiếng Việt (có thể không chính xác của Basic Analysis I by Jiri Lebl).",
-    "crumbs": [
-      "18.100 - Real Analysis",
-      "Real Analysis"
+      "18.02",
+      "Đạo hàm đa biến"
     ]
   },
   {
@@ -1036,7 +1032,7 @@
     "href": "note/real-analysis/1.html",
     "title": "Số thực",
     "section": "",
-    "text": "Định nghĩa 1.1.1. Tập sắp thứ tự (ordered set): Là tập hợp S đi kèm quan hệ thứ tự “&lt;” thỏa mãn hai điều kiện:\n\nTính tam phân (Trichotomy): \\forall x, y \\in S, chỉ có đúng ba trường hợp x &lt; y, x &gt; y, x = y xảy ra.\nTính bắc cầu (Transitivity): Nếu x &lt; y và y &lt; z thì x &lt; z.\n\nTập số hữu tỉ \\mathbb{Q}, hay số tự nhiên và số nguyên đều là tập số thứ tự.\nNgoài tập số, còn có các kiểu tập hợp sắp thứ tự khác. Ví dụ trong từ điển, các từ có tính chất bắc cầu và tam phân, dựa trên bảng chữ cái để xét thằng nào lớn hơn, bé hơn.\nĐịnh nghĩa 1.1.2. Chặn trên, chặn dưới, và Tập bị chặn:\nGọi E \\subset S, trong đó S là một tập có thứ tự:\n\nNếu tồn tại một b \\in S, mà x \\leq b, \\forall x \\in E, thì ta nói rằng E bị chặn trên và b là cận trên của E.\nNếu tồn tại một b \\in S, mà x \\geq b, \\forall x \\in E, thì ta nói rằng E bị chặn dưới và b là cận dưới của E.\nNếu tồn tại một cận dưới b_0 của E mà b_0 \\leq b, với b là mọi cận trên của E. Thì ta gọi b_0 là cận trên nhỏ nhất (least upper bound) hoặc là supremum của E. Ta ký hiệu:\n\n\n\\sup E := b_0\n\n\nTương tự, nếu tồn tại một cận dưới b_0 của E mà b_0 \\geq b, với b là cận dưới của E. Thì ta gọi b_0 là cận dưới lớn nhất (greatest lower bound) hoặc là infimum của E. Ta ký hiệu:\n\n\n\\inf E := b_0\n\nKhi một tập E vừa bị chặn trên và bị chặn dưới, ta đơn giản nói rằng tập E bị chặn.\n\nMột ví dụ đơn giản: Gọi S := \\{a, b, c, d, e\\} được sắp xếp theo thứ tự a &lt; b &lt; c &lt; d &lt; e, và gọi E := \\{a, c\\}. Thì khi đó c, d, và e là cận trên của E, và c chính là cận trên nhỏ nhất hay supremum của E.\nMột supremum hoặc infimum của E không nhất thiết phải nằm trong E. Ví dụ, tập E:=\\{x \\in \\mathbb Q : x &lt; 1\\} có supremum là 1, nhưng 1 không nằm trong E.\nĐịnh nghĩa 1.1.3. Tính Least-upper-bound\nMột tập có thứ tự S, có tính leastupperbound nếu với mỗi tập con không rỗng E \\subset S đều bị chặn trên và có cận trên nhỏ nhất.\n\n\\sup E \\in S\n\nTính chặn trên nhỏ nhất thường được gọi là tính chất hoàn chỉnh (completeness property) hoặc tính chất hoàn chỉnh Dedekind (Dedekind completeness property). Và số thực có tính chất này.\nVí dụ 1.1.4.\nTập hợp số hữu tỉ \\mathbb{Q} không có tính chất hoàn chỉnh. Ví dụ như tập con \\{x \\in \\mathbb Q : x^2 &lt; 2\\} không có supremum trong \\mathbb{Q}.\nViệc Q koong có tính chất leastupperbound là một trong những lý do quan trọng ta làm việc với số thực trong analysis. Tập Q thì ổn với mấy ông đại số, nhưng những analysts cần những tính chất leastupperbound để làm việc.\nĐịnh nghĩa 1.1.5. Trường:\nMột tập hợp F được gọi là trường nếu nó thỏa mãn các tiên đề sau:\n(A1) If x, y \\in F then x + y \\in F\n(A2) x + y = y + x, \\forall x, y \\in F\n(A3) (x + y) + z = x + (y + z), \\forall x, y, z \\in F\n(A4) \\exists 0\\in F : 0 + x = x, \\forall x \\in F\n(A5) \\forall x \\in F, \\exists -x \\in F : x + (-x) = 0\n(M1) If x, y \\in F then xy \\in F\n(M2) xy = yx, \\forall x, y \\in F\n(M3) (xy)z = x(yz), \\forall x, y, z \\in F\n(M4) \\exists 1 \\in F (1 \\neq 0) : 1x = x, \\forall x \\in F\n(M5) \\forall x \\in F (x \\neq 0), \\exists 1/x \\in F : x(1/x) = 1\n\nx(y + z) = xy + xz, \\forall x, y, z \\in F\n\nVí dụ 1.1.6.\nTập hợp số hữu tỉ Q là một trường. Tập hợp số nguyên N không phải là trường (vi phạm điều M5).\nĐịnh nghĩa 1.1.7. Trường có thứ tự:\nMột trường F được gọi là có thứ tự nếu F là một tập hợp có thứ tự và:\n\n\\forall x, y, z \\in F, x &lt; y \\implies x + z &lt; y + z\n\\forall x, y \\in F :  x, y &gt; 0 \\implies xy &gt; 0\n\nMệnh đề 1.1.8. Cho F là một trường có thứ tự và x, y, z \\in F. Khi đó:\n\nIf x &gt; 0 then -x &lt; 0 (vice versa).\nIf x &gt; 0 and y &lt; z then xy &lt; xz.\nIf x &lt; 0 and y &lt; z then xy &gt; xz\nIf x \\neq 0 then x^2 &gt; 0.\nIf 0 &lt; x &lt; y then 0 &lt; \\frac 1 y &lt; \\frac 1 x.\nIf 0 &lt; x &lt; y then x^2 &lt; y^2.\nIf x \\leq y and z \\leq w then x + z \\leq y + w.\n\n\n\n\n\n\nĐịnh lý 1.2.1. Tồn tại duy nhất một trường có thứ tự \\mathbb{R} với tính chất leastupperbound mà \\mathbb{Q} \\subset \\mathbb{R}.\nMệnh đề 1.2.2. Nếu tồn tại x \\in \\mathbb{R} mà x \\leq \\epsilon, \\forall \\epsilon \\in \\mathbb{R}, (\\epsilon &gt; 0), khi đó x \\leq 0.\n\n\n\nĐịnh lý 1.2.4.\n\nTính chất Achimedes: x, y \\in \\mathbb{R}, \\exists n \\in \\mathbb{N} : nx &gt; y\n\\mathbb{Q} dày đặc trong \\mathbb{R}: x, y \\in \\mathbb{R}, \\exists r \\in \\mathbb{Q} : x &lt; r &lt; y\n\nHệ quả 1.2.5. \\inf \\left\\{\\frac 1 n : n \\in \\mathbb{N}\\right\\}\n\n\n\nSuprema và Infima hoàn toàn tương thích với các biểu thức đại số. Cho một tập hợp con A \\subset \\mathbb{R} và x \\in \\mathbb{R}, chúng ta định nghĩa:\n\nx + A := \\{x + y \\in \\mathbb{R} : y \\in A\\} \\\\\nxA := \\{xy \\in \\mathbb{R} : y \\in A\\}\n\nMệnh đề 1.2.6. Cho A \\subset \\mathbb{R} không rỗng:\n\nIf x \\in \\mathbb{R} and A is bounded above, then \\sup(x + A) = x + \\sup A\nIf x \\in \\mathbb{R} and A is bounded below, then \\inf(x + A) = x + \\inf A\nIf x &gt; 0 and A is bounded above, then \\sup(xA) = x(\\sup A)\nIf x &gt; 0 and A is bounded below, then \\inf(xA) = x(\\inf A)\nIf x &lt; 0 and A is bounded below, then \\sup(xA) = x(\\inf A)\nIf x &lt; 0 and A is bounded above, then \\inf(xA) = x(\\sup A)\n\nMệnh đề 1.2.7. Cho hai tập hợp A, B \\subset \\mathbb{R} không rỗng, và x \\leq y, x \\in \\mathbb{A}, y \\in \\mathbb{B}. Sau đó thì A bị chặn trên, B bị chặn dưới, khi đó \\sup A \\leq \\inf B.\nMệnh đề 1.2.8. Nếu S \\subset \\mathbb{R} không rỗng và bị chặn trên, thì sau đó với mỗi \\epsilon &gt; 0, tồn tại một x \\in S mà (\\sup S) - \\epsilon &lt; x \\leq \\sup S\nĐể sử dụng suprema và infima thuận tiện và dễ dàng hơn nữa, ta muốn viết \\sup A và \\inf A mà không cần phải lo lắng gì về việc A có bị chặn hay rỗng hay không, ta sẽ định nghĩa một số thứ như sau.\nĐịnh nghĩa 1.2.9. Cho A \\subset \\mathbb{R} là một tập:\n\nNếu A rỗng, thì \\sup A := -\\infty\nNếu A không bị chặn trên, thì \\sup A := \\infty\nNếu A rỗng thì \\inf A := \\infty\nNếu A không bị chặn dưới, thì \\inf A := -\\infty\n\nĐịnh nghĩa 1.2.10. Tập số thực mở rộng:\n\n\\mathbb{R}^* := \\mathbb{R} \\cup \\{-\\infty, \\infty\\}\n\nmà ở đó:\n\n-\\infty &lt; \\infty \\qquad\n-\\infty &lt; x \\qquad\nx &lt; \\infty \\qquad\n\\forall x \\in \\mathbb{R}\n\n\n\n\nNó cũng tương tự như supremum và infimum, nhưng thường đước sử dụng trong các tập hữu hạn thay vì vô hạn. Và cũng có ý chỉ rằng supremum của tập cũng nằm trong tập (vice versa).\nCó thể nói rằng supremum và infimum dùng trong các tập vô hạn, và không nhất thiết chúng phải nằm trong tập đó. Còn maximum và minimum dùng trong các tập hữu hạn và chúng phải nằm trong tập đó.\n\n\n\n\nMột khái niệm mà chúng ta sẽ gặp đi gặp lại nhiều lần đó chính là giá trị tuyết đối. Here is the formal defination:\n\n|x| := \\begin{cases}\nx & \\text{if} \\ x \\geq 0 \\\\\n-x & \\text{if} \\ x &lt; 0\n\\end{cases}\n\nMệnh đề 1.3.1.\n\n|x| \\geq 0, |x| = 0 khi và chỉ khi x = 0.\n|-x| = |x|, \\forall x \\in \\mathbb{R}\n|xy| = |x||y|, \\forall x, y \\in \\mathbb{R}\n|x|^2 = x^2, \\forall x \\in \\mathbb{R}\n|x| \\leq y khi và chỉ khi -y \\leq x \\leq y\n-|x| \\leq x \\leq |x|, \\forall x \\in \\mathbb{R}\n\nMệnh đề 1.3.2. Bất đẳng thức tam giác:\n\n|x + y| \\leq |x| + |y|, \\forall x, y \\in \\mathbb{R}\n\nHệ quả 1.3.3. Cho x, y \\in \\mathbb{R}\n\nBất đẳng thức tam giác ngược: ||x| - |y|| \\leq |x - y|.\n|x - y| \\leq |x| + |y|\n\nHệ quả 1.3.4. Cho x_1, x_2, ..., x_n \\in \\mathbb{R}, khi đó:\n\n|x_1 + x_2 + ... + x_n| \\leq |x_1| + |x_2| + ... + |x_n|\n\nĐịnh nghĩa 1.3.6. Giả sử rằng f : D \\rightarrow \\mathbb{R} là một hàm. Ta gọi f bị chặn nếu tồn tại một số M sao cho |f(x)| \\leq M, \\forall x \\in D.\n\nVới hàm f : D \\rightarrow \\mathbb{R}, ta viết\n\n\\sup_{x \\in D} f(x) := \\sup f(D) \\qquad\n\\inf_{x \\in D} f(x) := \\inf f(D)\n\nTa cũng có thể thay x \\in D bằng biểu thức, ví dụ như:\n\n\\sup_{x \\in D} f(x) = \\sup_{-1\\leq x\\leq 5}(x^2 - 9x + 1) = 11\n\nMệnh đề 1.3.7. Nếu f : D \\rightarrow \\mathbb{R} và g : D \\rightarrow \\mathbb{R} và\n\nf(x) \\leq g(x) \\qquad \\forall x \\in D\n\nthì khi đó:\n\n\\sup_{x \\in D} f(x) \\leq \\sup_{x \\in D} g(x) \\qquad\n\\inf_{x \\in D} f(x) \\leq \\inf_{x \\in D} g(x)\n\n\n\n\nHere is a formal defination of intervals. \\forall a, b \\in \\mathbb{R}, a &lt; b, chúng ta định nghĩa rằng:\n\n[a, b] := \\{x\\in \\mathbb{R} : a \\leq x \\leq b\\}, \\\\\n(a, b) := \\{x\\in \\mathbb{R} : a &lt; x &lt; b\\}, \\\\\n(a, b] := \\{x\\in \\mathbb{R} : a &lt; xd \\leq b\\}, \\\\\n[a, b) := \\{x\\in \\mathbb{R} : a \\leq x &lt; b\\}.",
+    "text": "Định nghĩa 1.1.1. Tập sắp thứ tự (ordered set): Là tập hợp S đi kèm quan hệ thứ tự “&lt;” thỏa mãn hai điều kiện:\n\nTính tam phân (Trichotomy): \\forall x, y \\in S, chỉ có đúng ba trường hợp x &lt; y, x &gt; y, x = y xảy ra.\nTính bắc cầu (Transitivity): Nếu x &lt; y và y &lt; z thì x &lt; z.\n\nTập số hữu tỉ \\mathbb{Q}, hay số tự nhiên và số nguyên đều là tập số thứ tự.\nNgoài tập số, còn có các kiểu tập hợp sắp thứ tự khác. Ví dụ trong từ điển, các từ có tính chất bắc cầu và tam phân, dựa trên bảng chữ cái để xét thằng nào lớn hơn, bé hơn.\nĐịnh nghĩa 1.1.2. Chặn trên, chặn dưới, và Tập bị chặn:\nGọi E \\subset S, trong đó S là một tập có thứ tự:\n\nNếu tồn tại một b \\in S, mà x \\leq b, \\forall x \\in E, thì ta nói rằng E bị chặn trên và b là cận trên của E.\nNếu tồn tại một b \\in S, mà x \\geq b, \\forall x \\in E, thì ta nói rằng E bị chặn dưới và b là cận dưới của E.\nNếu tồn tại một cận dưới b_0 của E mà b_0 \\leq b, với b là mọi cận trên của E. Thì ta gọi b_0 là cận trên nhỏ nhất (least upper bound) hoặc là supremum của E. Ta ký hiệu:\n\n\n\\sup E := b_0\n\n\nTương tự, nếu tồn tại một cận dưới b_0 của E mà b_0 \\geq b, với b là cận dưới của E. Thì ta gọi b_0 là cận dưới lớn nhất (greatest lower bound) hoặc là infimum của E. Ta ký hiệu:\n\n\n\\inf E := b_0\n\nKhi một tập E vừa bị chặn trên và bị chặn dưới, ta đơn giản nói rằng tập E bị chặn.\n\nMột ví dụ đơn giản: Gọi S := \\{a, b, c, d, e\\} được sắp xếp theo thứ tự a &lt; b &lt; c &lt; d &lt; e, và gọi E := \\{a, c\\}. Thì khi đó c, d, và e là cận trên của E, và c chính là cận trên nhỏ nhất hay supremum của E.\nMột supremum hoặc infimum của E không nhất thiết phải nằm trong E. Ví dụ, tập E:=\\{x \\in \\mathbb Q : x &lt; 1\\} có supremum là 1, nhưng 1 không nằm trong E.\nĐịnh nghĩa 1.1.3. Tính Least-upper-bound\nMột tập có thứ tự S, có tính leastupperbound nếu với mỗi tập con không rỗng E \\subset S đều bị chặn trên và có cận trên nhỏ nhất.\n\n\\sup E \\in S\n\nTính chặn trên nhỏ nhất thường được gọi là tính chất hoàn chỉnh (completeness property) hoặc tính chất hoàn chỉnh Dedekind (Dedekind completeness property). Và số thực có tính chất này.\nVí dụ 1.1.4.\nTập hợp số hữu tỉ \\mathbb{Q} không có tính chất hoàn chỉnh. Ví dụ như tập con \\{x \\in \\mathbb Q : x^2 &lt; 2\\} không có supremum trong \\mathbb{Q}.\nViệc Q koong có tính chất leastupperbound là một trong những lý do quan trọng ta làm việc với số thực trong analysis. Tập Q thì ổn với mấy ông đại số, nhưng những analysts cần những tính chất leastupperbound để làm việc.\nĐịnh nghĩa 1.1.5. Trường:\nMột tập hợp F được gọi là trường nếu nó thỏa mãn các tiên đề sau:\n(A1) If x, y \\in F then x + y \\in F\n(A2) x + y = y + x, \\forall x, y \\in F\n(A3) (x + y) + z = x + (y + z), \\forall x, y, z \\in F\n(A4) \\exists 0\\in F : 0 + x = x, \\forall x \\in F\n(A5) \\forall x \\in F, \\exists -x \\in F : x + (-x) = 0\n(M1) If x, y \\in F then xy \\in F\n(M2) xy = yx, \\forall x, y \\in F\n(M3) (xy)z = x(yz), \\forall x, y, z \\in F\n(M4) \\exists 1 \\in F (1 \\neq 0) : 1x = x, \\forall x \\in F\n(M5) \\forall x \\in F (x \\neq 0), \\exists 1/x \\in F : x(1/x) = 1\n\nx(y + z) = xy + xz, \\forall x, y, z \\in F\n\nVí dụ 1.1.6.\nTập hợp số hữu tỉ Q là một trường. Tập hợp số nguyên N không phải là trường (vi phạm điều M5).\nĐịnh nghĩa 1.1.7. Trường có thứ tự:\nMột trường F được gọi là có thứ tự nếu F là một tập hợp có thứ tự và:\n\n\\forall x, y, z \\in F, x &lt; y \\implies x + z &lt; y + z\n\\forall x, y \\in F :  x, y &gt; 0 \\implies xy &gt; 0\n\nMệnh đề 1.1.8. Cho F là một trường có thứ tự và x, y, z \\in F. Khi đó:\n\nIf x &gt; 0 then -x &lt; 0 (vice versa).\nIf x &gt; 0 and y &lt; z then xy &lt; xz.\nIf x &lt; 0 and y &lt; z then xy &gt; xz\nIf x \\neq 0 then x^2 &gt; 0.\nIf 0 &lt; x &lt; y then 0 &lt; \\frac 1 y &lt; \\frac 1 x.\nIf 0 &lt; x &lt; y then x^2 &lt; y^2.\nIf x \\leq y and z \\leq w then x + z \\leq y + w.\n\n\n\n\n\n\nĐịnh lý 1.2.1. Tồn tại duy nhất một trường có thứ tự \\mathbb{R} với tính chất leastupperbound mà \\mathbb{Q} \\subset \\mathbb{R}.\nMệnh đề 1.2.2. Nếu tồn tại x \\in \\mathbb{R} mà x \\leq \\epsilon, \\forall \\epsilon \\in \\mathbb{R}, (\\epsilon &gt; 0), khi đó x \\leq 0.\n\n\n\nĐịnh lý 1.2.4.\n\nTính chất Achimedes: x, y \\in \\mathbb{R}, \\exists n \\in \\mathbb{N} : nx &gt; y\n\\mathbb{Q} dày đặc trong \\mathbb{R}: x, y \\in \\mathbb{R}, \\exists r \\in \\mathbb{Q} : x &lt; r &lt; y\n\nHệ quả 1.2.5. \\inf \\left\\{\\frac 1 n : n \\in \\mathbb{N}\\right\\}\n\n\n\nSuprema và Infima hoàn toàn tương thích với các biểu thức đại số. Cho một tập hợp con A \\subset \\mathbb{R} và x \\in \\mathbb{R}, chúng ta định nghĩa:\n\nx + A := \\{x + y \\in \\mathbb{R} : y \\in A\\} \\\\\nxA := \\{xy \\in \\mathbb{R} : y \\in A\\}\n\nMệnh đề 1.2.6. Cho A \\subset \\mathbb{R} không rỗng:\n\nIf x \\in \\mathbb{R} and A is bounded above, then \\sup(x + A) = x + \\sup A\nIf x \\in \\mathbb{R} and A is bounded below, then \\inf(x + A) = x + \\inf A\nIf x &gt; 0 and A is bounded above, then \\sup(xA) = x(\\sup A)\nIf x &gt; 0 and A is bounded below, then \\inf(xA) = x(\\inf A)\nIf x &lt; 0 and A is bounded below, then \\sup(xA) = x(\\inf A)\nIf x &lt; 0 and A is bounded above, then \\inf(xA) = x(\\sup A)\n\nMệnh đề 1.2.7. Cho hai tập hợp A, B \\subset \\mathbb{R} không rỗng, và x \\leq y, x \\in \\mathbb{A}, y \\in \\mathbb{B}. Sau đó thì A bị chặn trên, B bị chặn dưới, khi đó \\sup A \\leq \\inf B.\nMệnh đề 1.2.8. Nếu S \\subset \\mathbb{R} không rỗng và bị chặn trên, thì sau đó với mỗi \\epsilon &gt; 0, tồn tại một x \\in S mà (\\sup S) - \\epsilon &lt; x \\leq \\sup S\nĐể sử dụng suprema và infima thuận tiện và dễ dàng hơn nữa, ta muốn viết \\sup A và \\inf A mà không cần phải lo lắng gì về việc A có bị chặn hay rỗng hay không, ta sẽ định nghĩa một số thứ như sau.\nĐịnh nghĩa 1.2.9. Cho A \\subset \\mathbb{R} là một tập:\n\nNếu A rỗng, thì \\sup A := -\\infty\nNếu A không bị chặn trên, thì \\sup A := \\infty\nNếu A rỗng thì \\inf A := \\infty\nNếu A không bị chặn dưới, thì \\inf A := -\\infty\n\nĐịnh nghĩa 1.2.10. Tập số thực mở rộng:\n\n\\mathbb{R}^* := \\mathbb{R} \\cup \\{-\\infty, \\infty\\}\n\nmà ở đó:\n\n-\\infty &lt; \\infty \\qquad\n-\\infty &lt; x \\qquad\nx &lt; \\infty \\qquad\n\\forall x \\in \\mathbb{R}\n\n\n\n\nNó cũng tương tự như supremum và infimum, nhưng thường đước sử dụng trong các tập hữu hạn thay vì vô hạn. Và cũng có ý chỉ rằng supremum của tập cũng nằm trong tập (vice versa).\nCó thể nói rằng supremum và infimum dùng trong các tập vô hạn, và không nhất thiết chúng phải nằm trong tập đó. Còn maximum và minimum dùng trong các tập hữu hạn và chúng phải nằm trong tập đó.\n\n\n\n\nMột khái niệm mà chúng ta sẽ gặp đi gặp lại nhiều lần đó chính là giá trị tuyết đối. Here is the formal defination:\n\n|x| := \\begin{cases}\nx & \\text{if} \\ x \\geq 0 \\\\\n-x & \\text{if} \\ x &lt; 0\n\\end{cases}\n\nMệnh đề 1.3.1.\n\n|x| \\geq 0, |x| = 0 khi và chỉ khi x = 0.\n|-x| = |x|, \\forall x \\in \\mathbb{R}\n|xy| = |x||y|, \\forall x, y \\in \\mathbb{R}\n|x|^2 = x^2, \\forall x \\in \\mathbb{R}\n|x| \\leq y khi và chỉ khi -y \\leq x \\leq y\n-|x| \\leq x \\leq |x|, \\forall x \\in \\mathbb{R}\n\nMệnh đề 1.3.2. Bất đẳng thức tam giác:\n\n|x + y| \\leq |x| + |y|, \\forall x, y \\in \\mathbb{R}\n\nHệ quả 1.3.3. Cho x, y \\in \\mathbb{R}\n\nBất đẳng thức tam giác ngược: ||x| - |y|| \\leq |x - y|.\n|x - y| \\leq |x| + |y|\n\nHệ quả 1.3.4. Cho x_1, x_2, ..., x_n \\in \\mathbb{R}, khi đó:\n\n|x_1 + x_2 + ... + x_n| \\leq |x_1| + |x_2| + ... + |x_n|\n\nĐịnh nghĩa 1.3.6. Giả sử rằng f : D \\rightarrow \\mathbb{R} là một hàm. Ta gọi f bị chặn nếu tồn tại một số M sao cho |f(x)| \\leq M, \\forall x \\in D.\n\nVới hàm f : D \\rightarrow \\mathbb{R}, ta viết\n\n\\sup_{x \\in D} f(x) := \\sup f(D) \\qquad\n\\inf_{x \\in D} f(x) := \\inf f(D)\n\nTa cũng có thể thay x \\in D bằng biểu thức, ví dụ như:\n\n\\sup_{x \\in D} f(x) = \\sup_{-1\\leq x\\leq 5}(x^2 - 9x + 1) = 11\n\nMệnh đề 1.3.7. Nếu f : D \\rightarrow \\mathbb{R} và g : D \\rightarrow \\mathbb{R} và\n\nf(x) \\leq g(x) \\qquad \\forall x \\in D\n\nthì khi đó:\n\n\\sup_{x \\in D} f(x) \\leq \\sup_{x \\in D} g(x) \\qquad\n\\inf_{x \\in D} f(x) \\leq \\inf_{x \\in D} g(x)\n\n\n\n\nHere is a formal defination of intervals. \\forall a, b \\in \\mathbb{R}, a &lt; b, chúng ta định nghĩa rằng:\n\n[a, b] := \\{x\\in \\mathbb{R} : a \\leq x \\leq b\\}, \\\\\n(a, b) := \\{x\\in \\mathbb{R} : a &lt; x &lt; b\\}, \\\\\n(a, b] := \\{x\\in \\mathbb{R} : a &lt; x \\leq b\\}, \\\\\n[a, b) := \\{x\\in \\mathbb{R} : a \\leq x &lt; b\\}.\n\nThe interval [a, b] is called a closed interval and (a, b) is called an open interval. The intervals of the form (a, b] and [a, b) are called half-open intervals.\n4 khoảng, nửa khoảng, đoạn ở trên được gọi là các khoảng bị chặn, trong đó a và b là số thực. Ta định nghĩa khoảng không bị chặn như sau:\n\n[a, \\infty] := \\{x\\in \\mathbb{R} : a \\leq x\\}, \\\\\n(a, \\infty) := \\{x\\in \\mathbb{R} : a &lt; x\\}, \\\\\n(-\\infty, b] := \\{x\\in \\mathbb{R} : x \\leq b\\}, \\\\\n[-\\infty, b) := \\{x\\in \\mathbb{R} : x &lt; b\\}.\n\nMệnh đề 1.4.1.\nMột tập hợp con I \\subset \\mathbb{R} được gọi là khoảng khi và chỉ khi I chứa ít nhất 2 điểm và với mọi a, c \\in I và b \\in \\mathbb{R} sao cho a &lt; b &lt; c, chúng ta có b \\in I.",
     "crumbs": [
       "18.100 - Real Analysis",
       "Số thực"
@@ -1080,7 +1076,7 @@
     "href": "note/real-analysis/1.html#khoảng-và-kích-thước-của-mathbbr",
     "title": "Số thực",
     "section": "",
-    "text": "Here is a formal defination of intervals. \\forall a, b \\in \\mathbb{R}, a &lt; b, chúng ta định nghĩa rằng:\n\n[a, b] := \\{x\\in \\mathbb{R} : a \\leq x \\leq b\\}, \\\\\n(a, b) := \\{x\\in \\mathbb{R} : a &lt; x &lt; b\\}, \\\\\n(a, b] := \\{x\\in \\mathbb{R} : a &lt; xd \\leq b\\}, \\\\\n[a, b) := \\{x\\in \\mathbb{R} : a \\leq x &lt; b\\}.",
+    "text": "Here is a formal defination of intervals. \\forall a, b \\in \\mathbb{R}, a &lt; b, chúng ta định nghĩa rằng:\n\n[a, b] := \\{x\\in \\mathbb{R} : a \\leq x \\leq b\\}, \\\\\n(a, b) := \\{x\\in \\mathbb{R} : a &lt; x &lt; b\\}, \\\\\n(a, b] := \\{x\\in \\mathbb{R} : a &lt; x \\leq b\\}, \\\\\n[a, b) := \\{x\\in \\mathbb{R} : a \\leq x &lt; b\\}.\n\nThe interval [a, b] is called a closed interval and (a, b) is called an open interval. The intervals of the form (a, b] and [a, b) are called half-open intervals.\n4 khoảng, nửa khoảng, đoạn ở trên được gọi là các khoảng bị chặn, trong đó a và b là số thực. Ta định nghĩa khoảng không bị chặn như sau:\n\n[a, \\infty] := \\{x\\in \\mathbb{R} : a \\leq x\\}, \\\\\n(a, \\infty) := \\{x\\in \\mathbb{R} : a &lt; x\\}, \\\\\n(-\\infty, b] := \\{x\\in \\mathbb{R} : x \\leq b\\}, \\\\\n[-\\infty, b) := \\{x\\in \\mathbb{R} : x &lt; b\\}.\n\nMệnh đề 1.4.1.\nMột tập hợp con I \\subset \\mathbb{R} được gọi là khoảng khi và chỉ khi I chứa ít nhất 2 điểm và với mọi a, c \\in I và b \\in \\mathbb{R} sao cho a &lt; b &lt; c, chúng ta có b \\in I.",
     "crumbs": [
       "18.100 - Real Analysis",
       "Số thực"
