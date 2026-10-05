@@ -278,3 +278,32 @@ $$
 \sup_{x \in D} f(x) \leq \sup_{x \in D} g(x) \qquad 
 \inf_{x \in D} f(x) \leq \inf_{x \in D} g(x)
 $$
+
+## 1.4. Khoảng và kích thước của $\mathbb{R}$
+
+Here is a formal defination of intervals. $\forall a, b \in \mathbb{R}, a < b$, chúng ta định nghĩa rằng:
+
+$$
+[a, b] := \{x\in \mathbb{R} : a \leq x \leq b\}, \\ 
+(a, b) := \{x\in \mathbb{R} : a < x < b\}, \\ 
+(a, b] := \{x\in \mathbb{R} : a < x \leq b\}, \\ 
+[a, b) := \{x\in \mathbb{R} : a \leq x < b\}.
+$$
+
+The interval [a, b] is called a *closed interval* and (a, b) is called an *open interval*. The intervals of the form (a, b] and [a, b) are called *half-open intervals*.
+
+4 khoảng, nửa khoảng, đoạn ở trên được gọi là các khoảng bị chặn, trong đó a và b là số thực. Ta định nghĩa khoảng không bị chặn như sau:
+
+$$
+[a, \infty] := \{x\in \mathbb{R} : a \leq x\}, \\ 
+(a, \infty) := \{x\in \mathbb{R} : a < x\}, \\ 
+(-\infty, b] := \{x\in \mathbb{R} : x \leq b\}, \\ 
+[-\infty, b) := \{x\in \mathbb{R} : x < b\}.
+$$
+
+**Mệnh đề 1.4.1.**
+
+Một tập hợp con $I \subset \mathbb{R}$ được gọi là khoảng khi và chỉ khi I chứa ít nhất 2 điểm và với mọi $a, c \in I$ và $b \in \mathbb{R}$ sao cho $a < b < c$, chúng ta có $b \in I$.
+
+
+
