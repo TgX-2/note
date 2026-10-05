@@ -360,7 +360,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../note/multivariable-calculus/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Đạo hàm đa biến</span></a>
+ <span class="menu-text">Giải tích đa biến</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -522,7 +522,16 @@ window.Quarto = {
     <h2 id="toc-title">Mục lục bài viết</h2>
    
   <ul>
-  <li><a href="#chuỗi-và-giới-hạn" id="toc-chuỗi-và-giới-hạn" class="nav-link active" data-scroll-target="#chuỗi-và-giới-hạn">2.1. Chuỗi và giới hạn</a></li>
+  <li><a href="#chuỗi-và-giới-hạn" id="toc-chuỗi-và-giới-hạn" class="nav-link active" data-scroll-target="#chuỗi-và-giới-hạn">2.1. Chuỗi và giới hạn</a>
+  <ul class="collapse">
+  <li><a href="#chuỗi-đơn-điệu" id="toc-chuỗi-đơn-điệu" class="nav-link" data-scroll-target="#chuỗi-đơn-điệu">2.1.1. Chuỗi đơn điệu</a></li>
+  <li><a href="#đuôi-của-chuỗi" id="toc-đuôi-của-chuỗi" class="nav-link" data-scroll-target="#đuôi-của-chuỗi">2.1.2. Đuôi của chuỗi</a></li>
+  <li><a href="#chuỗi-con" id="toc-chuỗi-con" class="nav-link" data-scroll-target="#chuỗi-con">2.1.3. Chuỗi con</a></li>
+  </ul></li>
+  <li><a href="#một-số-thông-tin-về-chuỗi" id="toc-một-số-thông-tin-về-chuỗi" class="nav-link" data-scroll-target="#một-số-thông-tin-về-chuỗi">2.2. Một số thông tin về chuỗi</a>
+  <ul class="collapse">
+  <li><a href="#giới-hạn-và-bất-đẳng-thức" id="toc-giới-hạn-và-bất-đẳng-thức" class="nav-link" data-scroll-target="#giới-hạn-và-bất-đẳng-thức">2.2.1. Giới hạn và bất đẳng thức</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -590,8 +599,117 @@ window.Quarto = {
 <p><span class="math display">
 |x - y| = |-x_n + x + x_n - y| = |(x_n - y) - (x_n - x)| \leq |x_n - y| + |x_n - x| \leq \epsilon + \epsilon = 2\epsilon
 </span></p>
+<p>Bởi vì <span class="math inline">|y - x| &lt; \epsilon, \forall \epsilon &gt; 0 \implies |x - y| = 0 \implies x = y</span>. Vì vậy, giới hạn (nếu tồn tại) là duy nhất.</p>
+<p><strong>Mệnh đề 2.1.7.</strong> Một chuỗi hội tụ thì bị chặn.</p>
+<p><em>Proof:</em></p>
+<p>Giả sử rằng chuỗi hội tụ về x. Từ đó <span class="math inline">\exists M \in \mathbb{N}</span> sao cho <span class="math inline">\forall n \geq M</span>, chúng ta có <span class="math inline">|x_n - x| &lt; \epsilon</span>.</p>
+<p><span class="math display">
+|x_n| = |x_n - x + x| \leq |x_n - x| + |x| = \epsilon + |x|
+</span></p>
+<p>Từ đây ta có một tập hữu hạn, B, định nghĩa là:</p>
+<p><span class="math display">
+B := \max \{x_1, x_2, ..., x_{m - 1}, \epsilon + |x|\}
+</span></p>
+<p>Vì vậy, <span class="math inline">\forall x \in \mathbb{N}, |x_n| \leq B</span></p>
+<p>Và, dãy hội tụ thì bị chặn, nhưng dãy bị chặn thì chưa chắc đã hội tụ.</p>
+<section id="chuỗi-đơn-điệu" class="level2">
+<h2 class="anchored" data-anchor-id="chuỗi-đơn-điệu">2.1.1. Chuỗi đơn điệu</h2>
+<p>Một trong những kiểu đơn giản nhất của chuỗi chính là chuỗi đơn điệu.</p>
+<p><strong>Định nghĩa 2.1.9. Chuỗi tăng đơn điệu:</strong></p>
+<p>Một chuỗi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> được gọi là tăng đơn điệu nếu <span class="math inline">x_n \leq x_{n + 1}, \forall n \in \mathbb{N}</span>.</p>
+<p>Một chuỗi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> được gọi là giảm đơn điệu nếu <span class="math inline">x_n \geq x_{n + 1}, \forall n \in \mathbb{N}</span>.</p>
+<p>Nếu một chuỗi tăng đơn điệu hoặc giảm đơn điệu, ta gọi dãy là dãy đơn điệu.</p>
+<p>Ví dụ, <span class="math inline">\{n\}_{n = 1}^\infty</span> được gọi là tăng đơn điệu, <span class="math inline">\left\{\frac 1 n\right\}_{n = 1}^\infty</span> là giảm đơn điệu, và <span class="math inline">\{(-1)^n\}_{n = 1}^\infty</span> không là chuỗi đơn điệu.</p>
+<p><img src="../../img/11.png" class="img-fluid"></p>
+<p><strong>Định lý 2.1.10. Monotone Convergence theorem:</strong></p>
+<p>Một chuỗi đơn điệu <span class="math inline">\{x_n\}_{n = 1}^\infty</span> bị chặn khi và chỉ khi nó hội tụ.</p>
+<p>Hơn nữa, nếu <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là đơn điệu tăng và bị chặn, thì</p>
+<p><span class="math display">
+\lim_{n \rightarrow\infty} x_n = \sup\{x_n : n \in \mathbb{N}\}
+</span></p>
+<p>Nếu <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là đơn điệu giảm và bị chặn, thì:</p>
+<p><span class="math display">
+\lim_{n \rightarrow\infty} x_n = \inf\{x_n : n \in \mathbb{N}\}
+</span></p>
+<p><strong>Mệnh đề 2.1.13.</strong> Gọi <span class="math inline">S \subset \mathbb{R}</span> là một tập không rỗng và bị chặn. Khi đó tồn tại hai chuỗi đơn điệu <span class="math inline">\{x_n\}_{n = 1}^\infty</span> và <span class="math inline">\{y_n\}_{n = 1}^\infty</span>, sao cho <span class="math inline">x_n, y_n \in S</span> và</p>
+<p><span class="math display">
+\sup S = \lim_{n\rightarrow\infty}x_n \qquad
+\inf S = \lim_{n\rightarrow\infty}y_n
+</span></p>
+</section>
+<section id="đuôi-của-chuỗi" class="level2">
+<h2 class="anchored" data-anchor-id="đuôi-của-chuỗi">2.1.2. Đuôi của chuỗi</h2>
+<p><strong>Định nghĩa 2.1.14.</strong></p>
+<p>Với chuỗi <span class="math inline">\{x_n\}_{n = 1}^\infty</span>, K-tail (<span class="math inline">K \in \mathbb{N}</span>), hay ngắn gọn hơn là đuôi của <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là chuỗi bắt đầu từ <span class="math inline">K + 1</span>, và chúng ta thường viết là:</p>
+<p><span class="math display">
+\{x_{n + K}\}_{n = 1}^\infty \qquad \text{or} \qquad
+\{x_n\}_{n = K + 1}^\infty
+</span></p>
+<p><strong>Mệnh đề 2.1.15.</strong></p>
+<p>Gọi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một chuỗi. Các khẳng định sau là tương đương:</p>
+<ol type="i">
+<li><p>Chuỗi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> hội tụ</p></li>
+<li><p>Đuôi K <span class="math inline">\{x_{n + K}\}_{n = 1}^\infty</span> hội tụ <span class="math inline">\forall K \in \mathbb{N}</span></p></li>
+<li><p>Đuôi K <span class="math inline">\{x_{n + K}\}_{n = 1}^\infty</span> hội tụ với vài <span class="math inline">K \in \mathbb{N}</span></p></li>
+</ol>
+<p>Hơn nữa, với bất kỳ (và do đó là tất cả) các giới hạn tồn tại, thì <span class="math inline">\forall K \in \mathbb{N}</span></p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} x_n = \lim_{n\rightarrow\infty} x_{n + K}
+</span></p>
+</section>
+<section id="chuỗi-con" class="level2">
+<h2 class="anchored" data-anchor-id="chuỗi-con">2.1.3. Chuỗi con</h2>
+<p>Nó rất là hữu ít nếu đôi lúc ta chỉ xét một số phần tử của chuỗi. Một chuỗi con <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một chuỗi chứa một hoặc một vài số trong <span class="math inline">\{x_n\}_{n = 1}^\infty</span> có cùng thứ tự.</p>
+<p><strong>Định nghĩa 2.1.16.</strong> Gọi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một chuỗi. <span class="math inline">\{n_i\}_{n = 1}^\infty</span> là một chuỗi tăng ngặt của số tự nhiên, tức là <span class="math inline">n_i &lt; n_{i + 1}, \forall i \in \mathbb{N}</span>. Chuỗi:</p>
+<p><span class="math display">
+\{x_{n_i}\}_{n = 1}^\infty
+</span></p>
+<p>được gọi là chuỗi con của <span class="math inline">\{x_n\}_{n = 1}^\infty</span>.</p>
+<p><strong>Mệnh đề 2.1.17.</strong> Nếu <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một chuỗi hội tụ, thì với mỗi chuỗi con <span class="math inline">\{x_{n_i}\}_{n = 1}^\infty</span> đều hội tụ, và:</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty}x_n = \lim_{n\rightarrow\infty}x_{n_i}
+</span></p>
+<hr>
+</section>
+</section>
+<section id="một-số-thông-tin-về-chuỗi" class="level1">
+<h1>2.2. Một số thông tin về chuỗi</h1>
+<section id="giới-hạn-và-bất-đẳng-thức" class="level2">
+<h2 class="anchored" data-anchor-id="giới-hạn-và-bất-đẳng-thức">2.2.1. Giới hạn và bất đẳng thức</h2>
+<p>Một bổ đề cơ bản của giới hạn và bất đẳng thức là bổ đề kẹp. Nó cho phép chúng ta chứng minh sự hội tụ của một chuỗi khó trong trường hợp chúng ta tìm được hai chuỗi hội tụ đơn giản hơn mà kẹp chuỗi khó ban đầu.</p>
+<p><strong>Bổ đề 2.2.1. Bổ đề kẹp - Squeeze lenma:</strong></p>
+<p>Gọi <span class="math inline">\{a_n\}_{n = 1}^\infty</span>, <span class="math inline">\{b_n\}_{n = 1}^\infty</span> và <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là chuỗi sao cho:</p>
+<p><span class="math display">
+a_n \leq x_n \leq b_n \qquad \forall n \in \mathbb{N}
+</span></p>
+<p>Giả sử <span class="math inline">\{a_n\}_{n = 1}^\infty</span> và <span class="math inline">\{b_n\}_{n = 1}^\infty</span> hội tụ và</p>
+<p><span class="math display">
+\lim_{n \rightarrow\infty} a_n = \lim_{n\rightarrow\infty}b_n
+</span></p>
+<p>Thì khi đó <span class="math inline">\{x_n\}_{n = 1}^\infty</span> hội tụ và:</p>
+<p><span class="math display">
+\lim_{n \rightarrow\infty} a_n = \lim_{n\rightarrow\infty}b_n = \lim_{n\rightarrow\infty}x_n
+</span></p>
+<p><em>Proof:</em> Chứng minh <span class="math inline">\{x_n\}_{n = 1}^\infty</span> hội tụ và hội tụ về x.</p>
+<p>Ta có:</p>
+<ul>
+<li><p><span class="math inline">a_n</span> hội tụ tại x <span class="math inline">\implies |a_n - x| &lt; \epsilon \implies -\epsilon &lt; a_n - x</span></p></li>
+<li><p><span class="math inline">b_n</span> hội tụ tại x <span class="math inline">\implies |b_n - x| &lt; \epsilon \implies b_n - x &lt; \epsilon</span></p></li>
+</ul>
+<p>Theo đề bài, ta có:</p>
+<p><span class="math display">
+a_n \leq x_n \leq b_n, \forall n \in \mathbb{N} \\
+a_n - x \leq x_n - x \leq b_n - x
+</span></p>
+<p>Mà <span class="math inline">-\epsilon &lt; a_n - x</span> và <span class="math inline">b_n - x &lt; \epsilon</span>, suy ra:</p>
+<p><span class="math display">
+-\epsilon &lt; x_n - x &lt; \epsilon \\
+\implies |x_n - x| &lt; \epsilon
+</span></p>
+<p>Vậy chuỗi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> hội tụ, và hội tụ về x.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

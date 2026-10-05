@@ -68,8 +68,197 @@ $$
 $$
 
 $$
-|x - y| = |-x_n + x + x_n - y| = |(x_n - y) - (x_n - x)| \leq |x_n - y| + |x_n - x| \leq \epsilon + \epsilon = 2\epsilon 
+|x - y| = |-x_n + x + x_n - y| = |(x_n - y) - (x_n - x)| \leq |x_n - y| + |x_n - x| \leq \epsilon + \epsilon = 2\epsilon
 $$
 
+Bởi vì $|y - x| < \epsilon, \forall \epsilon > 0 \implies |x - y| = 0 \implies x = y$. Vì vậy, giới hạn (nếu tồn tại) là duy nhất.
 
+**Mệnh đề 2.1.7.** Một chuỗi hội tụ thì bị chặn.
+
+*Proof:*
+
+Giả sử rằng chuỗi hội tụ về x. Từ đó $\exists M \in \mathbb{N}$ sao cho $\forall n \geq M$, chúng ta có $|x_n - x| < \epsilon$. 
+
+$$
+|x_n| = |x_n - x + x| \leq |x_n - x| + |x| = \epsilon + |x|
+$$
+
+Từ đây ta có một tập hữu hạn, B, định nghĩa là:
+
+$$
+B := \max \{x_1, x_2, ..., x_{m - 1}, \epsilon + |x|\}
+$$
+
+Vì vậy, $\forall x \in \mathbb{N}, |x_n| \leq B$
+
+Và, dãy hội tụ thì bị chặn, nhưng dãy bị chặn thì chưa chắc đã hội tụ.
+
+## 2.1.1. Chuỗi đơn điệu
+
+Một trong những kiểu đơn giản nhất của chuỗi chính là chuỗi đơn điệu.
+
+**Định nghĩa 2.1.9. Chuỗi tăng đơn điệu:**
+
+Một chuỗi $\{x_n\}_{n = 1}^\infty$ được gọi là tăng đơn điệu nếu $x_n \leq x_{n + 1}, \forall n \in \mathbb{N}$.
+
+Một chuỗi $\{x_n\}_{n = 1}^\infty$ được gọi là giảm đơn điệu nếu $x_n \geq x_{n + 1}, \forall n \in \mathbb{N}$.
+
+Nếu một chuỗi tăng đơn điệu hoặc giảm đơn điệu, ta gọi dãy là dãy đơn điệu.
+
+Ví dụ, $\{n\}_{n = 1}^\infty$ được gọi là tăng đơn điệu, $\left\{\frac 1 n\right\}_{n = 1}^\infty$ là giảm đơn điệu, và $\{(-1)^n\}_{n = 1}^\infty$ không là chuỗi đơn điệu.
+
+![](../../img/11.png)
+
+**Định lý 2.1.10. Monotone Convergence theorem:**
+
+Một chuỗi đơn điệu $\{x_n\}_{n = 1}^\infty$ bị chặn khi và chỉ khi nó hội tụ.
+
+Hơn nữa, nếu $\{x_n\}_{n = 1}^\infty$ là đơn điệu tăng và bị chặn, thì
+
+$$
+\lim_{n \rightarrow\infty} x_n = \sup\{x_n : n \in \mathbb{N}\}
+$$
+
+Nếu $\{x_n\}_{n = 1}^\infty$ là đơn điệu giảm và bị chặn, thì:
+
+$$
+\lim_{n \rightarrow\infty} x_n = \inf\{x_n : n \in \mathbb{N}\}
+$$
+
+**Mệnh đề 2.1.13.** Gọi $S \subset \mathbb{R}$ là một tập không rỗng và bị chặn. Khi đó tồn tại hai chuỗi đơn điệu $\{x_n\}_{n = 1}^\infty$ và $\{y_n\}_{n = 1}^\infty$, sao cho $x_n, y_n \in S$ và
+
+$$
+\sup S = \lim_{n\rightarrow\infty}x_n \qquad 
+\inf S = \lim_{n\rightarrow\infty}y_n
+$$
+
+## 2.1.2. Đuôi của chuỗi
+
+**Định nghĩa 2.1.14.**
+
+Với chuỗi $\{x_n\}_{n = 1}^\infty$, K-tail ($K \in \mathbb{N}$), hay ngắn gọn hơn là đuôi của $\{x_n\}_{n = 1}^\infty$ là chuỗi bắt đầu từ $K + 1$, và chúng ta thường viết là:
+
+$$
+\{x_{n + K}\}_{n = 1}^\infty \qquad \text{or} \qquad
+\{x_n\}_{n = K + 1}^\infty
+$$
+
+**Mệnh đề 2.1.15.**
+
+Gọi $\{x_n\}_{n = 1}^\infty$ là một chuỗi. Các khẳng định sau là tương đương:
+
+(i) Chuỗi $\{x_n\}_{n = 1}^\infty$ hội tụ
+
+(ii) Đuôi K $\{x_{n + K}\}_{n = 1}^\infty$ hội tụ $\forall K \in \mathbb{N}$
+
+(iii) Đuôi K $\{x_{n + K}\}_{n = 1}^\infty$ hội tụ với vài $K \in \mathbb{N}$
+
+Hơn nữa, với bất kỳ (và do đó là tất cả) các giới hạn tồn tại, thì $\forall K \in \mathbb{N}$
+
+$$
+\lim_{n\rightarrow\infty} x_n = \lim_{n\rightarrow\infty} x_{n + K}
+$$
+
+## 2.1.3. Chuỗi con 
+
+Nó rất là hữu ít nếu đôi lúc ta chỉ xét một số phần tử của chuỗi. Một chuỗi con $\{x_n\}_{n = 1}^\infty$ là một chuỗi chứa một hoặc một vài số trong $\{x_n\}_{n = 1}^\infty$ có cùng thứ tự.
+
+**Định nghĩa 2.1.16.** Gọi $\{x_n\}_{n = 1}^\infty$ là một chuỗi. $\{n_i\}_{n = 1}^\infty$ là một chuỗi tăng ngặt của số tự nhiên, tức là $n_i < n_{i + 1}, \forall i \in \mathbb{N}$. Chuỗi:
+
+$$
+\{x_{n_i}\}_{n = 1}^\infty
+$$
+
+được gọi là chuỗi con của $\{x_n\}_{n = 1}^\infty$.
+
+**Mệnh đề 2.1.17.** Nếu $\{x_n\}_{n = 1}^\infty$ là một chuỗi hội tụ, thì với mỗi chuỗi con $\{x_{n_i}\}_{n = 1}^\infty$ đều hội tụ, và:
+
+$$
+\lim_{n\rightarrow\infty}x_n = \lim_{n\rightarrow\infty}x_{n_i}
+$$
+
+---
+# 2.2. Một số thông tin về chuỗi
+
+## 2.2.1. Giới hạn và bất đẳng thức
+
+Một bổ đề cơ bản của giới hạn và bất đẳng thức là bổ đề kẹp. Nó cho phép chúng ta chứng minh sự hội tụ của một chuỗi khó trong trường hợp chúng ta tìm được hai chuỗi hội tụ đơn giản hơn mà kẹp chuỗi khó ban đầu.
+
+**Bổ đề 2.2.1. Bổ đề kẹp - Squeeze lenma:**
+
+Gọi $\{a_n\}_{n = 1}^\infty$, $\{b_n\}_{n = 1}^\infty$ và $\{x_n\}_{n = 1}^\infty$ là chuỗi sao cho:
+
+$$
+a_n \leq x_n \leq b_n \qquad \forall n \in \mathbb{N}
+$$
+
+Giả sử $\{a_n\}_{n = 1}^\infty$ và $\{b_n\}_{n = 1}^\infty$ hội tụ và 
+
+$$
+\lim_{n \rightarrow\infty} a_n = \lim_{n\rightarrow\infty}b_n
+$$
+
+Thì khi đó $\{x_n\}_{n = 1}^\infty$ hội tụ và:
+
+$$
+\lim_{n \rightarrow\infty} a_n = \lim_{n\rightarrow\infty}b_n = \lim_{n\rightarrow\infty}x_n
+$$
+
+*Proof:* Chứng minh $\{x_n\}_{n = 1}^\infty$ hội tụ và hội tụ về x.
+
+Ta có:
+
+* $a_n$ hội tụ tại x $\implies |a_n - x| < \epsilon \implies -\epsilon < a_n - x$
+
+* $b_n$ hội tụ tại x $\implies |b_n - x| < \epsilon \implies b_n - x < \epsilon$
+
+Theo đề bài, ta có:
+
+$$
+a_n \leq x_n \leq b_n, \forall n \in \mathbb{N} \\ 
+a_n - x \leq x_n - x \leq b_n - x
+$$
+
+Mà $-\epsilon < a_n - x$ và $b_n - x < \epsilon$, suy ra:
+
+$$
+-\epsilon < x_n - x < \epsilon \\ 
+\implies |x_n - x| < \epsilon
+$$
+
+Vậy chuỗi $\{x_n\}_{n = 1}^\infty$ hội tụ, và hội tụ về x. 
+
+**Bổ đề 2.2.3.**
+
+Gọi $\{x_n\}_{n = 1}^\infty$ và $\{y_n\}_{n = 1}^\infty$ là chuỗi hội tụ và 
+
+$$
+x_n \leq y_n \qquad \forall n \in \mathbb{N}
+$$
+
+thì khi đó
+
+$$
+\lim_{n\rightarrow\infty}x_n \leq \lim_{n\rightarrow\infty}y_n
+$$
+
+**Hệ quả 2.2.4.**
+
+(i) Nếu $\{x_n\}_{n = 1}^\infty$ là một chuỗi hội tụ sao cho $x_n \geq 0, \forall n \in \mathbb{N}$ thì khi đó:
+
+$$
+\lim_{n\rightarrow\infty}x_n\geq 0
+$$
+
+(ii) Gọi $a, b \in \mathbb{R}$ và $\{x_n\}_{n = 1}^\infty$ là một chuỗi tụ, sao cho:
+
+$$
+a \leq x_n \leq b \qquad \forall n \in \mathbb{N}
+$$
+
+thì khi đó:
+
+$$
+a \leq \lim_{n\rightarrow\infty}x_n \leq b 
+$$
 
