@@ -14,9 +14,7 @@ format:
         <script src="../navigation.js" defer></script>
 ---
 
-# Chapter 1: Real numbers
-
-## 1.1. Các tính chất cơ bản
+# 1.1. Các tính chất cơ bản
 
 **Định nghĩa 1.1.1. Tập sắp thứ tự (ordered set):** Là tập hợp S đi kèm quan hệ thứ tự "<" thỏa mãn hai điều kiện:
 
@@ -128,15 +126,15 @@ Một trường F được gọi là có thứ tự nếu F là một tập hợ
 
 (vii) If $x \leq y$ and $z \leq w$ then $x + z \leq y + w$.
 
-## 1.2. Tập hợp các số thực
+# 1.2. Tập hợp các số thực
 
-### 1.2.1. Tập hợp các số thực
+## 1.2.1. Tập hợp các số thực
 
 **Định lý 1.2.1.** Tồn tại duy nhất một trường có thứ tự $\mathbb{R}$ với tính chất leastupperbound mà $\mathbb{Q} \subset \mathbb{R}$.
 
 **Mệnh đề 1.2.2.** Nếu tồn tại $x \in \mathbb{R}$ mà $x \leq \epsilon, \forall \epsilon \in \mathbb{R}, (\epsilon > 0)$, khi đó $x \leq 0$.
 
-### 1.2.2. Tính chất Archimedes
+## 1.2.2. Tính chất Archimedes
 
 **Định lý 1.2.4.**
 
@@ -146,7 +144,7 @@ Một trường F được gọi là có thứ tự nếu F là một tập hợ
 
 **Hệ quả 1.2.5.** $\inf \left\{\frac 1 n : n \in \mathbb{N}\right\}$
 
-### 1.2.3. Sử dụng supremum và infimum
+## 1.2.3. Sử dụng supremum và infimum
 
 Suprema và Infima hoàn toàn tương thích với các biểu thức đại số. Cho một tập hợp con $A \subset \mathbb{R}$ và $x \in \mathbb{R}$, chúng ta định nghĩa:
 
@@ -200,13 +198,13 @@ x < \infty \qquad
 \forall x \in \mathbb{R}
 $$
  
-### 1.2.4. Maxima và minima
+## 1.2.4. Maxima và minima
 
 Nó cũng tương tự như supremum và infimum, nhưng thường đước sử dụng trong các tập hữu hạn thay vì vô hạn. Và cũng có ý chỉ rằng supremum của tập cũng nằm trong tập (vice versa). 
 
 Có thể nói rằng supremum và infimum dùng trong các tập vô hạn, và không nhất thiết chúng phải nằm trong tập đó. Còn maximum và minimum dùng trong các tập hữu hạn và chúng phải nằm trong tập đó.
 
-## 1.3. Giá trị tuyệt đối và hàm bị chặn
+# 1.3. Giá trị tuyệt đối và hàm bị chặn
 
 Một khái niệm mà chúng ta sẽ gặp đi gặp lại nhiều lần đó chính là giá trị tuyết đối. Here is the formal defination:
 
@@ -279,7 +277,7 @@ $$
 \inf_{x \in D} f(x) \leq \inf_{x \in D} g(x)
 $$
 
-## 1.4. Khoảng và kích thước của $\mathbb{R}$
+# 1.4. Khoảng và kích thước của $\mathbb{R}$
 
 Here is a formal defination of intervals. $\forall a, b \in \mathbb{R}, a < b$, chúng ta định nghĩa rằng:
 

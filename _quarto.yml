@@ -13,11 +13,11 @@ website:
       - href: index.qmd
         text: Home
 
-      - section : "Olympiad"
+      - section : "olympiad mathematics"
         contents:
           - note/olympiad/index.qmd
           
-      - section : "18.02"
+      - section : "18.02 - Multivariable Calculus"
         contents: 
           - note/multivariable-calculus/index.qmd
           - note/multivariable-calculus/1.qmd
@@ -25,11 +25,11 @@ website:
           - note/multivariable-calculus/3.qmd
           - note/multivariable-calculus/4.qmd
 
-      - section : "18.03"
+      - section : "18.03 - Differential"
         contents: 
           - note/differential-equations/index.qmd
 
-      - section: "18.06"
+      - section: "18.06 - Linear Algebra"
         contents:
           - note/linear-algebra/index.qmd
           - note/linear-algebra/vector.qmd

@@ -13,3 +13,63 @@ format:
       text: | 
         <script src="../navigation.js" defer></script>
 ---
+
+# 2.1. Chuỗi và giới hạn
+
+Để nói đến analysis thì cần thiết phải nói đến giưới hạn. Kiểu giới hạn đơn giản nhất của giới hạn là giới hạn của chuỗi số thực. Here is the formal definition.
+
+**Định nghĩa 2.1.1. Chuỗi (của dãy số thực):** là một hàm $x : \mathbb{N} \rightarrow \mathbb{R}$. Thay vì $x(n)$, chúng ta thường dùng ký hiệu chỉ phần tử thứ n của chuỗi là $x_n$. Để ký hiệu một chuỗi, ta viết:
+
+$$
+\{x_n\}_{n = 1}^{\infty}
+$$
+
+Một chuỗi $\{x_n\}_{n = 1}^{\infty}$ bị chặn nếu hàm cơ bản của nó bị chặn. Hay:
+
+$$
+\exists B \in \mathbb{R} : |x_n| \leq B \qquad \forall n \in \mathbb{N} 
+$$
+
+Nói cách khác, chuỗi bị chặn khi tập $\{x_n : n \in \mathbb{N}\}$ bị chặn. 
+
+**Định nghĩa 2.1.2. Hội tụ:**
+
+Một chuỗi $\{x_n\}_{n = 1}^\infty$ được gọi là hội tụ về một số $x_0 \in \mathbb{R}$ nếu với mỗi $\epsilon > 0$, tồn tại một số $M \in \mathbb{N}$ sao cho $|x_n - x_0| < \epsilon$ với tất cả $n \geq M$.
+
+Số $x_0$ được gọi là giới hạn của chuỗi.
+
+$$
+\lim_{n \rightarrow \infty} x_n := x_0 \ \text{if} \ \forall \epsilon > 0, \exists M : |x_n - x_0| < \epsilon \ \forall n \geq M
+$$
+
+Chuỗi không hội tụ thì được gọi là chuỗi phân kỳ.
+
+Nói ngắn gọn hơn, ở **Mệnh đề 2.1.6.** chúng ta sẽ chứng minh tại sao giới hạn x luôn luôn là duy nhất (nếu nó tồn tại). Thật hợp lý khi nói về giới hạn của một dãy số và chúng ta chỉ cần chứng minh rằng dãy số đó hội tụ về một số nào đó.
+
+Intuitively, giới hạn là x có nghĩa là cuỗi cùng mọi số trong chuỗi đều tiến gần tới số x.  
+
+![](../../img/10.png)
+
+khi chúng ta viết $\lim_{n \rightarrow \infty} x_n = x$ cho một số thực x bất kỳ, chúng ta biết hai thứ. Thứ nhất, chuỗi hội tụ, và thứ hai giới hạn là x.
+
+Và định nghĩa ở trên là một trong những định nghĩa quan trọng trong analysis, và nó cần thiết để hiểu analysis một cách hoàn hảo. Điểm mấu chốt của định nghĩa là dù với bất kỳ $\epsilon >0$ nào, thì chúng ta cũng sẽ tìm được M tương ứng. 
+
+**Mệnh đề 2.1.6.**
+
+Một chuỗi hội tụ có duy nhất một giới hạn.
+
+*Proof:* 
+
+Giả sử rằng chuỗi $\{x_n\}_{n = 1}^\infty$ có hai giới hạn là x và y, thì khi đó ta tìm được M1 và M2 tương ứng, sao cho:
+
+$$
+|x_n - x| < \epsilon, \ \forall n \leq M_1
+|x_n - y| < \epsilon, \ \forall n \leq M_2
+$$
+
+$$
+|x - y| = |-x_n + x + x_n - y| = |(x_n - y) - (x_n - x)| \leq |x_n - y| + |x_n - x| \leq \epsilon + \epsilon = 2\epsilon 
+$$
+
+
+

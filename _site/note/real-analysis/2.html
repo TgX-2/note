@@ -78,6 +78,49 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="../navigation.js" defer=""></script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="../styles.css">
@@ -291,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">Olympiad</span></a>
+ <span class="menu-text">olympiad mathematics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -308,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">18.02</span></a>
+ <span class="menu-text">18.02 - Multivariable Calculus</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -349,7 +392,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">18.03</span></a>
+ <span class="menu-text">18.03 - Differential</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -366,7 +409,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">18.06</span></a>
+ <span class="menu-text">18.06 - Linear Algebra</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -474,8 +517,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Mục lục bài viết</h2>
+   
+  <ul>
+  <li><a href="#chuỗi-và-giới-hạn" id="toc-chuỗi-và-giới-hạn" class="nav-link active" data-scroll-target="#chuỗi-và-giới-hạn">2.1. Chuỗi và giới hạn</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -506,8 +555,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="chuỗi-và-giới-hạn" class="level1">
+<h1>2.1. Chuỗi và giới hạn</h1>
+<p>Để nói đến analysis thì cần thiết phải nói đến giưới hạn. Kiểu giới hạn đơn giản nhất của giới hạn là giới hạn của chuỗi số thực. Here is the formal definition.</p>
+<p><strong>Định nghĩa 2.1.1. Chuỗi (của dãy số thực):</strong> là một hàm <span class="math inline">x : \mathbb{N} \rightarrow \mathbb{R}</span>. Thay vì <span class="math inline">x(n)</span>, chúng ta thường dùng ký hiệu chỉ phần tử thứ n của chuỗi là <span class="math inline">x_n</span>. Để ký hiệu một chuỗi, ta viết:</p>
+<p><span class="math display">
+\{x_n\}_{n = 1}^{\infty}
+</span></p>
+<p>Một chuỗi <span class="math inline">\{x_n\}_{n = 1}^{\infty}</span> bị chặn nếu hàm cơ bản của nó bị chặn. Hay:</p>
+<p><span class="math display">
+\exists B \in \mathbb{R} : |x_n| \leq B \qquad \forall n \in \mathbb{N}
+</span></p>
+<p>Nói cách khác, chuỗi bị chặn khi tập <span class="math inline">\{x_n : n \in \mathbb{N}\}</span> bị chặn.</p>
+<p><strong>Định nghĩa 2.1.2. Hội tụ:</strong></p>
+<p>Một chuỗi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> được gọi là hội tụ về một số <span class="math inline">x_0 \in \mathbb{R}</span> nếu với mỗi <span class="math inline">\epsilon &gt; 0</span>, tồn tại một số <span class="math inline">M \in \mathbb{N}</span> sao cho <span class="math inline">|x_n - x_0| &lt; \epsilon</span> với tất cả <span class="math inline">n \geq M</span>.</p>
+<p>Số <span class="math inline">x_0</span> được gọi là giới hạn của chuỗi.</p>
+<p><span class="math display">
+\lim_{n \rightarrow \infty} x_n := x_0 \ \text{if} \ \forall \epsilon &gt; 0, \exists M : |x_n - x_0| &lt; \epsilon \ \forall n \geq M
+</span></p>
+<p>Chuỗi không hội tụ thì được gọi là chuỗi phân kỳ.</p>
+<p>Nói ngắn gọn hơn, ở <strong>Mệnh đề 2.1.6.</strong> chúng ta sẽ chứng minh tại sao giới hạn x luôn luôn là duy nhất (nếu nó tồn tại). Thật hợp lý khi nói về giới hạn của một dãy số và chúng ta chỉ cần chứng minh rằng dãy số đó hội tụ về một số nào đó.</p>
+<p>Intuitively, giới hạn là x có nghĩa là cuỗi cùng mọi số trong chuỗi đều tiến gần tới số x.</p>
+<p><img src="../../img/10.png" class="img-fluid"></p>
+<p>khi chúng ta viết <span class="math inline">\lim_{n \rightarrow \infty} x_n = x</span> cho một số thực x bất kỳ, chúng ta biết hai thứ. Thứ nhất, chuỗi hội tụ, và thứ hai giới hạn là x.</p>
+<p>Và định nghĩa ở trên là một trong những định nghĩa quan trọng trong analysis, và nó cần thiết để hiểu analysis một cách hoàn hảo. Điểm mấu chốt của định nghĩa là dù với bất kỳ <span class="math inline">\epsilon &gt;0</span> nào, thì chúng ta cũng sẽ tìm được M tương ứng.</p>
+<p><strong>Mệnh đề 2.1.6.</strong></p>
+<p>Một chuỗi hội tụ có duy nhất một giới hạn.</p>
+<p><em>Proof:</em></p>
+<p>Giả sử rằng chuỗi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> có hai giới hạn là x và y, thì khi đó ta tìm được M1 và M2 tương ứng, sao cho:</p>
+<p><span class="math display">
+|x_n - x| &lt; \epsilon, \ \forall n \leq M_1
+|x_n - y| &lt; \epsilon, \ \forall n \leq M_2
+</span></p>
+<p><span class="math display">
+|x - y| = |-x_n + x + x_n - y| = |(x_n - y) - (x_n - x)| \leq |x_n - y| + |x_n - x| \leq \epsilon + \epsilon = 2\epsilon
+</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

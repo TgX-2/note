@@ -1,5 +1,5 @@
 ---
-title: "Đạo hàm đa biến"
+title: "Giải tích đa biến"
 ---
 
 ___
