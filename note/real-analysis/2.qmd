@@ -177,7 +177,7 @@ $$
 \lim_{n\rightarrow\infty}x_n = \lim_{n\rightarrow\infty}x_{n_i}
 $$
 
----
+
 # 2.2. Một số thông tin về chuỗi
 
 ## 2.2.1. Giới hạn và bất đẳng thức
@@ -261,4 +261,217 @@ thì khi đó:
 $$
 a \leq \lim_{n\rightarrow\infty}x_n \leq b 
 $$
+
+## 2.2.2. Tính liên tục của các phép toán đại số
+
+**Mệnh đề 2.2.5.** 
+
+Cho hai dãy số hội tụ $\{x_n\}_{n = 1}^\infty$ và $\{y_n\}_{n = 1}^\infty$.
+
+(i) Dãy $\{z_n\}_{n = 1}^\infty$, mà $z_n := x_n + y_n$ hội tụ và:
+
+$$
+\lim_{n\rightarrow\infty} (x_n + y_n) =
+\lim_{n\rightarrow\infty} z_n = 
+\lim_{n\rightarrow\infty} x_n +
+\lim_{n\rightarrow\infty} y_n 
+$$
+
+(ii) Dãy $\{z_n\}_{n = 1}^\infty$, mà $z_n := x_n - y_n$ hội tụ và:
+
+$$
+\lim_{n\rightarrow\infty} (x_n - y_n) = 
+\lim_{n\rightarrow\infty} z_n = 
+\lim_{n\rightarrow\infty} x_n - 
+\lim_{n\rightarrow\infty} y_n
+$$
+
+(iii) Dãy $\{z_n\}_{n = 1}^\infty$, mà $z_n := x_ny_n$ hội tụ và:
+
+$$
+\lim_{n\rightarrow\infty} (x_ny_n) = 
+\lim_{n\rightarrow\infty} z_n = 
+\left(\lim_{n\rightarrow\infty} x_n\right) 
+\left(\lim_{n\rightarrow\infty} y_n\right)
+$$
+
+(iv) Nếu $\lim_{n\rightarrow\infty} y_n \neq 0, \forall n \in \mathbb{N}$, thì khi đó dãy $\{z_n\}_{n = 1}^\infty$, mà $z_n := \frac {x_n} {y_n}$ hội tụ và:
+
+$$
+\lim_{n\rightarrow\infty} (x_n - y_n) = 
+\lim_{n\rightarrow\infty} z_n = 
+\frac {\lim_{n\rightarrow\infty} x_n}
+{\lim_{n\rightarrow\infty} y_n}
+$$
+
+**Mệnh đề 2.2.6.**
+
+Cho $\{x_n\}_{n = 1}^\infty$ làm một dãy hội tụ, sao cho $\x_n \geq 0, \forall n \in \mathbb{N}$, thì khi đó:
+
+$$
+\lim_{n\rightarrow\infty} \sqrt{x_n} = \sqrt {\lim_{n\rightarrow\infty} x_n}
+$$
+
+**Mệnh đề 2.2.7.**
+
+Cho $\{x_n\}_{n = 1}^\infty$ là một dãy hội tụ, thì khi đó $\{|x_n|\}_{n = 1}^\infty$ hội tụ và
+
+$$
+\lim_{n\rightarrow\infty} |x_n| = \left|\lim_{n\rightarrow\infty} x_n \right|
+$$
+
+## 2.2.4. Một số tiêu chuẩn hội tụ
+
+**Mệnh đề 2.2.10.**
+
+Cho $\{x_n\}_{n = 1}^\infty$ là một dãy. Giả sử rằng tồn tại một số $x \in \mathbb{R}$ và một dãy hội tụ $\{a_n\}_{n = 1}^\infty$, sao cho:
+
+$$
+\lim_{n\rightarrow\infty} a_n = 0
+$$
+
+và 
+
+$$
+|x_n - x| \leq a_n \qquad \forall n \in \mathbb{N}
+$$
+
+Thì khi đó $\{x_n\}_{n = 1}^\infty$ hội tụ và $\lim_{n\rightarrow\infty} x_n = x$.
+
+**Mệnh đề 2.2.11.**
+
+Cho $c > 0$:
+
+(i) Nếu $c < 1$, thì khi đó
+
+$$
+\lim_{n\rightarrow\infty} c^n = 0
+$$
+
+(ii) Nếu $c > 1$, thì khi đó $\{c_n\}_{n = 1}^\infty$ không bị chặn.
+
+**Bổ đề 2.2.12. Tiêu chuẩn tỉ số Leibniz:**
+
+Cho $\{x_n\}_{n = 1}^\infty$ là một chuỗi, sao cho $x_n \neq 0, \forall n$ và sao cho tồn tại giới hạn:
+
+$$
+L := \lim_{n\rightarrow\infty} \frac {|x_{n + 1}|}{|x_n|}
+$$
+
+(i) Nếu $L < 1$, thì khi đó chuỗi hội tụ và $\lim_{n\rightarrow\infty} x_n = 0$
+
+(ii) Nếu $L > 1$, thì khi đó chuỗi không bị chặn và phân kỳ.
+
+---
+# 2.3. Giới hạn trên, giới hạn dưới và Bolzano - Weierstrass
+
+## 2.3.1. Giới hạn trên và giới hạn dưới
+
+Nếu dãy $\{x_n\}_{n = 1}^\infty$ bị chặn, thì khi đó tập $\{x_k : k \in \mathbb{N}\}$ bị chặn.
+$\forall n, \{x_k : k \geq n\}$ cũng bị chặn, nên ta lấy supremum và infimum của nó.
+
+**Định nghĩa 2.3.1.**
+
+Cho $\{x_n\}_{n = 1}^\infty$ là một chuỗi bị chặn. Ta định nghĩa $\{a_n\}_{n = 1}^\infty$ và $\{b_n\}_{n = 1}^\infty$ bằng $a_n := \sup\{x_k : k \geq n\}$ và $b_n := \inf\{x_k : k \geq n\}$. Nếu tồn tại giới hạn, thì:
+
+$$
+\lim_{n\rightarrow\infty} \sup x_n := \lim_{n\rightarrow\infty} a_n \qquad 
+\lim_{n\rightarrow\infty} \sup x_n := \lim_{n\rightarrow\infty} b_n 
+$$
+
+Với một chuỗi bị chặn, thì luôn tồn tại limsup và liminf. Và với những dãy không bị chặn thì limsup và liminf có thể là $-\infty$ và $\infty$.
+
+**Mệnh đề 2.3.2.**
+
+Cho $\{x_n\}_{n = 1}^\infty$ là dãy bị chặn. Và $a_n, b_n$ có cùng định nghĩa với định nghĩa 2.3.1. trên.
+
+(i) Dãy $\{a_n\}_{n = 1}^\infty$ bị chặn đơn điệu giảm, và $\{b_n\}_{n = 1}^\infty$ bị chặn đơn điệu tăng. Đặc biệt, $\lim_{n\rightarrow\infty} \inf x_n$ và $\lim_{n\rightarrow\infty} \sup x_n$ tồn tại.
+
+(ii) $\lim_{n\rightarrow\infty} \sup x_n = \inf\{a_n : n \in \mathbb{N}\}$ và $\lim_{n\rightarrow\infty} \inf x_n = \sup\{b_n : n \in \mathbb{N}\}$
+
+(iii) $\lim_{n\rightarrow\infty} \inf x_n \leq \lim_{n\rightarrow\infty} \sup x_n$
+
+![](../../img/12.png)
+
+**Định lý 2.3.4.** 
+Nếu $\{x_n\}_{n = 1}^\infty$ là một dãy bị chặn, thì khi đó tồn tại một chuỗi con $\{x_{n_k}\}_{k = 1}^\infty$ sao cho:
+
+$$
+\lim_{k\rightarrow\infty} x_{n_k} = \lim_{n\rightarrow\infty} \sup x_n
+$$
+
+Tương tự, tồn tại (đôi lúc khác) một chuỗi con $\{x_{m_k}\}_{k = 1}^\infty$ sao cho:
+
+$$
+\lim_{k\rightarrow\infty} x_{m_k} = \lim_{n\rightarrow\infty} \inf x_n
+$$
+
+## 2.3.2. Sử dụng liminf và limsup 
+
+**Mệnh đề 2.3.5.**
+
+Cho $\{x_n\}_{n = 1}^\infty$ là một dãy bị chặn. Khi đó, chuỗi bị chặn khi và chỉ khi:
+
+$$
+\liminf_{n\rightarrow\infty} x_n = \limsup_{n\rightarrow\infty} x_n
+$$
+
+Hơn nữa, nếu chuỗi hội tụ, thì khi đó:
+
+$$
+\lim_{n\rightarrow\infty} x_n = \liminf_{n\rightarrow\infty} x_n = \limsup_{n\rightarrow\infty} x_n
+$$
+
+**Mệnh đề 2.3.6.**
+
+Giả sử $\{x_n\}_{n = 1}^\infty$ bị chặn và $\{x_{n_k}\}_{k = 1}^\infty$ là chuỗi con. Khi đó:
+
+$$
+\liminf_{n\rightarrow\infty} x_n \leq 
+\liminf_{k\rightarrow\infty} x_{n_k} \leq 
+\limsup_{k\rightarrow\infty} x_{n_k} \leq 
+\limsup_{n\rightarrow\infty} x_n \leq 
+$$
+
+**Mệnh đề 2.3.7.** Một chuỗi bị chặn $\{x_n\}_{n = 1}^\infty$ hội tụ và hội tụ về một điểm x khi và chỉ khi mọi dãy con hội tụ của nó $\{x_{n_k}\}_{k = 1}^\infty$ đều hội tụ về x.
+
+## 2.3.3. Định lý Bolzano-Weierstrass
+
+Không phải tất cả các dãy bị chặn đều hội tụ, nhưng mà định lý Bolzano-Weierstrass cho ta biết rằng ít nhất ta có thể kiếm được một dãy con hội tụ.
+
+**Định lý 2.3.8. Bolzano-Weierstrass:**
+
+Giả sử một dãy $\{x_n\}_{n = 1}^\infty$ của tập số thực bị chặn. Thì khi đó tồn tại một chuỗi con hội tụ $\{x_{n_i}\}_{i = 1}^\infty$.
+
+## 2.3.4. Giới hạn vô hạn
+
+**Định nghĩa 2.3.9.**
+
+Chúng ta nói rằng $\{x_n\}_{n = 1}^\infty$ phân kỳ tới vô hạn, nếu $\forall K \in \mathbb{R}, \exists M \in \mathbb{N} : x_n > K, \forall n \geq M$. Khi đó, ta viết:
+
+
+$$
+\lim_{n\rightarrow\infty} x_n := \infty
+$$
+
+Tương tự, $\forall K \in \mathbb{R}, \exists M \in \mathbb{N} : x_n < K, \forall n \geq M$. Chúng ta nói rằng $\{x_n\}_{n = 1}^\infty$ phân kỳ tới âm vô cực và chúng ta viết:
+
+$$
+\lim_{n\rightarrow\infty} x_n := -\infty
+$$
+
+**Mệnh đề 2.3.10.**
+
+Giả sử $\{x_n\}_{n = 1}^\infty$ là một dãy đơn điệu không bị chặn, thì khi đó:
+
+$$
+\lim_{n\rightarrow\infty} x_n = \begin{cases}
+\infty & \text{if} \ \{x_n\}_{n = 1}^\infty \ \text{is increasing}, \\
+-\infty & \text{if} \ \{x_n\}_{n = 1}^\infty \ \text{is decreasing}, \\
+\end{cases}
+$$
+
+**Định nghĩa 2.3.12.**
+
+
 
