@@ -471,7 +471,26 @@ $$
 \end{cases}
 $$
 
-**Định nghĩa 2.3.12.**
 
+# Dãy Cauchy
 
+Thông thường, chúng ta muốn mô tả một số nhất định bằng một dãy số hội tụ về số đó. Trong trường hợp này, không thể sử dụng chính số đó để chứng minh dãy số hội tụ. Sẽ rất hữu ích nếu chúng ta có thể kiểm tra sự hội tụ mà không cần biết giới hạn.
+
+**Định nghĩa 2.4.1. Dãy Cauchy:**
+
+Một dãy được gọi là dãy Cauchy nếu với mọi $\epsilon > 0$ tồn tại một $M \in \mathbb{N}$ sao cho với mọi $n \geq M, k \geq M$, chúng ta có:
+
+$$
+|x_n - x_k| < \epsilon
+$$
+
+Một cách không chính thức thì dãy Cauchy có nghĩa là các số hạng cuối của dãy ngày càng gần nhau hơn. Và ta có mong rằng dãy hội tụ, và với $\mathbb{R}$ với tính chất leastupperbound, thì điều này đúng.
+
+**Mệnh đề 2.4.4.**
+
+Nếu một dãy là dãy Cauchy, thì khi đó, dãy hội tụ.
+
+**Định lý 2.4.5.**
+
+Một dãy số thực là dãy Cauchy, khi và chỉ khi nó hội tụ.
 

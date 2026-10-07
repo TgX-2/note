@@ -32,11 +32,12 @@ website:
       - section: "18.06 - Linear Algebra"
         contents:
           - note/linear-algebra/index.qmd
-          - note/linear-algebra/vector.qmd
-          - note/linear-algebra/linearcombspanbasis.qmd
-          - note/linear-algebra/lineartransformation.qmd
-          - note/linear-algebra/determinant.qmd
-          - note/linear-algebra/matrix.qmd
+          - note/linear-algebra/1.qmd
+          - note/linear-algebra/2.qmd
+          - note/linear-algebra/3.qmd
+          - note/linear-algebra/4.qmd
+          - note/linear-algebra/5.qmd
+          - note/linear-algebra/6.qmd
 
       - section : "18.100 - Real Analysis"
         contents:

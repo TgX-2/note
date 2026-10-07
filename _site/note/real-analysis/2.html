@@ -531,7 +531,17 @@ window.Quarto = {
   <li><a href="#một-số-thông-tin-về-chuỗi" id="toc-một-số-thông-tin-về-chuỗi" class="nav-link" data-scroll-target="#một-số-thông-tin-về-chuỗi">2.2. Một số thông tin về chuỗi</a>
   <ul class="collapse">
   <li><a href="#giới-hạn-và-bất-đẳng-thức" id="toc-giới-hạn-và-bất-đẳng-thức" class="nav-link" data-scroll-target="#giới-hạn-và-bất-đẳng-thức">2.2.1. Giới hạn và bất đẳng thức</a></li>
+  <li><a href="#tính-liên-tục-của-các-phép-toán-đại-số" id="toc-tính-liên-tục-của-các-phép-toán-đại-số" class="nav-link" data-scroll-target="#tính-liên-tục-của-các-phép-toán-đại-số">2.2.2. Tính liên tục của các phép toán đại số</a></li>
+  <li><a href="#một-số-tiêu-chuẩn-hội-tụ" id="toc-một-số-tiêu-chuẩn-hội-tụ" class="nav-link" data-scroll-target="#một-số-tiêu-chuẩn-hội-tụ">2.2.4. Một số tiêu chuẩn hội tụ</a></li>
   </ul></li>
+  <li><a href="#giới-hạn-trên-giới-hạn-dưới-và-bolzano---weierstrass" id="toc-giới-hạn-trên-giới-hạn-dưới-và-bolzano---weierstrass" class="nav-link" data-scroll-target="#giới-hạn-trên-giới-hạn-dưới-và-bolzano---weierstrass">2.3. Giới hạn trên, giới hạn dưới và Bolzano - Weierstrass</a>
+  <ul class="collapse">
+  <li><a href="#giới-hạn-trên-và-giới-hạn-dưới" id="toc-giới-hạn-trên-và-giới-hạn-dưới" class="nav-link" data-scroll-target="#giới-hạn-trên-và-giới-hạn-dưới">2.3.1. Giới hạn trên và giới hạn dưới</a></li>
+  <li><a href="#sử-dụng-liminf-và-limsup" id="toc-sử-dụng-liminf-và-limsup" class="nav-link" data-scroll-target="#sử-dụng-liminf-và-limsup">2.3.2. Sử dụng liminf và limsup</a></li>
+  <li><a href="#định-lý-bolzano-weierstrass" id="toc-định-lý-bolzano-weierstrass" class="nav-link" data-scroll-target="#định-lý-bolzano-weierstrass">2.3.3. Định lý Bolzano-Weierstrass</a></li>
+  <li><a href="#giới-hạn-vô-hạn" id="toc-giới-hạn-vô-hạn" class="nav-link" data-scroll-target="#giới-hạn-vô-hạn">2.3.4. Giới hạn vô hạn</a></li>
+  </ul></li>
+  <li><a href="#dãy-cauchy" id="toc-dãy-cauchy" class="nav-link" data-scroll-target="#dãy-cauchy">Dãy Cauchy</a></li>
   </ul>
 </nav>
     </div>
@@ -669,7 +679,6 @@ B := \max \{x_1, x_2, ..., x_{m - 1}, \epsilon + |x|\}
 <p><span class="math display">
 \lim_{n\rightarrow\infty}x_n = \lim_{n\rightarrow\infty}x_{n_i}
 </span></p>
-<hr>
 </section>
 </section>
 <section id="một-số-thông-tin-về-chuỗi" class="level1">
@@ -707,9 +716,211 @@ a_n - x \leq x_n - x \leq b_n - x
 \implies |x_n - x| &lt; \epsilon
 </span></p>
 <p>Vậy chuỗi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> hội tụ, và hội tụ về x.</p>
-
-
+<p><strong>Bổ đề 2.2.3.</strong></p>
+<p>Gọi <span class="math inline">\{x_n\}_{n = 1}^\infty</span> và <span class="math inline">\{y_n\}_{n = 1}^\infty</span> là chuỗi hội tụ và</p>
+<p><span class="math display">
+x_n \leq y_n \qquad \forall n \in \mathbb{N}
+</span></p>
+<p>thì khi đó</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty}x_n \leq \lim_{n\rightarrow\infty}y_n
+</span></p>
+<p><strong>Hệ quả 2.2.4.</strong></p>
+<ol type="i">
+<li>Nếu <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một chuỗi hội tụ sao cho <span class="math inline">x_n \geq 0, \forall n \in \mathbb{N}</span> thì khi đó:</li>
+</ol>
+<p><span class="math display">
+\lim_{n\rightarrow\infty}x_n\geq 0
+</span></p>
+<ol start="2" type="i">
+<li>Gọi <span class="math inline">a, b \in \mathbb{R}</span> và <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một chuỗi tụ, sao cho:</li>
+</ol>
+<p><span class="math display">
+a \leq x_n \leq b \qquad \forall n \in \mathbb{N}
+</span></p>
+<p>thì khi đó:</p>
+<p><span class="math display">
+a \leq \lim_{n\rightarrow\infty}x_n \leq b
+</span></p>
 </section>
+<section id="tính-liên-tục-của-các-phép-toán-đại-số" class="level2">
+<h2 class="anchored" data-anchor-id="tính-liên-tục-của-các-phép-toán-đại-số">2.2.2. Tính liên tục của các phép toán đại số</h2>
+<p><strong>Mệnh đề 2.2.5.</strong></p>
+<p>Cho hai dãy số hội tụ <span class="math inline">\{x_n\}_{n = 1}^\infty</span> và <span class="math inline">\{y_n\}_{n = 1}^\infty</span>.</p>
+<ol type="i">
+<li>Dãy <span class="math inline">\{z_n\}_{n = 1}^\infty</span>, mà <span class="math inline">z_n := x_n + y_n</span> hội tụ và:</li>
+</ol>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} (x_n + y_n) =
+\lim_{n\rightarrow\infty} z_n =
+\lim_{n\rightarrow\infty} x_n +
+\lim_{n\rightarrow\infty} y_n
+</span></p>
+<ol start="2" type="i">
+<li>Dãy <span class="math inline">\{z_n\}_{n = 1}^\infty</span>, mà <span class="math inline">z_n := x_n - y_n</span> hội tụ và:</li>
+</ol>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} (x_n - y_n) =
+\lim_{n\rightarrow\infty} z_n =
+\lim_{n\rightarrow\infty} x_n -
+\lim_{n\rightarrow\infty} y_n
+</span></p>
+<ol start="3" type="i">
+<li>Dãy <span class="math inline">\{z_n\}_{n = 1}^\infty</span>, mà <span class="math inline">z_n := x_ny_n</span> hội tụ và:</li>
+</ol>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} (x_ny_n) =
+\lim_{n\rightarrow\infty} z_n =
+\left(\lim_{n\rightarrow\infty} x_n\right)
+\left(\lim_{n\rightarrow\infty} y_n\right)
+</span></p>
+<ol start="4" type="i">
+<li>Nếu <span class="math inline">\lim_{n\rightarrow\infty} y_n \neq 0, \forall n \in \mathbb{N}</span>, thì khi đó dãy <span class="math inline">\{z_n\}_{n = 1}^\infty</span>, mà <span class="math inline">z_n := \frac {x_n} {y_n}</span> hội tụ và:</li>
+</ol>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} (x_n - y_n) =
+\lim_{n\rightarrow\infty} z_n =
+\frac {\lim_{n\rightarrow\infty} x_n}
+{\lim_{n\rightarrow\infty} y_n}
+</span></p>
+<p><strong>Mệnh đề 2.2.6.</strong></p>
+<p>Cho <span class="math inline">\{x_n\}_{n = 1}^\infty</span> làm một dãy hội tụ, sao cho <span class="math inline">\x_n \geq 0, \forall n \in \mathbb{N}</span>, thì khi đó:</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} \sqrt{x_n} = \sqrt {\lim_{n\rightarrow\infty} x_n}
+</span></p>
+<p><strong>Mệnh đề 2.2.7.</strong></p>
+<p>Cho <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một dãy hội tụ, thì khi đó <span class="math inline">\{|x_n|\}_{n = 1}^\infty</span> hội tụ và</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} |x_n| = \left|\lim_{n\rightarrow\infty} x_n \right|
+</span></p>
+</section>
+<section id="một-số-tiêu-chuẩn-hội-tụ" class="level2">
+<h2 class="anchored" data-anchor-id="một-số-tiêu-chuẩn-hội-tụ">2.2.4. Một số tiêu chuẩn hội tụ</h2>
+<p><strong>Mệnh đề 2.2.10.</strong></p>
+<p>Cho <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một dãy. Giả sử rằng tồn tại một số <span class="math inline">x \in \mathbb{R}</span> và một dãy hội tụ <span class="math inline">\{a_n\}_{n = 1}^\infty</span>, sao cho:</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} a_n = 0
+</span></p>
+<p>và</p>
+<p><span class="math display">
+|x_n - x| \leq a_n \qquad \forall n \in \mathbb{N}
+</span></p>
+<p>Thì khi đó <span class="math inline">\{x_n\}_{n = 1}^\infty</span> hội tụ và <span class="math inline">\lim_{n\rightarrow\infty} x_n = x</span>.</p>
+<p><strong>Mệnh đề 2.2.11.</strong></p>
+<p>Cho <span class="math inline">c &gt; 0</span>:</p>
+<ol type="i">
+<li>Nếu <span class="math inline">c &lt; 1</span>, thì khi đó</li>
+</ol>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} c^n = 0
+</span></p>
+<ol start="2" type="i">
+<li>Nếu <span class="math inline">c &gt; 1</span>, thì khi đó <span class="math inline">\{c_n\}_{n = 1}^\infty</span> không bị chặn.</li>
+</ol>
+<p><strong>Bổ đề 2.2.12. Tiêu chuẩn tỉ số Leibniz:</strong></p>
+<p>Cho <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một chuỗi, sao cho <span class="math inline">x_n \neq 0, \forall n</span> và sao cho tồn tại giới hạn:</p>
+<p><span class="math display">
+L := \lim_{n\rightarrow\infty} \frac {|x_{n + 1}|}{|x_n|}
+</span></p>
+<ol type="i">
+<li><p>Nếu <span class="math inline">L &lt; 1</span>, thì khi đó chuỗi hội tụ và <span class="math inline">\lim_{n\rightarrow\infty} x_n = 0</span></p></li>
+<li><p>Nếu <span class="math inline">L &gt; 1</span>, thì khi đó chuỗi không bị chặn và phân kỳ.</p></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="giới-hạn-trên-giới-hạn-dưới-và-bolzano---weierstrass" class="level1">
+<h1>2.3. Giới hạn trên, giới hạn dưới và Bolzano - Weierstrass</h1>
+<section id="giới-hạn-trên-và-giới-hạn-dưới" class="level2">
+<h2 class="anchored" data-anchor-id="giới-hạn-trên-và-giới-hạn-dưới">2.3.1. Giới hạn trên và giới hạn dưới</h2>
+<p>Nếu dãy <span class="math inline">\{x_n\}_{n = 1}^\infty</span> bị chặn, thì khi đó tập <span class="math inline">\{x_k : k \in \mathbb{N}\}</span> bị chặn. <span class="math inline">\forall n, \{x_k : k \geq n\}</span> cũng bị chặn, nên ta lấy supremum và infimum của nó.</p>
+<p><strong>Định nghĩa 2.3.1.</strong></p>
+<p>Cho <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một chuỗi bị chặn. Ta định nghĩa <span class="math inline">\{a_n\}_{n = 1}^\infty</span> và <span class="math inline">\{b_n\}_{n = 1}^\infty</span> bằng <span class="math inline">a_n := \sup\{x_k : k \geq n\}</span> và <span class="math inline">b_n := \inf\{x_k : k \geq n\}</span>. Nếu tồn tại giới hạn, thì:</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} \sup x_n := \lim_{n\rightarrow\infty} a_n \qquad
+\lim_{n\rightarrow\infty} \sup x_n := \lim_{n\rightarrow\infty} b_n
+</span></p>
+<p>Với một chuỗi bị chặn, thì luôn tồn tại limsup và liminf. Và với những dãy không bị chặn thì limsup và liminf có thể là <span class="math inline">-\infty</span> và <span class="math inline">\infty</span>.</p>
+<p><strong>Mệnh đề 2.3.2.</strong></p>
+<p>Cho <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là dãy bị chặn. Và <span class="math inline">a_n, b_n</span> có cùng định nghĩa với định nghĩa 2.3.1. trên.</p>
+<ol type="i">
+<li><p>Dãy <span class="math inline">\{a_n\}_{n = 1}^\infty</span> bị chặn đơn điệu giảm, và <span class="math inline">\{b_n\}_{n = 1}^\infty</span> bị chặn đơn điệu tăng. Đặc biệt, <span class="math inline">\lim_{n\rightarrow\infty} \inf x_n</span> và <span class="math inline">\lim_{n\rightarrow\infty} \sup x_n</span> tồn tại.</p></li>
+<li><p><span class="math inline">\lim_{n\rightarrow\infty} \sup x_n = \inf\{a_n : n \in \mathbb{N}\}</span> và <span class="math inline">\lim_{n\rightarrow\infty} \inf x_n = \sup\{b_n : n \in \mathbb{N}\}</span></p></li>
+<li><p><span class="math inline">\lim_{n\rightarrow\infty} \inf x_n \leq \lim_{n\rightarrow\infty} \sup x_n</span></p></li>
+</ol>
+<p><img src="../../img/12.png" class="img-fluid"></p>
+<p><strong>Định lý 2.3.4.</strong> Nếu <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một dãy bị chặn, thì khi đó tồn tại một chuỗi con <span class="math inline">\{x_{n_k}\}_{k = 1}^\infty</span> sao cho:</p>
+<p><span class="math display">
+\lim_{k\rightarrow\infty} x_{n_k} = \lim_{n\rightarrow\infty} \sup x_n
+</span></p>
+<p>Tương tự, tồn tại (đôi lúc khác) một chuỗi con <span class="math inline">\{x_{m_k}\}_{k = 1}^\infty</span> sao cho:</p>
+<p><span class="math display">
+\lim_{k\rightarrow\infty} x_{m_k} = \lim_{n\rightarrow\infty} \inf x_n
+</span></p>
+</section>
+<section id="sử-dụng-liminf-và-limsup" class="level2">
+<h2 class="anchored" data-anchor-id="sử-dụng-liminf-và-limsup">2.3.2. Sử dụng liminf và limsup</h2>
+<p><strong>Mệnh đề 2.3.5.</strong></p>
+<p>Cho <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một dãy bị chặn. Khi đó, chuỗi bị chặn khi và chỉ khi:</p>
+<p><span class="math display">
+\liminf_{n\rightarrow\infty} x_n = \limsup_{n\rightarrow\infty} x_n
+</span></p>
+<p>Hơn nữa, nếu chuỗi hội tụ, thì khi đó:</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} x_n = \liminf_{n\rightarrow\infty} x_n = \limsup_{n\rightarrow\infty} x_n
+</span></p>
+<p><strong>Mệnh đề 2.3.6.</strong></p>
+<p>Giả sử <span class="math inline">\{x_n\}_{n = 1}^\infty</span> bị chặn và <span class="math inline">\{x_{n_k}\}_{k = 1}^\infty</span> là chuỗi con. Khi đó:</p>
+<p><span class="math display">
+\liminf_{n\rightarrow\infty} x_n \leq
+\liminf_{k\rightarrow\infty} x_{n_k} \leq
+\limsup_{k\rightarrow\infty} x_{n_k} \leq
+\limsup_{n\rightarrow\infty} x_n \leq
+</span></p>
+<p><strong>Mệnh đề 2.3.7.</strong> Một chuỗi bị chặn <span class="math inline">\{x_n\}_{n = 1}^\infty</span> hội tụ và hội tụ về một điểm x khi và chỉ khi mọi dãy con hội tụ của nó <span class="math inline">\{x_{n_k}\}_{k = 1}^\infty</span> đều hội tụ về x.</p>
+</section>
+<section id="định-lý-bolzano-weierstrass" class="level2">
+<h2 class="anchored" data-anchor-id="định-lý-bolzano-weierstrass">2.3.3. Định lý Bolzano-Weierstrass</h2>
+<p>Không phải tất cả các dãy bị chặn đều hội tụ, nhưng mà định lý Bolzano-Weierstrass cho ta biết rằng ít nhất ta có thể kiếm được một dãy con hội tụ.</p>
+<p><strong>Định lý 2.3.8. Bolzano-Weierstrass:</strong></p>
+<p>Giả sử một dãy <span class="math inline">\{x_n\}_{n = 1}^\infty</span> của tập số thực bị chặn. Thì khi đó tồn tại một chuỗi con hội tụ <span class="math inline">\{x_{n_i}\}_{i = 1}^\infty</span>.</p>
+</section>
+<section id="giới-hạn-vô-hạn" class="level2">
+<h2 class="anchored" data-anchor-id="giới-hạn-vô-hạn">2.3.4. Giới hạn vô hạn</h2>
+<p><strong>Định nghĩa 2.3.9.</strong></p>
+<p>Chúng ta nói rằng <span class="math inline">\{x_n\}_{n = 1}^\infty</span> phân kỳ tới vô hạn, nếu <span class="math inline">\forall K \in \mathbb{R}, \exists M \in \mathbb{N} : x_n &gt; K, \forall n \geq M</span>. Khi đó, ta viết:</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} x_n := \infty
+</span></p>
+<p>Tương tự, <span class="math inline">\forall K \in \mathbb{R}, \exists M \in \mathbb{N} : x_n &lt; K, \forall n \geq M</span>. Chúng ta nói rằng <span class="math inline">\{x_n\}_{n = 1}^\infty</span> phân kỳ tới âm vô cực và chúng ta viết:</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} x_n := -\infty
+</span></p>
+<p><strong>Mệnh đề 2.3.10.</strong></p>
+<p>Giả sử <span class="math inline">\{x_n\}_{n = 1}^\infty</span> là một dãy đơn điệu không bị chặn, thì khi đó:</p>
+<p><span class="math display">
+\lim_{n\rightarrow\infty} x_n = \begin{cases}
+\infty &amp; \text{if} \ \{x_n\}_{n = 1}^\infty \ \text{is increasing}, \\
+-\infty &amp; \text{if} \ \{x_n\}_{n = 1}^\infty \ \text{is decreasing}, \\
+\end{cases}
+</span></p>
+</section>
+</section>
+<section id="dãy-cauchy" class="level1">
+<h1>Dãy Cauchy</h1>
+<p>Thông thường, chúng ta muốn mô tả một số nhất định bằng một dãy số hội tụ về số đó. Trong trường hợp này, không thể sử dụng chính số đó để chứng minh dãy số hội tụ. Sẽ rất hữu ích nếu chúng ta có thể kiểm tra sự hội tụ mà không cần biết giới hạn.</p>
+<p><strong>Định nghĩa 2.4.1. Dãy Cauchy:</strong></p>
+<p>Một dãy được gọi là dãy Cauchy nếu với mọi <span class="math inline">\epsilon &gt; 0</span> tồn tại một <span class="math inline">M \in \mathbb{N}</span> sao cho với mọi <span class="math inline">n \geq M, k \geq M</span>, chúng ta có:</p>
+<p><span class="math display">
+|x_n - x_k| &lt; \epsilon
+</span></p>
+<p>Một cách không chính thức thì dãy Cauchy có nghĩa là các số hạng cuối của dãy ngày càng gần nhau hơn. Và ta có mong rằng dãy hội tụ, và với <span class="math inline">\mathbb{R}</span> với tính chất leastupperbound, thì điều này đúng.</p>
+<p><strong>Mệnh đề 2.4.4.</strong></p>
+<p>Nếu một dãy là dãy Cauchy, thì khi đó, dãy hội tụ.</p>
+<p><strong>Định lý 2.4.5.</strong></p>
+<p>Một dãy số thực là dãy Cauchy, khi và chỉ khi nó hội tụ.</p>
+
+
 </section>
 
 </main> <!-- /main -->
