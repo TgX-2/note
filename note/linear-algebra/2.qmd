@@ -1,0 +1,38 @@
+---
+title: "Ma trận và Hệ phương trình tuyến tính"
+chapter: "18.06 - Linear Algebra"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+---
+
+
+# IV. Giới thiệu về hệ phương trình tuyến tính
+
+
+
+# V. Ma trận
+
+
+
+# VI. Phương pháp khử Gauss - Jordan
+
+
+
+# VII. Biện luận hệ phương trình và ứng dụng
+
+
+
+# VIII. Các phép toán trên ma trận
+
+
+
+# IX. Ma trận khả nghịch và các tính chất
