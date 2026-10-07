@@ -132,6 +132,17 @@
     ]
   },
   {
+    "objectID": "note/real-analysis/2.html#định-nghĩa",
+    "href": "note/real-analysis/2.html#định-nghĩa",
+    "title": "Dãy và chuỗi",
+    "section": "2.5.1. Định nghĩa",
+    "text": "2.5.1. Định nghĩa\nĐịnh nghĩa 2.5.1. Chuỗi số:\nCho dãy số \\{x_n\\}_{n = 1}^\\infty, biểu thức có hình thức:\n\n\\sum_{n = 1}^\\infty x_n \\qquad\n\\sum x_n\n\nđược gọi là chuỗi số.\nMột chuỗi hội tụ nếu dãy tổng riêng \\{s_k\\}_{k = 1}^\\infty được định nghĩa bởi:\n\ns_k := \\sum_{n = 1}^k = x_1 + x_2 + ... + x_k\n\nhội tụ. Nếu dãy tổng riêng phân kỳ thì chuỗi phân kỳ.",
+    "crumbs": [
+      "18.100 - Real Analysis",
+      "Dãy và chuỗi"
+    ]
+  },
+  {
     "objectID": "note/olympiad/index.html",
     "href": "note/olympiad/index.html",
     "title": "Olympiad Calculus",
@@ -506,83 +517,6 @@
     ]
   },
   {
-    "objectID": "note/linear-algebra/vector.html#quan-điểm-của-vật-lý",
-    "href": "note/linear-algebra/vector.html#quan-điểm-của-vật-lý",
-    "title": "Vector",
-    "section": "Quan điểm của Vật lý",
-    "text": "Quan điểm của Vật lý\nVector là một mũi tên trong không gian được định nghĩa bởi 2 giá trị:\n\nĐộ dài\nHướng\n\nHai vector là giống nhau, khi 2 giá trị này của chúng bằng nhau, và một vector thì có thể di chuyển khắp nơi mà không bị cố định, và khi di chuyển, chúng vẫn là vector ban đầu.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Vector"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/vector.html#quan-điểm-của-tin-học",
-    "href": "note/linear-algebra/vector.html#quan-điểm-của-tin-học",
-    "title": "Vector",
-    "section": "Quan điểm của Tin học",
-    "text": "Quan điểm của Tin học\nNó sẽ là một tập hợp, hay còn được gọi là một mảng động. Nơi lưu trữ các biến có cùng kiểu dữ liệu. Đúng vậy, nó khác là khác với hai môn còn lại",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Vector"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/vector.html#quan-điểm-của-toán-học",
-    "href": "note/linear-algebra/vector.html#quan-điểm-của-toán-học",
-    "title": "Vector",
-    "section": "Quan điểm của Toán học",
-    "text": "Quan điểm của Toán học\nMột cách khó hiểu và cực kỳ trừu tượng.\nMột vector là bất kể thứ gì có thể thực hiện 2 phép toán này lên nó:\n\nCộng hai vector\nNhân một vector với một số (scalar)\n\nVà chúng ra sẽ tìm hiểu nó sâu hơn trong chương Abstract Vector Spaces.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Vector"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/lineartransformation.html#rotation",
-    "href": "note/linear-algebra/lineartransformation.html#rotation",
-    "title": "Linear Transformation",
-    "section": "Rotation",
-    "text": "Rotation\nPhép quay: một phép quay một góc \\theta ngược chiều:\n\n\\mathbf{A}_{\\theta} = \\begin{bmatrix}\n\\cos\\theta & -\\sin\\theta \\\\\n\\sin\\theta & \\cos\\theta\n\\end{bmatrix}",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Linear Transformation"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/lineartransformation.html#scaling",
-    "href": "note/linear-algebra/lineartransformation.html#scaling",
-    "title": "Linear Transformation",
-    "section": "Scaling",
-    "text": "Scaling\nPhép co dãn: phóng trục hoành một lượng x và trục tung một lượng y\n\n\\mathbf A = \\begin{bmatrix}\nx & 0 \\\\\n0 & y\n\\end{bmatrix}",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Linear Transformation"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/lineartransformation.html#shear",
-    "href": "note/linear-algebra/lineartransformation.html#shear",
-    "title": "Linear Transformation",
-    "section": "Shear",
-    "text": "Shear\nPhép cắt: một trục sẽ giữ nguyên hướng, trong khi đó trục còn lại sẽ bị thay đổi một lượng k.\nVí dụ:",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Linear Transformation"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/lineartransformation.html#reflection",
-    "href": "note/linear-algebra/lineartransformation.html#reflection",
-    "title": "Linear Transformation",
-    "section": "Reflection",
-    "text": "Reflection",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Linear Transformation"
-    ]
-  },
-  {
     "objectID": "note/linear-algebra/index.html",
     "href": "note/linear-algebra/index.html",
     "title": "Đại số tuyến tính",
@@ -594,15 +528,54 @@
     ]
   },
   {
-    "objectID": "note/differential-equations/index.html",
-    "href": "note/differential-equations/index.html",
-    "title": "Phương trình vi phân",
+    "objectID": "note/linear-algebra/1.html",
+    "href": "note/linear-algebra/1.html",
+    "title": "Tiền đề",
     "section": "",
-    "text": "1. Giới thiệu (Introduction)\n\n1.1 Một số mô hình toán học cơ bản; Trường phương hướng\n1.2 Nghiệm của một số phương trình vi phân\n1.3 Phân loại phương trình vi phân\n\n\n\n\n2. Phương trình vi phân cấp một (First-Order Differential Equations)\n\n2.1 Phương trình tuyến tính; phương pháp nhân tử tích phân\n2.2 Phương trình tách biến\n2.3 Phương trình thuần nhất\n2.4 Phương trình Bernoulli và phi tuyến\n2.5 Phương trình tự trị và động lực học quần thể\n2.6 Phương trình chính xác và nhân tử tích phân\n2.7 Phương pháp Euler\n2.8 Định lý tồn tại và duy nhất nghiệm\n2.9 Phương trình sai phân cấp một\n\n\n\n\n3. Phương trình vi phân tuyến tính cấp hai\n\n3.1 Phương trình thuần nhất hệ số hằng\n3.2 Nghiệm Wronskian\n3.3 Nghiệm phức của phương trình đặc trưng\n3.4 Nghiệm bội\n3.5 Phương pháp hệ số bất định\n3.6 Phương pháp biến thiên tham số\n3.7 Dao động cơ học và điện\n3.8 Dao động cưỡng bức tuần hoàn\n\n\n\n\n4. Phương trình vi phân tuyến tính cấp cao\n\n4.1 Lý thuyết tổng quát\n4.2 Thuần nhất hệ số hằng\n4.3 Phương pháp hệ số bất định\n4.4 Biến thiên tham số\n\n\n\n\n5. Nghiệm chuỗi của phương trình cấp hai\n\n5.1 Ôn tập chuỗi lũy thừa\n5.2 Chuỗi quanh điểm chính quy (phần I)\n5.3 Chuỗi quanh điểm chính quy (phần II)\n5.4 Phương trình Euler\n5.5 Điểm kỳ dị chính quy (phần I)\n5.6 Điểm kỳ dị chính quy (phần II)\n5.7 Phương trình Bessel\n\n\n\n\n6. Phép biến đổi Laplace\n\n6.1 Định nghĩa\n6.2 Giải bài toán giá trị ban đầu\n6.3 Hàm bước\n6.4 Ngoại lực gián đoạn\n6.5 Hàm xung\n6.6 Tích chập\n\n\n\n\n7. Hệ phương trình vi phân tuyến tính cấp một\n\n7.1 Giới thiệu\n7.2 Ma trận\n7.3 Hệ tuyến tính; trị riêng, vectơ riêng\n7.4 Lý thuyết cơ bản\n7.5 Thuần nhất hệ số hằng\n7.6 Trị riêng phức\n7.7 Trị riêng hàm cơ bản\n7.8 Trị riêng lặp\n7.9 Hệ không thuần nhất",
+    "text": "Định nghĩa 1.11.\nCho hai tập A và B. Tính Descartes của A và B là tập hợp được xác định bởi:\n\nA\\times B =\\{\\, (a,b) \\mid a\\in A,\\ b\\in B \\,\\}.\n\nVí dụ 1.13.\n\nCho A = \\{0,1,3\\} và B = \\{a,b\\}. Ta có:\n\n\n\\begin{align*}\nA\\times B &=\\{\\, (0, a), (0, b), (1, a), (1, b), (3, a), (3, b)\\,\\},\\\\\nB\\times A &=\\{\\, (a,0), (a, 1), (a, 3), (b, 0), (b, 1), (b, 3)\\,\\}.\n\\end{align*}\n\n\nTập \\mathbb{R}^2=\\mathbb{R}\\times\\mathbb{R} là tập hợp các điểm của một mặt phẳng tọa độ Đề-các.\n\n\n\nĐịnh nghĩa 1.14. Một quan hệ trên một tập A là một tập con của A\\times A.\nNếu R là một quan hệ trên một tập hợp A cho trước và (a,b)\\in R thì ta viết aRb (đọc là “a quan hệ R với b”).\nVí dụ 1.15. Cho A = \\{2,4,6,8\\} và định nghĩa quan hệ R trên A bởi (a,b)\\in R khi và chỉ khi a là ước của b. Khi đó:\n\nR =\\{\\, (2,2),\\ (2,4),\\ (2,6),\\ (2,8),\\\n(4,4),\\ (4,8),\\ (6,6),\\ (8,8) \\,\\}.\n\nĐịnh nghĩa 1.16. Một quan hệ R trên một tập A gọi là có tính:\n\nPhản xạ - nếu aRa với mọi a\\in A\nĐối xứng - nếu aRb suy ra bRa\nPhản đối xứng - nếu aRb và bRa suy ra a = b\nBắc cầu - nếu aRb và bRc suy ra aRc\n\nĐịnh nghĩa 1.17. Cho R là một quan hệ trên một tập hợp A.\n\nR được gọi là quan hệ thứ tự nếu R có tính phản xạ, phản đối xứng, và bắc cầu.\nR được gọi là quan hệ thứ tự toàn phần nếu R là một quan hệ thứ tự và \\forall a, b \\in A thì aRb hoặc bRa.",
     "crumbs": [
-      "18.03 - Differential",
-      "Phương trình vi phân"
+      "18.06 - Linear Algebra",
+      "Tiền đề"
     ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html#quan-hệ-trên-tập-hợp",
+    "href": "note/linear-algebra/1.html#quan-hệ-trên-tập-hợp",
+    "title": "Tiền đề",
+    "section": "",
+    "text": "Định nghĩa 1.14. Một quan hệ trên một tập A là một tập con của A\\times A.\nNếu R là một quan hệ trên một tập hợp A cho trước và (a,b)\\in R thì ta viết aRb (đọc là “a quan hệ R với b”).\nVí dụ 1.15. Cho A = \\{2,4,6,8\\} và định nghĩa quan hệ R trên A bởi (a,b)\\in R khi và chỉ khi a là ước của b. Khi đó:\n\nR =\\{\\, (2,2),\\ (2,4),\\ (2,6),\\ (2,8),\\\n(4,4),\\ (4,8),\\ (6,6),\\ (8,8) \\,\\}.\n\nĐịnh nghĩa 1.16. Một quan hệ R trên một tập A gọi là có tính:\n\nPhản xạ - nếu aRa với mọi a\\in A\nĐối xứng - nếu aRb suy ra bRa\nPhản đối xứng - nếu aRb và bRa suy ra a = b\nBắc cầu - nếu aRb và bRc suy ra aRc\n\nĐịnh nghĩa 1.17. Cho R là một quan hệ trên một tập hợp A.\n\nR được gọi là quan hệ thứ tự nếu R có tính phản xạ, phản đối xứng, và bắc cầu.\nR được gọi là quan hệ thứ tự toàn phần nếu R là một quan hệ thứ tự và \\forall a, b \\in A thì aRb hoặc bRa.",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html#định-nghĩa-ánh-xạ",
+    "href": "note/linear-algebra/1.html#định-nghĩa-ánh-xạ",
+    "title": "Tiền đề",
+    "section": "2.1. Định nghĩa ánh xạ",
+    "text": "2.1. Định nghĩa ánh xạ\nCho A và B là hai tập tùy ý. Người ta dùng khái niệm ánh xạ để xét mối liên hệ giữa các phần tử của A và B.\nĐịnh nghĩa 2.1. Một ánh xạ f từ A đến B là một quy tắc cho tương ứng mỗi phần tử x của A với một phần tử duy nhất của B được ký hiệu là f(x).\nTa viết f:A\\rightarrow B, x \\mapsto f(x) hay:\n\n\\begin{aligned}\n        f: A &\\longrightarrow B\\\\\n           x &\\longmapsto f(x).\n\\end{aligned}\n\nTa gọi tập A là tập nguồn (miền xác định), tập B là tập đích (miền giá trị) của ánh xạ f.",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Giới thiệu",
+    "section": "",
+    "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.\n\n\nUpdateHome #2: 27th Sep 2026\nWhy did i start discuss by english from now on? i dont know, but i think i have to improve my english. A lot of events have happened past three months, i think 2026’s summer is the worst time i have never experienced. My daily routine has changed alot. And my goals, too.\nNow, i want to get a place on the university calculus olympiad team. Yes, that right. I give up informatics, i think informatics is not for me. Will this change affect my future? I dont know, but i hope this decision is right.\nThank up updatehome1, now i have finished multivariable calculus. Updatehome2 is mark the beginning of my specific math journal.\nBye ./.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   },
   {
     "objectID": "donotReadme/readme.html",
@@ -696,108 +669,25 @@
     "text": "Topics to Learn\n\nBig Bang Theory\nCosmic Inflation\nCosmic Microwave Background\nDark Matter\nDark Energy\nStructure Formation"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "note/differential-equations/index.html",
+    "href": "note/differential-equations/index.html",
+    "title": "Phương trình vi phân",
     "section": "",
-    "text": "About this site"
+    "text": "1. Giới thiệu (Introduction)\n\n1.1 Một số mô hình toán học cơ bản; Trường phương hướng\n1.2 Nghiệm của một số phương trình vi phân\n1.3 Phân loại phương trình vi phân\n\n\n\n\n2. Phương trình vi phân cấp một (First-Order Differential Equations)\n\n2.1 Phương trình tuyến tính; phương pháp nhân tử tích phân\n2.2 Phương trình tách biến\n2.3 Phương trình thuần nhất\n2.4 Phương trình Bernoulli và phi tuyến\n2.5 Phương trình tự trị và động lực học quần thể\n2.6 Phương trình chính xác và nhân tử tích phân\n2.7 Phương pháp Euler\n2.8 Định lý tồn tại và duy nhất nghiệm\n2.9 Phương trình sai phân cấp một\n\n\n\n\n3. Phương trình vi phân tuyến tính cấp hai\n\n3.1 Phương trình thuần nhất hệ số hằng\n3.2 Nghiệm Wronskian\n3.3 Nghiệm phức của phương trình đặc trưng\n3.4 Nghiệm bội\n3.5 Phương pháp hệ số bất định\n3.6 Phương pháp biến thiên tham số\n3.7 Dao động cơ học và điện\n3.8 Dao động cưỡng bức tuần hoàn\n\n\n\n\n4. Phương trình vi phân tuyến tính cấp cao\n\n4.1 Lý thuyết tổng quát\n4.2 Thuần nhất hệ số hằng\n4.3 Phương pháp hệ số bất định\n4.4 Biến thiên tham số\n\n\n\n\n5. Nghiệm chuỗi của phương trình cấp hai\n\n5.1 Ôn tập chuỗi lũy thừa\n5.2 Chuỗi quanh điểm chính quy (phần I)\n5.3 Chuỗi quanh điểm chính quy (phần II)\n5.4 Phương trình Euler\n5.5 Điểm kỳ dị chính quy (phần I)\n5.6 Điểm kỳ dị chính quy (phần II)\n5.7 Phương trình Bessel\n\n\n\n\n6. Phép biến đổi Laplace\n\n6.1 Định nghĩa\n6.2 Giải bài toán giá trị ban đầu\n6.3 Hàm bước\n6.4 Ngoại lực gián đoạn\n6.5 Hàm xung\n6.6 Tích chập\n\n\n\n\n7. Hệ phương trình vi phân tuyến tính cấp một\n\n7.1 Giới thiệu\n7.2 Ma trận\n7.3 Hệ tuyến tính; trị riêng, vectơ riêng\n7.4 Lý thuyết cơ bản\n7.5 Thuần nhất hệ số hằng\n7.6 Trị riêng phức\n7.7 Trị riêng hàm cơ bản\n7.8 Trị riêng lặp\n7.9 Hệ không thuần nhất",
+    "crumbs": [
+      "18.03 - Differential",
+      "Phương trình vi phân"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Giới thiệu",
+    "objectID": "note/linear-algebra/2.html",
+    "href": "note/linear-algebra/2.html",
+    "title": "Ma trận và Hệ phương trình tuyến tính",
     "section": "",
-    "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.\n\n\nUpdateHome #2: 27th Sep 2026\nWhy did i start discuss by english from now on? i dont know, but i think i have to improve my english. A lot of events have happened past three months, i think 2026’s summer is the worst time i have never experienced. My daily routine has changed alot. And my goals, too.\nNow, i want to get a place on the university calculus olympiad team. Yes, that right. I give up informatics, i think informatics is not for me. Will this change affect my future? I dont know, but i hope this decision is right.\nThank up updatehome1, now i have finished multivariable calculus. Updatehome2 is mark the beginning of my specific math journal.\nBye ./.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/determinant.html",
-    "href": "note/linear-algebra/determinant.html",
-    "title": "Determinant",
-    "section": "",
-    "text": "Determinant: Ý nghĩa hình học\nMột định thức của ma trận là phương của diện tích sau khi ánh xạ với diện tích trước ánh xạ.\n\ndet(\\mathbf A) = \\frac{\\text{area after T}}{\\text{area before T}}\n\n\n\n\n\nÝ nghĩa Determinant\n\n\\det(\\mathbf A) &gt; 0 : Trục cơ sở vẫn giữ nguyên (tức là \\hat i nằm bên phải \\hat j theo chiều đồng hồ).\n\\det(\\mathbf A) &lt; 0 : Trục cơ sở bị đảo (\\hat i nằm bên trái \\hat j theo chiều đồng hồ).\n\\det(\\mathbf A) = 0 : Chiều không gian bị giảm đi (tức là từ không gian \\mathbb R^n giảm xuống \\mathbb R^{n - 1} ,..., \\mathbb R^0).\n\n\n\n\nCách tính Determinant\n…\n\n\n\nMột số tính chất của Determinant\n\n\\det(\\mathbf I) = 1 (\\mathbf I là ma trận cơ sở, sẽ nói xâu hơn ở chương Matrix).\n\\det(\\mathbf {AB}) = \\det(\\mathbf A) \\cdot \\det(\\mathbf B)\n\\det(\\mathbf A^T) = \\det(\\mathbf A) (\\mathbf A^T là ma trận chuyển vị, sẽ nói xâu hơn ở chương Matrix)\n\\det(c \\mathbf A) = c^n \\det(\\mathbf A) nếu \\mathbf A là ma trận n \\times n\n\n\n\n\nSự sụp đổ của không gian",
+    "text": "IV. Giới thiệu về hệ phương trình tuyến tính\n\n\nV. Ma trận\n\n\nVI. Phương pháp khử Gauss - Jordan\n\n\nVII. Biện luận hệ phương trình và ứng dụng\n\n\nVIII. Các phép toán trên ma trận\n\n\nIX. Ma trận khả nghịch và các tính chất",
     "crumbs": [
       "18.06 - Linear Algebra",
-      "Determinant"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/linearcombspanbasis.html#span-in-2d",
-    "href": "note/linear-algebra/linearcombspanbasis.html#span-in-2d",
-    "title": "Linear Combinations and more",
-    "section": "Span in 2D",
-    "text": "Span in 2D\nVới hai vector \\mathbf v và \\mathbf w trong không gian hai chiều \\mathbb R^2, có 3 trường hợp khả dĩ sau đây:\n\nNếu hai vector không thẳng hàng với nhau: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\mathbb R^2 - một mặt phẳng.\nNếu hai vector thẳng hàng với nhau nhưng không bằng không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} - một đưởng thẳng.\nNếu hai vector đều là vector không: \\text{span} \\{ \\mathbf v , \\mathbf w \\} = \\{ 0 \\} - một gốc tọa độ.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Linear Combinations and more"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/linearcombspanbasis.html#span-in-3d",
-    "href": "note/linear-algebra/linearcombspanbasis.html#span-in-3d",
-    "title": "Linear Combinations and more",
-    "section": "Span in 3D",
-    "text": "Span in 3D\n\nChỉ có một vector khác vector không: span là một đường thẳng.\nCó 2 vector không thẳng hàng: span là mặt phẳng.\nCả 3 vector không thuộc cùng một mặt phẳng: span là tất cả không gian \\mathbb R^3.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Linear Combinations and more"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/linearcombspanbasis.html#basis",
-    "href": "note/linear-algebra/linearcombspanbasis.html#basis",
-    "title": "Linear Combinations and more",
-    "section": "Basis",
-    "text": "Basis\nNhư đã nói ở chương trước, một vector basis thường là: \n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space  \n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}\n\nVới không gian 2 chiều, và không gian 3 chiều là:\n\n\\hat{i} = \\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}\n\\space \\text{,} \\space\n\\hat{j} = \\begin{bmatrix} 0 \\\\ 1 \\\\ 0 \\end{bmatrix}\n\\space \\text{and} \\space\n\\hat{k} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Linear Combinations and more"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/linearcombspanbasis.html#non-standard-bases",
-    "href": "note/linear-algebra/linearcombspanbasis.html#non-standard-bases",
-    "title": "Linear Combinations and more",
-    "section": "Non-standard Bases",
-    "text": "Non-standard Bases\nNhưng cũng đôi lúc, chúng không “cơ sở” cho lắm.\nTưởng tượng việc chúng ta thường xuyên gặp hệ tọa độ Đề-Các với các đường trục tung và trục hoành song song và các đều với nhau, tạo thành các lưới ô vuông.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Linear Combinations and more"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/matrix.html",
-    "href": "note/linear-algebra/matrix.html",
-    "title": "Matrix",
-    "section": "",
-    "text": "Một cách khá hay để hiểu về Ma trận là cái gì, đó là tưởng tượng nó trong không gian.\nThử tưởng tượng rằng bạn có một vector trong không gian n chiều, có chiều từ O(0, 0, .. 0) \\in  \\mathbb R ^ n, tới A(a_1, a_2, a_3, ... a_n) \\in \\mathbb R^n.\nVí dụ: Vector \\vec v (1, 2).",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Matrix"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/matrix.html#ma-trận-cột",
-    "href": "note/linear-algebra/matrix.html#ma-trận-cột",
-    "title": "Matrix",
-    "section": "Ma trận cột",
-    "text": "Ma trận cột\nTa có thể biểu diễn Vector \\vec v trên bằng ma trận cột 1 \\times 2, được ký hiệu như sau:\n\n\\begin{bmatrix}\n1 \\\\\n2\n\\end{bmatrix}\n\nHay tổng quát hơn, ta có thể biểu diễn một vector nhiều chiều bằng ma trận cột gồm n giá trị \n\\begin{bmatrix}\na_1 \\\\\na_2 \\\\\na_3 \\\\\n\\vdots \\\\\na_n\n\\end{bmatrix}",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Matrix"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/matrix.html#ma-trận-n-times-m",
-    "href": "note/linear-algebra/matrix.html#ma-trận-n-times-m",
-    "title": "Matrix",
-    "section": "Ma trận n \\times m",
-    "text": "Ma trận n \\times m\nLà tập hợp của m vector n chiều.\n\n\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1m} \\\\\na_{21} & a_{22} & \\cdots & a_{2m} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n1} & a_{n2} & \\cdots & a_{nm} \\\\\n\\end{bmatrix}",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Matrix"
+      "Ma trận và Hệ phương trình tuyến tính"
     ]
   },
   {
@@ -1194,50 +1084,6 @@
     "crumbs": [
       "18.100 - Real Analysis",
       "Số thực"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/2.html",
-    "href": "note/linear-algebra/2.html",
-    "title": "Ma trận và Hệ phương trình tuyến tính",
-    "section": "",
-    "text": "IV. Giới thiệu về hệ phương trình tuyến tính\n\n\nV. Ma trận\n\n\nVI. Phương pháp khử Gauss - Jordan\n\n\nVII. Biện luận hệ phương trình và ứng dụng\n\n\nVIII. Các phép toán trên ma trận\n\n\nIX. Ma trận khả nghịch và các tính chất",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Ma trận và Hệ phương trình tuyến tính"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html",
-    "href": "note/linear-algebra/1.html",
-    "title": "Tiền đề",
-    "section": "",
-    "text": "Định nghĩa 1.11.\nCho hai tập A và B. Tính Descartes của A và B là tập hợp được xác định bởi:\n\nA\\times B =\\{\\, (a,b) \\mid a\\in A,\\ b\\in B \\,\\}.\n\nVí dụ 1.13.\n\nCho A = \\{0,1,3\\} và B = \\{a,b\\}. Ta có:\n\n\n\\begin{align*}\nA\\times B &=\\{\\, (0, a), (0, b), (1, a), (1, b), (3, a), (3, b)\\,\\},\\\\\nB\\times A &=\\{\\, (a,0), (a, 1), (a, 3), (b, 0), (b, 1), (b, 3)\\,\\}.\n\\end{align*}\n\n\nTập \\mathbb{R}^2=\\mathbb{R}\\times\\mathbb{R} là tập hợp các điểm của một mặt phẳng tọa độ Đề-các.\n\n\n\nĐịnh nghĩa 1.14. Một quan hệ trên một tập A là một tập con của A\\times A.\nNếu R là một quan hệ trên một tập hợp A cho trước và (a,b)\\in R thì ta viết aRb (đọc là “a quan hệ R với b”).\nVí dụ 1.15. Cho A = \\{2,4,6,8\\} và định nghĩa quan hệ R trên A bởi (a,b)\\in R khi và chỉ khi a là ước của b. Khi đó:\n\nR =\\{\\, (2,2),\\ (2,4),\\ (2,6),\\ (2,8),\\\n(4,4),\\ (4,8),\\ (6,6),\\ (8,8) \\,\\}.\n\nĐịnh nghĩa 1.16. Một quan hệ R trên một tập A gọi là có tính:\n\nPhản xạ - nếu aRa với mọi a\\in A\nĐối xứng - nếu aRb suy ra bRa\nPhản đối xứng - nếu aRb và bRa suy ra a = b\nBắc cầu - nếu aRb và bRc suy ra aRc\n\nĐịnh nghĩa 1.17. Cho R là một quan hệ trên một tập hợp A.\n\nR được gọi là quan hệ thứ tự nếu R có tính phản xạ, phản đối xứng, và bắc cầu.\nR được gọi là quan hệ thứ tự toàn phần nếu R là một quan hệ thứ tự và \\forall a, b \\in A thì aRb hoặc bRa.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html#quan-hệ-trên-tập-hợp",
-    "href": "note/linear-algebra/1.html#quan-hệ-trên-tập-hợp",
-    "title": "Tiền đề",
-    "section": "",
-    "text": "Định nghĩa 1.14. Một quan hệ trên một tập A là một tập con của A\\times A.\nNếu R là một quan hệ trên một tập hợp A cho trước và (a,b)\\in R thì ta viết aRb (đọc là “a quan hệ R với b”).\nVí dụ 1.15. Cho A = \\{2,4,6,8\\} và định nghĩa quan hệ R trên A bởi (a,b)\\in R khi và chỉ khi a là ước của b. Khi đó:\n\nR =\\{\\, (2,2),\\ (2,4),\\ (2,6),\\ (2,8),\\\n(4,4),\\ (4,8),\\ (6,6),\\ (8,8) \\,\\}.\n\nĐịnh nghĩa 1.16. Một quan hệ R trên một tập A gọi là có tính:\n\nPhản xạ - nếu aRa với mọi a\\in A\nĐối xứng - nếu aRb suy ra bRa\nPhản đối xứng - nếu aRb và bRa suy ra a = b\nBắc cầu - nếu aRb và bRc suy ra aRc\n\nĐịnh nghĩa 1.17. Cho R là một quan hệ trên một tập hợp A.\n\nR được gọi là quan hệ thứ tự nếu R có tính phản xạ, phản đối xứng, và bắc cầu.\nR được gọi là quan hệ thứ tự toàn phần nếu R là một quan hệ thứ tự và \\forall a, b \\in A thì aRb hoặc bRa.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html#định-nghĩa-ánh-xạ",
-    "href": "note/linear-algebra/1.html#định-nghĩa-ánh-xạ",
-    "title": "Tiền đề",
-    "section": "2.1. Định nghĩa ánh xạ",
-    "text": "2.1. Định nghĩa ánh xạ\nCho A và B là hai tập tùy ý. Người ta dùng khái niệm ánh xạ để xét mối liên hệ giữa các phần tử của A và B.\nĐịnh nghĩa 2.1. Một ánh xạ f từ A đến B là một quy tắc cho tương ứng mỗi phần tử x của A với một phần tử duy nhất của B được ký hiệu là f(x).\nTa viết f:A\\rightarrow B, x \\mapsto f(x) hay:\n\n\\begin{aligned}\n        f: A &\\longrightarrow B\\\\\n           x &\\longmapsto f(x).\n\\end{aligned}\n\nTa gọi tập A là tập nguồn (miền xác định), tập B là tập đích (miền giá trị) của ánh xạ f.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
     ]
   }
 ]

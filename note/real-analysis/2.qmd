@@ -474,7 +474,9 @@ $$
 
 # Dãy Cauchy
 
-Thông thường, chúng ta muốn mô tả một số nhất định bằng một dãy số hội tụ về số đó. Trong trường hợp này, không thể sử dụng chính số đó để chứng minh dãy số hội tụ. Sẽ rất hữu ích nếu chúng ta có thể kiểm tra sự hội tụ mà không cần biết giới hạn.
+Hạn chế của định nghĩa giới hạn thông thường: Khi định nghĩa dãy $\{x_n\}$ hội tụ về x ($\lim x_n = x$), ta bắt buộc phải biết trước giá trị của x để kiểm tra $|x_n - x| < \epsilon$. Tuy nhiên, trong thực tế nhiều bài toán analysis, ta không biết trước giới hạn x là bao nhiêu nhưng vẫn cần chứng minh dãy đó hội tụ hay không.
+
+Giải pháp của Cauchy: Thay vì so sánh các số hạng $x_n$ với một điểm giới hạn x bên ngoài, ta so sánh khoảng cách giữa chính các số hạng với nhau khi chỉ số n và k tiến ra vô cùng.
 
 **Định nghĩa 2.4.1. Dãy Cauchy:**
 
@@ -493,4 +495,46 @@ Nếu một dãy là dãy Cauchy, thì khi đó, dãy hội tụ.
 **Định lý 2.4.5.**
 
 Một dãy số thực là dãy Cauchy, khi và chỉ khi nó hội tụ.
+
+**Nhận xét 2.4.6.**
+
+Tầm quan trọng và Ứng dụng rộng hơn (Cauchy-completeness)
+
+(i) Sự khác biệt giữa $\mathbb{Q}$ và $\mathbb{R}$:
+
+* Trong tập số hữu tỉ $\mathtt{Q}$, có những dãy Cauchy gồm toàn số hữu tỉ nhưng giới hạn lại là số vô tỷ. Do đó Q không đầy đủ.
+
+* Việc mọi dãy Cauchy trong R đều hội tụ về một điểm thuộc R được gọi là tính đầy đủ Cauchy của tập số thực.
+
+(ii) Nền tảng cho Metric space
+
+* Trong không gian metric $(X, d)$, khái niệm dãy Cauchy được tổng quát hoá thành $d(x_n, x_k) < \epsilon$. Không gian metric mà mọi dãy Cauchy đều hội tụ được gọi là **Không gian metric đầy đủ (Complete Metric Space)** vốn là khái niệm trung tâm cho không gian Bannach và giải tích hàm.
+
+# 2.5. Chuỗi
+
+
+Chuỗi số là một trong những đối tượng nền tảng nhất của toán học và là động lực ban đầu để các nhà toán học xây dựng lý thuyết giải tích chặt chẽ. 
+
+Chuỗi số xuất hiện xuyên suốt trong giải phương trình vi phân và các ứng dụng của khoa học kỹ thuật.
+
+## 2.5.1. Định nghĩa
+
+**Định nghĩa 2.5.1. Chuỗi số:**
+
+Cho dãy số $\{x_n\}_{n = 1}^\infty$, biểu thức có hình thức:
+
+$$
+\sum_{n = 1}^\infty x_n \qquad 
+\sum x_n
+$$
+
+được gọi là chuỗi số.
+
+Một chuỗi hội tụ nếu dãy tổng riêng $\{s_k\}_{k = 1}^\infty$ được định nghĩa bởi:
+
+$$
+s_k := \sum_{n = 1}^k = x_1 + x_2 + ... + x_k
+$$
+
+hội tụ. Nếu dãy tổng riêng phân kỳ thì chuỗi phân kỳ.
 

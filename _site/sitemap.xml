@@ -2,106 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tgx-2.github.io/note/note/real-analysis/index.html</loc>
-    <lastmod>2026-10-04T06:49:46.501Z</lastmod>
+    <lastmod>2026-10-07T15:44:08.512Z</lastmod>
   </url>
   <url>
     <loc>https://tgx-2.github.io/note/note/real-analysis/6.html</loc>
-    <lastmod>2026-10-04T06:54:10.905Z</lastmod>
+    <lastmod>2026-10-07T15:44:08.510Z</lastmod>
   </url>
   <url>
     <loc>https://tgx-2.github.io/note/note/real-analysis/4.html</loc>
-    <lastmod>2026-10-04T06:53:05.171Z</lastmod>
+    <lastmod>2026-10-07T15:44:08.509Z</lastmod>
   </url>
   <url>
     <loc>https://tgx-2.github.io/note/note/real-analysis/2.html</loc>
-    <lastmod>2026-10-06T15:23:08.183Z</lastmod>
+    <lastmod>2026-10-07T16:03:30.465Z</lastmod>
   </url>
   <url>
     <loc>https://tgx-2.github.io/note/note/olympiad/index.html</loc>
-    <lastmod>2026-10-04T06:44:25.534Z</lastmod>
+    <lastmod>2026-10-07T15:44:08.506Z</lastmod>
   </url>
   <url>
     <loc>https://tgx-2.github.io/note/note/multivariable-calculus/4.html</loc>
-    <lastmod>2026-09-15T08:47:29.464Z</lastmod>
+    <lastmod>2026-10-07T15:44:08.503Z</lastmod>
   </url>
   <url>
     <loc>https://tgx-2.github.io/note/note/multivariable-calculus/2.html</loc>
-    <lastmod>2026-08-08T13:04:28.946Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/linear-algebra/vector.html</loc>
-    <lastmod>2026-07-09T08:11:07.023Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/linear-algebra/lineartransformation.html</loc>
-    <lastmod>2026-07-09T08:11:50.095Z</lastmod>
+    <lastmod>2026-10-07T15:44:08.500Z</lastmod>
   </url>
   <url>
     <loc>https://tgx-2.github.io/note/note/linear-algebra/index.html</loc>
-    <lastmod>2026-10-07T08:48:00.532Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/differential-equations/index.html</loc>
-    <lastmod>2026-07-09T08:11:57.186Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/donotReadme/readme.html</loc>
-    <lastmod>2026-07-19T14:04:56.747Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/about.html</loc>
-    <lastmod>2026-06-23T07:23:22.230Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/index.html</loc>
-    <lastmod>2026-09-27T15:23:49.529Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/linear-algebra/determinant.html</loc>
-    <lastmod>2026-07-05T08:48:48.444Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/linear-algebra/linearcombspanbasis.html</loc>
-    <lastmod>2026-07-09T08:11:50.695Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/linear-algebra/matrix.html</loc>
-    <lastmod>2026-07-09T08:12:43.800Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/multivariable-calculus/1.html</loc>
-    <lastmod>2026-08-08T13:04:29.412Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/multivariable-calculus/3.html</loc>
-    <lastmod>2026-08-08T16:01:51.245Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/multivariable-calculus/index.html</loc>
-    <lastmod>2026-10-05T07:40:42.249Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/real-analysis/1.html</loc>
-    <lastmod>2026-10-05T07:39:09.809Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/real-analysis/3.html</loc>
-    <lastmod>2026-10-04T06:52:51.068Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/real-analysis/5.html</loc>
-    <lastmod>2026-10-04T06:53:32.024Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tgx-2.github.io/note/note/real-analysis/7.html</loc>
-    <lastmod>2026-10-04T06:54:24.570Z</lastmod>
+    <lastmod>2026-10-07T15:44:08.499Z</lastmod>
   </url>
   <url>
     <loc>https://tgx-2.github.io/note/note/linear-algebra/1.html</loc>
-    <lastmod>2026-10-07T13:24:40.941Z</lastmod>
+    <lastmod>2026-10-07T15:44:08.498Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/index.html</loc>
+    <lastmod>2026-10-07T15:44:08.495Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/about.html</loc>
+    <lastmod>2026-10-07T15:44:08.444Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/donotReadme/readme.html</loc>
+    <lastmod>2026-10-07T15:44:08.464Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/note/differential-equations/index.html</loc>
+    <lastmod>2026-10-07T15:44:08.496Z</lastmod>
   </url>
   <url>
     <loc>https://tgx-2.github.io/note/note/linear-algebra/2.html</loc>
-    <lastmod>2026-10-07T13:24:42.979Z</lastmod>
+    <lastmod>2026-10-07T15:45:32.182Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/note/multivariable-calculus/1.html</loc>
+    <lastmod>2026-10-07T15:44:08.500Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/note/multivariable-calculus/3.html</loc>
+    <lastmod>2026-10-07T15:44:08.502Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/note/multivariable-calculus/index.html</loc>
+    <lastmod>2026-10-07T15:44:08.503Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/note/real-analysis/1.html</loc>
+    <lastmod>2026-10-07T15:44:08.507Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/note/real-analysis/3.html</loc>
+    <lastmod>2026-10-07T15:44:08.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/note/real-analysis/5.html</loc>
+    <lastmod>2026-10-07T15:44:08.510Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tgx-2.github.io/note/note/real-analysis/7.html</loc>
+    <lastmod>2026-10-07T15:44:08.511Z</lastmod>
   </url>
 </urlset>

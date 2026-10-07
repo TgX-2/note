@@ -423,34 +423,28 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../note/linear-algebra/vector.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vector</span></a>
+  <a href="../../note/linear-algebra/1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tiền đề</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../note/linear-algebra/linearcombspanbasis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Linear Combinations and more</span></a>
+  <a href="../../note/linear-algebra/2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ma trận và Hệ phương trình tuyến tính</span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../note/linear-algebra/lineartransformation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Linear Transformation</span></a>
-  </div>
-</li>
+ <span class="menu-text">note/linear-algebra/3.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../note/linear-algebra/determinant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Determinant</span></a>
-  </div>
-</li>
+ <span class="menu-text">note/linear-algebra/4.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../note/linear-algebra/matrix.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Matrix</span></a>
-  </div>
-</li>
+ <span class="menu-text">note/linear-algebra/5.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">note/linear-algebra/6.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -542,6 +536,10 @@ window.Quarto = {
   <li><a href="#giới-hạn-vô-hạn" id="toc-giới-hạn-vô-hạn" class="nav-link" data-scroll-target="#giới-hạn-vô-hạn">2.3.4. Giới hạn vô hạn</a></li>
   </ul></li>
   <li><a href="#dãy-cauchy" id="toc-dãy-cauchy" class="nav-link" data-scroll-target="#dãy-cauchy">Dãy Cauchy</a></li>
+  <li><a href="#chuỗi" id="toc-chuỗi" class="nav-link" data-scroll-target="#chuỗi">2.5. Chuỗi</a>
+  <ul class="collapse">
+  <li><a href="#định-nghĩa" id="toc-định-nghĩa" class="nav-link" data-scroll-target="#định-nghĩa">2.5.1. Định nghĩa</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -908,7 +906,8 @@ L := \lim_{n\rightarrow\infty} \frac {|x_{n + 1}|}{|x_n|}
 </section>
 <section id="dãy-cauchy" class="level1">
 <h1>Dãy Cauchy</h1>
-<p>Thông thường, chúng ta muốn mô tả một số nhất định bằng một dãy số hội tụ về số đó. Trong trường hợp này, không thể sử dụng chính số đó để chứng minh dãy số hội tụ. Sẽ rất hữu ích nếu chúng ta có thể kiểm tra sự hội tụ mà không cần biết giới hạn.</p>
+<p>Hạn chế của định nghĩa giới hạn thông thường: Khi định nghĩa dãy <span class="math inline">\{x_n\}</span> hội tụ về x (<span class="math inline">\lim x_n = x</span>), ta bắt buộc phải biết trước giá trị của x để kiểm tra <span class="math inline">|x_n - x| &lt; \epsilon</span>. Tuy nhiên, trong thực tế nhiều bài toán analysis, ta không biết trước giới hạn x là bao nhiêu nhưng vẫn cần chứng minh dãy đó hội tụ hay không.</p>
+<p>Giải pháp của Cauchy: Thay vì so sánh các số hạng <span class="math inline">x_n</span> với một điểm giới hạn x bên ngoài, ta so sánh khoảng cách giữa chính các số hạng với nhau khi chỉ số n và k tiến ra vô cùng.</p>
 <p><strong>Định nghĩa 2.4.1. Dãy Cauchy:</strong></p>
 <p>Một dãy được gọi là dãy Cauchy nếu với mọi <span class="math inline">\epsilon &gt; 0</span> tồn tại một <span class="math inline">M \in \mathbb{N}</span> sao cho với mọi <span class="math inline">n \geq M, k \geq M</span>, chúng ta có:</p>
 <p><span class="math display">
@@ -919,8 +918,43 @@ L := \lim_{n\rightarrow\infty} \frac {|x_{n + 1}|}{|x_n|}
 <p>Nếu một dãy là dãy Cauchy, thì khi đó, dãy hội tụ.</p>
 <p><strong>Định lý 2.4.5.</strong></p>
 <p>Một dãy số thực là dãy Cauchy, khi và chỉ khi nó hội tụ.</p>
+<p><strong>Nhận xét 2.4.6.</strong></p>
+<p>Tầm quan trọng và Ứng dụng rộng hơn (Cauchy-completeness)</p>
+<ol type="i">
+<li>Sự khác biệt giữa <span class="math inline">\mathbb{Q}</span> và <span class="math inline">\mathbb{R}</span>:</li>
+</ol>
+<ul>
+<li><p>Trong tập số hữu tỉ <span class="math inline">\mathtt{Q}</span>, có những dãy Cauchy gồm toàn số hữu tỉ nhưng giới hạn lại là số vô tỷ. Do đó Q không đầy đủ.</p></li>
+<li><p>Việc mọi dãy Cauchy trong R đều hội tụ về một điểm thuộc R được gọi là tính đầy đủ Cauchy của tập số thực.</p></li>
+</ul>
+<ol start="2" type="i">
+<li>Nền tảng cho Metric space</li>
+</ol>
+<ul>
+<li>Trong không gian metric <span class="math inline">(X, d)</span>, khái niệm dãy Cauchy được tổng quát hoá thành <span class="math inline">d(x_n, x_k) &lt; \epsilon</span>. Không gian metric mà mọi dãy Cauchy đều hội tụ được gọi là <strong>Không gian metric đầy đủ (Complete Metric Space)</strong> vốn là khái niệm trung tâm cho không gian Bannach và giải tích hàm.</li>
+</ul>
+</section>
+<section id="chuỗi" class="level1">
+<h1>2.5. Chuỗi</h1>
+<p>Chuỗi số là một trong những đối tượng nền tảng nhất của toán học và là động lực ban đầu để các nhà toán học xây dựng lý thuyết giải tích chặt chẽ.</p>
+<p>Chuỗi số xuất hiện xuyên suốt trong giải phương trình vi phân và các ứng dụng của khoa học kỹ thuật.</p>
+<section id="định-nghĩa" class="level2">
+<h2 class="anchored" data-anchor-id="định-nghĩa">2.5.1. Định nghĩa</h2>
+<p><strong>Định nghĩa 2.5.1. Chuỗi số:</strong></p>
+<p>Cho dãy số <span class="math inline">\{x_n\}_{n = 1}^\infty</span>, biểu thức có hình thức:</p>
+<p><span class="math display">
+\sum_{n = 1}^\infty x_n \qquad
+\sum x_n
+</span></p>
+<p>được gọi là chuỗi số.</p>
+<p>Một chuỗi hội tụ nếu dãy tổng riêng <span class="math inline">\{s_k\}_{k = 1}^\infty</span> được định nghĩa bởi:</p>
+<p><span class="math display">
+s_k := \sum_{n = 1}^k = x_1 + x_2 + ... + x_k
+</span></p>
+<p>hội tụ. Nếu dãy tổng riêng phân kỳ thì chuỗi phân kỳ.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
