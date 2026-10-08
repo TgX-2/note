@@ -469,8 +469,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">note/linear-algebra/3.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../note/linear-algebra/3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Không gian Vector</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">note/linear-algebra/4.qmd</span>
   </li>
@@ -684,7 +687,7 @@ window.Quarto = {
 <p><strong>Ví dụ:</strong> <span class="math display">
 \int_0^1 \int_x^{\sqrt x} \frac {e^y}{y} \mathrm dy \mathrm dx
 </span></p>
-<div id="294be5ed" class="cell" data-execution_count="1">
+<div id="d33d4e6d" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -731,7 +734,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-2-output-1.png" width="546" height="508" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-2-output-1.png" width="547" height="509" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -903,7 +906,7 @@ v_x &amp; v_y
 <div class="callout-body-container callout-body">
 <p>Việc này nếu chưa học <strong>18.06</strong> thì khá là khó để suy nghĩ. Nhưng hãy suy nghĩ như thế này.</p>
 <p>Ta có 2 hình, bên trái chỉ <span class="math inline">\mathrm dA = \mathrm dx \mathrm dy</span> và bên phải là <span class="math inline">\mathrm dA' = \mathrm du \mathrm dv</span>, việc của chúng ta là tính hệ số diện tích của nó. Hay chính là chúng thu to hay thu nhỏ với hệ số bao nhiêu.</p>
-<div id="d05e5f60" class="cell" data-execution_count="2">
+<div id="72834cea" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -991,7 +994,7 @@ v_x &amp; v_y
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-3-output-1.png" width="1141" height="547" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-3-output-1.png" width="1145" height="550" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1065,7 +1068,7 @@ r\cos^2\theta + r\sin^2\theta = r
 <p>Mỗi điểm trong mặt phẳng đều có môt vector <span class="math inline">\vec F</span>, vector này phụ thuộc vào x, y.</p>
 <p>Một số hình ảnh ví dụ về trường Vector.</p>
 <p><strong>Ví dụ 1</strong> <span class="math inline">\vec F = 2 \hat{\mathbf i} + \hat{\mathbf j}</span></p>
-<div id="5f244562" class="cell" data-execution_count="3">
+<div id="47cbc701" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1101,14 +1104,14 @@ r\cos^2\theta + r\sin^2\theta = r
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-4-output-1.png" width="510" height="463" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-4-output-1.png" width="509" height="463" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Mọi vector đều cùng hướng, cùng độ lớn tại mọi điểm.</p>
 <p><strong>Ví dụ 2</strong> <span class="math inline">\vec F = x \hat{\mathbf i}</span></p>
-<div id="c6d6ad53" class="cell" data-execution_count="4">
+<div id="0d6397f7" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1146,13 +1149,13 @@ r\cos^2\theta + r\sin^2\theta = r
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-5-output-1.png" width="501" height="476" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-5-output-1.png" width="500" height="476" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p><strong>Ví dụ 3</strong> <span class="math inline">\vec F = x \hat{\mathbf i} + y \hat{\mathbf j}</span></p>
-<div id="10fd24e4" class="cell" data-execution_count="5">
+<div id="2d502eb0" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1191,13 +1194,13 @@ r\cos^2\theta + r\sin^2\theta = r
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-6-output-1.png" width="501" height="471" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-6-output-1.png" width="500" height="471" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p><strong>Ví dụ 4</strong> <span class="math inline">\vec F = -y \hat{\mathbf i} + x\hat{\mathbf j}</span></p>
-<div id="5d496abc" class="cell" data-execution_count="6">
+<div id="49df6a50" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1238,7 +1241,7 @@ r\cos^2\theta + r\sin^2\theta = r
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-7-output-1.png" width="520" height="471" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-7-output-1.png" width="519" height="471" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1313,7 +1316,7 @@ y = t^2 \qquad \mathrm dy = 2t\mathrm dt
 </div>
 </div>
 <p><strong>Tính</strong> Tích phân đường <span class="math inline">C = C_1 + C_2 + C_3</span> trong trường vector <span class="math inline">\vec F = &lt;y, x&gt;</span> sau:</p>
-<div id="6d8277e3" class="cell" data-execution_count="7">
+<div id="2b0b5161" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1415,7 +1418,7 @@ y = t^2 \qquad \mathrm dy = 2t\mathrm dt
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-8-output-1.png" width="564" height="566" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-8-output-1.png" width="568" height="566" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1513,7 +1516,7 @@ x = t \qquad y = t \\
 \int_c \vec F \mathrm d\vec r = f(B) - f(A)
 </span></p>
 <p><strong>Ví dụ</strong></p>
-<div id="ed67fd4d" class="cell" data-execution_count="8">
+<div id="03d8ece1" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1671,7 +1674,7 @@ M_y = N_x \\
 <p><span class="math display">
 f(x_1, y_1) = \int_C \vec F \mathrm d\vec r + f(0, 0)
 </span></p>
-<div id="0a89683f" class="cell" data-execution_count="9">
+<div id="bdfcac16" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1758,7 +1761,7 @@ f(x_1, y_1) = \int_C \vec F \mathrm d\vec r + f(0, 0)
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-10-output-1.png" width="567" height="547" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-10-output-1.png" width="570" height="550" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1885,7 +1888,7 @@ f(x, y) = \frac 4 3 x^3 + 4x^2y + y^3 + C
 <section id="interpretation-of-curl" class="level2">
 <h2 class="anchored" data-anchor-id="interpretation-of-curl">Interpretation of curl</h2>
 <p><strong>Ví dụ</strong> <span class="math inline">\vec F = &lt;x, y&gt;</span></p>
-<div id="21678c78" class="cell" data-execution_count="10">
+<div id="08402201" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -2104,7 +2107,7 @@ curl(\vec F) = N_x - M_y
 <p><span class="math display">
 \oint_C \vec F \cdot \hat{\mathbf n}\mathrm dS = \int\int_R \text{div}(\vec F)\mathrm dA
 </span></p>
-<div id="fa163158" class="cell" data-execution_count="11">
+<div id="6ef8af07" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -2178,7 +2181,7 @@ curl(\vec F) = N_x - M_y
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="3_files/figure-html/cell-12-output-1.png" width="588" height="508" class="figure-img"></p>
+<p><img src="3_files/figure-html/cell-12-output-1.png" width="587" height="508" class="figure-img"></p>
 </figure>
 </div>
 </div>

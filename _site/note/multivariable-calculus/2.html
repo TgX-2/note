@@ -469,8 +469,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">note/linear-algebra/3.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../note/linear-algebra/3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Không gian Vector</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">note/linear-algebra/4.qmd</span>
   </li>
@@ -645,7 +648,7 @@ window.Quarto = {
 </div>
 <p>Như ta đã tiếp xúc với hàm đơn biến từ trước, ví dụ như <span class="math inline">f(x) = x^2</span> hay <span class="math inline">f(x) = -x + 2</span>. Thì trong không gian 3 chiều, hay tổng quát hơn là n chiều, chúng ta cũng có thể biểu diễn nó bằng <span class="math inline">n - 1</span> biến.</p>
 <p>Ví dụ: Hàm <span class="math inline">f(x, y) = x^2 + y^2</span></p>
-<div id="04cfdadc" class="cell" data-execution_count="1">
+<div id="426635d7" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -720,7 +723,7 @@ window.Quarto = {
 f_x = \frac {\partial f}{\partial x} = \lim _{\Delta x \rightarrow 0} \frac{f(x_0 + \Delta x, y_0) - f(x_0, y_0)}{\Delta x} \\[10pt]
 f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_0, y_0 + \Delta y) - f(x_0, y_0)}{\Delta y}
 </span></p>
-<div id="c4bacdf9" class="cell" data-execution_count="2">
+<div id="50fb56d6" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -733,7 +736,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <h2 class="anchored" data-anchor-id="cách-tính-đạo-hàm-từng-phần">Cách tính đạo hàm từng phần</h2>
 <p>Như đã nói ở trước, ta sẽ coi một biến là hằng số.</p>
 <p>Ví dụ hàm <span class="math inline">f(x, y) = x^2 + x^3y + 2y + 3x</span></p>
-<div id="d3b285dc" class="cell" data-execution_count="3">
+<div id="d16f20fc" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -811,7 +814,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <p>Tương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.</p>
 <p>Ví dụ: <span class="math inline">f(x, y) = x^2 + y^2</span></p>
 <p>Ta xét tại điểm <span class="math inline">(x_0, y_0) = (1, 1)</span>, mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình.</p>
-<div id="602de3cb" class="cell" data-execution_count="4">
+<div id="48163384" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -870,7 +873,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="2_files/figure-html/cell-5-output-1.png" width="475" height="464" class="figure-img"></p>
+<p><img src="2_files/figure-html/cell-5-output-1.png" width="475" height="465" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -898,7 +901,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <p>Nhưng cũng vì thế mà sẽ có 3 trường hợp xảy ra:</p>
 <section id="điểm-cực-tiểu" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-cực-tiểu">Điểm cực tiểu</h2>
-<div id="0feceaae" class="cell" data-execution_count="5">
+<div id="a772fbeb" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -968,7 +971,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 </section>
 <section id="điểm-cực-đại" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-cực-đại">Điểm cực đại</h2>
-<div id="ab5cede2" class="cell" data-execution_count="6">
+<div id="35be6394" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1039,7 +1042,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <section id="điểm-saddle" class="level2">
 <h2 class="anchored" data-anchor-id="điểm-saddle">Điểm saddle</h2>
 <p>Vừa là cực dại vừa là cực tiểu.</p>
-<div id="6453bcc3" class="cell" data-execution_count="7">
+<div id="dde8a2c5" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1124,7 +1127,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <p>Tìm đường/hàm khớp dữ liệu bằng cách tối thiểu hóa tổng bình phương sai số.</p>
 </div>
 </div>
-<div id="31dd7838" class="cell" data-execution_count="8">
+<div id="0520b882" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1168,7 +1171,7 @@ f_y = \frac {\partial f}{\partial x} = \lim _{\Delta y \rightarrow 0} \frac{f(x_
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="2_files/figure-html/cell-9-output-1.png" width="659" height="523" class="figure-img"></p>
+<p><img src="2_files/figure-html/cell-9-output-1.png" width="659" height="524" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1443,7 +1446,7 @@ f = t^2 e^t + \sin t
 <p><strong>Định nghĩa:</strong> <span class="math inline">\nabla f = &lt;f_x, f_y, f_z&gt;</span> - Là một vector Gradient.</p>
 <p>Khi đó thì vector sẽ vuông góc với mặt phẳng, và có hướng về phía mà có f(x, y, z) cao hơn. (Tức là nếu nó ở đoạn sườn dốc của một ngọn núi, thì nó sẽ nhìn lên phía trên đỉnh thay vì nhìn xuống dưới chân núi).</p>
 <p><strong>Ví dụ:</strong> Sau đây là một hàm bất kỳ, ta vẽ được như sau:</p>
-<div id="309a542d" class="cell" data-execution_count="9">
+<div id="48e0c04a" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1470,13 +1473,13 @@ f = t^2 e^t + \sin t
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="2_files/figure-html/cell-10-output-1.png" width="478" height="484" class="figure-img"></p>
+<p><img src="2_files/figure-html/cell-10-output-1.png" width="479" height="485" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>có contour plot là:</p>
-<div id="19194d77" class="cell" data-execution_count="10">
+<div id="16fce645" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1503,13 +1506,13 @@ f = t^2 e^t + \sin t
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="2_files/figure-html/cell-11-output-1.png" width="581" height="523" class="figure-img"></p>
+<p><img src="2_files/figure-html/cell-11-output-1.png" width="583" height="524" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>và vector gradient được vẽ màu đỏ như sau:</p>
-<div id="aecbb8a2" class="cell" data-execution_count="11">
+<div id="a2dcce53" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1541,7 +1544,7 @@ f = t^2 e^t + \sin t
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="2_files/figure-html/cell-12-output-1.png" width="600" height="508" class="figure-img"></p>
+<p><img src="2_files/figure-html/cell-12-output-1.png" width="601" height="509" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1567,7 +1570,7 @@ f_x\frac{\mathrm dz}{\mathrm dt}
 \frac{\mathrm d \vec r}{\mathrm dt} = &lt;\frac{\mathrm dx}{\mathrm dt},\frac{\mathrm dy}{\mathrm dt},\frac{\mathrm dz}{\mathrm dt}&gt;
 </span></p>
 <hr>
-<div id="aa3904f5" class="cell" data-execution_count="12">
+<div id="51bed9e0" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>

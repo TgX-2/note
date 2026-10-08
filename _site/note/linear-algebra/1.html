@@ -434,8 +434,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">note/linear-algebra/3.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../note/linear-algebra/3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Không gian Vector</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
  <span class="menu-text">note/linear-algebra/4.qmd</span>
   </li>
@@ -518,11 +521,15 @@ window.Quarto = {
   <ul>
   <li><a href="#i.-tập-hợp" id="toc-i.-tập-hợp" class="nav-link active" data-scroll-target="#i.-tập-hợp">I. Tập hợp</a>
   <ul class="collapse">
+  <li><a href="#khái-niệm-tập-hợp" id="toc-khái-niệm-tập-hợp" class="nav-link" data-scroll-target="#khái-niệm-tập-hợp">1.1. Khái niệm tập hợp</a></li>
+  <li><a href="#các-phép-toán-trên-tập-hợp" id="toc-các-phép-toán-trên-tập-hợp" class="nav-link" data-scroll-target="#các-phép-toán-trên-tập-hợp">1.2. Các phép toán trên tập hợp</a></li>
   <li><a href="#quan-hệ-trên-tập-hợp" id="toc-quan-hệ-trên-tập-hợp" class="nav-link" data-scroll-target="#quan-hệ-trên-tập-hợp">1.3. Quan hệ trên tập hợp</a></li>
   </ul></li>
   <li><a href="#ii.-ánh-xạ" id="toc-ii.-ánh-xạ" class="nav-link" data-scroll-target="#ii.-ánh-xạ">II. Ánh xạ</a>
   <ul class="collapse">
   <li><a href="#định-nghĩa-ánh-xạ" id="toc-định-nghĩa-ánh-xạ" class="nav-link" data-scroll-target="#định-nghĩa-ánh-xạ">2.1. Định nghĩa ánh xạ</a></li>
+  <li><a href="#ánh-xạ-hợp-thành" id="toc-ánh-xạ-hợp-thành" class="nav-link" data-scroll-target="#ánh-xạ-hợp-thành">2.2. Ánh xạ hợp thành</a></li>
+  <li><a href="#đơn-ánh-toàn-ánh-và-song-ánh" id="toc-đơn-ánh-toàn-ánh-và-song-ánh" class="nav-link" data-scroll-target="#đơn-ánh-toàn-ánh-và-song-ánh">2.3. Đơn ánh, toàn ánh và song ánh</a></li>
   </ul></li>
   <li><a href="#iii.-vành-và-trường-số" id="toc-iii.-vành-và-trường-số" class="nav-link" data-scroll-target="#iii.-vành-và-trường-số">III. Vành và trường số</a></li>
   </ul>
@@ -559,45 +566,63 @@ window.Quarto = {
 
 <section id="i.-tập-hợp" class="level1">
 <h1>I. Tập hợp</h1>
-<p><strong>Định nghĩa 1.11.</strong></p>
-<p>Cho hai tập A và B. Tính <strong>Descartes</strong> của A và B là tập hợp được xác định bởi:</p>
+<section id="khái-niệm-tập-hợp" class="level2">
+<h2 class="anchored" data-anchor-id="khái-niệm-tập-hợp">1.1. Khái niệm tập hợp</h2>
+<p>Đối tượng của toán học gồm nhiều loại khác nhau, trong đó chúng ta đã quen thuộc với các đối tượng như các số, điểm, đường thẳng, mặt phẳng, tam giác, đường tròn, phương trình, vv. Thông thường các đối tượng có cùng một tính chất chung được gom thành các tập hợp, và chúng có thể là hữu hạn hoặc vô hạn. Tập hợp là một khái niệm cơ bản và thâm nhập vào toàn bộ cách nghĩ trong toán học ngày nay. Tập hợp là một khái niệm không được định nghĩa mà được hiểu một cách trực giác như sau.</p>
+<ul>
+<li><p><strong>Tập hợp và phần tử</strong>: Tập hợp gồm các đối tượng xác định theo quy tắc; phần tử a thuộc tập hợp A ký hiệu <span class="math inline">a \in A</span>, không thuộc ký hiệu là <span class="math inline">a \notin A</span>; tập không chứa phần tử nào là <strong>tập rỗng</strong> (<span class="math inline">\emptyset</span>).</p></li>
+<li><p><strong>Các tập số chuẩn:</strong> Tập số tự nhiên <span class="math inline">\mathbb{N}, \mathbb{N}^*</span>; tập số hữu tỉ <span class="math inline">\mathbb{Q}</span>; tập số thực <span class="math inline">\mathbb{R}</span>; tập số phức <span class="math inline">\mathbb{C}</span>.</p></li>
+<li><p><strong>Quan hệ chứa:</strong> Tập con (<span class="math inline">A \subseteq B</span>), tập con thực sự (<span class="math inline">A \subsetneq B</span>), hai tập bằng nhau (<span class="math inline">A = B \Leftrightarrow A \subseteq B \ \text{and}  \ B \subseteq A</span>), và tập tất cả các tập con của A ký hiệu là <span class="math inline">\mathcal{P}(A)</span></p></li>
+</ul>
+</section>
+<section id="các-phép-toán-trên-tập-hợp" class="level2">
+<h2 class="anchored" data-anchor-id="các-phép-toán-trên-tập-hợp">1.2. Các phép toán trên tập hợp</h2>
+<p><strong>Định nghĩa 1.8.</strong> Cho A và B là các tập hợp:</p>
+<ol type="i">
+<li><p><strong>Hợp</strong> (<span class="math inline">A \cup B</span>): Gồm các phần tử thuộc ít nhất một trong hai tập, tức là <span class="math inline">A\cup B = \{\, x \mid x\in A\ \mbox{or}\ x\in B \,\}</span></p></li>
+<li><p><strong>Giao</strong> (<span class="math inline">A \cap B</span>): Gồm các phần tử thuộc đồng thời cả hai tập, tức là <span class="math inline">A\cap B = \{\, x \mid x\in A\ \mbox{and}\ x\in B \,\}</span></p></li>
+<li><p><strong>Hiệu</strong> (<span class="math inline">A \setminus B</span>): Gồm các phần tử thuộc A nhưng không thuộc B, tức là <span class="math inline">A\setminus B = \{\, x \mid x\in A\ \mbox{and}\ x\notin B \,\}</span></p></li>
+</ol>
+<p><strong>Mệnh đề 1.9.</strong> Cho A, B, C là các tập hợp tùy ý. Khi đó ta có các đẳng thức sau:</p>
+<ol type="i">
+<li><p><span class="math inline">A\cap A = A = A\cup A</span></p></li>
+<li><p><span class="math inline">A\cup \varnothing = A</span></p></li>
+<li><p><span class="math inline">A\cap B= B\cap A</span></p></li>
+<li><p><span class="math inline">A\cap (B\cap C)=(A\cap B)\cap C</span>, <span class="math inline">A\cup (B\cup C)=(A\cup B)\cup C</span></p></li>
+<li><p><span class="math inline">A\setminus (B\cap C)=(A\setminus B)\cup (A\setminus C)</span>, <span class="math inline">A\setminus (B\cup C)=(A\setminus B)\cap (A\setminus C).</span></p></li>
+<li><p><span class="math inline">A\cap (B\cup C)=(A\cap B)\cup (A\cap C)</span>, <span class="math inline">A\cup (B\cap C)=(A\cup B)\cap (A\cup C).</span></p></li>
+</ol>
+<p><strong>Mệnh đề 1.10.</strong> Ta có <span class="math inline">(a, b) = (c, d) \Leftrightarrow a = c \ \text{and} \ b = d</span>.</p>
+<p><strong>Định nghĩa 1.11.</strong> Cho hai tập hợp A và B. <strong>Tích Descartes</strong> của A và B là tập hợp được định nghĩa bởi:</p>
 <p><span class="math display">
 A\times B =\{\, (a,b) \mid a\in A,\ b\in B \,\}.
 </span></p>
-<p><strong>Ví dụ 1.13.</strong></p>
-<ol type="1">
-<li>Cho <span class="math inline">A = \{0,1,3\}</span> và <span class="math inline">B = \{a,b\}</span>. Ta có:</li>
-</ol>
-<p><span class="math display">
-\begin{align*}
-A\times B &amp;=\{\, (0, a), (0, b), (1, a), (1, b), (3, a), (3, b)\,\},\\
-B\times A &amp;=\{\, (a,0), (a, 1), (a, 3), (b, 0), (b, 1), (b, 3)\,\}.
-\end{align*}
-</span></p>
-<ol start="2" type="1">
-<li>Tập <span class="math inline">\mathbb{R}^2=\mathbb{R}\times\mathbb{R}</span> là tập hợp các điểm của một mặt phẳng tọa độ Đề-các.</li>
-</ol>
+</section>
 <section id="quan-hệ-trên-tập-hợp" class="level2">
 <h2 class="anchored" data-anchor-id="quan-hệ-trên-tập-hợp">1.3. Quan hệ trên tập hợp</h2>
-<p><strong>Định nghĩa 1.14.</strong> Một <strong>quan hệ</strong> trên một tập A là một tập con của <span class="math inline">A\times A</span>.</p>
-<p>Nếu R là một quan hệ trên một tập hợp A cho trước và <span class="math inline">(a,b)\in R</span> thì ta viết <span class="math inline">aRb</span> (đọc là “a quan hệ R với b”).</p>
-<p><strong>Ví dụ 1.15.</strong> Cho <span class="math inline">A = \{2,4,6,8\}</span> và định nghĩa quan hệ R trên A bởi <span class="math inline">(a,b)\in R</span> khi và chỉ khi a là ước của b. Khi đó:</p>
-<p><span class="math display">
-R =\{\, (2,2),\ (2,4),\ (2,6),\ (2,8),\
-(4,4),\ (4,8),\ (6,6),\ (8,8) \,\}.
-</span></p>
+<p><strong>Định nghĩa 1.14.</strong> Một <strong>quan hệ</strong> trên một tập hợp A là một tập con của <span class="math inline">A\times A</span>.</p>
+<p>Nếu R là một quan hệ trên một tập hợp A cho trước và <span class="math inline">(a, b) \in R</span> thì ta viết <span class="math inline">aRb</span> (đọc là “a quan hệ R với b”).</p>
 <p><strong>Định nghĩa 1.16.</strong> Một quan hệ R trên một tập A gọi là có tính:</p>
 <ol type="i">
-<li><p>Phản xạ - nếu <span class="math inline">aRa</span> với mọi <span class="math inline">a\in A</span></p></li>
-<li><p>Đối xứng - nếu <span class="math inline">aRb</span> suy ra <span class="math inline">bRa</span></p></li>
-<li><p>Phản đối xứng - nếu <span class="math inline">aRb</span> và <span class="math inline">bRa</span> suy ra <span class="math inline">a = b</span></p></li>
-<li><p>Bắc cầu - nếu <span class="math inline">aRb</span> và <span class="math inline">bRc</span> suy ra <span class="math inline">aRc</span></p></li>
+<li><p><strong>Phản xạ:</strong> <span class="math inline">aRa, \forall a \in A</span></p></li>
+<li><p><strong>Đối xứng:</strong> <span class="math inline">aRb \Rightarrow bRa</span></p></li>
+<li><p><strong>Phản đối xứng:</strong> <span class="math inline">aRb \ \text{and} \ bRa \Rightarrow a = b</span></p></li>
+<li><p><strong>Bắc cầu:</strong> <span class="math inline">aRb \ \text{and} \ bRc \Rightarrow aRc</span></p></li>
 </ol>
 <p><strong>Định nghĩa 1.17.</strong> Cho R là một quan hệ trên một tập hợp A.</p>
 <ol type="i">
-<li><p>R được gọi là <em>quan hệ thứ tự</em> nếu R có tính phản xạ, phản đối xứng, và bắc cầu.</p></li>
-<li><p>R được gọi là <em>quan hệ thứ tự toàn phần</em> nếu R là một quan hệ thứ tự và <span class="math inline">\forall a, b \in A</span> thì aRb hoặc bRa.</p></li>
+<li><p>R được gọi là <strong>quan hệ thứ tự</strong> nếu R có tính phản xạ, phản đối xứng và bắc cầu.</p></li>
+<li><p>R được gọi là <strong>quan hệ thứ tự toàn phần</strong> nếu R là một quan hệ thứ tự và <span class="math inline">\forall a, b \in A</span> thì <span class="math inline">aRb</span> hoặc <span class="math inline">bRa</span>.</p></li>
 </ol>
+<p><strong>Định nghĩa 1.19.</strong> Một quan hệ <span class="math inline">\sim</span> trên một tập hợp A được gọi là <strong>quan hệ tương đương</strong> nếu R có tính phản xạ, đối xứng và băc cầu.</p>
+<ul>
+<li><p><strong>Lớp tương đương và tập tương:</strong></p>
+<ul>
+<li><p>Lớp tương đương chứa a là <span class="math inline">[a] := \{x \in A | a \sim x\}</span>. Hai lớp tương đương <span class="math inline">[a], [b]</span> hoặc trùng nhau hoặc rời nhau hoàn toàn.</p></li>
+<li><p>Tập hợp tất cả các lớp tương đương gọi là tập thương <span class="math inline">A / \sim</span></p></li>
+</ul></li>
+<li><p><strong>Phân hoạch:</strong> Một họ các tập con khác rỗng, đôi một rời nhau và có hợp bằng toàn bộ tập ban đầu. Tập thương của một quan hệ tương đương chính là phần hoạch, và ngược lại mỗi phân hoạch sinh ra một quan hệ tương đương.</p></li>
+</ul>
 </section>
 </section>
 <section id="ii.-ánh-xạ" class="level1">
@@ -614,6 +639,34 @@ R =\{\, (2,2),\ (2,4),\ (2,6),\ (2,8),\
 \end{aligned}
 </span></p>
 <p>Ta gọi tập A là tập nguồn (miền xác định), tập B là tập đích (miền giá trị) của ánh xạ f.</p>
+<p>Hai ánh xạ <span class="math inline">f, g: A \rightarrow B</span> được coi là bằng nhau, ký hiệu <span class="math inline">f = g</span>, nếu <span class="math inline">f(x) = g(x), \forall x \in A</span>.</p>
+<p><strong>Định nghĩa 2.5.</strong> Cho <span class="math inline">f: A \rightarrow B</span> là một ánh xạ từ A đến B, A’ là tập con của A và B’ là tập con của B.</p>
+<ol type="i">
+<li><p>Tập hợp <span class="math inline">f(A') := \{\, f(x) \in B \mid x\in A' \, \}</span> được gọi là <strong>tập ảnh</strong> của A’. Đặc biệt, <span class="math inline">f(x)</span> được gọi là <strong>ảnh</strong> của x.</p></li>
+<li><p>Tập hợp <span class="math inline">f^{-1}(B'):= \set{ x\in A \mid f(x)\in B' }</span> được gọi là <strong>tập tạo ảnh</strong> của B’. Nếu B’ chỉ gồm một phần tử y thì ta dùng ký hiệu <span class="math inline">f^{-1}(y)</span>. Các phần tử của <span class="math inline">f^{-1}(y)</span> được gọi là <strong>tạo ảnh</strong> của y.</p></li>
+</ol>
+</section>
+<section id="ánh-xạ-hợp-thành" class="level2">
+<h2 class="anchored" data-anchor-id="ánh-xạ-hợp-thành">2.2. Ánh xạ hợp thành</h2>
+<p><strong>Định nghĩa 2.8.</strong> Cho A, B, C là các tập hợp, <span class="math inline">f: A\rightarrow B</span> và <span class="math inline">g: B\rightarrow C</span> là hai ánh xạ bất kỳ. <strong>Ánh xạ hợp thành</strong> của f và g là ánh xạ <span class="math inline">g\circ f: A\rightarrow C</span> được xác định bởi:</p>
+<p><span class="math display">
+(g\circ f)(x) = g(f(x)) \qquad (\forall x \in A)
+</span></p>
+</section>
+<section id="đơn-ánh-toàn-ánh-và-song-ánh" class="level2">
+<h2 class="anchored" data-anchor-id="đơn-ánh-toàn-ánh-và-song-ánh">2.3. Đơn ánh, toàn ánh và song ánh</h2>
+<p><strong>Định nghĩa 2.13.</strong> Cho <span class="math inline">f: A\rightarrow B</span> là một ánh xạ tùy ý.</p>
+<ol type="i">
+<li><p>Ánh xạ f được gọi là <strong>đơn ánh</strong> nếu <span class="math inline">\forall x, x' \in A</span> thỏa mãn <span class="math inline">f(x) = f(x')</span> thì <span class="math inline">x = x'</span></p></li>
+<li><p>Ánh xạ f được gọi là <strong>toàn ánh</strong> nếu <span class="math inline">\forall y \in B</span> đều tồn tại <span class="math inline">x\in A</span> sao cho <span class="math inline">f(x) = y</span></p></li>
+<li><p>Ánh xạ f được gọi là <strong>song ánh</strong> nếu f vừa là đơn ánh vừa là toàn ánh.</p></li>
+</ol>
+<p><strong>Mệnh đề 2.15.</strong> Cho <span class="math inline">f: A\rightarrow B</span> và <span class="math inline">g: B\rightarrow C</span> là các ánh xạ:</p>
+<ol type="i">
+<li><p>Nếu f và g là hai đơn ánh (hoặc 2 toàn ánh, 2 song ánh) thì <span class="math inline">g\circ f</span> cũng là đơn ánh (hoặc toàn ánh, song ánh).</p></li>
+<li><p>Nếu <span class="math inline">g\circ f</span> là đơn ánh thì f là đơn ánh.</p></li>
+<li><p>Nếu <span class="math inline">g\circ f</span> là toàn ánh thì g là toàn ánh.</p></li>
+</ol>
 </section>
 </section>
 <section id="iii.-vành-và-trường-số" class="level1">

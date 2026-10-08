@@ -16,55 +16,82 @@ format:
 
 # I. Tập hợp
 
-**Định nghĩa 1.11.**
+## 1.1. Khái niệm tập hợp
 
-Cho hai tập A và B. Tính **Descartes** của A và B là tập hợp được xác định bởi:
+Đối tượng của toán học gồm nhiều loại khác nhau, trong đó chúng ta đã quen thuộc với các đối tượng như các số, điểm, đường thẳng, mặt phẳng, tam giác, đường tròn, phương trình, vv. Thông thường các đối tượng có cùng một tính chất chung được gom thành các tập hợp, và chúng có thể là hữu hạn hoặc vô hạn. Tập hợp là một khái niệm cơ bản và thâm nhập vào toàn bộ cách nghĩ trong toán học ngày nay. Tập hợp là một khái niệm không được định nghĩa mà được hiểu một cách trực giác như sau. 
+
+* **Tập hợp và phần tử**: Tập hợp gồm các đối tượng xác định theo quy tắc; phần tử a thuộc tập hợp A ký hiệu $a \in A$, không thuộc ký hiệu là $a \notin A$; tập không chứa phần tử nào là **tập rỗng** ($\emptyset$).
+
+* **Các tập số chuẩn:** Tập số tự nhiên $\mathbb{N}, \mathbb{N}^*$; tập số hữu tỉ $\mathbb{Q}$; tập số thực $\mathbb{R}$; tập số phức $\mathbb{C}$.
+
+* **Quan hệ chứa:** Tập con ($A \subseteq B$), tập con thực sự ($A \subsetneq B$), hai tập bằng nhau ($A = B \Leftrightarrow A \subseteq B \ \text{and}  \ B \subseteq A$), và tập tất cả các tập con của A ký hiệu là $\mathcal{P}(A)$
+
+## 1.2. Các phép toán trên tập hợp
+
+**Định nghĩa 1.8.** Cho A và B là các tập hợp:
+
+(i) **Hợp** ($A \cup B$): Gồm các phần tử thuộc ít nhất một trong hai tập, tức là $A\cup B = \{\, x \mid x\in A\ \mbox{or}\ x\in B \,\}$
+
+(ii) **Giao** ($A \cap B$): Gồm các phần tử thuộc đồng thời cả hai tập, tức là $A\cap B = \{\, x \mid x\in A\ \mbox{and}\ x\in B \,\}$
+
+(iii) **Hiệu** ($A \setminus B$): Gồm các phần tử thuộc A nhưng không thuộc B, tức là $A\setminus B = \{\, x \mid x\in A\ \mbox{and}\ x\notin B \,\}$
+
+**Mệnh đề 1.9.** Cho A, B, C là các tập hợp tùy ý. Khi đó ta có các đẳng thức sau:
+
+(i) $A\cap A = A = A\cup A$
+
+(ii) $A\cup \varnothing = A$
+
+(iii) $A\cap B= B\cap A$
+
+(iv) $A\cap (B\cap C)=(A\cap B)\cap C$, $A\cup (B\cup C)=(A\cup B)\cup C$
+
+(v) $A\setminus (B\cap C)=(A\setminus B)\cup (A\setminus C)$, $A\setminus (B\cup C)=(A\setminus B)\cap (A\setminus C).$
+
+(vi) $A\cap (B\cup C)=(A\cap B)\cup (A\cap C)$, $A\cup (B\cap C)=(A\cup B)\cap (A\cup C).$
+
+**Mệnh đề 1.10.** Ta có $(a, b) = (c, d) \Leftrightarrow a = c \ \text{and} \ b = d$.
+
+**Định nghĩa 1.11.** Cho hai tập hợp A và B. **Tích Descartes** của A và B là tập hợp được định nghĩa bởi:
 
 $$
 A\times B =\{\, (a,b) \mid a\in A,\ b\in B \,\}.
 $$
 
-**Ví dụ 1.13.**
-
-1. Cho $A = \{0,1,3\}$ và $B = \{a,b\}$. Ta có:
-
-$$
-\begin{align*}
-A\times B &=\{\, (0, a), (0, b), (1, a), (1, b), (3, a), (3, b)\,\},\\
-B\times A &=\{\, (a,0), (a, 1), (a, 3), (b, 0), (b, 1), (b, 3)\,\}.
-\end{align*}
-$$
-
-2. Tập $\mathbb{R}^2=\mathbb{R}\times\mathbb{R}$ là tập hợp các điểm của một mặt phẳng tọa độ Đề-các.
-
 ## 1.3. Quan hệ trên tập hợp
 
-**Định nghĩa 1.14.** Một **quan hệ** trên một tập A là một tập con của $A\times A$.
+**Định nghĩa 1.14.** Một **quan hệ** trên một tập hợp A là một tập con của $A\times A$.
 
-Nếu R là một quan hệ trên một tập hợp A cho trước và $(a,b)\in R$ thì ta viết $aRb$ (đọc là "a quan hệ R với b").
+Nếu R là một quan hệ trên một tập hợp A cho trước và $(a, b) \in R$ thì ta viết $aRb$ (đọc là "a quan hệ R với b").
 
-**Ví dụ 1.15.** Cho $A = \{2,4,6,8\}$ và định nghĩa quan hệ R trên A bởi $(a,b)\in R$ khi và chỉ khi a là ước của b. Khi đó:
-
-$$
-R =\{\, (2,2),\ (2,4),\ (2,6),\ (2,8),\
-(4,4),\ (4,8),\ (6,6),\ (8,8) \,\}.
-$$
 
 **Định nghĩa 1.16.** Một quan hệ R trên một tập A gọi là có tính:
 
-(i) Phản xạ - nếu $aRa$ với mọi $a\in A$
+(i) **Phản xạ:** $aRa, \forall a \in A$
 
-(ii) Đối xứng - nếu $aRb$ suy ra $bRa$
+(ii) **Đối xứng:** $aRb \Rightarrow bRa$
 
-(iii) Phản đối xứng - nếu $aRb$ và $bRa$ suy ra $a = b$
+(iii) **Phản đối xứng:** $aRb \ \text{and} \ bRa \Rightarrow a = b$
 
-(iv) Bắc cầu - nếu $aRb$ và $bRc$ suy ra $aRc$
+(iv) **Bắc cầu:** $aRb \ \text{and} \ bRc \Rightarrow aRc$
 
 **Định nghĩa 1.17.** Cho R là một quan hệ trên một tập hợp A.
 
-(i) R được gọi là *quan hệ thứ tự* nếu R có tính phản xạ, phản đối xứng, và bắc cầu.
+(i) R được gọi là **quan hệ thứ tự** nếu R có tính phản xạ, phản đối xứng và bắc cầu.
 
-(ii) R được gọi là *quan hệ thứ tự toàn phần* nếu R là một quan hệ thứ tự và $\forall a, b \in A$ thì aRb hoặc bRa.
+(ii) R được gọi là **quan hệ thứ tự toàn phần** nếu R là một quan hệ thứ tự và $\forall a, b \in A$ thì $aRb$ hoặc $bRa$.
+
+**Định nghĩa 1.19.** Một quan hệ $\sim$ trên một tập hợp A được gọi là **quan hệ tương đương** nếu R có tính phản xạ, đối xứng và băc cầu. 
+
+
+* **Lớp tương đương và tập tương:**
+
+  * Lớp tương đương chứa a là $[a] := \{x \in A | a \sim x\}$. Hai lớp tương đương $[a], [b]$ hoặc trùng nhau hoặc rời nhau hoàn toàn.
+
+  * Tập hợp tất cả các lớp tương đương gọi là tập thương $A / \sim$
+
+* **Phân hoạch:** Một họ các tập con khác rỗng, đôi một rời nhau và có hợp bằng toàn bộ tập ban đầu. Tập thương của một quan hệ tương đương chính là phần hoạch, và ngược lại mỗi phân hoạch sinh ra một quan hệ tương đương. 
+
 
 
 # II. Ánh xạ
@@ -86,7 +113,38 @@ $$
 
 Ta gọi tập A là tập nguồn (miền xác định), tập B là tập đích (miền giá trị) của ánh xạ f.
 
+Hai ánh xạ $f, g: A \rightarrow B$ được coi là bằng nhau, ký hiệu $f = g$, nếu $f(x) = g(x), \forall x \in A$.
 
+**Định nghĩa 2.5.** Cho $f: A \rightarrow B$ là một ánh xạ từ A đến B, A' là tập con của A và B' là tập con của B.
 
+(i) Tập hợp $f(A') := \{\, f(x) \in B \mid x\in A' \, \}$ được gọi là **tập ảnh** của A'. Đặc biệt, $f(x)$ được gọi là **ảnh** của x.
+
+(ii) Tập hợp $f^{-1}(B'):= \set{ x\in A \mid f(x)\in B' }$ được gọi là **tập tạo ảnh** của B'. Nếu B' chỉ gồm một phần tử y thì ta dùng ký hiệu $f^{-1}(y)$. Các phần tử của $f^{-1}(y)$ được gọi là **tạo ảnh** của y.
+
+## 2.2. Ánh xạ hợp thành
+
+**Định nghĩa 2.8.** Cho A, B, C là các tập hợp, $f: A\rightarrow B$ và $g: B\rightarrow C$ là hai ánh xạ bất kỳ. **Ánh xạ hợp thành** của f và g là ánh xạ $g\circ f: A\rightarrow C$ được xác định bởi:
+
+$$
+(g\circ f)(x) = g(f(x)) \qquad (\forall x \in A)
+$$
+
+## 2.3. Đơn ánh, toàn ánh và song ánh
+
+**Định nghĩa 2.13.** Cho $f: A\rightarrow B$ là một ánh xạ tùy ý.
+
+(i) Ánh xạ f được gọi là **đơn ánh** nếu $\forall x, x' \in A$ thỏa mãn $f(x) = f(x')$ thì $x = x'$
+
+(ii) Ánh xạ f được gọi là **toàn ánh** nếu $\forall y \in B$ đều tồn tại $x\in A$ sao cho $f(x) = y$
+
+(iii) Ánh xạ f được gọi là **song ánh** nếu f vừa là đơn ánh vừa là toàn ánh.
+
+**Mệnh đề 2.15.** Cho $f: A\rightarrow B$ và $g: B\rightarrow C$ là các ánh xạ:
+
+(i) Nếu f và g là hai đơn ánh (hoặc 2 toàn ánh, 2 song ánh) thì $g\circ f$ cũng là đơn ánh (hoặc toàn ánh, song ánh).
+
+(ii) Nếu $g\circ f$ là đơn ánh thì f là đơn ánh.
+
+(iii) Nếu $g\circ f$ là toàn ánh thì g là toàn ánh.
 
 # III. Vành và trường số

@@ -1,0 +1,71 @@
+---
+title: "Không gian Vector"
+chapter: "18.06 - Linear Algebra"
+author: "TgX.2"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Mục lục bài viết"
+    toc-location: right
+    css: ../styles.css
+    include-in-header:
+      text: | 
+        <script src="../navigation.js" defer></script>
+---
+
+# X. Khái niệm về không gian Vector
+## 10.1. Định nghĩa và ví dụ
+
+Một vector hay một điểm trong không gian 2 chiều được biểu diễn bằng một cặp có thứ tự $\mathbf{v}=\begin{bmatrix} v_1\\ v_2\end{bmatrix}$. Tương tự vậy, một vector trong không gian ba chiều $\mathbb{R}^3$ được biểu diễn bằng bộ ba có thứ tự $\mathbf{v}=\begin{bmatrix} v_1\\ v_2\\ v_3\end{bmatrix}.$.
+
+Việc nghiên cứu các không gian $\mathbb{R}^2, \mathbb{R}^3$ cho ta thấy tính chất hình học của vector có thể mô tả bằng các mối quan hệ đại số của chúng và ngược lại. 
+
+Một cách tự nhiên, các không gian hai chiều hay ba chiều có thể mở rộng thành không gian n chiều $(n \geq 4)$ bằng cách thay cặp có thứ tự hay bộ ba có thứ tự bởi bộ có thứ tự gồm n thành phần.
+
+Nhắc lại: không gian $\mathbb{R}^n$ là các tập vector gồm các thành phần là số thực: $\mathbb{R}^n = \{\,\mathbf{v} \;\Big| \;\mathbf{v}=\begin{bmatrix} v_1 \\ \vdots\\ v_n \end{bmatrix},\quad  v_1,\dots, v_n \in  \mathbb{R}\}$ cùng với phép toán cộng và tích vô hướng xác định bởi:
+
+$$
+\begin{bmatrix} u_1\\ \vdots\\ u_n \end{bmatrix}
+  +\begin{bmatrix} v_1\\ \vdots\\  v_n \end{bmatrix} =\begin{bmatrix}
+  u_1+v_1\\ \vdots\\ u_n+v_n \end{bmatrix} \in  \mathbb{R}^n, \quad \lambda
+  \begin{bmatrix} v_1\\ \vdots\\ v_n \end{bmatrix} = \begin{bmatrix} \lambda
+  v_1\\ \vdots\\ \lambda v_n \end{bmatrix} \in  \mathbb{R}^n.
+$$
+
+Các phép toán này có những tính chất dưới đây $\forall \mathbf{u}, \mathbf{v}, \mathbf{w}\in \mathbb{R}^{n}$, $a, b \in \mathbb{R}$:
+
+(i) $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$
+
+(ii) $(\mathbf{u}+\mathbf{v})+\mathbf{w}=\mathbf{u}+(\mathbf{v}+\mathbf{w}).$
+
+(iii) $\exists 0 \in \mathbb{R}^n : \mathbf{u}+\mathbf{0}=\mathbf{0}+\mathbf{u}=\mathbf{u}$
+
+(iv) $\exists-\mathbf{u}\in\mathbb{R}^n: \mathbf{u}+(-\mathbf{u})=\mathbf{0}.$
+
+(v) $(a+b)\mathbf{u}=a\mathbf{u}+b\mathbf{u}.$
+
+(vi) $a(\mathbf{u}+\mathbf{v})=a\mathbf{u}+a\mathbf{v}.$
+
+(vii) $(ab)\mathbf{u}=a(b\mathbf{u}).$
+
+(viii) $1\cdot\mathbf{u} =\mathbf{u}$
+
+
+
+## 10.2. Một số tính chất cơ bản
+
+
+## 10.3. Không gian Vector con
+
+
+## 10.3. Không gian thương
+
+
+# XI. Hệ Vector độc lập tuyến tính
+
+# XII. Cơ sở và chiều của không gian Vector
+
+# XIII. Tọa độ và ma trận chuyển cơ sở
+
+# XIV. Tổng và tổng trực tiếp
