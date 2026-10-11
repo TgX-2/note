@@ -148,3 +148,56 @@ $$
 (iii) Nếu $g\circ f$ là toàn ánh thì g là toàn ánh.
 
 # III. Vành và trường số
+
+## 3.1. Vành
+
+Giả sử R là một tập tùy ý khác rỗng. Một **phép toán** "*" trong R là một quy tắc ứng với mỗi cặp $(a, b) \in R^2$ với một phần tử của R. Ký hiệu là a * b. Nói cách khác, mỗi phép toán "*" trong R là một ánh xạ:
+
+$$
+\begin{align*}
+\ast: R^{2} &\longrightarrow R,\\
+(a,b) &\longmapsto f(a,b)=a\ast b.
+\end{align*}
+$$
+
+Chẳng hạn, ta có phép toán cộng $a + b$ và phép toán nhân $a \cdot b$ thông thường trong các tập số N, Z, Q, R.
+
+**Định nghĩa 3.1.** Một **vành** R là một tập khác rỗng có hai phép toán cộng và nhân
+
+$$
++: R\times R\rightarrow R, (a, b)\mapsto a+b,\quad
+\cdot: R\times R\rightarrow R, (a, b)\mapsto a\cdot b
+$$
+
+thỏa mãn các tiên đề sau $\forall a, b, c \in R$:
+
+(i) $(a+b)+c = a+(b+c)$
+
+(ii) $a+b = b+a$
+
+(iii) $\exists\, 0 \in R:\; a+0=a=0+a$
+
+(iv) $\exists -a \in R:\; a+(-a)=0$
+
+(v) $(ab)c = a(bc)$
+
+(vi) $a\cdot(b+c)=a\cdot b+a\cdot c,(a+b)\cdot c=a\cdot c+b\cdot c$
+
+
+**Định nghĩa 3.2.** Cho R là một vành:
+
+(i) Nếu tồn tại **phần tử đơn vị** $1 \in R$ thỏa mãn $a\cdot 1=1\cdot a=a, \forall a \in R$, thì vành R được gọi là **vành có đơn vị 1**.
+
+(ii) Nếu phép nhân co tính giao hoán $a\cdot b = b\cdot a, \forall a, b \in R$ thì vành R được gọi là **vành giao hoán**.
+
+**Định nghĩa 3.5.** Cho R là một vành và $a, b, c \in R$. Khi đó:
+
+(i) $a\cdot 0 = 0\cdot a = 0$ 
+
+(ii) $(-a)b=a(-b)=-ab$ 
+
+(iii) $(-a)(-b)=ab$ 
+
+(iv) $a(b-c)=ab-ac$ 
+
+(v) $(b-c)a = ba-ca$ 

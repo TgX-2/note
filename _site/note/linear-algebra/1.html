@@ -346,6 +346,12 @@ window.Quarto = {
  <span class="menu-text">Olympiad Calculus</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../note/olympiad/inequal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bất đẳng thức Tích phân</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -531,7 +537,10 @@ window.Quarto = {
   <li><a href="#ánh-xạ-hợp-thành" id="toc-ánh-xạ-hợp-thành" class="nav-link" data-scroll-target="#ánh-xạ-hợp-thành">2.2. Ánh xạ hợp thành</a></li>
   <li><a href="#đơn-ánh-toàn-ánh-và-song-ánh" id="toc-đơn-ánh-toàn-ánh-và-song-ánh" class="nav-link" data-scroll-target="#đơn-ánh-toàn-ánh-và-song-ánh">2.3. Đơn ánh, toàn ánh và song ánh</a></li>
   </ul></li>
-  <li><a href="#iii.-vành-và-trường-số" id="toc-iii.-vành-và-trường-số" class="nav-link" data-scroll-target="#iii.-vành-và-trường-số">III. Vành và trường số</a></li>
+  <li><a href="#iii.-vành-và-trường-số" id="toc-iii.-vành-và-trường-số" class="nav-link" data-scroll-target="#iii.-vành-và-trường-số">III. Vành và trường số</a>
+  <ul class="collapse">
+  <li><a href="#vành" id="toc-vành" class="nav-link" data-scroll-target="#vành">3.1. Vành</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -671,8 +680,46 @@ A\times B =\{\, (a,b) \mid a\in A,\ b\in B \,\}.
 </section>
 <section id="iii.-vành-và-trường-số" class="level1">
 <h1>III. Vành và trường số</h1>
+<section id="vành" class="level2">
+<h2 class="anchored" data-anchor-id="vành">3.1. Vành</h2>
+<p>Giả sử R là một tập tùy ý khác rỗng. Một <strong>phép toán</strong> “<em>” trong R là một quy tắc ứng với mỗi cặp <span class="math inline">(a, b) \in R^2</span> với một phần tử của R. Ký hiệu là a </em> b. Nói cách khác, mỗi phép toán”*” trong R là một ánh xạ:</p>
+<p><span class="math display">
+\begin{align*}
+\ast: R^{2} &amp;\longrightarrow R,\\
+(a,b) &amp;\longmapsto f(a,b)=a\ast b.
+\end{align*}
+</span></p>
+<p>Chẳng hạn, ta có phép toán cộng <span class="math inline">a + b</span> và phép toán nhân <span class="math inline">a \cdot b</span> thông thường trong các tập số N, Z, Q, R.</p>
+<p><strong>Định nghĩa 3.1.</strong> Một <strong>vành</strong> R là một tập khác rỗng có hai phép toán cộng và nhân</p>
+<p><span class="math display">
++: R\times R\rightarrow R, (a, b)\mapsto a+b,\quad
+\cdot: R\times R\rightarrow R, (a, b)\mapsto a\cdot b
+</span></p>
+<p>thỏa mãn các tiên đề sau <span class="math inline">\forall a, b, c \in R</span>:</p>
+<ol type="i">
+<li><p><span class="math inline">(a+b)+c = a+(b+c)</span></p></li>
+<li><p><span class="math inline">a+b = b+a</span></p></li>
+<li><p><span class="math inline">\exists\, 0 \in R:\; a+0=a=0+a</span></p></li>
+<li><p><span class="math inline">\exists -a \in R:\; a+(-a)=0</span></p></li>
+<li><p><span class="math inline">(ab)c = a(bc)</span></p></li>
+<li><p><span class="math inline">a\cdot(b+c)=a\cdot b+a\cdot c,(a+b)\cdot c=a\cdot c+b\cdot c</span></p></li>
+</ol>
+<p><strong>Định nghĩa 3.2.</strong> Cho R là một vành:</p>
+<ol type="i">
+<li><p>Nếu tồn tại <strong>phần tử đơn vị</strong> <span class="math inline">1 \in R</span> thỏa mãn <span class="math inline">a\cdot 1=1\cdot a=a, \forall a \in R</span>, thì vành R được gọi là <strong>vành có đơn vị 1</strong>.</p></li>
+<li><p>Nếu phép nhân co tính giao hoán <span class="math inline">a\cdot b = b\cdot a, \forall a, b \in R</span> thì vành R được gọi là <strong>vành giao hoán</strong>.</p></li>
+</ol>
+<p><strong>Định nghĩa 3.5.</strong> Cho R là một vành và <span class="math inline">a, b, c \in R</span>. Khi đó:</p>
+<ol type="i">
+<li><p><span class="math inline">a\cdot 0 = 0\cdot a = 0</span></p></li>
+<li><p><span class="math inline">(-a)b=a(-b)=-ab</span></p></li>
+<li><p><span class="math inline">(-a)(-b)=ab</span></p></li>
+<li><p><span class="math inline">a(b-c)=ab-ac</span></p></li>
+<li><p><span class="math inline">(b-c)a = ba-ca</span></p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

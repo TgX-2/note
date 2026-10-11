@@ -143,749 +143,25 @@
     ]
   },
   {
-    "objectID": "note/olympiad/index.html",
-    "href": "note/olympiad/index.html",
-    "title": "Olympiad Calculus",
+    "objectID": "note/olympiad/inequal.html",
+    "href": "note/olympiad/inequal.html",
+    "title": "Bất đẳng thức Tích phân",
     "section": "",
-    "text": "some test to determine whether a series is converges or diverges",
+    "text": "Bất đẳng thức Cauchy-Schwarz\nDạng bình thường của Cauchy-Schwarz: \\left(\\sum_{i = 1}^n a_nb_n\\right)^2 \\leq \\left(\\sum_{i = 1}^n a_i^2\\right)\\left(\\sum_{i = 1}^n b_i^2\\right)\nDạng tích phân:\n\n\\left(\\int_a^b f(x)g(x) \\mathrm dx \\right)^2 \\leq\n\\left(\\int_a^b f(x)^2 \\mathrm dx \\right)\n\\left(\\int_a^b g(x)^2 \\mathrm dx \\right)\n\nCác dạng biến thể:\n\nDạng có trọng số:\n\nCho w(x) \\geq 0 là một hàm trọng số khả tích trên [a, b], khi đó: \n\\left(\\int_a^b f(x)g(x)w(x) \\mathrm dx \\right)^2 \\leq\n\\left(\\int_a^b f(x)^2w(x) \\mathrm dx \\right)\n\\left(\\int_a^b g(x)^2w(x) \\mathrm dx \\right)\n\n\nDạng tổng quát hóa - Bất đẳng thức Hölder\n\nNếu p, q &gt; 1 và \\frac 1 p + \\frac 1 q = 1:\n\n\\left(\\int_a^b |f(x)g(x)| \\mathrm dx \\right) \\leq\n\\left(\\int_a^b \\left|f(x) \\right|^p \\mathrm dx\\right)^\\frac 1 p\n\\left(\\int_a^b \\left|g(x) \\right|^p \\mathrm dx\\right)^\\frac 1 p\n\n\nDạng bất đẳng thức tam giác - Bất đẳng thức Minkowski \n\\left(\\int_a^b |f(x) + g(x)|^p \\mathrm dx \\right)^\\frac 1 p \\leq\n\\left(\\int_a^b \\left|f(x) \\right|^p \\mathrm dx\\right)^\\frac 1 p +\n\\left(\\int_a^b \\left|g(x) \\right|^p \\mathrm dx\\right)^\\frac 1 p\n\n\n\n\nBất đẳng thức Wirtenger\nCho hàm số f : [0, \\pi] \\rightarrow \\mathbb{R} thỏa mãn các điều kiện:\n\nf(x) khả vi liên tục trên [0, \\pi]\nThỏa mãn điều kiện biên triệt tiêu tại hai đầu mút: f(0) = f(\\pi) = 0.\n\nKhi đó, ta có bất đẳng thức Wirtenger:\n\n\\int_0^{\\pi} |f(x)|^2 \\mathrm dx \\leq \\int_0^{\\pi} |f'(x)|^2 \\mathrm dx\n\nDấu “=” xảy ra khi và chỉ khi f(x) = C\\sin x với C là một hằng số tùy ý.\nCác dạng biến thể:\n\nBiến thể cho hàm tuần hoàn với chu kỳ 2\\pi.\n\nCho hàm số f : \\mathbb{R} \\rightarrow \\mathbb{R} tuần hoàn với chu kỳ 2\\pi, và có giá trị trung bình trên một chu kỳ bằng 0: \\int_0^{2\\pi} f(x) \\mathrm dx = 0. Khi đó:\n\n\\int_0^{2\\pi} |f(x)|^2 \\mathrm dx \\leq \\int_0^{2\\pi} |f'(x)|^2 \\mathrm dx\n\n\nBiến thể trên một khoảng tổng quát [a, b].\n\nCho hàm số f : [a, b] \\rightarrow \\mathbb{R} thỏa mãn f(a) = f(b) = 0. Bằng phép biến đổi tuyến tính, ta được:\n\n\\frac{\\pi^2}{(b - a)^2}\\int_a^b (f(x))^2 \\mathrm dx \\leq\n\\int_a^b (f'(x))^2 \\mathrm dx\n\n\n\nBất đẳng thức Opial\nCho hàm số thực f(x) thỏa mãn các điều kiện:\n\nf(x) khả vi liên tục trên đoạn [0, h]\nGiá trị tại điểm đầu mút bằng 0: f(x) = 0\n\nKhi đó, ta có bất đẳng thức Opial:\n\n\\int_0^h |f(x) f'(x)| \\mathrm dx \\leq\n\\frac h 2 \\int_0^h (f'(x))^2 \\mathrm dx\n\nDấu “=” xảy ra khi và chỉ khi f(x) = Cx, với C là một hằng số tùy ý.\nCác dạng biến thể:\n\nDạng tổng quát của Copson / Beesack\n\nCho p \\geq 1, q &gt; 0 là các số thực. Nếu f \\in C^1[0, h] và f(0) = 0, thì:\n\n\\int_0^h |f(x)|^p |f'(x)|^q \\mathrm dx \\leq\n\\frac q {p + q} h^p \\int_0^h |f'(x)|^{p + q} \\mathrm dx\n\nVà khi p = q = 1 thì ta thu được chính xác dạng nguyên thủy.\n\nBiến thể với điều kiện biên triệu tiêu ở đầu mút bên phải (f(h) = 0).\n\nNếu hàm số f(x) thỏa mãn f(h) = 0 thay vì f(0) = 0 thì bất đẳng thức vẫn giữ nguyên dạng.\n\nBiến thể trên khoảng tổng quát.\n\nCho f\\in C^1[a, b] thỏa mãn f(a) = 0 hoặc f(b) = 0. Khi đó:\n\n\\int_a^b |f(x) \\cdot f'(x)| \\mathrm dx = \\frac {b - a} 2 \\int_a^b |f'(x)|^2 \\mathrm dx\n\n\nDạng rời rạc\n\nVới x_0 = 0:\n\n\\sum_{i = 0}^{N - 1} |x_i (x_{i + 1} -x_i)| \\leq\n\\frac N 2 \\sum_{i = 0}^{N - 1} (x_{i + 1} - x_i)^2\n\n\n\nBất đẳng thức Grüss\nCho hai hàm số thực f(x), g(x) khả tích trên đoạn [a, b], đồng thời bị chặn bởi các hằng số:\n\nm \\leq f(x) \\leq M \\qquad n \\leq g(x) \\leq N \\qquad (\\forall x \\in [a, b])\n\n\n\\left|\\frac 1 {b - a} \\int_a^b f(x)g(x) \\mathrm dx -\n\\left(\\frac 1 {b - a} \\int_a^b f(x) \\mathrm dx \\right)\n\\left(\\frac 1 {b - a} \\int_a^b g(x) \\mathrm dx \\right)\n\\right|\\\\ \\leq \\frac 1 4 (M - m)(N - n)\n\nCác dạng biến thể:\n\nDạng có trọng số\n\nCho w(x) \\geq 0 là một hàm trọng số khả tích trên [a, b] sao cho \\int_a^b w(x) \\mathrm dx = 1. Thì:\n\n\\left|\\int_a^b f(x)g(x)w(x) \\mathrm dx -\n\\left(\\int_a^b f(x)w(x) \\mathrm dx \\right)\n\\left(\\int_a^b g(x)w(x) \\mathrm dx \\right)\n\\right|\\\\ \\leq \\frac 1 4 (M - m)(N - n)\n\n\nDạng rời rạc\n\nCho hai dãy số thực a_1 \\leq a_2 \\leq ... \\leq a_n và b_1 \\leq b_2 \\leq ... \\leq b_n thỏa mãn a \\leq a_i \\leq A và b \\leq b_i \\leq B, với mọi i = 1, 2, ..., n. Khi đó:\n\n\\left| \\frac 1 n \\sum_{i = 1}^n a_ib_i -\n\\left( \\frac 1 n \\sum_{i = 1}^n a_i \\right)\n\\left( \\frac 1 n \\sum_{i = 1}^n b_i \\right)\n\\right|\n\\leq \\frac 1 4 (A - a)(B - b)\n\n\n\nBất đẳng thức Chebyshev\nCho hai hàm số thực f(x), g(x) khả tích trên đoạn [a, b].\n\nTrường hợp 1 (Cùng tính đơn điệu): Nếu f(x) và g(x) cùng tăng hoặc cùng giảm trên đoạn [a, b] (tức là ((f(x) - f(y))(g(x) - g(y))) \\geq 0, \\forall x, y \\in [a, b]). Thì ta có:\n\n\n\\left(\\int_a^b f(x) \\mathrm dx\\right)\n\\left(\\int_a^b g(x) \\mathrm dx\\right) \\leq\n(b - a)\\int_a^b f(x)g(x)\\mathrm dx\n\n\nTrường hợp 2 (Trái tính đơn điệu): Nếu một hàm tăng, một hàm giảm thì bất đẳng thức sẽ đổi chiều:\n\n\n\\left(\\int_a^b f(x) \\mathrm dx\\right)\n\\left(\\int_a^b g(x) \\mathrm dx\\right) \\geq\n(b - a)\\int_a^b f(x)g(x)\\mathrm dx\n\nCác dạng biến thể:\n\nCho w(x) \\geq 0 là một hàm số trọng số khả tích trên [a, b] sao cho \\int_a^b w(x) \\mathrm dx &gt; 0. Nếu f và g cùng tính đơn điệu trên [a, b] thì:\n\n\n\\left(\\int_a^b f(x)w(x) \\mathrm dx\\right)\n\\left(\\int_a^b g(x)w(x) \\mathrm dx\\right) \\leq\n\\int_a^b w(x) \\mathrm dx\n\\int_a^b f(x)g(x)w(x) \\mathrm dx\n\n\nDạng rời rạc\n\nNếu a_1 \\leq a_2 \\leq ... \\leq a_n và b_1 \\leq b_2 \\leq ... \\leq b_n là hai dãy số cùng chiều, ra có:\n\n\\left(\\frac 1 n \\sum_{i = 1}^n a_i \\right)\n\\left(\\frac 1 n \\sum_{i = 1}^n b_i \\right)\n\\leq\n\\frac 1 n \\sum_{i = 1}^n a_ib_i\n\nVà bất đẳng thức đảo chiều nếu một dãy tăng, một dãy giảm.\n\n\nBất đẳng thức Steffensen\nCho hai hàm số thực f(x), g(x) xác định và khả tích trên đoạn [a, b] thỏa mãn:\n\nf(x) là hàm giảm (không tăng) trên [a, b]\n0 \\leq g(x) \\leq 1, \\forall x \\in [a, b]\n\nĐặt \\lambda = \\int_a^b g(x) \\mathrm dx. Khi đó:\n\n\\int_{b - \\lambda}^b f(x) \\mathrm dx \\leq\n\\int_a^b f(x)g(x) \\mathrm dx \\leq\n\\int_a^{a + \\lambda} f(x) \\mathrm dx\n\nCòn nếu f(x) là hàm tăng (không giảm) trên [a, b], chiều của bất đẳng thức bị đảo ngược:\n\n\\int_a^{a + \\lambda} f(x) \\mathrm dx \\leq\n\\int_a^b f(x)g(x) \\mathrm dx \\leq\n\\int_{b - \\lambda}^b f(x) \\mathrm dx  \n\nCác dạng biến thể:\n\nHàm g(x) bị chặn tùy ý\nDạng rời rạc\n\nNếu a_1 \\geq a_2 \\geq ... \\geq a_n là một dãy giảm và 0 \\leq g_i \\leq 1, \\forall i = 1, 2, ..., n.\nĐặt \\lambda = \\sum_{i = 1}^n g_i.\n\n\\sum_{i = n - \\lceil\\lambda\\rceil + 1}^n a_i \\leq\n\\sum_{i = 1}^n a_ig_i \\leq\n\\sum_{i = 1}^{\\lfloor\\lambda\\rfloor} a_i\n\n\n\nBất đẳng thức Hermite-Hadamart\nCho hàm số thực f : [a, b] \\rightarrow \\mathbb{R} là một hàm lồi trên đoạn [a, b]. Khi đó, ta có:\n\nf\\left(\\frac {a + b} 2 \\right) \\leq \\frac 1 {b - a} \\int_a^b f(x) \\mathrm dx \\leq \\frac {f(a) + f(b)}2\n\nVà nếu hàm lõm thì đảo ngược lại:\n\n\\frac {f(a) + f(b)}2 \\leq\n\\frac 1 {b - a} \\int_a^b f(x) \\mathrm dx \\leq\nf\\left(\\frac {a + b} 2 \\right)\n\nCác dạng biến thể:\n\nMở rộng cho đạo hàm.\n\nNếu f khả vi và |f'| là hàm lồi trên [a, b], ta có:\n\n\\left|\\frac 1 {b - a} \\int_a^b f(x)\\mathrm dx - f\\left(\\frac {a + b} 2\\right) \\right| \\leq\n\\frac {b - a} 8 (|f'(a)| + |f'(b)|)\n\n\n\\left| \\frac {f(a) + f(b)} 2 - \\frac 1 {b - a} \\int_a^b f(x)\\mathrm dx\\right| \\leq\n\\frac {b - a} 8 (|f'(a)| + |f'(b)|)",
     "crumbs": [
       "olympiad mathematics",
-      "Olympiad Calculus"
+      "Bất đẳng thức Tích phân"
     ]
   },
   {
-    "objectID": "note/olympiad/index.html#single-variable-calculus",
-    "href": "note/olympiad/index.html#single-variable-calculus",
-    "title": "Olympiad Calculus",
+    "objectID": "note/multivariable-calculus/index.html",
+    "href": "note/multivariable-calculus/index.html",
+    "title": "Giải tích đa biến",
     "section": "",
-    "text": "some test to determine whether a series is converges or diverges",
-    "crumbs": [
-      "olympiad mathematics",
-      "Olympiad Calculus"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
-    "href": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Tích phân bội ba trong tọa độ cầu",
-    "text": "Tích phân bội ba trong tọa độ cầu\n\n\\mathrm dV = \\rho^2\\sin\\phi \\mathrm d\\rho \\mathrm d\\phi\\mathrm d\\theta\n\n\n\n\n\n\n\nNoteThe Jacobians\n\n\n\n\n\nTa có:\n\nx = \\rho\\sin\\phi\\cos\\theta \\qquad y = \\rho\\sin\\phi\\sin\\theta \\qquad z = \\rho\\cos\\phi\n\n\nJ = \\frac{\\partial(x, y, z)}{\\partial(\\rho, \\phi, \\theta)} = \\begin{vmatrix}\nx_\\rho & x_\\phi & x_\\theta \\\\\ny_\\rho & y_\\phi & y_\\theta \\\\\nz_\\rho & z_\\phi & z_\\theta\n\\end{vmatrix}\n\n\nJ = x_\\rho\\begin{vmatrix}\ny_\\phi & y_\\theta \\\\\nz_\\phi & z_\\theta\n\\end{vmatrix} - x_\\phi\\begin{vmatrix}\ny_\\rho & y_\\theta \\\\\nz_\\rho & z_\\theta\n\\end{vmatrix} + x_\\theta\\begin{vmatrix}\ny_\\rho & y_\\phi \\\\\nz_\\rho & z_\\phi\n\\end{vmatrix}\n\n\nx_\\rho = \\sin\\phi\\cos\\theta \\qquad\nx_\\phi = \\rho\\cos\\phi\\cos\\theta \\qquad\nx_\\theta = -\\rho\\sin\\phi\\sin\\theta \\\\\ny_\\rho = \\sin\\phi\\sin\\theta \\qquad\ny_\\phi = \\rho\\cos\\phi\\sin\\theta \\qquad\ny_\\theta = \\rho\\sin\\phi\\cos\\theta \\\\\nz_\\rho = \\cos\\phi \\qquad\nz_\\phi = -\\rho\\sin\\phi \\qquad\nz_\\theta = 0\n\n\n\\begin{vmatrix}\ny_\\phi & y_\\theta \\\\\nz_\\phi & z_\\theta\n\\end{vmatrix} = \\rho^2\\sin\\phi^2\\cos\\theta\n\n\n\\begin{vmatrix}\ny_\\rho & y_\\theta \\\\\nz_\\rho & z_\\theta\n\\end{vmatrix} = -\\rho\\sin\\phi\\cos\\phi\\cos\\theta\n\n\n\\begin{vmatrix}\ny_\\rho & y_\\phi \\\\\nz_\\rho & z_\\phi\n\\end{vmatrix} = -\\rho\\sin\\theta\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi^3\\cos\\theta^2 + \\rho^2\\sin\\phi\\cos\\phi^2\\cos\\theta^2 + \\rho^2\\sin\\theta^2\\sin\\phi\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi(\\sin\\phi^2\\cos\\theta^2 + \\cos\\phi^2\\cos\\theta^2 + \\sin\\theta^2)\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi\n\nCuối cùng: \\mathrm dx\\mathrm dy \\mathrm dz = \\rho^2\\sin\\phi \\mathrm d\\rho\\mathrm d\\phi \\mathrm d\\theta\n\n\n\nVí dụ: Tính thể tích phần chóp được tạo bởi một hình cầu \\rho = 1 và cắt ngang bởi mặt phẳng z = \\frac 1 {\\sqrt2}.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nR = 1.0\nz0 = 1 / np.sqrt(2)\n\nfig = plt.figure(figsize=(6, 6))\nax = fig.add_subplot(111, projection='3d')\n\n\nu = np.linspace(0, 2*np.pi, 200)\nv = np.linspace(0, np.pi, 150)\n\nU, V = np.meshgrid(u, v)\n\nX = R * np.cos(U) * np.sin(V)\nY = R * np.sin(U) * np.sin(V)\nZ = R * np.cos(V)\n\n\nXu = np.ma.masked_where(Z &lt; z0, X)\nYu = np.ma.masked_where(Z &lt; z0, Y)\nZu = np.ma.masked_where(Z &lt; z0, Z)\n\nax.plot_surface(\n    Xu, Yu, Zu,\n    cmap='plasma',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=1\n)\n\nXl = np.ma.masked_where(Z &gt; z0, X)\nYl = np.ma.masked_where(Z &gt; z0, Y)\nZl = np.ma.masked_where(Z &gt; z0, Z)\n\nax.plot_surface(\n    Xl, Yl, Zl,\n    cmap='viridis',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=0.5\n)\n\nr = np.sqrt(R**2 - z0**2)\n\nx = np.linspace(-r, r, 200)\ny = np.linspace(-r, r, 200)\n\nXp, Yp = np.meshgrid(x, y)\n\nmask = Xp**2 + Yp**2 &lt;= r**2\n\nXp = np.ma.masked_where(~mask, Xp)\nYp = np.ma.masked_where(~mask, Yp)\nZp = np.ma.masked_where(~mask, np.full_like(Xp, z0))\n\nax.plot_surface(\n    Xp, Yp, Zp,\n    color='white',\n    alpha=0.70,\n    linewidth=0,\n    shade=False\n)\n\nt = np.linspace(0, 2*np.pi, 500)\n\nxc = r * np.cos(t)\nyc = r * np.sin(t)\nzc = np.full_like(t, z0)\n\nax.plot(\n    xc, yc, zc,\n    color='black',\n    linewidth=3\n)\n\nlim = 1.05\n\nax.set_xlim(-lim, lim)\nax.set_ylim(-lim, lim)\nax.set_zlim(-lim, lim)\n\n\nax.set_box_aspect((1, 1, 1))\n\nax.view_init(elev=28, azim=45)\n\nax.set_xlabel(r'$x$', fontsize=16)\nax.set_ylabel(r'$y$', fontsize=16)\nax.set_zlabel(r'$z$', fontsize=16)\n\nax.grid(True)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\int_0^{2\\pi}\\int_0^{\\pi/4}\\int_{\\frac 1 {\\sqrt2\\cos\\phi}}^1\\rho^2\\sin\\phi\\mathrm d\\rho\\mathrm d\\phi\\mathrm d\\theta\n\nTự tính.\n\n\\frac {2\\pi} 3 - \\frac {5\\pi}{6\\sqrt2}",
+    "text": "1. Vector và ma trận - Vectors and Matrices\n\n1.1. Vectors\n1.2. Dot product\n1.3. Determinants\n1.4. Cross product\n1.5. Matrices\n1.6. Square systems; Equation of planes\n1.7. Parametric equations for lines and curves\n1.8. Velocity\n1.9. Acceleration\n1.10. Kepler’s Second law\n\n\n\n\n2. Đạo hàm riêng - Partial derivatives\n\n2.1. Functions of several variables - Hàm nhiều biến\n\n2.1.1. Contour plot - Đồ thị đường bao\n\n2.2. Parital derivatives - Đạo hàm riêng\n2.3. Tangent plane approx - Mặt phẳng tiếp tuyến\n\n2.3.1. Appox formula - Công thức xấp xỉ\n2.3.2. Tangent plane - Mặt phẳng tiếp tuyến\n\n2.4. Max - Min problems - Bài toán cực trị\n\n2.4.1. Max point - Điểm cực đại\n2.4.2. Min point - Điểm cực tiểu\n2.4.3. Saddle point - Điểm yên ngựa\n\n2.5. Least squares - Bài toán tối ưu\n2.6. Second derivative - Đạo hàm bậc hai\n2.7. Differentials; Chain rule\n\n2.7.1. Total differential - Đạo hàm toàn phần\n2.7.2. Chain rule - Quy tắc chuỗi\n2.7.3. Application - Ứng dụng\n\n2.8. Gradient - Gradient\n2.9. Direction derivative - Đạo hàm theo hướng\n2.10. Lagrange multipliers - Nhân tử Lagrange\n2.11. Non-independent variables - Các biến phụ thuộc\n\n\n\n\n3. Tích phân kép và tích phân đường trong mặt phẳng - Double integrals and Line integrals in the plane\n\n3.1. Double integral\n\n3.1.1. Calculation\n3.1.2. Change the order\n\n3.2. Integration in Polar coordinates\n3.3. Change of variables\n\n3.3.1. Change of variables\n3.3.2. Jacobians\n3.3.3. Calculation upperr and lower limit\n\n3.4. Vector fields\n3.5. Line integrals\n\n3.5.1. Work\n3.5.2. Calculation Line integrals\n\n3.6. Path independence\n\n3.6.1. Fundamental theorem of calculus for line integral\n3.6.2. Path independence\n\n3.7. Conservative fields\n3.8. Test for Gradient fields\n3.9. Finding the Potential function\n\n3.9.1. Method 1: Using Line integral\n3.9.2. Method 2: Using Antiderivatives\n\n3.10. Curl\n\n3.10.1. Why N_x - M_y?\n3.10.2. Interpretation Curl\n\n3.11 Green’s Theorem\n\n3.11.1. Calculation\n3.11.2. Application\n3.11.3. Proof\n\n3.12. Flux\n\n3.12.1. Divergence\n3.12.2. Green’s theorem for flux\n\n3.13. Simply connected regions\n\n\n\n\n4. Tích phân bội ba và tích phân mặt trong không gian ba chiều - Triple integrals and Surface integrals in the 3-space\n\n4.1 Triple integrals in rectangular and cylindrical coordinates\n4.2 Spherical coordinates; Surface area\n4.3 Vector fields in 3D; Surface integrals and flux\n4.4 Divergence theorem\n4.5 Divergence theorem and its Applications and Proof\n4.6 Line integrals in space, Curl, Exactness and potentials\n4.7 Stokes’s theorem\n4.8 Topological considerations\n4.9 Maxwell’s equations",
     "crumbs": [
       "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#một-số-kiểu-tham-số-hóa",
-    "href": "note/multivariable-calculus/4.html#một-số-kiểu-tham-số-hóa",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Một số kiểu tham số hóa",
-    "text": "Một số kiểu tham số hóa\n\nMặt phẳng z = a song song với mặt phẳng xy: \n\\hat{\\mathbf n} = \\pm \\hat{\\mathbf k} \\qquad \\mathrm dS = \\mathrm dx \\mathrm dy\n\nHình cầu bán kính a, tâm tại gốc tọa độ, dùng \\phi, \\theta: \n\\hat{\\mathbf n} = \\frac 1 a &lt;x, y, z&gt; \\qquad \\mathrm dS = a^2\\sin\\phi\\mathrm d\\phi\\mathrm d\\theta\n\nHình trụ bán kính a, tâm ở trục z, dùng z, \\theta: \n\\hat{\\mathbf n} = \\frac 1 a &lt;x, y, 0&gt; \\qquad \\mathrm dS = a\\mathrm dz\\mathrm d\\theta\n\nHình phụ thuộc vào x và y, z = f(x, y), dùng x, y: \n\\hat{\\mathbf n}\\mathrm dS = &lt;-f_x, -f_y, 1&gt;\\mathrm dx\\mathrm dy",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#parametric-surfaces",
-    "href": "note/multivariable-calculus/4.html#parametric-surfaces",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Parametric surfaces",
-    "text": "Parametric surfaces\nNếu tất cả các biến phụ thuộc vào tham số, ví dụ như:\n\n\\begin{cases}\nx = x(u, v) \\\\\ny = y(u, v) \\\\\nz = z(u, v) \\\\\n&lt;x, y, z&gt; = \\vec r = r(u, v) \\\\\n\\end{cases}\n\nThế thì ta có thể tính thông lượng sử dụng hai biến u và v. Ta có:\n\n\\frac {\\partial \\vec r}{\\partial u}\\Delta u =\n\\left&lt;\\frac{\\partial x}{\\partial u}\\Delta x,\n\\frac{\\partial y}{\\partial u}\\Delta y,\n\\frac{\\partial z}{\\partial u}\\Delta z\n\\right&gt;\n\n\n\\frac {\\partial \\vec r}{\\partial v}\\Delta v =\n\\left&lt;\\frac{\\partial x}{\\partial v}\\Delta x,\n\\frac{\\partial y}{\\partial v}\\Delta y,\n\\frac{\\partial z}{\\partial v}\\Delta z\n\\right&gt;\n\n\n\\Delta S = \\left(\\frac{\\partial \\vec r}{\\partial u}\\Delta u \\right) \\times \\left(\\frac{\\partial \\vec r}{\\partial v}\\Delta v \\right) =\n\\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)\\Delta x \\Delta y\n\nCuối cùng:\n\nd\\vec S = \\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)dxdy",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#implicit-surfaces",
-    "href": "note/multivariable-calculus/4.html#implicit-surfaces",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Implicit surfaces",
-    "text": "Implicit surfaces\nNếu ta có:\n\nax + by + cz = d \\longrightarrow \\vec N = &lt;a, b, c&gt;\nMặt phẳng g(x, y, z) = 0 \\longrightarrow \\vec N = \\nabla g\n\n\n\\hat n dS = \\pm \\frac {|\\vec N|}{|\\vec N \\cdot \\hat k|}dxdy",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
-    "href": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Ý nghĩa hình học",
-    "text": "Ý nghĩa hình học\nLHS: \n\\iint_S \\mathbf F \\cdot \\hat n dS\n\nlà tổng lượng trường đi xuyên qua mặt kín.\nRHS: \n\\iiint \\nabla \\cdot \\mathbf F dV\n\nlà tổng nguồn phát sinh bên trong khối.\nNếu divergence dương \\longrightarrow trường được tạo ra bên trong.\nNếu divergence âm \\longrightarrow trường được hút vào bên trong.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#physical-interpretation",
-    "href": "note/multivariable-calculus/4.html#physical-interpretation",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Physical interpretation",
-    "text": "Physical interpretation",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
-    "href": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 1: Tách cách thành phần và chứng minh",
-    "text": "Bước 1: Tách cách thành phần và chứng minh\nTa cần chứng minh:\n\n\\iint_C \\mathbf F \\cdot d\\vec S = \\iiint_D \\nabla \\cdot \\mathbf F dV\n\nvới \\mathbf F = &lt;P, Q, R&gt;. Do:\n\n\\nabla \\cdot \\mathbf F = P_x + Q_y + R_z\n\nnên\n\n\\iiint_D (P_x + Q_y + R_z)dV =\n\\iiint_D P_x dV +\n\\iiint_D Q_y dV +\n\\iiint_D R_z dV\n\n\n\\iint_S \\mathbf F \\cdot d\\vec S =\n\\iint_S PdS_x +\n\\iint_S QdS_y +\n\\iint_S RdS_z\n\nVì các thành phần độc lập với nhau, vì vậy chỉ cần chứng minh:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_z dV\n\nvà tương tự với \\iint_S P\\hat i \\cdot d\\vec S, \\iint_SQ\\hat j\\cdot d\\vec S.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
-    "href": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 2: Miền đơn giản theo phương z",
-    "text": "Bước 2: Miền đơn giản theo phương z\nGiả sử miền D = \\{(x, y, z) : (x, y) \\in \\mathbb U, z_1(x, y) \\leq x \\leq z_2(x, y)\\}.\nTức là miền bị kẹp giữa hai mặt:\n\nBottom: z = z_1(x, y)\nTop: z = z_2(x, y)",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
-    "href": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 3: Tính tích phân thể tích",
-    "text": "Bước 3: Tính tích phân thể tích\nTa có \\iiint_D R_zdV, do miền đơn giản theo z, nên thành:\n\n\\iint_U \\left(\\int_{z_1}^{z_2}R_zdz \\right)dxdy\n\nÁp dụng fundamental theorem of calculus \\int_{z_1}^{z_2}R_zdz = R(x, y, z_2) - R(x, y, z_1), nên:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
-    "href": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 4: Flux through top",
-    "text": "Bước 4: Flux through top\nTa có mặt trên z = z_2(x, y), tham số hóa ta được:\n\n\\mathbf r(x, y) = (x, y, z_2(x, y))\n\nCó hai vector tiếp tuyến:\n\n\\mathbf r_x = (1, 0, z_{2x}) \\qquad \\mathbf r_y = (0, 1, z_{2y})\n\ntích có hướng:\n\n\\mathbf r_x \\times \\mathbf r_y = &lt;-z_{2x}, -z_{2y}, 1&gt;\n\nVậy:\n\nd\\vec S = \\left&lt;-\\frac{\\partial z_2}{\\partial x}, -\\frac{\\partial z_2}{\\partial y}, 1\\right&gt;dxdy\n\ntích vô hướng:\n\nR\\hat k \\cdot d\\vec S = &lt;0, 0, R&gt;\\cdot&lt;-z_{2x}, -z_{2y}, 1&gt; = R\n\ndo đó:\n\n\\iint_{top}R\\hat k \\cdot d\\vec S = \\iint_U R(x, y, z_2)dxdy",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
-    "href": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 5: Flux through bottom",
-    "text": "Bước 5: Flux through bottom\nTương tự nhưng mà tiếp tuyến đổi hướng, vậy nên:\n\nd\\vec S = \\left&lt;\\frac{\\partial z_1}{\\partial x}, \\frac{\\partial z_1}{\\partial y}, -1\\right&gt;dxdy\n\nVậy:\n\n\\iint_{bottom}R\\hat k \\cdot d\\vec S = -\\iint_U R(x, y, z_1)dxdy",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
-    "href": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 6: Flux through sides",
-    "text": "Bước 6: Flux through sides\nCác pháp tuyến nằm ngang, và các mặt phẳng nằm dựng đứng, vậy nên thông lượng qua các mặt = 0.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
-    "href": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Bước 7: Tổng kết",
-    "text": "Bước 7: Tổng kết\nThông lượng toàn bộ mặt:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U R(x, y, z_2)dxdy -\n\\iint_U R(x, y, z_1)dxdy\n\nHay tóm gọn lại:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U (R(x, y, z_2) - R(x, y, z_1))dxdy\n\nMà ở bước 3, ta tính được:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy\n\nVậy:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_zdV",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
-    "href": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Ý nghĩa của Laplacian",
-    "text": "Ý nghĩa của Laplacian\nLaplacian đo xem giá trị tại một điểm cao hơn hay thấp hơn trung bình các điểm lân cận.\nNếu \n\\nabla^2f&gt;0\n thì điểm đó thấp hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy vào \\Rightarrow u tăng.\nNếu \n\\nabla^2f&lt;0\n thì điểm đó cao hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy ra \\Rightarrow u giảm.\nDo đo phương trình khuếch tán luôn có xu hướng làm trung bình hóa phân bố theo thời gian.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#diffusion-equation",
-    "href": "note/multivariable-calculus/4.html#diffusion-equation",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Diffusion equation",
-    "text": "Diffusion equation\nPhương trình khuếch tán ví dụ như quản lý chuyển động của khói trong không khí (đứng yên), màu thuốc nhuộm trong dung dịch, …\nPhương trình là:\n\n\\frac{\\partial u}{\\partial t} = k\\nabla^2u\n= k \\left(\\frac{\\partial^2u}{\\partial x^2} +\n\\frac{\\partial^2u}{\\partial y^2} +\n\\frac{\\partial^2u}{\\partial z^2} \\right)\n\nTrong đó:\n\nu = (x, y, z, t) là đại lượng khuếch tán tại x, y, z vào thời điểm t.\nk là hệ số khuếch tán.\n\\nabla^2 toán tử Laplacian.\n\nVà heat equation là một trường hợp đặc biệt của diffusion equation.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#test-for-gradient-fields",
-    "href": "note/multivariable-calculus/4.html#test-for-gradient-fields",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Test for Gradient fields",
-    "text": "Test for Gradient fields\nCho trường vector \\mathbf F = &lt;P, Q, R&gt; = &lt;f_x, f_y, f_z&gt;.\nVà:\n\n\\begin{cases}\nf_{xy} = f_{yx} \\\\\nf_{xz} = f_{zx} \\\\\nf_{yz} = f_{yz} \\\\\n\\end{cases} \\Rightarrow\n\\begin{cases}\nP_y = Q_x \\\\\nP_z = R_x \\\\\nQ_z = R_y\n\\end{cases}\n\n\\mathbf F là trường Gradient nếu và chỉ nếu thỏa mãn các điều kiện trên (cho rằng trường vector được định nghĩa khắp không gian hoặc là vùng liên đơn).\nVí dụ: tìm a, b để trường \\mathbf F = &lt;axy, x^2 + z^3, byz^2 - 4z^3&gt; là trường vector.\n\nP = axy \\qquad \\rightarrow \\qquad P_y = ax \\qquad P_z = 0 \\\\\nQ = x^2 + z^3 \\qquad \\rightarrow \\qquad Q_x = 2x \\qquad Q_z = 3z^2 \\\\\nR = byz^2 - 4z^3 \\qquad \\rightarrow \\qquad R_x = 0 \\qquad R_y = bz^2\n\n\n\\begin{cases}\nP_y = ax = 2x = Q_x \\\\\nP_z = 0 = 0 = R_z \\\\\nQ_z = 3z^2 = bz^2 = R_y\n\\end{cases} \\Rightarrow\n\\begin{cases}\na = 2 \\\\ b = 3\n\\end{cases}",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/4.html#finding-potential-function",
-    "href": "note/multivariable-calculus/4.html#finding-potential-function",
-    "title": "Triple integrals and Surface integrals in 3D space",
-    "section": "Finding Potential function",
-    "text": "Finding Potential function\nCách 1: Nguyên hàm\n\nf_x = 2xy \\rightarrow f = x^2y + g(y, z)\n\nĐạo hàm theo y:\n\n\\Rightarrow \\frac{\\partial f}{\\partial y} = x^2 + \\frac{\\partial g(y, z)}{\\partial y} = f_y = x^2 + z^3\n\\Rightarrow g_y = z^3\n\nNguyên hàm lại g_y:\n\ng = yz^3 + h(z)",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Triple integrals and Surface integrals in 3D space"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#contour-plot",
-    "href": "note/multivariable-calculus/2.html#contour-plot",
-    "title": "Partial derivatives",
-    "section": "Contour plot",
-    "text": "Contour plot\n\n\n\n\n\n\nImportanttl;dr\n\n\n\nĐường mức f(x, y) = c. Cho biết hình dạng bền mặt mà không cần vẽ 3D.\n\n\nViệc biểu diễn hình không gian 3 chiều trong mặt phẳng thật sự là rất khó nếu ta vẽ như trên, để giải quyết vấn đề đó, chúng ta đã có Contour plot.\nĐây chính là một kỹ thuật biểu diễn không gian 3 chiều trên mặt phẳng 2 chiều, khá là quen thuộc trong việc biểu diễn nhiệt độ vùng, độ cao của núi, … trong đó x và y là kinh độ và vỹ độ.\nHãy xem ví dụ về Topographic map của đỉnh Himalaya dưới đây:\n\nTa có thể thấy các vành xung quanh đó, mỗi điểm trên vành sẽ có giá trị bằng chính xác một giá trị nào đó, giá trị của điểm giữa hai vành sẽ có giá trị ở giữa giá trị hai vành. Các vành không thể cắt nhau. Nếu một điểm nào đó mà các vành xếp gần nhau, chứng tỏ ở đó là vách núi, và ngược lại, nếu chúng xếp xa nhau, thì chứng tỏ đó là đồng bằng.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
-    "href": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
-    "title": "Partial derivatives",
-    "section": "Cách tính đạo hàm từng phần",
-    "text": "Cách tính đạo hàm từng phần\nNhư đã nói ở trước, ta sẽ coi một biến là hằng số.\nVí dụ hàm f(x, y) = x^2 + x^3y + 2y + 3x\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\nx = np.linspace(-2, 2, 100)\ny = np.linspace(-2, 2, 100)\nX, Y = np.meshgrid(x, y)\nZ = X**2 + Y*X**3 + 2*Y + 3*X\n\nfig = plt.figure(figsize=(6, 5))\nax = fig.add_subplot(111, projection='3d')\nsurf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none')\n\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#approximation-formula",
-    "href": "note/multivariable-calculus/2.html#approximation-formula",
-    "title": "Partial derivatives",
-    "section": "Approximation formula",
-    "text": "Approximation formula\nIf we change x \\rightarrow x + \\Delta x and then y \\rightarrow y + \\Delta y.\nz = f(x, y) : then we have approximation formula for \\Delta z\n\n\\Delta z \\approx f_x \\Delta x + f_y \\Delta y\n\n\n\n\n\n\n\nTipRememeber\n\n\n\n\n\nthat f_x = \\frac {\\partial f}{\\partial x} and the same with f_y.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#tangent-plane",
-    "href": "note/multivariable-calculus/2.html#tangent-plane",
-    "title": "Partial derivatives",
-    "section": "Tangent plane",
-    "text": "Tangent plane\nTưởng tượng trong không gian mặt phẳng 2D, ta có tiếp tuyến là một đường thẳng là 1D.\nTương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.\nVí dụ: f(x, y) = x^2 + y^2\nTa xét tại điểm (x_0, y_0) = (1, 1), mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 1, 1\nx00, y00 = 4, 4\nz0 = f(x0, y0)\nz00 = f(x00, y00)\n\nx = np.linspace(-1, 5, 70)\ny = np.linspace(-1, 5, 70)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 2, x0 + 2, 20),\n    np.linspace(y0 - 2, y0 + 2, 20)\n)\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nXpp, Ypp = np.meshgrid(\n    np.linspace(x00 - 2, x00 + 2, 20),\n    np.linspace(y00 - 2, y00 + 2, 20)\n)\nZpp = z00 + fx(x00, y00) * (Xpp - x00) + fy(x00, y00) * (Ypp - y00)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\n\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.plot_surface(Xpp, Ypp, Zpp, alpha=0.5, color='red')\n\nax.scatter(x0, y0, z0, color='black', s=60)\nax.scatter(x00, y00, z00, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nax.legend()\n\nplt.show()",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
-    "href": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
-    "title": "Partial derivatives",
-    "section": "Điểm cực tiểu",
-    "text": "Điểm cực tiểu\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#điểm-cực-đại",
-    "href": "note/multivariable-calculus/2.html#điểm-cực-đại",
-    "title": "Partial derivatives",
-    "section": "Điểm cực đại",
-    "text": "Điểm cực đại\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 - y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#điểm-saddle",
-    "href": "note/multivariable-calculus/2.html#điểm-saddle",
-    "title": "Partial derivatives",
-    "section": "Điểm saddle",
-    "text": "Điểm saddle\nVừa là cực dại vừa là cực tiểu.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#general-case",
-    "href": "note/multivariable-calculus/2.html#general-case",
-    "title": "Partial derivatives",
-    "section": "General case",
-    "text": "General case\n\n\\frac {\\partial^2 f}{\\partial x^2} = f_{xx}; \\qquad\n\\frac {\\partial^2 f}{\\partial y^2} = f_{yy}; \\qquad\n\\frac {\\partial^2 f}{\\partial x \\partial y} = f_{xy} =\n\\frac {\\partial^2 f}{\\partial y \\partial x} = f_{yx}\n\nLet A = f_{xx}, B = f_{xy} and C = f_{yy}, we have 3 cases:\n\nAC - B^2 &lt; 0 \\Rightarrow saddle point.\nAC - B^2 = 0 \\Rightarrow cant conclude\nAC - B^2 &gt; 0\n\n\\rightarrow if A &gt; 0 local minimum.\n\\rightarrow if A &lt; 0 local maximum.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#total-differential",
-    "href": "note/multivariable-calculus/2.html#total-differential",
-    "title": "Partial derivatives",
-    "section": "Total differential",
-    "text": "Total differential\nĐạo hàm toàn phần: Cho một hàm f ví dụ như phụ thuộc vào 3 biến số f = f(x, y, z) thì đạo hàm toàn phần của nó là: \n\\mathrm df = f_x \\mathrm d x + f_y \\mathrm d y + f_z \\mathrm d z",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#chain-rule",
-    "href": "note/multivariable-calculus/2.html#chain-rule",
-    "title": "Partial derivatives",
-    "section": "Chain rule",
-    "text": "Chain rule\nTrường hợp 1: x = x(t), y = y(t), z = z(t)\n\n\\frac{\\mathrm d f}{\\mathrm dt} =\n\\frac{\\partial f}{\\partial x} \\frac{\\mathrm dx}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial y} \\frac{\\mathrm dy}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial z} \\frac{\\mathrm dz}{\\mathrm dt}\n\nTrường hợp 2: x = x(u, v), y = y(u, v), z = z(u, v) \n\\frac{\\partial f}{\\partial u} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial u} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial u} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial u}  \n\\\\[10pt]\n\\frac{\\partial f}{\\partial v} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial v} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial v} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial v}  \n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nQuy tắc nhân, ta có f = f(u, v) = uv, đạo hàm toàn phần nó: \n\\mathrm d f = v \\mathrm d u + u \\mathrm dv \\space (=vu'+uv')\n\nQuy tắc thương, ta có f = f(u, v) = \\frac u v, đạo hàm toàn phần: \n\\mathrm d f = \\frac 1 v \\mathrm du - \\frac u {v^2} \\mathrm d v = \\frac {v\\mathrm du - u\\mathrm dv}{v^2}\n\\space \\left(=\\frac{vu' - uv'}{v^2}\\right)",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#application",
-    "href": "note/multivariable-calculus/2.html#application",
-    "title": "Partial derivatives",
-    "section": "Application",
-    "text": "Application\nNói một cách khó hiểu, \\mathrm d x hay bất kể \\mathrm d gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là \\mathrm d x \\neq \\Delta x. Chỉ khi nào \\Delta x tiến tới 0, thì khi đó \\mathrm d x \\approx \\Delta x\nVậy đạo hàm toàn phần có thể làm những gì:\n\nNó biểu thị xem việc thay đổi các biến của f tác động thế nào đến f.\nNó là “người giữ chỗ” cho công thức xấp xỉ: \\Delta f \\approx f_x \\Delta x + f_y \\Delta y + f_z \\Delta z.\nNếu các biến của f phụ thuộc vào tham số khác, ví dụ như x = x(t), y = y(t), z = z(t), thì ta có thể chia nó cho \\mathrm d t để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành \\frac {\\mathrm d f}{\\mathrm d t} = \\frac{\\partial f}{\\partial x}\\frac {\\mathrm d x}{\\mathrm d t} + \\frac{\\partial f}{\\partial y}\\frac {\\mathrm d y}{\\mathrm d t} + \\frac{\\partial f}{\\partial z}\\frac {\\mathrm d z}{\\mathrm d t}\n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nVí dụ như, f = f(x, y, z) = x^2y + z, và x = t, y = e^t, z = \\sin t 1. Ta đạo hàm như bình thường: \nf = t^2 e^t + \\sin t\n\\Rightarrow \\frac {\\mathrm df}{\\mathrm dt} = e^t 2t + e^t t^2 + \\cos t\n\n\nĐạo hàm sử dụng Chain rule: \n\\frac{\\partial f}{\\partial x} = 2xy = 2te^t;\n\\frac{\\partial f}{\\partial y} = x^2 = t^2;\n\\frac{\\partial f}{\\partial z} = 1\n\n\n\n\\mathrm d x = 1;\n\\mathrm d y = e^t;\n\\mathrm d z = \\cos t\n\nvậy đáp án cuối cùng là:\n\n\\frac{\\mathrm d f}{\\mathrm dt} =\n\\frac{\\partial f}{\\partial x}\\frac{\\mathrm d x}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial y}\\frac{\\mathrm d y}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial z}\\frac{\\mathrm d z}{\\mathrm dt} =\n2te^t + e^t t^2 + \\cos t\n\n\n\n\n\n\n\n\n\n\nNoteJustify",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#gradient-1",
-    "href": "note/multivariable-calculus/2.html#gradient-1",
-    "title": "Partial derivatives",
-    "section": "Gradient",
-    "text": "Gradient\nĐịnh nghĩa: \\nabla f = &lt;f_x, f_y, f_z&gt; - Là một vector Gradient.\nKhi đó thì vector sẽ vuông góc với mặt phẳng, và có hướng về phía mà có f(x, y, z) cao hơn. (Tức là nếu nó ở đoạn sườn dốc của một ngọn núi, thì nó sẽ nhìn lên phía trên đỉnh thay vì nhìn xuống dưới chân núi).\nVí dụ: Sau đây là một hàm bất kỳ, ta vẽ được như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, cmap='viridis')\n\nax.set_title('Surface Plot')\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()\n\n\n\n\n\n\n\n\n\ncó contour plot là:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nplt.figure(figsize=(7, 6))\ncontour = plt.contourf(X, Y, Z, levels=30, cmap='viridis')\nplt.colorbar(contour)\n\nplt.contour(X, Y, Z, levels=15, colors='black', linewidths=0.5)\n\nplt.title('Contour Plot')\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nvà vector gradient được vẽ màu đỏ như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-2, 2, 25)\ny = np.linspace(-2, 2, 25)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\ndZ_dY, dZ_dX = np.gradient(Z, y, x)\n\nplt.figure(figsize=(7, 6))\nplt.contour(X, Y, Z,\n            levels=20,\n            colors='gray',\n            linewidths=0.8,\n            alpha=0.4)\n\nplt.quiver(X, Y, dZ_dX, dZ_dY,\n           color='red',\n           scale=20)\n\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nCó thể thấy mọi vector đều vuông góc với level curves, và hướng về phía 2 điểm cực trị.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#cách-tính",
-    "href": "note/multivariable-calculus/2.html#cách-tính",
-    "title": "Partial derivatives",
-    "section": "Cách tính",
-    "text": "Cách tính\nCho f = f(x, y, z) với x = x(t), y = y(t), z = z(t), chainrule:\n\n\\frac{\\mathrm df}{\\mathrm dt} =\nf_x\\frac{\\mathrm dx}{\\mathrm dt} +\nf_x\\frac{\\mathrm dy}{\\mathrm dt} +\nf_x\\frac{\\mathrm dz}{\\mathrm dt}  \n\nGiờ chúng ta sẽ viết nó dưới dạng khác:\n\n\\frac{\\mathrm df}{\\mathrm dt} = \\nabla f \\cdot \\frac{\\mathrm d\\vec r}{\\mathrm dt}\n\ntrong đó:\n\n\\nabla w = &lt;f_x, f_y, f_z&gt; \\quad\n\\frac{\\mathrm d \\vec r}{\\mathrm dt} = &lt;\\frac{\\mathrm dx}{\\mathrm dt},\\frac{\\mathrm dy}{\\mathrm dt},\\frac{\\mathrm dz}{\\mathrm dt}&gt;\n\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx0 = 1\ny0 = 1\ntheta_deg = 60.0\ntheta_rad = np.radians(theta_deg)\n\ndef f_3d(X, Y):\n    return np.exp(-((X - 1.5)**2 + Y**2)) + np.exp(-((X + 1.5)**2 + Y**2))\n\nx_range = np.linspace(-5, 5, 300)\ny_range = np.linspace(-5, 5, 300)\nX, Y = np.meshgrid(x_range, y_range)\nZ = f_3d(X, Y)\n\nt = np.linspace(-5, 5, 300)\nx_plane = x0 + t * np.sin(theta_rad)\ny_plane = y0 + t * np.cos(theta_rad)\nz_plane_line = f_3d(x_plane, y_plane)\n\nfig = plt.figure(figsize=(12, 5))\nax_3d = fig.add_subplot(121, projection='3d')\nax_2d = fig.add_subplot(122)\n\nax_3d.plot_surface(X, Y, Z, cmap='viridis', alpha=0.6, edgecolor='none')\n\nax_3d.plot(x_plane, y_plane, z_plane_line, color='red', linewidth=2.5, label='Giao tuyến')\nax_3d.scatter([x0], [y0], [f_3d(x0, y0)], color='black', s=20)\n\nz_grid = np.linspace(0, 1.2, 2)\nT, Z_plane = np.meshgrid(t, z_grid)\nX_plane_mesh = x0 + T * np.sin(theta_rad)\nY_plane_mesh = y0 + T * np.cos(theta_rad)\nax_3d.plot_surface(X_plane_mesh, Y_plane_mesh, Z_plane, color='red', alpha=0.15)\n\nax_3d.set_xlabel(\"X\")\nax_3d.set_ylabel(\"Y\")\nax_3d.set_zlabel(\"Z\")\nax_3d.set_zlim(0, 1.2)\n\nax_2d.plot(t, z_plane_line, color='red', linewidth=2)\nax_2d.axvline(0, color='gray', linestyle='--', alpha=0.7)\nax_2d.set_ylim(0, 1.2)\nax_2d.grid(True)\n\nplt.tight_layout()\nplt.show()",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#geometric",
-    "href": "note/multivariable-calculus/2.html#geometric",
-    "title": "Partial derivatives",
-    "section": "Geometric",
-    "text": "Geometric\n\nD_{\\hat {\\mathbf u}}f = \\nabla f \\cdot \\hat {\\mathbf u} = |\\nabla f|\\cos \\theta.\n\nMaximum Khi \\cos \\theta = 1, tức là khi vector gradient \\nabla f trùng hướng với \\hat {\\mathbf u}. Vậy hàm sẽ tăng nhanh nhất khi mà",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/2.html#chú-ý",
-    "href": "note/multivariable-calculus/2.html#chú-ý",
-    "title": "Partial derivatives",
-    "section": "Chú ý",
-    "text": "Chú ý\nCác notaion của đạo hàm riêng rất dễ bị nhầm lẫn, thì nó chỉ biểu thị là mức độ lệch của hàm này trên một biến cụ thể, chứ không hề nhắc đến việc các biến nào sẽ const.\n\n\n\n\n\n\nWarningVí dụ\n\n\n\nCho f(x, y) = x + y.\nDễ dàng tính được:\n\n\\frac{\\partial f}{\\partial x} = 1 \\qquad\n\\frac{\\partial f}{\\partial y} = 1\n\nGiờ ta đặt x = u; y = u + v, hàm f(x, y) = x + y = 2u + v, bây giờ đạo hàm riêng đã trở thành:\n\n\\frac{\\partial f}{\\partial u} = 2 \\qquad\n\\frac{\\partial f}{\\partial v} = 1\n\nRõ ràng u = x nhưng \\frac{\\partial f}{\\partial u} \\neq \\frac{\\partial f}{\\partial x}!\nVì đạo hàm riêng của f trên x là giữ nguyên y và thay đổi x. Còn đạo hàm riêng của f trên u là đạo hàm riêng của f trên x giữ nguyên y - x.\n\n\nVì vậy, trong một số trường hợp, đễ tránh bị nhầm lẫn, ta sử dụng đạo hàm riêng f trên x giữ nguyên y thay đổi x là:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y\n\nVì thế với ví dụ trên, ta có thể khẳng định rằng:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y =\n\\left(\\frac{\\partial f}{\\partial u} \\right)_y \\neq\n\\left(\\frac{\\partial f}{\\partial u} \\right)_v",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Partial derivatives"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/index.html",
-    "href": "note/linear-algebra/index.html",
-    "title": "Đại số tuyến tính",
-    "section": "",
-    "text": "Đây chỉ là bản copy rẻ tiền và không đầy đủ của daisotuyentinh.com được viết bởi thầy Phạm Đình Đồng, cô Trần Nguyễn Khánh Linh, thầy Lê Ngọc Long và thầy Huỳnh Đình Tuân, giảng viên Khoa Toán học, Trường ĐHSP - Đại học Huế.\n\n\nChương I. Tiền đề\n\nTập hợp\nÁnh xạ\nVành và trường số\n\n\n\nChương II. Ma trận và Hệ phương trình tuyến tính\n\nGiới thiệu về hệ phương trình tuyến tính\nMa trận\nPhương pháp khử Gauss - Jordan\nBiện luận hệ phương trình và ứng dụng\nCác phép toán trên ma trận\nMa trận khả nghịch và các tính chất\n\n\n\nChương III. Không gian Vector\n\nKhái niệm về không gian Vector\nHệ Vector độc lập tuyến tính\nCơ sở và chiều của không gian Vector\nTọa độ và ma trận chuyển cơ sở\nTổng và tổng trực tiếp\n\n\n\nChương IV. Ánh xạ tuyến tính\n\nÁnh xạ tuyến tính\nMa trận của ánh xạ tuyến tính\nẢnh và hạt nhân của đồng cấu\nKhông gian Vector đối ngẫu\n\n\n\nChương V. Định thức và ứng dụng\n\nĐịnh thức của ma trận\nKhai triển định thức\nCác ứng dụng của định thức\n\n\n\nChương VI. Giá trị riêng và bài toán chéo hóa\n\nKhông gian con bất biến\nĐa thức đặc trưng\nBài toán chéo hóa và ứng dụng",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Đại số tuyến tính"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/2.html",
-    "href": "note/linear-algebra/2.html",
-    "title": "Ma trận và Hệ phương trình tuyến tính",
-    "section": "",
-    "text": "IV. Giới thiệu về hệ phương trình tuyến tính\n\n\nV. Ma trận\n\n\nVI. Phương pháp khử Gauss - Jordan\n\n\nVII. Biện luận hệ phương trình và ứng dụng\n\n\nVIII. Các phép toán trên ma trận\n\n\nIX. Ma trận khả nghịch và các tính chất",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Ma trận và Hệ phương trình tuyến tính"
-    ]
-  },
-  {
-    "objectID": "note/differential-equations/index.html",
-    "href": "note/differential-equations/index.html",
-    "title": "Phương trình vi phân",
-    "section": "",
-    "text": "1. Giới thiệu (Introduction)\n\n1.1 Một số mô hình toán học cơ bản; Trường phương hướng\n1.2 Nghiệm của một số phương trình vi phân\n1.3 Phân loại phương trình vi phân\n\n\n\n\n2. Phương trình vi phân cấp một (First-Order Differential Equations)\n\n2.1 Phương trình tuyến tính; phương pháp nhân tử tích phân\n2.2 Phương trình tách biến\n2.3 Phương trình thuần nhất\n2.4 Phương trình Bernoulli và phi tuyến\n2.5 Phương trình tự trị và động lực học quần thể\n2.6 Phương trình chính xác và nhân tử tích phân\n2.7 Phương pháp Euler\n2.8 Định lý tồn tại và duy nhất nghiệm\n2.9 Phương trình sai phân cấp một\n\n\n\n\n3. Phương trình vi phân tuyến tính cấp hai\n\n3.1 Phương trình thuần nhất hệ số hằng\n3.2 Nghiệm Wronskian\n3.3 Nghiệm phức của phương trình đặc trưng\n3.4 Nghiệm bội\n3.5 Phương pháp hệ số bất định\n3.6 Phương pháp biến thiên tham số\n3.7 Dao động cơ học và điện\n3.8 Dao động cưỡng bức tuần hoàn\n\n\n\n\n4. Phương trình vi phân tuyến tính cấp cao\n\n4.1 Lý thuyết tổng quát\n4.2 Thuần nhất hệ số hằng\n4.3 Phương pháp hệ số bất định\n4.4 Biến thiên tham số\n\n\n\n\n5. Nghiệm chuỗi của phương trình cấp hai\n\n5.1 Ôn tập chuỗi lũy thừa\n5.2 Chuỗi quanh điểm chính quy (phần I)\n5.3 Chuỗi quanh điểm chính quy (phần II)\n5.4 Phương trình Euler\n5.5 Điểm kỳ dị chính quy (phần I)\n5.6 Điểm kỳ dị chính quy (phần II)\n5.7 Phương trình Bessel\n\n\n\n\n6. Phép biến đổi Laplace\n\n6.1 Định nghĩa\n6.2 Giải bài toán giá trị ban đầu\n6.3 Hàm bước\n6.4 Ngoại lực gián đoạn\n6.5 Hàm xung\n6.6 Tích chập\n\n\n\n\n7. Hệ phương trình vi phân tuyến tính cấp một\n\n7.1 Giới thiệu\n7.2 Ma trận\n7.3 Hệ tuyến tính; trị riêng, vectơ riêng\n7.4 Lý thuyết cơ bản\n7.5 Thuần nhất hệ số hằng\n7.6 Trị riêng phức\n7.7 Trị riêng hàm cơ bản\n7.8 Trị riêng lặp\n7.9 Hệ không thuần nhất",
-    "crumbs": [
-      "18.03 - Differential",
-      "Phương trình vi phân"
-    ]
-  },
-  {
-    "objectID": "donotReadme/readme.html",
-    "href": "donotReadme/readme.html",
-    "title": "Note",
-    "section": "",
-    "text": "Notehing to Commnet\n\n1 - Toán học\n2 - Cơ học cổ điển\n3 - Điện và từ\n4 - Sóng và dao động\n5 - Thuyết tương đối hẹp\n6 - Cơ học lượng tử\n7 - Vật lý thống kê\n8 - Điện động lực học\n9 - Thuyết tương đối rộng\n10 - Lý thuyết trường lượng tử\n11 - Vật lý hạt\n12 - Vũ trụ học\nEnd"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topic",
-    "href": "donotReadme/readme.html#topic",
-    "title": "Note",
-    "section": "Topic",
-    "text": "Topic\n\nCalculus\n\nLimits\nDifferentiation\nIntegration\nTaylor Series\nFourier Series\nMultiple Integrals\nVector Calculus\nGradient ✔️\nDivergence\nCurl\nLine Integrals\nSurface Integrals\n\n\n\nLinear Algebra\n\nVectors\nVector Spaces\nBases and Dimension\nMatrices\nDeterminants\nEigenvalues\nEigenvectors\nInner Product Spaces\nIntroduction to Hilbert Spaces\n\n\n\nDifferential Equations\n\nOrdinary Differential Equations\nPartial Differential Equations\nSeparation of Variables\nFourier Transform\nLaplace Transform"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics",
-    "href": "donotReadme/readme.html#topics",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nNewtonian Mechanics\nWork and Energy\nMomentum\nCollisions\nRotational Motion\nOscillations\n\n\nAdvanced Topics\n\nLagrangian Mechanics\nHamiltonian Mechanics\nPrinciple of Least Action\nPhase Space"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-1",
-    "href": "donotReadme/readme.html#topics-1",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nElectric Fields\nElectric Potential\nMagnetic Fields\nCircuits\nMaxwell’s Equations\nElectromagnetic Waves"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-2",
-    "href": "donotReadme/readme.html#topics-2",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nSimple Harmonic Motion\nDamped Oscillations\nDriven Oscillations\nWave Propagation\nStanding Waves\nFourier Analysis"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-3",
-    "href": "donotReadme/readme.html#topics-3",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nLorentz Transformations\nMinkowski Space\nFour-Vectors\nFour-Momentum\nIntroduction to Tensors"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-4",
-    "href": "donotReadme/readme.html#topics-4",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nWave Functions\nSchrödinger Equation\nOperators\nSpin\nAngular Momentum\nDirac Notation\nPerturbation Theory\nScattering Theory\nIdentical Particles"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-5",
-    "href": "donotReadme/readme.html#topics-5",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nEntropy\nThermodynamic Ensembles\nPartition Function\nBose–Einstein Statistics\nFermi–Dirac Statistics"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-6",
-    "href": "donotReadme/readme.html#topics-6",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nGreen’s Functions\nMultipole Expansion\nElectromagnetic Radiation\nGauge Transformations"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-7",
-    "href": "donotReadme/readme.html#topics-7",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nTensor Calculus\nMetrics\nCurvature\nGeodesics\nEinstein Field Equations\nSchwarzschild Solution\nBlack Holes"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-8",
-    "href": "donotReadme/readme.html#topics-8",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nCanonical Quantization\nPath Integrals\nKlein–Gordon Equation\nDirac Equation\nGauge Theory\nRenormalization\nFeynman Diagrams"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-9",
-    "href": "donotReadme/readme.html#topics-9",
-    "title": "Note",
-    "section": "Topics",
-    "text": "Topics\n\nThe Standard Model\nHiggs Mechanism\nQuarks\nLeptons\nGauge Symmetry\nCP Violation"
-  },
-  {
-    "objectID": "donotReadme/readme.html#topics-to-learn",
-    "href": "donotReadme/readme.html#topics-to-learn",
-    "title": "Note",
-    "section": "Topics to Learn",
-    "text": "Topics to Learn\n\nBig Bang Theory\nCosmic Inflation\nCosmic Microwave Background\nDark Matter\nDark Energy\nStructure Formation"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Giới thiệu",
-    "section": "",
-    "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.\n\n\nUpdateHome #2: 27th Sep 2026\nWhy did i start discuss by english from now on? i dont know, but i think i have to improve my english. A lot of events have happened past three months, i think 2026’s summer is the worst time i have never experienced. My daily routine has changed alot. And my goals, too.\nNow, i want to get a place on the university calculus olympiad team. Yes, that right. I give up informatics, i think informatics is not for me. Will this change affect my future? I dont know, but i hope this decision is right.\nThank up updatehome1, now i have finished multivariable calculus. Updatehome2 is mark the beginning of my specific math journal.\nBye ./.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html",
-    "href": "note/linear-algebra/1.html",
-    "title": "Tiền đề",
-    "section": "",
-    "text": "Đối tượng của toán học gồm nhiều loại khác nhau, trong đó chúng ta đã quen thuộc với các đối tượng như các số, điểm, đường thẳng, mặt phẳng, tam giác, đường tròn, phương trình, vv. Thông thường các đối tượng có cùng một tính chất chung được gom thành các tập hợp, và chúng có thể là hữu hạn hoặc vô hạn. Tập hợp là một khái niệm cơ bản và thâm nhập vào toàn bộ cách nghĩ trong toán học ngày nay. Tập hợp là một khái niệm không được định nghĩa mà được hiểu một cách trực giác như sau.\n\nTập hợp và phần tử: Tập hợp gồm các đối tượng xác định theo quy tắc; phần tử a thuộc tập hợp A ký hiệu a \\in A, không thuộc ký hiệu là a \\notin A; tập không chứa phần tử nào là tập rỗng (\\emptyset).\nCác tập số chuẩn: Tập số tự nhiên \\mathbb{N}, \\mathbb{N}^*; tập số hữu tỉ \\mathbb{Q}; tập số thực \\mathbb{R}; tập số phức \\mathbb{C}.\nQuan hệ chứa: Tập con (A \\subseteq B), tập con thực sự (A \\subsetneq B), hai tập bằng nhau (A = B \\Leftrightarrow A \\subseteq B \\ \\text{and}  \\ B \\subseteq A), và tập tất cả các tập con của A ký hiệu là \\mathcal{P}(A)\n\n\n\n\nĐịnh nghĩa 1.8. Cho A và B là các tập hợp:\n\nHợp (A \\cup B): Gồm các phần tử thuộc ít nhất một trong hai tập, tức là A\\cup B = \\{\\, x \\mid x\\in A\\ \\mbox{or}\\ x\\in B \\,\\}\nGiao (A \\cap B): Gồm các phần tử thuộc đồng thời cả hai tập, tức là A\\cap B = \\{\\, x \\mid x\\in A\\ \\mbox{and}\\ x\\in B \\,\\}\nHiệu (A \\setminus B): Gồm các phần tử thuộc A nhưng không thuộc B, tức là A\\setminus B = \\{\\, x \\mid x\\in A\\ \\mbox{and}\\ x\\notin B \\,\\}\n\nMệnh đề 1.9. Cho A, B, C là các tập hợp tùy ý. Khi đó ta có các đẳng thức sau:\n\nA\\cap A = A = A\\cup A\nA\\cup \\varnothing = A\nA\\cap B= B\\cap A\nA\\cap (B\\cap C)=(A\\cap B)\\cap C, A\\cup (B\\cup C)=(A\\cup B)\\cup C\nA\\setminus (B\\cap C)=(A\\setminus B)\\cup (A\\setminus C), A\\setminus (B\\cup C)=(A\\setminus B)\\cap (A\\setminus C).\nA\\cap (B\\cup C)=(A\\cap B)\\cup (A\\cap C), A\\cup (B\\cap C)=(A\\cup B)\\cap (A\\cup C).\n\nMệnh đề 1.10. Ta có (a, b) = (c, d) \\Leftrightarrow a = c \\ \\text{and} \\ b = d.\nĐịnh nghĩa 1.11. Cho hai tập hợp A và B. Tích Descartes của A và B là tập hợp được định nghĩa bởi:\n\nA\\times B =\\{\\, (a,b) \\mid a\\in A,\\ b\\in B \\,\\}.\n\n\n\n\nĐịnh nghĩa 1.14. Một quan hệ trên một tập hợp A là một tập con của A\\times A.\nNếu R là một quan hệ trên một tập hợp A cho trước và (a, b) \\in R thì ta viết aRb (đọc là “a quan hệ R với b”).\nĐịnh nghĩa 1.16. Một quan hệ R trên một tập A gọi là có tính:\n\nPhản xạ: aRa, \\forall a \\in A\nĐối xứng: aRb \\Rightarrow bRa\nPhản đối xứng: aRb \\ \\text{and} \\ bRa \\Rightarrow a = b\nBắc cầu: aRb \\ \\text{and} \\ bRc \\Rightarrow aRc\n\nĐịnh nghĩa 1.17. Cho R là một quan hệ trên một tập hợp A.\n\nR được gọi là quan hệ thứ tự nếu R có tính phản xạ, phản đối xứng và bắc cầu.\nR được gọi là quan hệ thứ tự toàn phần nếu R là một quan hệ thứ tự và \\forall a, b \\in A thì aRb hoặc bRa.\n\nĐịnh nghĩa 1.19. Một quan hệ \\sim trên một tập hợp A được gọi là quan hệ tương đương nếu R có tính phản xạ, đối xứng và băc cầu.\n\nLớp tương đương và tập tương:\n\nLớp tương đương chứa a là [a] := \\{x \\in A | a \\sim x\\}. Hai lớp tương đương [a], [b] hoặc trùng nhau hoặc rời nhau hoàn toàn.\nTập hợp tất cả các lớp tương đương gọi là tập thương A / \\sim\n\nPhân hoạch: Một họ các tập con khác rỗng, đôi một rời nhau và có hợp bằng toàn bộ tập ban đầu. Tập thương của một quan hệ tương đương chính là phần hoạch, và ngược lại mỗi phân hoạch sinh ra một quan hệ tương đương.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html#khái-niệm-tập-hợp",
-    "href": "note/linear-algebra/1.html#khái-niệm-tập-hợp",
-    "title": "Tiền đề",
-    "section": "",
-    "text": "Đối tượng của toán học gồm nhiều loại khác nhau, trong đó chúng ta đã quen thuộc với các đối tượng như các số, điểm, đường thẳng, mặt phẳng, tam giác, đường tròn, phương trình, vv. Thông thường các đối tượng có cùng một tính chất chung được gom thành các tập hợp, và chúng có thể là hữu hạn hoặc vô hạn. Tập hợp là một khái niệm cơ bản và thâm nhập vào toàn bộ cách nghĩ trong toán học ngày nay. Tập hợp là một khái niệm không được định nghĩa mà được hiểu một cách trực giác như sau.\n\nTập hợp và phần tử: Tập hợp gồm các đối tượng xác định theo quy tắc; phần tử a thuộc tập hợp A ký hiệu a \\in A, không thuộc ký hiệu là a \\notin A; tập không chứa phần tử nào là tập rỗng (\\emptyset).\nCác tập số chuẩn: Tập số tự nhiên \\mathbb{N}, \\mathbb{N}^*; tập số hữu tỉ \\mathbb{Q}; tập số thực \\mathbb{R}; tập số phức \\mathbb{C}.\nQuan hệ chứa: Tập con (A \\subseteq B), tập con thực sự (A \\subsetneq B), hai tập bằng nhau (A = B \\Leftrightarrow A \\subseteq B \\ \\text{and}  \\ B \\subseteq A), và tập tất cả các tập con của A ký hiệu là \\mathcal{P}(A)",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html#các-phép-toán-trên-tập-hợp",
-    "href": "note/linear-algebra/1.html#các-phép-toán-trên-tập-hợp",
-    "title": "Tiền đề",
-    "section": "",
-    "text": "Định nghĩa 1.8. Cho A và B là các tập hợp:\n\nHợp (A \\cup B): Gồm các phần tử thuộc ít nhất một trong hai tập, tức là A\\cup B = \\{\\, x \\mid x\\in A\\ \\mbox{or}\\ x\\in B \\,\\}\nGiao (A \\cap B): Gồm các phần tử thuộc đồng thời cả hai tập, tức là A\\cap B = \\{\\, x \\mid x\\in A\\ \\mbox{and}\\ x\\in B \\,\\}\nHiệu (A \\setminus B): Gồm các phần tử thuộc A nhưng không thuộc B, tức là A\\setminus B = \\{\\, x \\mid x\\in A\\ \\mbox{and}\\ x\\notin B \\,\\}\n\nMệnh đề 1.9. Cho A, B, C là các tập hợp tùy ý. Khi đó ta có các đẳng thức sau:\n\nA\\cap A = A = A\\cup A\nA\\cup \\varnothing = A\nA\\cap B= B\\cap A\nA\\cap (B\\cap C)=(A\\cap B)\\cap C, A\\cup (B\\cup C)=(A\\cup B)\\cup C\nA\\setminus (B\\cap C)=(A\\setminus B)\\cup (A\\setminus C), A\\setminus (B\\cup C)=(A\\setminus B)\\cap (A\\setminus C).\nA\\cap (B\\cup C)=(A\\cap B)\\cup (A\\cap C), A\\cup (B\\cap C)=(A\\cup B)\\cap (A\\cup C).\n\nMệnh đề 1.10. Ta có (a, b) = (c, d) \\Leftrightarrow a = c \\ \\text{and} \\ b = d.\nĐịnh nghĩa 1.11. Cho hai tập hợp A và B. Tích Descartes của A và B là tập hợp được định nghĩa bởi:\n\nA\\times B =\\{\\, (a,b) \\mid a\\in A,\\ b\\in B \\,\\}.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html#quan-hệ-trên-tập-hợp",
-    "href": "note/linear-algebra/1.html#quan-hệ-trên-tập-hợp",
-    "title": "Tiền đề",
-    "section": "",
-    "text": "Định nghĩa 1.14. Một quan hệ trên một tập hợp A là một tập con của A\\times A.\nNếu R là một quan hệ trên một tập hợp A cho trước và (a, b) \\in R thì ta viết aRb (đọc là “a quan hệ R với b”).\nĐịnh nghĩa 1.16. Một quan hệ R trên một tập A gọi là có tính:\n\nPhản xạ: aRa, \\forall a \\in A\nĐối xứng: aRb \\Rightarrow bRa\nPhản đối xứng: aRb \\ \\text{and} \\ bRa \\Rightarrow a = b\nBắc cầu: aRb \\ \\text{and} \\ bRc \\Rightarrow aRc\n\nĐịnh nghĩa 1.17. Cho R là một quan hệ trên một tập hợp A.\n\nR được gọi là quan hệ thứ tự nếu R có tính phản xạ, phản đối xứng và bắc cầu.\nR được gọi là quan hệ thứ tự toàn phần nếu R là một quan hệ thứ tự và \\forall a, b \\in A thì aRb hoặc bRa.\n\nĐịnh nghĩa 1.19. Một quan hệ \\sim trên một tập hợp A được gọi là quan hệ tương đương nếu R có tính phản xạ, đối xứng và băc cầu.\n\nLớp tương đương và tập tương:\n\nLớp tương đương chứa a là [a] := \\{x \\in A | a \\sim x\\}. Hai lớp tương đương [a], [b] hoặc trùng nhau hoặc rời nhau hoàn toàn.\nTập hợp tất cả các lớp tương đương gọi là tập thương A / \\sim\n\nPhân hoạch: Một họ các tập con khác rỗng, đôi một rời nhau và có hợp bằng toàn bộ tập ban đầu. Tập thương của một quan hệ tương đương chính là phần hoạch, và ngược lại mỗi phân hoạch sinh ra một quan hệ tương đương.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html#định-nghĩa-ánh-xạ",
-    "href": "note/linear-algebra/1.html#định-nghĩa-ánh-xạ",
-    "title": "Tiền đề",
-    "section": "2.1. Định nghĩa ánh xạ",
-    "text": "2.1. Định nghĩa ánh xạ\nCho A và B là hai tập tùy ý. Người ta dùng khái niệm ánh xạ để xét mối liên hệ giữa các phần tử của A và B.\nĐịnh nghĩa 2.1. Một ánh xạ f từ A đến B là một quy tắc cho tương ứng mỗi phần tử x của A với một phần tử duy nhất của B được ký hiệu là f(x).\nTa viết f:A\\rightarrow B, x \\mapsto f(x) hay:\n\n\\begin{aligned}\n        f: A &\\longrightarrow B\\\\\n           x &\\longmapsto f(x).\n\\end{aligned}\n\nTa gọi tập A là tập nguồn (miền xác định), tập B là tập đích (miền giá trị) của ánh xạ f.\nHai ánh xạ f, g: A \\rightarrow B được coi là bằng nhau, ký hiệu f = g, nếu f(x) = g(x), \\forall x \\in A.\nĐịnh nghĩa 2.5. Cho f: A \\rightarrow B là một ánh xạ từ A đến B, A’ là tập con của A và B’ là tập con của B.\n\nTập hợp f(A') := \\{\\, f(x) \\in B \\mid x\\in A' \\, \\} được gọi là tập ảnh của A’. Đặc biệt, f(x) được gọi là ảnh của x.\nTập hợp f^{-1}(B'):= \\set{ x\\in A \\mid f(x)\\in B' } được gọi là tập tạo ảnh của B’. Nếu B’ chỉ gồm một phần tử y thì ta dùng ký hiệu f^{-1}(y). Các phần tử của f^{-1}(y) được gọi là tạo ảnh của y.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html#ánh-xạ-hợp-thành",
-    "href": "note/linear-algebra/1.html#ánh-xạ-hợp-thành",
-    "title": "Tiền đề",
-    "section": "2.2. Ánh xạ hợp thành",
-    "text": "2.2. Ánh xạ hợp thành\nĐịnh nghĩa 2.8. Cho A, B, C là các tập hợp, f: A\\rightarrow B và g: B\\rightarrow C là hai ánh xạ bất kỳ. Ánh xạ hợp thành của f và g là ánh xạ g\\circ f: A\\rightarrow C được xác định bởi:\n\n(g\\circ f)(x) = g(f(x)) \\qquad (\\forall x \\in A)",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/1.html#đơn-ánh-toàn-ánh-và-song-ánh",
-    "href": "note/linear-algebra/1.html#đơn-ánh-toàn-ánh-và-song-ánh",
-    "title": "Tiền đề",
-    "section": "2.3. Đơn ánh, toàn ánh và song ánh",
-    "text": "2.3. Đơn ánh, toàn ánh và song ánh\nĐịnh nghĩa 2.13. Cho f: A\\rightarrow B là một ánh xạ tùy ý.\n\nÁnh xạ f được gọi là đơn ánh nếu \\forall x, x' \\in A thỏa mãn f(x) = f(x') thì x = x'\nÁnh xạ f được gọi là toàn ánh nếu \\forall y \\in B đều tồn tại x\\in A sao cho f(x) = y\nÁnh xạ f được gọi là song ánh nếu f vừa là đơn ánh vừa là toàn ánh.\n\nMệnh đề 2.15. Cho f: A\\rightarrow B và g: B\\rightarrow C là các ánh xạ:\n\nNếu f và g là hai đơn ánh (hoặc 2 toàn ánh, 2 song ánh) thì g\\circ f cũng là đơn ánh (hoặc toàn ánh, song ánh).\nNếu g\\circ f là đơn ánh thì f là đơn ánh.\nNếu g\\circ f là toàn ánh thì g là toàn ánh.",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Tiền đề"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/3.html",
-    "href": "note/linear-algebra/3.html",
-    "title": "Không gian Vector",
-    "section": "",
-    "text": "Một vector hay một điểm trong không gian 2 chiều được biểu diễn bằng một cặp có thứ tự \\mathbf{v}=\\begin{bmatrix} v_1\\\\ v_2\\end{bmatrix}. Tương tự vậy, một vector trong không gian ba chiều \\mathbb{R}^3 được biểu diễn bằng bộ ba có thứ tự \\mathbf{v}=\\begin{bmatrix} v_1\\\\ v_2\\\\ v_3\\end{bmatrix}..\nViệc nghiên cứu các không gian \\mathbb{R}^2, \\mathbb{R}^3 cho ta thấy tính chất hình học của vector có thể mô tả bằng các mối quan hệ đại số của chúng và ngược lại.\nMột cách tự nhiên, các không gian hai chiều hay ba chiều có thể mở rộng thành không gian n chiều (n \\geq 4) bằng cách thay cặp có thứ tự hay bộ ba có thứ tự bởi bộ có thứ tự gồm n thành phần.\nNhắc lại: không gian \\mathbb{R}^n là các tập vector gồm các thành phần là số thực: \\mathbb{R}^n = \\{\\,\\mathbf{v} \\;\\Big| \\;\\mathbf{v}=\\begin{bmatrix} v_1 \\\\ \\vdots\\\\ v_n \\end{bmatrix},\\quad  v_1,\\dots, v_n \\in  \\mathbb{R}\\} cùng với phép toán cộng và tích vô hướng xác định bởi:\n\n\\begin{bmatrix} u_1\\\\ \\vdots\\\\ u_n \\end{bmatrix}\n  +\\begin{bmatrix} v_1\\\\ \\vdots\\\\  v_n \\end{bmatrix} =\\begin{bmatrix}\n  u_1+v_1\\\\ \\vdots\\\\ u_n+v_n \\end{bmatrix} \\in  \\mathbb{R}^n, \\quad \\lambda\n  \\begin{bmatrix} v_1\\\\ \\vdots\\\\ v_n \\end{bmatrix} = \\begin{bmatrix} \\lambda\n  v_1\\\\ \\vdots\\\\ \\lambda v_n \\end{bmatrix} \\in  \\mathbb{R}^n.\n\nCác phép toán này có những tính chất dưới đây \\forall \\mathbf{u}, \\mathbf{v}, \\mathbf{w}\\in \\mathbb{R}^{n}, a, b \\in \\mathbb{R}:\n\n\\mathbf{u}+\\mathbf{v}=\\mathbf{v}+\\mathbf{u}\n(\\mathbf{u}+\\mathbf{v})+\\mathbf{w}=\\mathbf{u}+(\\mathbf{v}+\\mathbf{w}).\n\\exists 0 \\in \\mathbb{R}^n : \\mathbf{u}+\\mathbf{0}=\\mathbf{0}+\\mathbf{u}=\\mathbf{u}\n\\exists-\\mathbf{u}\\in\\mathbb{R}^n: \\mathbf{u}+(-\\mathbf{u})=\\mathbf{0}.\n(a+b)\\mathbf{u}=a\\mathbf{u}+b\\mathbf{u}.\na(\\mathbf{u}+\\mathbf{v})=a\\mathbf{u}+a\\mathbf{v}.\n(ab)\\mathbf{u}=a(b\\mathbf{u}).\n1\\cdot\\mathbf{u} =\\mathbf{u}",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Không gian Vector"
-    ]
-  },
-  {
-    "objectID": "note/linear-algebra/3.html#định-nghĩa-và-ví-dụ",
-    "href": "note/linear-algebra/3.html#định-nghĩa-và-ví-dụ",
-    "title": "Không gian Vector",
-    "section": "",
-    "text": "Một vector hay một điểm trong không gian 2 chiều được biểu diễn bằng một cặp có thứ tự \\mathbf{v}=\\begin{bmatrix} v_1\\\\ v_2\\end{bmatrix}. Tương tự vậy, một vector trong không gian ba chiều \\mathbb{R}^3 được biểu diễn bằng bộ ba có thứ tự \\mathbf{v}=\\begin{bmatrix} v_1\\\\ v_2\\\\ v_3\\end{bmatrix}..\nViệc nghiên cứu các không gian \\mathbb{R}^2, \\mathbb{R}^3 cho ta thấy tính chất hình học của vector có thể mô tả bằng các mối quan hệ đại số của chúng và ngược lại.\nMột cách tự nhiên, các không gian hai chiều hay ba chiều có thể mở rộng thành không gian n chiều (n \\geq 4) bằng cách thay cặp có thứ tự hay bộ ba có thứ tự bởi bộ có thứ tự gồm n thành phần.\nNhắc lại: không gian \\mathbb{R}^n là các tập vector gồm các thành phần là số thực: \\mathbb{R}^n = \\{\\,\\mathbf{v} \\;\\Big| \\;\\mathbf{v}=\\begin{bmatrix} v_1 \\\\ \\vdots\\\\ v_n \\end{bmatrix},\\quad  v_1,\\dots, v_n \\in  \\mathbb{R}\\} cùng với phép toán cộng và tích vô hướng xác định bởi:\n\n\\begin{bmatrix} u_1\\\\ \\vdots\\\\ u_n \\end{bmatrix}\n  +\\begin{bmatrix} v_1\\\\ \\vdots\\\\  v_n \\end{bmatrix} =\\begin{bmatrix}\n  u_1+v_1\\\\ \\vdots\\\\ u_n+v_n \\end{bmatrix} \\in  \\mathbb{R}^n, \\quad \\lambda\n  \\begin{bmatrix} v_1\\\\ \\vdots\\\\ v_n \\end{bmatrix} = \\begin{bmatrix} \\lambda\n  v_1\\\\ \\vdots\\\\ \\lambda v_n \\end{bmatrix} \\in  \\mathbb{R}^n.\n\nCác phép toán này có những tính chất dưới đây \\forall \\mathbf{u}, \\mathbf{v}, \\mathbf{w}\\in \\mathbb{R}^{n}, a, b \\in \\mathbb{R}:\n\n\\mathbf{u}+\\mathbf{v}=\\mathbf{v}+\\mathbf{u}\n(\\mathbf{u}+\\mathbf{v})+\\mathbf{w}=\\mathbf{u}+(\\mathbf{v}+\\mathbf{w}).\n\\exists 0 \\in \\mathbb{R}^n : \\mathbf{u}+\\mathbf{0}=\\mathbf{0}+\\mathbf{u}=\\mathbf{u}\n\\exists-\\mathbf{u}\\in\\mathbb{R}^n: \\mathbf{u}+(-\\mathbf{u})=\\mathbf{0}.\n(a+b)\\mathbf{u}=a\\mathbf{u}+b\\mathbf{u}.\na(\\mathbf{u}+\\mathbf{v})=a\\mathbf{u}+a\\mathbf{v}.\n(ab)\\mathbf{u}=a(b\\mathbf{u}).\n1\\cdot\\mathbf{u} =\\mathbf{u}",
-    "crumbs": [
-      "18.06 - Linear Algebra",
-      "Không gian Vector"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#độ-dài-của-vector",
-    "href": "note/multivariable-calculus/1.html#độ-dài-của-vector",
-    "title": "Vector and Matrices",
-    "section": "Độ dài của vector",
-    "text": "Độ dài của vector\nỞ cấp 3 chúng ta đã được học, nó chính là\n\n\\vec A &lt;a_1, a_2, a_3&gt; = \\sqrt{\\left(a_1^2 + a_2^2 + a_3^2 \\right)}",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
-    "href": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
-    "title": "Vector and Matrices",
-    "section": "Cộng vector và nhân vector với scalar",
-    "text": "Cộng vector và nhân vector với scalar\n18.06",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#section",
-    "href": "note/multivariable-calculus/1.html#section",
-    "title": "Vector and Matrices",
-    "section": "",
-    "text": "WarningLưu ý\n\n\n\nLưu ý rằng, các vector có cùng hướng và cùng độ dài là giống nhau, không quan trọng điểm đặt của nó. Điều này tớ cho rằng nó sẽ dễ dàng hơn trong việc truyền đạt phép cộng và nhân vector với một số sau này.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#applications",
-    "href": "note/multivariable-calculus/1.html#applications",
-    "title": "Vector and Matrices",
-    "section": "Applications",
-    "text": "Applications\nỨng dụng của dot product:\n\n\nTính độ dài và góc (đặc biệt là góc)\n\n\nXác định tính trực giao",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#identity-matrix",
-    "href": "note/multivariable-calculus/1.html#identity-matrix",
-    "title": "Vector and Matrices",
-    "section": "Identity matrix",
-    "text": "Identity matrix\nMa trận đơn vị là ma trận có số 1 ở đường chéo chính và tất cả số 0 ở các vị trí còn lại, ví dụ:\n\nI_{3 \\times 3} = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}\n\nvà\n\nIX = X\n\nvì ma trận này không làm gì cả, đối chiếu với biến đổi tuyến tính, thì nó chính là không làm gì cả. Vì ma trận đơn vị này chính là hợp lại của các vector basis. ;)",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#inverse-matrix",
-    "href": "note/multivariable-calculus/1.html#inverse-matrix",
-    "title": "Vector and Matrices",
-    "section": "Inverse matrix",
-    "text": "Inverse matrix\nTa thường giải Ax = B \\Rightarrow x = \\frac B A = A^{-1}B. Vậy chúng ta có thể áp dụng nó trong ma trận được không?\nĐược👍🏿.\nVậy chúng ta tính A^{-1} như thế nào.\nBằng một cách thần kỳ, chúng ta biết được công thức A^{-1} = \\frac 1 {\\det(A)} adj(A). (Trong đó adj(A) là ma trận phụ hợp - adjoint matrix).\nCách tính adj(A). Với mỗi giá trị hàng i cột j của bảng 3 \\times 3, ta sẽ bỏ đi hàng i và cột j đó, chỉ còn lại bảng 2 \\times 2, và giá trị adj(A)_{ij} sẽ là định thức của bảng đó.\nVà thêm một bước nữa là chuyển vị bảng hiện tại, tức là tính adj(A)^T sẽ cho bảng adj(A) mà ta đang cần.\nBước cuối cùng là tính \\det(A).\n\n\n\n\n\n\nTiptip\n\n\n\nNhư bạn đã suy nghĩ:\n\nA^{-1}A = I",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#suy-nghiệm",
-    "href": "note/multivariable-calculus/1.html#suy-nghiệm",
-    "title": "Vector and Matrices",
-    "section": "Suy nghiệm",
-    "text": "Suy nghiệm\nNhư ở trước ta đã đề cập, chúng ta có thể dùng X = A^{-1}B để tính nghiệm của hệ phương trình. Và công thức để tính ma trận nghịch đảo là A^{-1} = \\frac 1 {\\det(A)} \\cdot adj(A). Nhưng chúng ta chưa đề cập đến một việc, đó là mẫu số, hay chính là \\det(A) có thể bằng 0.\nVì vậy, chúng ta sẽ suy luận ra nghiệm của hệ phương trình.\nNếu \\det(A) \\neq 0 thì A sẽ được gọi là ma trận khả nghịch.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#homogeneous-systems",
-    "href": "note/multivariable-calculus/1.html#homogeneous-systems",
-    "title": "Vector and Matrices",
-    "section": "Homogeneous Systems",
-    "text": "Homogeneous Systems\nĐó là khi AX = 0, cả 3 mặt phẳng đều đi qua gốc tọa độ.\nKhi B = 0, tức là hệ phương trình gồm các phương trình có hệ số tự do = 0. Thì khi đó chúng ta có nghiệm tầm thường, đó chính là khi x, y, z, ... = 0.\nNghiệm tầm thường chỉ xảy ra khi ma trận A là khả nghịch, nếu ma trận A không khả nghịch, chúng ta sẽ có vô số nghiệm.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#general-systems",
-    "href": "note/multivariable-calculus/1.html#general-systems",
-    "title": "Vector and Matrices",
-    "section": "General Systems",
-    "text": "General Systems\nĐó là khi AX = B, cả 3 mặt phẳng đều dịch chuyển song song so với mặt phẳng ban đầu mà cắt gốc tọa độ của nó.\nNếu ma trận khả nghịch, thì chỉ có một đáp án duy nhất đó chính là X = A^{-1}B.\nNếu ma trận không khả nghịch, thì có hai khả năng là vô số nghiệm hoặc là vô nghiệm, chúng ta phải dùng khử Gauss để xác định xem là trường hợp nào, điều mà chắc chắn sẽ nói rõ hơn trong 18.06.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
-    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
-    "title": "Vector and Matrices",
-    "section": "Phương trình tham số cho đường thẳng",
-    "text": "Phương trình tham số cho đường thẳng\nCăn bản là giống cấp 3. Một hệ phương trình có vector chính phương (hoặc là 2 điểm AB trên đường thẳng đó tạo thành vector chính phương) \\vec v = &lt;a, b, c&gt; và điểm A = (x, y, z) như sau:\n\n\\begin{cases}\nx(t) = x + at \\\\\ny(t) = y + bt \\\\\nz(t) = z + ct\n\\end{cases}\n\nSẽ tưởng tượng rằng là có một điểm P(t) = (x(t), y(t), z(t)) chạy trên đường thẳng đó.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong-cycloid",
-    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong-cycloid",
-    "title": "Vector and Matrices",
-    "section": "Phương trình tham số cho đường cong Cycloid",
-    "text": "Phương trình tham số cho đường cong Cycloid\n\n\n\n\n\n\nTipĐường cong Cycloid\n\n\n\n\n\nĐường cong cycloid là một quỹ đạo cong được vẽ bởi một điểm nằm trên vành một đường tròn khi đường tròn đó lăn không trượt trên một mặt phẳng.\n\n\n\n\nCó rất nhiều tham số có thể để lập phương trình, như là thời gian, góc, bán kính, …\nNhưng chúng ta sẽ sử dụng góc, hay chính là \\theta.\nTa biết được rằng phương trình Vector \\vec {OB} (trong đó O là gốc tọa độ, B là điểm trên đường cong) chính là $ + + $ (trong đó, A là điểm tiếp xúc giữa đường trong và trục X, I là tâm đường tròn).\nTa có:\n\n\\vec {OB} = &lt;t - sin(t), 1 - cos(t)&gt;",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
-    ]
-  },
-  {
-    "objectID": "note/multivariable-calculus/1.html#position-vector-and-velocaity-vector",
-    "href": "note/multivariable-calculus/1.html#position-vector-and-velocaity-vector",
-    "title": "Vector and Matrices",
-    "section": "Position vector and Velocaity vector",
-    "text": "Position vector and Velocaity vector\nPosition vector là vector nối từ gốc tọa độ đến điểm, chính là vector \\vec {OB}, và nó cũng chính là \\vec v (t) = &lt;x(t), y(t), z(t)&gt;.\nVelocity vector : chúng ta muốn biết độ lớn của vận tốc, hay chính là tốc độ và hướng của nó, vậy cách tốt nhất là dùng vector, hay ở đây chính là vector vận tốc.\n\n\\vec v = \\frac {\\mathrm d \\vec r}{\\mathrm d t} = &lt;\\frac{\\mathrm d x }{\\mathrm d t}, \\frac{\\mathrm d y }{\\mathrm d t}, \\frac{\\mathrm d z }{\\mathrm d t}&gt;\n\n\n\n\n\n\n\nTipVí dụ với cycloid\n\n\n\n\n\nTa có \\vec r(t) = &lt;t - sin(t), 1 - cos(t)&gt;, vậy vector vận tốc là:\n\n\\vec v = &lt;1 - cos(t), sin(t)&gt;\n\nChính vì thế, ngay tại thời điểm t = 0, \\vec v = 0 và tốc độ |\\vec v| = 0.",
-    "crumbs": [
-      "18.02 - Multivariable Calculus",
-      "Vector and Matrices"
+      "Giải tích đa biến"
     ]
   },
   {
@@ -1087,14 +363,760 @@
     ]
   },
   {
-    "objectID": "note/multivariable-calculus/index.html",
-    "href": "note/multivariable-calculus/index.html",
-    "title": "Giải tích đa biến",
-    "section": "",
-    "text": "1. Vector và ma trận - Vectors and Matrices\n\n1.1. Vectors\n1.2. Dot product\n1.3. Determinants\n1.4. Cross product\n1.5. Matrices\n1.6. Square systems; Equation of planes\n1.7. Parametric equations for lines and curves\n1.8. Velocity\n1.9. Acceleration\n1.10. Kepler’s Second law\n\n\n\n\n2. Đạo hàm riêng - Partial derivatives\n\n2.1. Functions of several variables - Hàm nhiều biến\n\n2.1.1. Contour plot - Đồ thị đường bao\n\n2.2. Parital derivatives - Đạo hàm riêng\n2.3. Tangent plane approx - Mặt phẳng tiếp tuyến\n\n2.3.1. Appox formula - Công thức xấp xỉ\n2.3.2. Tangent plane - Mặt phẳng tiếp tuyến\n\n2.4. Max - Min problems - Bài toán cực trị\n\n2.4.1. Max point - Điểm cực đại\n2.4.2. Min point - Điểm cực tiểu\n2.4.3. Saddle point - Điểm yên ngựa\n\n2.5. Least squares - Bài toán tối ưu\n2.6. Second derivative - Đạo hàm bậc hai\n2.7. Differentials; Chain rule\n\n2.7.1. Total differential - Đạo hàm toàn phần\n2.7.2. Chain rule - Quy tắc chuỗi\n2.7.3. Application - Ứng dụng\n\n2.8. Gradient - Gradient\n2.9. Direction derivative - Đạo hàm theo hướng\n2.10. Lagrange multipliers - Nhân tử Lagrange\n2.11. Non-independent variables - Các biến phụ thuộc\n\n\n\n\n3. Tích phân kép và tích phân đường trong mặt phẳng - Double integrals and Line integrals in the plane\n\n3.1. Double integral\n\n3.1.1. Calculation\n3.1.2. Change the order\n\n3.2. Integration in Polar coordinates\n3.3. Change of variables\n\n3.3.1. Change of variables\n3.3.2. Jacobians\n3.3.3. Calculation upperr and lower limit\n\n3.4. Vector fields\n3.5. Line integrals\n\n3.5.1. Work\n3.5.2. Calculation Line integrals\n\n3.6. Path independence\n\n3.6.1. Fundamental theorem of calculus for line integral\n3.6.2. Path independence\n\n3.7. Conservative fields\n3.8. Test for Gradient fields\n3.9. Finding the Potential function\n\n3.9.1. Method 1: Using Line integral\n3.9.2. Method 2: Using Antiderivatives\n\n3.10. Curl\n\n3.10.1. Why N_x - M_y?\n3.10.2. Interpretation Curl\n\n3.11 Green’s Theorem\n\n3.11.1. Calculation\n3.11.2. Application\n3.11.3. Proof\n\n3.12. Flux\n\n3.12.1. Divergence\n3.12.2. Green’s theorem for flux\n\n3.13. Simply connected regions\n\n\n\n\n4. Tích phân bội ba và tích phân mặt trong không gian ba chiều - Triple integrals and Surface integrals in the 3-space\n\n4.1 Triple integrals in rectangular and cylindrical coordinates\n4.2 Spherical coordinates; Surface area\n4.3 Vector fields in 3D; Surface integrals and flux\n4.4 Divergence theorem\n4.5 Divergence theorem and its Applications and Proof\n4.6 Line integrals in space, Curl, Exactness and potentials\n4.7 Stokes’s theorem\n4.8 Topological considerations\n4.9 Maxwell’s equations",
+    "objectID": "note/multivariable-calculus/1.html#độ-dài-của-vector",
+    "href": "note/multivariable-calculus/1.html#độ-dài-của-vector",
+    "title": "Vector and Matrices",
+    "section": "Độ dài của vector",
+    "text": "Độ dài của vector\nỞ cấp 3 chúng ta đã được học, nó chính là\n\n\\vec A &lt;a_1, a_2, a_3&gt; = \\sqrt{\\left(a_1^2 + a_2^2 + a_3^2 \\right)}",
     "crumbs": [
       "18.02 - Multivariable Calculus",
-      "Giải tích đa biến"
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
+    "href": "note/multivariable-calculus/1.html#cộng-vector-và-nhân-vector-với-scalar",
+    "title": "Vector and Matrices",
+    "section": "Cộng vector và nhân vector với scalar",
+    "text": "Cộng vector và nhân vector với scalar\n18.06",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#section",
+    "href": "note/multivariable-calculus/1.html#section",
+    "title": "Vector and Matrices",
+    "section": "",
+    "text": "WarningLưu ý\n\n\n\nLưu ý rằng, các vector có cùng hướng và cùng độ dài là giống nhau, không quan trọng điểm đặt của nó. Điều này tớ cho rằng nó sẽ dễ dàng hơn trong việc truyền đạt phép cộng và nhân vector với một số sau này.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#applications",
+    "href": "note/multivariable-calculus/1.html#applications",
+    "title": "Vector and Matrices",
+    "section": "Applications",
+    "text": "Applications\nỨng dụng của dot product:\n\n\nTính độ dài và góc (đặc biệt là góc)\n\n\nXác định tính trực giao",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#identity-matrix",
+    "href": "note/multivariable-calculus/1.html#identity-matrix",
+    "title": "Vector and Matrices",
+    "section": "Identity matrix",
+    "text": "Identity matrix\nMa trận đơn vị là ma trận có số 1 ở đường chéo chính và tất cả số 0 ở các vị trí còn lại, ví dụ:\n\nI_{3 \\times 3} = \\begin{bmatrix}\n1 & 0 & 0 \\\\\n0 & 1 & 0 \\\\\n0 & 0 & 1\n\\end{bmatrix}\n\nvà\n\nIX = X\n\nvì ma trận này không làm gì cả, đối chiếu với biến đổi tuyến tính, thì nó chính là không làm gì cả. Vì ma trận đơn vị này chính là hợp lại của các vector basis. ;)",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#inverse-matrix",
+    "href": "note/multivariable-calculus/1.html#inverse-matrix",
+    "title": "Vector and Matrices",
+    "section": "Inverse matrix",
+    "text": "Inverse matrix\nTa thường giải Ax = B \\Rightarrow x = \\frac B A = A^{-1}B. Vậy chúng ta có thể áp dụng nó trong ma trận được không?\nĐược👍🏿.\nVậy chúng ta tính A^{-1} như thế nào.\nBằng một cách thần kỳ, chúng ta biết được công thức A^{-1} = \\frac 1 {\\det(A)} adj(A). (Trong đó adj(A) là ma trận phụ hợp - adjoint matrix).\nCách tính adj(A). Với mỗi giá trị hàng i cột j của bảng 3 \\times 3, ta sẽ bỏ đi hàng i và cột j đó, chỉ còn lại bảng 2 \\times 2, và giá trị adj(A)_{ij} sẽ là định thức của bảng đó.\nVà thêm một bước nữa là chuyển vị bảng hiện tại, tức là tính adj(A)^T sẽ cho bảng adj(A) mà ta đang cần.\nBước cuối cùng là tính \\det(A).\n\n\n\n\n\n\nTiptip\n\n\n\nNhư bạn đã suy nghĩ:\n\nA^{-1}A = I",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#suy-nghiệm",
+    "href": "note/multivariable-calculus/1.html#suy-nghiệm",
+    "title": "Vector and Matrices",
+    "section": "Suy nghiệm",
+    "text": "Suy nghiệm\nNhư ở trước ta đã đề cập, chúng ta có thể dùng X = A^{-1}B để tính nghiệm của hệ phương trình. Và công thức để tính ma trận nghịch đảo là A^{-1} = \\frac 1 {\\det(A)} \\cdot adj(A). Nhưng chúng ta chưa đề cập đến một việc, đó là mẫu số, hay chính là \\det(A) có thể bằng 0.\nVì vậy, chúng ta sẽ suy luận ra nghiệm của hệ phương trình.\nNếu \\det(A) \\neq 0 thì A sẽ được gọi là ma trận khả nghịch.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#homogeneous-systems",
+    "href": "note/multivariable-calculus/1.html#homogeneous-systems",
+    "title": "Vector and Matrices",
+    "section": "Homogeneous Systems",
+    "text": "Homogeneous Systems\nĐó là khi AX = 0, cả 3 mặt phẳng đều đi qua gốc tọa độ.\nKhi B = 0, tức là hệ phương trình gồm các phương trình có hệ số tự do = 0. Thì khi đó chúng ta có nghiệm tầm thường, đó chính là khi x, y, z, ... = 0.\nNghiệm tầm thường chỉ xảy ra khi ma trận A là khả nghịch, nếu ma trận A không khả nghịch, chúng ta sẽ có vô số nghiệm.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#general-systems",
+    "href": "note/multivariable-calculus/1.html#general-systems",
+    "title": "Vector and Matrices",
+    "section": "General Systems",
+    "text": "General Systems\nĐó là khi AX = B, cả 3 mặt phẳng đều dịch chuyển song song so với mặt phẳng ban đầu mà cắt gốc tọa độ của nó.\nNếu ma trận khả nghịch, thì chỉ có một đáp án duy nhất đó chính là X = A^{-1}B.\nNếu ma trận không khả nghịch, thì có hai khả năng là vô số nghiệm hoặc là vô nghiệm, chúng ta phải dùng khử Gauss để xác định xem là trường hợp nào, điều mà chắc chắn sẽ nói rõ hơn trong 18.06.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
+    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-thẳng",
+    "title": "Vector and Matrices",
+    "section": "Phương trình tham số cho đường thẳng",
+    "text": "Phương trình tham số cho đường thẳng\nCăn bản là giống cấp 3. Một hệ phương trình có vector chính phương (hoặc là 2 điểm AB trên đường thẳng đó tạo thành vector chính phương) \\vec v = &lt;a, b, c&gt; và điểm A = (x, y, z) như sau:\n\n\\begin{cases}\nx(t) = x + at \\\\\ny(t) = y + bt \\\\\nz(t) = z + ct\n\\end{cases}\n\nSẽ tưởng tượng rằng là có một điểm P(t) = (x(t), y(t), z(t)) chạy trên đường thẳng đó.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong-cycloid",
+    "href": "note/multivariable-calculus/1.html#phương-trình-tham-số-cho-đường-cong-cycloid",
+    "title": "Vector and Matrices",
+    "section": "Phương trình tham số cho đường cong Cycloid",
+    "text": "Phương trình tham số cho đường cong Cycloid\n\n\n\n\n\n\nTipĐường cong Cycloid\n\n\n\n\n\nĐường cong cycloid là một quỹ đạo cong được vẽ bởi một điểm nằm trên vành một đường tròn khi đường tròn đó lăn không trượt trên một mặt phẳng.\n\n\n\n\nCó rất nhiều tham số có thể để lập phương trình, như là thời gian, góc, bán kính, …\nNhưng chúng ta sẽ sử dụng góc, hay chính là \\theta.\nTa biết được rằng phương trình Vector \\vec {OB} (trong đó O là gốc tọa độ, B là điểm trên đường cong) chính là $ + + $ (trong đó, A là điểm tiếp xúc giữa đường trong và trục X, I là tâm đường tròn).\nTa có:\n\n\\vec {OB} = &lt;t - sin(t), 1 - cos(t)&gt;",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/1.html#position-vector-and-velocaity-vector",
+    "href": "note/multivariable-calculus/1.html#position-vector-and-velocaity-vector",
+    "title": "Vector and Matrices",
+    "section": "Position vector and Velocaity vector",
+    "text": "Position vector and Velocaity vector\nPosition vector là vector nối từ gốc tọa độ đến điểm, chính là vector \\vec {OB}, và nó cũng chính là \\vec v (t) = &lt;x(t), y(t), z(t)&gt;.\nVelocity vector : chúng ta muốn biết độ lớn của vận tốc, hay chính là tốc độ và hướng của nó, vậy cách tốt nhất là dùng vector, hay ở đây chính là vector vận tốc.\n\n\\vec v = \\frac {\\mathrm d \\vec r}{\\mathrm d t} = &lt;\\frac{\\mathrm d x }{\\mathrm d t}, \\frac{\\mathrm d y }{\\mathrm d t}, \\frac{\\mathrm d z }{\\mathrm d t}&gt;\n\n\n\n\n\n\n\nTipVí dụ với cycloid\n\n\n\n\n\nTa có \\vec r(t) = &lt;t - sin(t), 1 - cos(t)&gt;, vậy vector vận tốc là:\n\n\\vec v = &lt;1 - cos(t), sin(t)&gt;\n\nChính vì thế, ngay tại thời điểm t = 0, \\vec v = 0 và tốc độ |\\vec v| = 0.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Vector and Matrices"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/3.html",
+    "href": "note/linear-algebra/3.html",
+    "title": "Không gian Vector",
+    "section": "",
+    "text": "Một vector hay một điểm trong không gian 2 chiều được biểu diễn bằng một cặp có thứ tự \\mathbf{v}=\\begin{bmatrix} v_1\\\\ v_2\\end{bmatrix}. Tương tự vậy, một vector trong không gian ba chiều \\mathbb{R}^3 được biểu diễn bằng bộ ba có thứ tự \\mathbf{v}=\\begin{bmatrix} v_1\\\\ v_2\\\\ v_3\\end{bmatrix}..\nViệc nghiên cứu các không gian \\mathbb{R}^2, \\mathbb{R}^3 cho ta thấy tính chất hình học của vector có thể mô tả bằng các mối quan hệ đại số của chúng và ngược lại.\nMột cách tự nhiên, các không gian hai chiều hay ba chiều có thể mở rộng thành không gian n chiều (n \\geq 4) bằng cách thay cặp có thứ tự hay bộ ba có thứ tự bởi bộ có thứ tự gồm n thành phần.\nNhắc lại: không gian \\mathbb{R}^n là các tập vector gồm các thành phần là số thực: \\mathbb{R}^n = \\{\\,\\mathbf{v} \\;\\Big| \\;\\mathbf{v}=\\begin{bmatrix} v_1 \\\\ \\vdots\\\\ v_n \\end{bmatrix},\\quad  v_1,\\dots, v_n \\in  \\mathbb{R}\\} cùng với phép toán cộng và tích vô hướng xác định bởi:\n\n\\begin{bmatrix} u_1\\\\ \\vdots\\\\ u_n \\end{bmatrix}\n  +\\begin{bmatrix} v_1\\\\ \\vdots\\\\  v_n \\end{bmatrix} =\\begin{bmatrix}\n  u_1+v_1\\\\ \\vdots\\\\ u_n+v_n \\end{bmatrix} \\in  \\mathbb{R}^n, \\quad \\lambda\n  \\begin{bmatrix} v_1\\\\ \\vdots\\\\ v_n \\end{bmatrix} = \\begin{bmatrix} \\lambda\n  v_1\\\\ \\vdots\\\\ \\lambda v_n \\end{bmatrix} \\in  \\mathbb{R}^n.\n\nCác phép toán này có những tính chất dưới đây \\forall \\mathbf{u}, \\mathbf{v}, \\mathbf{w}\\in \\mathbb{R}^{n}, a, b \\in \\mathbb{R}:\n\n\\mathbf{u}+\\mathbf{v}=\\mathbf{v}+\\mathbf{u}\n(\\mathbf{u}+\\mathbf{v})+\\mathbf{w}=\\mathbf{u}+(\\mathbf{v}+\\mathbf{w}).\n\\exists 0 \\in \\mathbb{R}^n : \\mathbf{u}+\\mathbf{0}=\\mathbf{0}+\\mathbf{u}=\\mathbf{u}\n\\exists-\\mathbf{u}\\in\\mathbb{R}^n: \\mathbf{u}+(-\\mathbf{u})=\\mathbf{0}.\n(a+b)\\mathbf{u}=a\\mathbf{u}+b\\mathbf{u}.\na(\\mathbf{u}+\\mathbf{v})=a\\mathbf{u}+a\\mathbf{v}.\n(ab)\\mathbf{u}=a(b\\mathbf{u}).\n1\\cdot\\mathbf{u} =\\mathbf{u}",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Không gian Vector"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/3.html#định-nghĩa-và-ví-dụ",
+    "href": "note/linear-algebra/3.html#định-nghĩa-và-ví-dụ",
+    "title": "Không gian Vector",
+    "section": "",
+    "text": "Một vector hay một điểm trong không gian 2 chiều được biểu diễn bằng một cặp có thứ tự \\mathbf{v}=\\begin{bmatrix} v_1\\\\ v_2\\end{bmatrix}. Tương tự vậy, một vector trong không gian ba chiều \\mathbb{R}^3 được biểu diễn bằng bộ ba có thứ tự \\mathbf{v}=\\begin{bmatrix} v_1\\\\ v_2\\\\ v_3\\end{bmatrix}..\nViệc nghiên cứu các không gian \\mathbb{R}^2, \\mathbb{R}^3 cho ta thấy tính chất hình học của vector có thể mô tả bằng các mối quan hệ đại số của chúng và ngược lại.\nMột cách tự nhiên, các không gian hai chiều hay ba chiều có thể mở rộng thành không gian n chiều (n \\geq 4) bằng cách thay cặp có thứ tự hay bộ ba có thứ tự bởi bộ có thứ tự gồm n thành phần.\nNhắc lại: không gian \\mathbb{R}^n là các tập vector gồm các thành phần là số thực: \\mathbb{R}^n = \\{\\,\\mathbf{v} \\;\\Big| \\;\\mathbf{v}=\\begin{bmatrix} v_1 \\\\ \\vdots\\\\ v_n \\end{bmatrix},\\quad  v_1,\\dots, v_n \\in  \\mathbb{R}\\} cùng với phép toán cộng và tích vô hướng xác định bởi:\n\n\\begin{bmatrix} u_1\\\\ \\vdots\\\\ u_n \\end{bmatrix}\n  +\\begin{bmatrix} v_1\\\\ \\vdots\\\\  v_n \\end{bmatrix} =\\begin{bmatrix}\n  u_1+v_1\\\\ \\vdots\\\\ u_n+v_n \\end{bmatrix} \\in  \\mathbb{R}^n, \\quad \\lambda\n  \\begin{bmatrix} v_1\\\\ \\vdots\\\\ v_n \\end{bmatrix} = \\begin{bmatrix} \\lambda\n  v_1\\\\ \\vdots\\\\ \\lambda v_n \\end{bmatrix} \\in  \\mathbb{R}^n.\n\nCác phép toán này có những tính chất dưới đây \\forall \\mathbf{u}, \\mathbf{v}, \\mathbf{w}\\in \\mathbb{R}^{n}, a, b \\in \\mathbb{R}:\n\n\\mathbf{u}+\\mathbf{v}=\\mathbf{v}+\\mathbf{u}\n(\\mathbf{u}+\\mathbf{v})+\\mathbf{w}=\\mathbf{u}+(\\mathbf{v}+\\mathbf{w}).\n\\exists 0 \\in \\mathbb{R}^n : \\mathbf{u}+\\mathbf{0}=\\mathbf{0}+\\mathbf{u}=\\mathbf{u}\n\\exists-\\mathbf{u}\\in\\mathbb{R}^n: \\mathbf{u}+(-\\mathbf{u})=\\mathbf{0}.\n(a+b)\\mathbf{u}=a\\mathbf{u}+b\\mathbf{u}.\na(\\mathbf{u}+\\mathbf{v})=a\\mathbf{u}+a\\mathbf{v}.\n(ab)\\mathbf{u}=a(b\\mathbf{u}).\n1\\cdot\\mathbf{u} =\\mathbf{u}",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Không gian Vector"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html",
+    "href": "note/linear-algebra/1.html",
+    "title": "Tiền đề",
+    "section": "",
+    "text": "Đối tượng của toán học gồm nhiều loại khác nhau, trong đó chúng ta đã quen thuộc với các đối tượng như các số, điểm, đường thẳng, mặt phẳng, tam giác, đường tròn, phương trình, vv. Thông thường các đối tượng có cùng một tính chất chung được gom thành các tập hợp, và chúng có thể là hữu hạn hoặc vô hạn. Tập hợp là một khái niệm cơ bản và thâm nhập vào toàn bộ cách nghĩ trong toán học ngày nay. Tập hợp là một khái niệm không được định nghĩa mà được hiểu một cách trực giác như sau.\n\nTập hợp và phần tử: Tập hợp gồm các đối tượng xác định theo quy tắc; phần tử a thuộc tập hợp A ký hiệu a \\in A, không thuộc ký hiệu là a \\notin A; tập không chứa phần tử nào là tập rỗng (\\emptyset).\nCác tập số chuẩn: Tập số tự nhiên \\mathbb{N}, \\mathbb{N}^*; tập số hữu tỉ \\mathbb{Q}; tập số thực \\mathbb{R}; tập số phức \\mathbb{C}.\nQuan hệ chứa: Tập con (A \\subseteq B), tập con thực sự (A \\subsetneq B), hai tập bằng nhau (A = B \\Leftrightarrow A \\subseteq B \\ \\text{and}  \\ B \\subseteq A), và tập tất cả các tập con của A ký hiệu là \\mathcal{P}(A)\n\n\n\n\nĐịnh nghĩa 1.8. Cho A và B là các tập hợp:\n\nHợp (A \\cup B): Gồm các phần tử thuộc ít nhất một trong hai tập, tức là A\\cup B = \\{\\, x \\mid x\\in A\\ \\mbox{or}\\ x\\in B \\,\\}\nGiao (A \\cap B): Gồm các phần tử thuộc đồng thời cả hai tập, tức là A\\cap B = \\{\\, x \\mid x\\in A\\ \\mbox{and}\\ x\\in B \\,\\}\nHiệu (A \\setminus B): Gồm các phần tử thuộc A nhưng không thuộc B, tức là A\\setminus B = \\{\\, x \\mid x\\in A\\ \\mbox{and}\\ x\\notin B \\,\\}\n\nMệnh đề 1.9. Cho A, B, C là các tập hợp tùy ý. Khi đó ta có các đẳng thức sau:\n\nA\\cap A = A = A\\cup A\nA\\cup \\varnothing = A\nA\\cap B= B\\cap A\nA\\cap (B\\cap C)=(A\\cap B)\\cap C, A\\cup (B\\cup C)=(A\\cup B)\\cup C\nA\\setminus (B\\cap C)=(A\\setminus B)\\cup (A\\setminus C), A\\setminus (B\\cup C)=(A\\setminus B)\\cap (A\\setminus C).\nA\\cap (B\\cup C)=(A\\cap B)\\cup (A\\cap C), A\\cup (B\\cap C)=(A\\cup B)\\cap (A\\cup C).\n\nMệnh đề 1.10. Ta có (a, b) = (c, d) \\Leftrightarrow a = c \\ \\text{and} \\ b = d.\nĐịnh nghĩa 1.11. Cho hai tập hợp A và B. Tích Descartes của A và B là tập hợp được định nghĩa bởi:\n\nA\\times B =\\{\\, (a,b) \\mid a\\in A,\\ b\\in B \\,\\}.\n\n\n\n\nĐịnh nghĩa 1.14. Một quan hệ trên một tập hợp A là một tập con của A\\times A.\nNếu R là một quan hệ trên một tập hợp A cho trước và (a, b) \\in R thì ta viết aRb (đọc là “a quan hệ R với b”).\nĐịnh nghĩa 1.16. Một quan hệ R trên một tập A gọi là có tính:\n\nPhản xạ: aRa, \\forall a \\in A\nĐối xứng: aRb \\Rightarrow bRa\nPhản đối xứng: aRb \\ \\text{and} \\ bRa \\Rightarrow a = b\nBắc cầu: aRb \\ \\text{and} \\ bRc \\Rightarrow aRc\n\nĐịnh nghĩa 1.17. Cho R là một quan hệ trên một tập hợp A.\n\nR được gọi là quan hệ thứ tự nếu R có tính phản xạ, phản đối xứng và bắc cầu.\nR được gọi là quan hệ thứ tự toàn phần nếu R là một quan hệ thứ tự và \\forall a, b \\in A thì aRb hoặc bRa.\n\nĐịnh nghĩa 1.19. Một quan hệ \\sim trên một tập hợp A được gọi là quan hệ tương đương nếu R có tính phản xạ, đối xứng và băc cầu.\n\nLớp tương đương và tập tương:\n\nLớp tương đương chứa a là [a] := \\{x \\in A | a \\sim x\\}. Hai lớp tương đương [a], [b] hoặc trùng nhau hoặc rời nhau hoàn toàn.\nTập hợp tất cả các lớp tương đương gọi là tập thương A / \\sim\n\nPhân hoạch: Một họ các tập con khác rỗng, đôi một rời nhau và có hợp bằng toàn bộ tập ban đầu. Tập thương của một quan hệ tương đương chính là phần hoạch, và ngược lại mỗi phân hoạch sinh ra một quan hệ tương đương.",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html#khái-niệm-tập-hợp",
+    "href": "note/linear-algebra/1.html#khái-niệm-tập-hợp",
+    "title": "Tiền đề",
+    "section": "",
+    "text": "Đối tượng của toán học gồm nhiều loại khác nhau, trong đó chúng ta đã quen thuộc với các đối tượng như các số, điểm, đường thẳng, mặt phẳng, tam giác, đường tròn, phương trình, vv. Thông thường các đối tượng có cùng một tính chất chung được gom thành các tập hợp, và chúng có thể là hữu hạn hoặc vô hạn. Tập hợp là một khái niệm cơ bản và thâm nhập vào toàn bộ cách nghĩ trong toán học ngày nay. Tập hợp là một khái niệm không được định nghĩa mà được hiểu một cách trực giác như sau.\n\nTập hợp và phần tử: Tập hợp gồm các đối tượng xác định theo quy tắc; phần tử a thuộc tập hợp A ký hiệu a \\in A, không thuộc ký hiệu là a \\notin A; tập không chứa phần tử nào là tập rỗng (\\emptyset).\nCác tập số chuẩn: Tập số tự nhiên \\mathbb{N}, \\mathbb{N}^*; tập số hữu tỉ \\mathbb{Q}; tập số thực \\mathbb{R}; tập số phức \\mathbb{C}.\nQuan hệ chứa: Tập con (A \\subseteq B), tập con thực sự (A \\subsetneq B), hai tập bằng nhau (A = B \\Leftrightarrow A \\subseteq B \\ \\text{and}  \\ B \\subseteq A), và tập tất cả các tập con của A ký hiệu là \\mathcal{P}(A)",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html#các-phép-toán-trên-tập-hợp",
+    "href": "note/linear-algebra/1.html#các-phép-toán-trên-tập-hợp",
+    "title": "Tiền đề",
+    "section": "",
+    "text": "Định nghĩa 1.8. Cho A và B là các tập hợp:\n\nHợp (A \\cup B): Gồm các phần tử thuộc ít nhất một trong hai tập, tức là A\\cup B = \\{\\, x \\mid x\\in A\\ \\mbox{or}\\ x\\in B \\,\\}\nGiao (A \\cap B): Gồm các phần tử thuộc đồng thời cả hai tập, tức là A\\cap B = \\{\\, x \\mid x\\in A\\ \\mbox{and}\\ x\\in B \\,\\}\nHiệu (A \\setminus B): Gồm các phần tử thuộc A nhưng không thuộc B, tức là A\\setminus B = \\{\\, x \\mid x\\in A\\ \\mbox{and}\\ x\\notin B \\,\\}\n\nMệnh đề 1.9. Cho A, B, C là các tập hợp tùy ý. Khi đó ta có các đẳng thức sau:\n\nA\\cap A = A = A\\cup A\nA\\cup \\varnothing = A\nA\\cap B= B\\cap A\nA\\cap (B\\cap C)=(A\\cap B)\\cap C, A\\cup (B\\cup C)=(A\\cup B)\\cup C\nA\\setminus (B\\cap C)=(A\\setminus B)\\cup (A\\setminus C), A\\setminus (B\\cup C)=(A\\setminus B)\\cap (A\\setminus C).\nA\\cap (B\\cup C)=(A\\cap B)\\cup (A\\cap C), A\\cup (B\\cap C)=(A\\cup B)\\cap (A\\cup C).\n\nMệnh đề 1.10. Ta có (a, b) = (c, d) \\Leftrightarrow a = c \\ \\text{and} \\ b = d.\nĐịnh nghĩa 1.11. Cho hai tập hợp A và B. Tích Descartes của A và B là tập hợp được định nghĩa bởi:\n\nA\\times B =\\{\\, (a,b) \\mid a\\in A,\\ b\\in B \\,\\}.",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html#quan-hệ-trên-tập-hợp",
+    "href": "note/linear-algebra/1.html#quan-hệ-trên-tập-hợp",
+    "title": "Tiền đề",
+    "section": "",
+    "text": "Định nghĩa 1.14. Một quan hệ trên một tập hợp A là một tập con của A\\times A.\nNếu R là một quan hệ trên một tập hợp A cho trước và (a, b) \\in R thì ta viết aRb (đọc là “a quan hệ R với b”).\nĐịnh nghĩa 1.16. Một quan hệ R trên một tập A gọi là có tính:\n\nPhản xạ: aRa, \\forall a \\in A\nĐối xứng: aRb \\Rightarrow bRa\nPhản đối xứng: aRb \\ \\text{and} \\ bRa \\Rightarrow a = b\nBắc cầu: aRb \\ \\text{and} \\ bRc \\Rightarrow aRc\n\nĐịnh nghĩa 1.17. Cho R là một quan hệ trên một tập hợp A.\n\nR được gọi là quan hệ thứ tự nếu R có tính phản xạ, phản đối xứng và bắc cầu.\nR được gọi là quan hệ thứ tự toàn phần nếu R là một quan hệ thứ tự và \\forall a, b \\in A thì aRb hoặc bRa.\n\nĐịnh nghĩa 1.19. Một quan hệ \\sim trên một tập hợp A được gọi là quan hệ tương đương nếu R có tính phản xạ, đối xứng và băc cầu.\n\nLớp tương đương và tập tương:\n\nLớp tương đương chứa a là [a] := \\{x \\in A | a \\sim x\\}. Hai lớp tương đương [a], [b] hoặc trùng nhau hoặc rời nhau hoàn toàn.\nTập hợp tất cả các lớp tương đương gọi là tập thương A / \\sim\n\nPhân hoạch: Một họ các tập con khác rỗng, đôi một rời nhau và có hợp bằng toàn bộ tập ban đầu. Tập thương của một quan hệ tương đương chính là phần hoạch, và ngược lại mỗi phân hoạch sinh ra một quan hệ tương đương.",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html#định-nghĩa-ánh-xạ",
+    "href": "note/linear-algebra/1.html#định-nghĩa-ánh-xạ",
+    "title": "Tiền đề",
+    "section": "2.1. Định nghĩa ánh xạ",
+    "text": "2.1. Định nghĩa ánh xạ\nCho A và B là hai tập tùy ý. Người ta dùng khái niệm ánh xạ để xét mối liên hệ giữa các phần tử của A và B.\nĐịnh nghĩa 2.1. Một ánh xạ f từ A đến B là một quy tắc cho tương ứng mỗi phần tử x của A với một phần tử duy nhất của B được ký hiệu là f(x).\nTa viết f:A\\rightarrow B, x \\mapsto f(x) hay:\n\n\\begin{aligned}\n        f: A &\\longrightarrow B\\\\\n           x &\\longmapsto f(x).\n\\end{aligned}\n\nTa gọi tập A là tập nguồn (miền xác định), tập B là tập đích (miền giá trị) của ánh xạ f.\nHai ánh xạ f, g: A \\rightarrow B được coi là bằng nhau, ký hiệu f = g, nếu f(x) = g(x), \\forall x \\in A.\nĐịnh nghĩa 2.5. Cho f: A \\rightarrow B là một ánh xạ từ A đến B, A’ là tập con của A và B’ là tập con của B.\n\nTập hợp f(A') := \\{\\, f(x) \\in B \\mid x\\in A' \\, \\} được gọi là tập ảnh của A’. Đặc biệt, f(x) được gọi là ảnh của x.\nTập hợp f^{-1}(B'):= \\set{ x\\in A \\mid f(x)\\in B' } được gọi là tập tạo ảnh của B’. Nếu B’ chỉ gồm một phần tử y thì ta dùng ký hiệu f^{-1}(y). Các phần tử của f^{-1}(y) được gọi là tạo ảnh của y.",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html#ánh-xạ-hợp-thành",
+    "href": "note/linear-algebra/1.html#ánh-xạ-hợp-thành",
+    "title": "Tiền đề",
+    "section": "2.2. Ánh xạ hợp thành",
+    "text": "2.2. Ánh xạ hợp thành\nĐịnh nghĩa 2.8. Cho A, B, C là các tập hợp, f: A\\rightarrow B và g: B\\rightarrow C là hai ánh xạ bất kỳ. Ánh xạ hợp thành của f và g là ánh xạ g\\circ f: A\\rightarrow C được xác định bởi:\n\n(g\\circ f)(x) = g(f(x)) \\qquad (\\forall x \\in A)",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html#đơn-ánh-toàn-ánh-và-song-ánh",
+    "href": "note/linear-algebra/1.html#đơn-ánh-toàn-ánh-và-song-ánh",
+    "title": "Tiền đề",
+    "section": "2.3. Đơn ánh, toàn ánh và song ánh",
+    "text": "2.3. Đơn ánh, toàn ánh và song ánh\nĐịnh nghĩa 2.13. Cho f: A\\rightarrow B là một ánh xạ tùy ý.\n\nÁnh xạ f được gọi là đơn ánh nếu \\forall x, x' \\in A thỏa mãn f(x) = f(x') thì x = x'\nÁnh xạ f được gọi là toàn ánh nếu \\forall y \\in B đều tồn tại x\\in A sao cho f(x) = y\nÁnh xạ f được gọi là song ánh nếu f vừa là đơn ánh vừa là toàn ánh.\n\nMệnh đề 2.15. Cho f: A\\rightarrow B và g: B\\rightarrow C là các ánh xạ:\n\nNếu f và g là hai đơn ánh (hoặc 2 toàn ánh, 2 song ánh) thì g\\circ f cũng là đơn ánh (hoặc toàn ánh, song ánh).\nNếu g\\circ f là đơn ánh thì f là đơn ánh.\nNếu g\\circ f là toàn ánh thì g là toàn ánh.",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/1.html#vành",
+    "href": "note/linear-algebra/1.html#vành",
+    "title": "Tiền đề",
+    "section": "3.1. Vành",
+    "text": "3.1. Vành\nGiả sử R là một tập tùy ý khác rỗng. Một phép toán “” trong R là một quy tắc ứng với mỗi cặp (a, b) \\in R^2 với một phần tử của R. Ký hiệu là a  b. Nói cách khác, mỗi phép toán”*” trong R là một ánh xạ:\n\n\\begin{align*}\n\\ast: R^{2} &\\longrightarrow R,\\\\\n(a,b) &\\longmapsto f(a,b)=a\\ast b.\n\\end{align*}\n\nChẳng hạn, ta có phép toán cộng a + b và phép toán nhân a \\cdot b thông thường trong các tập số N, Z, Q, R.\nĐịnh nghĩa 3.1. Một vành R là một tập khác rỗng có hai phép toán cộng và nhân\n\n+: R\\times R\\rightarrow R, (a, b)\\mapsto a+b,\\quad\n\\cdot: R\\times R\\rightarrow R, (a, b)\\mapsto a\\cdot b\n\nthỏa mãn các tiên đề sau \\forall a, b, c \\in R:\n\n(a+b)+c = a+(b+c)\na+b = b+a\n\\exists\\, 0 \\in R:\\; a+0=a=0+a\n\\exists -a \\in R:\\; a+(-a)=0\n(ab)c = a(bc)\na\\cdot(b+c)=a\\cdot b+a\\cdot c,(a+b)\\cdot c=a\\cdot c+b\\cdot c\n\nĐịnh nghĩa 3.2. Cho R là một vành:\n\nNếu tồn tại phần tử đơn vị 1 \\in R thỏa mãn a\\cdot 1=1\\cdot a=a, \\forall a \\in R, thì vành R được gọi là vành có đơn vị 1.\nNếu phép nhân co tính giao hoán a\\cdot b = b\\cdot a, \\forall a, b \\in R thì vành R được gọi là vành giao hoán.\n\nĐịnh nghĩa 3.5. Cho R là một vành và a, b, c \\in R. Khi đó:\n\na\\cdot 0 = 0\\cdot a = 0\n(-a)b=a(-b)=-ab\n(-a)(-b)=ab\na(b-c)=ab-ac\n(b-c)a = ba-ca",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Tiền đề"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Giới thiệu",
+    "section": "",
+    "text": "Tôi không biết tôi đang làm gì nữa, nhưng nhìn này tôi đang viết Note.\n\n\nUpdateHome #1: Ngày 24 tháng 6 năm 2026\nTại sao tôi lại học mấy cái này, tôi cũng không biết nữa. Tôi có những ước mơ, lúc thì là một doanh nhân của một công ty kỳ lân công nghệ cầm hàng chục tỷ đô trong tay, lúc thì là một nhà vật lý lý thuyết xuất sắc, phát hiện ra một lý thuyết mới mà chưa ai biết, hay là một nhà toán học, đúng vậy một nhà toán học thôi.\nBây giờ, hiện tại tôi cũng đã 18 tuổi rồi, nhưng tôi lại không biết tôi nên làm gì nữa. Có lẽ là sau này tôi của 20 tuổi, 30 tuổi sẽ trả lời trong UpdateHome #2? Tôi cũng không rõ nữa.\nNhưng dù có là Tin học, Vật lý, hay gì đi chăng nữa. Thì bản chất đều có dính dáng Toán học trong đó, thật vậy. Tôi có học lập trình thi đấu ở cấp 3, trong đó có phần nhân ma trận, mà đó là cơ bản của đại số tuyến tính. Tôi đã từng tiếp xúc với AI, nơi mà tôi đã nghe đến thuật ngữ Eigen Vector, mặc dù tôi không hiểu và lúc đó chưa có ý định học. Hay cuối cùng là vật lý, vật lý hiện đại, nơi tôi đã nghe tới ’Không gian Hilbert, mà cơ sở liên quan đến không gian Vector?\nTôi cũng không biết nữa.\nNhưng bây giờ, tôi muốn học đại học Tokyo chuyên ngành Vật lý, hoặc đại học quốc gia Singapore chuyên ngành Khoa học máy tính. Vì thế nên tôi phải làm trùm tất cả các môn đại cương ở 2 năm đầu ở đại học Việt Nam, và tôi chọn Đại số tuyến tính (Linear Algebra) làm viên gạch đầu tiên cho ước mơ của tôi.\nTôi không biết bạn là ai? Làm thế nào bạn lại kiếm được cái này của tôi? Tại sao bạn lại đỉnh cao như vậy, tôi giấu kỹ lắm rồi? Nhưng mà kệ đi, nếu kiếm được thì hãy nhắn “Hello” cho tôi qua mess nhé (nếu bạn có kỹ năng tìm được nó) (còn mấy thằng quen bố m thì cút nhé).\nTạm biệt ./.\n\n\nUpdateHome #2: 27th Sep 2026\nWhy did i start discuss by english from now on? i dont know, but i think i have to improve my english. A lot of events have happened past three months, i think 2026’s summer is the worst time i have never experienced. My daily routine has changed alot. And my goals, too.\nNow, i want to get a place on the university calculus olympiad team. Yes, that right. I give up informatics, i think informatics is not for me. Will this change affect my future? I dont know, but i hope this decision is right.\nThank up updatehome1, now i have finished multivariable calculus. Updatehome2 is mark the beginning of my specific math journal.\nBye ./.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "donotReadme/readme.html",
+    "href": "donotReadme/readme.html",
+    "title": "Note",
+    "section": "",
+    "text": "Notehing to Commnet\n\n1 - Toán học\n2 - Cơ học cổ điển\n3 - Điện và từ\n4 - Sóng và dao động\n5 - Thuyết tương đối hẹp\n6 - Cơ học lượng tử\n7 - Vật lý thống kê\n8 - Điện động lực học\n9 - Thuyết tương đối rộng\n10 - Lý thuyết trường lượng tử\n11 - Vật lý hạt\n12 - Vũ trụ học\nEnd"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topic",
+    "href": "donotReadme/readme.html#topic",
+    "title": "Note",
+    "section": "Topic",
+    "text": "Topic\n\nCalculus\n\nLimits\nDifferentiation\nIntegration\nTaylor Series\nFourier Series\nMultiple Integrals\nVector Calculus\nGradient ✔️\nDivergence\nCurl\nLine Integrals\nSurface Integrals\n\n\n\nLinear Algebra\n\nVectors\nVector Spaces\nBases and Dimension\nMatrices\nDeterminants\nEigenvalues\nEigenvectors\nInner Product Spaces\nIntroduction to Hilbert Spaces\n\n\n\nDifferential Equations\n\nOrdinary Differential Equations\nPartial Differential Equations\nSeparation of Variables\nFourier Transform\nLaplace Transform"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics",
+    "href": "donotReadme/readme.html#topics",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nNewtonian Mechanics\nWork and Energy\nMomentum\nCollisions\nRotational Motion\nOscillations\n\n\nAdvanced Topics\n\nLagrangian Mechanics\nHamiltonian Mechanics\nPrinciple of Least Action\nPhase Space"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-1",
+    "href": "donotReadme/readme.html#topics-1",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nElectric Fields\nElectric Potential\nMagnetic Fields\nCircuits\nMaxwell’s Equations\nElectromagnetic Waves"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-2",
+    "href": "donotReadme/readme.html#topics-2",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nSimple Harmonic Motion\nDamped Oscillations\nDriven Oscillations\nWave Propagation\nStanding Waves\nFourier Analysis"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-3",
+    "href": "donotReadme/readme.html#topics-3",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nLorentz Transformations\nMinkowski Space\nFour-Vectors\nFour-Momentum\nIntroduction to Tensors"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-4",
+    "href": "donotReadme/readme.html#topics-4",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nWave Functions\nSchrödinger Equation\nOperators\nSpin\nAngular Momentum\nDirac Notation\nPerturbation Theory\nScattering Theory\nIdentical Particles"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-5",
+    "href": "donotReadme/readme.html#topics-5",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nEntropy\nThermodynamic Ensembles\nPartition Function\nBose–Einstein Statistics\nFermi–Dirac Statistics"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-6",
+    "href": "donotReadme/readme.html#topics-6",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nGreen’s Functions\nMultipole Expansion\nElectromagnetic Radiation\nGauge Transformations"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-7",
+    "href": "donotReadme/readme.html#topics-7",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nTensor Calculus\nMetrics\nCurvature\nGeodesics\nEinstein Field Equations\nSchwarzschild Solution\nBlack Holes"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-8",
+    "href": "donotReadme/readme.html#topics-8",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nCanonical Quantization\nPath Integrals\nKlein–Gordon Equation\nDirac Equation\nGauge Theory\nRenormalization\nFeynman Diagrams"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-9",
+    "href": "donotReadme/readme.html#topics-9",
+    "title": "Note",
+    "section": "Topics",
+    "text": "Topics\n\nThe Standard Model\nHiggs Mechanism\nQuarks\nLeptons\nGauge Symmetry\nCP Violation"
+  },
+  {
+    "objectID": "donotReadme/readme.html#topics-to-learn",
+    "href": "donotReadme/readme.html#topics-to-learn",
+    "title": "Note",
+    "section": "Topics to Learn",
+    "text": "Topics to Learn\n\nBig Bang Theory\nCosmic Inflation\nCosmic Microwave Background\nDark Matter\nDark Energy\nStructure Formation"
+  },
+  {
+    "objectID": "note/differential-equations/index.html",
+    "href": "note/differential-equations/index.html",
+    "title": "Phương trình vi phân",
+    "section": "",
+    "text": "1. Giới thiệu (Introduction)\n\n1.1 Một số mô hình toán học cơ bản; Trường phương hướng\n1.2 Nghiệm của một số phương trình vi phân\n1.3 Phân loại phương trình vi phân\n\n\n\n\n2. Phương trình vi phân cấp một (First-Order Differential Equations)\n\n2.1 Phương trình tuyến tính; phương pháp nhân tử tích phân\n2.2 Phương trình tách biến\n2.3 Phương trình thuần nhất\n2.4 Phương trình Bernoulli và phi tuyến\n2.5 Phương trình tự trị và động lực học quần thể\n2.6 Phương trình chính xác và nhân tử tích phân\n2.7 Phương pháp Euler\n2.8 Định lý tồn tại và duy nhất nghiệm\n2.9 Phương trình sai phân cấp một\n\n\n\n\n3. Phương trình vi phân tuyến tính cấp hai\n\n3.1 Phương trình thuần nhất hệ số hằng\n3.2 Nghiệm Wronskian\n3.3 Nghiệm phức của phương trình đặc trưng\n3.4 Nghiệm bội\n3.5 Phương pháp hệ số bất định\n3.6 Phương pháp biến thiên tham số\n3.7 Dao động cơ học và điện\n3.8 Dao động cưỡng bức tuần hoàn\n\n\n\n\n4. Phương trình vi phân tuyến tính cấp cao\n\n4.1 Lý thuyết tổng quát\n4.2 Thuần nhất hệ số hằng\n4.3 Phương pháp hệ số bất định\n4.4 Biến thiên tham số\n\n\n\n\n5. Nghiệm chuỗi của phương trình cấp hai\n\n5.1 Ôn tập chuỗi lũy thừa\n5.2 Chuỗi quanh điểm chính quy (phần I)\n5.3 Chuỗi quanh điểm chính quy (phần II)\n5.4 Phương trình Euler\n5.5 Điểm kỳ dị chính quy (phần I)\n5.6 Điểm kỳ dị chính quy (phần II)\n5.7 Phương trình Bessel\n\n\n\n\n6. Phép biến đổi Laplace\n\n6.1 Định nghĩa\n6.2 Giải bài toán giá trị ban đầu\n6.3 Hàm bước\n6.4 Ngoại lực gián đoạn\n6.5 Hàm xung\n6.6 Tích chập\n\n\n\n\n7. Hệ phương trình vi phân tuyến tính cấp một\n\n7.1 Giới thiệu\n7.2 Ma trận\n7.3 Hệ tuyến tính; trị riêng, vectơ riêng\n7.4 Lý thuyết cơ bản\n7.5 Thuần nhất hệ số hằng\n7.6 Trị riêng phức\n7.7 Trị riêng hàm cơ bản\n7.8 Trị riêng lặp\n7.9 Hệ không thuần nhất",
+    "crumbs": [
+      "18.03 - Differential",
+      "Phương trình vi phân"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/2.html",
+    "href": "note/linear-algebra/2.html",
+    "title": "Ma trận và Hệ phương trình tuyến tính",
+    "section": "",
+    "text": "IV. Giới thiệu về hệ phương trình tuyến tính\n\n\nV. Ma trận\n\n\nVI. Phương pháp khử Gauss - Jordan\n\n\nVII. Biện luận hệ phương trình và ứng dụng\n\n\nVIII. Các phép toán trên ma trận\n\n\nIX. Ma trận khả nghịch và các tính chất",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Ma trận và Hệ phương trình tuyến tính"
+    ]
+  },
+  {
+    "objectID": "note/linear-algebra/index.html",
+    "href": "note/linear-algebra/index.html",
+    "title": "Đại số tuyến tính",
+    "section": "",
+    "text": "Đây chỉ là bản copy rẻ tiền và không đầy đủ của daisotuyentinh.com được viết bởi thầy Phạm Đình Đồng, cô Trần Nguyễn Khánh Linh, thầy Lê Ngọc Long và thầy Huỳnh Đình Tuân, giảng viên Khoa Toán học, Trường ĐHSP - Đại học Huế.\n\n\nChương I. Tiền đề\n\nTập hợp\nÁnh xạ\nVành và trường số\n\n\n\nChương II. Ma trận và Hệ phương trình tuyến tính\n\nGiới thiệu về hệ phương trình tuyến tính\nMa trận\nPhương pháp khử Gauss - Jordan\nBiện luận hệ phương trình và ứng dụng\nCác phép toán trên ma trận\nMa trận khả nghịch và các tính chất\n\n\n\nChương III. Không gian Vector\n\nKhái niệm về không gian Vector\nHệ Vector độc lập tuyến tính\nCơ sở và chiều của không gian Vector\nTọa độ và ma trận chuyển cơ sở\nTổng và tổng trực tiếp\n\n\n\nChương IV. Ánh xạ tuyến tính\n\nÁnh xạ tuyến tính\nMa trận của ánh xạ tuyến tính\nẢnh và hạt nhân của đồng cấu\nKhông gian Vector đối ngẫu\n\n\n\nChương V. Định thức và ứng dụng\n\nĐịnh thức của ma trận\nKhai triển định thức\nCác ứng dụng của định thức\n\n\n\nChương VI. Giá trị riêng và bài toán chéo hóa\n\nKhông gian con bất biến\nĐa thức đặc trưng\nBài toán chéo hóa và ứng dụng",
+    "crumbs": [
+      "18.06 - Linear Algebra",
+      "Đại số tuyến tính"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#contour-plot",
+    "href": "note/multivariable-calculus/2.html#contour-plot",
+    "title": "Partial derivatives",
+    "section": "Contour plot",
+    "text": "Contour plot\n\n\n\n\n\n\nImportanttl;dr\n\n\n\nĐường mức f(x, y) = c. Cho biết hình dạng bền mặt mà không cần vẽ 3D.\n\n\nViệc biểu diễn hình không gian 3 chiều trong mặt phẳng thật sự là rất khó nếu ta vẽ như trên, để giải quyết vấn đề đó, chúng ta đã có Contour plot.\nĐây chính là một kỹ thuật biểu diễn không gian 3 chiều trên mặt phẳng 2 chiều, khá là quen thuộc trong việc biểu diễn nhiệt độ vùng, độ cao của núi, … trong đó x và y là kinh độ và vỹ độ.\nHãy xem ví dụ về Topographic map của đỉnh Himalaya dưới đây:\n\nTa có thể thấy các vành xung quanh đó, mỗi điểm trên vành sẽ có giá trị bằng chính xác một giá trị nào đó, giá trị của điểm giữa hai vành sẽ có giá trị ở giữa giá trị hai vành. Các vành không thể cắt nhau. Nếu một điểm nào đó mà các vành xếp gần nhau, chứng tỏ ở đó là vách núi, và ngược lại, nếu chúng xếp xa nhau, thì chứng tỏ đó là đồng bằng.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
+    "href": "note/multivariable-calculus/2.html#cách-tính-đạo-hàm-từng-phần",
+    "title": "Partial derivatives",
+    "section": "Cách tính đạo hàm từng phần",
+    "text": "Cách tính đạo hàm từng phần\nNhư đã nói ở trước, ta sẽ coi một biến là hằng số.\nVí dụ hàm f(x, y) = x^2 + x^3y + 2y + 3x\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\nx = np.linspace(-2, 2, 100)\ny = np.linspace(-2, 2, 100)\nX, Y = np.meshgrid(x, y)\nZ = X**2 + Y*X**3 + 2*Y + 3*X\n\nfig = plt.figure(figsize=(6, 5))\nax = fig.add_subplot(111, projection='3d')\nsurf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none')\n\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#approximation-formula",
+    "href": "note/multivariable-calculus/2.html#approximation-formula",
+    "title": "Partial derivatives",
+    "section": "Approximation formula",
+    "text": "Approximation formula\nIf we change x \\rightarrow x + \\Delta x and then y \\rightarrow y + \\Delta y.\nz = f(x, y) : then we have approximation formula for \\Delta z\n\n\\Delta z \\approx f_x \\Delta x + f_y \\Delta y\n\n\n\n\n\n\n\nTipRememeber\n\n\n\n\n\nthat f_x = \\frac {\\partial f}{\\partial x} and the same with f_y.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#tangent-plane",
+    "href": "note/multivariable-calculus/2.html#tangent-plane",
+    "title": "Partial derivatives",
+    "section": "Tangent plane",
+    "text": "Tangent plane\nTưởng tượng trong không gian mặt phẳng 2D, ta có tiếp tuyến là một đường thẳng là 1D.\nTương tự vậy với mặt phẳng 3D, tiếp tuyến của điểm là mặt phẳng 2D tạo bởi 2 đường tiếp tuyến khi đạo hàm theo x và đạo hàm theo y tại điểm đó.\nVí dụ: f(x, y) = x^2 + y^2\nTa xét tại điểm (x_0, y_0) = (1, 1), mặt phẳng tiếp tuyến là mặt phẳng màu cam trong hình.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 1, 1\nx00, y00 = 4, 4\nz0 = f(x0, y0)\nz00 = f(x00, y00)\n\nx = np.linspace(-1, 5, 70)\ny = np.linspace(-1, 5, 70)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 2, x0 + 2, 20),\n    np.linspace(y0 - 2, y0 + 2, 20)\n)\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nXpp, Ypp = np.meshgrid(\n    np.linspace(x00 - 2, x00 + 2, 20),\n    np.linspace(y00 - 2, y00 + 2, 20)\n)\nZpp = z00 + fx(x00, y00) * (Xpp - x00) + fy(x00, y00) * (Ypp - y00)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\n\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.plot_surface(Xpp, Ypp, Zpp, alpha=0.5, color='red')\n\nax.scatter(x0, y0, z0, color='black', s=60)\nax.scatter(x00, y00, z00, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nax.legend()\n\nplt.show()",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
+    "href": "note/multivariable-calculus/2.html#điểm-cực-tiểu",
+    "title": "Partial derivatives",
+    "section": "Điểm cực tiểu",
+    "text": "Điểm cực tiểu\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#điểm-cực-đại",
+    "href": "note/multivariable-calculus/2.html#điểm-cực-đại",
+    "title": "Partial derivatives",
+    "section": "Điểm cực đại",
+    "text": "Điểm cực đại\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 - y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#điểm-saddle",
+    "href": "note/multivariable-calculus/2.html#điểm-saddle",
+    "title": "Partial derivatives",
+    "section": "Điểm saddle",
+    "text": "Điểm saddle\nVừa là cực dại vừa là cực tiểu.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndef f(x, y):\n    return - x**2 + y**2\n\ndef fx(x, y):\n    return 2 * x\n\ndef fy(x, y):\n    return 2 * y\n\nx0, y0 = 0, 0\nz0 = f(x0, y0)\n\nx = np.linspace(-5, 5, 50)\ny = np.linspace(-5, 5, 50)\nX, Y = np.meshgrid(x, y)\nZ = f(X, Y)\n\nXp, Yp = np.meshgrid(\n    np.linspace(x0 - 3, x0 + 3, 20),\n    np.linspace(y0 - 3, y0 + 3, 20)\n)\n\nZp = z0 + fx(x0, y0) * (Xp - x0) + fy(x0, y0) * (Yp - y0)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, alpha=0.7, cmap='viridis')\nax.plot_surface(Xp, Yp, Zp, alpha=0.5, color='red')\nax.scatter(x0, y0, z0, color='black', s=60)\n\nax.set_xlabel('x')\nax.set_ylabel('y')\nax.set_zlabel('z')\n\nx_curve = np.linspace(x0 - 5, x0 + 5, 200)\ny_curve = np.full_like(x_curve, y0)\nz_curve = f(x_curve, y_curve)\n\nax.plot(x_curve, y_curve, z_curve,\n        color='black', linewidth=1.5,\n        label='Curve y=y0')\n\ny_curve2 = np.linspace(y0 - 5, y0 + 5, 200)\nx_curve2 = np.full_like(y_curve2, x0)\nz_curve2 = f(x_curve2, y_curve2)\n\nax.plot(x_curve2, y_curve2, z_curve2,\n        color='purple', linewidth=2,\n        label='Curve x=x0')\n\nplt.show()",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#general-case",
+    "href": "note/multivariable-calculus/2.html#general-case",
+    "title": "Partial derivatives",
+    "section": "General case",
+    "text": "General case\n\n\\frac {\\partial^2 f}{\\partial x^2} = f_{xx}; \\qquad\n\\frac {\\partial^2 f}{\\partial y^2} = f_{yy}; \\qquad\n\\frac {\\partial^2 f}{\\partial x \\partial y} = f_{xy} =\n\\frac {\\partial^2 f}{\\partial y \\partial x} = f_{yx}\n\nLet A = f_{xx}, B = f_{xy} and C = f_{yy}, we have 3 cases:\n\nAC - B^2 &lt; 0 \\Rightarrow saddle point.\nAC - B^2 = 0 \\Rightarrow cant conclude\nAC - B^2 &gt; 0\n\n\\rightarrow if A &gt; 0 local minimum.\n\\rightarrow if A &lt; 0 local maximum.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#total-differential",
+    "href": "note/multivariable-calculus/2.html#total-differential",
+    "title": "Partial derivatives",
+    "section": "Total differential",
+    "text": "Total differential\nĐạo hàm toàn phần: Cho một hàm f ví dụ như phụ thuộc vào 3 biến số f = f(x, y, z) thì đạo hàm toàn phần của nó là: \n\\mathrm df = f_x \\mathrm d x + f_y \\mathrm d y + f_z \\mathrm d z",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#chain-rule",
+    "href": "note/multivariable-calculus/2.html#chain-rule",
+    "title": "Partial derivatives",
+    "section": "Chain rule",
+    "text": "Chain rule\nTrường hợp 1: x = x(t), y = y(t), z = z(t)\n\n\\frac{\\mathrm d f}{\\mathrm dt} =\n\\frac{\\partial f}{\\partial x} \\frac{\\mathrm dx}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial y} \\frac{\\mathrm dy}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial z} \\frac{\\mathrm dz}{\\mathrm dt}\n\nTrường hợp 2: x = x(u, v), y = y(u, v), z = z(u, v) \n\\frac{\\partial f}{\\partial u} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial u} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial u} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial u}  \n\\\\[10pt]\n\\frac{\\partial f}{\\partial v} =\n\\frac{\\partial f}{\\partial x} \\frac{\\partial x}{\\partial v} +   \n\\frac{\\partial f}{\\partial y} \\frac{\\partial y}{\\partial v} +   \n\\frac{\\partial f}{\\partial z} \\frac{\\partial z}{\\partial v}  \n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nQuy tắc nhân, ta có f = f(u, v) = uv, đạo hàm toàn phần nó: \n\\mathrm d f = v \\mathrm d u + u \\mathrm dv \\space (=vu'+uv')\n\nQuy tắc thương, ta có f = f(u, v) = \\frac u v, đạo hàm toàn phần: \n\\mathrm d f = \\frac 1 v \\mathrm du - \\frac u {v^2} \\mathrm d v = \\frac {v\\mathrm du - u\\mathrm dv}{v^2}\n\\space \\left(=\\frac{vu' - uv'}{v^2}\\right)",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#application",
+    "href": "note/multivariable-calculus/2.html#application",
+    "title": "Partial derivatives",
+    "section": "Application",
+    "text": "Application\nNói một cách khó hiểu, \\mathrm d x hay bất kể \\mathrm d gì đó, nó là một vật thể mang tính trừu tượng nhiều hơn việc định nghĩa nó là độ lệch của biến x. Hay có thể nói là \\mathrm d x \\neq \\Delta x. Chỉ khi nào \\Delta x tiến tới 0, thì khi đó \\mathrm d x \\approx \\Delta x\nVậy đạo hàm toàn phần có thể làm những gì:\n\nNó biểu thị xem việc thay đổi các biến của f tác động thế nào đến f.\nNó là “người giữ chỗ” cho công thức xấp xỉ: \\Delta f \\approx f_x \\Delta x + f_y \\Delta y + f_z \\Delta z.\nNếu các biến của f phụ thuộc vào tham số khác, ví dụ như x = x(t), y = y(t), z = z(t), thì ta có thể chia nó cho \\mathrm d t để khảo sát xem việc thay đổi t tác động thế nào đến tốc độ thay đổi của hàm f theo t. Hàm trở thành \\frac {\\mathrm d f}{\\mathrm d t} = \\frac{\\partial f}{\\partial x}\\frac {\\mathrm d x}{\\mathrm d t} + \\frac{\\partial f}{\\partial y}\\frac {\\mathrm d y}{\\mathrm d t} + \\frac{\\partial f}{\\partial z}\\frac {\\mathrm d z}{\\mathrm d t}\n\n\n\n\n\n\n\nNoteExample\n\n\n\n\n\nVí dụ như, f = f(x, y, z) = x^2y + z, và x = t, y = e^t, z = \\sin t 1. Ta đạo hàm như bình thường: \nf = t^2 e^t + \\sin t\n\\Rightarrow \\frac {\\mathrm df}{\\mathrm dt} = e^t 2t + e^t t^2 + \\cos t\n\n\nĐạo hàm sử dụng Chain rule: \n\\frac{\\partial f}{\\partial x} = 2xy = 2te^t;\n\\frac{\\partial f}{\\partial y} = x^2 = t^2;\n\\frac{\\partial f}{\\partial z} = 1\n\n\n\n\\mathrm d x = 1;\n\\mathrm d y = e^t;\n\\mathrm d z = \\cos t\n\nvậy đáp án cuối cùng là:\n\n\\frac{\\mathrm d f}{\\mathrm dt} =\n\\frac{\\partial f}{\\partial x}\\frac{\\mathrm d x}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial y}\\frac{\\mathrm d y}{\\mathrm dt} +\n\\frac{\\partial f}{\\partial z}\\frac{\\mathrm d z}{\\mathrm dt} =\n2te^t + e^t t^2 + \\cos t\n\n\n\n\n\n\n\n\n\n\nNoteJustify",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#gradient-1",
+    "href": "note/multivariable-calculus/2.html#gradient-1",
+    "title": "Partial derivatives",
+    "section": "Gradient",
+    "text": "Gradient\nĐịnh nghĩa: \\nabla f = &lt;f_x, f_y, f_z&gt; - Là một vector Gradient.\nKhi đó thì vector sẽ vuông góc với mặt phẳng, và có hướng về phía mà có f(x, y, z) cao hơn. (Tức là nếu nó ở đoạn sườn dốc của một ngọn núi, thì nó sẽ nhìn lên phía trên đỉnh thay vì nhìn xuống dưới chân núi).\nVí dụ: Sau đây là một hàm bất kỳ, ta vẽ được như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nfig = plt.figure(figsize=(8, 6))\nax = fig.add_subplot(111, projection='3d')\n\nax.plot_surface(X, Y, Z, cmap='viridis')\n\nax.set_title('Surface Plot')\nax.set_xlabel('X')\nax.set_ylabel('Y')\nax.set_zlabel('Z')\n\nplt.show()\n\n\n\n\n\n\n\n\n\ncó contour plot là:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-4, 4, 300)\ny = np.linspace(-4, 4, 300)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\n\nplt.figure(figsize=(7, 6))\ncontour = plt.contourf(X, Y, Z, levels=30, cmap='viridis')\nplt.colorbar(contour)\n\nplt.contour(X, Y, Z, levels=15, colors='black', linewidths=0.5)\n\nplt.title('Contour Plot')\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nvà vector gradient được vẽ màu đỏ như sau:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.linspace(-2, 2, 25)\ny = np.linspace(-2, 2, 25)\nX, Y = np.meshgrid(x, y)\n\nZ = X*np.exp(-X**2 - Y**2)\ndZ_dY, dZ_dX = np.gradient(Z, y, x)\n\nplt.figure(figsize=(7, 6))\nplt.contour(X, Y, Z,\n            levels=20,\n            colors='gray',\n            linewidths=0.8,\n            alpha=0.4)\n\nplt.quiver(X, Y, dZ_dX, dZ_dY,\n           color='red',\n           scale=20)\n\nplt.xlabel('X')\nplt.ylabel('Y')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\n\n\n\n\nCó thể thấy mọi vector đều vuông góc với level curves, và hướng về phía 2 điểm cực trị.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#cách-tính",
+    "href": "note/multivariable-calculus/2.html#cách-tính",
+    "title": "Partial derivatives",
+    "section": "Cách tính",
+    "text": "Cách tính\nCho f = f(x, y, z) với x = x(t), y = y(t), z = z(t), chainrule:\n\n\\frac{\\mathrm df}{\\mathrm dt} =\nf_x\\frac{\\mathrm dx}{\\mathrm dt} +\nf_x\\frac{\\mathrm dy}{\\mathrm dt} +\nf_x\\frac{\\mathrm dz}{\\mathrm dt}  \n\nGiờ chúng ta sẽ viết nó dưới dạng khác:\n\n\\frac{\\mathrm df}{\\mathrm dt} = \\nabla f \\cdot \\frac{\\mathrm d\\vec r}{\\mathrm dt}\n\ntrong đó:\n\n\\nabla w = &lt;f_x, f_y, f_z&gt; \\quad\n\\frac{\\mathrm d \\vec r}{\\mathrm dt} = &lt;\\frac{\\mathrm dx}{\\mathrm dt},\\frac{\\mathrm dy}{\\mathrm dt},\\frac{\\mathrm dz}{\\mathrm dt}&gt;\n\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nx0 = 1\ny0 = 1\ntheta_deg = 60.0\ntheta_rad = np.radians(theta_deg)\n\ndef f_3d(X, Y):\n    return np.exp(-((X - 1.5)**2 + Y**2)) + np.exp(-((X + 1.5)**2 + Y**2))\n\nx_range = np.linspace(-5, 5, 300)\ny_range = np.linspace(-5, 5, 300)\nX, Y = np.meshgrid(x_range, y_range)\nZ = f_3d(X, Y)\n\nt = np.linspace(-5, 5, 300)\nx_plane = x0 + t * np.sin(theta_rad)\ny_plane = y0 + t * np.cos(theta_rad)\nz_plane_line = f_3d(x_plane, y_plane)\n\nfig = plt.figure(figsize=(12, 5))\nax_3d = fig.add_subplot(121, projection='3d')\nax_2d = fig.add_subplot(122)\n\nax_3d.plot_surface(X, Y, Z, cmap='viridis', alpha=0.6, edgecolor='none')\n\nax_3d.plot(x_plane, y_plane, z_plane_line, color='red', linewidth=2.5, label='Giao tuyến')\nax_3d.scatter([x0], [y0], [f_3d(x0, y0)], color='black', s=20)\n\nz_grid = np.linspace(0, 1.2, 2)\nT, Z_plane = np.meshgrid(t, z_grid)\nX_plane_mesh = x0 + T * np.sin(theta_rad)\nY_plane_mesh = y0 + T * np.cos(theta_rad)\nax_3d.plot_surface(X_plane_mesh, Y_plane_mesh, Z_plane, color='red', alpha=0.15)\n\nax_3d.set_xlabel(\"X\")\nax_3d.set_ylabel(\"Y\")\nax_3d.set_zlabel(\"Z\")\nax_3d.set_zlim(0, 1.2)\n\nax_2d.plot(t, z_plane_line, color='red', linewidth=2)\nax_2d.axvline(0, color='gray', linestyle='--', alpha=0.7)\nax_2d.set_ylim(0, 1.2)\nax_2d.grid(True)\n\nplt.tight_layout()\nplt.show()",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#geometric",
+    "href": "note/multivariable-calculus/2.html#geometric",
+    "title": "Partial derivatives",
+    "section": "Geometric",
+    "text": "Geometric\n\nD_{\\hat {\\mathbf u}}f = \\nabla f \\cdot \\hat {\\mathbf u} = |\\nabla f|\\cos \\theta.\n\nMaximum Khi \\cos \\theta = 1, tức là khi vector gradient \\nabla f trùng hướng với \\hat {\\mathbf u}. Vậy hàm sẽ tăng nhanh nhất khi mà",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/2.html#chú-ý",
+    "href": "note/multivariable-calculus/2.html#chú-ý",
+    "title": "Partial derivatives",
+    "section": "Chú ý",
+    "text": "Chú ý\nCác notaion của đạo hàm riêng rất dễ bị nhầm lẫn, thì nó chỉ biểu thị là mức độ lệch của hàm này trên một biến cụ thể, chứ không hề nhắc đến việc các biến nào sẽ const.\n\n\n\n\n\n\nWarningVí dụ\n\n\n\nCho f(x, y) = x + y.\nDễ dàng tính được:\n\n\\frac{\\partial f}{\\partial x} = 1 \\qquad\n\\frac{\\partial f}{\\partial y} = 1\n\nGiờ ta đặt x = u; y = u + v, hàm f(x, y) = x + y = 2u + v, bây giờ đạo hàm riêng đã trở thành:\n\n\\frac{\\partial f}{\\partial u} = 2 \\qquad\n\\frac{\\partial f}{\\partial v} = 1\n\nRõ ràng u = x nhưng \\frac{\\partial f}{\\partial u} \\neq \\frac{\\partial f}{\\partial x}!\nVì đạo hàm riêng của f trên x là giữ nguyên y và thay đổi x. Còn đạo hàm riêng của f trên u là đạo hàm riêng của f trên x giữ nguyên y - x.\n\n\nVì vậy, trong một số trường hợp, đễ tránh bị nhầm lẫn, ta sử dụng đạo hàm riêng f trên x giữ nguyên y thay đổi x là:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y\n\nVì thế với ví dụ trên, ta có thể khẳng định rằng:\n\n\\left(\\frac{\\partial f}{\\partial x} \\right)_y =\n\\left(\\frac{\\partial f}{\\partial u} \\right)_y \\neq\n\\left(\\frac{\\partial f}{\\partial u} \\right)_v",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Partial derivatives"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
+    "href": "note/multivariable-calculus/4.html#tích-phân-bội-ba-trong-tọa-độ-cầu",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Tích phân bội ba trong tọa độ cầu",
+    "text": "Tích phân bội ba trong tọa độ cầu\n\n\\mathrm dV = \\rho^2\\sin\\phi \\mathrm d\\rho \\mathrm d\\phi\\mathrm d\\theta\n\n\n\n\n\n\n\nNoteThe Jacobians\n\n\n\n\n\nTa có:\n\nx = \\rho\\sin\\phi\\cos\\theta \\qquad y = \\rho\\sin\\phi\\sin\\theta \\qquad z = \\rho\\cos\\phi\n\n\nJ = \\frac{\\partial(x, y, z)}{\\partial(\\rho, \\phi, \\theta)} = \\begin{vmatrix}\nx_\\rho & x_\\phi & x_\\theta \\\\\ny_\\rho & y_\\phi & y_\\theta \\\\\nz_\\rho & z_\\phi & z_\\theta\n\\end{vmatrix}\n\n\nJ = x_\\rho\\begin{vmatrix}\ny_\\phi & y_\\theta \\\\\nz_\\phi & z_\\theta\n\\end{vmatrix} - x_\\phi\\begin{vmatrix}\ny_\\rho & y_\\theta \\\\\nz_\\rho & z_\\theta\n\\end{vmatrix} + x_\\theta\\begin{vmatrix}\ny_\\rho & y_\\phi \\\\\nz_\\rho & z_\\phi\n\\end{vmatrix}\n\n\nx_\\rho = \\sin\\phi\\cos\\theta \\qquad\nx_\\phi = \\rho\\cos\\phi\\cos\\theta \\qquad\nx_\\theta = -\\rho\\sin\\phi\\sin\\theta \\\\\ny_\\rho = \\sin\\phi\\sin\\theta \\qquad\ny_\\phi = \\rho\\cos\\phi\\sin\\theta \\qquad\ny_\\theta = \\rho\\sin\\phi\\cos\\theta \\\\\nz_\\rho = \\cos\\phi \\qquad\nz_\\phi = -\\rho\\sin\\phi \\qquad\nz_\\theta = 0\n\n\n\\begin{vmatrix}\ny_\\phi & y_\\theta \\\\\nz_\\phi & z_\\theta\n\\end{vmatrix} = \\rho^2\\sin\\phi^2\\cos\\theta\n\n\n\\begin{vmatrix}\ny_\\rho & y_\\theta \\\\\nz_\\rho & z_\\theta\n\\end{vmatrix} = -\\rho\\sin\\phi\\cos\\phi\\cos\\theta\n\n\n\\begin{vmatrix}\ny_\\rho & y_\\phi \\\\\nz_\\rho & z_\\phi\n\\end{vmatrix} = -\\rho\\sin\\theta\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi^3\\cos\\theta^2 + \\rho^2\\sin\\phi\\cos\\phi^2\\cos\\theta^2 + \\rho^2\\sin\\theta^2\\sin\\phi\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi(\\sin\\phi^2\\cos\\theta^2 + \\cos\\phi^2\\cos\\theta^2 + \\sin\\theta^2)\n\n\n\\Rightarrow J = \\rho^2\\sin\\phi\n\nCuối cùng: \\mathrm dx\\mathrm dy \\mathrm dz = \\rho^2\\sin\\phi \\mathrm d\\rho\\mathrm d\\phi \\mathrm d\\theta\n\n\n\nVí dụ: Tính thể tích phần chóp được tạo bởi một hình cầu \\rho = 1 và cắt ngang bởi mặt phẳng z = \\frac 1 {\\sqrt2}.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nR = 1.0\nz0 = 1 / np.sqrt(2)\n\nfig = plt.figure(figsize=(6, 6))\nax = fig.add_subplot(111, projection='3d')\n\n\nu = np.linspace(0, 2*np.pi, 200)\nv = np.linspace(0, np.pi, 150)\n\nU, V = np.meshgrid(u, v)\n\nX = R * np.cos(U) * np.sin(V)\nY = R * np.sin(U) * np.sin(V)\nZ = R * np.cos(V)\n\n\nXu = np.ma.masked_where(Z &lt; z0, X)\nYu = np.ma.masked_where(Z &lt; z0, Y)\nZu = np.ma.masked_where(Z &lt; z0, Z)\n\nax.plot_surface(\n    Xu, Yu, Zu,\n    cmap='plasma',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=1\n)\n\nXl = np.ma.masked_where(Z &gt; z0, X)\nYl = np.ma.masked_where(Z &gt; z0, Y)\nZl = np.ma.masked_where(Z &gt; z0, Z)\n\nax.plot_surface(\n    Xl, Yl, Zl,\n    cmap='viridis',\n    rcount=180,\n    ccount=180,\n    linewidth=0,\n    antialiased=True,\n    shade=True,\n    alpha=0.5\n)\n\nr = np.sqrt(R**2 - z0**2)\n\nx = np.linspace(-r, r, 200)\ny = np.linspace(-r, r, 200)\n\nXp, Yp = np.meshgrid(x, y)\n\nmask = Xp**2 + Yp**2 &lt;= r**2\n\nXp = np.ma.masked_where(~mask, Xp)\nYp = np.ma.masked_where(~mask, Yp)\nZp = np.ma.masked_where(~mask, np.full_like(Xp, z0))\n\nax.plot_surface(\n    Xp, Yp, Zp,\n    color='white',\n    alpha=0.70,\n    linewidth=0,\n    shade=False\n)\n\nt = np.linspace(0, 2*np.pi, 500)\n\nxc = r * np.cos(t)\nyc = r * np.sin(t)\nzc = np.full_like(t, z0)\n\nax.plot(\n    xc, yc, zc,\n    color='black',\n    linewidth=3\n)\n\nlim = 1.05\n\nax.set_xlim(-lim, lim)\nax.set_ylim(-lim, lim)\nax.set_zlim(-lim, lim)\n\n\nax.set_box_aspect((1, 1, 1))\n\nax.view_init(elev=28, azim=45)\n\nax.set_xlabel(r'$x$', fontsize=16)\nax.set_ylabel(r'$y$', fontsize=16)\nax.set_zlabel(r'$z$', fontsize=16)\n\nax.grid(True)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\\int_0^{2\\pi}\\int_0^{\\pi/4}\\int_{\\frac 1 {\\sqrt2\\cos\\phi}}^1\\rho^2\\sin\\phi\\mathrm d\\rho\\mathrm d\\phi\\mathrm d\\theta\n\nTự tính.\n\n\\frac {2\\pi} 3 - \\frac {5\\pi}{6\\sqrt2}",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#một-số-kiểu-tham-số-hóa",
+    "href": "note/multivariable-calculus/4.html#một-số-kiểu-tham-số-hóa",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Một số kiểu tham số hóa",
+    "text": "Một số kiểu tham số hóa\n\nMặt phẳng z = a song song với mặt phẳng xy: \n\\hat{\\mathbf n} = \\pm \\hat{\\mathbf k} \\qquad \\mathrm dS = \\mathrm dx \\mathrm dy\n\nHình cầu bán kính a, tâm tại gốc tọa độ, dùng \\phi, \\theta: \n\\hat{\\mathbf n} = \\frac 1 a &lt;x, y, z&gt; \\qquad \\mathrm dS = a^2\\sin\\phi\\mathrm d\\phi\\mathrm d\\theta\n\nHình trụ bán kính a, tâm ở trục z, dùng z, \\theta: \n\\hat{\\mathbf n} = \\frac 1 a &lt;x, y, 0&gt; \\qquad \\mathrm dS = a\\mathrm dz\\mathrm d\\theta\n\nHình phụ thuộc vào x và y, z = f(x, y), dùng x, y: \n\\hat{\\mathbf n}\\mathrm dS = &lt;-f_x, -f_y, 1&gt;\\mathrm dx\\mathrm dy",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#parametric-surfaces",
+    "href": "note/multivariable-calculus/4.html#parametric-surfaces",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Parametric surfaces",
+    "text": "Parametric surfaces\nNếu tất cả các biến phụ thuộc vào tham số, ví dụ như:\n\n\\begin{cases}\nx = x(u, v) \\\\\ny = y(u, v) \\\\\nz = z(u, v) \\\\\n&lt;x, y, z&gt; = \\vec r = r(u, v) \\\\\n\\end{cases}\n\nThế thì ta có thể tính thông lượng sử dụng hai biến u và v. Ta có:\n\n\\frac {\\partial \\vec r}{\\partial u}\\Delta u =\n\\left&lt;\\frac{\\partial x}{\\partial u}\\Delta x,\n\\frac{\\partial y}{\\partial u}\\Delta y,\n\\frac{\\partial z}{\\partial u}\\Delta z\n\\right&gt;\n\n\n\\frac {\\partial \\vec r}{\\partial v}\\Delta v =\n\\left&lt;\\frac{\\partial x}{\\partial v}\\Delta x,\n\\frac{\\partial y}{\\partial v}\\Delta y,\n\\frac{\\partial z}{\\partial v}\\Delta z\n\\right&gt;\n\n\n\\Delta S = \\left(\\frac{\\partial \\vec r}{\\partial u}\\Delta u \\right) \\times \\left(\\frac{\\partial \\vec r}{\\partial v}\\Delta v \\right) =\n\\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)\\Delta x \\Delta y\n\nCuối cùng:\n\nd\\vec S = \\left(\\frac{\\partial \\vec r}{\\partial u} \\times \\frac{\\partial \\vec r}{\\partial v} \\right)dxdy",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#implicit-surfaces",
+    "href": "note/multivariable-calculus/4.html#implicit-surfaces",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Implicit surfaces",
+    "text": "Implicit surfaces\nNếu ta có:\n\nax + by + cz = d \\longrightarrow \\vec N = &lt;a, b, c&gt;\nMặt phẳng g(x, y, z) = 0 \\longrightarrow \\vec N = \\nabla g\n\n\n\\hat n dS = \\pm \\frac {|\\vec N|}{|\\vec N \\cdot \\hat k|}dxdy",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
+    "href": "note/multivariable-calculus/4.html#ý-nghĩa-hình-học",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Ý nghĩa hình học",
+    "text": "Ý nghĩa hình học\nLHS: \n\\iint_S \\mathbf F \\cdot \\hat n dS\n\nlà tổng lượng trường đi xuyên qua mặt kín.\nRHS: \n\\iiint \\nabla \\cdot \\mathbf F dV\n\nlà tổng nguồn phát sinh bên trong khối.\nNếu divergence dương \\longrightarrow trường được tạo ra bên trong.\nNếu divergence âm \\longrightarrow trường được hút vào bên trong.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#physical-interpretation",
+    "href": "note/multivariable-calculus/4.html#physical-interpretation",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Physical interpretation",
+    "text": "Physical interpretation",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
+    "href": "note/multivariable-calculus/4.html#bước-1-tách-cách-thành-phần-và-chứng-minh",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 1: Tách cách thành phần và chứng minh",
+    "text": "Bước 1: Tách cách thành phần và chứng minh\nTa cần chứng minh:\n\n\\iint_C \\mathbf F \\cdot d\\vec S = \\iiint_D \\nabla \\cdot \\mathbf F dV\n\nvới \\mathbf F = &lt;P, Q, R&gt;. Do:\n\n\\nabla \\cdot \\mathbf F = P_x + Q_y + R_z\n\nnên\n\n\\iiint_D (P_x + Q_y + R_z)dV =\n\\iiint_D P_x dV +\n\\iiint_D Q_y dV +\n\\iiint_D R_z dV\n\n\n\\iint_S \\mathbf F \\cdot d\\vec S =\n\\iint_S PdS_x +\n\\iint_S QdS_y +\n\\iint_S RdS_z\n\nVì các thành phần độc lập với nhau, vì vậy chỉ cần chứng minh:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_z dV\n\nvà tương tự với \\iint_S P\\hat i \\cdot d\\vec S, \\iint_SQ\\hat j\\cdot d\\vec S.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
+    "href": "note/multivariable-calculus/4.html#bước-2-miền-đơn-giản-theo-phương-z",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 2: Miền đơn giản theo phương z",
+    "text": "Bước 2: Miền đơn giản theo phương z\nGiả sử miền D = \\{(x, y, z) : (x, y) \\in \\mathbb U, z_1(x, y) \\leq x \\leq z_2(x, y)\\}.\nTức là miền bị kẹp giữa hai mặt:\n\nBottom: z = z_1(x, y)\nTop: z = z_2(x, y)",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
+    "href": "note/multivariable-calculus/4.html#bước-3-tính-tích-phân-thể-tích",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 3: Tính tích phân thể tích",
+    "text": "Bước 3: Tính tích phân thể tích\nTa có \\iiint_D R_zdV, do miền đơn giản theo z, nên thành:\n\n\\iint_U \\left(\\int_{z_1}^{z_2}R_zdz \\right)dxdy\n\nÁp dụng fundamental theorem of calculus \\int_{z_1}^{z_2}R_zdz = R(x, y, z_2) - R(x, y, z_1), nên:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
+    "href": "note/multivariable-calculus/4.html#bước-4-flux-through-top",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 4: Flux through top",
+    "text": "Bước 4: Flux through top\nTa có mặt trên z = z_2(x, y), tham số hóa ta được:\n\n\\mathbf r(x, y) = (x, y, z_2(x, y))\n\nCó hai vector tiếp tuyến:\n\n\\mathbf r_x = (1, 0, z_{2x}) \\qquad \\mathbf r_y = (0, 1, z_{2y})\n\ntích có hướng:\n\n\\mathbf r_x \\times \\mathbf r_y = &lt;-z_{2x}, -z_{2y}, 1&gt;\n\nVậy:\n\nd\\vec S = \\left&lt;-\\frac{\\partial z_2}{\\partial x}, -\\frac{\\partial z_2}{\\partial y}, 1\\right&gt;dxdy\n\ntích vô hướng:\n\nR\\hat k \\cdot d\\vec S = &lt;0, 0, R&gt;\\cdot&lt;-z_{2x}, -z_{2y}, 1&gt; = R\n\ndo đó:\n\n\\iint_{top}R\\hat k \\cdot d\\vec S = \\iint_U R(x, y, z_2)dxdy",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
+    "href": "note/multivariable-calculus/4.html#bước-5-flux-through-bottom",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 5: Flux through bottom",
+    "text": "Bước 5: Flux through bottom\nTương tự nhưng mà tiếp tuyến đổi hướng, vậy nên:\n\nd\\vec S = \\left&lt;\\frac{\\partial z_1}{\\partial x}, \\frac{\\partial z_1}{\\partial y}, -1\\right&gt;dxdy\n\nVậy:\n\n\\iint_{bottom}R\\hat k \\cdot d\\vec S = -\\iint_U R(x, y, z_1)dxdy",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
+    "href": "note/multivariable-calculus/4.html#bước-6-flux-through-sides",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 6: Flux through sides",
+    "text": "Bước 6: Flux through sides\nCác pháp tuyến nằm ngang, và các mặt phẳng nằm dựng đứng, vậy nên thông lượng qua các mặt = 0.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
+    "href": "note/multivariable-calculus/4.html#bước-7-tổng-kết",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Bước 7: Tổng kết",
+    "text": "Bước 7: Tổng kết\nThông lượng toàn bộ mặt:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U R(x, y, z_2)dxdy -\n\\iint_U R(x, y, z_1)dxdy\n\nHay tóm gọn lại:\n\n\\iint_S R\\hat k \\cdot d\\vec S =\n\\iint_U (R(x, y, z_2) - R(x, y, z_1))dxdy\n\nMà ở bước 3, ta tính được:\n\n\\iiint_D R_zdV = \\iint_U(R(x, y, z_2) - R(x, y, z_1))dxdy\n\nVậy:\n\n\\iint_S R\\hat k \\cdot d\\vec S = \\iiint_D R_zdV",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
+    "href": "note/multivariable-calculus/4.html#ý-nghĩa-của-laplacian",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Ý nghĩa của Laplacian",
+    "text": "Ý nghĩa của Laplacian\nLaplacian đo xem giá trị tại một điểm cao hơn hay thấp hơn trung bình các điểm lân cận.\nNếu \n\\nabla^2f&gt;0\n thì điểm đó thấp hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy vào \\Rightarrow u tăng.\nNếu \n\\nabla^2f&lt;0\n thì điểm đó cao hơn vùng xung quanh \\Rightarrow chất hoặc nhiệt sẽ chảy ra \\Rightarrow u giảm.\nDo đo phương trình khuếch tán luôn có xu hướng làm trung bình hóa phân bố theo thời gian.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#diffusion-equation",
+    "href": "note/multivariable-calculus/4.html#diffusion-equation",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Diffusion equation",
+    "text": "Diffusion equation\nPhương trình khuếch tán ví dụ như quản lý chuyển động của khói trong không khí (đứng yên), màu thuốc nhuộm trong dung dịch, …\nPhương trình là:\n\n\\frac{\\partial u}{\\partial t} = k\\nabla^2u\n= k \\left(\\frac{\\partial^2u}{\\partial x^2} +\n\\frac{\\partial^2u}{\\partial y^2} +\n\\frac{\\partial^2u}{\\partial z^2} \\right)\n\nTrong đó:\n\nu = (x, y, z, t) là đại lượng khuếch tán tại x, y, z vào thời điểm t.\nk là hệ số khuếch tán.\n\\nabla^2 toán tử Laplacian.\n\nVà heat equation là một trường hợp đặc biệt của diffusion equation.",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#test-for-gradient-fields",
+    "href": "note/multivariable-calculus/4.html#test-for-gradient-fields",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Test for Gradient fields",
+    "text": "Test for Gradient fields\nCho trường vector \\mathbf F = &lt;P, Q, R&gt; = &lt;f_x, f_y, f_z&gt;.\nVà:\n\n\\begin{cases}\nf_{xy} = f_{yx} \\\\\nf_{xz} = f_{zx} \\\\\nf_{yz} = f_{yz} \\\\\n\\end{cases} \\Rightarrow\n\\begin{cases}\nP_y = Q_x \\\\\nP_z = R_x \\\\\nQ_z = R_y\n\\end{cases}\n\n\\mathbf F là trường Gradient nếu và chỉ nếu thỏa mãn các điều kiện trên (cho rằng trường vector được định nghĩa khắp không gian hoặc là vùng liên đơn).\nVí dụ: tìm a, b để trường \\mathbf F = &lt;axy, x^2 + z^3, byz^2 - 4z^3&gt; là trường vector.\n\nP = axy \\qquad \\rightarrow \\qquad P_y = ax \\qquad P_z = 0 \\\\\nQ = x^2 + z^3 \\qquad \\rightarrow \\qquad Q_x = 2x \\qquad Q_z = 3z^2 \\\\\nR = byz^2 - 4z^3 \\qquad \\rightarrow \\qquad R_x = 0 \\qquad R_y = bz^2\n\n\n\\begin{cases}\nP_y = ax = 2x = Q_x \\\\\nP_z = 0 = 0 = R_z \\\\\nQ_z = 3z^2 = bz^2 = R_y\n\\end{cases} \\Rightarrow\n\\begin{cases}\na = 2 \\\\ b = 3\n\\end{cases}",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/multivariable-calculus/4.html#finding-potential-function",
+    "href": "note/multivariable-calculus/4.html#finding-potential-function",
+    "title": "Triple integrals and Surface integrals in 3D space",
+    "section": "Finding Potential function",
+    "text": "Finding Potential function\nCách 1: Nguyên hàm\n\nf_x = 2xy \\rightarrow f = x^2y + g(y, z)\n\nĐạo hàm theo y:\n\n\\Rightarrow \\frac{\\partial f}{\\partial y} = x^2 + \\frac{\\partial g(y, z)}{\\partial y} = f_y = x^2 + z^3\n\\Rightarrow g_y = z^3\n\nNguyên hàm lại g_y:\n\ng = yz^3 + h(z)",
+    "crumbs": [
+      "18.02 - Multivariable Calculus",
+      "Triple integrals and Surface integrals in 3D space"
+    ]
+  },
+  {
+    "objectID": "note/olympiad/index.html",
+    "href": "note/olympiad/index.html",
+    "title": "Olympiad Calculus",
+    "section": "",
+    "text": "some test to determine whether a series is converges or diverges",
+    "crumbs": [
+      "olympiad mathematics",
+      "Olympiad Calculus"
+    ]
+  },
+  {
+    "objectID": "note/olympiad/index.html#single-variable-calculus",
+    "href": "note/olympiad/index.html#single-variable-calculus",
+    "title": "Olympiad Calculus",
+    "section": "",
+    "text": "some test to determine whether a series is converges or diverges",
+    "crumbs": [
+      "olympiad mathematics",
+      "Olympiad Calculus"
     ]
   },
   {
