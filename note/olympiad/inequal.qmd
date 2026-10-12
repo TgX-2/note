@@ -13,6 +13,17 @@ format:
       text: | 
         <script src="../navigation.js" defer></script>
 ---
+<!-- 
+| abc              | C-S | Holder | Mink. | Wirt. | Opial | Grüss | Cheb. | Steff. | H-H | 
+| :--              | :--:| :--:   | :--:  | :--:  | :--:  | :--:  | :--:  | :--:   | :--:|
+| Hai hàm          | x   |   x    |   x   |       |       |       |       |        |     |
+| Lượng giác       |     |        |       |       |       |       |       |        |     |
+| Đạo hàm          |     |        |       |       |       |       |       |        |     |
+| Đầu mút bằng 0   |     |        |       |       |       |       |       |        |     |
+| Bị chặn          |     |        |       |       |       |       |       |        |     |
+| Cùng tăng (giảm) |     |        |       |       |       |       |       |        |     |
+| Hàm lồi          |     |        |       |       |       |       |       |        |     | -->
+
 
 # Bất đẳng thức Cauchy-Schwarz
 
@@ -90,7 +101,9 @@ $$
 \int_a^b (f'(x))^2 \mathrm dx
 $$
 
-# Bất đẳng thức Opial 
+# III. Bất đẳng thức Opial 
+
+## 3.1. Phát biểu
 
 Cho hàm số thực $f(x)$ thỏa mãn các điều kiện:
 
@@ -107,7 +120,7 @@ $$
 
 Dấu "=" xảy ra khi và chỉ khi $f(x) = Cx$, với C là một hằng số tùy ý.
 
-**Các dạng biến thể:**
+## 3.2. Các dạng biến thể
 
 (i) Dạng tổng quát của Copson / Beesack
 
@@ -132,7 +145,7 @@ $$
 \int_a^b |f(x) \cdot f'(x)| \mathrm dx = \frac {b - a} 2 \int_a^b |f'(x)|^2 \mathrm dx
 $$
 
-(iv) Dạng rời rạc
+(iv) Dạng rời rạc.
 
 Với $x_0 = 0$:
 
@@ -140,6 +153,70 @@ $$
 \sum_{i = 0}^{N - 1} |x_i (x_{i + 1} -x_i)| \leq 
 \frac N 2 \sum_{i = 0}^{N - 1} (x_{i + 1} - x_i)^2
 $$
+
+## 3.3. Chứng minh
+
+Ta sẽ chứng minh dạng nguyên thủy của **bất đẳng thức Opial**. Ta có $f(0) = 0$ nên:
+
+$$ 
+f(x) = \int_0^x f'(t) \mathrm dt \\ 
+|f(x)| = \left|\int_0^x f'(x) \mathrm dt\right| \leq \int_0^x |f'(x)| \mathrm dt
+$$
+
+Vì $|f'(x)| \geq 0$ nên ta nên nó vào cả hai vế mà không bị đổi chiều:
+
+$$
+|f(x)f'(x)| \leq |f'(x)|\cdot \int_0^x|f'(t)|\mathrm dt
+$$
+
+Lấy tích phân cả hai vế từ 0 đến h:
+
+$$
+\int_0^h |f(x)f'(x)| \mathrm dx 
+\leq 
+\int_0^h |f'(x)|\cdot \int_0^x|f'(t)|\mathrm dt \mathrm dx 
+$$
+
+Xét RHS:
+
+Rõ ràng ta thấy nó có dạng đặc biệt, cụ thể. Đặt:
+
+$$
+u(x) = |f(x)| \\
+u'(x) = |f'(x)| = \int_0^x |f'(t)|\mathrm dt 
+$$
+
+$$
+RHS = \int_0^h u(x)\cdot u'(x) \mathrm dx 
+= \frac 1 2 \left[u(x)^2 \right]_0^h 
+$$
+
+thay lại $u(x) = |f(x)|$ vào:
+
+$$
+RHS = \frac 1 2 [|f(x)|^2]_0^h = \frac 1 2 |f(h)|^2 \\
+= \frac 1 2 \left(\int_0^h f'(t)\mathrm dt\right)^2
+$$
+
+Sử dụng **bất đẳng thức Cauchy-Schwarz**: với $g(x) = 1$ và $h(x) = f'(x)$, ta có:
+
+$$
+\frac 1 2 \left(\int_0^h f'(t)\mathrm dt\right)^2 \leq \frac 1 2
+\int_0^h 1 \mathrm dt \cdot \int_0^h (f'(t))^2 \mathrm dt
+$$
+
+và cuối cùng:
+
+$$
+RHS \leq \frac h 2 \int_0^h (f'(x))^2 \mathrm dx
+$$
+
+$$
+\Rightarrow \int_0^h |f(x)f'(x)|\mathrm \leq \frac h 2 \int_0^h (f'(x))^2 \mathrm dx
+$$
+
+
+
 
 
 # Bất đẳng thức Grüss

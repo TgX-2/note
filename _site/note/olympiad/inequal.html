@@ -527,7 +527,12 @@ window.Quarto = {
   <ul>
   <li><a href="#bất-đẳng-thức-cauchy-schwarz" id="toc-bất-đẳng-thức-cauchy-schwarz" class="nav-link active" data-scroll-target="#bất-đẳng-thức-cauchy-schwarz">Bất đẳng thức Cauchy-Schwarz</a></li>
   <li><a href="#bất-đẳng-thức-wirtenger" id="toc-bất-đẳng-thức-wirtenger" class="nav-link" data-scroll-target="#bất-đẳng-thức-wirtenger">Bất đẳng thức Wirtenger</a></li>
-  <li><a href="#bất-đẳng-thức-opial" id="toc-bất-đẳng-thức-opial" class="nav-link" data-scroll-target="#bất-đẳng-thức-opial">Bất đẳng thức Opial</a></li>
+  <li><a href="#iii.-bất-đẳng-thức-opial" id="toc-iii.-bất-đẳng-thức-opial" class="nav-link" data-scroll-target="#iii.-bất-đẳng-thức-opial">III. Bất đẳng thức Opial</a>
+  <ul class="collapse">
+  <li><a href="#phát-biểu" id="toc-phát-biểu" class="nav-link" data-scroll-target="#phát-biểu">3.1. Phát biểu</a></li>
+  <li><a href="#các-dạng-biến-thể" id="toc-các-dạng-biến-thể" class="nav-link" data-scroll-target="#các-dạng-biến-thể">3.2. Các dạng biến thể</a></li>
+  <li><a href="#chứng-minh" id="toc-chứng-minh" class="nav-link" data-scroll-target="#chứng-minh">3.3. Chứng minh</a></li>
+  </ul></li>
   <li><a href="#bất-đẳng-thức-grüss" id="toc-bất-đẳng-thức-grüss" class="nav-link" data-scroll-target="#bất-đẳng-thức-grüss">Bất đẳng thức Grüss</a></li>
   <li><a href="#bất-đẳng-thức-chebyshev" id="toc-bất-đẳng-thức-chebyshev" class="nav-link" data-scroll-target="#bất-đẳng-thức-chebyshev">Bất đẳng thức Chebyshev</a></li>
   <li><a href="#bất-đẳng-thức-steffensen" id="toc-bất-đẳng-thức-steffensen" class="nav-link" data-scroll-target="#bất-đẳng-thức-steffensen">Bất đẳng thức Steffensen</a></li>
@@ -564,6 +569,16 @@ window.Quarto = {
 </header>
 
 
+<!-- 
+| abc              | C-S | Holder | Mink. | Wirt. | Opial | Grüss | Cheb. | Steff. | H-H | 
+| :--              | :--:| :--:   | :--:  | :--:  | :--:  | :--:  | :--:  | :--:   | :--:|
+| Hai hàm          | x   |   x    |   x   |       |       |       |       |        |     |
+| Lượng giác       |     |        |       |       |       |       |       |        |     |
+| Đạo hàm          |     |        |       |       |       |       |       |        |     |
+| Đầu mút bằng 0   |     |        |       |       |       |       |       |        |     |
+| Bị chặn          |     |        |       |       |       |       |       |        |     |
+| Cùng tăng (giảm) |     |        |       |       |       |       |       |        |     |
+| Hàm lồi          |     |        |       |       |       |       |       |        |     | -->
 <section id="bất-đẳng-thức-cauchy-schwarz" class="level1">
 <h1>Bất đẳng thức Cauchy-Schwarz</h1>
 <p>Dạng bình thường của Cauchy-Schwarz: <span class="math inline">\left(\sum_{i = 1}^n a_nb_n\right)^2 \leq \left(\sum_{i = 1}^n a_i^2\right)\left(\sum_{i = 1}^n b_i^2\right)</span></p>
@@ -628,8 +643,10 @@ window.Quarto = {
 \int_a^b (f'(x))^2 \mathrm dx
 </span></p>
 </section>
-<section id="bất-đẳng-thức-opial" class="level1">
-<h1>Bất đẳng thức Opial</h1>
+<section id="iii.-bất-đẳng-thức-opial" class="level1">
+<h1>III. Bất đẳng thức Opial</h1>
+<section id="phát-biểu" class="level2">
+<h2 class="anchored" data-anchor-id="phát-biểu">3.1. Phát biểu</h2>
 <p>Cho hàm số thực <span class="math inline">f(x)</span> thỏa mãn các điều kiện:</p>
 <ul>
 <li><p><span class="math inline">f(x)</span> khả vi liên tục trên đoạn <span class="math inline">[0, h]</span></p></li>
@@ -641,7 +658,9 @@ window.Quarto = {
 \frac h 2 \int_0^h (f'(x))^2 \mathrm dx
 </span></p>
 <p>Dấu “=” xảy ra khi và chỉ khi <span class="math inline">f(x) = Cx</span>, với C là một hằng số tùy ý.</p>
-<p><strong>Các dạng biến thể:</strong></p>
+</section>
+<section id="các-dạng-biến-thể" class="level2">
+<h2 class="anchored" data-anchor-id="các-dạng-biến-thể">3.2. Các dạng biến thể</h2>
 <ol type="i">
 <li>Dạng tổng quát của Copson / Beesack</li>
 </ol>
@@ -663,13 +682,59 @@ window.Quarto = {
 \int_a^b |f(x) \cdot f'(x)| \mathrm dx = \frac {b - a} 2 \int_a^b |f'(x)|^2 \mathrm dx
 </span></p>
 <ol start="4" type="i">
-<li>Dạng rời rạc</li>
+<li>Dạng rời rạc.</li>
 </ol>
 <p>Với <span class="math inline">x_0 = 0</span>:</p>
 <p><span class="math display">
 \sum_{i = 0}^{N - 1} |x_i (x_{i + 1} -x_i)| \leq
 \frac N 2 \sum_{i = 0}^{N - 1} (x_{i + 1} - x_i)^2
 </span></p>
+</section>
+<section id="chứng-minh" class="level2">
+<h2 class="anchored" data-anchor-id="chứng-minh">3.3. Chứng minh</h2>
+<p>Ta sẽ chứng minh dạng nguyên thủy của <strong>bất đẳng thức Opial</strong>. Ta có <span class="math inline">f(0) = 0</span> nên:</p>
+<p><span class="math display">
+f(x) = \int_0^x f'(t) \mathrm dt \\
+|f(x)| = \left|\int_0^x f'(x) \mathrm dt\right| \leq \int_0^x |f'(x)| \mathrm dt
+</span></p>
+<p>Vì <span class="math inline">|f'(x)| \geq 0</span> nên ta nên nó vào cả hai vế mà không bị đổi chiều:</p>
+<p><span class="math display">
+|f(x)f'(x)| \leq |f'(x)|\cdot \int_0^x|f'(t)|\mathrm dt
+</span></p>
+<p>Lấy tích phân cả hai vế từ 0 đến h:</p>
+<p><span class="math display">
+\int_0^h |f(x)f'(x)| \mathrm dx
+\leq
+\int_0^h |f'(x)|\cdot \int_0^x|f'(t)|\mathrm dt \mathrm dx
+</span></p>
+<p>Xét RHS:</p>
+<p>Rõ ràng ta thấy nó có dạng đặc biệt, cụ thể. Đặt:</p>
+<p><span class="math display">
+u(x) = |f(x)| \\
+u'(x) = |f'(x)| = \int_0^x |f'(t)|\mathrm dt
+</span></p>
+<p><span class="math display">
+RHS = \int_0^h u(x)\cdot u'(x) \mathrm dx
+= \frac 1 2 \left[u(x)^2 \right]_0^h
+</span></p>
+<p>thay lại <span class="math inline">u(x) = |f(x)|</span> vào:</p>
+<p><span class="math display">
+RHS = \frac 1 2 [|f(x)|^2]_0^h = \frac 1 2 |f(h)|^2 \\
+= \frac 1 2 \left(\int_0^h f'(t)\mathrm dt\right)^2
+</span></p>
+<p>Sử dụng <strong>bất đẳng thức Cauchy-Schwarz</strong>: với <span class="math inline">g(x) = 1</span> và <span class="math inline">h(x) = f'(x)</span>, ta có:</p>
+<p><span class="math display">
+\frac 1 2 \left(\int_0^h f'(t)\mathrm dt\right)^2 \leq \frac 1 2
+\int_0^h 1 \mathrm dt \cdot \int_0^h (f'(t))^2 \mathrm dt
+</span></p>
+<p>và cuối cùng:</p>
+<p><span class="math display">
+RHS \leq \frac h 2 \int_0^h (f'(x))^2 \mathrm dx
+</span></p>
+<p><span class="math display">
+\Rightarrow \int_0^h |f(x)f'(x)|\mathrm \leq \frac h 2 \int_0^h (f'(x))^2 \mathrm dx
+</span></p>
+</section>
 </section>
 <section id="bất-đẳng-thức-grüss" class="level1">
 <h1>Bất đẳng thức Grüss</h1>
